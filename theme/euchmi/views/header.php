@@ -67,7 +67,7 @@
                 <br>
                 <br>
                 <h2>
-                    <img src ="<?php echo base_url(); ?>theme/<?php echo $this->config->item('skylight_theme'); ?>/images/header.png">
+                    <img src ="<?php echo base_url(); ?>theme/<?php echo $this->config->item('skylight_theme'); ?>/images/EUCHMIBanner.png">
                     <map name="Map" id="Map">
                         <area shape="rect" coords="9,69,137,87" href="about.html" alt="About the Project" />
                         <area shape="rect" coords="143,70,246,91" href="collection.html" alt="The Collection" />
