@@ -67,17 +67,7 @@
                 <br>
                 <br>
                 <h2>
-                    <img src ="<?php echo base_url(); ?>theme/<?php echo $this->config->item('skylight_theme'); ?>/images/EUCHMIBanner.png">
-                    <map name="Map" id="Map">
-                        <area shape="rect" coords="9,69,137,87" href="about.html" alt="About the Project" />
-                        <area shape="rect" coords="143,70,246,91" href="collection.html" alt="The Collection" />
-                        <area shape="rect" coords="254,69,316,88" href="hall.html" alt="The Hall" />
-                        <area shape="rect" coords="326,69,380,90" href="gallery.html" alt="Gallery" />
-                        <area shape="rect" coords="387,69,477,90" href="http://libraryblogs.is.ed.ac.uk/stcecilias/" target="_blank" alt="news" />
-                        <area shape="rect" coords="483,68,575,88" href="involved.html" alt="support" />
-                        <area shape="rect" coords="580,69,645,88" href="contact.html" alt="contact" />
-                        <area shape="rect" coords="995,68,1023,87" href="index.html" alt="Home" />
-                    </map>
+                    <img src ="<?php echo base_url(); ?>theme/<?php echo $this->config->item('skylight_theme'); ?>/images/EUCHMIBanner.png" height = "133" width = "930">
                 </h2>
                 <a href="http://www.stcecilias.ed.ac.uk/" class="logo">Museum of Historical Musical Instruments</a>
                 <form action="./redirect/" method="post">
