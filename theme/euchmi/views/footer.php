@@ -1,8 +1,7 @@
         </div>
         <div id="footer">
-            <a href="http://skylightui.org/"><?php echo $site_title; ?></a> powered by <strong>SkyLight</strong><br />
-            <a href="http://skylightui.org/"><img src="./assets/images/skylight.jpg"></a><br />
-            <a href="./feedback">Get in touch</a>
+            <a href="http://ed.ac.uk/">The University of Edinburgh</a><br />
+            <a href="./feedback">Contact Us</a>
         </div>
     </body>
 </html>

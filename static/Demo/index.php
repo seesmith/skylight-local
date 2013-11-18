@@ -1,3 +1,3 @@
 <div class="record">
-    blah, blah, blah
+    Introduction
 </div>
