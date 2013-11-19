@@ -22,7 +22,7 @@ $config['skylight_fields'] = array('Title' => 'dc.title',
     'Date' => 'dc.date.issued_dt',
     'Bitstream'=> 'dc.format.original',
     'Thumbnail'=> 'dc.format.thumbnail',
-    'Description'=>'dc.description'
+    'Description'=>'dc.description',
     'Date' => 'dc.date.issued',
     'Accession Date' => 'dc.date.accessioned_dt'
 );
@@ -39,7 +39,7 @@ $config['skylight_meta_fields'] = array('Title' => 'dc.title',
     'Date' => 'dc.date.issued_dt',
     'Type' => 'dc.type',
     'Bitstream'=> 'dc.format.original',
-    'Thumbnail'=> 'dc.format.thumbnail'
+    'Thumbnail'=> 'dc.format.thumbnail',
     'Date' => 'dc.date.issued',
     'Type' => 'dc.type');
 

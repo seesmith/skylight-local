@@ -102,11 +102,9 @@ button 				{  width: auto; overflow: visible; } /* Make buttons play nice in IE:
 /* Default Styles --------------------------------------------------------------------------------------------------------*/
 
 html 							{ -webkit-font-smoothing: antialiased; }
-<<<<<<< HEAD
-body 							{ background: #fff url(../images/bg-body.jpg) repeat }
-=======
+
 body 							{ background: #fff  }
->>>>>>> 65eeeb9d2c4415ceb5419e6bc66c331fb644dd04
+
 body, select, input, textarea 	{ color: #555; line-height: 18px; font-family: Arial, Helvetica, sans-serif; }
 
 h1, h2, h3, h4, h5, h6 			{ text-rendering: optimizeLegibility; color: #00548e; font-weight: bold; }

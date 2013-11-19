@@ -1,46 +1,11 @@
-<<<<<<< HEAD
+
 <!doctype html>
 <!-- paulirish.com/2008/conditional-stylesheets-vs-css-hacks-answer-neither/ -->
 <!--[if lt IE 7 ]> <html class="no-js ie6" lang="en"> <![endif]-->
 <!--[if IE 7 ]>    <html class="no-js ie7" lang="en"> <![endif]-->
 <!--[if IE 8 ]>    <html class="no-js ie8" lang="en"> <![endif]-->
 <!--[if (gte IE 9)|!(IE)]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 
-        <base href="<?php echo base_url() . index_page(); if (index_page() !== '') { echo '/'; } ?>">
-
-        <title><?php echo $page_title; ?></title>
-
-        <link rel="pingback" href="<?php echo base_url() . index_page(); if (index_page() !== '') { echo '/'; } echo 'pingback'; ?>" />
-
-        <!-- Always force latest IE rendering engine (even in intranet) & Chrome Frame
-        Remove this if you use the .htaccess -->
-        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-
-        <title>Scottish Agricultural College Repository</title>
-        <meta name="description" content="">
-        <meta name="author" content="">
-
-        <!-- Mobile viewport optimized: j.mp/bplateviewport -->
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-        <!-- Place favicon.ico & apple-touch-icon.png in the root of your domain and delete these references -->
-        <link rel="shortcut icon" href="./favicon.ico">
-        <link rel="apple-touch-icon" href="./apple-touch-icon.png">
-
-
-        <!-- CSS: implied media="all" -->
-        <link rel="stylesheet" href="<?php echo base_url(); ?>theme/<?php echo $this->config->item('skylight_theme'); ?>/css/style.css?v=2">
-
-        <!-- Uncomment if you are specifically targeting less enabled mobile browsers
-        <link rel="stylesheet" media="handheld" href="css/handheld.css?v=2">  -->
-
-        <!-- All JavaScript at the bottom, except for Modernizr which enables HTML5 elements & feature detects -->
-        <script src="<?php echo base_url(); ?>assets/modernizr/modernizr-1.7.min.js"></script>
-
-=======
 <html>
     <head profile="http://dublincore.org/documents/dcq-html/">
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
@@ -59,7 +24,6 @@
 
         <link rel="pingback" href="<?php echo base_url() . index_page(); if (index_page() !== '') { echo '/'; } echo 'pingback'; ?>" />
 
->>>>>>> 65eeeb9d2c4415ceb5419e6bc66c331fb644dd04
         <?php if (isset($solr)) { ?><link rel="schema.DC" href="http://purl.org/dc/elements/1.1/" />
         <link rel="schema.DCTERMS" href="http://purl.org/dc/terms/" />
 
@@ -82,19 +46,13 @@
 
     </head>
 
-<<<<<<< HEAD
-=======
-
->>>>>>> 65eeeb9d2c4415ceb5419e6bc66c331fb644dd04
     <body>
 
         <div id="container">
             <header>
-<<<<<<< HEAD
+
                 <p class="collection-title"><img src = "<?php echo base_url(); ?>theme/<?php echo $this->config->item('skylight_theme'); ?>/images/header_edited-1.png"></p>
-=======
-                <p class="collection-title"><img src = "<?php echo base_url(); ?>/theme/physics/images/header_edited-1.png"></p>
->>>>>>> 65eeeb9d2c4415ceb5419e6bc66c331fb644dd04
+
                 <a href="http://www.sac.ac.uk/" class="logo">Scottish Agricultural College</a>
                 <form action="./redirect/" method="post">
                     <fieldset class="search">
@@ -104,19 +62,14 @@
                     </fieldset>
                 </form>
                 <nav class="header-links">
-<<<<<<< HEAD
-                    <a href="./">Home</a>
-=======
+
                     <a href="../">Home</a>
->>>>>>> 65eeeb9d2c4415ceb5419e6bc66c331fb644dd04
+
                     <a href="./about/">About this site</a>
                     <a href="./feedback/" class="last">Feedback</a>
                 </nav>
             </header>
 
-<<<<<<< HEAD
-            <div id="main" role="main" class="clearfix">
-=======
+
             <div id="main" role="main" class="clearfix">
 
->>>>>>> 65eeeb9d2c4415ceb5419e6bc66c331fb644dd04

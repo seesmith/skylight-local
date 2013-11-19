@@ -12,7 +12,7 @@ $config['skylight_oaipmhcollection'] = 'hdl_123456789_4';
 
 
 // Container ID and the field used in solr index to store this ID. Used for restricting search/browse scope.
-$config['skylight_container_id'] = '9';
+$config['skylight_container_id'] = '11';
 $config['skylight_container_field'] = 'location.coll';
 
 $config['skylight_fields'] = array('Title' => 'dc.title.en_US',
@@ -46,7 +46,7 @@ $config['skylight_meta_fields'] = array('Title' => 'dc.title',
     'Date' => 'dc.date.issued_dt',
     'Type' => 'dc.type',
     'Bitstream'=> 'dc.format.original',
-    'Thumbnail'=> 'dc.format.thumbnail'
+    'Thumbnail'=> 'dc.format.thumbnail');
 
 $config['skylight_recorddisplay'] = array('Title','Author','Subject','Type','Abstract', 'Bitstream', 'Thumbnail','Place Made', 'Date Made', 'Accession Number', 'Description', 'Collection');
 

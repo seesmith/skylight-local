@@ -22,7 +22,7 @@
     $config['skylight_adminldap_allowed'] = array('id1', 'id2');
 
     // The OAI-PMH base for the parent server
-    $config['skylight_oaipmhbase'] = 'http://localhost:8080/isdocs/oai/request?';
+    $config['skylight_oaipmhbase'] = 'http://localhost:8081/isdocs/oai/request?';
 
     // The OAI-PMH identifier to replace in OAI-PMH responses
     $config['skylight_oaipmhid'] = 'your.repository.org:123456789/';
