@@ -67,11 +67,8 @@
 
         <div id="container">
             <header>
-
-                <p class="collection-title"><img src = "<?php echo base_url(); ?>theme/<?php echo $this->config->item('skylight_theme'); ?>/images/header_edited-1.png"  width = "1024"></p>
-                <a href="http://www.sac.ac.uk/" class="logo">Scottish Agricultural College</a>
-                <form action="./redirect/" method="post">
-
+                <p class="collection-title"><img src = "<?php echo base_url(); ?>theme/<?php echo $this->config->item('skylight_theme'); ?>/images/cockburn-header.jpg" width="940px" ></p>
+                 <form action="./redirect/" method="post">
                     <fieldset class="search">
                         <input type="text" name="q" value="<?php if (isset($searchbox_query)) echo urldecode($searchbox_query); ?>" id="q" />
                         <input type="submit" name="submit_search" class="btn" value="Search" id="submit_search" />
@@ -79,9 +76,7 @@
                     </fieldset>
                 </form>
                 <nav class="header-links">
-
                     <a href="../">Home</a>
-
                     <a href="./about/">About this site</a>
                     <a href="./feedback/" class="last">Feedback</a>
                 </nav>
