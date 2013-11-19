@@ -5,13 +5,22 @@
 
     // The platform and version of your repository.
     // Currently DSpace 1.7.1+ is the only supported repository
+<<<<<<< HEAD
     $config['skylight_repository_type'] = 'dspace'; // Demo 'dspace'
     $config['skylight_repository_version'] = '171'; // Demo '171'
+=======
+    $config['skylight_repository_type'] = 'dspace'; // default 'dspace'
+    $config['skylight_repository_version'] = '171'; // default '171'
+>>>>>>> upstream/master
 
     // The local path for theme and configuration overrides (if required)
     // $config['skylight_local_path'] = '/superindex';
 
+<<<<<<< HEAD
     // The main username and password (by Demo admin:admin)
+=======
+    // The main username and password (by default admin:admin)
+>>>>>>> upstream/master
     $config['skylight_adminusername'] = 'admin';
     $config['skylight_adminpassword'] = '21232f297a57a5a743894a0e4a801fc3';
 
