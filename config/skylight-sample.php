@@ -1,15 +1,15 @@
 <?php
 
     // The URL of the parent solr server
-    $config['skylight_solrbase'] = 'http://localhost:8081/solr/search/';
+    $config['skylight_solrbase'] = 'http://your.repository.org:8080/solr/search/';
 
     // The platform and version of your repository.
     // Currently DSpace 1.7.1+ is the only supported repository
     $config['skylight_repository_type'] = 'dspace'; // Demo 'dspace'
-    $config['skylight_repository_version'] = '181'; // Demo '171'
+    $config['skylight_repository_version'] = '171'; // Demo '171'
 
     // The local path for theme and configuration overrides (if required)
-    $config['skylight_local_path'] = '../skylight-local';
+    // $config['skylight_local_path'] = '/superindex';
 
     // The main username and password (by Demo admin:admin)
     $config['skylight_adminusername'] = 'admin';
@@ -22,7 +22,7 @@
     $config['skylight_adminldap_allowed'] = array('id1', 'id2');
 
     // The OAI-PMH base for the parent server
-    $config['skylight_oaipmhbase'] = 'http://localhost:8080/isdocs/oai/request?';
+    $config['skylight_oaipmhbase'] = 'http://your.repository.org:8080/oai/request?';
 
     // The OAI-PMH identifier to replace in OAI-PMH responses
     $config['skylight_oaipmhid'] = 'your.repository.org:123456789/';
@@ -31,8 +31,10 @@
     $config['skylight_oaipmhlink'] = 'http://hdl.handle.net/123456789/';
 
     // The URL base for where digital objects can be proxied from
-    $config['skylight_objectproxy_url'] = 'http://localhost:8080/isdocs/bitstream/123456789/';
+    $config['skylight_objectproxy_url'] = 'http://your.repository.org:8080/bitstream/123456789/';
 
+    // The URL base for where digital objects can be proxied from
+    $config['skylight_objectproxy_url'] = 'http://your.repository.org:8080/bitstream/123456789/';
 
     // Set to the number of minutes to cache pages for. Set to false for no caching.
     // This can be overridden in site-specific configuration files.
@@ -43,13 +45,13 @@
     $config['skylight_recaptcha_key_private'] = 'ENTER-HERE';
 
     // Digital object management
-    $config['skylight_bitstream_field'] = 'dc.format.original';
-    $config['skylight_thumbnail_field'] = 'dc.format.thumbnail';
-$config['skylight_display_thumbnail'] = true;
-     $config['skylight_link_bitstream'] = true;
+    $config['skylight_bitstream_field'] = 'superindex.bitstreams.original.en';
+    $config['skylight_thumbnail_field'] = 'superindex.bitstreams.thumbnail.en';
+    $config['skylight_display_thumbnail'] = false;
+    $config['skylight_link_bitstream'] = false;
 
     // Other options
-    $config['skylight_homepage_recentitems'] = true;
+    $config['skylight_homepage_recentitems'] = false;
 
     // Spellchecking / Spelling suggestions
     // Dictionaries must be set up in your local solr configuration
@@ -66,9 +68,9 @@ $config['skylight_display_thumbnail'] = true;
     // $config['skylight_debug'] = false;
 
     // Can configuration files be overwritten by the user ?config={vhostname}
-    $config['skylight_config_allowoverride'] = true;
+    // $config['skylight_config_allowoverride'] = false;
 
     // Can themes be overridden by the user using ?theme={themename}
-    $config['skylight_theme_allowoverride'] = true;
+    // $config['skylight_theme_allowoverride'] = false;
 
 ?>

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <!doctype html>
 <!-- paulirish.com/2008/conditional-stylesheets-vs-css-hacks-answer-neither/ -->
 <!--[if lt IE 7 ]> <html class="no-js ie6" lang="en"> <![endif]-->
@@ -39,6 +40,26 @@
         <!-- All JavaScript at the bottom, except for Modernizr which enables HTML5 elements & feature detects -->
         <script src="<?php echo base_url(); ?>assets/modernizr/modernizr-1.7.min.js"></script>
 
+=======
+<html>
+    <head profile="http://dublincore.org/documents/dcq-html/">
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <base href="<?php echo base_url() . index_page(); if (index_page() !== '') { echo '/'; } ?>">
+        <title><?php echo $site_title . ': ' . $page_title; ?></title>
+        <link rel='stylesheet' type='text/css' media='all' href='<?php echo base_url(); ?>theme/<?php echo $this->config->item('skylight_theme'); ?>/css/style.css' />
+        <!--[if IE]>
+            <link rel='stylesheet' type='text/css' media='all' href='<?php echo base_url(); ?>theme/<?php echo $this->config->item('skylight_theme'); ?>/css/style-ie.css' />
+        <![endif]-->
+        <link rel="alternate" type="application/rss+xml" title='<?php echo $site_title; ?> RSS Feed' href='./feed/' />
+        <link rel="SHORTCUT ICON" href="favicon.ico">
+        <link href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/themes/base/jquery-ui.css" rel="stylesheet" type="text/css"/>
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.5/jquery.min.js"></script>
+        <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/jquery-ui.min.js"></script>
+        <script type="text/javascript" src="http://dev.virtualearth.net/mapcontrol/mapcontrol.ashx?v=7.0"></script>
+
+        <link rel="pingback" href="<?php echo base_url() . index_page(); if (index_page() !== '') { echo '/'; } echo 'pingback'; ?>" />
+
+>>>>>>> 65eeeb9d2c4415ceb5419e6bc66c331fb644dd04
         <?php if (isset($solr)) { ?><link rel="schema.DC" href="http://purl.org/dc/elements/1.1/" />
         <link rel="schema.DCTERMS" href="http://purl.org/dc/terms/" />
 
@@ -61,11 +82,19 @@
 
     </head>
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> 65eeeb9d2c4415ceb5419e6bc66c331fb644dd04
     <body>
 
         <div id="container">
             <header>
+<<<<<<< HEAD
                 <p class="collection-title"><img src = "<?php echo base_url(); ?>theme/<?php echo $this->config->item('skylight_theme'); ?>/images/header_edited-1.png"></p>
+=======
+                <p class="collection-title"><img src = "<?php echo base_url(); ?>/theme/physics/images/header_edited-1.png"></p>
+>>>>>>> 65eeeb9d2c4415ceb5419e6bc66c331fb644dd04
                 <a href="http://www.sac.ac.uk/" class="logo">Scottish Agricultural College</a>
                 <form action="./redirect/" method="post">
                     <fieldset class="search">
@@ -75,10 +104,19 @@
                     </fieldset>
                 </form>
                 <nav class="header-links">
+<<<<<<< HEAD
                     <a href="./">Home</a>
+=======
+                    <a href="../">Home</a>
+>>>>>>> 65eeeb9d2c4415ceb5419e6bc66c331fb644dd04
                     <a href="./about/">About this site</a>
                     <a href="./feedback/" class="last">Feedback</a>
                 </nav>
             </header>
 
+<<<<<<< HEAD
             <div id="main" role="main" class="clearfix">
+=======
+            <div id="main" role="main" class="clearfix">
+
+>>>>>>> 65eeeb9d2c4415ceb5419e6bc66c331fb644dd04

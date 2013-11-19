@@ -18,7 +18,11 @@
         Remove this if you use the .htaccess -->
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 
+<<<<<<< HEAD
         <title>Scottish Agricultural College Repository</title>
+=======
+        <title>Cockburn Geological Collection</title>
+>>>>>>> 65eeeb9d2c4415ceb5419e6bc66c331fb644dd04
         <meta name="description" content="">
         <meta name="author" content="">
 
@@ -65,9 +69,14 @@
 
         <div id="container">
             <header>
+<<<<<<< HEAD
                 <p class="collection-title"><img src = "<?php echo base_url(); ?>theme/<?php echo $this->config->item('skylight_theme'); ?>/images/header_edited-1.png"  width = "1024"></p>
                 <a href="http://www.sac.ac.uk/" class="logo">Scottish Agricultural College</a>
                 <form action="./redirect/" method="post">
+=======
+                <p class="collection-title"><img src = "<?php echo base_url(); ?>/theme/rocks/images/cockburn-header.gif" width="940px" ></p>
+                 <form action="./redirect/" method="post">
+>>>>>>> 65eeeb9d2c4415ceb5419e6bc66c331fb644dd04
                     <fieldset class="search">
                         <input type="text" name="q" value="<?php if (isset($searchbox_query)) echo urldecode($searchbox_query); ?>" id="q" />
                         <input type="submit" name="submit_search" class="btn" value="Search" id="submit_search" />
@@ -75,7 +84,11 @@
                     </fieldset>
                 </form>
                 <nav class="header-links">
+<<<<<<< HEAD
                     <a href="./">Home</a>
+=======
+                    <a href="../">Home</a>
+>>>>>>> 65eeeb9d2c4415ceb5419e6bc66c331fb644dd04
                     <a href="./about/">About this site</a>
                     <a href="./feedback/" class="last">Feedback</a>
                 </nav>

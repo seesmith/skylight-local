@@ -1,17 +1,18 @@
 <?php
 
-$config['skylight_appname'] = 'fineart';
+$config['skylight_appname'] = 'collections';
 
-$config['skylight_theme'] = 'fineart';
+$config['skylight_theme'] = 'clds';
 
-$config['skylight_fullname'] = 'University of Edinburgh Fine Art Collection';
+$config['skylight_fullname'] = 'L&UC Collections';
 
 $config['skylight_adminemail'] = 'example@example.com';
 
-$config['skylight_oaipmhcollection'] = 'hdl_123456789_4';
+$config['skylight_oaipmhcollection'] = 'hdl_10683_1';
+
 
 // Container ID and the field used in solr index to store this ID. Used for restricting search/browse scope.
-$config['skylight_container_id'] = '3';
+$config['skylight_container_id'] = '1';
 $config['skylight_container_field'] = 'location.coll';
 
 $config['skylight_fields'] = array('Title' => 'dc.title',
@@ -22,11 +23,11 @@ $config['skylight_fields'] = array('Title' => 'dc.title',
     'Date' => 'dc.date.issued_dt',
     'Bitstream'=> 'dc.format.original',
     'Thumbnail'=> 'dc.format.thumbnail',
-    'Description'=>'dc.description');
+    'Description'=>'dc.description'
+);
 
 $config['skylight_date_filters'] = array('Date' => 'dateIssued.year');
 $config['skylight_filters'] = array('Author' => 'author_filter', 'Subject' => 'subject_filter', 'Type' => 'dc.type');
-
 $config['skylight_filter_delimiter'] = ':';
 
 $config['skylight_meta_fields'] = array('Title' => 'dc.title',
@@ -37,19 +38,16 @@ $config['skylight_meta_fields'] = array('Title' => 'dc.title',
     'Type' => 'dc.type',
     'Bitstream'=> 'dc.format.original',
     'Thumbnail'=> 'dc.format.thumbnail'
-
 );
 
-$config['skylight_recorddisplay'] = array('Title','Author','Subject','Type','Abstract', 'Bitstream', 'Thumbnail','Place Made', 'Date Made', 'Accession Number', 'Description', 'Collection');
+$config['skylight_recorddisplay'] = array('Title','Author','Subject','Type','Abstract');
 
-$config['skylight_searchresult_display'] = array('Title','Author','Subject','Type','Abstract', 'Bitstream', 'Thumbnail');
+$config['skylight_searchresult_display'] = array('Title','Author','Subject','Type','Abstract');
 
 $config['skylight_search_fields'] = array('Keywords' => 'text',
     'Subject' => 'dc.subject',
     'Type' => 'dc.type',
-    'Author' => 'dc.creator',
-    'Bitstream'=> 'dc.format.original',
-    'Thumbnail'=> 'dc.format.thumbnail'
+    'Author' => 'dc.creator'
 );
 
 $config['skylight_sort_fields'] = array('Title' => 'dc.title',
