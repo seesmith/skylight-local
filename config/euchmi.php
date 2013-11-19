@@ -32,7 +32,7 @@ $config['skylight_fields'] = array('Title' => 'dc.title.en_US',
 );
 
 $config['skylight_date_filters'] = array('Date' => 'dateIssued.year');
-$config['skylight_filters'] = array('Author' => 'author_filter', 'Country' => 'lido.country.en_US', 'Type' => 'dc.type.en_US');
+$config['skylight_filters'] = array('Author' => 'author_filter', 'Country' => 'country_filter', 'Type' => 'type_filter');
   
 $config['skylight_filter_delimiter'] = ':';
 
