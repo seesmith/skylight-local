@@ -12,23 +12,23 @@ $config['skylight_oaipmhcollection'] = 'hdl_123456789_4';
 
 
 // Container ID and the field used in solr index to store this ID. Used for restricting search/browse scope.
-$config['skylight_container_id'] = '9';
+$config['skylight_container_id'] = '11';
 $config['skylight_container_field'] = 'location.coll';
 
-$config['skylight_fields'] = array('Title' => 'dc.title.en_US',
-    'Author' => 'dc.creator.en_US',
-    'Country' => 'lido.country.en_US',
-    'Subject' => 'dc.subject.en_US',
-    'Instrument' => 'dc.type.en_US',
-    'Abstract' => 'dc.description.abstract.en_US',
+$config['skylight_fields'] = array('Title' => 'dc.title.en',
+    'Author' => 'dc.creator.en',
+    'Country' => 'lido.country.en',
+    'Subject' => 'dc.subject.en',
+    'Instrument' => 'dc.type.en',
+    'Abstract' => 'dc.description.abstract.en',
     'Date' => 'dc.date.issued',
     'Bitstream'=> 'dc.format.original',
     'Thumbnail'=> 'dc.format.thumbnail',
-    'Place Made' => 'dc.coverage.spatial.en_US',
+    'Place Made' => 'dc.coverage.spatial.en',
     'Date Made' => 'dc.date.created',
     'Accession Number' => 'dc.identifier.other',
-    'Description' => 'dc.description.en_US',
-    'Collection' => 'dc.relation.ispartof.en_US'
+    'Description' => 'dc.description.en',
+    'Collection' => 'dc.relation.ispartof.en'
 );
 
 $config['skylight_date_filters'] = array('Date' => 'dateIssued.year');
