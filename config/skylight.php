@@ -31,7 +31,7 @@
     $config['skylight_oaipmhlink'] = 'http://hdl.handle.net/123456789/';
 
     // The URL base for where digital objects can be proxied from
-    $config['skylight_objectproxy_url'] = 'http://localhost:8080/isdocs/bitstream/123456789/';
+    $config['skylight_objectproxy_url'] = 'http://localhost:8081/xmlui/bitstream/123456789/';
 
 
     // Set to the number of minutes to cache pages for. Set to false for no caching.
