@@ -12,11 +12,11 @@
 
 
     // Container ID and the field used in solr index to store this ID. Used for restricting search/browse scope.
-    $config['skylight_container_id'] = '20';
+    $config['skylight_container_id'] = '13';
     $config['skylight_container_field'] = 'location.coll';
 
     $config['skylight_fields'] = array('Title' => 'dc.title',
-                                        'Author' => 'dc.creator',
+                                        'Author' => 'dc.contributor.author',
                                         'Subject' => 'dc.subject',
                                         'Type' => 'dc.type',
                                         'Abstract' => 'dc.description.abstract',
