@@ -22,10 +22,11 @@ $config['skylight_fields'] = array('Title' => 'dc.title',
     'Date' => 'dc.date.issued_dt',
     'Bitstream'=> 'dc.format.original',
     'Thumbnail'=> 'dc.format.thumbnail',
-    'Description'=>'dc.description');
+    'Description'=>'dc.description'
+);
 
-$config['skylight_date_filters'] = array('Date' => 'dateIssued.year');
-$config['skylight_filters'] = array('Author' => 'author_filter', 'Subject' => 'subject_filter', 'Type' => 'dc.type');
+$config['skylight_date_filters'] = array('Date' => 'dateIssued.year_sort');
+$config['skylight_filters'] = array('Artist' => 'author_filter', 'Medium' => 'subject_filter');
 
 $config['skylight_filter_delimiter'] = ':';
 

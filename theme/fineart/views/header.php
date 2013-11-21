@@ -69,7 +69,6 @@
             <header>
 
                 <p class="collection-title"><img src = "<?php echo base_url(); ?>theme/<?php echo $this->config->item('skylight_theme'); ?>/images/header.png"  width = "1024"></p>
-                <a href="http://www.sac.ac.uk/" class="logo">Scottish Agricultural College</a>
 
                 <form action="./redirect/" method="post">
                     <fieldset class="search">
@@ -79,9 +78,7 @@
                     </fieldset>
                 </form>
                 <nav class="header-links">
-
                     <a href="./">Home</a>
-
                     <a href="./about/">About this site</a>
                     <a href="./feedback/" class="last">Feedback</a>
                 </nav>
