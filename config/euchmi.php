@@ -24,7 +24,7 @@ $config['skylight_fields'] = array('Title' => 'dc.title.en_US',
     'Abstract' => 'dc.description.abstract.en_US',
 =======
 $config['skylight_fields'] = array('Title' => 'dc.title.en',
-    'Author' => 'dc.creator.en',
+    'Author' => 'dc.contributor.author',
     'Country' => 'lido.country.en',
     'Subject' => 'dc.subject.en',
     'Instrument' => 'dc.type.en',
@@ -78,9 +78,9 @@ $config['skylight_search_fields'] = array('Keywords' => 'text',
     'Thumbnail'=> 'dc.format.thumbnail'
 );
 
-$config['skylight_sort_fields'] = array('Title' => 'dc.title',
+$config['skylight_sort_fields'] = array('Title' => 'dc.title_sort',
     'Date' => 'dc.date.issued_dt',
-    'Author' => 'dc.creator'
+    'Author' => 'dc.contributor.author_sort'
 );
 
 $config['skylight_feed_fields'] = array('Title' => 'Title',
