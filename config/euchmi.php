@@ -16,7 +16,7 @@ $config['skylight_container_id'] = '11';
 $config['skylight_container_field'] = 'location.coll';
 
 $config['skylight_fields'] = array('Title' => 'dc.title.en_US',
-    'Author' => 'dc.creator.en_US',
+    'Author' => 'dc.contributor.author.en_US',
     'Country' => 'lido.country.en_US',
     'Subject' => 'dc.subject.en_US',
     'Instrument' => 'dc.type.en_US',
@@ -31,11 +31,11 @@ $config['skylight_fields'] = array('Title' => 'dc.title.en_US',
     'Collection' => 'dc.relation.ispartof.en_US'
 );
 
-$config['skylight_date_filters'] = array('Date' => 'dateIssued.year_sort');
+//$config['skylight_date_filters'] = array('Date' => 'dateIssued.year_sort');
 //$config['skylight_date_filters'] = array('Date' => 'dc.date.created');
 $config['skylight_filters'] = array('Collection'=> 'collection_filter', 'Maker' => 'author_filter', 'Place Made' => 'place_filter', 'Instrument Type' => 'type_filter');
 $config['skylight_date_filters'] = array('Date' => 'dateIssued.year');
-$config['skylight_filters'] = array('Author' => 'author_filter', 'Country' => 'country_filter', 'Type' => 'type_filter');
+//$config['skylight_filters'] = array('Author' => 'author_filter', 'Country' => 'country_filter', 'Type' => 'type_filter');
   
 $config['skylight_filter_delimiter'] = ':';
 
@@ -48,7 +48,7 @@ $config['skylight_meta_fields'] = array('Title' => 'dc.title',
     'Bitstream'=> 'dc.format.original',
     'Thumbnail'=> 'dc.format.thumbnail');
 
-$config['skylight_recorddisplay'] = array('Title','Author','Subject','Type','Abstract', 'Bitstream', 'Thumbnail','Place Made', 'Date Made', 'Accession Number', 'Description', 'Collection');
+$config['skylight_recorddisplay'] = array('Title','Author','Subject','Type','Abstract', 'Place Made', 'Date Made', 'Accession Number', 'Description', 'Collection');
 
 $config['skylight_searchresult_display'] = array('Title','Author','Subject','Type','Abstract', 'Bitstream', 'Thumbnail');
 
