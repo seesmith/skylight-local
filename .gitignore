@@ -1,5 +1,3 @@
 .idea
 .DS_Store
-*.orig
-*.9993.*
-*.9869.*
+.DS_STORE

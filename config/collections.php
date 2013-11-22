@@ -4,7 +4,7 @@ $config['skylight_appname'] = 'collections';
 
 $config['skylight_theme'] = 'clds';
 
-$config['skylight_fullname'] = 'L&UC Collections';
+$config['skylight_fullname'] = 'Library and University Collections';
 
 $config['skylight_adminemail'] = 'example@example.com';
 
@@ -26,8 +26,8 @@ $config['skylight_fields'] = array('Title' => 'dc.title',
     'Description'=>'dc.description'
 );
 
-$config['skylight_date_filters'] = array('Date' => 'dateIssued.year');
-$config['skylight_filters'] = array('Author' => 'author_filter', 'Subject' => 'subject_filter', 'Type' => 'dc.type');
+$config['skylight_date_filters'] = array('Date' => 'dateIssued.year_sort');
+$config['skylight_filters'] = array('Author' => 'author_filter', 'Subject' => 'subject_filter', 'Type' => 'type_filter');
 $config['skylight_filter_delimiter'] = ':';
 
 $config['skylight_meta_fields'] = array('Title' => 'dc.title',
