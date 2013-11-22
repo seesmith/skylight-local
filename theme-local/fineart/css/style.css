@@ -159,7 +159,7 @@ header				{ position: relative; }
 .header-links a:hover			{ text-decoration: underline; }
 .header-links a.last			{ border: none; }
 
-.col-sidebar h4						{ color: #fff; line-height: 26px; font-weight: bold; text-transform: uppercase; font-size: 12px; margin-bottom: 17px; background: #196599; padding: 0 17px; }
+.col-sidebar h4						{ color: #fff; line-height: 26px; font-weight: bold; text-transform: uppercase; font-size: 12px; margin-bottom: 17px; background: #4C4C98; padding: 0 17px; }
 .col-sidebar h4 a 					{ 
     background: #4C4C98 url(../images/bg-arrows.png) no-repeat 100% -92px;
 	display: block; color: #fff; text-decoration: none; width: 223px; padding-left: 17px; position: relative; left: -17px;
@@ -182,7 +182,7 @@ header				{ position: relative; }
 .col-sidebar ul.related li a:hover			{ background: none; text-decoration: underline; }
 .col-sidebar ul.related .tags				{ margin: 4px 0 0 0; }
 .col-sidebar ul.related .tags a 			{ padding: 2px 5px; display: inline; background: #ffffff; }
-.col-sidebar ul.related .tags a:hover		{ text-decoration: none; background: #00548e; }
+.col-sidebar ul.related .tags a:hover		{ text-decoration: none; background: #4c4c98; }
 
 .tags					{ margin: 0 0 0 54px; }
 .tags a 				{ font-size: 13px; background: #BFBFBF; -webkit-border-radius: 5px; -moz-border-radius: 5px; border-radius: 5px; padding: 2px 6px; line-height: 20px; margin-right: 8px; text-decoration: none; }
