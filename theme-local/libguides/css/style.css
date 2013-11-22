@@ -139,9 +139,9 @@ header				{ position: relative; }
 .ie7 .col-sidebar	{ padding-bottom: 30px; }
 
 /* Common Containers & Subclasses ----------------------------------------------------------------------------------------*/
-.logo				{ display: block; text-indent: -9999px; width: 259px; height: 109px;  }
+.logo				{ display: block; text-indent: -9999px;  position: absolute; top: 0; right: 0; }
 .ie7 .logo 			{ top: -40px; }
-.collection-title	{ color: #00548e; font-size: 28px; line-height: 88px; padding-top: 20px; text-shadow: rgba(255,255,255,0.3) 0px 1px 0px; margin: 0; }
+.collection-title	{ color: #00548e; font-size: 28px; line-height: 88px; padding-top: 30px; text-shadow: rgba(255,255,255,0.3) 0px 1px 0px; margin: 0;}
 
 .search							{ padding-bottom: 36px; border-bottom: 1px solid #b8baba; width: 660px; }
 .search input[type=text]		{ 

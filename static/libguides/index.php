@@ -1,6 +1,5 @@
 <div class="record">
     <p>
-        This is a default 'welcome' page that can be overridden by editing
-        <code>[skylight]/application/views/static/Demo/index.php</code>
+        Library Guides for the University of Edinburgh.
     </p>
 </div>

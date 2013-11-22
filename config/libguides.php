@@ -14,25 +14,22 @@ $config['skylight_oaipmhcollection'] = 'hdl_123456789_4';
 // Container ID and the field used in solr index to store this ID. Used for restricting search/browse scope.
 
 $config['skylight_container_id'] = '12';
-
 $config['skylight_container_field'] = 'location.coll';
 
-$config['skylight_fields'] = array('Title' => 'dc.title',
-    'Author' => 'dc.creator',
-    'Subject' => 'dc.subject',
-    'Type' => 'dc.type',
+$config['skylight_fields'] = array('Title' => 'dc.title.en',
+    'Author' => 'dc.contributor.author',
+    'Subject' => 'dc.subject.en',
+    'Type' => 'dc.type.en',
     'Abstract' => 'dc.description.abstract',
-
     'Date' => 'dc.date.issued_dt',
-
     'Bitstream'=> 'dc.format.original',
     'Thumbnail'=> 'dc.format.thumbnail',
     'Description'=>'dc.description'
 );
 
 $config['skylight_date_filters'] = array('Date' => 'dateIssued.year_sort');
-//$config['skylight_date_filters'] = array('Date' => 'dc.date.created');
-$config['skylight_filters'] = array('Creator'=> 'dc.creator', 'Keyword' => 'dc.subject', 'Type' => 'dc.type');
+$config['skylight_filters'] = array('Author' => 'author_filter', 'Subject' => 'subject_filter', 'Type' => 'type_filter');
+
 $config['skylight_filter_delimiter'] = ':';
 
 $config['skylight_meta_fields'] = array('Title' => 'dc.title',
