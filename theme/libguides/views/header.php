@@ -18,7 +18,7 @@
         Remove this if you use the .htaccess -->
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 
-        <title>Scottish Agricultural College Repository</title>
+        <title>Library Guides</title>
         <meta name="description" content="">
         <meta name="author" content="">
 
@@ -66,8 +66,7 @@
         <div id="container">
             <header>
 
-                <p class="collection-title"><img src = "<?php echo base_url(); ?>/theme/<?php echo $this->config->item('skylight_theme'); ?>/images/header.png"  width = "1024"></p>
-                <a href="http://www.ed.ac.uk/" class="logo"><?php echo $this->config->item('skylight_fullname'); ?></a>
+                <p class="collection-title"><img src = "<?php echo base_url(); ?>theme/<?php echo $this->config->item('skylight_theme'); ?>/images/header-940.jpg" width = "940"></p>
 
                 <form action="./redirect/" method="post">
                     <fieldset class="search">

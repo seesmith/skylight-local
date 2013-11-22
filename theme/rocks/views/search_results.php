@@ -76,22 +76,12 @@
 
         if (!($doc[$bitstream_field][0] == ''))
         {
-            //foreach ($doc[$bitstream_field] as $bitstream)
-            //{
+
                 $bitstream = $doc[$bitstream_field][0];
 
                 $bitUri = $this->skylight_utilities->getBitstreamURI($bitstream);
 
-                //$bitUri = 'http://localhost/~srenton1/skylight-master'.substr($bitUri, 1);
-                              //echo 'URI'.$bitUri;
-            //echo '<img src = "http://localhost/~srenton1/skylight-master/theme/euchmi/images/header.png"/>';
-              // $size1 = getimageSize('http://localhost/~srenton1/skylight-master/theme/euchmi/images/header.png');
-                //  echo 'SIZE1'.$size1;
                 $size = getimagesize($bitUri);
-                   echo 'SIZE'.$size;
-        //  $size2=getimagesize('http://localhost/~srenton1/skylight-master/index.php/record/16469/1/0034960d.jpg');
-           // echo 'SIZE2'.$size2;
-            echo 'bitUri'.$bitUri;
 
                 $fullwidth = $size[0];
                        // echo 'width'.$fullwidth;

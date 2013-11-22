@@ -4,7 +4,7 @@ $config['skylight_appname'] = 'physics';
 
 $config['skylight_theme'] = 'physics';
 
-$config['skylight_fullname'] = 'School of Physics and Astronomy';
+$config['skylight_fullname'] = 'School of Physics and Astronomy Image Archive';
 
 $config['skylight_adminemail'] = 'example@example.com';
 
@@ -14,10 +14,10 @@ $config['skylight_oaipmhcollection'] = 'hdl_123456789_4';
 $config['skylight_container_id'] = '4';
 $config['skylight_container_field'] = 'location.coll';
 
-$config['skylight_fields'] = array('Title' => 'dc.title',
-    'Author' => 'dc.creator',
-    'Subject' => 'dc.subject',
-    'Type' => 'dc.type',
+$config['skylight_fields'] = array('Title' => 'dc.title.en',
+    'Author' => 'dc.contributor.author',
+    'Subject' => 'dc.subject.en',
+    'Type' => 'dc.type.en',
     'Abstract' => 'dc.description.abstract',
     'Date' => 'dc.date.issued_dt',
     'Bitstream'=> 'dc.format.original',
@@ -27,8 +27,8 @@ $config['skylight_fields'] = array('Title' => 'dc.title',
     'Accession Date' => 'dc.date.accessioned_dt'
 );
 
-$config['skylight_date_filters'] = array('Date' => 'dateIssued.year');
-$config['skylight_filters'] = array('Author' => 'author_filter', 'Subject' => 'subject_filter', 'Type' => 'dc.type');
+$config['skylight_date_filters'] = array('Date' => 'dateIssued.year_sort');
+$config['skylight_filters'] = array('Author' => 'author_filter', 'Subject' => 'subject_filter', 'Type' => 'type_filter');
 
 $config['skylight_filter_delimiter'] = ':';
 

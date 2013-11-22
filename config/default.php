@@ -24,8 +24,8 @@ $config['skylight_fields'] = array('Title' => 'dc.title',
     'Accession Date' => 'dc.date.accessioned_dt'
 );
 
-$config['skylight_date_filters'] = array('Date' => 'dateIssued.year');
-$config['skylight_filters'] = array('Author' => 'author_filter', 'Subject' => 'subject_filter', 'Type' => 'dc.type');
+$config['skylight_date_filters'] = array('Date' => 'dateIssued.year_sort');
+$config['skylight_filters'] = array('Author' => 'author_filter', 'Subject' => 'subject_filter', 'Type' => 'type_filter');
 $config['skylight_filter_delimiter'] = ':';
 
 $config['skylight_meta_fields'] = array('Title' => 'dc.title',
