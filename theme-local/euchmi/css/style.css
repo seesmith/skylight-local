@@ -188,9 +188,9 @@ header                                { position: relative; }
 .col-sidebar ul.related .tags a:hover                { text-decoration: none; background: #00548e; }
 
 .tags                                        { margin: 0 0 0 54px; }
-.tags a                                 { font-size: 13px; background: #def5fb; -webkit-border-radius: 5px; -moz-border-radius: 5px; border-radius: 5px; padding: 2px 6px; line-height: 20px; margin-right: 8px; text-decoration: none; }
+.tags a                                 { font-size: 13px; background: #BBBBBC; -webkit-border-radius: 5px; -moz-border-radius: 5px; border-radius: 5px; padding: 2px 6px; line-height: 20px; margin-right: 8px; text-decoration: none; }
 .tags a.bold                        { font-weight: bold; }
-.tags a:hover                        { background: #00548e; color: #fff; }
+.tags a:hover                        { background: #BBBBBC; color: #fff; }
 
 footer                                                                 { margin-top: 40px; }
 footer a                                                         { font-size: 10px; text-transform: uppercase; color: #666 !important; text-decoration: none; font-weight: bold; border-right: 1px solid #cecece; padding-right: 9px; margin-right: 5px; }
@@ -245,9 +245,9 @@ h1 .icon                                                        { top: -5px; lef
 .small-icon.media-img                                { background-position: 0px -40px; }
 .small-icon.media-book                                { background-position: 0px -60px; }
 
-.pagination                                                        { border-bottom: 1px solid #b8baba; border-top: 1px solid #b8baba; line-height: 33px; text-align: center; position: relative; font-size: 11px; font-weight: bold; }
+.pagination                                                        { border-bottom: 1px solid #b8baba; border-top: 1px solid #f5739F; line-height: 33px; text-align: center; position: relative; font-size: 11px; font-weight: bold; }
 .pagination a                                                 { color: #666; text-decoration: none; display: inline-block; padding: 0 5px; }
-.pagination a.selected                                 { background: #e8e8e8; color: #333; }
+.pagination a.selected                                 { background: #f5739F; color: #333; }
 .pagination a:hover                                        { color: #333; text-decoration: underline; }
 .pagination .prev,
 .pagination .next                                        { display: block; position: absolute; top: 0; font-size: 11px; background: url(../images/bg-arrows.png) no-repeat 0px 0px; }
