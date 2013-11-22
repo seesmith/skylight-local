@@ -1,6 +1,6 @@
 <div class="record">
     <p>
-        This is a default 'welcome' page that can be overridden by editing
-        <code>[skylight]/application/views/static/Demo/index.php</code>
+        This collection is intended primarily for University use. Images are provided free for non-commercial purposes to University staff and students.
+        You will be asked to register before downloading images: to ensure access, use your University email address.
     </p>
 </div>
