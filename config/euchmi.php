@@ -15,21 +15,12 @@ $config['skylight_oaipmhcollection'] = 'hdl_123456789_4';
 $config['skylight_container_id'] = '11';
 $config['skylight_container_field'] = 'location.coll';
 
-<<<<<<< HEAD
 $config['skylight_fields'] = array('Title' => 'dc.title.en_US',
     'Author' => 'dc.contributor.author.en_US',
     'Country' => 'lido.country.en_US',
     'Subject' => 'dc.subject.en_US',
     'Instrument' => 'dc.type.en_US',
     'Abstract' => 'dc.description.abstract.en_US',
-=======
-$config['skylight_fields'] = array('Title' => 'dc.title.en',
-    'Author' => 'dc.creator.en',
-    'Country' => 'lido.country.en',
-    'Subject' => 'dc.subject.en',
-    'Instrument' => 'dc.type.en',
-    'Abstract' => 'dc.description.abstract.en',
->>>>>>> upstream/master
     'Date' => 'dc.date.issued',
     'Bitstream'=> 'dc.format.original',
     'Thumbnail'=> 'dc.format.thumbnail',
@@ -40,18 +31,10 @@ $config['skylight_fields'] = array('Title' => 'dc.title.en',
     'Collection' => 'dc.relation.ispartof.en'
 );
 
-<<<<<<< HEAD
-//$config['skylight_date_filters'] = array('Date' => 'dateIssued.year_sort');
-//$config['skylight_date_filters'] = array('Date' => 'dc.date.created');
-$config['skylight_filters'] = array('Collection'=> 'collection_filter', 'Maker' => 'author_filter', 'Place Made' => 'place_filter', 'Instrument Type' => 'type_filter');
-$config['skylight_date_filters'] = array('Date' => 'dateIssued.year');
-//$config['skylight_filters'] = array('Author' => 'author_filter', 'Country' => 'country_filter', 'Type' => 'type_filter');
-  
-=======
+
 $config['skylight_date_filters'] = array('Date' => 'dateIssued.year_sort');
 $config['skylight_filters'] = array('Collection'=> 'collection_filter', 'Maker' => 'author_filter', 'Place Made' => 'place_filter', 'Instrument Type' => 'type_filter');
 
->>>>>>> upstream/master
 $config['skylight_filter_delimiter'] = ':';
 
 $config['skylight_meta_fields'] = array('Title' => 'dc.title',
