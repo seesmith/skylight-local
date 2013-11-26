@@ -20,7 +20,12 @@ this file adapted from the fantastic resources at http://html5boilerplate.com/
 html5doctor.com Reset Stylesheet (Eric Meyer's Reset Reloaded + HTML5 baseline)
 other relevant credits have been left inline
 */
-
+/*
+University of Edinburgh Colours from website
+#1c7cbb = steel blue
+#00325F = navy blue
+#DD0031 = red
+*/
 /* Reset -----------------------------------------------------------------------------------------------------------------*/
 
 html, body, div, span, object, iframe,
@@ -107,7 +112,7 @@ body 							{ background: #fff  }
 
 body, select, input, textarea 	{ color: #555; line-height: 18px; font-family: Arial, Helvetica, sans-serif; }
 
-h1, h2, h3, h4, h5, h6 			{ text-rendering: optimizeLegibility; color: #00548e; font-weight: bold; }
+h1, h2, h3, h4, h5, h6 			{ text-rendering: optimizeLegibility; color: #1c7cbb; font-weight: bold; }
 h1 								{ font-size: 18px; line-height: 24px; margin: 30px 0 17px 0px; position: relative; }
 h2 								{ font-size: 16px; line-height: 36px; margin: 0 0 0 0; }
 h3 								{ font-size: 14px; line-height: 18px; margin: 0 0 9px 0; }
@@ -117,17 +122,17 @@ h1.itemtitle 					{ font-size: 18px; line-height: 24px; margin: 30px 0 17px 54px
 p 								{ font-size: 13px; margin-bottom: 18px; }
 
 a, a:active, a:visited 			{ color: #00548e; }
-a:hover 						{ color: #033a5f; }
+a:hover 						{ color: #DD0031; }
 
 input[type=text], input[type=password]				{
-	border: 1px solid #bbbbbc; font-size: 13px; height: 28px; padding: 0 10px;
+	border: 1px solid #DD0031; font-size: 13px; height: 28px; padding: 0 10px;
 	-webkit-border-radius: 5px; -moz-border-radius: 5px; border-radius: 5px;
 }
 input.btn						{
-	background: #196599; border: none; height: 28px; color: #fff; text-transform: uppercase; font-size: 14px; margin-left: 8px; font-weight: bold; padding: 0 18px;
+	background: #1c7cbb; border: none; height: 28px; color: #fff; text-transform: uppercase; font-size: 14px; margin-left: 8px; font-weight: bold; padding: 0 18px;
 	-webkit-border-radius: 5px; -moz-border-radius: 5px; border-radius: 5px; text-shadow: rgba(0,0,0,0.3) 0px -1px 0px;
 }
-input.btn:hover					{ background: #033a5f; }
+input.btn:hover					{ background: #DD0031; }
 
 
 
@@ -137,7 +142,7 @@ input.btn:hover					{ background: #033a5f; }
 #container 			{ width: 940px; margin: auto auto; }
 header				{ position: relative; }
 .col-main			{ float: left; margin-right: 40px; width: 660px; }
-.col-sidebar		{ float: left; width: 240px; margin-top: -66px; background: #def5fb; position: relative; z-index: 2; }
+.col-sidebar		{ float: left; width: 240px; margin-top: -66px; background: #e6e6e6; position: relative; z-index: 2; }
 .ie7 .col-sidebar	{ padding-bottom: 30px; }
 
 /* Common Containers & Subclasses ----------------------------------------------------------------------------------------*/
@@ -161,12 +166,12 @@ header				{ position: relative; }
 .header-links a:hover			{ text-decoration: underline; }
 .header-links a.last			{ border: none; }
 
-.col-sidebar h4						{ color: #fff; line-height: 26px; font-weight: bold; text-transform: uppercase; font-size: 12px; margin-bottom: 17px; background: #196599; padding: 0 17px; }
+.col-sidebar h4						{ color: #76B4DD; line-height: 26px; font-weight: bold; text-transform: uppercase; font-size: 12px; margin-bottom: 17px; background: #196599; padding: 0 17px; }
 .col-sidebar h4 a 					{ 
-	background: #196599 url(../images/bg-arrows.png) no-repeat 100% -92px;
+	background: #1c7cbb url(../images/bg-arrows.png) no-repeat 100% -92px;
 	display: block; color: #fff; text-decoration: none; width: 223px; padding-left: 17px; position: relative; left: -17px;
 }
-.col-sidebar h4 a:hover				{ background: #033a5f url(../images/bg-arrows.png) no-repeat 100% -92px; }
+.col-sidebar h4 a:hover				{ background: #DD0031 url(../images/bg-arrows.png) no-repeat 100% -92px; }
 .col-sidebar ul 					{ list-style-type: none; margin: 0 0 17px 0; font-size: 12px; }
 .col-sidebar ul li 					{ line-height: 16px; }
 .col-sidebar ul a 					{ text-decoration: none; display: block; padding: 0 17px; }
@@ -184,12 +189,12 @@ header				{ position: relative; }
 .col-sidebar ul.related li a:hover			{ background: none; text-decoration: underline; }
 .col-sidebar ul.related .tags				{ margin: 4px 0 0 0; }
 .col-sidebar ul.related .tags a 			{ padding: 2px 5px; display: inline; background: #ffffff; }
-.col-sidebar ul.related .tags a:hover		{ text-decoration: none; background: #00548e; }
+.col-sidebar ul.related .tags a:hover		{ text-decoration: none; background: #DD0031; }
 
 .tags					{ margin: 0 0 0 54px; }
 .tags a 				{ font-size: 13px; background: #def5fb; -webkit-border-radius: 5px; -moz-border-radius: 5px; border-radius: 5px; padding: 2px 6px; line-height: 20px; margin-right: 8px; text-decoration: none; }
 .tags a.bold			{ font-weight: bold; }
-.tags a:hover			{ background: #00548e; color: #fff; }
+.tags a:hover			{ background: #DD0031; color: #fff; }
 
 footer 								{ margin-top: 40px; }
 footer a 							{ font-size: 10px; text-transform: uppercase; color: #666 !important; text-decoration: none; font-weight: bold; border-right: 1px solid #cecece; padding-right: 9px; margin-right: 5px; }
