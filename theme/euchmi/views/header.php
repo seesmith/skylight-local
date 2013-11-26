@@ -42,7 +42,7 @@
 <div id="container">
 
     <header>
-        <p class="collection-title"><img src = "<?php echo base_url(); ?>theme/<?php echo $this->config->item('skylight_theme'); ?>/images/EUCHMIBanner2.png" class = "banner"></p>
+        <p class="collection-title"><p class="uoe"></p></p>
         <a href="http://www.stcecilias.ed.ac.uk/" class="logo">St Cecilia's Hall</a>
         <form action="./redirect/" method="post">
             <fieldset class="search">
