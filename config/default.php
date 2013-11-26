@@ -15,10 +15,10 @@ $config['skylight_oaipmhcollection'] = 'hdl_123456789_1';
 $config['skylight_container_id'] = '*';
 $config['skylight_container_field'] = 'location.coll';
 
-$config['skylight_fields'] = array('Title' => 'dc.title',
-    'Author' => 'dc.creator',
-    'Subject' => 'dc.subject',
-    'Type' => 'dc.type',
+$config['skylight_fields'] = array('Title' => 'dc.title.en',
+    'Author' => 'dc.contributor.author',
+    'Subject' => 'dc.subject.en',
+    'Type' => 'dc.type.en',
     'Abstract' => 'dc.description.abstract',
     'Date' => 'dc.date.issued',
     'Accession Date' => 'dc.date.accessioned_dt'
