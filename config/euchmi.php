@@ -4,7 +4,7 @@ $config['skylight_appname'] = 'euchmi';
 
 $config['skylight_theme'] = 'euchmi';
 
-$config['skylight_fullname'] = 'Musical Instruments Museum at Edinburgh';
+$config['skylight_fullname'] = 'MUSICAL INSTRUMENT MUSEUMS';
 
 $config['skylight_adminemail'] = 'example@example.com';
 
