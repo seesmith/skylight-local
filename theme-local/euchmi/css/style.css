@@ -187,7 +187,7 @@ header                                { position: relative; }
 .col-sidebar ul.selected a.deselect                        { display: block; width: 13px; height: 13px; background: url(../images/bg-deselect.png) no-repeat 0px 0px; text-indent: -9999px; position: absolute; top: 0; right: 0; }
 .col-sidebar ul.selected a.deselect:hover        { background-position: 0px -15px; }
 
-.col-sidebar ul.related li                                         { padding: 0 17px 9px 46px; position: relative; margin-bottom: 18px; zoom: 1; }
+.col-sidebar ul.related li                                         { padding: 0 17px  9px 46px; position: relative; margin-bottom: 18px; zoom: 1; }
 .col-sidebar ul.related li a                                 { padding: 0; }
 .col-sidebar ul.related li a:hover                        { background: none; text-decoration: underline; }
 .col-sidebar ul.related .tags                                { margin: 4px 0 0 0; }
