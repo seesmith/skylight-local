@@ -147,9 +147,12 @@ header                                { position: relative; }
 .ie7 .logo                         { top: -40px; }
 .collection-title        { color: #00548e; font-size: 28px; line-height: 88px; padding-top: 20px; text-shadow: rgba(255,255,255,0.3) 0px 1px 0px; margin: 0;}
 .banner  { width: 600px; height: 88px;padding-top: 20px;}
-.iteminfo {width: 800px; position:relative;}
-.thumbnailimage {position:relative; width: 650px; float:left;}
-.tagdiv { position:relative;width: 220px;float:left; }
+.iteminfo {width: 750px; margin-top: 10px;position:relative; padding-right: 20px;}
+.thumbnailimage {position:relative; width: 500px; float:left;}
+.tagdiv { position:relative;width: 250px;float:left; }
+.tagdiv a                                 { font-size: 13px; color: #fff;background: #eb0955; -webkit-border-radius: 5px; -moz-border-radius: 5px; border-radius: 5px; padding: 2px 6px; line-height: 20px; margin-right: 8px; text-decoration: none; }
+.tagdiv a.bold                        { font-weight: bold; }
+.tagdiv a:hover                        { background: #BBBBBC; color: #000; }
 .search                                                        { padding-bottom: 36px; border-bottom: 1px solid #EB0955; width: 660px; }
 .search input[type=text]                {
     box-shadow: 0px 0px 9px rgba(178,179,180, 0.3); -moz-box-shadow: 0px 0px 9px rgba(178,179,180, 0.75); -webkit-box-shadow: 0px 0px 9px rgba(178,179,180, 0.3);
@@ -166,14 +169,14 @@ header                                { position: relative; }
 .header-links a:hover                        { text-decoration: underline; }
 .header-links a.last                        { border: none; }
 
-.col-sidebar h4                                                { color: #fff; line-height: 26px; font-weight: bold; text-transform: uppercase; font-size: 12px; margin-bottom: 17px; background: #ffffff; padding: 0 17px; }
+.col-sidebar h4                                                {color: #fff; line-height: 26px; font-weight: bold; text-transform: uppercase; font-size: 12px; margin-bottom: 17px; background: #eb0955; padding: 0 17px; }
 .col-sidebar h4 a                                         {
     background: #EB0955 url(../images/bg-arrows.png) no-repeat 100% -92px;
     display: block; color: #fff; text-decoration: none; width: 223px; padding-left: 17px; position: relative; left: -17px;
 }
 .col-sidebar h4 a:hover                                { background: #444444 url(../images/bg-arrows.png) no-repeat 100% -92px; }
-.col-sidebar ul                                         { list-style-type: none; margin: 0 0 17px 0; font-size: 12px; }
-.col-sidebar ul li                                         { line-height: 16px; }
+.col-sidebar ul                                         { list-style-type: none; margin: 5px 5px 25px 5px; font-size: 12px; }
+.col-sidebar ul li                                         { line-height: 16px; margin-top: 5px;  }
 .col-sidebar ul a                                         { text-decoration: none; display: block; padding: 0 17px; }
 .col-sidebar ul a:hover                                { text-decoration: underline; }
 
@@ -184,17 +187,19 @@ header                                { position: relative; }
 .col-sidebar ul.selected a.deselect                        { display: block; width: 13px; height: 13px; background: url(../images/bg-deselect.png) no-repeat 0px 0px; text-indent: -9999px; position: absolute; top: 0; right: 0; }
 .col-sidebar ul.selected a.deselect:hover        { background-position: 0px -15px; }
 
-.col-sidebar ul.related li                                         { padding: 0 17px 0 46px; position: relative; margin-bottom: 18px; zoom: 1; }
+.col-sidebar ul.related li                                         { padding: 0 17px  9px 46px; position: relative; margin-bottom: 18px; zoom: 1; }
 .col-sidebar ul.related li a                                 { padding: 0; }
 .col-sidebar ul.related li a:hover                        { background: none; text-decoration: underline; }
 .col-sidebar ul.related .tags                                { margin: 4px 0 0 0; }
 .col-sidebar ul.related .tags a                         { padding: 2px 5px; display: inline; background: #ffffff; }
 .col-sidebar ul.related .tags a:hover                { text-decoration: none; background: #00548e; }
 
-.tags                                        { margin: 0 0 0 54px; }
-.tags a                                 { font-size: 13px; background: #BBBBBC; -webkit-border-radius: 5px; -moz-border-radius: 5px; border-radius: 5px; padding: 2px 6px; line-height: 20px; margin-right: 8px; text-decoration: none; }
+
+.tags                                        { margin-top: 5px; float:left; margin: 0 0 0 54px; }
+.tags a                                 { font-size: 13px; color: #fff;background: #EB0955; -webkit-border-radius: 5px; -moz-border-radius: 5px; border-radius: 5px; padding: 2px 6px; line-height: 20px; margin-right: 8px; text-decoration: none; }
+
 .tags a.bold                        { font-weight: bold; }
-.tags a:hover                        { background: #BBBBBC; color: #fff; }
+.tags a:hover                        { background: #BBBBBC; color: #000; }
 
 footer                                                                 { margin-top: 40px; }
 footer a                                                         { font-size: 10px; text-transform: uppercase; color: #666 !important; text-decoration: none; font-weight: bold; border-right: 1px solid #cecece; padding-right: 9px; margin-right: 5px; }
@@ -204,7 +209,7 @@ footer a:hover                                                { color: #333 !imp
 /* Custom Containers & Subclasses ----------------------------------------------------------------------------------------*/
 
 .listing                                                         { list-style-type: none; margin: 0; }
-.listing li                                                 { padding: 10px 0 10px 24px; border-left: 54px solid #edeff0; position: relative; }
+.listing li                                                 { padding: 10px 0 20px 24px; border-left: 54px solid #edeff0; position: relative; }
 .listing li.first                                        { padding-top: 30px; }
 .listing li.last                                        { padding-bottom: 30px; }
 .listing li a                                                 { text-decoration: none; }
@@ -260,7 +265,7 @@ h1 .icon                                                        { top: -5px; lef
 .pagination .prev:hover,
 .pagination .next:hover                         { background: #def5fb url(../images/bg-arrows.png) no-repeat; }
 
-.content                                                         { margin-top: 30px; }
+.content                                                         { margin-top: 50px;  }
 .content ul                                                 { margin: 0 0 18px 1.2em; }
 
 table                                                                { width: 100%; background: #f1f1f2; }

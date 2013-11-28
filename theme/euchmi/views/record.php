@@ -103,11 +103,9 @@ if(isset($solr[$type_field])) {
         $handle_id = preg_replace('/^.*\//', '',$handle);
         $uri = './record/'.$handle_id.'/'.$seq.'/'.$filename;
 
-         echo '<img src = "'.$uri.'" height = "280">';
-
+        echo '<img src = "'.$uri.'" height = "280">';
 
         ?>
-
 
 
         <p><span class="label"></span><?php echo $bitstreamLink ?>

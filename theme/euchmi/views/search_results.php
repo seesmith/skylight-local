@@ -72,9 +72,9 @@
         <span class="icon <?php echo $type?>"></span>
 
         <div class = "iteminfo">
-
-        <div class="tagdiv">
             <h3><a href="./record/<?php echo $doc['id']?>?highlight=<?php echo $query ?>"><?php echo $doc[$title_field][0]; ?></a></h3>
+        <div class="tagdiv">
+
 
         <?php if(array_key_exists($author_field,$doc)) { ?>
 
@@ -149,8 +149,9 @@
 
 
         </div> <!-- close tags div -->
-<div class = "thumbnailImage">
+<div class =  "thumbnailImage">
     <?php if(isset($doc[$bitstream_field])) {
+        //SR clone text from bitstream helpers to get individual aspects of bitstream. Cannot call bitstream helpers from here.
     foreach ($doc[$bitstream_field] as $bitstream) {
         $thumbnail = $doc[$thumbnail_field][0];
         $segments = explode("##", $thumbnail);
@@ -159,33 +160,7 @@
         $seq = $segments[4];
         $handle_id = preg_replace('/^.*\//', '',$handle);
         $uri = './record/'.$handle_id.'/'.$seq.'/'.$filename;
-        $sizearray = getimagesize($filename);
-
-        echo   '      <script language="JavaScript" type="text/javascript">
-
-                document.write(getDim());
-
-        </script><script language="JavaScript" type="text/javascript">
-
-function getDim() {
-    myImage = new Image;
-    myImage.src="'.$filename.'";//path to image
-    document.divImage.src=myImage.src;
-    var imgProp;
-    var width = myImage.width;
-    var height = myImage.height;
-    var ratio = width/height;
-    if ( ratio > 1 ) {
-        imgProp="portrait (width: " +width+ " px - height: " +height+ " px)";
-    }
-    else {
-        imgProp="landscape (width: " +width+ " px - height: " +height+ " px)";
-    }
-    return imgProp;
-}
-
-</script>';
-        $thumbnailLink = $this->skylight_utilities->getBitstreamThumbLinkParameterised($bitstream, $thumbnail, 'test', '', 0, 'style="display: block; margin-left: auto; margin-right: auto;" ');
+        $thumbnailLink = $this->skylight_utilities->getBitstreamThumbLinkParameterised($bitstream, $thumbnail, 'test', '140px', 0, 'style="display: block; margin-left: auto; margin-right: auto;" ');
 
         echo $thumbnailLink;
     }

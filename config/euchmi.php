@@ -15,6 +15,7 @@ $config['skylight_oaipmhcollection'] = 'hdl_123456789_4';
 $config['skylight_container_id'] = '11';
 $config['skylight_container_field'] = 'location.coll';
 
+
 $config['skylight_fields'] = array('Title' => 'dc.title.en',
     'Author' => 'dc.contributor.author',
     'Country' => 'lido.country.en',
