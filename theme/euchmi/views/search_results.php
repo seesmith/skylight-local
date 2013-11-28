@@ -152,7 +152,9 @@
 <div class =  "thumbnailImage">
     <?php if(isset($doc[$bitstream_field])) {
         //SR clone text from bitstream helpers to get individual aspects of bitstream. Cannot call bitstream helpers from here.
-    foreach ($doc[$bitstream_field] as $bitstream) {
+        $i = 0;
+        foreach ($doc[$bitstream_field] as $bitstream) {
+
         $thumbnail = $doc[$thumbnail_field][0];
         $segments = explode("##", $thumbnail);
         $filename = $segments[1];
@@ -162,7 +164,11 @@
         $uri = './record/'.$handle_id.'/'.$seq.'/'.$filename;
         $thumbnailLink = $this->skylight_utilities->getBitstreamThumbLinkParameterised($bitstream, $thumbnail, 'test', '140px', 0, 'style="display: block; margin-left: auto; margin-right: auto;" ');
 
-        echo $thumbnailLink;
+        if ($i == 0)
+        {
+          echo $thumbnailLink;
+        }
+        $i++;
     }
     }?>
 </div>
