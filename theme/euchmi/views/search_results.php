@@ -149,7 +149,7 @@
 
 
         </div> <!-- close tags div -->
-<div class = "thumbnailImage">
+<div class =  "thumbnailImage">
     <?php if(isset($doc[$bitstream_field])) {
         //SR clone text from bitstream helpers to get individual aspects of bitstream. Cannot call bitstream helpers from here.
     foreach ($doc[$bitstream_field] as $bitstream) {
