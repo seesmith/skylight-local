@@ -6,8 +6,11 @@
 
         $title_field = $this->skylight_utilities->getField('Title');
         $author_field = $this->skylight_utilities->getField('Author');
-        $date_field = $this->skylight_utilities->getField('Date');
+        $date_field = $this->skylight_utilities->getField('Date Made');
         $type_field = $this->skylight_utilities->getField('Type');
+        $bitstream_field = $this->skylight_utilities->getField('Bitstream');
+        $thumbnail_field = $this->skylight_utilities->getField('Thumbnail');
+        $abstract_field = $this->skylight_utilities->getField('Abstract');
 
         $base_parameters = preg_replace("/[?&]sort_by=[_a-zA-Z+%20. ]+/","",$base_parameters);
         if($base_parameters == "") {
@@ -67,9 +70,11 @@
 
     <li<?php if($index == 0) { echo ' class="first"'; } elseif($index == sizeof($docs) - 1) { echo ' class="last"'; } ?>>
         <span class="icon <?php echo $type?>"></span>
-        <h3><a href="./record/<?php echo $doc['id']?>?highlight=<?php echo $query ?>"><?php echo $doc[$title_field][0]; ?></a></h3>
-        <div class="tags">
-            
+
+        <div class = "iteminfo">
+            <h3><a href="./record/<?php echo $doc['id']?>?highlight=<?php echo $query ?>"><?php echo $doc[$title_field][0]; ?></a></h3>
+        <div class="tagdiv">
+
 
         <?php if(array_key_exists($author_field,$doc)) { ?>
 
@@ -119,9 +124,9 @@
             ?></p><?php
         }
         else {
-            if(array_key_exists('dcdescriptionabstract', $doc)) {
+            if(array_key_exists($abstract_field, $doc)) {
                 echo '<p>';
-                $abstract =  $doc['dcdescriptionabstract'][0];
+                $abstract =  $doc[$abstract_field][0];
                 $abstract_words = explode(' ',$abstract);
                 $shortened = '';
                 $max = 40;
@@ -140,11 +145,37 @@
 
         ?>
 
-        </div> <!-- close tags div -->
 
+
+
+        </div> <!-- close tags div -->
+<div class =  "thumbnailImage">
+    <?php if(isset($doc[$bitstream_field])) {
+        //SR clone text from bitstream helpers to get individual aspects of bitstream. Cannot call bitstream helpers from here.
+        $i = 0;
+        foreach ($doc[$bitstream_field] as $bitstream) {
+
+        $thumbnail = $doc[$thumbnail_field][0];
+        $segments = explode("##", $thumbnail);
+        $filename = $segments[1];
+        $handle = $segments[3];
+        $seq = $segments[4];
+        $handle_id = preg_replace('/^.*\//', '',$handle);
+        $uri = './record/'.$handle_id.'/'.$seq.'/'.$filename;
+        $thumbnailLink = $this->skylight_utilities->getBitstreamThumbLinkParameterised($bitstream, $thumbnail, 'test', '140px', 0, 'style="display: block; margin-left: auto; margin-right: auto;" ');
+        if ($i == 0)
+        {
+          echo $thumbnailLink;
+        }
+        $i++;
+    }
+    }?>
+</div>
+        </div>
     </li>
-        <?php } ?>
+        <?php }?>
     </ul>
+
 
     <div class="pagination">
        <?php echo $pagelinks ?>

@@ -1,10 +1,10 @@
 <?php
 
-$config['skylight_appname'] = 'mimed';
+$config['skylight_appname'] = 'cse';
 
-$config['skylight_theme'] = 'mimed';
+$config['skylight_theme'] = 'cse';
 
-$config['skylight_fullname'] = 'MUSICAL INSTRUMENT MUSEUMS';
+$config['skylight_fullname'] = 'Centre for Sports and Exercise';
 
 $config['skylight_adminemail'] = 'example@example.com';
 
@@ -12,15 +12,13 @@ $config['skylight_oaipmhcollection'] = 'hdl_123456789_4';
 
 
 // Container ID and the field used in solr index to store this ID. Used for restricting search/browse scope.
-$config['skylight_container_id'] = '11';
+$config['skylight_container_id'] = '14';
 $config['skylight_container_field'] = 'location.coll';
 
 
 
 $config['skylight_fields'] = array('Title' => 'dc.title.en',
     'Author' => 'dc.contributor.author',
-    'Country' => 'lido.country.en',
-    'City' => 'lido.city.en',
     'Subject' => 'dc.subject.en',
     'Instrument' => 'dc.type.en',
     'Abstract' => 'dc.description.abstract.en',
@@ -54,8 +52,6 @@ $config['skylight_searchresult_display'] = array('Title','Author','Subject','Typ
 
 
 $config['skylight_search_fields'] = array('Keywords' => 'text',
-    'Country' => 'lido.country',
-    'City' => 'lido.city',
     'Type' => 'dc.type',
     'Author' => 'dc.creator',
     'Subject' => 'dc.subject',

@@ -85,5 +85,6 @@ $config['skylight_lightbox_mimes'] = array('image/jpeg', 'image/gif', 'image/png
 // Language and locale settings
 $config['skylight_language_default'] = 'en';
 $config['skylight_language_options'] = array('en', 'ko', 'jp');
+$config['skylight_highlight_fields'] = 'dc.title.en,dc.contributor.author,dc.subject.en,lido.country.en,dc.description.en,dc.relation.ispartof.en';
 
 ?>
