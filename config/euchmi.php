@@ -16,15 +16,17 @@ $config['skylight_container_id'] = '11';
 $config['skylight_container_field'] = 'location.coll';
 
 
+
 $config['skylight_fields'] = array('Title' => 'dc.title.en',
     'Author' => 'dc.contributor.author',
     'Country' => 'lido.country.en',
+    'City' => 'lido.city.en',
     'Subject' => 'dc.subject.en',
     'Instrument' => 'dc.type.en',
     'Abstract' => 'dc.description.abstract.en',
     'Date' => 'dc.date.issued',
-    'Bitstream'=> 'dc.format.original',
-    'Thumbnail'=> 'dc.format.thumbnail',
+    'Bitstream'=> 'dc.format.original.en',
+    'Thumbnail'=> 'dc.format.thumbnail.en',
     'Place Made' => 'dc.coverage.spatial.en',
     'Date Made' => 'dc.date.created',
     'Accession Number' => 'dc.identifier.other',
@@ -43,8 +45,8 @@ $config['skylight_meta_fields'] = array('Title' => 'dc.title',
     'Subject' => 'dc.subject',
     'Date' => 'dc.date.issued',
     'Type' => 'dc.type',
-    'Bitstream'=> 'dc.format.original',
-    'Thumbnail'=> 'dc.format.thumbnail');
+    'Bitstream'=> 'dc.format.original.en',
+    'Thumbnail'=> 'dc.format.thumbnail.en');
 
 $config['skylight_recorddisplay'] = array('Title','Author','Subject','Type','Abstract', 'Place Made', 'Date Made', 'Accession Number', 'Description', 'Collection');
 
@@ -53,6 +55,7 @@ $config['skylight_searchresult_display'] = array('Title','Author','Subject','Typ
 
 $config['skylight_search_fields'] = array('Keywords' => 'text',
     'Country' => 'lido.country',
+    'City' => 'lido.city',
     'Type' => 'dc.type',
     'Author' => 'dc.creator',
     'Subject' => 'dc.subject',
@@ -93,5 +96,7 @@ $config['skylight_lightbox_mimes'] = array('image/jpeg', 'image/gif', 'image/png
 // Language and locale settings
 $config['skylight_language_default'] = 'en';
 $config['skylight_language_options'] = array('en', 'ko', 'jp');
+
+$config['skylight_highlight_fields'] = 'dc.title.en,dc.contributor.author,dc.subject.en,lido.country.en,dc.description.en,dc.relation.ispartof.en';
 
 ?>

@@ -21,7 +21,9 @@
                                         'Type' => 'dc.type',
                                         'Abstract' => 'dc.description.abstract',
                                         'Date' => 'dc.date.issued',
-                                        'Accession Date' => 'dc.date.accessioned_dt'
+                                        'Accession Date' => 'dc.date.accessioned_dt',
+                                        'Bitstream'=> 'dc.format.original.en',
+                                        'Thumbnail'=> 'dc.format.thumbnail.en'
                                         );
 
     $config['skylight_date_filters'] = array('Date' => 'dateIssued.year_sort');
@@ -76,5 +78,6 @@
     // Language and locale settings
     $config['skylight_language_default'] = 'en';
     $config['skylight_language_options'] = array('en', 'ko', 'jp');
+    $config['skylight_highlight_fields'] = 'dc.title.en,dc.contributor.author,dc.subject.en,dc.description.en,dc.relation.ispartof.en';
 
 ?>
