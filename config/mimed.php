@@ -1,8 +1,8 @@
 <?php
 
-$config['skylight_appname'] = 'euchmi';
+$config['skylight_appname'] = 'mimed';
 
-$config['skylight_theme'] = 'euchmi';
+$config['skylight_theme'] = 'mimed';
 
 $config['skylight_fullname'] = 'MUSICAL INSTRUMENT MUSEUMS';
 
