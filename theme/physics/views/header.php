@@ -43,7 +43,7 @@
 
     <header>
         <p class="collection-title"><p class="uoe"></p></p>
-        <a href="http://www.stcecilias.ed.ac.uk/" class="logo">St Cecilia's Hall</a>
+        <a href="http://www.ph.ed.ac.uk" class="logo">School of Physics & Astronomy Image Archive</a>
         <form action="./redirect/" method="post">
             <fieldset class="search">
                 <input type="text" name="q" value="<?php if (isset($searchbox_query)) echo urldecode($searchbox_query); ?>" id="q" />
