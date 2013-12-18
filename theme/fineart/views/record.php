@@ -164,6 +164,8 @@ if(isset($solr[$type_field])) {
             echo '<video width="320" height="200" controls> <source src="'.$uri.'" type="video/mp4">Sorry, it does not work</video>';
 
         }
+
         ?>
     <?php
-    } }?></div>
+    }
+    echo '</div>';}?>
