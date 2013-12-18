@@ -87,7 +87,7 @@ if(isset($solr[$type_field])) {
     ?><div class="record_bitstreams"><h3>Digital Objects</h3><?php
 
 
-    }
+
     foreach($solr[$bitstream_field] as $bitstream) {
 
         $bitstreamLink = $this->skylight_utilities->getBitstreamLink($bitstream);
@@ -166,4 +166,4 @@ if(isset($solr[$type_field])) {
         }
            ?>
     <?php
-    } ?></div>
+    } }?></div>
