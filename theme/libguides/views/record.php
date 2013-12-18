@@ -93,36 +93,7 @@ if(isset($solr[$type_field])) {
         $bitstreamLink = $this->skylight_utilities->getBitstreamLink($bitstream);
         $bitstreamLinkedImage = $this->skylight_utilities->getBitstreamLinkedImage($bitstream);
 
-
-        $segments = explode("##", $bitstream);
-        $filename = $segments[1];
-        $handle = $segments[3];
-        $seq = $segments[4];
-        $handle_id = preg_replace('/^.*\//', '',$handle);
-        $uri = './record/'.$handle_id.'/'.$seq.'/'.$filename;
-
-        if (strpos($uri, ".jpg")> 0)
-        {
-            echo '<H1>IMAGE</H1>';
-            echo '<img src = "'.$uri.'" height = "280">';
-
-
-            echo '<p><span class="label"></span>'.$bitstreamLink.'
-       (<span class="bitstream_size">';
-            echo getBitstreamSize($bitstream);
-            echo '</span>, <span class="bitstream_mime">';
-
-            echo getBitstreamMimeType($bitstream);
-            echo '</span>, <span class="bitstream_description">';
-            echo getBitstreamDescription($bitstream);
-            echo'</span>)</p>';
-
-        }
-    }
-    foreach($solr[$bitstream_field] as $bitstream) {
-
-        $bitstreamLink = $this->skylight_utilities->getBitstreamLink($bitstream);
-        $bitstreamLinkedImage = $this->skylight_utilities->getBitstreamLinkedImage($bitstream);
+        //echo $this->skylight_bitstream_helper->getBitstreamUri($bitstream);
 
 
         $segments = explode("##", $bitstream);
@@ -132,38 +103,12 @@ if(isset($solr[$type_field])) {
         $handle_id = preg_replace('/^.*\//', '',$handle);
         $uri = './record/'.$handle_id.'/'.$seq.'/'.$filename;
 
+        echo '<img src = "'.$uri.'" height = "280">';
 
-        if (strpos($uri, ".mp3")> 0)
-        {
-            echo '<h1>AUDIO</h1>';
-            echo '<script src="http://api.html5media.info/1.1.6/html5media.min.js"></script>';
-            echo '<audio src="'.$uri.'" controls preload></audio>';
-
-           }
-    }
-
-    foreach($solr[$bitstream_field] as $bitstream) {
-
-        $bitstreamLink = $this->skylight_utilities->getBitstreamLink($bitstream);
-        $bitstreamLinkedImage = $this->skylight_utilities->getBitstreamLinkedImage($bitstream);
+        ?>
 
 
-        $segments = explode("##", $bitstream);
-        $filename = $segments[1];
-        $handle = $segments[3];
-        $seq = $segments[4];
-        $handle_id = preg_replace('/^.*\//', '',$handle);
-        $uri = './record/'.$handle_id.'/'.$seq.'/'.$filename;
-
-         if (strpos($uri, ".mp4")> 0)
-        {
-
-            echo '<H1>VIDEO</H1>';
-
-            echo '<script src="http://api.html5media.info/1.1.6/html5media.min.js"></script>';
-            echo '<video width="320" height="200" controls> <source src="'.$uri.'" type="video/mp4">Sorry, it does not work</video>';
-
-        }
-           ?>
+        <p><span class="label"></span><?php echo $bitstreamLink ?>
+        (<span class="bitstream_size"><?php echo getBitstreamSize($bitstream); ?></span>, <span class="bitstream_mime"><?php echo getBitstreamMimeType($bitstream); ?></span>, <span class="bitstream_description"><?php echo getBitstreamDescription($bitstream); ?></span>)</p>
     <?php
     } ?></div>
