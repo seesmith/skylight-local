@@ -2,7 +2,7 @@
 
 $config['skylight_appname'] = 'Exams';
 
-$config['skylight_theme'] = 'default';
+$config['skylight_theme'] = 'exams';
 
 $config['skylight_fullname'] = 'Exams';
 
@@ -25,7 +25,7 @@ $config['skylight_fields'] = array('Title' => 'dc.title.en',
 );
 
 $config['skylight_date_filters'] = array('Date' => 'dateIssued.year_sort');
-$config['skylight_filters'] = array('Author' => 'author_filter', 'Subject' => 'subject_filter', 'Academic Year' => 'coverageTemporal_filter');
+$config['skylight_filters'] = array('School' => 'author_filter', 'Subject' => 'subject_filter', 'Academic Year' => 'coverageTemporal_filter', 'Title' => 'title_filter');
 $config['skylight_filter_delimiter'] = ':';
 
 $config['skylight_meta_fields'] = array('Title' => 'dc.title',
