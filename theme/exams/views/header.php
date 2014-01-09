@@ -41,12 +41,13 @@
 <div id="container">
 
     <header>
-        <div class='uofe-stuff'>
+        <div class="uofe-stuff">
             <a href="http://www.ed.ac.uk" class="uofe-logo"></a>
             <a href="http://www.ed.ac.uk" class="uofe-title"></a>
         </div>
-        <a href="http://www.ed.ac.uk/schools-departments/information-services" class="argos"><span id="parentTitle">Information Services</span></a>
-
+        <div class="is-stuff">
+            <a href="http://www.ed.ac.uk/schools-departments/information-services" class="argos"><span id="parentTitle">Information Services</span></a>
+        </div>
 
         <form action="./redirect/" method="post">
             <fieldset class="search">
