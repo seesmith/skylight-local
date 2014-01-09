@@ -132,13 +132,71 @@ input.btn:hover					{ background: #033a5f; }
 /* Site Css ///////////////////////////////////////////////////////////////////////////////////////////////////////////// */
 
 /* Structure -------------------------------------------------------------------------------------------------------------*/
-#container 			{ width: 940px; margin: auto auto; background-color: #ffffff }
+#container 			{ width: 940px; margin: auto auto; background-color: #ffffff; padding-left: 30px; padding-right: 30px; }
 header				{ position: relative; }
 .col-main			{ float: left; margin-right: 40px; width: 660px; }
 .col-sidebar		{ float: left; width: 240px; margin-top: -66px; background: #def5fb; position: relative; z-index: 2; }
 .ie7 .col-sidebar	{ padding-bottom: 30px; }
 
 /* Common Containers & Subclasses ----------------------------------------------------------------------------------------*/
+
+/* Stuff added by me, mostly hacked out of Polopoly pages - Robin */
+
+.uofe-stuff         { padding-top: 20px; padding-bottom: 20px; }
+.uofe-logo			{ display: inline-block; width: 70px; height: 70px; background: url(../images/uofe-logo.png) no-repeat 0px 0px; }
+.uofe-title			{ display: inline-block; width: 351px; height: 25px; background: url(../images/uofe-title.png) no-repeat 0px 0px; margin-left: 10px; margin-bottom: 25px;}
+.argos              { display: block; width: 811px; height: 150px; background: url(../images/argos.png) no-repeat 0px 0px; padding-top: 15px; padding-left: 0px; text-decoration: none }
+#parentTitle        { font-size: 175%; width: 350px; font-family: 'tahoma','lucida grande',arial,helvetica,sans-serif;}
+a #parentTitle
+{
+    text-decoration: none;
+    background-color: white;
+    background-image: none;
+    background-repeat: repeat;
+    background-attachment: scroll;
+    background-position: 0% 0%;
+    background-clip: border-box;
+    background-origin: padding-box;
+    background-size: auto auto;
+    color: #00325f;
+    padding-top: 10px;
+    padding-right: 10px;
+    padding-bottom: 10px;
+    padding-left: 10px;
+    opacity: 0.75;
+}
+
+#parentTitle:hover
+{
+    background-color: #00325f;
+    background-image: none;
+    background-repeat: repeat;
+    background-attachment: scroll;
+    background-position: 0% 0%;
+    background-clip: border-box;
+    background-origin: padding-box;
+    background-size: auto auto;
+    color: white;
+    text-decoration: none;
+}
+
+a:hover #parentTitle
+{
+    background-color: #00325f;
+    background-image: none;
+    background-repeat: repeat;
+    background-attachment: scroll;
+    background-position: 0% 0%;
+    background-clip: border-box;
+    background-origin: padding-box;
+    background-size: auto auto;
+    color: white;
+    text-decoration: none;
+}
+
+/* end of my stuff */
+
+
 .logo				{ display: block; text-indent: -9999px; width: 259px; height: 109px; background: url(../images/skylight.png) no-repeat 0px 0px; position: absolute; top: 0; right: 0; }
 .ie7 .logo 			{ top: -40px; }
 .collection-title	{ color: #00548e; font-size: 28px; line-height: 88px; padding-top: 20px; text-shadow: rgba(255,255,255,0.3) 0px 1px 0px; margin: 0; }

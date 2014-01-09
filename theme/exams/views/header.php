@@ -41,8 +41,14 @@
 <div id="container">
 
     <header>
-        <p class="collection-title"><?php echo $site_title ?></p>
-        <a href="http://skylightui.org/" class="logo">Skylight</a>
+        <div class="uofe-stuff">
+            <a href="http://www.ed.ac.uk" class="uofe-logo"></a>
+            <a href="http://www.ed.ac.uk" class="uofe-title"></a>
+        </div>
+        <div class="is-stuff">
+            <a href="http://www.ed.ac.uk/schools-departments/information-services" class="argos"><span id="parentTitle">Information Services</span></a>
+        </div>
+
         <form action="./redirect/" method="post">
             <fieldset class="search">
                 <input type="text" name="q" value="<?php if (isset($searchbox_query)) echo urldecode($searchbox_query); ?>" id="q" />
@@ -50,11 +56,7 @@
                 <a href="./advanced" class="advanced">Advanced search</a>
             </fieldset>
         </form>
-        <nav class="header-links">
-            <a href="./">Home</a>
-            <a href="./about/">About this site</a>
-            <a href="./feedback/" class="last">Feedback</a>
-        </nav>
+
     </header>
 
     <div id="main" role="main" class="clearfix">
