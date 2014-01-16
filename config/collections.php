@@ -8,34 +8,34 @@ $config['skylight_fullname'] = 'Library and University Collections';
 
 $config['skylight_adminemail'] = 'example@example.com';
 
-$config['skylight_oaipmhcollection'] = 'hdl_10683_1';
+$config['skylight_oaipmhcollection'] = 'hdl_10683_4';
 
 
 // Container ID and the field used in solr index to store this ID. Used for restricting search/browse scope.
 $config['skylight_container_id'] = '1';
 $config['skylight_container_field'] = 'location.coll';
 
-$config['skylight_fields'] = array('Title' => 'dc.title',
-    'Author' => 'dc.creator',
-    'Subject' => 'dc.subject',
-    'Type' => 'dc.type',
+$config['skylight_fields'] = array('Title' => 'dc.title.en',
+    'Author' => 'dc.contributor.author',
+    'Subject' => 'dc.subject.en',
+    'Type' => 'dc.type.en',
     'Abstract' => 'dc.description.abstract',
     'Date' => 'dc.date.issued_dt',
     'Bitstream'=> 'dc.format.original',
     'Thumbnail'=> 'dc.format.thumbnail',
-    'Description'=>'dc.description'
+    'Description'=>'dc.description.en'
 );
 
 $config['skylight_date_filters'] = array('Date' => 'dateIssued.year_sort');
 $config['skylight_filters'] = array('Author' => 'author_filter', 'Subject' => 'subject_filter', 'Type' => 'type_filter');
 $config['skylight_filter_delimiter'] = ':';
 
-$config['skylight_meta_fields'] = array('Title' => 'dc.title',
-    'Author' => 'dc.creator',
+$config['skylight_meta_fields'] = array('Title' => 'dc.title.en',
+    'Author' => 'dc.contributor.author',
     'Abstract' => 'dc.description.abstract',
-    'Subject' => 'dc.subject',
+    'Subject' => 'dc.subject.en',
     'Date' => 'dc.date.issued_dt',
-    'Type' => 'dc.type',
+    'Type' => 'dc.type.en',
     'Bitstream'=> 'dc.format.original',
     'Thumbnail'=> 'dc.format.thumbnail'
 );
@@ -45,14 +45,14 @@ $config['skylight_recorddisplay'] = array('Title','Author','Subject','Type','Abs
 $config['skylight_searchresult_display'] = array('Title','Author','Subject','Type','Abstract');
 
 $config['skylight_search_fields'] = array('Keywords' => 'text',
-    'Subject' => 'dc.subject',
-    'Type' => 'dc.type',
-    'Author' => 'dc.creator'
+    'Subject' => 'dc.subject.en',
+    'Type' => 'dc.type.en',
+    'Author' => 'dc.contributor.author'
 );
 
 $config['skylight_sort_fields'] = array('Title' => 'dc.title',
     'Date' => 'dc.date.issued_dt',
-    'Author' => 'dc.creator'
+    'Author' => 'dc.contributor.author'
 );
 
 $config['skylight_feed_fields'] = array('Title' => 'Title',
