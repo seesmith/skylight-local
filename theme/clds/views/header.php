@@ -65,8 +65,8 @@
 
         <div id="container">
             <header>
-                <p class="collection-title"><img src = "<?php echo base_url(); ?>theme/<?php echo $this->config->item('skylight_theme'); ?>/images/clds.png"></p>
-                <a href="http://www.sac.ac.uk/" class="logo">Scottish Agricultural College</a>
+                <p class="collection-title"></p><p class="uoe"></p><!--<p class="illustration"></p>-->
+                <!--<a href="http://www.ed.ac.uk/schools-departments/information-services/library-museum-gallery/crc" class="logo">Centre for Research Collections</a>-->
                 <form action="./redirect/" method="post">
                     <fieldset class="search">
                         <input type="text" name="q" value="<?php if (isset($searchbox_query)) echo urldecode($searchbox_query); ?>" id="q" />
