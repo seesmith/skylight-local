@@ -16,7 +16,8 @@ $config['skylight_container_id'] = '*';
 $config['skylight_container_field'] = 'location.coll';
 
 $config['skylight_fields'] = array('Title' => 'dc.title.en',
-    'Author' => 'dc.creator',
+ //   'Author' => 'dc.creator',
+    'Version' => 'dc.description.version.en',
     'Subject' => 'dc.subject.en',
     'Type' => 'dc.type.en',
     'Abstract' => 'dc.description.abstract',
@@ -45,9 +46,8 @@ $config['skylight_search_fields'] = array('Keywords' => 'text',
     'Author' => 'dc.creator'
 );
 
-$config['skylight_sort_fields'] = array('Title' => 'dc.title',
-    'Date' => 'dc.date.issued_dt',
-    'Author' => 'dc.creator'
+$config['skylight_sort_fields'] = array('Title' => 'dc.title_sort',
+    'Date' => 'dc.date.issued_dt'
 );
 
 $config['skylight_feed_fields'] = array('Title' => 'Title',
@@ -66,8 +66,11 @@ $config['skylight_share_buttons'] = false;
 $config['skylight_cache'] = false;
 
 // Digital object management
+$config['skylight_bitstream_field'] = 'dc.format.original';
+$config['skylight_thumbnail_field'] = 'dc.format.thumbnail';
 $config['skylight_display_thumbnail'] = true;
 $config['skylight_link_bitstream'] = true;
+
 
 // Display common image formats in "light box" gallery?
 $config['skylight_lightbox'] = true;

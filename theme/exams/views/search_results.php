@@ -6,12 +6,9 @@
 
         $title_field = $this->skylight_utilities->getField('Title');
         $author_field = $this->skylight_utilities->getField('Author');
-        $date_field = $this->skylight_utilities->getField('Date Made');
+        $version_field = $this->skylight_utilities->getField('Version');
+        $date_field = $this->skylight_utilities->getField('Date');
         $type_field = $this->skylight_utilities->getField('Type');
-        $bitstream_field = $this->skylight_utilities->getField('Bitstream');
-        $thumbnail_field = $this->skylight_utilities->getField('Thumbnail');
-        $abstract_field = $this->skylight_utilities->getField('Abstract');
-
 
         $base_parameters = preg_replace("/[?&]sort_by=[_a-zA-Z+%20. ]+/","",$base_parameters);
         if($base_parameters == "") {
@@ -71,11 +68,9 @@
 
     <li<?php if($index == 0) { echo ' class="first"'; } elseif($index == sizeof($docs) - 1) { echo ' class="last"'; } ?>>
         <span class="icon <?php echo $type?>"></span>
-
-        <div class = "iteminfo">
-            <h3><a href="./record/<?php echo $doc['id']?>?highlight=<?php echo $query ?>"><?php echo $doc[$title_field][0]; ?></a></h3>
-        <div class="tagdiv">
-
+        <h3><a href="./record/<?php echo $doc['id']?>?highlight=<?php echo $query ?>"><?php echo $doc[$title_field][0]; ?></a></h3>
+        <div class="tags">
+            
 
         <?php if(array_key_exists($author_field,$doc)) { ?>
 
@@ -100,7 +95,17 @@
         
             <?php } ?>
 
-       <?php if(array_key_exists($date_field, $doc)) { ?>
+            <?php if(array_key_exists($version_field, $doc)) { ?>
+            <span>
+                <?php
+                echo $doc[$version_field][0];
+                }
+
+                ?>
+            </span>
+
+
+            <?php if(array_key_exists($date_field, $doc)) { ?>
             <span>
                 <?php
                 echo '(' . $doc[$date_field][0] . ')';
@@ -125,9 +130,9 @@
             ?></p><?php
         }
         else {
-            if(array_key_exists($abstract_field, $doc)) {
+            if(array_key_exists('dcdescriptionabstract', $doc)) {
                 echo '<p>';
-                $abstract =  $doc[$abstract_field][0];
+                $abstract =  $doc['dcdescriptionabstract'][0];
                 $abstract_words = explode(' ',$abstract);
                 $shortened = '';
                 $max = 40;
@@ -147,37 +152,30 @@
         ?>
 
 
+            <?php if(isset($doc[$bitstream_field]) && $link_bitstream) {
+
+                ?><div class="record_bitstreams"><?php
+                foreach($doc[$bitstream_field] as $bitstream) {
+                    $bitstreamLink = $this->skylight_utilities->getBitstreamLink($bitstream);
+                    ?><p><span class="label"></span><?php echo $bitstreamLink ?>
+                    (<span class="bitstream_size"><?php echo getBitstreamSize($bitstream); ?></span>, <span class="bitstream_mime"><?php echo getBitstreamMimeType($bitstream); ?></span>, <span class="bitstream_description"><?php echo getBitstreamDescription($bitstream); ?></span>)</p>
+                <?php
+                } ?></div> <?php
+
+
+            }
+            else {
+               ?> <div>This paper is not currently available</div>  <?php
+
+
+            }?>
 
 
         </div> <!-- close tags div -->
-<div class =  "thumbnailImage">
-    <?php if(isset($doc[$bitstream_field])) {
-        //SR clone text from bitstream helpers to get individual aspects of bitstream. Cannot call bitstream helpers from here.
-        $i = 0;
-        foreach ($doc[$bitstream_field] as $bitstream) {
 
-        $thumbnail = $doc[$thumbnail_field][0];
-        $segments = explode("##", $thumbnail);
-        $filename = $segments[1];
-        $handle = $segments[3];
-        $seq = $segments[4];
-        $handle_id = preg_replace('/^.*\//', '',$handle);
-        $uri = './record/'.$handle_id.'/'.$seq.'/'.$filename;
-        $thumbnailLink = $this->skylight_utilities->getBitstreamThumbLinkParameterised($bitstream, $thumbnail, 'test', '140px', 0, 'style="display: block; margin-left: auto; margin-right: auto;" ');
-
-        if ($i == 0)
-        {
-          echo $thumbnailLink;
-        }
-        $i++;
-    }
-    }?>
-</div>
-        </div>
     </li>
-        <?php }?>
+        <?php } ?>
     </ul>
-
 
     <div class="pagination">
        <?php echo $pagelinks ?>

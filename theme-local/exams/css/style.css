@@ -132,7 +132,7 @@ input.btn:hover					{ background: #033a5f; }
 /* Site Css ///////////////////////////////////////////////////////////////////////////////////////////////////////////// */
 
 /* Structure -------------------------------------------------------------------------------------------------------------*/
-#container 			{ width: 940px; margin: auto auto; background-color: #ffffff; padding-left: 30px; padding-right: 30px; }
+#container 			{ width: 940px; margin: auto auto; background-color: #ffffff; padding-left: 30px; padding-right: 30px; padding-bottom: 30px; }
 header				{ position: relative; }
 .col-main			{ float: left; margin-right: 40px; width: 660px; }
 .col-sidebar		{ float: left; width: 240px; margin-top: -66px; background: #def5fb; position: relative; z-index: 2; }
