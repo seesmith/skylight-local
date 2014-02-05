@@ -9,10 +9,12 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <link rel="stylesheet" href="<?php echo base_url(); ?>theme/<?php echo $this->config->item('skylight_theme'); ?>/css/style.css?v=2">
 
-    <script src="./assets/jquery/jquery-1.6.4.min.js"></script>
-    <script src="./assets/plugins/plugins.js"></script>
-    <script src="./assets/script/script.js"></script>
+    <script src="<?php echo base_url()?>/assets/jquery/jquery-1.6.4.min.js"></script>
+    <script src="<?php echo base_url()?>/assets/plugins/plugins.js"></script>
+    <script src="<?php echo base_url()?>/assets/script/script.js"></script>
+
     <base href="<?php echo base_url() . index_page(); if (index_page() !== '') { echo '/'; } ?>">
+
 
     <?php if (isset($solr)) { ?><link rel="schema.DC" href="http://purl.org/dc/elements/1.1/" />
         <link rel="schema.DCTERMS" href="http://purl.org/dc/terms/" />

@@ -68,6 +68,8 @@
 
     <li<?php if($index == 0) { echo ' class="first"'; } elseif($index == sizeof($docs) - 1) { echo ' class="last"'; } ?>>
         <span class="icon <?php echo $type?>"></span>
+
+
         <h3><a href="./record/<?php echo $doc['id']?>?highlight=<?php echo $query ?>"><?php echo $doc[$title_field][0]; ?></a></h3>
         <div class="tags">
             
@@ -158,7 +160,7 @@
                 foreach($doc[$bitstream_field] as $bitstream) {
                     $bitstreamLink = $this->skylight_utilities->getBitstreamLink($bitstream);
                     ?><p><span class="label"></span><?php echo $bitstreamLink ?>
-                    (<span class="bitstream_size"><?php echo getBitstreamSize($bitstream); ?></span>, <span class="bitstream_mime"><?php echo getBitstreamMimeType($bitstream); ?></span>, <span class="bitstream_description"><?php echo getBitstreamDescription($bitstream); ?></span>)</p>
+                    <?php /*(<span class="bitstream_size"><?php echo getBitstreamSize($bitstream); ?></span>, <span class="bitstream_mime"><?php echo getBitstreamMimeType($bitstream); ?></span>, <span class="bitstream_description"><?php echo getBitstreamDescription($bitstream); ?></span>)</p>*/?>
                 <?php
                 } ?></div> <?php
 
@@ -172,6 +174,7 @@
 
 
         </div> <!-- close tags div -->
+
 
     </li>
         <?php } ?>

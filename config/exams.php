@@ -15,10 +15,14 @@ $config['skylight_oaipmhcollection'] = 'hdl_123456789_1';
 $config['skylight_container_id'] = '*';
 $config['skylight_container_field'] = 'location.coll';
 
-$config['skylight_fields'] = array('Title' => 'dc.title.en',
- //   'Author' => 'dc.creator',
-    'Version' => 'dc.description.version.en',
+// This array only appears to be used in Utilities to translate label to value and vice versa. Robin.
+$config['skylight_fields'] = array(
+    'School' => 'dc.creator.en',
     'Subject' => 'dc.subject.en',
+    'Academic Year' => 'dc.coverage.temporal.en',
+    'Title' => 'dc.title.en',
+
+    'Version' => 'dc.description.version.en',
     'Type' => 'dc.type.en',
     'Abstract' => 'dc.description.abstract',
     'Date' => 'dc.date.issued',
@@ -40,10 +44,11 @@ $config['skylight_recorddisplay'] = array('Title','Author','Subject','Type','Abs
 
 $config['skylight_searchresult_display'] = array('Title','Author','Subject','Type','Abstract');
 
-$config['skylight_search_fields'] = array('Keywords' => 'text',
+$config['skylight_search_fields'] = array('School' => 'dc.creator',
     'Subject' => 'dc.subject',
-    'Type' => 'dc.type',
-    'Author' => 'dc.creator'
+    'Academic Year' => 'dc.coverage.temporal',
+    'Title' => 'dc.title',
+    'Keywords' => 'text'
 );
 
 $config['skylight_sort_fields'] = array('Title' => 'dc.title_sort',
@@ -59,7 +64,7 @@ $config['skylight_feed_fields'] = array('Title' => 'Title',
 $config['skylight_results_per_page'] = 10;
 $config['skylight_share_buttons'] = false;
 
-// $config['skylight_homepage_recentitems'] = false;
+$config['skylight_homepage_recentitems'] = false;
 
 // Set to the number of minutes to cache pages for. Set to false for no caching.
 // This overrides the setting in skylight.php so is commented by Demo
