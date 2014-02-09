@@ -1,6 +1,6 @@
 <?php
 
-$config['skylight_appname'] = 'fineart';
+$config['skylight_appname'] = 'art';
 
 $config['skylight_theme'] = 'fineart';
 

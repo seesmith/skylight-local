@@ -67,8 +67,8 @@
 
         <div id="container">
             <header>
-                <p class="collection-title"><p class="uoe"></p></p>
-               <p class="collection-title"><img src = "<?php echo base_url(); ?>theme/<?php echo $this->config->item('skylight_theme'); ?>/images/header.jpg"  width = "940"></p>
+               <p class="collection-title"><p class="uoe"></p>
+               <a href="<?php echo base_url(); ?>theme/<?php echo $this->config->item('skylight_theme'); ?>" class="logo"></a></p>
 
                 <form action="./redirect/" method="post">
                     <fieldset class="search">
