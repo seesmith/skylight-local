@@ -2,11 +2,6 @@
     
      <?php foreach ($facets as $facet) {
 
-         // Unfortunately there is lots of Skylight code that expects a Date so this is a very very crude method of not displaying the Date facet.
-         if($facet['name'] == 'Date') {
-             continue;
-         }
-
          $inactive_terms = array();
          $active_terms = array();
 
@@ -82,6 +77,7 @@
         </ul>
 
         <?php
+        // This is a bit of an ugly hack to only display one inactive facet. It would be nicer to only pass to the view the facets that we want to display. Robin.
         if (isset($last_facet_display)) {
             if ($facet['name'] == $last_facet_display) {
                 break;

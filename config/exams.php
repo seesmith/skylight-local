@@ -21,6 +21,7 @@ $config['skylight_fields'] = array(
     'Subject' => 'dc.subject.en',
     'Academic Year' => 'dc.coverage.temporal.en',
     'Title' => 'dc.title.en',
+    'Course Code' => 'dc.identifier',
 
     'Version' => 'dc.description.version.en',
     'Type' => 'dc.type.en',
@@ -29,18 +30,21 @@ $config['skylight_fields'] = array(
     'Accession Date' => 'dc.date.accessioned_dt'
 );
 
-$config['skylight_date_filters'] = array('Date' => 'dateIssued.year_sort');
+$config['skylight_date_filters'] = array();
+//$config['skylight_date_filters'] = array('Date' => 'dateIssued.year_sort');
 $config['skylight_filters'] = array('School' => 'author_filter', 'Subject' => 'subject_filter', 'Academic Year' => 'coverageTemporal_filter', 'Title' => 'title_filter');
 $config['skylight_filter_delimiter'] = ':';
 
-$config['skylight_meta_fields'] = array('Title' => 'dc.title',
+// These fields are made available for display on the individual record page, although the record view may still need edited.
+$config['skylight_meta_fields'] = array('Title' => 'dc.title', 'Course Code' => 'dc.identifier',
     'Author' => 'dc.creator',
     'Abstract' => 'dc.description.abstract',
     'Subject' => 'dc.subject',
     'Date' => 'dc.date.issued',
     'Type' => 'dc.type');
 
-$config['skylight_recorddisplay'] = array('Title','Author','Subject','Type','Abstract');
+// Confusing! These fields also appear on the individual record page.
+$config['skylight_recorddisplay'] = array('Title','Author','Subject','Type','Abstract', 'Course Code');
 
 $config['skylight_searchresult_display'] = array('Title','Author','Subject','Type','Abstract');
 
