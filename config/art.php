@@ -8,7 +8,7 @@ $config['skylight_fullname'] = 'University of Edinburgh Fine Art Collection';
 
 $config['skylight_adminemail'] = 'example@example.com';
 
-$config['skylight_oaipmhcollection'] = 'hdl_123456789_4';
+$config['skylight_oaipmhcollection'] = 'hdl_10683_6';
 
 // Container ID and the field used in solr index to store this ID. Used for restricting search/browse scope.
 $config['skylight_container_id'] = '3';

@@ -70,6 +70,7 @@
                <p class="collection-title"><p class="uoe"></p>
                <a href="<?php echo base_url(); ?>theme/<?php echo $this->config->item('skylight_theme'); ?>" class="logo"></a></p>
 
+
                 <form action="./redirect/" method="post">
                     <fieldset class="search">
                         <input type="text" name="q" value="<?php if (isset($searchbox_query)) echo urldecode($searchbox_query); ?>" id="q" />
