@@ -1,7 +1,7 @@
 <?php
 
     // The URL of the parent solr server
-    $config['skylight_solrbase'] = 'http://localhost:8081/solr/search/';
+    $config['skylight_solrbase'] = 'http://localhost:8080/isdocs/solr/search/';
 
     // The platform and version of your repository.
     // Currently DSpace 1.7.1+ is the only supported repository
