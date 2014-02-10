@@ -102,7 +102,7 @@ button 				{  width: auto; overflow: visible; } /* Make buttons play nice in IE:
 /* Default Styles --------------------------------------------------------------------------------------------------------*/
 
 html 							{ -webkit-font-smoothing: antialiased; }
-body 							{ background: #e9e9ea; }
+body 							{ background: #ffffff; }
 body, select, input, textarea 	{ color: #555; line-height: 18px; font-family: Arial, Helvetica, sans-serif; }
 
 h1, h2, h3, h4, h5, h6          { text-rendering: optimizeLegibility; color: #000000; font-weight: bold; }
@@ -138,14 +138,18 @@ header				{ position: relative; }
 .col-sidebar		{ float: left; width: 240px; margin-top: -66px; background: #BFBFBF; position: relative; z-index: 2; }
 .ie7 .col-sidebar	{ padding-bottom: 30px; }
 
+
+/* Uoe specific */
+.uoe                { display: block; width: 496px; height: 100px; background: url(../images/header.gif) no-repeat 0px 0px;  }
+
 /* Common Containers & Subclasses ----------------------------------------------------------------------------------------*/
-.logo				{ display: block; text-indent: -9999px; width: 259px; height: 109px;  }
+.logo               { display: block; text-indent: -9999px; width: 348px; height: 64px; background: url(../images/painting.jpg) no-repeat 0px 0px; position: absolute; top: 38px; right: -87px; }
 .ie7 .logo 			{ top: -40px; }
 .collection-title	{ color: #00548e; font-size: 28px; line-height: 88px; padding-top: 20px; text-shadow: rgba(255,255,255,0.3) 0px 1px 0px; margin: 0; }
 .iteminfo {width: 660px; margin-top: 10px;position:relative; padding-right: 20px;min-height:32px;}
 .thumbnailimage {position:relative; width: 500px; float:left;}
 .tagdiv { position:relative;width: 250px;float:left; }
-.tagdiv a                                 { font-size: 13px; color: #fff;background: #eb0955; -webkit-border-radius: 5px; -moz-border-radius: 5px; border-radius: 5px; padding: 2px 6px; line-height: 20px; margin-right: 8px; text-decoration: none; }
+.tagdiv a                                 { font-size: 13px; color: #fff;background: #4c4c98; -webkit-border-radius: 5px; -moz-border-radius: 5px; border-radius: 5px; padding: 2px 6px; line-height: 20px; margin-right: 8px; text-decoration: none; }
 .tagdiv a.bold                        { font-weight: bold; }
 .tagdiv a:hover                        { background: #BBBBBC; color: #000; }
 .search							{ padding-bottom: 36px; border-bottom: 1px solid #4C4C98; width: 660px; }
@@ -195,9 +199,9 @@ header				{ position: relative; }
 .tags a:hover			{ background: #4C4C98; color: #fff; }
 
 footer 								{ margin-top: 40px; }
-footer a 							{ font-size: 10px; text-transform: uppercase; color: #666 !important; text-decoration: none; font-weight: bold; border-right: 1px solid #cecece; padding-right: 9px; margin-right: 5px; }
+footer a 							{ font-size: 10px; text-transform: uppercase; color: #bfbfbf  !important; text-decoration: none; font-weight: bold; border-right: 1px solid #cecece; padding-right: 9px; margin-right: 5px; }
 footer a.last						{ border: none; }
-footer a:hover						{ color: #333 !important; text-decoration: underline; }
+footer a:hover						{ text-decoration: underline;}
 
 /* Custom Containers & Subclasses ----------------------------------------------------------------------------------------*/
 
