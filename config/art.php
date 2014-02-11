@@ -15,35 +15,35 @@ $config['skylight_container_id'] = '3';
 $config['skylight_container_field'] = 'location.coll';
 
 $config['skylight_fields'] = array('Title' => 'dc.title.en',
-    'Author' => 'dc.contributor.author',
+    'Artist' => 'dc.creator.en',
     'Subject' => 'dc.subject.en',
     'Type' => 'dc.type.en',
-    'Abstract' => 'dc.description.abstract',
+    'Abstract' => 'dc.description.abstract.en',
     'Date' => 'dc.date.issued_dt',
     'Bitstream'=> 'dc.format.original',
     'Thumbnail'=> 'dc.format.thumbnail',
     'Description'=>'dc.description.en'
 );
 
-$config['skylight_date_filters'] = array('Date' => 'dateIssued.year_sort');
+$config['skylight_date_filters'] = array();
 $config['skylight_filters'] = array('Artist' => 'author_filter', 'Medium' => 'subject_filter');
 
 $config['skylight_filter_delimiter'] = ':';
 
-$config['skylight_meta_fields'] = array('Title' => 'dc.title',
-    'Author' => 'dc.creator',
-    'Abstract' => 'dc.description.abstract',
-    'Subject' => 'dc.subject',
+$config['skylight_meta_fields'] = array('Title' => 'dc.title.en',
+    'Artist' => 'dc.creator.en',
+    'Abstract' => 'dc.description.abstract.en',
+    'Subject' => 'dc.subject.en',
     'Date' => 'dc.date.issued_dt',
-    'Type' => 'dc.type',
+    'Type' => 'dc.type.en',
     'Bitstream'=> 'dc.format.original',
     'Thumbnail'=> 'dc.format.thumbnail'
 
 );
 
-$config['skylight_recorddisplay'] = array('Title','Author','Subject','Type','Abstract', 'Bitstream', 'Thumbnail','Place Made', 'Date Made', 'Accession Number', 'Description', 'Collection');
+$config['skylight_recorddisplay'] = array('Title','Artist','Subject','Type','Abstract', 'Bitstream', 'Thumbnail','Place Made', 'Date Made', 'Accession Number', 'Description', 'Collection');
 
-$config['skylight_searchresult_display'] = array('Title','Author','Subject','Type','Abstract', 'Bitstream', 'Thumbnail');
+$config['skylight_searchresult_display'] = array('Title','Artist','Subject','Type','Abstract', 'Bitstream', 'Thumbnail');
 
 $config['skylight_search_fields'] = array('Keywords' => 'text',
     'Subject' => 'dc.subject',
