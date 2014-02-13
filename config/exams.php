@@ -10,6 +10,10 @@ $config['skylight_adminemail'] = 'example@example.com';
 
 $config['skylight_oaipmhcollection'] = 'hdl_123456789_1';
 
+$config['skylight_repository_version'] = 'exams';
+$config['skylight_homepage_recentitems'] = false;
+
+
 
 // Container ID and the field used in solr index to store this ID. Used for restricting search/browse scope.
 $config['skylight_container_id'] = '*';
@@ -46,7 +50,8 @@ $config['skylight_meta_fields'] = array('Title' => 'dc.title', 'Course Code' => 
 // Confusing! These fields also appear on the individual record page.
 $config['skylight_recorddisplay'] = array('Title','Author','Subject','Type','Abstract', 'Course Code');
 
-$config['skylight_searchresult_display'] = array('Title','Author','Subject','Type','Abstract');
+// I suspect this one is redundant.
+//$config['skylight_searchresult_display'] = array('Title','Author','Subject','Type','Abstract');
 
 $config['skylight_search_fields'] = array('School' => 'dc.creator',
     'Subject' => 'dc.subject',
