@@ -2,9 +2,9 @@
 
 $config['skylight_appname'] = 'art';
 
-$config['skylight_theme'] = 'fineart';
+$config['skylight_theme'] = 'art';
 
-$config['skylight_fullname'] = 'University of Edinburgh Fine Art Collection';
+$config['skylight_fullname'] = 'University of Edinburgh Art Collection';
 
 $config['skylight_adminemail'] = 'example@example.com';
 
