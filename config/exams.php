@@ -39,7 +39,7 @@ $config['skylight_date_filters'] = array();
 $config['skylight_filters'] = array('School' => 'author_filter', 'Subject' => 'subject_filter', 'Academic Year' => 'coverageTemporal_filter', 'Title' => 'title_filter');
 $config['skylight_filter_delimiter'] = ':';
 
-// These fields are made available for display on the individual record page, although the record view may still need edited.
+// These fields are 'displayed' in the html <head> section.
 $config['skylight_meta_fields'] = array('Title' => 'dc.title', 'Course Code' => 'dc.identifier',
     'Author' => 'dc.creator',
     'Abstract' => 'dc.description.abstract',
@@ -47,12 +47,13 @@ $config['skylight_meta_fields'] = array('Title' => 'dc.title', 'Course Code' => 
     'Date' => 'dc.date.issued',
     'Type' => 'dc.type');
 
-// Confusing! These fields also appear on the individual record page.
+// These fields appear on the individual record page.
 $config['skylight_recorddisplay'] = array('Title','Author','Subject','Type','Abstract', 'Course Code');
 
-// I suspect this one is redundant.
+// I suspect this one is redundant, they are currently hardcoded into search-results.php!
 //$config['skylight_searchresult_display'] = array('Title','Author','Subject','Type','Abstract');
 
+// This is used for Advanced Search which I have hidden for the Exam Papers
 $config['skylight_search_fields'] = array('School' => 'dc.creator',
     'Subject' => 'dc.subject',
     'Academic Year' => 'dc.coverage.temporal',
