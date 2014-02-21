@@ -4,8 +4,8 @@
 
          $inactive_terms = array();
          $active_terms = array();
-
          ?>
+
         <h4><a href="./browse/<?php echo $facet['name']; ?>"><?php echo $facet['name'] ?></a></h4>
 
         <?php if(preg_match('/Date/',$base_search) && $facet['name'] == 'Date') {
@@ -15,17 +15,23 @@
             $fpattern =  '#\/'.$facet['name'].'.*\%5D#';
             $fremove = preg_replace($fpattern,'',$fremove, -1);
         ?>
-
-        <ul class="selected">
-            <li>
-                Clear <?php echo $facet['name']; ?> filters <a class="deselect" href='<?php echo $fremove;?>'></a>
-            </li>
-        </ul>
-             
+            <ul class="selected">
+                <li>
+                    Clear <?php echo $facet['name']; ?> filters <a class="deselect" href='<?php echo $fremove;?>'></a>
+                </li>
+            </ul>
         <?php }
 
-        foreach($facet['terms'] as $term) {
+        // Apologies for the hard coding! Its a pity Solr won't return results in reverse alphanumeric order.
+        if ($facet['name'] == 'Academic Year') {
+            $ordered_terms = array_reverse($facet['terms']);
+        }
+        else
+        {
+            $ordered_terms = $facet['terms'];
+        }
 
+        foreach($ordered_terms as $term) {
              if($term['active']) {
                  $active_terms[] = $term;
              } else {
