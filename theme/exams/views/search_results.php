@@ -7,6 +7,7 @@
         $title_field = $this->skylight_utilities->getField('Title');
         $author_field = $this->skylight_utilities->getField('Author');
         $version_field = $this->skylight_utilities->getField('Version');
+        $year_field = $this->skylight_utilities->getField('Academic Year');
         $date_field = $this->skylight_utilities->getField('Date');
         $type_field = $this->skylight_utilities->getField('Type');
 
@@ -102,23 +103,19 @@
                 <?php
                 echo $doc[$version_field][0];
                 }
+                ?>
+            </span>
 
+            <?php if(array_key_exists($year_field, $doc)) { ?>
+            <span>
+                <?php
+                echo $doc[$year_field][0];
+                }
                 ?>
             </span>
 
 
-            <?php if(array_key_exists($date_field, $doc)) { ?>
-            <span>
-                <?php
-                echo '(' . $doc[$date_field][0] . ')';
-          }
-                    elseif(array_key_exists('dateIssuedyear', $doc)) {
-                        echo '( ' . $doc['dateIssuedyear'][0] . ')';
-                    }
 
-                ?>
-                </span>
-        
 
 
         <?php
