@@ -48,7 +48,7 @@ $config['skylight_meta_fields'] = array('Title' => 'dc.title', 'Course Code' => 
     'Type' => 'dc.type');
 
 // These fields appear on the individual record page.
-$config['skylight_recorddisplay'] = array('Title','Author','Subject','Type','Abstract', 'Course Code');
+$config['skylight_recorddisplay'] = array('School','Subject','Title','Course Code','Version','Academic Year','Date');
 
 // I suspect this one is redundant, they are currently hardcoded into search-results.php!
 //$config['skylight_searchresult_display'] = array('Title','Author','Subject','Type','Abstract');

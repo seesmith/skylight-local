@@ -332,6 +332,27 @@ table th							{ text-align: left; border-right: 1px solid #fff;  }
 table tr:nth-child(2n)				{ background: #e7e8ea; }
 
 
+#breadTrail ul {
+    margin-left: 0em;
+    margin-bottom: 1em;
+}
+
+#breadTrail li {
+    background: none repeat scroll 0 0 rgba(0, 0, 0, 0);
+    display: inline;
+    padding: 0;
+    margin-left: 0em;
+}
+
+#breadTrail a {
+    background: url("../images/crumbdivider.png") no-repeat scroll right center rgba(0, 0, 0, 0);
+    display: inline-block;
+    padding-right: 14px;
+    text-decoration:none;
+}
+
+
+
 /* <END> Site Css \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\ */
 
 
