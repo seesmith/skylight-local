@@ -1,7 +1,11 @@
 <?php
 
     // The URL of the parent solr server
+<<<<<<< HEAD
     $config['skylight_solrbase'] = 'http://localhost:8080/solr/search/';
+=======
+    $config['skylight_solrbase'] = 'http://localhost:8080/isdocs/solr/search/';
+>>>>>>> upstream/master
 
     // The platform and version of your repository.
     // Currently DSpace 1.7.1+ is the only supported repository
@@ -22,7 +26,11 @@
     $config['skylight_adminldap_allowed'] = array('id1', 'id2');
 
     // The OAI-PMH base for the parent server
+<<<<<<< HEAD
     $config['skylight_oaipmhbase'] = 'http://localhost:8080/oai/request?';
+=======
+    $config['skylight_oaipmhbase'] = 'http://localhost:8081/oai/request?';
+>>>>>>> upstream/master
 
     // The OAI-PMH identifier to replace in OAI-PMH responses
     $config['skylight_oaipmhid'] = 'your.repository.org:123456789/';
@@ -31,7 +39,7 @@
     $config['skylight_oaipmhlink'] = 'http://hdl.handle.net/123456789/';
 
     // The URL base for where digital objects can be proxied from
-    $config['skylight_objectproxy_url'] = 'http://localhost:8081/xmlui/bitstream/123456789/';
+    $config['skylight_objectproxy_url'] = 'http://localhost:8080/isdocs/bitstream/10683/';
 
 
     // Set to the number of minutes to cache pages for. Set to false for no caching.

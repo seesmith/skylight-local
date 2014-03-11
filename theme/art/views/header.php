@@ -18,7 +18,8 @@
         Remove this if you use the .htaccess -->
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 
-        <title>Scottish Agricultural College Repository</title>
+        <title>University of Edinburgh Art Collection</title>
+
         <meta name="description" content="">
         <meta name="author" content="">
 
@@ -26,9 +27,8 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
         <!-- Place favicon.ico & apple-touch-icon.png in the root of your domain and delete these references -->
-        <link rel="shortcut icon" href="./favicon.ico">
-        <link rel="apple-touch-icon" href="./apple-touch-icon.png">
-
+        <link rel="shortcut icon" href="<?php echo base_url(); ?>theme/<?php echo $this->config->item('skylight_theme'); ?>/images/favicon.ico">
+        <link rel="apple-touch-icon" href="<?php echo base_url(); ?>theme/<?php echo $this->config->item('skylight_theme'); ?>/images/apple-touch-icon.png">
 
         <!-- CSS: implied media="all" -->
         <link rel="stylesheet" href="<?php echo base_url(); ?>theme/<?php echo $this->config->item('skylight_theme'); ?>/css/style.css?v=2">
@@ -65,8 +65,12 @@
 
         <div id="container">
             <header>
-                <p class="collection-title"></p><p class="uoe"></p><!--<p class="illustration"></p>-->
-                <!--<a href="http://www.ed.ac.uk/schools-departments/information-services/library-museum-gallery/crc" class="logo">Centre for Research Collections</a>-->
+               <div id="collection-title">
+                <a href="http://www.ed.ac.uk" class="uoelogo" title="The University of Edinburgh"></a>
+                <a href="<?php echo base_url(); ?>theme/<?php echo $this->config->item('skylight_theme'); ?>" class="artlogo" title="University of Edinburgh Art Collection"></a>
+                <a href="<?php echo base_url(); ?>theme/<?php echo $this->config->item('skylight_theme'); ?>" class="menulogo" title="Apollo and The Muses by Robert Sanderson"></a>
+               </div>
+               <div id="collection-search">
                 <form action="./redirect/" method="post">
                     <fieldset class="search">
                         <input type="text" name="q" value="<?php if (isset($searchbox_query)) echo urldecode($searchbox_query); ?>" id="q" />
@@ -74,11 +78,7 @@
                         <a href="./advanced" class="advanced">Advanced search</a>
                     </fieldset>
                 </form>
-                <nav class="header-links">
-                    <a href="./">Home</a>
-                    <a href="./about/">About this site</a>
-                    <a href="./feedback/" class="last">Feedback</a>
-                </nav>
+               </div>
             </header>
 
             <div id="main" role="main" class="clearfix">

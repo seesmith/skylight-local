@@ -84,7 +84,7 @@ if(isset($solr[$type_field])) {
 
 
 <?php if(isset($solr[$bitstream_field]) && $link_bitstream) {
-    ?><div class="record_bitstreams"><h3>Digital Objects</h3><?php
+?><div class="record_bitstreams"><h3>Digital Objects</h3><?php
 
 
 
@@ -139,7 +139,7 @@ if(isset($solr[$type_field])) {
             echo '<script src="http://api.html5media.info/1.1.6/html5media.min.js"></script>';
             echo '<audio src="'.$uri.'" controls preload></audio>';
 
-           }
+        }
     }
 
     foreach($solr[$bitstream_field] as $bitstream) {
@@ -155,7 +155,7 @@ if(isset($solr[$type_field])) {
         $handle_id = preg_replace('/^.*\//', '',$handle);
         $uri = './record/'.$handle_id.'/'.$seq.'/'.$filename;
 
-         if (strpos($uri, ".mp4")> 0)
+        if (strpos($uri, ".mp4")> 0)
         {
 
             echo '<H1>VIDEO</H1>';
@@ -164,6 +164,8 @@ if(isset($solr[$type_field])) {
             echo '<video width="320" height="200" controls> <source src="'.$uri.'" type="video/mp4">Sorry, it does not work</video>';
 
         }
-           ?>
+
+        ?>
     <?php
-    } }?></div>
+    }
+    echo '</div>';}?>
