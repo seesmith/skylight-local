@@ -67,7 +67,7 @@ $config['skylight_feed_fields'] = array('Title' => 'Title',
 $config['skylight_results_per_page'] = 10;
 $config['skylight_share_buttons'] = false;
 
-// $config['skylight_homepage_recentitems'] = false;
+$config['skylight_homepage_recentitems'] = false;
 
 // Set to the number of minutes to cache pages for. Set to false for no caching.
 // This overrides the setting in skylight.php so is commented by Demo
