@@ -207,7 +207,7 @@ footer                  { display: block; border-bottom: 1px solid #7F5131; padd
 .footer-disclaimer      { display:block; width: 615px; margin: auto; }
 
 .footer-logo            { display: block; float: left; }
-.luclogo                { display: block; width: 64px; height: 64px; background: url(../images/ArtLUCLogo64.png) no-repeat 0px 0px; }
+.luclogo                { display: block; width: 64px; height: 64px; background: url(../images/ArtLUCLogo.png) no-repeat 0px 0px; }
 
 .footer-policies        { display: block; float: left; padding-left: 20px; }
 .footer-policies p      { font-size: 12px; margin-bottom: 5px; color: #555555}
