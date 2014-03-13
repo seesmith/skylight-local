@@ -156,21 +156,21 @@
         $i = 0;
         foreach ($doc[$bitstream_field] as $bitstream) {
 
-        $thumbnail = $doc[$thumbnail_field][0];
-        $segments = explode("##", $thumbnail);
-        $filename = $segments[1];
-        $handle = $segments[3];
-        $seq = $segments[4];
-        $handle_id = preg_replace('/^.*\//', '',$handle);
-        $uri = './record/'.$handle_id.'/'.$seq.'/'.$filename;
-        $thumbnailLink = $this->skylight_utilities->getBitstreamThumbLinkParameterised($bitstream, $thumbnail, 'test', '140px', 0, 'style="display: block; margin-left: auto; margin-right: auto;" ');
+            $thumbnail = $doc[$thumbnail_field][0];
+            $segments = explode("##", $thumbnail);
+            $filename = $segments[1];
+            $handle = $segments[3];
+            $seq = $segments[4];
+            $handle_id = preg_replace('/^.*\//', '',$handle);
+            $uri = './record/'.$handle_id.'/'.$seq.'/'.$filename;
+            $thumbnailLink = $this->skylight_utilities->getBitstreamThumbLinkParameterised($bitstream, $thumbnail, $title_field, '140px', 0, 'style="display: block; margin-left: auto; margin-right: auto;" ');
 
-        if ($i == 0)
-        {
-          echo $thumbnailLink;
+            if ($i == 0)
+            {
+              echo $thumbnailLink;
+            }
+            $i++;
         }
-        $i++;
-    }
     }?>
 </div>
         </div>
