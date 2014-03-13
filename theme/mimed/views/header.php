@@ -41,22 +41,22 @@
 
 <div id="container">
 
-    <header>
-        <p class="collection-title"><p class="uoe"></p></p>
-        <a href="http://www.stcecilias.ed.ac.uk/" class="logo">St Cecilia's Hall</a>
-        <form action="./redirect/" method="post">
-            <fieldset class="search">
-                <input type="text" name="q" value="<?php if (isset($searchbox_query)) echo urldecode($searchbox_query); ?>" id="q" />
-                <input type="submit" name="submit_search" class="btn" value="Search" id="submit_search" />
-                <a href="./advanced" class="advanced">Advanced search</a>
-            </fieldset>
-        </form>
-        <nav class="header-links">
-            <a href="./">Home</a>
-            <a href="./about/">About this site</a>
-            <a href="./feedback/" class="last">Feedback</a>
-        </nav>
-    </header>
+        <header>
+            <div id="collection-title">
+                <a href="http://www.ed.ac.uk" class="uoelogo" title="The University of Edinburgh" target="_blank"></a>
+                <a href="<?php echo base_url(); ?>" class="mimedlogo" title="University of Edinburgh Musical Instrument Museums"></a>
+                <a href="http://www.stcecilias.ed.ac.uk/" class="menulogo" title="St Cecilia's Hall" target="_blank"></a>
+            </div>
+            <div id="collection-search">
+                <form action="./redirect/" method="post">
+                    <fieldset class="search">
+                        <input type="text" name="q" value="<?php if (isset($searchbox_query)) echo urldecode($searchbox_query); ?>" id="q" />
+                        <input type="submit" name="submit_search" class="btn" value="Search" id="submit_search" />
+                        <a href="./advanced" class="advanced">Advanced search</a>
+                    </fieldset>
+                </form>
+            </div>
+        </header>
 
-    <div id="main" role="main" class="clearfix">
+        <div id="main" role="main" class="clearfix">
 
