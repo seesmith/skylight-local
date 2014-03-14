@@ -46,7 +46,7 @@ if(isset($solr[$type_field])) {
     ?>
 </div>
 
-<div class="content">
+<div class="content description">
 
     <?php
     $abstract_field = $this->skylight_utilities->getField("Abstract");
