@@ -15,8 +15,6 @@ $config['skylight_oaipmhcollection'] = 'hdl_10683_14558';
 $config['skylight_container_id'] = '11';
 $config['skylight_container_field'] = 'location.coll';
 
-
-
 $config['skylight_fields'] = array('Title' => 'dc.title.en',
     'Author' => 'dc.contributor.author',
     'Country' => 'lido.country.en',
@@ -64,9 +62,8 @@ $config['skylight_search_fields'] = array('Keywords' => 'text',
     'Thumbnail'=> 'dc.format.thumbnail'
 );
 
-$config['skylight_sort_fields'] = array('Title' => 'dc.title_sort',
-    'Date' => 'dc.date.issued_dt',
-    'Author' => 'dc.contributor.author_sort'
+//only by title, no date at the moment
+$config['skylight_sort_fields'] = array('Title' => 'dc.title_sort'
 );
 
 $config['skylight_feed_fields'] = array('Title' => 'Title',
