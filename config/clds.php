@@ -8,7 +8,7 @@ $config['skylight_fullname'] = 'Collection Level Descriptions';
 
 $config['skylight_adminemail'] = 'scott.renton@ed.ac.uk';
 
-$config['skylight_oaipmhcollection'] = 'hdl_123456789_4';
+$config['skylight_oaipmhcollection'] = 'hdl_10683_6';
 
 
 // Container ID and the field used in solr index to store this ID. Used for restricting search/browse scope.
@@ -42,7 +42,7 @@ $config['skylight_meta_fields'] = array('Title' => 'dc.title',
 
 );
 
-$config['skylight_recorddisplay'] = array('Title','Author','Subject','Type','Abstract', 'Bitstream', 'Thumbnail','Place Made', 'Date Made', 'Accession Number', 'Description', 'Collection');
+$config['skylight_recorddisplay'] = array('Title','Author','Subject','Type','Abstract', 'Place Made', 'Date Made', 'Accession Number', 'Description', 'Collection');
 
 $config['skylight_searchresult_display'] = array('Title','Author','Subject','Type','Abstract', 'Bitstream', 'Thumbnail');
 
@@ -54,10 +54,11 @@ $config['skylight_search_fields'] = array('Keywords' => 'text',
     'Thumbnail'=> 'dc.format.thumbnail'
 );
 
-$config['skylight_sort_fields'] = array('Title' => 'dc.title',
+$config['skylight_sort_fields'] = array('Title' => 'dc.title_sort',
     'Date' => 'dc.date.issued_dt',
-    'Author' => 'dc.creator'
+    'Author' => 'dc.contributor.author_sort'
 );
+
 
 $config['skylight_feed_fields'] = array('Title' => 'Title',
     'Author' => 'Author',
