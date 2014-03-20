@@ -92,30 +92,30 @@ input:valid, textarea:valid                                                     
 input:invalid, textarea:invalid                                                         { border-radius: 1px; -moz-box-shadow: 0px 0px 5px red; -webkit-box-shadow: 0px 0px 5px red; box-shadow: 0px 0px 5px red; }
 .no-boxshadow input:invalid, .no-boxshadow textarea:invalid { background-color: #f0dddd; }
 
-::-moz-selection         { background: #00548e; color: #fff; text-shadow: none; } /* These selection declarations have to be separate No text-shadow: twitter.com/miketaylr/status/12228805301 Also: hot pink! */
-::selection                 { background: #00548e; color: #fff; text-shadow: none; }
-a:link                                 { -webkit-tap-highlight-color: #FF5E99; } /* j.mp/webkit-tap-highlight-color */
+::-moz-selection                { background: #00548e; color: #fff; text-shadow: none; } /* These selection declarations have to be separate No text-shadow: twitter.com/miketaylr/status/12228805301 Also: hot pink! */
+::selection                     { background: #00548e; color: #fff; text-shadow: none; }
+a:link                          { -webkit-tap-highlight-color: #FF5E99; } /* j.mp/webkit-tap-highlight-color */
 
-button                                 { width: auto; overflow: visible; } /* Make buttons play nice in IE: www.viget.com/inspire/styling-the-button-element-in-internet-explorer/ */
-.ie7 img                         { -ms-interpolation-mode: bicubic; } /* Bicubic resizing for non-native sized IMG: code.flickr.com/blog/2008/11/12/on-ui-quality-the-little-things-client-side-image-resizing/ */
+button                          { width: auto; overflow: visible; } /* Make buttons play nice in IE: www.viget.com/inspire/styling-the-button-element-in-internet-explorer/ */
+.ie7 img                        { -ms-interpolation-mode: bicubic; } /* Bicubic resizing for non-native sized IMG: code.flickr.com/blog/2008/11/12/on-ui-quality-the-little-things-client-side-image-resizing/ */
 
 /* Default Styles --------------------------------------------------------------------------------------------------------*/
 
-html                                                         { -webkit-font-smoothing: antialiased; }
-body                                                         { background: #fff }
-body, select, input, textarea         { color: #555; line-height: 18px; font-family: Arial, Helvetica, sans-serif; }
+html                            { -webkit-font-smoothing: antialiased; }
+body                            { background: #fff }
+body, select, input, textarea   { color: #555; line-height: 18px; font-family: Arial, Helvetica, sans-serif; }
 
-h1, h2, h3, h4, h5, h6                         { text-rendering: optimizeLegibility; color: #000000; font-weight: bold; }
-h1                                                                 { font-size: 18px; line-height: 24px; margin: 30px 0 17px 0px; position: relative; }
-h2                                                                 { font-size: 16px; line-height: 36px; margin: 0 0 0 0; }
-h3                                                                 { font-size: 14px; line-height: 18px; margin: 0 0 9px 0; }
+h1, h2, h3, h4, h5, h6          { text-rendering: optimizeLegibility; color: #000000; font-weight: bold; }
+h1                              { font-size: 18px; line-height: 24px; margin: 30px 0 17px 0px; position: relative; }
+h2                              { font-size: 16px; line-height: 36px; margin: 0 0 0 0; }
+h3                              { font-size: 14px; line-height: 18px; margin: 0 0 9px 0; }
 
-h1.itemtitle                                         { font-size: 18px; line-height: 24px; margin: 30px 0 17px 54px; position: relative; }
+h1.itemtitle                    { font-size: 18px; line-height: 24px; margin: 20px 0 10px 0px; position: relative; text-transform: uppercase; }
 
-p                                                                 { font-size: 13px; margin-bottom: 18px; }
+p                               { font-size: 13px; margin-bottom: 18px; }
 
-a, a:active, a:visited                         { color: #000000; }
-a:hover                                                 { color: #033a5f; }
+a, a:active, a:visited          { color: #000000; }
+a:hover                         { color: #033a5f; }
 
 input[type=text], input[type=password]                                {
     border: 1px solid #bbbbbc; font-size: 13px; height: 28px; padding: 0 10px;
@@ -202,9 +202,8 @@ header                          { position: relative; }
 .col-sidebar ul.related .tags a:hover       { text-decoration: none; background: #00548e; }
 
 
-.tags                   { margin-top: 5px; float:left; margin: 0 0 0 54px;}
+.tags                   { margin-top: 5px; margin: 0;}
 .tags a                 { font-size: 13px; color: #fff;background: #EB0955; -webkit-border-radius: 5px; -moz-border-radius: 5px; border-radius: 5px; padding: 2px 6px; line-height: 20px; margin-right: 8px; text-decoration: none; }
-
 .tags a.bold            { font-weight: bold; }
 .tags a:hover           { background: #093563; color: #ffffff; }
 
@@ -228,8 +227,8 @@ footer                  { display: block; border-bottom: 1px solid #093563; padd
 /* Custom Containers & Subclasses ----------------------------------------------------------------------------------------*/
 
 .listing                                { list-style-type: none; margin: 0; }
-.listing li                             { padding: 10px 0 20px 24px; border-left: 54px solid #edeff0; position: relative; }
-.listing li.first                       { padding-top: 30px; }
+.listing li                             { padding: 10px 0 20px 24px; position: relative; border-top: 1px solid #b8baba; }
+.listing li.first                       { padding-top: 30px; border: none; }
 .listing li.last                        { padding-bottom: 30px; }
 .listing li a                           { text-decoration: none; }
 .listing li a:hover                     { text-decoration: underline; }
@@ -267,12 +266,12 @@ h1 .icon                                { top: -5px; left: -65px; }
 .media-thesis{ background-position: -818px 0; height: 50px; }
 .media-unknown{ background-position: -908px 0; }
 
-.small-icon                                                 { display: block; width: 22px; height: 20px; background: url(../images/bg-icons-small.png) no-repeat 0px 0px; position: absolute; top: 0; left: 12px; }
-.ie7 .small-icon                                        { }
-.small-icon.media-film                                { background-position: 0px 0px; }
-.small-icon.media-doc                                { background-position: 0px -20px; }
-.small-icon.media-img                                { background-position: 0px -40px; }
-.small-icon.media-book                                { background-position: 0px -60px; }
+.small-icon                     { display: block; width: 22px; height: 20px; background: url(../images/bg-icons-small.png) no-repeat 0px 0px; position: absolute; top: 0; left: 12px; }
+.ie7 .small-icon                { }
+.small-icon.media-film          { background-position: 0px 0px; }
+.small-icon.media-doc           { background-position: 0px -20px; }
+.small-icon.media-img           { background-position: 0px -40px; }
+.small-icon.media-book          { background-position: 0px -60px; }
 
 .pagination                     { border-top: 1px solid #f5739F; line-height: 33px; text-align: center; position: relative; font-size: 11px; font-weight: bold; }
 .pagination a                   { color: #666; text-decoration: none; display: inline-block; padding: 0 5px; }
@@ -285,9 +284,10 @@ h1 .icon                                { top: -5px; left: -65px; }
 .pagination .prev:hover,
 .pagination .next:hover         { background: #def5fb url(../images/bg-arrows.png) no-repeat; }
 
-.content                       { margin-top: 30px;  }
+.content                       { margin-top: 20px; }
 .content ul                    { margin: 0 0 18px 1.2em; }
-.description                   { margin-top: 60px;  }
+
+.record_bitstreams             { margin-top: 20px; }
 
 table                          { width: 100%; background: #f1f1f2; }
 table caption                  { text-align: left; background: #677077; color: #fff; font-size: 12px; text-transform: uppercase; font-weight: bold; padding: 8px 17px; border-bottom: 1px solid #fff; }
