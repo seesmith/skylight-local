@@ -41,7 +41,7 @@ $config['skylight_meta_fields'] = array('Title' => 'dc.title.en',
 
 );
 
-$config['skylight_recorddisplay'] = array('Title','Artist','Subject','Type','Abstract', 'Bitstream', 'Thumbnail','Place Made', 'Date Made', 'Accession Number', 'Description', 'Collection');
+$config['skylight_recorddisplay'] = array('Title','Artist','Subject','Type','Abstract', 'Place Made', 'Date Made', 'Accession Number', 'Description', 'Collection');
 
 $config['skylight_searchresult_display'] = array('Title','Artist','Subject','Type','Abstract', 'Bitstream', 'Thumbnail');
 
@@ -55,7 +55,7 @@ $config['skylight_search_fields'] = array('Keywords' => 'text',
 
 $config['skylight_sort_fields'] = array('Title' => 'dc.title',
     'Date' => 'dc.date.issued_dt',
-    'Author' => 'dc.creator'
+    'Author' => 'dc.creator.author_sort'
 );
 
 $config['skylight_feed_fields'] = array('Title' => 'Title',
@@ -67,7 +67,7 @@ $config['skylight_feed_fields'] = array('Title' => 'Title',
 $config['skylight_results_per_page'] = 10;
 $config['skylight_share_buttons'] = false;
 
-// $config['skylight_homepage_recentitems'] = false;
+$config['skylight_homepage_recentitems'] = false;
 
 // Set to the number of minutes to cache pages for. Set to false for no caching.
 // This overrides the setting in skylight.php so is commented by Demo

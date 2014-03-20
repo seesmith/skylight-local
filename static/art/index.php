@@ -1,5 +1,3 @@
 <div class="record">
-    <p>
-        The University of Edinburgh Art Collection.
-    </p>
+    <p>The University holds around 2500 works of art. The Art Collection is now an amalgamation of the University of Edinburgh’s original art collection, which spans some 400 years of collecting, and the Edinburgh College of Art collection of prints, drawings, paintings and sculpture. The ECA collection tells a unique story of the artist output of the College, particularly in the early to mid-20th Century. Some of the most respected names is Scottish art appear, such as Samuel Peploe, John Bellany, Anne Redpath and Elizabeth Blackadder.</p>
 </div>

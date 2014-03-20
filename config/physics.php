@@ -28,7 +28,7 @@ $config['skylight_fields'] = array('Title' => 'dc.title.en',
 );
 
 $config['skylight_date_filters'] = array('Date' => 'dateIssued.year_sort');
-$config['skylight_filters'] = array('Author' => 'author_filter', 'Subject' => 'subject_filter', 'Type' => 'type_filter');
+$config['skylight_filters'] = array('Department' => 'author_filter', 'Subject' => 'subject_filter');
 
 $config['skylight_filter_delimiter'] = ':';
 
@@ -38,27 +38,27 @@ $config['skylight_meta_fields'] = array('Title' => 'dc.title',
     'Subject' => 'dc.subject',
     'Date' => 'dc.date.issued_dt',
     'Type' => 'dc.type',
-    'Bitstream'=> 'dc.format.original.en',
+    'File'=> 'dc.format.original.en',
     'Thumbnail'=> 'dc.format.thumbnail.en',
     'Date' => 'dc.date.issued',
     'Type' => 'dc.type');
 
 
-$config['skylight_recorddisplay'] = array('Title','Author','Subject','Type', 'Description');
+$config['skylight_recorddisplay'] = array('Title','Author','Subject','Type','Abstract', 'Place Made', 'File', 'Thumbnail','Date Made', 'Accession Number', 'Description', 'Collection');
 
-$config['skylight_searchresult_display'] = array('Title','Author','Subject','Type','Abstract', 'Bitstream', 'Thumbnail');
+$config['skylight_searchresult_display'] = array('Title','Author','Subject','Type','Abstract', 'File', 'Thumbnail');
 
 $config['skylight_search_fields'] = array('Keywords' => 'text',
     'Subject' => 'dc.subject',
     'Type' => 'dc.type',
     'Author' => 'dc.creator',
-    'Bitstream' => 'dc.format.original',
+    'File' => 'dc.format.original',
     'Thumbnail' => 'dc.format.thumbnail'
 );
 
-$config['skylight_sort_fields'] = array('Title' => 'dc.title',
+$config['skylight_sort_fields'] = array('Title' => 'dc.title_sort',
     'Date' => 'dc.date.issued_dt',
-    'Author' => 'dc.creator'
+    'Author' => 'dc.contributor.author_sort'
 );
 
 $config['skylight_feed_fields'] = array('Title' => 'Title',

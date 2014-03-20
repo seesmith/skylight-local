@@ -15,8 +15,7 @@ if(isset($solr[$type_field])) {
 
 ?>
 
-
-<h1 class="itemtitle"><span class="icon <?php echo $type ?>"></span><?php echo $record_title ?></h1>
+<h1 class="itemtitle"><?php echo $record_title ?></h1>
 <div class="tags">
     <?php
 
@@ -25,21 +24,6 @@ if(isset($solr[$type_field])) {
             $orig_filter = preg_replace('/ /','+',$author, -1);
             $orig_filter = preg_replace('/,/','%2C',$orig_filter, -1);
             echo '<a href=\'./search/*/Author:"'.$orig_filter.'"\'>'.$author.'</a>';
-        }
-    }
-
-    $date_field = $this->skylight_utilities->getField("Date");
-    if (isset($solr[$date_field])) {
-        foreach($solr[$date_field] as $date) {
-            echo '<span>('.$date.')</span>';
-        }
-    }
-    else {
-        $date_field = $this->skylight_utilities->getField("Year");
-        if (isset($solr[$date_field])) {
-            foreach($solr[$date_field] as $date) {
-                echo '<span>('.$date.')</span>';
-            }
         }
     }
 
@@ -59,7 +43,6 @@ if(isset($solr[$type_field])) {
     ?>
 
     <table>
-        <caption>Description</caption>
         <tbody>
         <?php foreach($recorddisplay as $key) {
 
@@ -84,7 +67,7 @@ if(isset($solr[$type_field])) {
 
 
 <?php if(isset($solr[$bitstream_field]) && $link_bitstream) {
-    ?><div class="record_bitstreams"><h3>Digital Objects</h3><?php
+    ?><div class="record_bitstreams"><?php
 
 
 
@@ -103,7 +86,6 @@ if(isset($solr[$type_field])) {
 
         if (strpos($uri, ".jpg")> 0)
         {
-            echo '<H1>IMAGE</H1>';
             echo '<img src = "'.$uri.'" height = "280">';
 
 
@@ -135,7 +117,6 @@ if(isset($solr[$type_field])) {
 
         if (strpos($uri, ".mp3")> 0)
         {
-            echo '<h1>AUDIO</h1>';
             echo '<script src="http://api.html5media.info/1.1.6/html5media.min.js"></script>';
             echo '<audio src="'.$uri.'" controls preload></audio>';
 
@@ -157,8 +138,6 @@ if(isset($solr[$type_field])) {
 
          if (strpos($uri, ".mp4")> 0)
         {
-
-            echo '<H1>VIDEO</H1>';
 
             echo '<script src="http://api.html5media.info/1.1.6/html5media.min.js"></script>';
             echo '<video width="320" height="200" controls> <source src="'.$uri.'" type="video/mp4">Sorry, it does not work</video>';
