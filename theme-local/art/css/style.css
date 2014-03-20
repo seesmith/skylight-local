@@ -199,7 +199,7 @@ header				{ position: relative; width: 940px;}
 
 footer                  { display: block; border-bottom: 1px solid #58A09D; padding-bottom: 10px; margin-bottom: 15px; width: 660px; height: 130px;}
 
-.footer-links			{ display: block; margin-top: 30px; margin-bottom: 15px; padding-top: 10px; padding-bottom: 10px; text-align: center; border-top: 1px solid #58A09D; border-bottom: 1px solid #58A09D; width: 660px;}
+.footer-links			{ display: block; margin-top: 15px; margin-bottom: 15px; padding-top: 10px; padding-bottom: 10px; text-align: center; border-top: 1px solid #58A09D; border-bottom: 1px solid #58A09D; width: 660px;}
 .footer-links a 		{ font-size: 10px; text-transform: uppercase; color: #AAA79E  !important; text-decoration: none; font-weight: bold; border-right: 1px solid #cecece; padding-right: 15px; margin-right: 10px; }
 .footer-links a.last	{ border: none; }
 .footer-links a:hover	{ text-decoration: underline; color: #58A09D; }
@@ -218,7 +218,7 @@ footer                  { display: block; border-bottom: 1px solid #58A09D; padd
 .listing 							{ list-style-type: none; margin: 0; }
 .listing li                         { padding: 10px 0 20px 24px; position: relative; border-top: 1px solid #b8baba; }
 .listing li.first                   { padding-top: 30px; border: none; }
-.listing li.last					{ padding-bottom: 30px; }
+.listing li.last					{ padding-bottom: 30px; border-bottom: 1px solid #b8baba; }
 .listing li a 						{ text-decoration: none; }
 .listing li a:hover					{ text-decoration: underline; }
 
@@ -261,7 +261,7 @@ h1 .icon							{ top: -5px; left: -65px; }
 .small-icon.media-img				{ background-position: 0px -40px; }
 .small-icon.media-book				{ background-position: 0px -60px; }
 
-.pagination							{ border-top: 1px solid #b8baba; line-height: 33px; text-align: center; position: relative; font-size: 11px; font-weight: bold; }
+.pagination							{ line-height: 33px; text-align: center; position: relative; font-size: 11px; font-weight: bold; margin-bottom: -15px; min-height: 33px; }
 .pagination a 						{ color: #666; text-decoration: none; display: inline-block; padding: 0 5px; }
 .pagination a.selected 				{ background: #e8e8e8; color: #333; }
 .pagination a:hover					{ color: #333; text-decoration: underline; }
@@ -271,6 +271,19 @@ h1 .icon							{ top: -5px; left: -65px; }
 .pagination .next					{ right: 0; padding: 0 25px 0 10px; background-position: 100% -33px !important; }
 .pagination .prev:hover,
 .pagination .next:hover 			{ background: #def5fb url(../images/bg-arrows.png) no-repeat; }
+
+.pagination .no-results {
+    left: 0;
+    position: absolute;
+    font-weight: normal;
+    font-size: 13px;
+}
+
+.curpage                            { color: #58A09D; display: inline-block; padding: 0 5px; }
+
+.browse_pagination                  { display: block; border-bottom: 1px solid #58A09D; }
+.browse_results                     { margin-top: 30px; }
+.browse_facets                      { margin-top: 20px; }
 
 .content 							{ margin-top: 20px; }
 .content ul 						{ margin: 0 0 18px 1.2em; }

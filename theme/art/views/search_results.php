@@ -174,5 +174,8 @@
 
 
     <div class="pagination">
-       <?php echo $pagelinks ?>
+        <span class="no-results">
+            <strong><?php echo $startrow ?>-<?php echo $endrow ?></strong> of
+            <strong><?php echo $rows ?></strong> results </span>
+        <?php echo $pagelinks ?>
     </div>
