@@ -15,14 +15,14 @@ $config['skylight_container_id'] = '4';
 $config['skylight_container_field'] = 'location.coll';
 
 $config['skylight_fields'] = array('Title' => 'dc.title.en',
-    'Department' => 'dc.contributor.author',
+    'Author' => 'dc.creator.en',
     'Subject' => 'dc.subject.en',
     'Type' => 'dc.type.en',
     'Abstract' => 'dc.description.abstract',
-    'Date' => 'dc.date.issued_dt',
-    'File'=> 'dc.format.original.en',
+    //'Date' => 'dc.date.issued_dt',
+    'Bitstream'=> 'dc.format.original.en',
     'Thumbnail'=> 'dc.format.thumbnail.en',
-    'Description'=>'dc.description',
+    'Description'=>'dc.description.en',
     'Date' => 'dc.date.issued',
     'Accession Date' => 'dc.date.accessioned_dt'
 );

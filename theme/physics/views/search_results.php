@@ -6,7 +6,7 @@
 
         $title_field = $this->skylight_utilities->getField('Title');
         $author_field = $this->skylight_utilities->getField('Author');
-        $date_field = $this->skylight_utilities->getField('Date Made');
+        $date_field = $this->skylight_utilities->getField('Date');
         $type_field = $this->skylight_utilities->getField('Type');
         $bitstream_field = $this->skylight_utilities->getField('Bitstream');
         $thumbnail_field = $this->skylight_utilities->getField('Thumbnail');
