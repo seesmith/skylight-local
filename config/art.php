@@ -16,13 +16,14 @@ $config['skylight_container_field'] = 'location.coll';
 
 $config['skylight_fields'] = array('Title' => 'dc.title.en',
     'Artist' => 'dc.creator.en',
-    'Subject' => 'dc.subject.en',
+    'Medium' => 'dc.subject.en',
     'Type' => 'dc.type.en',
     'Abstract' => 'dc.description.abstract.en',
-    'Date' => 'dc.date.issued_dt',
+    'Date' => 'dc.coverage.temporal.en',
     'Bitstream'=> 'dc.format.original',
     'Thumbnail'=> 'dc.format.thumbnail',
-    'Description'=>'dc.description.en'
+    'Description'=>'dc.description.en',
+    'Rights' => 'dc.rights.holder.en'
 );
 
 $config['skylight_date_filters'] = array();
@@ -32,36 +33,34 @@ $config['skylight_filter_delimiter'] = ':';
 
 $config['skylight_meta_fields'] = array('Title' => 'dc.title.en',
     'Artist' => 'dc.creator.en',
-    'Abstract' => 'dc.description.abstract.en',
-    'Subject' => 'dc.subject.en',
-    'Date' => 'dc.date.issued_dt',
+    'Description' => 'dc.description.en',
+    'Medium' => 'dc.subject.en',
+    'Date' => 'dc.coverage.temporal.en',
     'Type' => 'dc.type.en',
     'Bitstream'=> 'dc.format.original',
     'Thumbnail'=> 'dc.format.thumbnail'
-
 );
 
-$config['skylight_recorddisplay'] = array('Title','Artist','Subject','Type','Abstract', 'Bitstream', 'Thumbnail','Place Made', 'Date Made', 'Accession Number', 'Description', 'Collection');
+$config['skylight_recorddisplay'] = array('Artist','Title', 'Date', 'Medium','Type','Description', 'Bitstream', 'Thumbnail','Place Made', 'Accession Number','Collection');
 
-$config['skylight_searchresult_display'] = array('Title','Artist','Subject','Type','Abstract', 'Bitstream', 'Thumbnail');
+$config['skylight_searchresult_display'] = array('Title','Artist','Medium','Type','Description', 'Bitstream', 'Thumbnail', 'Date');
 
 $config['skylight_search_fields'] = array('Keywords' => 'text',
-    'Subject' => 'dc.subject',
-    'Type' => 'dc.type',
-    'Author' => 'dc.creator',
+    'Medium' => 'dc.subject.en',
+    'Type' => 'dc.type.en',
+    'Artist' => 'dc.creator.en',
     'Bitstream'=> 'dc.format.original',
     'Thumbnail'=> 'dc.format.thumbnail'
 );
 
-$config['skylight_sort_fields'] = array('Title' => 'dc.title',
-    'Date' => 'dc.date.issued_dt',
-    'Author' => 'dc.creator'
+$config['skylight_sort_fields'] = array('Title' => 'dc.title_sort',
+    'Artist' => 'dc.contributor.author_sort '
 );
 
 $config['skylight_feed_fields'] = array('Title' => 'Title',
-    'Author' => 'Author',
-    'Subject' => 'Subject',
-    'Description' => 'Abstract',
+    'Artist' => 'Artist',
+    'Medium' => 'Medium',
+    'Description' => 'Description',
     'Date' => 'Date');
 
 $config['skylight_results_per_page'] = 10;
@@ -83,7 +82,7 @@ $config['skylight_lightbox_mimes'] = array('image/jpeg', 'image/gif', 'image/png
 
 // Language and locale settings
 $config['skylight_language_default'] = 'en';
-$config['skylight_language_options'] = array('en', 'ko', 'jp');
-$config['skylight_highlight_fields'] = 'dc.title.en,dc.contributor.author,dc.subject.en,lido.country.en,dc.description.en,dc.relation.ispartof.en';
+$config['skylight_language_options'] = array('en');
+$config['skylight_highlight_fields'] = 'dc.title.en,dc.contributor.author.en,dc.subject.en,lido.country.en,dc.description.en,dc.relation.ispartof.en';
 
 ?>
