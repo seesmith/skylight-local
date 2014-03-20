@@ -1,4 +1,5 @@
 <div class="record">
+    <div class="content byEditor">
     <p>The University holds around 2500 works of art. The Art Collection is now an amalgamation of the University of
         Edinburgh’s original art collection, which spans some 400 years of collecting, and the Edinburgh College of Art
         collection of prints, drawings, paintings and sculpture. The ECA collection tells a unique story of the artist
@@ -32,4 +33,5 @@
         collecting and also utilised by some of the world’s leading contemporary artists, academics and curators and
         presented to as wide an audience as possible.
     </p>
+    </div>
 </div>
