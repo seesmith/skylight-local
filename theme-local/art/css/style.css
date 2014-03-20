@@ -110,12 +110,12 @@ h1 								{ font-size: 18px; line-height: 24px; margin: 30px 0 17px 0px; positi
 h2 								{ font-size: 16px; line-height: 36px; margin: 0 0 0 0; }
 h3 								{ font-size: 14px; line-height: 18px; margin: 0 0 9px 0; }
 
-h1.itemtitle 					{ font-size: 18px; line-height: 24px; margin: 30px 0 17px 54px; position: relative; }
+h1.itemtitle 					{ font-size: 18px; line-height: 24px; margin: 20px 0 10px 0px; position: relative; text-transform: uppercase; }
 
 p 								{ font-size: 13px; margin-bottom: 18px; }
 
 a, a:active, a:visited          { color: #00315F; }
-a:hover 						{ text-decoration: underline; color: #7F5131; }
+a:hover 						{ text-decoration: underline; color: #58A09D; }
 
 input[type=text], input[type=password]				{
 	border: 1px solid #bbbbbc; font-size: 13px; height: 28px; padding: 0 10px;
@@ -125,7 +125,7 @@ input.btn						{
     background: #00315F; border: none; height: 28px; color: #fff; text-transform: uppercase; font-size: 14px; margin-left: 8px; font-weight: bold; padding: 0 18px;
 	-webkit-border-radius: 5px; -moz-border-radius: 5px; border-radius: 5px; text-shadow: rgba(0,0,0,0.3) 0px -1px 0px;
 }
-input.btn:hover					{ background: #7F5131; }
+input.btn:hover					{ background: #58A09D; }
 
 
 
@@ -144,12 +144,12 @@ header				{ position: relative; width: 940px;}
 .uoelogo            { display: block; width: 119px; height: 88px; float: left; background: url(../images/UoELogo.gif) no-repeat 0px 0px;}
 .artlogo            { display: block; width: 421px; height: 88px; float: left; background: url(../images/ArtCollectionLogo.gif) no-repeat 0px 0px;}
 .artlogo:hover      { display: block; background: url(../images/ArtCollectionLogo.gif) no-repeat 0px -88px; }
-.menulogo           { display: block; width: 240px; height: 104px; position: absolute; top: 25px; right: 0px; background: url(../images/ApolloAndMuses.jpg) no-repeat 0px 0px;}
+.menulogo           { display: block; width: 240px; height: 104px; position: absolute; top: 28px; right: 0px; background: url(../images/ArtLogo.jpg) no-repeat 0px 0px;}
 .ie7 .menulogo 		{ top: -40px; }
 
 #collection-search  { width: 660px; padding-top: 20px;}
 
-.search							{ padding-bottom: 22px; border-bottom: 1px solid #7F5131; width: 660px; }
+.search							{ padding-bottom: 22px; border-bottom: 1px solid #58A09D; width: 660px; }
 .search input[type=text]		{ 
 	box-shadow: 0px 0px 9px rgba(30,30,60, 0.3); -moz-box-shadow: 0px 0px 9px rgba(30,30,60, 0.75); -webkit-box-shadow: 0px 0px 9px rgba(30,30,60, 0.3);
 	font-size: 16px; color: #00315F; font-weight: bold; padding-left: 33px; width: 390px;
@@ -172,15 +172,15 @@ header				{ position: relative; width: 940px;}
     background: #00315F url(../images/bg-arrows.png) no-repeat 100% -92px;
 	display: block; color: #fff; text-decoration: none; width: 223px; padding-left: 17px; position: relative; left: -17px;
 }
-.col-sidebar h4 a:hover             { background: #7F5131 url(../images/bg-arrows.png) no-repeat 100% -92px; }
+.col-sidebar h4 a:hover             { background: #58A09D url(../images/bg-arrows.png) no-repeat 100% -92px; }
 .col-sidebar ul 					{ list-style-type: none; margin: 0 0 17px 0; font-size: 12px; }
 .col-sidebar ul li 					{ line-height: 16px; }
 .col-sidebar ul a 					{ text-decoration: none; display: block; padding: 0 17px; }
 .col-sidebar ul a:hover				{ text-decoration: underline; }
 
 .col-sidebar ul.selected					{ background: #ffffff; -webkit-border-radius: 5px; -moz-border-radius: 5px; border-radius: 5px; padding: 7px 9px; margin: 0 17px 4px 17px; }
-.col-sidebar ul.selected li 				{ position: relative; color: #7F5131; }
-.col-sidebar ul.selected a					{ color: #7F5131; padding: 0; }
+.col-sidebar ul.selected li 				{ position: relative; color: #58A09D; }
+.col-sidebar ul.selected a					{ color: #58A09D; padding: 0; }
 .col-sidebar ul.selected a:hover			{ background: none; }
 .col-sidebar ul.selected a.deselect			{ display: block; width: 13px; height: 13px; background: url(../images/bg-deselect.png) no-repeat 0px 0px; text-indent: -9999px; position: absolute; top: 0; right: 0; }
 .col-sidebar ul.selected a.deselect:hover	{ background-position: 0px -15px; }
@@ -192,22 +192,23 @@ header				{ position: relative; width: 940px;}
 .col-sidebar ul.related .tags a 			{ padding: 2px 5px; display: inline; background: #ffffff; }
 .col-sidebar ul.related .tags a:hover		{ text-decoration: none; background: #00315F; }
 
-.tags					{ margin: 0 0 0 54px; }
+.tags					{ margin-top: 5px; margin: 0; }
 .tags a 				{ font-size: 13px; background: #AAA79E; -webkit-border-radius: 5px; -moz-border-radius: 5px; border-radius: 5px; padding: 2px 6px; line-height: 20px; margin-right: 8px; text-decoration: none; }
 .tags a.bold			{ font-weight: bold; }
 .tags a:hover			{ background: #00315F; color: #fff; }
 
-footer                  { display: block; border-bottom: 1px solid #7F5131; padding-bottom: 10px; margin-bottom: 15px; width: 660px; height: 130px;}
+footer                  { display: block; border-bottom: 1px solid #58A09D; padding-bottom: 10px; margin-bottom: 15px; width: 660px; height: 130px;}
 
-.footer-links			{ display: block; margin-top: 30px; margin-bottom: 15px; padding-top: 10px; padding-bottom: 10px; text-align: center; border-top: 1px solid #7F5131; border-bottom: 1px solid #7F5131; width: 660px;}
+.footer-links			{ display: block; margin-top: 30px; margin-bottom: 15px; padding-top: 10px; padding-bottom: 10px; text-align: center; border-top: 1px solid #58A09D; border-bottom: 1px solid #58A09D; width: 660px;}
 .footer-links a 		{ font-size: 10px; text-transform: uppercase; color: #AAA79E  !important; text-decoration: none; font-weight: bold; border-right: 1px solid #cecece; padding-right: 15px; margin-right: 10px; }
 .footer-links a.last	{ border: none; }
-.footer-links a:hover	{ text-decoration: underline; color: #7F5131; }
+.footer-links a:hover	{ text-decoration: underline; color: #58A09D; }
 
-.footer-disclaimer      { display:block; width: 615px; margin: auto; }
-
+.footer-disclaimer      { display:block; width: 520px; margin: auto; }
 .footer-logo            { display: block; float: left; }
+.is-logo                { display: block; float: left; padding-left: 20px; }
 .luclogo                { display: block; width: 64px; height: 64px; background: url(../images/ArtLUCLogo.png) no-repeat 0px 0px; }
+.islogo                 { display: block; float: left; width: 50px; height: 64px; background: url(../images/islogo.gif) no-repeat 0px 0px; }
 
 .footer-policies        { display: block; float: left; padding-left: 20px; }
 .footer-policies p      { font-size: 12px; margin-bottom: 5px; color: #555555}
@@ -215,8 +216,8 @@ footer                  { display: block; border-bottom: 1px solid #7F5131; padd
 /* Custom Containers & Subclasses ----------------------------------------------------------------------------------------*/
 
 .listing 							{ list-style-type: none; margin: 0; }
-.listing li 						{ padding: 10px 0 10px 24px; position: relative; }
-.listing li.first					{ padding-top: 30px; }
+.listing li                         { padding: 10px 0 20px 24px; position: relative; border-top: 1px solid #b8baba; }
+.listing li.first                   { padding-top: 30px; border: none; }
 .listing li.last					{ padding-bottom: 30px; }
 .listing li a 						{ text-decoration: none; }
 .listing li a:hover					{ text-decoration: underline; }
@@ -273,6 +274,8 @@ h1 .icon							{ top: -5px; left: -65px; }
 
 .content 							{ margin-top: 20px; }
 .content ul 						{ margin: 0 0 18px 1.2em; }
+
+.record_bitstreams                  { margin-top: 20px; }
 
 table								{ width: 100%; background: #f0ebda; }
 table caption						{ text-align: left; background: #00315F; color: #fff; font-size: 12px; text-transform: uppercase; font-weight: bold; padding: 0px 17px; border-bottom: 1px solid #fff; line-height: 26px; }

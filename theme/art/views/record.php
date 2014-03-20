@@ -15,6 +15,21 @@ if(isset($solr[$type_field])) {
 
 ?>
 
+<h1 class="itemtitle"><?php echo $record_title ?></h1>
+<div class="tags">
+    <?php
+
+    if (isset($solr[$author_field])) {
+        foreach($solr[$author_field] as $author) {
+            $orig_filter = preg_replace('/ /','+',$author, -1);
+            $orig_filter = preg_replace('/,/','%2C',$orig_filter, -1);
+            echo '<a href=\'./search/*/Author:"'.$orig_filter.'"\'>'.$author.'</a>';
+        }
+    }
+
+    ?>
+</div>
+
 <div class="content">
 
     <?php
@@ -28,21 +43,6 @@ if(isset($solr[$type_field])) {
     ?>
 
     <table>
-        <caption><?php echo $record_title;?>
-            <div class="tags">
-                <?php
-
-                if (isset($solr[$author_field])) {
-                    foreach($solr[$author_field] as $author) {
-                        $orig_filter = preg_replace('/ /','+',$author, -1);
-                        $orig_filter = preg_replace('/,/','%2C',$orig_filter, -1);
-                        echo '<a href=\'./search/*/Author:"'.$orig_filter.'"\'>'.$author.'</a>';
-                    }
-                }
-
-                ?>
-            </div>
-        </caption>
         <tbody>
         <?php foreach($recorddisplay as $key) {
 
@@ -90,7 +90,7 @@ if(isset($solr[$type_field])) {
 
 
             echo '<p><span class="label"></span>'.$bitstreamLink.'
-       (<span class="bitstream_size">';
+            (<span class="bitstream_size">';
             echo getBitstreamSize($bitstream);
             echo '</span>, <span class="bitstream_mime">';
 
