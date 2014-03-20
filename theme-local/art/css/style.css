@@ -1,4 +1,4 @@
-/*  
+/*
 Site Name: ---
 Site URI: ---
 Description: ---
@@ -7,7 +7,7 @@ Version: 1.0
 UPDATE INFO ---------------------------------------
 
 Revision number: 1.0
-Last updated: 
+Last updated:
 Last update made by: Adam Wright (@rike) for big-backyard.co.nz
 
 CONVENTIONS ---------------------------------------
@@ -32,16 +32,16 @@ table, caption, tbody, tfoot, thead, tr, th, td,
 article, aside, canvas, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section, summary,
 time, mark, audio, video {
-  margin: 0;
-  padding: 0;
-  border: 0;
-  font-size: 100%;
-  font: inherit;
-  vertical-align: baseline;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
 }
 article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
-  display: block;
+    display: block;
 }
 blockquote, q { quotes: none; }
 blockquote:before, blockquote:after,
@@ -76,8 +76,8 @@ sup 				{ top: -0.5em; }
 sub 				{ bottom: -0.25em; }
 pre 				{ white-space: pre; white-space: pre-wrap; word-wrap: break-word; padding: 15px; }
 textarea 			{ overflow: auto; } /* www.sitepoint.com/blogs/2010/08/20/ie-remove-textarea-scrollbars/ */
-.ie6 legend, 
-.ie7 legend 		{ margin-left: -7px; } 
+.ie6 legend,
+.ie7 legend 		{ margin-left: -7px; }
 
 input[type="radio"] 		{ vertical-align: text-bottom; } /* Align checkboxes, radios, text inputs with their label by: Thierry Koblentz tjkdesign.com/ez-css/css/base.css  */
 input[type="checkbox"] 		{ vertical-align: bottom; }
@@ -118,12 +118,12 @@ a, a:active, a:visited          { color: #00315F; }
 a:hover 						{ text-decoration: underline; color: #58A09D; }
 
 input[type=text], input[type=password]				{
-	border: 1px solid #bbbbbc; font-size: 13px; height: 28px; padding: 0 10px;
-	-webkit-border-radius: 5px; -moz-border-radius: 5px; border-radius: 5px;
+    border: 1px solid #bbbbbc; font-size: 13px; height: 28px; padding: 0 10px;
+    -webkit-border-radius: 5px; -moz-border-radius: 5px; border-radius: 5px;
 }
 input.btn						{
     background: #00315F; border: none; height: 28px; color: #fff; text-transform: uppercase; font-size: 14px; margin-left: 8px; font-weight: bold; padding: 0 18px;
-	-webkit-border-radius: 5px; -moz-border-radius: 5px; border-radius: 5px; text-shadow: rgba(0,0,0,0.3) 0px -1px 0px;
+    -webkit-border-radius: 5px; -moz-border-radius: 5px; border-radius: 5px; text-shadow: rgba(0,0,0,0.3) 0px -1px 0px;
 }
 input.btn:hover					{ background: #58A09D; }
 
@@ -150,10 +150,10 @@ header				{ position: relative; width: 940px;}
 #collection-search  { width: 660px; padding-top: 20px;}
 
 .search							{ padding-bottom: 22px; border-bottom: 1px solid #58A09D; width: 660px; }
-.search input[type=text]		{ 
-	box-shadow: 0px 0px 9px rgba(30,30,60, 0.3); -moz-box-shadow: 0px 0px 9px rgba(30,30,60, 0.75); -webkit-box-shadow: 0px 0px 9px rgba(30,30,60, 0.3);
-	font-size: 16px; color: #00315F; font-weight: bold; padding-left: 33px; width: 390px;
-	background: #fff url(../images/bg-search.png) no-repeat 0px 0px;
+.search input[type=text]		{
+    box-shadow: 0px 0px 9px rgba(30,30,60, 0.3); -moz-box-shadow: 0px 0px 9px rgba(30,30,60, 0.75); -webkit-box-shadow: 0px 0px 9px rgba(30,30,60, 0.3);
+    font-size: 16px; color: #00315F; font-weight: bold; padding-left: 33px; width: 390px;
+    background: #fff url(../images/bg-search.png) no-repeat 0px 0px;
 }
 .ie7 .search input[type=text]	{ width: 355px; }
 .search input.btn				{ margin-right: 8px; }
@@ -168,9 +168,9 @@ header				{ position: relative; width: 940px;}
 .tagdiv a:hover     { background: #BBBBBC; color: #000; }
 
 .col-sidebar h4						{ color: #fff; line-height: 26px; font-weight: bold; text-transform: uppercase; font-size: 12px; margin-bottom: 17px; background: #00315F; padding: 0 17px; }
-.col-sidebar h4 a 					{ 
+.col-sidebar h4 a 					{
     background: #00315F url(../images/bg-arrows.png) no-repeat 100% -92px;
-	display: block; color: #fff; text-decoration: none; width: 223px; padding-left: 17px; position: relative; left: -17px;
+    display: block; color: #fff; text-decoration: none; width: 223px; padding-left: 17px; position: relative; left: -17px;
 }
 .col-sidebar h4 a:hover             { background: #58A09D url(../images/bg-arrows.png) no-repeat 100% -92px; }
 .col-sidebar ul 					{ list-style-type: none; margin: 0 0 17px 0; font-size: 12px; }
@@ -185,10 +185,10 @@ header				{ position: relative; width: 940px;}
 .col-sidebar ul.selected a.deselect			{ display: block; width: 13px; height: 13px; background: url(../images/bg-deselect.png) no-repeat 0px 0px; text-indent: -9999px; position: absolute; top: 0; right: 0; }
 .col-sidebar ul.selected a.deselect:hover	{ background-position: 0px -15px; }
 
-.col-sidebar ul.related li 					{ padding: 0 17px 0 46px; position: relative; margin-bottom: 18px; zoom: 1; }
+.col-sidebar ul.related li 					{ padding: 0 20px 0 20px; position: relative; margin-bottom: 18px; zoom: 1; }
 .col-sidebar ul.related li a 				{ padding: 0; }
 .col-sidebar ul.related li a:hover			{ background: none; text-decoration: underline; }
-.col-sidebar ul.related .tags				{ margin: 4px 0 0 0; }
+.col-sidebar ul.related .tags				{ margin: 0px 0 0 0; }
 .col-sidebar ul.related .tags a 			{ padding: 2px 5px; display: inline; background: #ffffff; }
 .col-sidebar ul.related .tags a:hover		{ text-decoration: none; background: #00315F; }
 
@@ -316,34 +316,34 @@ table tr:nth-child(2n)				{ background: #CFCBBE; }
 /* Media queries for responsive design --------------------------------------------------------------------------------------------------------*/
 
 @media all and (orientation:portrait) {
-	/* Style adjustments for portrait mode goes here */
+    /* Style adjustments for portrait mode goes here */
 }
 
 @media all and (orientation:landscape) {
-	/* Style adjustments for landscape mode goes here */
+    /* Style adjustments for landscape mode goes here */
 }
 
 @media screen and (max-device-width: 480px) {
-	/* Grade-A Mobile Browsers (Opera Mobile, Mobile Safari, Android Chrome) consider this: www.cloudfour.com/css-media-query-for-mobile-is-fools-gold/ */
-	/* Uncomment if you don't want iOS and WinMobile to mobile-optimize the text for you: j.mp/textsizeadjust */
-	/* html { -webkit-text-size-adjust:none; -ms-text-size-adjust:none; } */
+    /* Grade-A Mobile Browsers (Opera Mobile, Mobile Safari, Android Chrome) consider this: www.cloudfour.com/css-media-query-for-mobile-is-fools-gold/ */
+    /* Uncomment if you don't want iOS and WinMobile to mobile-optimize the text for you: j.mp/textsizeadjust */
+    /* html { -webkit-text-size-adjust:none; -ms-text-size-adjust:none; } */
 }
 
 
 /* Print styles --------------------------------------------------------------------------------------------------------*/
 
 @media print {
-  * { background: transparent !important; color: black !important; text-shadow: none !important; filter:none !important;
-  -ms-filter: none !important; } /* Black prints faster: sanbeiji.com/archives/953 */
-  a, a:visited { color: #444 !important; text-decoration: underline; }
-  a[href]:after { content: " (" attr(href) ")"; }
-  abbr[title]:after { content: " (" attr(title) ")"; }
-  .ir a:after, a[href^="javascript:"]:after, a[href^="#"]:after { content: ""; }  /* Don't show links for images, or javascript/internal links */
-  pre, blockquote { border: 1px solid #999; page-break-inside: avoid; }
-  thead { display: table-header-group; } /* css-discuss.incutio.com/wiki/Printing_Tables */
-  tr, img { page-break-inside: avoid; }
-  @page { margin: 0.5cm; }
-  p, h2, h3 { orphans: 3; widows: 3; }
-  h2, h3{ page-break-after: avoid; }
+    * { background: transparent !important; color: black !important; text-shadow: none !important; filter:none !important;
+        -ms-filter: none !important; } /* Black prints faster: sanbeiji.com/archives/953 */
+    a, a:visited { color: #444 !important; text-decoration: underline; }
+    a[href]:after { content: " (" attr(href) ")"; }
+    abbr[title]:after { content: " (" attr(title) ")"; }
+    .ir a:after, a[href^="javascript:"]:after, a[href^="#"]:after { content: ""; }  /* Don't show links for images, or javascript/internal links */
+    pre, blockquote { border: 1px solid #999; page-break-inside: avoid; }
+    thead { display: table-header-group; } /* css-discuss.incutio.com/wiki/Printing_Tables */
+    tr, img { page-break-inside: avoid; }
+    @page { margin: 0.5cm; }
+    p, h2, h3 { orphans: 3; widows: 3; }
+    h2, h3{ page-break-after: avoid; }
 }
 

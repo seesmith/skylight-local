@@ -5,7 +5,7 @@
         // in $config['skylight_searchresult_display']
 
         $title_field = $this->skylight_utilities->getField('Title');
-        $author_field = $this->skylight_utilities->getField('Artist');
+        $author_field = $this->skylight_utilities->getField('Author');
         $date_field = $this->skylight_utilities->getField('Date');
         $type_field = $this->skylight_utilities->getField('Type');
         $bitstream_field = $this->skylight_utilities->getField('Bitstream');
