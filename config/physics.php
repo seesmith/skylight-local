@@ -15,14 +15,14 @@ $config['skylight_container_id'] = '4';
 $config['skylight_container_field'] = 'location.coll';
 
 $config['skylight_fields'] = array('Title' => 'dc.title.en',
-    'Author' => 'dc.contributor.author',
+    'Author' => 'dc.creator.en',
     'Subject' => 'dc.subject.en',
     'Type' => 'dc.type.en',
     'Abstract' => 'dc.description.abstract',
-    'Date' => 'dc.date.issued_dt',
+    //'Date' => 'dc.date.issued_dt',
     'Bitstream'=> 'dc.format.original.en',
     'Thumbnail'=> 'dc.format.thumbnail.en',
-    'Description'=>'dc.description',
+    'Description'=>'dc.description.en',
     'Date' => 'dc.date.issued',
     'Accession Date' => 'dc.date.accessioned_dt'
 );
@@ -44,7 +44,7 @@ $config['skylight_meta_fields'] = array('Title' => 'dc.title',
     'Type' => 'dc.type');
 
 
-$config['skylight_recorddisplay'] = array('Title','Author','Subject','Type','Abstract', 'Place Made', 'Bitstream', 'Thumbnail','Date Made', 'Accession Number', 'Description', 'Collection');
+$config['skylight_recorddisplay'] = array('Title','Author','Subject','Type', 'Description');
 
 $config['skylight_searchresult_display'] = array('Title','Author','Subject','Type','Abstract', 'Bitstream', 'Thumbnail');
 
