@@ -68,67 +68,44 @@
 
         <li<?php if($index == 0) { echo ' class="first"'; } elseif($index == sizeof($docs) - 1) { echo ' class="last"'; } ?>>
             <!--span class="icon <?php echo $type?>"></span-->
-
-            <div class =  "thumbnailImage">
-                <?php if(isset($doc[$bitstream_field])) {
-                    //SR clone text from bitstream helpers to get individual aspects of bitstream. Cannot call bitstream helpers from here.
-                    $i = 0;
-                    foreach ($doc[$bitstream_field] as $bitstream) {
-
-                        $thumbnail = $doc[$thumbnail_field][0];
-                        $segments = explode("##", $thumbnail);
-                        $filename = $segments[1];
-                        $handle = $segments[3];
-                        $seq = $segments[4];
-                        $handle_id = preg_replace('/^.*\//', '',$handle);
-                        $uri = './record/'.$handle_id.'/'.$seq.'/'.$filename;
-                        $thumbnailLink = $this->skylight_utilities->getBitstreamThumbLinkParameterised($bitstream, $thumbnail, 'test', '140px', 0, 'style="display: block; margin-left: auto; margin-right: auto;" ');
-
-                        if ($i == 0)
-                        {
-                            echo $thumbnailLink;
-                        }
-                        $i++;
-                    }
-                }?>
-            </div>
+        <div class="item-div">
 
             <div class = "iteminfo">
-            <?php if(array_key_exists($author_field,$doc)) { ?>
-                <?php
 
-                $num_authors = 0;
-                foreach ($doc[$author_field] as $author) {
-                    // test author linking
-                    // quick hack that only works if the filter key
-                    // and recorddisplay key match and the delimiter is :
-                    $orig_filter = preg_replace('/ /','+',$author, -1);
-                    $orig_filter = preg_replace('/,/','%2C',$orig_filter, -1);
-                    echo '<a href="./search/*/Author:%22'.$orig_filter.'%22">'.$author.'</a>';
-                    $num_authors++;
-                    if($num_authors < sizeof($doc[$author_field])) {
-                        echo ' ';
-                    }
+
+                <h3><a href="./record/<?php echo $doc['id']?>?highlight=<?php echo $query ?>"><?php echo $doc[$title_field][0]; ?></a>
+                <?php if(array_key_exists($date_field, $doc)) { ?>
+                <?php
+                echo '(' . $doc[$date_field][0] . ')';
+                }
+                elseif(array_key_exists('dateIssuedyear', $doc)) {
+                    echo '( ' . $doc['dateIssuedyear'][0] . ')';
                 }
 
-                ?>
+                ?></h3>
 
-                <h3><a href="./record/<?php echo $doc['id']?>?highlight=<?php echo $query ?>"><?php echo $doc[$title_field][0]; ?></a></h3>
+                <div class="tagdiv">
 
-                <?php } ?>
+                    <?php if(array_key_exists($author_field,$doc)) { ?>
+                        <?php
 
-           <?php if(array_key_exists($date_field, $doc)) { ?>
-                <span>
-                    <?php
-                    echo '(' . $doc[$date_field][0] . ')';
-              }
-                        elseif(array_key_exists('dateIssuedyear', $doc)) {
-                            echo '( ' . $doc['dateIssuedyear'][0] . ')';
+                        $num_authors = 0;
+                        foreach ($doc[$author_field] as $author) {
+                            // test author linking
+                            // quick hack that only works if the filter key
+                            // and recorddisplay key match and the delimiter is :
+                            $orig_filter = preg_replace('/ /','+',$author, -1);
+                            $orig_filter = preg_replace('/,/','%2C',$orig_filter, -1);
+                            echo '<a href="./search/*/Author:%22'.$orig_filter.'%22">'.$author.'</a>';
+                            $num_authors++;
+                            if($num_authors < sizeof($doc[$author_field])) {
+                                echo ' ';
+                            }
                         }
 
-                    ?>
-                    </span>
-                <div class="tagdiv">
+                        ?>
+                    <?php } ?>
+
 
             <?php
             // TODO: Make highlighting configurable
@@ -167,6 +144,31 @@
 
             </div> <!-- close tags div -->
 
+            </div>
+            <div class =  "thumbnailImage">
+                <?php if(isset($doc[$bitstream_field])) {
+                    //SR clone text from bitstream helpers to get individual aspects of bitstream. Cannot call bitstream helpers from here.
+                    $i = 0;
+                    foreach ($doc[$bitstream_field] as $bitstream) {
+
+                        $thumbnail = $doc[$thumbnail_field][0];
+                        $segments = explode("##", $thumbnail);
+                        $filename = $segments[1];
+                        $handle = $segments[3];
+                        $seq = $segments[4];
+                        $handle_id = preg_replace('/^.*\//', '',$handle);
+                        $uri = './record/'.$handle_id.'/'.$seq.'/'.$filename;
+                        $thumbnailLink = $this->skylight_utilities->getBitstreamThumbLinkParameterised($bitstream, $thumbnail, 'test', '140px', 0, 'style="display: block; margin-left: auto; margin-right: auto;" ');
+
+                        if ($i == 0)
+                        {
+                            echo $thumbnailLink;
+                        }
+                        $i++;
+                    }
+                }?>
+            </div>
+            <div class="clearfix"></div>
             </div>
         </li>
             <?php }?>
