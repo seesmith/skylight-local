@@ -214,12 +214,14 @@ footer                  { display: block; border-bottom: 1px solid #093563; padd
 .footer-links a.last	{ border: none; }
 .footer-links a:hover	{ text-decoration: underline; color: #093563; }
 
-.footer-disclaimer      { display:block; width: 562px; margin: auto; }
+.footer-disclaimer      { display:block; width: 602px; margin: auto; }
 
 .footer-logo            { display: block; float: left; }
-.recognised-logo        { display: block; float: left; padding-left: 20px;}
+.recognised-logo        { display: block; float: left; padding-left: 20px; }
+.is-logo                { display: block; float: left; padding-left: 20px; }
 .luclogo                { display: block; width: 64px; height: 64px; background: url(../images/MimedLUCLogo.png) no-repeat 0px 0px; }
 .recognisedlogo         { display: block; float: left; width: 100px; height: 64px; background: url(../images/recognised.gif) no-repeat 0px 0px; }
+.islogo                 { display: block; float: left; width: 50px; height: 64px; background: url(../images/islogo.gif) no-repeat 0px 0px; }
 
 .footer-policies        { display: block; float: left; padding-left: 20px; width: 328px; }
 .footer-policies p      { font-size: 12px; margin-bottom: 5px; color: #555555}
