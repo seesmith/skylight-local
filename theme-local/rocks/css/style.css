@@ -203,10 +203,12 @@ footer                  { display: block; border-bottom: 1px solid #71c53d; padd
 .footer-links a.last	{ border: none; }
 .footer-links a:hover	{ text-decoration: underline; color: #71c53d; }
 
-.footer-disclaimer      { display:block; width: 615px; margin: auto; }
+.footer-disclaimer      { display:block; width: 520px; margin: auto; }
 
 .footer-logo            { display: block; float: left; }
+.is-logo                { display: block; float: left; padding-left: 20px; }
 .luclogo                { display: block; width: 64px; height: 64px; background: url(../images/GeologyLUCLogo.png) no-repeat 0px 0px; }
+.islogo                 { display: block; float: left; width: 50px; height: 64px; background: url(../images/islogo.gif) no-repeat 0px 0px; }
 
 .footer-policies        { display: block; float: left; padding-left: 20px; }
 .footer-policies p      { font-size: 12px; margin-bottom: 5px; color: #555555}
