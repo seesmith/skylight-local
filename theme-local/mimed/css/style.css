@@ -209,7 +209,7 @@ header                          { position: relative; }
 
 footer                  { display: block; border-bottom: 1px solid #093563; padding-bottom: 10px; margin-bottom: 15px; width: 660px; height: 130px;}
 
-.footer-links			{ display: block; margin-top: 30px; margin-bottom: 15px; padding-top: 10px; padding-bottom: 10px; text-align: center; border-top: 1px solid #093563; border-bottom: 1px solid #093563; width: 660px;}
+.footer-links			{ display: block; margin-top: 15px; margin-bottom: 15px; padding-top: 10px; padding-bottom: 10px; text-align: center; border-top: 1px solid #093563; border-bottom: 1px solid #093563; width: 660px;}
 .footer-links a 		{ font-size: 10px; text-transform: uppercase; color: #AAA79E  !important; text-decoration: none; font-weight: bold; border-right: 1px solid #cecece; padding-right: 15px; margin-right: 10px; }
 .footer-links a.last	{ border: none; }
 .footer-links a:hover	{ text-decoration: underline; color: #093563; }
@@ -229,7 +229,7 @@ footer                  { display: block; border-bottom: 1px solid #093563; padd
 .listing                                { list-style-type: none; margin: 0; }
 .listing li                             { padding: 10px 0 20px 24px; position: relative; border-top: 1px solid #b8baba; }
 .listing li.first                       { padding-top: 30px; border: none; }
-.listing li.last                        { padding-bottom: 30px; }
+.listing li.last                        { padding-bottom: 30px; border-bottom: 1px solid #b8baba;}
 .listing li a                           { text-decoration: none; }
 .listing li a:hover                     { text-decoration: underline; }
 
@@ -273,7 +273,7 @@ h1 .icon                                { top: -5px; left: -65px; }
 .small-icon.media-img           { background-position: 0px -40px; }
 .small-icon.media-book          { background-position: 0px -60px; }
 
-.pagination                     { border-top: 1px solid #f5739F; line-height: 33px; text-align: center; position: relative; font-size: 11px; font-weight: bold; }
+.pagination                     { line-height: 33px; text-align: center; position: relative; font-size: 11px; font-weight: bold; margin-bottom: -15px; min-height: 33px; }
 .pagination a                   { color: #666; text-decoration: none; display: inline-block; padding: 0 5px; }
 .pagination a.selected          { background: #f5739F; color: #333; }
 .pagination a:hover             { color: #333; text-decoration: underline; }
@@ -284,16 +284,29 @@ h1 .icon                                { top: -5px; left: -65px; }
 .pagination .prev:hover,
 .pagination .next:hover         { background: #def5fb url(../images/bg-arrows.png) no-repeat; }
 
-.content                       { margin-top: 20px; }
-.content ul                    { margin: 0 0 18px 1.2em; }
+.pagination .no-results {
+    left: 0;
+    position: absolute;
+    font-weight: normal;
+    font-size: 13px;
+}
 
-.record_bitstreams             { margin-top: 20px; }
+.browse_pagination              { display: block; border-bottom: 1px solid #093563; }
+.browse_results                 { margin-top: 30px; }
+.browse_facets                  { margin-top: 20px; }
 
-table                          { width: 100%; background: #f1f1f2; }
-table caption                  { text-align: left; background: #677077; color: #fff; font-size: 12px; text-transform: uppercase; font-weight: bold; padding: 8px 17px; border-bottom: 1px solid #fff; }
-table td, table th             { padding: 8px 17px; }
-table th                       { text-align: left; border-right: 1px solid #fff; }
-table tr:nth-child(2n)         { background: #e7e8ea; }
+.curpage                        { color: #EB0955; display: inline-block; padding: 0 5px; }
+
+.content                        { margin-top: 20px; }
+.content ul                     { margin: 0 0 18px 1.2em; }
+
+.record_bitstreams              { margin-top: 20px; }
+
+table                           { width: 100%; background: #f1f1f2; }
+table caption                   { text-align: left; background: #677077; color: #fff; font-size: 12px; text-transform: uppercase; font-weight: bold; padding: 8px 17px; border-bottom: 1px solid #fff; }
+table td, table th              { padding: 8px 17px; }
+table th                        { text-align: left; border-right: 1px solid #fff; }
+table tr:nth-child(2n)          { background: #e7e8ea; }
 
 
 /* <END> Site Css \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\ */
