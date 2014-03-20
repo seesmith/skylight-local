@@ -53,8 +53,8 @@ $config['skylight_search_fields'] = array('Keywords' => 'text',
     'Thumbnail'=> 'dc.format.thumbnail'
 );
 
-$config['skylight_sort_fields'] = array('Title' => 'dc.title_sort',
-    'Artist' => 'dc.contributor.author_sort '
+$config['skylight_sort_fields'] = array(
+    'Artist' => 'dc.contributor.author_sort ', 'Title' => 'dc.title_sort'
 );
 
 $config['skylight_feed_fields'] = array('Title' => 'Title',
