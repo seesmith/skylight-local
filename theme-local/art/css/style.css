@@ -110,7 +110,7 @@ h1 								{ font-size: 18px; line-height: 24px; margin: 30px 0 17px 0px; positi
 h2 								{ font-size: 16px; line-height: 36px; margin: 0 0 0 0; }
 h3 								{ font-size: 14px; line-height: 18px; margin: 0 0 9px 0; }
 
-h1.itemtitle 					{ font-size: 18px; line-height: 24px; margin: 30px 0 17px 54px; position: relative; }
+h1.itemtitle 					{ font-size: 18px; line-height: 24px; margin: 20px 0 10px 0px; position: relative; text-transform: uppercase; }
 
 p 								{ font-size: 13px; margin-bottom: 18px; }
 
@@ -192,7 +192,7 @@ header				{ position: relative; width: 940px;}
 .col-sidebar ul.related .tags a 			{ padding: 2px 5px; display: inline; background: #ffffff; }
 .col-sidebar ul.related .tags a:hover		{ text-decoration: none; background: #00315F; }
 
-.tags					{ margin: 0 0 0 54px; }
+.tags					{ margin-top: 5px; margin: 0; }
 .tags a 				{ font-size: 13px; background: #AAA79E; -webkit-border-radius: 5px; -moz-border-radius: 5px; border-radius: 5px; padding: 2px 6px; line-height: 20px; margin-right: 8px; text-decoration: none; }
 .tags a.bold			{ font-weight: bold; }
 .tags a:hover			{ background: #00315F; color: #fff; }
@@ -215,8 +215,8 @@ footer                  { display: block; border-bottom: 1px solid #7F5131; padd
 /* Custom Containers & Subclasses ----------------------------------------------------------------------------------------*/
 
 .listing 							{ list-style-type: none; margin: 0; }
-.listing li 						{ padding: 10px 0 10px 24px; position: relative; }
-.listing li.first					{ padding-top: 30px; }
+.listing li                         { padding: 10px 0 20px 24px; position: relative; border-top: 1px solid #b8baba; }
+.listing li.first                   { padding-top: 30px; border: none; }
 .listing li.last					{ padding-bottom: 30px; }
 .listing li a 						{ text-decoration: none; }
 .listing li a:hover					{ text-decoration: underline; }
@@ -273,6 +273,8 @@ h1 .icon							{ top: -5px; left: -65px; }
 
 .content 							{ margin-top: 20px; }
 .content ul 						{ margin: 0 0 18px 1.2em; }
+
+.record_bitstreams                  { margin-top: 20px; }
 
 table								{ width: 100%; background: #f0ebda; }
 table caption						{ text-align: left; background: #00315F; color: #fff; font-size: 12px; text-transform: uppercase; font-weight: bold; padding: 0px 17px; border-bottom: 1px solid #fff; line-height: 26px; }
