@@ -42,7 +42,7 @@ $config['skylight_meta_fields'] = array('Title' => 'dc.title.en',
     'Thumbnail'=> 'dc.format.thumbnail'
 );
 
-$config['skylight_recorddisplay'] = array('Artist','Title', 'Date', 'Medium','Type','Description', 'Bitstream', 'Thumbnail','Place Made', 'Accession Number','Collection');
+$config['skylight_recorddisplay'] = array('Artist','Title', 'Date', 'Medium','Type','Description', 'Place Made', 'Accession Number','Collection');
 
 $config['skylight_searchresult_display'] = array('Title','Artist','Medium','Type','Description', 'Bitstream', 'Thumbnail', 'Date');
 
