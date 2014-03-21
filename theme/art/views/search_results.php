@@ -72,8 +72,29 @@
 
             <div class = "iteminfo">
 
+                <?php if(array_key_exists($author_field,$doc)) { ?>
+                    <?php
 
-                <h3><a href="./record/<?php echo $doc['id']?>?highlight=<?php echo $query ?>"><?php echo $doc[$title_field][0]; ?></a>
+                    $num_authors = 0;
+                    foreach ($doc[$author_field] as $author) {
+                        // test author linking
+                        // quick hack that only works if the filter key
+                        // and recorddisplay key match and the delimiter is :
+                        $orig_filter = preg_replace('/ /','+',$author, -1);
+                        $orig_filter = preg_replace('/,/','%2C',$orig_filter, -1);
+                        $lower_orig_filter = strtolower($orig_filter);
+                        echo '<a class="artist" href="./search/*:*/Artist:%22'.$lower_orig_filter.'%7C%7C%7C'.$orig_filter.'%22">'.$author.'</a>';
+                        $num_authors++;
+                        if($num_authors < sizeof($doc[$author_field])) {
+                            echo ' ';
+                        }
+                    }
+
+                    ?>
+                <?php } ?>
+
+
+                <h3><a href="./record/<?php echo $doc['id']?>?highlight=<?php echo $query ?>"><?php echo $doc[$title_field][0]; ?>
                 <?php if(array_key_exists($date_field, $doc)) { ?>
                 <?php
                 echo '(' . $doc[$date_field][0] . ')';
@@ -82,29 +103,11 @@
                     echo '( ' . $doc['dateIssuedyear'][0] . ')';
                 }
 
-                ?></h3>
+                ?></a></h3>
 
                 <div class="tagdiv">
 
-                    <?php if(array_key_exists($author_field,$doc)) { ?>
-                        <?php
 
-                        $num_authors = 0;
-                        foreach ($doc[$author_field] as $author) {
-                            // test author linking
-                            // quick hack that only works if the filter key
-                            // and recorddisplay key match and the delimiter is :
-                            $orig_filter = preg_replace('/ /','+',$author, -1);
-                            $orig_filter = preg_replace('/,/','%2C',$orig_filter, -1);
-                            echo '<a href="./search/*/Author:%22'.$orig_filter.'%22">'.$author.'</a>';
-                            $num_authors++;
-                            if($num_authors < sizeof($doc[$author_field])) {
-                                echo ' ';
-                            }
-                        }
-
-                        ?>
-                    <?php } ?>
 
 
             <?php

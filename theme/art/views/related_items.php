@@ -17,7 +17,7 @@
             ?>
 
     <li<?php if($index == 0) { echo ' class="first"'; } elseif($index == sizeof($related_items) - 1) { echo ' class="last"'; } ?>>
-        <a href="./record/<?php echo $doc['id']?>"><?php echo $doc[$title_field][0]; ?>
+        <a class="related-record" href="./record/<?php echo $doc['id']?>"><?php echo $doc[$title_field][0]; ?>
 
         <?php if(array_key_exists($date_field, $doc)) { ?>
                 <?php
@@ -35,9 +35,11 @@
                // test author linking
                // quick hack that only works if the filter key
                // and recorddisplay key match and the delimiter is :
+               $author = ucwords($author);
                $orig_filter = preg_replace('/ /','+',$author, -1);
                $orig_filter = preg_replace('/,/','%2C',$orig_filter, -1);
-               echo '<a href=\'./search/*/Author:"'.$orig_filter.'"\'>'.$author.'</a>';
+               $lower_orig_filter = strtolower($orig_filter);
+                echo '<a href="./search/*:*/Artist:%22'.$lower_orig_filter.'%7C%7C%7C'.$orig_filter.'%22">'.$author.'</a>';
                 $num_authors++;
                 if($num_authors < sizeof($doc[$author_field])) {
                     echo ' ';

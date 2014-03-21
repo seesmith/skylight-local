@@ -4,7 +4,7 @@ $author_field = $this->skylight_utilities->getField("Author");
 $type_field = $this->skylight_utilities->getField("Type");
 $bitstream_field = $this->skylight_utilities->getField("Bitstream");
 $thumbnail_field = $this->skylight_utilities->getField("Thumbnail");
-
+$date_field = $this->skylight_utilities->getField("Date");
 
 $type = 'Unknown';
 
@@ -15,7 +15,11 @@ if(isset($solr[$type_field])) {
 
 ?>
 
-<h1 class="itemtitle"><?php echo $record_title ?></h1>
+<h1 class="itemtitle"><?php echo $record_title ?>
+<?php if(isset($solr[$date_field])) {
+      echo " (" . $solr[$date_field][0] . ")";
+    } ?>
+</h1>
 <div class="tags">
     <?php
 
@@ -23,7 +27,8 @@ if(isset($solr[$type_field])) {
         foreach($solr[$author_field] as $author) {
             $orig_filter = preg_replace('/ /','+',$author, -1);
             $orig_filter = preg_replace('/,/','%2C',$orig_filter, -1);
-            echo '<a href=\'./search/*/Author:"'.$orig_filter.'"\'>'.$author.'</a>';
+            $lower_orig_filter = strtolower($orig_filter);
+            echo '<a class="artist" href="./search/*:*/Artist:%22'.$lower_orig_filter.'%7C%7C%7C'.$orig_filter.'%22">'.$author.'</a>';
         }
     }
 
@@ -44,18 +49,21 @@ if(isset($solr[$type_field])) {
 
     <table>
         <tbody>
+        <?php $excludes = array(""); ?>
         <?php foreach($recorddisplay as $key) {
 
             $element = $this->skylight_utilities->getField($key);
             if(isset($solr[$element])) {
-                echo '<tr><th>'.$key.'</th><td>';
-                foreach($solr[$element] as $index => $metadatavalue) {
-                    echo $metadatavalue;
-                    if($index < sizeof($solr[$element]) - 1) {
-                        echo '; ';
+                if(!in_array($key, $excludes)) {
+                    echo '<tr><th>'.$key.'</th><td>';
+                    foreach($solr[$element] as $index => $metadatavalue) {
+                        echo $metadatavalue;
+                        if($index < sizeof($solr[$element]) - 1) {
+                            echo '; ';
+                        }
                     }
+                    echo '</td></tr>';
                 }
-                echo '</td></tr>';
             }
 
         } ?>
