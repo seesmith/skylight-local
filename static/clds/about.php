@@ -1,5 +1,5 @@
 <div class="content">
     <p>
-        Collections Index
+        Collections About
     </p>
 </div>

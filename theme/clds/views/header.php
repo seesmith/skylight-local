@@ -18,7 +18,7 @@
         Remove this if you use the .htaccess -->
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 
-        <title>Scottish Agricultural College Repository</title>
+        <title>University of Edinburgh Collections</title>
         <meta name="description" content="">
         <meta name="author" content="">
 
@@ -61,24 +61,36 @@
 
     </head>
 
+
+
+
+
     <body>
 
         <div id="container">
             <header>
-                <p class="collection-title"></p><p class="uoe"></p><!--<p class="illustration"></p>-->
-                <!--<a href="http://www.ed.ac.uk/schools-departments/information-services/library-museum-gallery/crc" class="logo">Centre for Research Collections</a>-->
-                <form action="./redirect/" method="post">
-                    <fieldset class="search">
-                        <input type="text" name="q" value="<?php if (isset($searchbox_query)) echo urldecode($searchbox_query); ?>" id="q" />
-                        <input type="submit" name="submit_search" class="btn" value="Search" id="submit_search" />
-                        <a href="./advanced" class="advanced">Advanced search</a>
-                    </fieldset>
-                </form>
-                <nav class="header-links">
-                    <a href="./">Home</a>
-                    <a href="./about/">About this site</a>
-                    <a href="./feedback/" class="last">Feedback</a>
+                <nav id="menu">
+                    <ul class="menu-links">
+                        <li><a href="./contact/" class="last">Contact</a></li>
+                        <li><a href="http://www.ed.ac.uk/schools-departments/information-services/library-museum-gallery/crc/projects" target="_blank">Research</a></li>
+                        <li><a href="">Another</a></li>
+                        <li><a href="http://libraryblogs.is.ed.ac.uk/" target="_blank">Blog</a></li>
+                        <li><a href="./about/">About</a></li>
+                        <li><a href="./">Home</a></li>
+                    </ul>
                 </nav>
+                <div id="collection-title">
+                    <a href="http://www.ed.ac.uk" class="uoelogo" title="The University of Edinburgh" target="_blank"></a>
+                    <a href="<?php echo base_url(); ?>" class="collectionslogo" title="University of Edinburgh Collections"></a>
+                </div>
+                <div id="collection-search">
+                    <form action="./redirect/" method="post">
+                        <fieldset class="search">
+                            <input type="text" name="q" value="<?php if (isset($searchbox_query)) echo urldecode($searchbox_query); ?>" id="q" />
+                            <input type="submit" name="submit_search" class="btn" value="Search" id="submit_search" />
+                        </fieldset>
+                    </form>
+                </div>
             </header>
 
             <div id="main" role="main" class="clearfix">
