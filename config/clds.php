@@ -88,4 +88,7 @@ $config['skylight_language_default'] = 'en';
 $config['skylight_language_options'] = array('en', 'ko', 'jp');
 $config['skylight_highlight_fields'] = 'dc.title.en,dc.contributor.author,dc.subject.en,lido.country.en,dc.description.en,dc.relation.ispartof.en';
 
+$config['skylight_homepage_recentitems'] = false;
+$config['skylight_homepage_fullwidth'] = true;
+
 ?>

@@ -26,11 +26,11 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
         <!-- Place favicon.ico & apple-touch-icon.png in the root of your domain and delete these references -->
-        <link rel="shortcut icon" href="./favicon.ico">
-        <link rel="apple-touch-icon" href="./apple-touch-icon.png">
-
+        <link rel="shortcut icon" href="<?php echo base_url(); ?>theme/<?php echo $this->config->item('skylight_theme'); ?>/images/favicon.ico">
+        <link rel="apple-touch-icon" href="<?php echo base_url(); ?>theme/<?php echo $this->config->item('skylight_theme'); ?>/images/apple-touch-icon.png">
 
         <!-- CSS: implied media="all" -->
+        <link rel="stylesheet" href="<?php echo base_url(); ?>assets/bootstrap/dist/css/bootstrap.min.css">
         <link rel="stylesheet" href="<?php echo base_url(); ?>theme/<?php echo $this->config->item('skylight_theme'); ?>/css/style.css?v=2">
 
         <!-- Uncomment if you are specifically targeting less enabled mobile browsers
@@ -73,7 +73,6 @@
                     <ul class="menu-links">
                         <li><a href="./contact/" class="last">Contact</a></li>
                         <li><a href="http://www.ed.ac.uk/schools-departments/information-services/library-museum-gallery/crc/projects" target="_blank">Research</a></li>
-                        <li><a href="">Another</a></li>
                         <li><a href="http://libraryblogs.is.ed.ac.uk/" target="_blank">Blog</a></li>
                         <li><a href="./about/">About</a></li>
                         <li><a href="./">Home</a></li>

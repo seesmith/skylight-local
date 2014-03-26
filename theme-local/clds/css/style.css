@@ -135,16 +135,17 @@ input.btn:hover					{ background: #005784; }
 /* Structure -------------------------------------------------------------------------------------------------------------*/
 #container 			{ width: 940px; margin: auto auto; }
 header				{ position: relative; width: 940px; height: 141px; background-color: #fff;}
+#main               { background-color: #333333; }
 .col-main			{ float: left; width: 660px; margin-right: 40px;}
+.col-main-full      { width: 940px; margin: auto auto; }
 .col-sidebar		{ float: left; width: 240px; background: #C6C7CC; position: relative; z-index: 2;}
 .ie7 .col-sidebar	{ padding-bottom: 30px; }
 
 /* Common Containers & Subclasses ----------------------------------------------------------------------------------------*/
 
 #menu                           { width: 940px; background-color: #333333; margin: 0 auto; height: 2.5em; }
-
 .menu-links li					{ display: inline; float: right; height: 2.5em; padding-left: 0; padding-right: 0; }
-.menu-links li a 			    { font-weight: bold; font-size: 11px; text-transform: uppercase; float: left; text-decoration: none; margin-left: 10px; color: #FFFFFF; display: inline-block; height: 2.5em; line-height: 2.5em; padding: 3px 20px 2px; text-align: center; }
+.menu-links li a 			    { font-weight: bold; font-size: 11px; text-transform: uppercase; float: left; text-decoration: none; margin-left: 10px; color: #FFFFFF; display: inline-block; height: 32px; line-height: 2.5em; padding: 3px 20px 2px; text-align: center; }
 .menu-links li a:hover		    { background-color: #005784; }
 .menu-links li a.last		    { border: none; }
 
@@ -208,7 +209,7 @@ header				{ position: relative; width: 940px; height: 141px; background-color: #
 .tags a.bold			{ font-weight: bold; }
 .tags a:hover			{ background: #333333; color: #fff; text-decoration: underline; }
 
-footer                  { display: block; padding-bottom: 20px; padding-top: 20px; width: 660px; background-color: #fff;}
+footer                  { display: block; padding-bottom: 20px; padding-top: 20px; width: 100%; background-color: #fff;}
 
 .footer-disclaimer      { display:block; width: 520px; margin: auto; height: 70px;}
 .footer-logo            { display: block; float: left; }
@@ -291,7 +292,8 @@ h1 .icon							{ top: -5px; left: -65px; }
 .browse_results                     { margin-top: 30px; }
 .browse_facets                      { margin-top: 20px; }
 
-.content 							{ margin-top: 20px; background-color: #fff;}
+.content 							{ margin-top: 20px; background-color: #fff; }
+.col-main-full .content             { background-color: #333333; color: #fff; margin: 0; }
 .content ul 						{ margin: 0 0 18px 1.2em; }
 
 .record_bitstreams                  { margin-top: 20px; }
@@ -307,8 +309,6 @@ table tr                            { border-bottom: 1px dashed #D6D3C4; }
 table tr:last-child                 { border: 0; border-bottom: none; }
 
 /* <END> Site Css \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\ */
-
-
 
 
 
@@ -358,3 +358,31 @@ table tr:last-child                 { border: 0; border-bottom: none; }
     p, h2, h3 { orphans: 3; widows: 3; }
     h2, h3{ page-break-after: avoid; }
 }
+
+/* Bootstrap CSS */
+
+.carousel-caption {
+    padding-bottom: 30px;
+    color: #FFFFFF;
+    padding-top: 20px;
+    text-align: center;
+    /* text-shadow: 0 1px 2px rgba(0, 0, 0, 0.6); */
+    text-transform: uppercase;
+    z-index: 10;
+
+    /* styling bellow */
+    background-color: #333333;
+    font-size: 15px;
+    /* opacity: 0.80; /* transparency */
+    /* filter: alpha(opacity=80); /* IE transparency */
+
+}
+
+.caption-art                { top: 6%; right: 61%; bottom: 81%; left: 2%;}
+.caption-mimed              { top: 6%; right: 48%; bottom: 81%; left: 2%;}
+.caption-russell            { top: 6%; right: 59%; bottom: 81%; left: 2%;}
+
+.carousel-caption h3        { color: #FFFFFF; }
+.carousel-caption a         { }
+
+.carousel-caption:hover     { background-color: #005784; }
