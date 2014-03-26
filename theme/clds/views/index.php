@@ -19,7 +19,7 @@
             <div class="item">
                 <img src="<?php echo base_url(); ?>theme/<?php echo $this->config->item('skylight_theme'); ?>/images/mimedslide.png" alt="Edinburgh University Musical Instrument Museums">
                 <div class="carousel-caption caption-mimed">
-                    <a href="<?php echo base_url(); ?>"><h3>Edinburgh University Musical Instrument Museums</h3></a>
+                    <a href="<?php echo base_url(); ?>?config=mimed&theme=mimed"><h3>Edinburgh University Musical Instrument Museums</h3></a>
                 </div>
             </div>
             <div class="item">

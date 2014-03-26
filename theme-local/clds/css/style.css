@@ -217,7 +217,7 @@ footer                  { display: block; padding-bottom: 20px; padding-top: 20p
 .luclogo                { display: block; width: 64px; height: 64px; background: url(../images/CollectionsLUCLogo.png) no-repeat 0px 0px; }
 .islogo                 { display: block; float: left; width: 50px; height: 64px; background: url(../images/islogo.gif) no-repeat 0px 0px; }
 
-.footer-policies        { display: block; float: left; padding-left: 20px; }
+.footer-policies        { display: block; float: left; padding-left: 20px; margin-top: -8px; }
 .footer-policies p      { font-size: 12px; margin-bottom: 5px; color: #555555}
 
 /* Custom Containers & Subclasses ----------------------------------------------------------------------------------------*/
