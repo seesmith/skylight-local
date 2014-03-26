@@ -126,7 +126,7 @@ input.btn						{
     background: #FE2842; border: none; height: 28px; color: #fff; text-transform: uppercase; font-size: 14px; margin-left: 8px; font-weight: bold; padding: 0 10px;
     -webkit-border-radius: 5px; -moz-border-radius: 5px; border-radius: 5px; text-shadow: rgba(0,0,0,0.3) 0px -1px 0px;
 }
-input.btn:hover					{ background: #005784; }
+input.btn:hover					{ color: #fff; background: #005784; }
 
 
 
@@ -134,11 +134,11 @@ input.btn:hover					{ background: #005784; }
 
 /* Structure -------------------------------------------------------------------------------------------------------------*/
 #container 			{ width: 940px; margin: auto auto; }
-header				{ position: relative; width: 940px; height: 141px; background-color: #fff;}
-#main               { background-color: #FFFFFF; }
-.col-main			{ float: left; width: 697px; margin-right: 40px;}
+header				{ position: relative; width: 940px; height: 141px; background-color: #fff; }
+#main               { background-color: #fff; }
+.col-main			{ float: left; width: 680px; margin-right: 20px; padding-left: 20px; margin-top: 10px; background-color: #fff; }
 .col-main-full      { width: 940px; margin: auto auto; }
-.col-sidebar		{ float: left; width: 240px; background: #C6C7CC; position: relative; z-index: 2;}
+.col-sidebar		{ float: left; width: 240px; background-color: #C6C7CC; position: relative; z-index: 2; margin-top: 10px; }
 .ie7 .col-sidebar	{ padding-bottom: 30px; }
 
 /* Common Containers & Subclasses ----------------------------------------------------------------------------------------*/
@@ -168,8 +168,7 @@ header				{ position: relative; width: 940px; height: 141px; background-color: #
 .search .advanced:hover			{ text-decoration: underline; }
 
 .item-div                       { width: 600px; text-align: left; display: block;}
-.iteminfo                       { display: block; min-height:100px; text-align: left; width: 70%; float:left; }
-.iteminfo .artist               { font-size: 14px; color:#FE2842; font-weight: bold; }
+.iteminfo                       { display: block; text-align: left; width: 70%; }
 .iteminfo h3                    { font-size: 18px; margin-top: 5px; }
 .thumbnailImage                 { display: block; text-align: left; width: 25%; float: right;}
 .tagdiv                         { position:relative; width: 250px;float:left; }
@@ -180,7 +179,7 @@ header				{ position: relative; width: 940px; height: 141px; background-color: #
 .col-sidebar h4					{ color: #fff; line-height: 26px; font-weight: bold; text-transform: uppercase; font-size: 12px; margin-bottom: 17px; background: #333333; padding: 0 17px; }
 .col-sidebar h4 a 				{
     background: #333333 url(../images/bg-arrows.png) no-repeat 100% -92px;
-    display: block; color: #fff; text-decoration: none; width: 223px; padding-left: 17px; position: relative; left: -17px;
+    display: block; color: #fff; text-decoration: none; width: 241px; padding-left: 17px; position: relative; left: -17px;
 }
 .col-sidebar h4 a:hover         { background: #FE2842 url(../images/bg-arrows.png) no-repeat 100% -92px; }
 .col-sidebar ul 				{ list-style-type: none; margin: 0 0 17px 0; font-size: 12px; }
@@ -209,7 +208,15 @@ header				{ position: relative; width: 940px; height: 141px; background-color: #
 .tags a.bold			{ font-weight: bold; }
 .tags a:hover			{ background: #333333; color: #fff; text-decoration: underline; }
 
-footer                  { display: block; padding-bottom: 20px; padding-top: 20px; width: 100%; background-color: #fff;}
+footer                  { display: block; padding-bottom: 20px; padding-top: 20px; width: 100%; background-color: #fff; border-top: 1px solid #005784; }
+
+
+.footer-links			{ display: block; margin-top: 15px; margin-bottom: 15px; padding-top: 10px; padding-bottom: 10px; text-align: center; border-top: 1px solid #58A09D; border-bottom: 1px solid #58A09D; width: 660px;}
+.footer-links a 		{ font-size: 10px; text-transform: uppercase; color: #AAA79E  !important; text-decoration: none; font-weight: bold; border-right: 1px solid #cecece; padding-right: 15px; margin-right: 10px; }
+.footer-links a.last	{ border: none; }
+.footer-links a:hover	{ text-decoration: underline; color: #005784; }
+
+
 
 .footer-disclaimer      { display:block; width: 520px; margin: auto; height: 70px;}
 .footer-logo            { display: block; float: left; }
@@ -235,7 +242,7 @@ footer                  { display: block; padding-bottom: 20px; padding-top: 20p
 .listing li .tags a:hover			{ text-decoration: none; }
 .listing li p 						{ font-size: 12px; margin: 0; }
 
-.listing-filter						{ padding: 0; border: none; border-bottom: 1px solid #b8baba; line-height: 33px; text-align: right; position: relative; }
+.listing-filter						{ padding: 0; border: none; border-top: 1px solid #005784; border-bottom: 1px solid #b8baba; line-height: 33px; text-align: right; position: relative; }
 .listing-filter .no-results			{ position: absolute; top: 0; left: 0; }
 .ie7 .listing-filter .no-results	{ top: -10px; }
 .listing-filter .sort				{ font-size: 10px; text-transform: uppercase; color: #666; padding-right: 10px; }
@@ -268,7 +275,7 @@ h1 .icon							{ top: -5px; left: -65px; }
 .small-icon.media-img				{ background-position: 0px -40px; }
 .small-icon.media-book				{ background-position: 0px -60px; }
 
-.pagination							{ line-height: 33px; text-align: center; position: relative; font-size: 11px; font-weight: bold; margin-bottom: -15px; min-height: 33px; }
+.pagination							{ line-height: 33px; text-align: center; position: relative; font-size: 11px; font-weight: bold; margin-bottom: -15px; min-height: 33px; border-radius: 0; display: block; margin: 0; padding-left: 0; }
 .pagination a 						{ color: #666; text-decoration: none; display: inline-block; padding: 0 5px; }
 .pagination a.selected 				{ background: #e8e8e8; color: #333; }
 .pagination a:hover					{ color: #333; text-decoration: underline; }
@@ -302,7 +309,7 @@ table								{ width: 100%; }
 table caption						{ text-align: left; background: #333333; color: #fff; font-size: 12px; text-transform: uppercase; font-weight: bold; padding: 0px 17px; border-bottom: 1px solid #fff; line-height: 26px; }
 
 table td,
-table th							{ padding: 8px 17px; text-align: left; color: #FE2842; }
+table th							{ padding: 8px 17px; text-align: left; color: #005784; }
 table th                            { border-right: 1px dashed #D6D3C4; width: 20%; }
 table td                            { width: auto; color: #333333;}
 table tr                            { border-bottom: 1px dashed #D6D3C4; }
