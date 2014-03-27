@@ -195,6 +195,7 @@ header                          { position: relative; }
 .col-sidebar ul.selected a.deselect:hover   { background-position: 0px -15px; }
 
 .col-sidebar ul.related li 					{ padding: 0 20px 0 20px; position: relative; margin-bottom: 18px; zoom: 1; }
+.col-sidebar ul.related li.first            { }
 .col-sidebar ul.related li a 				{ padding: 0; }
 .col-sidebar ul.related li a:hover			{ background: none; text-decoration: underline; }
 .col-sidebar ul.related .tags				{ margin: 0px 0 0 0; }
@@ -304,6 +305,9 @@ h1 .icon                                { top: -5px; left: -65px; }
 .content ul                     { margin: 0 0 18px 1.2em; }
 
 .record_bitstreams              { margin-top: 20px; }
+
+.highlights li a                { color: #EB0955; }
+.highlights li a:hover          { color: #093563; }
 
 table                           { width: 100%; background: #f1f1f2; }
 table caption                   { text-align: left; background: #677077; color: #fff; font-size: 12px; text-transform: uppercase; font-weight: bold; padding: 8px 17px; border-bottom: 1px solid #fff; }
