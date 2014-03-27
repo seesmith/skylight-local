@@ -35,7 +35,7 @@
                // test author linking
                // quick hack that only works if the filter key
                // and recorddisplay key match and the delimiter is :
-               $author = ucwords($author);
+               $author = ucwords(htmlspecialchars($author));
                $orig_filter = preg_replace('/ /','+',$author, -1);
                $orig_filter = preg_replace('/,/','%2C',$orig_filter, -1);
                $lower_orig_filter = strtolower($orig_filter);
