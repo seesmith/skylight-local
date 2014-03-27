@@ -16,7 +16,8 @@ $config['skylight_container_id'] = '11';
 $config['skylight_container_field'] = 'location.coll';
 
 $config['skylight_fields'] = array('Title' => 'dc.title.en',
-    'Author' => 'dc.contributor.author',
+    'Maker' => 'dc.contributor.author.en',
+    'Author' => 'dc.contributor.author.en',
     'Country' => 'lido.country.en',
     'City' => 'lido.city.en',
     'Subject' => 'dc.subject.en',
@@ -38,7 +39,8 @@ $config['skylight_filters'] = array('Instrument Type' => 'type_filter', 'Maker' 
 $config['skylight_filter_delimiter'] = ':';
 
 $config['skylight_meta_fields'] = array('Title' => 'dc.title',
-    'Author' => 'dc.creator',
+    'Maker' => 'dc.contributor.author',
+    'Author' => 'dc.contributor.author',
     'Abstract' => 'dc.description.abstract',
     'Subject' => 'dc.subject',
     'Date' => 'dc.date.issued',
@@ -46,16 +48,17 @@ $config['skylight_meta_fields'] = array('Title' => 'dc.title',
     'Bitstream'=> 'dc.format.original.en',
     'Thumbnail'=> 'dc.format.thumbnail.en');
 
-$config['skylight_recorddisplay'] = array('Title','Author','Subject','Type','Abstract', 'Place Made', 'Date Made', 'Accession Number', 'Description', 'Collection');
+$config['skylight_recorddisplay'] = array('Title','Maker','Subject','Type','Abstract', 'Place Made', 'Date Made', 'Accession Number', 'Description', 'Collection');
 
-$config['skylight_searchresult_display'] = array('Title','Author','Subject','Type','Abstract', 'Bitstream', 'Thumbnail');
+$config['skylight_searchresult_display'] = array('Title','Maker','Subject','Type','Abstract', 'Bitstream', 'Thumbnail');
 
 
 $config['skylight_search_fields'] = array('Keywords' => 'text',
     'Country' => 'lido.country',
     'City' => 'lido.city',
     'Type' => 'dc.type',
-    'Author' => 'dc.creator',
+    'Author' => 'dc.contributor.author.en',
+    'Maker' => 'dc.contributor.author.en',
     'Subject' => 'dc.subject',
     'Date' => 'dc.date.issued',
     'Bitstream'=> 'dc.format.original',
@@ -67,7 +70,8 @@ $config['skylight_sort_fields'] = array('Title' => 'dc.title_sort'
 );
 
 $config['skylight_feed_fields'] = array('Title' => 'Title',
-    'Author' => 'Author',    
+    'Author' => 'Author',
+    'Maker' => 'Maker',
     'Subject' => 'Subject',
     'Country' => 'Country',
     'Description' => 'Abstract',

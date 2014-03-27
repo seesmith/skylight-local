@@ -50,6 +50,7 @@ $config['skylight_search_fields'] = array('Keywords' => 'text',
     'Medium' => 'dc.subject.en',
     'Type' => 'dc.type.en',
     'Author' => 'dc.creator.en',
+    'Artist' => 'dc.creator.en',
     'Bitstream'=> 'dc.format.original',
     'Thumbnail'=> 'dc.format.thumbnail'
 );
