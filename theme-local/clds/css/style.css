@@ -114,7 +114,7 @@ h3 								{ color: #333333; font-size: 14px; line-height: 18px; margin: 0 0 9px
 
 h1.itemtitle 					{ font-size: 18px; line-height: 24px; margin: 20px 0 10px 0px; position: relative; color: #333333; }
 
-p 								{ font-size: 13px; padding-bottom: 18px; }
+p 								{ font-size: 13px; padding-bottom: 10px; }
 
 a, a:active, a:visited          { color: #333333; }
 a:hover 						{ text-decoration: underline; color: #005784; }
@@ -223,8 +223,8 @@ footer                  { display: block; padding-bottom: 20px; padding-top: 20p
 .luclogo                { display: block; width: 64px; height: 64px; background: url(../images/CollectionsLUCLogo.png) no-repeat 0px 0px; }
 .islogo                 { display: block; float: left; width: 50px; height: 64px; background: url(../images/islogo.gif) no-repeat 0px 0px; }
 
-.footer-policies        { display: block; float: left; padding-left: 20px; margin-top: -8px; }
-.footer-policies p      { font-size: 12px; margin-bottom: 5px; color: #555555}
+.footer-policies        { display: block; float: left; padding-left: 20px; }
+.footer-policies p      { font-size: 12px; color: #555555}
 
 /* Custom Containers & Subclasses ----------------------------------------------------------------------------------------*/
 
@@ -301,6 +301,32 @@ h1 .icon							{ top: -5px; left: -65px; }
 .content 							{ margin-top: 20px; background-color: #fff; }
 .col-main-full .content             { background-color: #333333; color: #fff; margin: 0; }
 .content ul 						{ margin: 0 0 18px 1.2em; }
+.content ul.tiles                   { margin: 0; padding: 0; list-style: none outside none; height: 188px; width: 940px; }
+.tiles-wrapper                      { }
+
+li.tile                             { display: inline; float: left; height: 188px; }
+
+.tile a.caption {
+    position: relative
+}
+
+.tile a.caption span {
+    display: none;
+    position: absolute;
+    top: -176px;
+    width: 188px;
+    padding: 10px;
+    background: #333333;
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 12px;
+    text-align: center;
+}
+
+.tile a.caption:hover span {
+    display: block;
+}
 
 .record_bitstreams                  { margin-top: 20px; }
 
