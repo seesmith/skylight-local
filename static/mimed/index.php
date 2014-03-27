@@ -18,8 +18,8 @@
             in an 18th century concert hall played on 18th century instruments.</p>
         <p>Highlights include:</p>
         <p>
-            <ul>
-            <li><a href="./search/Instrument%20Type:%22harpsichord.%7C%7C%7CHarpsichord.%22">harpsichords</a> by <a href="./search/ruckers">Ruckers</a> and <a href="./search/*/Maker:%22taskin%2C+pascal%7C%7C%7CTaskin%2C+Pascal%22">Taskin</a></li>
+            <ul class="highlights">
+            <li><a href="./search/harpsichord/Instrument%20Type:%22harpsichord.%7C%7C%7CHarpsichord.%22">harpsichords</a> by <a href="./search/ruckers">Ruckers</a> and <a href="./search/*/Maker:%22taskin%2C+pascal%7C%7C%7CTaskin%2C+Pascal%22">Taskin</a></li>
             <li><a href="./search/guitar/Instrument%20Type:%22guitar.%7C%7C%7CGuitar.%22">guitars</a> and <a href="./search/lute/Instrument%20Type:%22lute.%7C%7C%7CLute.%22">lutes</a> by <a href="./search/sellas/Maker:%22attributed+to+matteo+sellas%7C%7C%7CAttributed+to+Matteo+Sellas%22">Sellas</a>, <a href="./search/staufer/Maker:%22staufer%2C+johann+georg%7C%7C%7CStaufer%2C+Johann+Georg%22">Staufer</a>, <a href="./search/lacote">Lacote</a>, <a href="./search/harz/Maker:%22harz%2C+martinus%7C%7C%7CHarz%2C+Martinus%22">Harz</a> and <a href="./search/railich/Maker:%22railich%2C+pietro%7C%7C%7CRailich%2C+Pietro%22">Railich</a></li>
             <li><a href="./search/bowed%20strings">bowed strings</a> by <a href="./search/bassano/Maker:%22possibly+by+the+bassano+family+of+venice+and+london%7C%7C%7CPossibly+by+the+Bassano+family+of+Venice+and+London%22">Bassano</a> and <a href="./search/Tielke/Maker:%22tielke%2C+joachim%7C%7C%7CTielke%2C+Joachim%22">Tielke</a></li>
             <li><a href="./search/woodwind">woodwind</a> instruments by <a href="./search/haka/Maker:%22haka%2C+richard%7C%7C%7CHaka%2C+Richard%22">Haka</a>, <a href="./search/stanesby">Stanesby</a>, <a href="./search/simiot">Simiot</a>, <a href="./search/bassano/Maker:%22possibly+by+the+bassano+family+of+venice+and+london%7C%7C%7CPossibly+by+the+Bassano+family+of+Venice+and+London%22">Bassano</a> &amp; Denner</li>
