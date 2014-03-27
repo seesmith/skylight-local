@@ -16,7 +16,7 @@ if(isset($solr[$type_field])) {
 ?>
 
 
-<h1 class="itemtitle"><span class="icon <?php echo $type ?>"></span><?php echo $record_title ?></h1>
+<h1 class="itemtitle"><?php echo $record_title ?></h1>
 <div class="tags">
     <?php
 
