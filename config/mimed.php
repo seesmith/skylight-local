@@ -66,8 +66,10 @@ $config['skylight_search_fields'] = array('Keywords' => 'text',
 );
 
 //only by title, no date at the moment
-$config['skylight_sort_fields'] = array('Title' => 'dc.title_sort'
+$config['skylight_sort_fields'] = array(
+    'Maker' => 'dc.contributor.author_sort ', 'Title' => 'dc.title_sort'
 );
+
 
 $config['skylight_feed_fields'] = array('Title' => 'Title',
     'Author' => 'Author',

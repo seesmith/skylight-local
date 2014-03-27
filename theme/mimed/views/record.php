@@ -1,6 +1,7 @@
 <?php
 
 $author_field = $this->skylight_utilities->getField("Author");
+$maker_field = $this->skylight_utilities->getField("Maker");
 $type_field = $this->skylight_utilities->getField("Type");
 $bitstream_field = $this->skylight_utilities->getField("Bitstream");
 $thumbnail_field = $this->skylight_utilities->getField("Thumbnail");
@@ -21,9 +22,10 @@ if(isset($solr[$type_field])) {
 
     if (isset($solr[$author_field])) {
         foreach($solr[$author_field] as $author) {
-            $orig_filter = preg_replace('/ /','+',$author, -1);
-            $orig_filter = preg_replace('/,/','%2C',$orig_filter, -1);
-            echo '<a href=\'./search/*/Author:"'.$orig_filter.'"\'>'.$author.'</a>';
+            $orig_filter = urlencode($author);
+            $orig_filter = preg_replace('/ /','+',$orig_filter, -1);
+            $lower_orig_filter = strtolower($orig_filter);
+            echo '<a class="maker" href="./search/*:*/Maker:%22'.$lower_orig_filter.'%7C%7C%7C'.$orig_filter.'%22">'.$author.'</a>';
         }
     }
 
