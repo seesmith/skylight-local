@@ -93,8 +93,6 @@ if(isset($solr[$type_field])) {
         $handle_id = preg_replace('/^.*\//', '',$handle);
         $uri = './record/'.$handle_id.'/'.$seq.'/'.$filename;
 
-        echo '<script type="text/javascript"> $(document).ready(function() { $(".fancybox").fancybox(); }); </script>';
-
         if (strpos($uri, ".jpg")> 0)
         {
             echo '<a title = "' . $record_title . '" class="fancybox" rel="group" href=' . $uri . '> ';
