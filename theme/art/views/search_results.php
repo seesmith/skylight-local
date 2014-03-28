@@ -158,18 +158,25 @@
                     $i = 0;
                     foreach ($doc[$bitstream_field] as $bitstream) {
 
-                        $thumbnail = $doc[$thumbnail_field][0];
-                        $segments = explode("##", $thumbnail);
-                        $filename = $segments[1];
-                        $handle = $segments[3];
-                        $seq = $segments[4];
-                        $handle_id = preg_replace('/^.*\//', '',$handle);
-                        $uri = './record/'.$handle_id.'/'.$seq.'/'.$filename;
-                        $thumbnailLink = '<a title = "' . $doc[$title_field][0] . '" class="fancybox" rel="group" href=' . $uri . '> ';
-                        $thumbnailLink .= '<img src = "'.$uri.'" class="search-thumbnail" title="'. $doc[$title_field][0] .'" /></a>';
+                        if(isset($doc[$thumbnail_field])) {
+                            $thumbnail = $doc[$thumbnail_field][0];
+                        }
+                        else {
+                            $thumbnail = $doc[$bitstream_field][0];
+                        }
 
-                        if ($i == 0)
-                        {
+                        if($i == 0) {
+
+                            $segments = explode("##", $thumbnail);
+                            $filename = $segments[1];
+                            $handle = $segments[3];
+                            $seq = $segments[4];
+                            $handle_id = preg_replace('/^.*\//', '',$handle);
+                            $uri = './record/'.$handle_id.'/'.$seq.'/'.$filename;
+
+                            $thumbnailLink = '<a title = "' . $doc[$title_field][0] . '" class="fancybox" rel="group" href=' . $uri . '> ';
+                            $thumbnailLink .= '<img src = "'.$uri.'" class="search-thumbnail" title="'. $doc[$title_field][0] .'" /></a>';
+
                             echo $thumbnailLink;
                         }
                         $i++;
