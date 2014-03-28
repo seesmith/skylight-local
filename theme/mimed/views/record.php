@@ -24,7 +24,10 @@ if(isset($solr[$type_field])) {
         foreach($solr[$author_field] as $author) {
             $orig_filter = urlencode($author);
             $orig_filter = preg_replace('/ /','+',$orig_filter, -1);
-            $lower_orig_filter = strtolower($orig_filter);
+
+            $lower_orig_filter = strtolower($author);
+            $lower_orig_filter = urlencode($lower_orig_filter);
+            $lower_orig_filter = preg_replace('/ /','+',$lower_orig_filter, -1);
             echo '<a class="maker" href="./search/*:*/Maker:%22'.$lower_orig_filter.'%7C%7C%7C'.$orig_filter.'%22">'.$author.'</a>';
         }
     }

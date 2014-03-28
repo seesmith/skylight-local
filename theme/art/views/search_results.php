@@ -79,9 +79,14 @@
                     foreach ($doc[$author_field] as $author) {
                         // test author linking
                         // quick hack that only works if the filter key
+
                         $orig_filter = urlencode($author);
                         $orig_filter = preg_replace('/ /','+',$orig_filter, -1);
-                        $lower_orig_filter = strtolower($orig_filter);
+
+                        $lower_orig_filter = strtolower($author);
+                        $lower_orig_filter = urlencode($lower_orig_filter);
+                        $lower_orig_filter = preg_replace('/ /','+',$lower_orig_filter, -1);
+
                         echo '<a class="artist" href="./search/*:*/Artist:%22'.$lower_orig_filter.'%7C%7C%7C'.$orig_filter.'%22">'.$author.'</a>';
                         $num_authors++;
                         if($num_authors < sizeof($doc[$author_field])) {
