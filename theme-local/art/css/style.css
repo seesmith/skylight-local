@@ -164,7 +164,8 @@ header				{ position: relative; width: 940px;}
 .iteminfo           { display: block; min-height:100px; text-align: left; width: 70%; float:left; }
 .iteminfo .artist   { font-size: 14px; color:#58A09D; font-weight: bold; }
 .iteminfo h3        { font-size: 18px; margin-top: 5px; }
-.thumbnailImage     { display: block; text-align: left; width: 25%; float: right;}
+.thumbnail-image     { display: block; text-align: left; width: 25%; float: right;}
+.record-thumbnail   { max-width:800px; max-height:800px; }
 .tagdiv             { position:relative; width: 250px;float:left; }
 .tagdiv a           { font-size: 13px; color:#00315F; background: #58A09D; -webkit-border-radius: 5px; -moz-border-radius: 5px; border-radius: 5px; padding: 2px 6px; line-height: 20px; margin-right: 8px; text-decoration: none; }
 .tagdiv a.bold      { font-weight: bold; }
@@ -241,6 +242,7 @@ footer                  { display: block; border-bottom: 1px solid #58A09D; padd
 .listing-filter .sort a:hover		{ text-decoration: underline; }
 .listing-filter .sort strong		{ color: #333; }
 .listing-filter .sort em			{ padding-left: 10px; font-style: normal; }
+.search-thumbnail                   { max-width: 120px; max-height: 120px; }
 
 .icon 								{ display: block; width: 54px; height: 32px; background: url(../images/bg-icons.png) no-repeat 0px 0px; position: absolute; top: 0; left: -54px; background-position: -908px 0; }
 h1 .icon							{ top: -5px; left: -65px; }
