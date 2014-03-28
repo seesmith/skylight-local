@@ -86,13 +86,16 @@ if(isset($solr[$type_field])) {
         $handle_id = preg_replace('/^.*\//', '',$handle);
         $uri = './record/'.$handle_id.'/'.$seq.'/'.$filename;
 
+        echo '<script type="text/javascript"> $(document).ready(function() { $(".fancybox").fancybox(); }); </script>';
+
         if (strpos($uri, ".jpg")> 0)
         {
-            echo '<img src = "'.$uri.'" height = "280">';
-
+            echo '<a title = "' . $record_title . '" class="fancybox" rel="group" href=' . $uri . '> ';
+            echo '<img class="record-thumbnail" src = "'. $uri .'">';
+            echo '</a>';
 
             echo '<p><span class="label"></span>'.$bitstreamLink.'
-       (<span class="bitstream_size">';
+            (<span class="bitstream_size">';
             echo getBitstreamSize($bitstream);
             echo '</span>, <span class="bitstream_mime">';
 

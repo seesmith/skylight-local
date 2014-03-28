@@ -132,12 +132,13 @@
         ?>
 
 
-
-
-        </div> <!-- close tags div -->
-<div class =  "thumbnailImage">
+    </div> <!-- close tags div -->
+    <div class = "thumbnail-image">
     <?php if(isset($doc[$bitstream_field])) {
         //SR clone text from bitstream helpers to get individual aspects of bitstream. Cannot call bitstream helpers from here.
+
+        echo '<script type="text/javascript"> $(document).ready(function() { $(".fancybox").fancybox(); }); </script>';
+
         $i = 0;
         foreach ($doc[$bitstream_field] as $bitstream) {
 
@@ -148,7 +149,9 @@
             $seq = $segments[4];
             $handle_id = preg_replace('/^.*\//', '',$handle);
             $uri = './record/'.$handle_id.'/'.$seq.'/'.$filename;
-            $thumbnailLink = $this->skylight_utilities->getBitstreamThumbLinkParameterised($bitstream, $thumbnail, $title_field, '140px', 0, 'style="display: block; margin-left: auto; margin-right: auto;" ');
+
+            $thumbnailLink = '<a title = "' . $doc[$title_field][0] . '" class="fancybox" rel="group" href=' . $uri . '> ';
+            $thumbnailLink .= '<img src = "'.$uri.'" class="search-thumbnail" title="'. $doc[$title_field][0] .'" /></a>';
 
             if ($i == 0)
             {

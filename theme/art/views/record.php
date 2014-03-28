@@ -72,8 +72,6 @@ if(isset($solr[$type_field])) {
 
 </div>
 
-
-
 <?php if(isset($solr[$bitstream_field]) && $link_bitstream) {
 ?><div class="record_bitstreams"><?php
 
@@ -92,10 +90,13 @@ if(isset($solr[$type_field])) {
         $handle_id = preg_replace('/^.*\//', '',$handle);
         $uri = './record/'.$handle_id.'/'.$seq.'/'.$filename;
 
+        echo '<script type="text/javascript"> $(document).ready(function() { $(".fancybox").fancybox(); }); </script>';
+
         if (strpos($uri, ".jpg")> 0)
         {
-            echo '<img src = "'.$uri.'" height = "280">';
-
+            echo '<a title = "' . $record_title . '" class="fancybox" rel="group" href=' . $uri . '> ';
+            echo '<img class="record-thumbnail" src = "'. $uri .'">';
+            echo '</a>';
 
             echo '<p><span class="label"></span>'.$bitstreamLink.'
             (<span class="bitstream_size">';
@@ -108,6 +109,7 @@ if(isset($solr[$type_field])) {
             echo'</span>)</p>';
 
         }
+
     }
     foreach($solr[$bitstream_field] as $bitstream) {
 

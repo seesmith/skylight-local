@@ -153,7 +153,8 @@ header                          { position: relative; }
 .collection-title               { color: #00548e; font-size: 28px; line-height: 88px; padding-top: 20px; text-shadow: rgba(255,255,255,0.3) 0px 1px 0px; margin: 0;}
 .banner                         { width: 600px; height: 88px;padding-top: 20px;}
 .iteminfo                       { width: 660px; margin-top: 10px;position:relative; padding-right: 20px;min-height:32px;}
-.thumbnailimage                 { position:relative; width: 500px; float:left;}
+.thumbnail-image                 { position:relative; width: 500px; float:left;}
+.record-thumbnail               { max-width:800px; max-height:800px; }
 .tagdiv                         { position:relative;width: 250px;float:left; }
 .tagdiv a                       { font-size: 13px; color: #fff;background: #eb0955; -webkit-border-radius: 5px; -moz-border-radius: 5px; border-radius: 5px; padding: 2px 6px; line-height: 20px; margin-right: 8px; text-decoration: none; }
 .tagdiv a.bold                  { font-weight: bold; }
@@ -255,6 +256,8 @@ footer                  { display: block; border-bottom: 1px solid #093563; padd
 h1 .icon                                { top: -5px; left: -65px; }
 .listing li .icon                       { top: 10px; }
 .listing li.first .icon                 { top: 30px; }
+.search-thumbnail                       { max-width: 120px; max-height: 120px; }
+
 
 .media-artwork{ background-position: 0 0; width: 32px; height: 22px; }
 .media-audiovisual-material, .media-filmorbroadcast, .media-movingimage, .media-video{ background-position: -72px 0; }
