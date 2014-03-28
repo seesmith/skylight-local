@@ -148,8 +148,6 @@
                 <?php if(isset($doc[$bitstream_field])) {
                     //SR clone text from bitstream helpers to get individual aspects of bitstream. Cannot call bitstream helpers from here.
 
-                    echo '<script type="text/javascript"> $(document).ready(function() { $(".fancybox").fancybox(); }); </script>';
-
                     $i = 0;
                     foreach ($doc[$bitstream_field] as $bitstream) {
 
