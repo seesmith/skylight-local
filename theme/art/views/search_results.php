@@ -24,7 +24,7 @@
     <div class="listing-filter">
         <span class="no-results">
             <strong><?php echo $startrow ?>-<?php echo $endrow ?></strong> of
-                <strong><?php echo $rows ?></strong> results
+            <strong><?php echo $rows ?></strong> results
         </span>
 
         <span class="sort">
@@ -106,44 +106,42 @@
 
                 <div class="tagdiv">
 
+                    <?php
+                    // TODO: Make highlighting configurable
 
-
-
-            <?php
-            // TODO: Make highlighting configurable
-
-            if(array_key_exists('highlights',$doc)) {
-                ?> <p><?php
-                foreach($doc['highlights'] as $highlight) {
-                    echo "...".$highlight."...".'<br/>';
-                }
-                ?></p><?php
-            }
-            else {
-                if(array_key_exists($abstract_field, $doc)) {
-                    echo '<p>';
-                    $abstract =  $doc[$abstract_field][0];
-                    $abstract_words = explode(' ',$abstract);
-                    $shortened = '';
-                    $max = 40;
-                    $suffix = '...';
-                    if($max > sizeof($abstract_words)) {
-                        $max = sizeof($abstract_words);
-                        $suffix = '';
+                    if(array_key_exists('highlights',$doc)) {
+                        ?> <p><?php
+                        foreach($doc['highlights'] as $highlight) {
+                            echo "...".$highlight."...".'<br/>';
+                        }
+                        ?></p><?php
                     }
-                    for ($i=0 ; $i<$max ; $i++){
-                        $shortened .= $abstract_words[$i] . ' ';
+                    else {
+                        if(array_key_exists($abstract_field, $doc)) {
+                            echo '<p>';
+                            $abstract =  $doc[$abstract_field][0];
+                            $abstract_words = explode(' ',$abstract);
+                            $shortened = '';
+                            $max = 40;
+                            $suffix = '...';
+                            if($max > sizeof($abstract_words)) {
+                                $max = sizeof($abstract_words);
+                                $suffix = '';
+                            }
+                            for ($i=0 ; $i<$max ; $i++){
+                                $shortened .= $abstract_words[$i] . ' ';
+                            }
+                            echo $shortened.$suffix;
+                            echo '</p>';
+                        }
                     }
-                    echo $shortened.$suffix;
-                    echo '</p>';
-                }
-            }
 
-            ?>
+                    ?>
 
-            </div> <!-- close tags div -->
+                </div> <!-- close tags div -->
 
-            </div>
+            </div> <!-- close item-info -->
+
             <div class = "thumbnail-image">
                 <?php if(isset($doc[$bitstream_field])) {
                     //SR clone text from bitstream helpers to get individual aspects of bitstream. Cannot call bitstream helpers from here.
@@ -177,7 +175,7 @@
                 }?>
             </div>
             <div class="clearfix"></div>
-            </div>
+            </div> <!-- close item div -->
         </li>
             <?php }?>
     </ul>
