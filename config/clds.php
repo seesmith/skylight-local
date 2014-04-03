@@ -21,7 +21,7 @@ $config['skylight_fields'] = array('Title' => 'dc.title.en',
     'Subject' => 'dc.subject.en',
     'Highlight' => 'dc.subject.highlight',
     'Type' => 'dc.type.en',
-    'Date' => 'dc.date.issued',
+    'Date' => 'dc.coverage.temporal.en',
     'Bitstream'=> 'dc.format.original',
     'Thumbnail'=> 'dc.format.thumbnail',
     'Description'=>'dc.description.en',
@@ -44,7 +44,7 @@ $config['skylight_meta_fields'] = array('Title' => 'dc.title.en',
     'Origin' => 'dc.coverage.spatial',
 );
 
-$config['skylight_recorddisplay'] = array('Title','Type', 'Custodian','Custodian History', 'Subject', 'Description', 'Origin','Identifier');
+$config['skylight_recorddisplay'] = array('Title','Type', 'Custodian','Custodian History', 'Subject', 'Description', 'Origin','Date','Identifier');
 
 $config['skylight_searchresult_display'] = array('Title','Custodian','Custodial History', 'Subject','Type','Origin', 'Bitstream', 'Thumbnail');
 
