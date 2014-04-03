@@ -310,6 +310,7 @@ h1 .icon							{ top: -5px; left: -65px; }
 
 .content 							{ margin-top: 20px; background-color: #fff; }
 .col-main-full .content             { background-color: #333333; color: #fff; margin: 0; }
+.col-main-full .content .byEditor   { background-color: #fff; color: #000; margin: 0px; padding: 0px 10px 0px 10px;}
 .content ul 						{ margin: 0 0 18px 1.2em; }
 .content ul.tiles                   { margin: 0; padding: 0; list-style: none outside none; height: 188px; width: 940px; }
 .tiles-wrapper                      { }
