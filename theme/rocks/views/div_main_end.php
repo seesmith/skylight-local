@@ -2,7 +2,7 @@
             <div class="footer-links">
                 <a href="./"><?php echo $site_title; ?></a>
                 <a href="./about">About this site</a>
-                <a href="./feedback">Feedback</a>
+                <a href="./feedback">Contact</a>
                 <a href="http://skylightui.org/" class="last" target="_blank">Powered by Skylight</a>
             </div>
             <div class="footer-disclaimer">

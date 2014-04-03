@@ -76,7 +76,7 @@
             <header>
                 <nav id="menu">
                     <ul class="menu-links">
-                        <li><a href="./contact/" class="last">Contact</a></li>
+                        <li><a href="./feedback/" class="last">Contact</a></li>
                         <li><a href="http://www.ed.ac.uk/schools-departments/information-services/library-museum-gallery/crc/projects" target="_blank">Research</a></li>
                         <li><a href="http://libraryblogs.is.ed.ac.uk/" target="_blank">Blog</a></li>
                         <li><a href="./about/">About</a></li>

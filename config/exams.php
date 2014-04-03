@@ -8,7 +8,7 @@ $config['skylight_fullname'] = 'Exams';
 
 $config['skylight_ga_code'] = 'UA-XXXX-Y';
 
-$config['skylight_adminemail'] = 'example@example.com';
+$config['skylight_adminemail'] = 'lddt@mlist.is.ed.ac.uk';
 
 $config['skylight_oaipmhcollection'] = 'hdl_123456789_1';
 
