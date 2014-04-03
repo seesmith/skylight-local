@@ -55,9 +55,12 @@
 
     <ul class="listing">
 
+        <?php
 
-    <?php foreach ($docs as $index => $doc) {
+        $j = 0;
+        foreach ($docs as $index => $doc) {
         ?>
+
         <?php
         $type = 'Unknown';
 
@@ -84,8 +87,10 @@
                                 // and recorddisplay key match and the delimiter is :
 
                                 $orig_filter = urlencode($author);
-                                $orig_filter = preg_replace('/ /','+',$orig_filter, -1);
-                                $lower_orig_filter = strtolower($orig_filter);
+
+                                $lower_orig_filter = strtolower($author);
+                                $lower_orig_filter = urlencode($lower_orig_filter);
+
                                 echo '<a href="./search/*:*/Maker:%22'.$lower_orig_filter.'%7C%7C%7C'.$orig_filter.'%22">'.$author.'</a>';
                                 $num_authors++;
                                 if($num_authors < sizeof($doc[$author_field])) {
@@ -134,39 +139,59 @@
                 </div> <!-- close item-info -->
 
                 <div class = "thumbnail-image">
-                <?php if(isset($doc[$bitstream_field])) {
-                    //SR clone text from bitstream helpers to get individual aspects of bitstream. Cannot call bitstream helpers from here.
+                    <?php if(isset($doc[$bitstream_field])) {
+                        //SR clone text from bitstream helpers to get individual aspects of bitstream. Cannot call bitstream helpers from here.
 
-                    $i = 0;
-                    foreach ($doc[$bitstream_field] as $bitstream) {
+                        $i = 0;
+                        foreach ($doc[$bitstream_field] as $bitstream) {
 
-                        if(isset($doc[$thumbnail_field])) {
-                            $thumbnail = $doc[$thumbnail_field][0];
-                        }
-                        else {
-                            $thumbnail = $doc[$bitstream_field][0];
-                        }
+                            $b_segments = explode("##", $bitstream);
+                            $b_filename = $b_segments[1];
+                            $b_handle = $b_segments[3];
+                            $b_seq = $b_segments[4];
+                            $b_handle_id = preg_replace('/^.*\//', '',$b_handle);
+                            $b_uri = './record/'.$b_handle_id.'/'.$b_seq.'/'.$b_filename;
 
-                        if($i == 0) {
+                            if ( $i == 0 && strpos($b_uri, ".jpg") > 0)
+                            {
 
-                            $segments = explode("##", $thumbnail);
-                            $filename = $segments[1];
-                            $handle = $segments[3];
-                            $seq = $segments[4];
-                            $handle_id = preg_replace('/^.*\//', '',$handle);
-                            $uri = './record/'.$handle_id.'/'.$seq.'/'.$filename;
+                                if(isset($doc[$thumbnail_field])) {
 
-                            $thumbnailLink = '<a title = "' . $doc[$title_field][0] . '" class="fancybox" rel="group" href=' . $uri . '> ';
-                            $thumbnailLink .= '<img src = "'.$uri.'" class="search-thumbnail" title="'. $doc[$title_field][0] .'" /></a>';
+                                    $thumbnail = $doc[$thumbnail_field][0];
 
-                            echo $thumbnailLink;
-                        }
-                        $i++;
-                    }
-                }?>
-            </div>
-            <div class="clearfix"></div>
-        </div> <!-- close item div -->
+                                    $t_segments = explode("##", $thumbnail);
+                                    $t_filename = $t_segments[1];
+                                    $t_handle = $t_segments[3];
+                                    $t_seq = $t_segments[4];
+                                    $handle_id = preg_replace('/^.*\//', '',$t_handle);
+                                    $t_uri = './record/'.$handle_id.'/'.$t_seq.'/'.$t_filename;
+
+                                    $thumbnailLink = '<a title = "' . $doc[$title_field][0] . '" class="fancybox" rel="group' . $j . '" href=' . $b_uri . '> ';
+                                    $thumbnailLink .= '<img src = "'.$t_uri.'" class="search-thumbnail" title="'. $doc[$title_field][0] .'" /></a>';
+
+
+                                }
+                                else { // there isn't a thumbnail
+
+                                    $thumbnailLink = '<a title = "' . $doc[$title_field][0] . '" class="fancybox" rel="group' . $j . '" href=' . $b_uri . '> ';
+                                    $thumbnailLink .= '<img src = "'.$b_uri.'" class="search-thumbnail" title="'. $doc[$title_field][0] .'" /></a>';
+
+                                }
+
+                                echo $thumbnailLink;
+
+                            } // end if jpg
+
+                            $i++;
+                            $j++;
+
+                        } // end for each
+
+                    } //end if bitstream ?>
+
+                </div>
+                <div class="clearfix"></div>
+            </div> <!-- close item div -->
     </li>
         <?php }?>
     </ul>
