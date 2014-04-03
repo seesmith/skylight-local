@@ -6,7 +6,7 @@ $config['skylight_theme'] = 'art';
 
 $config['skylight_fullname'] = 'University of Edinburgh Art Collection';
 
-$config['skylight_adminemail'] = 'example@example.com';
+$config['skylight_adminemail'] = 'lddt@mlist.is.ed.ac.uk';
 
 $config['skylight_oaipmhcollection'] = 'hdl_10683_6';
 

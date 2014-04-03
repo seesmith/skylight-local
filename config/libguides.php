@@ -6,7 +6,7 @@ $config['skylight_theme'] = 'libguides';
 
 $config['skylight_fullname'] = 'Library Guides';
 
-$config['skylight_adminemail'] = 'scott.renton@ed.ac.uk';
+$config['skylight_adminemail'] = 'lddt@mlist.is.ed.ac.uk';
 
 $config['skylight_oaipmhcollection'] = 'hdl_10683_18892';
 

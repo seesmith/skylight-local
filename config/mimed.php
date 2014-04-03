@@ -6,7 +6,7 @@ $config['skylight_theme'] = 'mimed';
 
 $config['skylight_fullname'] = 'MUSICAL INSTRUMENT MUSEUMS';
 
-$config['skylight_adminemail'] = 'example@example.com';
+$config['skylight_adminemail'] = 'lddt@mlist.is.ed.ac.uk';
 
 $config['skylight_oaipmhcollection'] = 'hdl_10683_14558';
 
@@ -39,21 +39,21 @@ $config['skylight_filters'] = array('Instrument Type' => 'type_filter', 'Maker' 
 $config['skylight_filter_delimiter'] = ':';
 
 $config['skylight_meta_fields'] = array('Title' => 'dc.title',
-    'Maker' => 'dc.contributor.author',
-    'Author' => 'dc.contributor.author',
+    'Maker' => 'dc.contributor.author.en',
+    'Author' => 'dc.contributor.author.en',
     'Subject' => 'dc.subject',
     'Type' => 'dc.type');
 
-$config['skylight_recorddisplay'] = array('Title','Maker','Subject','Type','Abstract', 'Place Made', 'Date Made', 'Accession Number', 'Description', 'Collection');
+$config['skylight_recorddisplay'] = array('Title','Maker','Subject','Type','Abstract', 'Place Made', 'Date Made', 'Description', 'Collection', 'Accession Number');
 
 $config['skylight_searchresult_display'] = array('Title','Maker','Subject','Type','Abstract', 'Bitstream', 'Thumbnail');
 
 
 $config['skylight_search_fields'] = array(
-    'Title' => 'dc.title.en',
+    'Title' => 'dc.title',
     'Type' => 'dc.type',
-    'Maker' => 'dc.contributor.author.en',
-    'Place Made' => 'dc.coverage.spatial.en',
+    'Maker' => 'dc.contributor.author',
+    'Place Made' => 'dc.coverage.spatial',
 );
 
 //only by title, no date at the moment

@@ -6,7 +6,7 @@ $config['skylight_theme'] = 'physics';
 
 $config['skylight_fullname'] = 'School of Physics and Astronomy Image Archive';
 
-$config['skylight_adminemail'] = 'example@example.com';
+$config['skylight_adminemail'] = 'lddt@mlist.is.ed.ac.uk';
 
 $config['skylight_oaipmhcollection'] = 'hdl_10683_8';
 
