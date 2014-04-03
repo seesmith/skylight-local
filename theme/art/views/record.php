@@ -99,15 +99,9 @@ if(isset($solr[$type_field])) {
             echo '<img class="record-thumbnail" src = "'. $uri .'">';
             echo '</a>';
 
-            echo '<p><span class="label"></span>'.$bitstreamLink.'
-            (<span class="bitstream_size">';
+            echo '<p><span class="bitstream_size">';
             echo getBitstreamSize($bitstream);
-            echo '</span>, <span class="bitstream_mime">';
-
-            echo getBitstreamMimeType($bitstream);
-            echo '</span>, <span class="bitstream_description">';
-            echo getBitstreamDescription($bitstream);
-            echo'</span>)</p>';
+            echo '</span></p>';
 
         }
 

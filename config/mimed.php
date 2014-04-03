@@ -41,12 +41,8 @@ $config['skylight_filter_delimiter'] = ':';
 $config['skylight_meta_fields'] = array('Title' => 'dc.title',
     'Maker' => 'dc.contributor.author',
     'Author' => 'dc.contributor.author',
-    'Abstract' => 'dc.description.abstract',
     'Subject' => 'dc.subject',
-    'Date' => 'dc.date.issued',
-    'Type' => 'dc.type',
-    'Bitstream'=> 'dc.format.original.en',
-    'Thumbnail'=> 'dc.format.thumbnail.en');
+    'Type' => 'dc.type');
 
 $config['skylight_recorddisplay'] = array('Title','Maker','Subject','Type','Abstract', 'Place Made', 'Date Made', 'Accession Number', 'Description', 'Collection');
 

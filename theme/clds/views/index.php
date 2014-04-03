@@ -11,22 +11,28 @@
         <!-- Wrapper for slides -->
         <div class="carousel-inner">
             <div class="item active">
+                <a href="<?php echo base_url(); ?>?config=art&theme=art">
                 <img src="<?php echo base_url(); ?>theme/<?php echo $this->config->item('skylight_theme'); ?>/images/artslide.png" title="Edinburgh University Art Collection" alt="Edinburgh University Art Collection">
                 <div class="carousel-caption caption-art">
-                    <a href="<?php echo base_url(); ?>?config=art&theme=art"><h3>Edinburgh University Art Collection</h3></a>
+                    <span onmouseover="this.style.background='#005784'" onmouseout="this.style.background='#333333'"><h3>Edinburgh University Art Collection</h3></span>
                 </div>
+                </a>
             </div>
             <div class="item">
+                <a href="<?php echo base_url(); ?>?config=mimed&theme=mimed">
                 <img src="<?php echo base_url(); ?>theme/<?php echo $this->config->item('skylight_theme'); ?>/images/mimedslide.png" title="Edinburgh University Musical Instrument Museums" alt="Edinburgh University Musical Instrument Museums">
                 <div class="carousel-caption caption-mimed">
-                    <a href="<?php echo base_url(); ?>?config=mimed&theme=mimed"><h3>Edinburgh University Musical Instrument Museums</h3></a>
+                    <span onmouseover="this.style.background='#005784'" onmouseout="this.style.background='#333333'"><h3>Edinburgh University Musical Instrument Museums</h3></span>
                 </div>
+                </a>
             </div>
             <div class="item">
+                <a href="<?php echo base_url(); ?>">
                 <img src="<?php echo base_url(); ?>theme/<?php echo $this->config->item('skylight_theme'); ?>/images/harpsichordslide.png" title="Raymond Russell Keyboards Collection" alt="Raymond Russell Keyboards Collection">
                 <div class="carousel-caption caption-russell">
-                    <a href="<?php echo base_url(); ?>"><h3>Raymond Russell Keyboards Collection</h3></a>
+                    <span onmouseover="this.style.background='#005784'" onmouseout="this.style.background='#333333'"><h3>Raymond Russell Keyboards Collection</h3></span>
                 </div>
+                </a>
             </div>
         </div>
 

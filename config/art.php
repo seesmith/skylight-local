@@ -31,7 +31,7 @@ $config['skylight_fields'] = array('Title' => 'dc.title.en',
 );
 
 $config['skylight_date_filters'] = array();
-$config['skylight_filters'] = array('Artist' => 'author_filter', 'Classification' => 'subject_class_filter');
+$config['skylight_filters'] = array('Artist' => 'author_filter', 'Medium' => 'subject_filter');
 
 $config['skylight_filter_delimiter'] = ':';
 
@@ -47,9 +47,9 @@ $config['skylight_meta_fields'] = array('Title' => 'dc.title.en',
     'Accession Number'=> 'dc.identifier.en'
 );
 
-$config['skylight_recorddisplay'] = array('Artist','Artist Dates','Title', 'Date', 'Classification','Type','Description','Place Made','Collection', 'Provenance','Accession Number');
+$config['skylight_recorddisplay'] = array('Artist','Title', 'Date', 'Medium','Type','Description', 'Place Made', 'Accession Number','Collection');
 
-$config['skylight_searchresult_display'] = array('Title','Artist','Classification','Type','Description', 'Bitstream', 'Thumbnail', 'Date');
+$config['skylight_searchresult_display'] = array('Title','Artist','Medium','Type','Description', 'Bitstream', 'Thumbnail', 'Date');
 
 $config['skylight_search_fields'] = array(
     'Artist' => 'dc.contributor.author',

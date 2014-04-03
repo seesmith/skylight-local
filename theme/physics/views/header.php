@@ -52,11 +52,7 @@
                 <a href="./advanced" class="advanced">Advanced search</a>
             </fieldset>
         </form>
-        <nav class="header-links">
-            <a href="./">Home</a>
-            <a href="./about/">About this site</a>
-            <a href="./feedback/" class="last">Feedback</a>
-        </nav>
+
     </header>
 
     <div id="main" role="main" class="clearfix">

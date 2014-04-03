@@ -56,10 +56,10 @@ input, select { vertical-align: middle; }
 
 
 /* Font normalization inspired by YUI Library's fonts.css: developer.yahoo.com/yui/ */
-body                                                                 { font:13px/1.231 sans-serif; *font-size:small; } /* Hack retained to preserve specificity */
+body                                    { font:13px/1.231 sans-serif; *font-size:small; } /* Hack retained to preserve specificity */
 select, input, textarea, button         { font:99% sans-serif; }
 
-pre, code, kbd, samp                                 { font-family: monospace, sans-serif; } /* Normalize monospace sizing: en.wikipedia.org/wiki/MediaWiki_talk:Common.css/Archive_11#Teletype_style_fix_for_Chrome */
+pre, code, kbd, samp                    { font-family: monospace, sans-serif; } /* Normalize monospace sizing: en.wikipedia.org/wiki/MediaWiki_talk:Common.css/Archive_11#Teletype_style_fix_for_Chrome */
 
 /* Minimal base styles -----------------------------------------------------------------------------------------------------------------*/
 
@@ -150,14 +150,14 @@ header                          { position: relative; }
 /* Common Containers & Subclasses ----------------------------------------------------------------------------------------*/
 .collection-title               { color: #00548e; font-size: 28px; line-height: 88px; padding-top: 20px; text-shadow: rgba(255,255,255,0.3) 0px 1px 0px; margin: 0;}
 .banner                         { width: 600px; height: 88px;padding-top: 20px;}
-.item-div                       { width: 600px; text-align: left; display: block;}
-.iteminfo                       { display: block; min-height:100px; text-align: left; width: 70%; float:left; }
-.thumbnail-image                { display: block; text-align: center; width: 25%; float: right;}
+.item-div                       { width: 650px; text-align: left; display: block;}
+.iteminfo                       { display: block; min-height:100px; text-align: left; width: 75%; float:left; }
+.thumbnail-image                { display: block; text-align: center; width: 23%; float: right;}
 .record-thumbnail               { max-width:800px; max-height:800px; }
 .tagdiv                         { position:relative;width: 250px;float:left; }
-.tagdiv a                       { font-size: 13px; color: #fff;background: #eb0955; -webkit-border-radius: 5px; -moz-border-radius: 5px; border-radius: 5px; padding: 2px 6px; line-height: 20px; margin-right: 8px; text-decoration: none; }
+.tagdiv a                       { font-size: 13px; color: #fff;background: #eb0955; -webkit-border-radius: 5px; -moz-border-radius: 5px; border-radius: 5px; padding: 2px 6px; margin-right: 8px; text-decoration: none; }
 .tagdiv a.bold                  { font-weight: bold; }
-.tagdiv a:hover                 { background: #BBBBBC; color: #000; }
+.listing li .tagdiv a:hover                 { background: #BBBBBC; color: #000; text-decoration: none; }
 
 .search							{ padding-bottom: 22px; border-bottom: 1px solid #093563; width: 660px; }
 .search input[type=text]		{
@@ -199,7 +199,7 @@ header                          { position: relative; }
 .col-sidebar ul.related li a 				{ padding: 0; }
 .col-sidebar ul.related li a:hover			{ background: none; text-decoration: underline; }
 .col-sidebar ul.related .tags				{ margin: 0px 0 0 0; }
-.col-sidebar ul.related .tags a 			{ padding: 2px 5px; display: inline; background: #ffffff; color: #00315F;}
+.col-sidebar ul.related .tags a 			{ padding: 2px 5px; display: inline-block; background: #ffffff; color: #00315F;}
 .col-sidebar ul.related .tags a:hover		{ text-decoration: none; background: #00548e; color: #fff; }
 
 .col-sidebar ul.related li a.related-record { font-size: 14px; padding-bottom: 5px;}
@@ -208,6 +208,7 @@ header                          { position: relative; }
 .tags a                 { font-size: 13px; color: #fff;background: #EB0955; -webkit-border-radius: 5px; -moz-border-radius: 5px; border-radius: 5px; padding: 2px 6px; line-height: 20px; margin-right: 8px; text-decoration: none; }
 .tags a.bold            { font-weight: bold; }
 .tags a:hover           { background: #093563; color: #ffffff; }
+.tags a.maker                   { display:inline-block; line-height: 15px; margin-bottom: 5px; }
 
 footer                  { display: block; border-bottom: 1px solid #093563; padding-bottom: 10px; margin-bottom: 15px; width: 660px; height: 130px;}
 
