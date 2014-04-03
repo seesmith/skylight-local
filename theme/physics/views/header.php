@@ -6,13 +6,13 @@
 <!--[if (gte IE 9)|!(IE)]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
 
 <head>
+
     <meta charset="utf-8">
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <link rel="stylesheet" href="<?php echo base_url(); ?>theme/<?php echo $this->config->item('skylight_theme'); ?>/css/style.css?v=2">
 
-    <script src="./assets/jquery/jquery-1.6.4.min.js"></script>
-    <script src="./assets/plugins/plugins.js"></script>
-    <script src="./assets/script/script.js"></script>
+    <link rel="stylesheet" href="<?php echo base_url(); ?>assets/jquery-ui-1.10.4/themes/base/minified/jquery-ui.min.css">
+
     <base href="<?php echo base_url() . index_page(); if (index_page() !== '') { echo '/'; } ?>">
 
     <?php if (isset($solr)) { ?><link rel="schema.DC" href="http://purl.org/dc/elements/1.1/" />
@@ -44,6 +44,7 @@
     <header>
         <p class="collection-title"><p class="uoe"></p></p>
         <a href="http://www.ph.ed.ac.uk" class="logo">School of Physics & Astronomy Image Archive</a>
+
         <form action="./redirect/" method="post">
             <fieldset class="search">
                 <input type="text" name="q" value="<?php if (isset($searchbox_query)) echo urldecode($searchbox_query); ?>" id="q" />
@@ -51,11 +52,7 @@
                 <a href="./advanced" class="advanced">Advanced search</a>
             </fieldset>
         </form>
-        <nav class="header-links">
-            <a href="./">Home</a>
-            <a href="./about/">About this site</a>
-            <a href="./feedback/" class="last">Feedback</a>
-        </nav>
+
     </header>
 
     <div id="main" role="main" class="clearfix">
