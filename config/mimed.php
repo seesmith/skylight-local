@@ -34,7 +34,7 @@ $config['skylight_fields'] = array('Title' => 'dc.title.en',
 );
 
 
-$config['skylight_date_filters'] = array('Date' => 'dateIssued.year_sort');
+$config['skylight_date_filters'] = array();
 $config['skylight_filters'] = array('Instrument Type' => 'type_filter', 'Maker' => 'author_filter', 'Place Made' => 'place_filter', 'Collection'=> 'collection_filter' );
 $config['skylight_filter_delimiter'] = ':';
 
@@ -53,16 +53,11 @@ $config['skylight_recorddisplay'] = array('Title','Maker','Subject','Type','Abst
 $config['skylight_searchresult_display'] = array('Title','Maker','Subject','Type','Abstract', 'Bitstream', 'Thumbnail');
 
 
-$config['skylight_search_fields'] = array('Keywords' => 'text',
-    'Country' => 'lido.country',
-    'City' => 'lido.city',
+$config['skylight_search_fields'] = array(
+    'Title' => 'dc.title.en',
     'Type' => 'dc.type',
-    'Author' => 'dc.contributor.author.en',
     'Maker' => 'dc.contributor.author.en',
-    'Subject' => 'dc.subject',
-    'Date' => 'dc.date.issued',
-    'Bitstream'=> 'dc.format.original',
-    'Thumbnail'=> 'dc.format.thumbnail'
+    'Place Made' => 'dc.coverage.spatial.en',
 );
 
 //only by title, no date at the moment
