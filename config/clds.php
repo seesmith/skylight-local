@@ -33,15 +33,9 @@ $config['skylight_filters'] = array('Type' => 'type_filter', 'Subject' => 'subje
 
 $config['skylight_filter_delimiter'] = ':';
 
-$config['skylight_meta_fields'] = array('Title' => 'dc.title.en',
-    'Description' => 'dc.description.en',
-    'Type' => 'dc.type.en',
-    'Subject' => 'dc.subject.en',
-    'Highlight' => 'dc.subject.highlight.en',
-    'Date' => 'dc.coverage.temporal.en',
-    'Bitstream'=> 'dc.format.original',
-    'Thumbnail'=> 'dc.format.thumbnail',
-    'Origin' => 'dc.coverage.spatial',
+$config['skylight_meta_fields'] = array('Title' => 'dc.title',
+    'Subject' => 'dc.subject',
+    'Type' => 'dc.type',
 );
 
 $config['skylight_recorddisplay'] = array('Title','Type', 'Custodian','Custodian History', 'Subject', 'Description', 'Origin','Date','Identifier');

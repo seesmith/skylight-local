@@ -33,13 +33,10 @@ $config['skylight_filters'] = array('Artist' => 'author_filter', 'Medium' => 'su
 $config['skylight_filter_delimiter'] = ':';
 
 $config['skylight_meta_fields'] = array('Title' => 'dc.title.en',
-    'Author' => 'dc.creator',
-    'Description' => 'dc.description.en',
+    'Artist' => 'dc.creator',
     'Medium' => 'dc.subject.en',
-    'Date' => 'dc.coverage.temporal.en',
     'Type' => 'dc.type.en',
-    'Bitstream'=> 'dc.format.original',
-    'Thumbnail'=> 'dc.format.thumbnail'
+    'Subject' => 'dc.subject'
 );
 
 $config['skylight_recorddisplay'] = array('Artist','Title', 'Date', 'Medium','Type','Description', 'Place Made', 'Accession Number','Collection');
