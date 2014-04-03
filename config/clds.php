@@ -26,11 +26,10 @@ $config['skylight_fields'] = array('Title' => 'dc.title.en',
     'Thumbnail'=> 'dc.format.thumbnail',
     'Description'=>'dc.description.en',
     'Origin' => 'dc.coverage.spatial.en',
-    'Classification' => 'dc.relation.ispartof'
 );
 
 $config['skylight_date_filters'] = array();
-$config['skylight_filters'] = array('Classification' => 'classification_filter', 'Subject' => 'subject_filter', 'Origin' => 'origin_filter');
+$config['skylight_filters'] = array('Type' => 'type_filter', 'Subject' => 'subject_filter', 'Origin' => 'origin_filter');
 
 $config['skylight_filter_delimiter'] = ':';
 
@@ -43,10 +42,9 @@ $config['skylight_meta_fields'] = array('Title' => 'dc.title.en',
     'Bitstream'=> 'dc.format.original',
     'Thumbnail'=> 'dc.format.thumbnail',
     'Origin' => 'dc.coverage.spatial',
-    'Classification' => 'dc.relation.ispartof'
 );
 
-$config['skylight_recorddisplay'] = array('Title','Custodian','Custodian History', 'Subject', 'Description', 'Origin','Identifier');
+$config['skylight_recorddisplay'] = array('Title','Type', 'Custodian','Custodian History', 'Subject', 'Description', 'Origin','Identifier');
 
 $config['skylight_searchresult_display'] = array('Title','Custodian','Custodial History', 'Subject','Type','Origin', 'Bitstream', 'Thumbnail');
 
