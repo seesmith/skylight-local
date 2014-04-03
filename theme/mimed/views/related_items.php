@@ -27,9 +27,7 @@
                         // test author linking
                         // quick hack that only works if the filter key
                         // and recorddisplay key match and the delimiter is :
-                        $author = ucwords(htmlspecialchars($author));
-                        $orig_filter = preg_replace('/ /','+',$author, -1);
-                        $orig_filter = preg_replace('/,/','%2C',$orig_filter, -1);
+                        $orig_filter = ucwords(urlencode($author));
                         $lower_orig_filter = strtolower($orig_filter);
                         echo '<a href="./search/*:*/Maker:%22'.$lower_orig_filter.'%7C%7C%7C'.$orig_filter.'%22">'.$author.'</a>';
                         $num_authors++;
