@@ -17,8 +17,8 @@
 
     $config['skylight_fields'] = array('Title' => 'dc.title',
                                         'Author' => 'dc.contributor.author',
-                                        'Subject' => 'dc.subject',
-                                        'Type' => 'dc.type',
+                                        'Subject' => 'dc.subject.en',
+                                        'Type' => 'dc.type.en',
                                         'Abstract' => 'dc.description.abstract',
                                         'Date' => 'dc.date.issued',
                                         'Accession Date' => 'dc.date.accessioned_dt',
@@ -41,10 +41,10 @@
 
     $config['skylight_searchresult_display'] = array('Title','Author','Subject','Type','Abstract');
 
-    $config['skylight_search_fields'] = array('Keywords' => 'text',
-                                                  'Subject' => 'dc.subject',
-                                                  'Type' => 'dc.type',
-                                                  'Author' => 'dc.creator'
+    $config['skylight_search_fields'] = array('Title' => 'dc.title.en',
+                                                  'Subject' => 'dc.subject.en',
+                                                  'Type' => 'dc.type.en',
+                                                  'Author' => 'dc.contributor.author'
                                                   );
 
     $config['skylight_sort_fields'] = array('Title' => 'title_sort',
