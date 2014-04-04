@@ -116,15 +116,21 @@ if(isset($solr[$type_field])) {
                         $t_handle_id = preg_replace('/^.*\//', '',$t_handle);
                         $t_uri = './record/'.$t_handle_id.'/'.$t_seq.'/'.$t_filename;
 
-                        $thumbnailLink[$numThumbnails] = '<div class="thumbnail-tile">';
-                        $thumbnailLink[$numThumbnails] .= '<a title = "' . $record_title . '" class="fancybox" rel="group" href=' . $t_uri . '> ';
+                        $thumbnailLink[$numThumbnails] = '<div class="thumbnail-tile';
+                        if($numThumbnails == 0 || $numThumbnails == 4) {
+                            $thumbnailLink[$numThumbnails] .= ' first';
+                        }
+                        $thumbnailLink[$numThumbnails] .= '"><a title = "' . $record_title . '" class="fancybox" rel="group" href=' . $t_uri . '> ';
                         $thumbnailLink[$numThumbnails] .= '<img src = "'.$t_uri.'" class="record-thumbnail" title="'. $record_title .'" /></a></div>';
 
                     }
                     else {
 
-                        $thumbnailLink[$numThumbnails] = '<div class="thumbnail-tile">';
-                        $thumbnailLink[$numThumbnails] .= '<a title = "' . $record_title . '" class="fancybox" rel="group" href=' . $b_uri . '> ';
+                        $thumbnailLink[$numThumbnails] = '<div class="thumbnail-tile';
+                        if($numThumbnails == 0 || $numThumbnails == 4) {
+                            $thumbnailLink[$numThumbnails] .= ' first';
+                        }
+                        $thumbnailLink[$numThumbnails] .= '"><a title = "' . $record_title . '" class="fancybox" rel="group" href=' . $b_uri . '> ';
                         $thumbnailLink[$numThumbnails] .= '<img src = "'.$b_uri.'" class="record-thumbnail" title="'. $record_title .'" /></a></div>';
                     }
 
