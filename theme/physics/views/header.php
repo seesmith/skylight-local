@@ -43,15 +43,21 @@
 <div id="container">
 
     <header>
-        <p class="collection-title"><p class="uoe"></p></p>
-        <a href="http://www.ph.ed.ac.uk" class="logo">School of Physics & Astronomy Image Archive</a>
-        <form action="./redirect/" method="post">
-            <fieldset class="search">
-                <input type="text" name="q" value="<?php if (isset($searchbox_query)) echo urldecode($searchbox_query); ?>" id="q" />
-                <input type="submit" name="submit_search" class="btn" value="Search" id="submit_search" />
-                <a href="./advanced" class="advanced">Advanced search</a>
-            </fieldset>
-        </form>
+
+        <div id="collection-title">
+            <a href="http://www.ed.ac.uk" class="uoelogo" title="The University of Edinburgh" target="_blank"></a>
+            <a href="<?php echo base_url(); ?>" class="physicslogo" title="School of Physics & Astronomy Image Archive"></a>
+            <a href="http://www.ph.ed.ac.uk" class="menulogo" title="School of Physics & Astronomy" target="_blank"></a>
+        </div>
+        <div id="collection-search">
+            <form action="./redirect/" method="post">
+                <fieldset class="search">
+                    <input type="text" name="q" value="<?php if (isset($searchbox_query)) echo urldecode($searchbox_query); ?>" id="q" />
+                    <input type="submit" name="submit_search" class="btn" value="Search" id="submit_search" />
+                    <a href="./advanced" class="advanced">Advanced search</a>
+                </fieldset>
+            </form>
+        </div>
 
     </header>
 

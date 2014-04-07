@@ -34,13 +34,13 @@ $config['skylight_filter_delimiter'] = ':';
 
 $config['skylight_meta_fields'] = array('Title' => 'dc.title',
     'Author' => 'dc.creator',
-    'Abstract' => 'dc.description.abstract',
+    //'Abstract' => 'dc.description.abstract',
     'Subject' => 'dc.subject',
     'Date' => 'dc.date.issued_dt',
-    'Type' => 'dc.type',
-    'File'=> 'dc.format.original.en',
-    'Thumbnail'=> 'dc.format.thumbnail.en',
-    'Date' => 'dc.date.issued',
+    //'Type' => 'dc.type',
+    //'File'=> 'dc.format.original.en',
+    //'Thumbnail'=> 'dc.format.thumbnail.en',
+    //'Date' => 'dc.date.issued',
     'Type' => 'dc.type');
 
 

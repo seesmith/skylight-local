@@ -146,6 +146,15 @@ header				{ position: relative; }
 .col-sidebar		{ float: left; width: 240px; margin-top: -66px; background: #def5fb; position: relative; z-index: 2; }
 .ie7 .col-sidebar	{ padding-bottom: 30px; }
 
+#collection-title	            { display: block; width: 540px; height: 88px; padding-top: 20px; }
+.uoelogo                        { display: block; width: 119px; height: 88px; float: left; background: url(../images/UoELogo.gif) no-repeat 0px 0px;}
+.physicslogo                      { display: block; width: 421px; height: 88px; float: left; background: url(../images/PhysicsLogo.gif) no-repeat 0px 0px;}
+.physicslogo:hover                { display: block; background: url(../images/PhysicsLogo.gif) no-repeat 0px -88px; }
+.menulogo                       { display: block; width: 240px; height: 136px; position: absolute; top: 20px; right: 0px; background: url(../images/Sci-Fun.jpg) no-repeat 0px 0px;}
+.ie7 .menulogo 		            { top: -40px; }
+
+#collection-search              { width: 660px; padding-top: 60px;}
+
 /* Common Containers & Subclasses ----------------------------------------------------------------------------------------*/
 .logo				{ display: block; text-indent: -9999px; width: 240px; height: 136px;  background: url(../images/Sci-Fun.jpg) no-repeat 0px 0px; position: absolute; top: 8px; right: 0px;}
 .ie7 .logo 			{ top: -40px; }
