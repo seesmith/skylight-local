@@ -25,12 +25,12 @@ if(isset($solr[$type_field])) {
 
     if (isset($solr[$author_field])) {
         foreach($solr[$author_field] as $author) {
+
             $orig_filter = urlencode($author);
-            $orig_filter = preg_replace('/ /','+',$orig_filter, -1);
 
             $lower_orig_filter = strtolower($author);
             $lower_orig_filter = urlencode($lower_orig_filter);
-            $lower_orig_filter = preg_replace('/ /','+',$lower_orig_filter, -1);
+
             echo '<a class="artist" href="./search/*:*/Artist:%22'.$lower_orig_filter.'%7C%7C%7C'.$orig_filter.'%22">'.$author.'</a>';
         }
     }
@@ -73,89 +73,132 @@ if(isset($solr[$type_field])) {
         </tbody>
     </table>
 
-</div>
+
 
 <?php if(isset($solr[$bitstream_field]) && $link_bitstream) {
-?><div class="record_bitstreams"><?php
+?><div class="record-bitstreams"><?php
 
 
-
+    $numThumbnails = 0;
+    $mainImage = false;
+    $videoFile = false;
+    $audioFile = false;
+    $audioLink = "";
+    $videoLink = "";
     foreach($solr[$bitstream_field] as $bitstream) {
 
-        $bitstreamLink = $this->skylight_utilities->getBitstreamLink($bitstream);
-        $bitstreamLinkedImage = $this->skylight_utilities->getBitstreamLinkedImage($bitstream);
+        $b_segments = explode("##", $bitstream);
+        $b_filename = $b_segments[1];
+        $b_handle = $b_segments[3];
+        $b_seq = $b_segments[4];
+        $b_handle_id = preg_replace('/^.*\//', '',$b_handle);
+        $b_uri = './record/'.$b_handle_id.'/'.$b_seq.'/'.$b_filename;
 
-
-        $segments = explode("##", $bitstream);
-        $filename = $segments[1];
-        $handle = $segments[3];
-        $seq = $segments[4];
-        $handle_id = preg_replace('/^.*\//', '',$handle);
-        $uri = './record/'.$handle_id.'/'.$seq.'/'.$filename;
-
-        if (strpos($uri, ".jpg")> 0)
+        if (strpos($b_uri, ".jpg") > 0)
         {
-            echo '<a title = "' . $record_title . '" class="fancybox" rel="group" href=' . $uri . '> ';
-            echo '<img class="record-thumbnail" src = "'. $uri .'">';
-            echo '</a>';
+            if (!$mainImage) {
 
-            echo '<p><span class="label"></span>'.$bitstreamLink.'
-            (<span class="bitstream_size">';
-            echo getBitstreamSize($bitstream);
-            echo '</span>, <span class="bitstream_mime">';
+                $bitstreamLink = '<div class="main-image">';
 
-            echo getBitstreamMimeType($bitstream);
-            echo '</span>, <span class="bitstream_description">';
-            echo getBitstreamDescription($bitstream);
-            echo'</span>)</p>';
+                $bitstreamLink .= '<a title = "' . $record_title . '" class="fancybox" rel="group" href=' . $b_uri . '> ';
+                $bitstreamLink .= '<img class="record-main-image" src = "'. $b_uri .'">';
+                $bitstreamLink .= '</a>';
+
+                /* $bitstreamLink .= '<p><span class="bitstream_size">';
+                $bitstreamLink .= getBitstreamSize($bitstream);
+                $bitstreamLink .= '</span></p>'; */
+                $bitstreamLink .= '</div>';
+
+                $mainImage = true;
+
+            }
+            else {
+
+                if(isset($doc[$thumbnail_field])) {
+                    $thumbnail = $doc[$thumbnail_field][0];
+
+                    $t_segments = explode("##", $thumbnail);
+                    $t_filename = $t_segments[1];
+                    $t_handle = $t_segments[3];
+                    $t_seq = $t_segments[4];
+                    $t_handle_id = preg_replace('/^.*\//', '',$t_handle);
+                    $t_uri = './record/'.$t_handle_id.'/'.$t_seq.'/'.$t_filename;
+
+                    $thumbnailLink[$numThumbnails] = '<div class="thumbnail-tile';
+                    if($numThumbnails == 0 || $numThumbnails == 4) {
+                        $thumbnailLink[$numThumbnails] .= ' first';
+                    }
+                    $thumbnailLink[$numThumbnails] .= '"><a title = "' . $record_title . '" class="fancybox" rel="group" href=' . $t_uri . '> ';
+                    $thumbnailLink[$numThumbnails] .= '<img src = "'.$t_uri.'" class="record-thumbnail" title="'. $record_title .'" /></a></div>';
+
+                }
+                else {
+
+                    $thumbnailLink[$numThumbnails] = '<div class="thumbnail-tile';
+                    if($numThumbnails == 0 || $numThumbnails == 4) {
+                        $thumbnailLink[$numThumbnails] .= ' first';
+                    }
+                    $thumbnailLink[$numThumbnails] .= '"><a title = "' . $record_title . '" class="fancybox" rel="group" href=' . $b_uri . '> ';
+                    $thumbnailLink[$numThumbnails] .= '<img src = "'.$b_uri.'" class="record-thumbnail" title="'. $record_title .'" /></a></div>';
+                }
+
+                $numThumbnails++;
+
+            }
 
         }
+        else if (strpos($b_uri, ".mp3") > 0) {
 
-    }
-    foreach($solr[$bitstream_field] as $bitstream) {
+            $audioLink .= '<script src="http://api.html5media.info/1.1.6/html5media.min.js"></script>';
+            $audioLink .= '<audio src="'.$b_uri.'" controls preload></audio>';
 
-        $bitstreamLink = $this->skylight_utilities->getBitstreamLink($bitstream);
-        $bitstreamLinkedImage = $this->skylight_utilities->getBitstreamLinkedImage($bitstream);
-
-
-        $segments = explode("##", $bitstream);
-        $filename = $segments[1];
-        $handle = $segments[3];
-        $seq = $segments[4];
-        $handle_id = preg_replace('/^.*\//', '',$handle);
-        $uri = './record/'.$handle_id.'/'.$seq.'/'.$filename;
-
-
-        if (strpos($uri, ".mp3")> 0)
-        {
-            echo '<script src="http://api.html5media.info/1.1.6/html5media.min.js"></script>';
-            echo '<audio src="'.$uri.'" controls preload></audio>';
-
+            $audioFile = true;
         }
-    }
-
-    foreach($solr[$bitstream_field] as $bitstream) {
-
-        $bitstreamLink = $this->skylight_utilities->getBitstreamLink($bitstream);
-        $bitstreamLinkedImage = $this->skylight_utilities->getBitstreamLinkedImage($bitstream);
 
 
-        $segments = explode("##", $bitstream);
-        $filename = $segments[1];
-        $handle = $segments[3];
-        $seq = $segments[4];
-        $handle_id = preg_replace('/^.*\//', '',$handle);
-        $uri = './record/'.$handle_id.'/'.$seq.'/'.$filename;
-
-        if (strpos($uri, ".mp4")> 0)
+        else if (strpos($b_uri, ".mp4") > 0)
         {
+            $videoLink .= '<script src="http://api.html5media.info/1.1.6/html5media.min.js"></script>';
+            $videoLink .= '<video width="320" height="200" controls> <source src="'.$b_uri.'" type="video/mp4">Sorry, it does not work</video>';
 
-            echo '<script src="http://api.html5media.info/1.1.6/html5media.min.js"></script>';
-            echo '<video width="320" height="200" controls> <source src="'.$uri.'" type="video/mp4">Sorry, it does not work</video>';
-
+            $videoFile = true;
         }
 
         ?>
     <?php
     }
-    echo '</div>';}?>
+
+    if($mainImage) {
+
+        echo $bitstreamLink;
+        echo '<div class="clearfix"></div>';
+    }
+
+    if($numThumbnails > 0) {
+
+        echo '<div class="thumbnail-strip">';
+
+        foreach($thumbnailLink as $thumb) {
+            echo $thumb;
+        }
+        echo '</div><div class="clearfix"></div>';
+    }
+
+    if($audioFile) {
+
+        echo $audioLink;
+    }
+
+    if($videoFile) {
+
+        echo $videoLink;
+    }
+
+    echo '</div><div class="clearfix"></div>';
+
+}
+
+    echo '</div>';
+?>
+
+

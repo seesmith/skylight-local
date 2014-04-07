@@ -6,7 +6,7 @@ $config['skylight_theme'] = 'cse';
 
 $config['skylight_fullname'] = 'Centre for Sports and Exercise';
 
-$config['skylight_adminemail'] = 'example@example.com';
+$config['skylight_adminemail'] = 'lddt@mlist.is.ed.ac.uk';
 
 $config['skylight_oaipmhcollection'] = 'hdl_10683_24202';
 

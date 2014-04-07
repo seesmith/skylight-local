@@ -55,8 +55,11 @@
 
     <ul class="listing">
 
-       
-    <?php foreach ($docs as $index => $doc) {
+
+        <?php
+
+        $j = 0;
+        foreach ($docs as $index => $doc) {
         ?>
 
 
@@ -71,108 +74,134 @@
 
     <li<?php if($index == 0) { echo ' class="first"'; } elseif($index == sizeof($docs) - 1) { echo ' class="last"'; } ?>>
 
-        <div class = "iteminfo">
-            <h3><a href="./record/<?php echo $doc['id']?>?highlight=<?php echo $query ?>"><?php echo $doc[$title_field][0]; ?></a></h3>
-        <div class="tagdiv">
+        <div class="item-div">
+
+            <div class = "iteminfo">
+
+                <h3><a href="./record/<?php echo $doc['id']?>?highlight=<?php echo $query ?>"><?php echo $doc[$title_field][0]; ?></a></h3>
+
+                    <div class="tagdiv">
 
 
-        <?php if(array_key_exists($author_field,$doc)) { ?>
+                        <?php if(array_key_exists($type_field,$doc)) { ?>
 
-            <?php
+                            <?php
 
-            $num_authors = 0;
-            foreach ($doc[$author_field] as $author) {
-               // test author linking
-               // quick hack that only works if the filter key
-               // and recorddisplay key match and the delimiter is :
-               $orig_filter = preg_replace('/ /','+',$author, -1);
-               $orig_filter = preg_replace('/,/','%2C',$orig_filter, -1);
-               echo '<a href="./search/*/Author:%22'.$orig_filter.'%22">'.$author.'</a>';
-                $num_authors++;
-                if($num_authors < sizeof($doc[$author_field])) {
-                    echo ' ';
-                }
-            }
+                            $num_types = 0;
+                            foreach ($doc[$type_field] as $type) {
+                                // test author linking
+                                // quick hack that only works if the filter key
+                                // and recorddisplay key match and the delimiter is :
 
+                                $orig_filter = urlencode($type);
 
-            ?>
-        
-            <?php } ?>
+                                $lower_orig_filter = strtolower($type);
+                                $lower_orig_filter = urlencode($lower_orig_filter);
 
-       <?php if(array_key_exists($date_field, $doc)) { ?>
-            <span>
-                <?php
-                echo '(' . $doc[$date_field][0] . ')';
-          }
-                    elseif(array_key_exists('dateIssuedyear', $doc)) {
-                        echo '( ' . $doc['dateIssuedyear'][0] . ')';
-                    }
-
-                ?>
-                </span>
-        
+                                echo '<a href="./search/*:*/Maker:%22'.$lower_orig_filter.'%7C%7C%7C'.$orig_filter.'%22">'.$type.'</a>';
+                                $num_types++;
+                                if($num_types < sizeof($doc[$type_field])) {
+                                    echo ' ';
+                                }
+                            }
 
 
-        <?php
-        // TODO: Make highlighting configurable
+                            ?>
 
-        if(array_key_exists('highlights',$doc)) {
-            ?> <p><?php
-            foreach($doc['highlights'] as $highlight) {
-                echo "...".$highlight."...".'<br/>';
-            }
-            ?></p><?php
-        }
-        else {
-            if(array_key_exists($abstract_field, $doc)) {
-                echo '<p>';
-                $abstract =  $doc[$abstract_field][0];
-                $abstract_words = explode(' ',$abstract);
-                $shortened = '';
-                $max = 40;
-                $suffix = '...';
-                if($max > sizeof($abstract_words)) {
-                    $max = sizeof($abstract_words);
-                    $suffix = '';
-                }
-                for ($i=0 ; $i<$max ; $i++){
-                    $shortened .= $abstract_words[$i] . ' ';
-                }
-                echo $shortened.$suffix;
-                echo '</p>';
-            }
-        }
+                            <?php } ?>
 
-        ?>
+                        <?php
+                        // TODO: Make highlighting configurable
+
+                        if(array_key_exists('highlights',$doc)) {
+                            ?> <p><?php
+                            foreach($doc['highlights'] as $highlight) {
+                                echo "...".$highlight."...".'<br/>';
+                            }
+                            ?></p><?php
+                        }
+                        else {
+                            if(array_key_exists($abstract_field, $doc)) {
+                                echo '<p>';
+                                $abstract =  $doc[$abstract_field][0];
+                                $abstract_words = explode(' ',$abstract);
+                                $shortened = '';
+                                $max = 40;
+                                $suffix = '...';
+                                if($max > sizeof($abstract_words)) {
+                                    $max = sizeof($abstract_words);
+                                    $suffix = '';
+                                }
+                                for ($i=0 ; $i<$max ; $i++){
+                                    $shortened .= $abstract_words[$i] . ' ';
+                                }
+                                echo $shortened.$suffix;
+                                echo '</p>';
+                            }
+                        }
+
+                        ?>
+
+                    </div> <!-- close tags div -->
+
+            </div> <!-- close item-info -->
 
 
+            <div class = "thumbnail-image">
+                <?php if(isset($doc[$bitstream_field])) {
+                    //SR clone text from bitstream helpers to get individual aspects of bitstream. Cannot call bitstream helpers from here.
+
+                    $i = 0;
+                    foreach ($doc[$bitstream_field] as $bitstream) {
+
+                        $b_segments = explode("##", $bitstream);
+                        $b_filename = $b_segments[1];
+                        $b_handle = $b_segments[3];
+                        $b_seq = $b_segments[4];
+                        $b_handle_id = preg_replace('/^.*\//', '',$b_handle);
+                        $b_uri = './record/'.$b_handle_id.'/'.$b_seq.'/'.$b_filename;
+
+                        if ( $i == 0 && strpos($b_uri, ".jpg") > 0)
+                        {
+
+                            if(isset($doc[$thumbnail_field])) {
+
+                                $thumbnail = $doc[$thumbnail_field][0];
+
+                                $t_segments = explode("##", $thumbnail);
+                                $t_filename = $t_segments[1];
+                                $t_handle = $t_segments[3];
+                                $t_seq = $t_segments[4];
+                                $handle_id = preg_replace('/^.*\//', '',$t_handle);
+                                $t_uri = './record/'.$handle_id.'/'.$t_seq.'/'.$t_filename;
+
+                                $thumbnailLink = '<a title = "' . $doc[$title_field][0] . '" class="fancybox" rel="group' . $j . '" href=' . $b_uri . '> ';
+                                $thumbnailLink .= '<img src = "'.$t_uri.'" class="search-thumbnail" title="'. $doc[$title_field][0] .'" /></a>';
 
 
-        </div> <!-- close tags div -->
-<div class =  "thumbnailImage">
-    <?php if(isset($doc[$bitstream_field])) {
-        //SR clone text from bitstream helpers to get individual aspects of bitstream. Cannot call bitstream helpers from here.
-        $i = 0;
-        foreach ($doc[$bitstream_field] as $bitstream) {
+                            }
+                            else { // there isn't a thumbnail
 
-        $thumbnail = $doc[$thumbnail_field][0];
-        $segments = explode("##", $thumbnail);
-        $filename = $segments[1];
-        $handle = $segments[3];
-        $seq = $segments[4];
-        $handle_id = preg_replace('/^.*\//', '',$handle);
-        $uri = './record/'.$handle_id.'/'.$seq.'/'.$filename;
-        $thumbnailLink = $this->skylight_utilities->getBitstreamThumbLinkParameterised($bitstream, $thumbnail, 'test', '140px', 0, 'style="display: block; margin-left: auto; margin-right: auto;" ');
+                                $thumbnailLink = '<a title = "' . $doc[$title_field][0] . '" class="fancybox" rel="group' . $j . '" href=' . $b_uri . '> ';
+                                $thumbnailLink .= '<img src = "'.$b_uri.'" class="search-thumbnail" title="'. $doc[$title_field][0] .'" /></a>';
 
-        if ($i == 0)
-        {
-          echo $thumbnailLink;
-        }
-        $i++;
-    }
-    }?>
-</div>
-        </div>
+                            }
+
+                            echo $thumbnailLink;
+
+                        } // end if jpg
+
+                        $i++;
+                        $j++;
+
+                    } // end for each
+
+                } //end if bitstream ?>
+
+            </div>
+            <div class="clearfix"></div>
+        </div> <!-- close item div -->
+
     </li>
         <?php }?>
     </ul>

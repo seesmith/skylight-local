@@ -6,7 +6,7 @@ $config['skylight_theme'] = 'mimed';
 
 $config['skylight_fullname'] = 'MUSICAL INSTRUMENT MUSEUMS';
 
-$config['skylight_adminemail'] = 'example@example.com';
+$config['skylight_adminemail'] = 'lddt@mlist.is.ed.ac.uk';
 
 $config['skylight_oaipmhcollection'] = 'hdl_10683_14558';
 
@@ -34,35 +34,26 @@ $config['skylight_fields'] = array('Title' => 'dc.title.en',
 );
 
 
-$config['skylight_date_filters'] = array('Date' => 'dateIssued.year_sort');
+$config['skylight_date_filters'] = array();
 $config['skylight_filters'] = array('Instrument Type' => 'type_filter', 'Maker' => 'author_filter', 'Place Made' => 'place_filter', 'Collection'=> 'collection_filter' );
 $config['skylight_filter_delimiter'] = ':';
 
 $config['skylight_meta_fields'] = array('Title' => 'dc.title',
-    'Maker' => 'dc.contributor.author',
-    'Author' => 'dc.contributor.author',
-    'Abstract' => 'dc.description.abstract',
+    'Maker' => 'dc.contributor.author.en',
+    'Author' => 'dc.contributor.author.en',
     'Subject' => 'dc.subject',
-    'Date' => 'dc.date.issued',
-    'Type' => 'dc.type',
-    'Bitstream'=> 'dc.format.original.en',
-    'Thumbnail'=> 'dc.format.thumbnail.en');
+    'Type' => 'dc.type');
 
-$config['skylight_recorddisplay'] = array('Title','Maker','Subject','Type','Abstract', 'Place Made', 'Date Made', 'Accession Number', 'Description', 'Collection');
+$config['skylight_recorddisplay'] = array('Title','Maker','Subject','Type','Abstract', 'Place Made', 'Date Made', 'Description', 'Collection', 'Accession Number');
 
 $config['skylight_searchresult_display'] = array('Title','Maker','Subject','Type','Abstract', 'Bitstream', 'Thumbnail');
 
 
-$config['skylight_search_fields'] = array('Keywords' => 'text',
-    'Country' => 'lido.country',
-    'City' => 'lido.city',
+$config['skylight_search_fields'] = array(
+    'Title' => 'dc.title',
     'Type' => 'dc.type',
-    'Author' => 'dc.contributor.author.en',
-    'Maker' => 'dc.contributor.author.en',
-    'Subject' => 'dc.subject',
-    'Date' => 'dc.date.issued',
-    'Bitstream'=> 'dc.format.original',
-    'Thumbnail'=> 'dc.format.thumbnail'
+    'Maker' => 'dc.contributor.author',
+    'Place Made' => 'dc.coverage.spatial',
 );
 
 //only by title, no date at the moment

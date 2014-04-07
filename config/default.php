@@ -6,7 +6,7 @@ $config['skylight_theme'] = 'default';
 
 $config['skylight_fullname'] = 'Research Space';
 
-$config['skylight_adminemail'] = 'example@example.com';
+$config['skylight_adminemail'] = 'lddt@mlist.is.ed.ac.uk';
 
 $config['skylight_oaipmhcollection'] = 'hdl_123456789_1';
 

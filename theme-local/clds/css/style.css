@@ -43,62 +43,62 @@ article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
     display: block;
 }
-blockquote, q { quotes: none; }
+blockquote, q                           { quotes: none; }
 blockquote:before, blockquote:after,
-q:before, q:after { content: ""; content: none; }
-ins { background-color: #ff9; color: #000; text-decoration: none; }
-mark { background-color: #ff9; color: #000; font-style: italic; font-weight: bold; }
-del { text-decoration: line-through; }
-abbr[title], dfn[title] { border-bottom: 1px dotted; cursor: help; }
-table { border-collapse: collapse; border-spacing: 0; }
-hr { display: block; height: 1px; border: 0; border-top: 1px solid #ccc; margin: 1em 0; padding: 0; }
-input, select { vertical-align: middle; }
-
+q:before, q:after                       { content: ""; content: none; }
+ins                                     { background-color: #ff9; color: #000; text-decoration: none; }
+mark                                    { background-color: #ff9; color: #000; font-style: italic; font-weight: bold; }
+del                                     { text-decoration: line-through; }
+abbr[title], dfn[title]                 { border-bottom: 1px dotted; cursor: help; }
+table                                   { border-collapse: collapse; border-spacing: 0; }
+hr                                      { display: block; height: 1px; border: 0; border-top: 1px solid #ccc; margin: 1em 0; padding: 0; }
+input, select                           { vertical-align: middle; }
 
 /* Font normalization inspired by YUI Library's fonts.css: developer.yahoo.com/yui/ */
-body 								{ font:13px/1.231 sans-serif; *font-size:small; } /* Hack retained to preserve specificity */
-select, input, textarea, button 	{ font:99% sans-serif; }
+body                                    { font:13px/1.231 sans-serif; *font-size:small; } /* Hack retained to preserve specificity */
+select, input, textarea, button         { font:99% sans-serif; }
 
-pre, code, kbd, samp 				{ font-family: monospace, sans-serif; } /* Normalize monospace sizing: en.wikipedia.org/wiki/MediaWiki_talk:Common.css/Archive_11#Teletype_style_fix_for_Chrome */
+pre, code, kbd, samp                    { font-family: monospace, sans-serif; } /* Normalize monospace sizing: en.wikipedia.org/wiki/MediaWiki_talk:Common.css/Archive_11#Teletype_style_fix_for_Chrome */
 
 /* Minimal base styles -----------------------------------------------------------------------------------------------------------------*/
 
-html 				{ overflow-y: scroll; } /* Always force a scrollbar in non-IE */
-a:hover, a:active 	{ outline: none; } /* Accessible focus treatment: people.opera.com/patrickl/experiments/keyboard/test */
-ul, ol 				{ margin-left: 2em; }
-ol 					{ list-style-type: decimal; }
-nav ul, nav li 		{ margin: 0; list-style: none; list-style-image: none; } /* Remove margins for navigation lists */
-small 				{ font-size: 85%; }
-strong, th 			{ font-weight: bold; }
-td 					{ vertical-align: top; }
-sub, sup 			{ font-size: 75%; line-height: 0; position: relative; } /* Set sub, sup without affecting line-height: gist.github.com/413930 */
-sup 				{ top: -0.5em; }
-sub 				{ bottom: -0.25em; }
-pre 				{ white-space: pre; white-space: pre-wrap; word-wrap: break-word; padding: 15px; }
-textarea 			{ overflow: auto; } /* www.sitepoint.com/blogs/2010/08/20/ie-remove-textarea-scrollbars/ */
+html                            { overflow-y: scroll; } /* Always force a scrollbar in non-IE */
+a:hover, a:active               { outline: none; } /* Accessible focus treatment: people.opera.com/patrickl/experiments/keyboard/test */
+ul, ol                          { margin-left: 2em; }
+ol                              { list-style-type: decimal; }
+nav ul, nav li                  { margin: 0; list-style: none; list-style-image: none; } /* Remove margins for navigation lists */
+small                           { font-size: 85%; }
+strong, th                      { font-weight: bold; }
+td                              { vertical-align: top; }
+sub, sup                        { font-size: 75%; line-height: 0; position: relative; } /* Set sub, sup without affecting line-height: gist.github.com/413930 */
+sup                             { top: -0.5em; }
+sub                             { bottom: -0.25em; }
+pre                             { white-space: pre; white-space: pre-wrap; word-wrap: break-word; padding: 15px; }
+textarea                        { overflow: auto; } /* www.sitepoint.com/blogs/2010/08/20/ie-remove-textarea-scrollbars/ */
 .ie6 legend,
-.ie7 legend 		{ margin-left: -7px; }
+.ie7 legend                     { margin-left: -7px; }
 
-input[type="radio"] 		{ vertical-align: text-bottom; } /* Align checkboxes, radios, text inputs with their label by: Thierry Koblentz tjkdesign.com/ez-css/css/base.css  */
-input[type="checkbox"] 		{ vertical-align: bottom; }
-.ie7 input[type="checkbox"] { vertical-align: baseline; }
-.ie7 input[type="checkbox"] { vertical-align: baseline; }
-.ie6 input 					{ vertical-align: text-bottom; }
+input[type="radio"]             { vertical-align: text-bottom; } /* Align checkboxes, radios, text inputs with their label by: Thierry Koblentz tjkdesign.com/ez-css/css/base.css */
+input[type="checkbox"]          { vertical-align: bottom; }
+.ie7 input[type="checkbox"]     { vertical-align: baseline; }
+.ie6 input                      { vertical-align: text-bottom; }
 
 label, input[type="button"], input[type="submit"], input[type="image"], button { cursor: pointer; } /* Hand cursor on clickable input elements */
 
 button, input, select, textarea { margin: 0; } /* Webkit browsers add a 2px margin outside the chrome of form elements */
 
-input:valid, textarea:valid   								{  } /* Colors for form validity */
-input:invalid, textarea:invalid 							{ border-radius: 1px; -moz-box-shadow: 0px 0px 5px red; -webkit-box-shadow: 0px 0px 5px red; box-shadow: 0px 0px 5px red; }
-.no-boxshadow input:invalid, .no-boxshadow textarea:invalid { background-color: #f0dddd; }
+input:valid, textarea:valid     { } /* Colors for form validity */
+input:invalid, textarea:invalid { border-radius: 1px; -moz-box-shadow: 0px 0px 5px red; -webkit-box-shadow: 0px 0px 5px red; box-shadow: 0px 0px 5px red; }
+.no-boxshadow input:invalid,
+.no-boxshadow textarea:invalid  { background-color: #f0dddd; }
 
-::-moz-selection 	{ background: #00548e; color: #fff; text-shadow: none; } /* These selection declarations have to be separate No text-shadow: twitter.com/miketaylr/status/12228805301 Also: hot pink! */
-::selection 		{ background: #00548e; color: #fff; text-shadow: none; }
-a:link 				{ -webkit-tap-highlight-color: #FF5E99; } /* j.mp/webkit-tap-highlight-color */
+::-moz-selection                { background: #00548e; color: #fff; text-shadow: none; } /* These selection declarations have to be separate No text-shadow: twitter.com/miketaylr/status/12228805301 Also: hot pink! */
+::selection                     { background: #00548e; color: #fff; text-shadow: none; }
+a:link                          { -webkit-tap-highlight-color: #FF5E99; } /* j.mp/webkit-tap-highlight-color */
 
-button 				{  width: auto; overflow: visible; } /* Make buttons play nice in IE: www.viget.com/inspire/styling-the-button-element-in-internet-explorer/ */
-.ie7 img 			{ -ms-interpolation-mode: bicubic; } /* Bicubic resizing for non-native sized IMG: code.flickr.com/blog/2008/11/12/on-ui-quality-the-little-things-client-side-image-resizing/ */
+button                          { width: auto; overflow: visible; } /* Make buttons play nice in IE: www.viget.com/inspire/styling-the-button-element-in-internet-explorer/ */
+.ie7 img                        { -ms-interpolation-mode: bicubic; } /* Bicubic resizing for non-native sized IMG: code.flickr.com/blog/2008/11/12/on-ui-quality-the-little-things-client-side-image-resizing/ */
+
 
 /* Default Styles --------------------------------------------------------------------------------------------------------*/
 
@@ -106,11 +106,11 @@ html 							{ -webkit-font-smoothing: antialiased; }
 body 							{ background: #005784; }
 body, select, input, textarea 	{ color: #555; line-height: 18px; font-family: Arial, Helvetica, sans-serif; }
 
-h1, h2, h3, h4, h5, h6          { text-rendering: optimizeLegibility; color: #000000; font-weight: bold; }
-h1 								{ font-size: 18px; line-height: 24px; margin: 30px 0 17px 0px; position: relative; }
-h1 								{ font-size: 18px; line-height: 24px; margin: 30px 0 17px 0px; position: relative; }
-h2 								{ font-size: 16px; line-height: 36px; margin: 0 0 0 0; }
 h3 								{ color: #333333; font-size: 14px; line-height: 18px; margin: 0 0 9px 0; }
+h1, h2, h3, h4, h5, h6          { text-rendering: optimizeLegibility; color: #000000; font-weight: bold; }
+h1                              { font-size: 18px; line-height: 24px; margin: 30px 0 17px 0px; position: relative; }
+h2                              { font-size: 16px; line-height: 36px; margin: 0 0 0 0; }
+h3                              { color: #333333; font-size: 14px; line-height: 18px; margin: 0 0 9px 0; }
 
 h1.itemtitle 					{ font-size: 18px; line-height: 24px; margin: 20px 0 10px 0px; position: relative; color: #333333; }
 
@@ -128,8 +128,6 @@ input.btn						{
     -webkit-border-radius: 5px; -moz-border-radius: 5px; border-radius: 5px; text-shadow: rgba(0,0,0,0.3) 0px -1px 0px;
 }
 input.btn:hover					{ color: #fff; background: #005784; }
-
-
 
 /* Site Css ///////////////////////////////////////////////////////////////////////////////////////////////////////////// */
 
@@ -168,14 +166,25 @@ header				{ position: relative; width: 940px; height: 141px; background-color: #
 .search .advanced 				{ text-transform: uppercase; font-size: 10px; text-decoration: none; }
 .search .advanced:hover			{ text-decoration: underline; }
 
-.item-div                       { width: 600px; text-align: left; display: block;}
-.iteminfo                       { display: block; text-align: left; width: 70%; }
+.item-div                       { width: 660px; text-align: left; display: block; }
+.iteminfo                       { display: block; min-height:100px; text-align: left; width: 75%; float:left; }
 .iteminfo h3                    { font-size: 18px; margin-top: 5px; }
-.thumbnailImage                 { display: block; text-align: left; width: 25%; float: right;}
+.thumbnail-image                { display: block; text-align: center; width: 23%; float: right; }
+
+.thumbnail-strip                { max-width: 660px; display: block; }
+.thumbnail-tile                 { margin-top: 20px; margin-left: 20px; float: left; }
+.thumbnail-strip .first         { margin-left: 0px; }
+.record-thumbnail               { max-width: 150px; max-height: 200px; }
+
+.record-bitstreams              { display: block; margin: 0 auto; width: 660px; margin-top: 20px; margin-bottom: 5px; }
+
+.main-image                     { max-width: 660px; display: block; }
+.record-main-image              { max-width: 660px; max-height: 800px; }
+
 .tagdiv                         { position:relative; width: 250px;float:left; }
-.tagdiv a                       { font-size: 13px; color:#333333; background: #FE2842; -webkit-border-radius: 5px; -moz-border-radius: 5px; border-radius: 5px; padding: 2px 6px; line-height: 20px; margin-right: 8px; text-decoration: none; }
+.tagdiv a                       { font-size: 13px; color:#FFF; background: #00548e; -webkit-border-radius: 5px; -moz-border-radius: 5px; border-radius: 5px; padding: 2px 6px; line-height: 20px; margin-right: 8px; text-decoration: none; }
 .tagdiv a.bold                  { font-weight: bold; }
-.tagdiv a:hover                 { background: #333333; color: #fff; }
+.listing li .tagdiv a:hover     { background: #FE2842; color: #fff; text-decoration: none; }
 
 .col-sidebar h4					{ color: #fff; line-height: 26px; font-weight: bold; text-transform: uppercase; font-size: 12px; margin-bottom: 17px; background: #333333; padding: 0 17px; }
 .col-sidebar h4 a 				{
@@ -199,18 +208,18 @@ header				{ position: relative; width: 940px; height: 141px; background-color: #
 .col-sidebar ul.related li a 				{ padding: 0; }
 .col-sidebar ul.related li a:hover			{ background: none; text-decoration: underline; }
 .col-sidebar ul.related .tags				{ margin: 0px 0 0 0; }
-.col-sidebar ul.related .tags a 			{ padding: 2px 5px; display: inline; background: #ffffff; color: #333333;}
+.col-sidebar ul.related .tags a 			{ padding: 2px 5px; display: inline-block; background: #ffffff; color: #333333;}
 .col-sidebar ul.related .tags a:hover		{ text-decoration: none; background: #FE2842; color: #fff; }
 
 .col-sidebar ul.related li a.related-record { font-size: 14px; padding-bottom: 5px;}
 
 .tags					{ margin-top: 5px; margin: 0; }
-.tags a 				{ color: #fff; font-size: 13px; background: #FE2842; -webkit-border-radius: 5px; -moz-border-radius: 5px; border-radius: 5px; padding: 2px 6px; line-height: 20px; margin-right: 8px; text-decoration: none; }
+.tags a 				{ color: #fff; font-size: 13px; background: #00548e; -webkit-border-radius: 5px; -moz-border-radius: 5px; border-radius: 5px; padding: 2px 6px; margin-right: 5px; text-decoration: none; }
 .tags a.bold			{ font-weight: bold; }
-.tags a:hover			{ background: #333333; color: #fff; text-decoration: underline; }
+.tags a:hover			{ background: #FE2842; color: #fff; text-decoration: underline; }
+.tags a.subject         { display:inline-block; line-height: 15px; margin-bottom: 5px; }
 
 footer                  { display: block; padding-bottom: 20px; padding-top: 20px; width: 100%; background-color: #fff; border-top: 1px solid #005784; }
-
 
 .footer-links			{ display: block; margin-top: 15px; margin-bottom: 15px; padding-top: 10px; padding-bottom: 10px; text-align: center; border-top: 1px solid #58A09D; border-bottom: 1px solid #58A09D; width: 660px;}
 .footer-links a 		{ font-size: 10px; text-transform: uppercase; color: #AAA79E  !important; text-decoration: none; font-weight: bold; border-right: 1px solid #cecece; padding-right: 15px; margin-right: 10px; }
@@ -249,6 +258,8 @@ footer                  { display: block; padding-bottom: 20px; padding-top: 20p
 .listing-filter .sort a:hover		{ text-decoration: underline; }
 .listing-filter .sort strong		{ color: #333; }
 .listing-filter .sort em			{ padding-left: 10px; font-style: normal; }
+.search-thumbnail                   { max-width: 120px; max-height: 120px; }
+
 
 .icon 								{ display: block; width: 54px; height: 32px; background: url(../images/bg-icons.png) no-repeat 0px 0px; position: absolute; top: 0; left: -54px; background-position: -908px 0; }
 h1 .icon							{ top: -5px; left: -65px; }
@@ -300,6 +311,7 @@ h1 .icon							{ top: -5px; left: -65px; }
 
 .content 							{ margin-top: 20px; background-color: #fff; }
 .col-main-full .content             { background-color: #333333; color: #fff; margin: 0; }
+.col-main-full .content .byEditor   { background-color: #fff; color: #000; margin: 0px; padding: 0px 10px 0px 10px;}
 .content ul 						{ margin: 0 0 18px 1.2em; }
 .content ul.tiles                   { margin: 0; padding: 0; list-style: none outside none; height: 188px; width: 940px; }
 .tiles-wrapper                      { }
@@ -316,8 +328,8 @@ li.tile                             { display: inline; float: left; height: 188p
     top: -176px;
     width: 188px;
     padding: 10px;
-    background: #333333;
-    color: #fff;
+    background: #fff;
+    color: #005784;
     text-transform: uppercase;
     font-weight: bold;
     font-size: 12px;
@@ -330,7 +342,7 @@ li.tile                             { display: inline; float: left; height: 188p
 
 .record_bitstreams                  { margin-top: 20px; }
 
-table								{ width: 100%; }
+table								{ width: 100%; margin-bottom: 20px;}
 table caption						{ text-align: left; background: #333333; color: #fff; font-size: 12px; text-transform: uppercase; font-weight: bold; padding: 0px 17px; border-bottom: 1px solid #fff; line-height: 26px; }
 
 table td,
@@ -339,6 +351,10 @@ table th                            { border-right: 1px dashed #D6D3C4; width: 2
 table td                            { width: auto; color: #333333;}
 table tr                            { border-bottom: 1px dashed #D6D3C4; }
 table tr:last-child                 { border: 0; border-bottom: none; }
+
+.feedback_form                      { padding: 10px 0;}
+.feedback_form label                { display: block; width: 100px;}
+
 
 /* <END> Site Css \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\ */
 
@@ -395,27 +411,21 @@ table tr:last-child                 { border: 0; border-bottom: none; }
 
 .carousel-caption {
     padding-bottom: 30px;
-    color: #FFFFFF;
+    color: #005784;
     padding-top: 20px;
     text-align: center;
-    /* text-shadow: 0 1px 2px rgba(0, 0, 0, 0.6); */
+    text-shadow: none;
     text-transform: uppercase;
     z-index: 10;
 
     /* styling bellow */
-    background-color: #333333;
-    font-size: 15px;
+    background-color: #FFF;
+    font-size: 14px;
+    font-weight: bold;
     /* opacity: 0.80; /* transparency */
     /* filter: alpha(opacity=80); /* IE transparency */
-
 }
 
 .caption-art                { top: 6%; right: 61%; bottom: 81%; left: 2%;}
 .caption-mimed              { top: 6%; right: 48%; bottom: 81%; left: 2%;}
 .caption-russell            { top: 6%; right: 59%; bottom: 81%; left: 2%;}
-
-.carousel-caption h3        { color: #FFFFFF; }
-.carousel-caption a         { }
-.carousel-caption a:hover   { text-decoration: none; }
-
-.carousel-caption:hover     { background-color: #005784; }

@@ -55,16 +55,18 @@
 
     <ul class="listing">
 
-       
-        <?php foreach ($docs as $index => $doc) {
-            ?>
-            <?php
+        <?php
+
+        $j = 0;
+        foreach ($docs as $index => $doc) {
+        ?>
+        <?php
             $type = 'Unknown';
 
             if(isset($doc[$type_field])) {
                 $type = "media-" . strtolower(str_replace(' ','-',$doc[$type_field][0]));
             }
-            ?>
+         ?>
 
         <li<?php if($index == 0) { echo ' class="first"'; } elseif($index == sizeof($docs) - 1) { echo ' class="last"'; } ?>>
             <!--span class="icon <?php echo $type?>"></span-->
@@ -81,11 +83,9 @@
                         // quick hack that only works if the filter key
 
                         $orig_filter = urlencode($author);
-                        $orig_filter = preg_replace('/ /','+',$orig_filter, -1);
 
                         $lower_orig_filter = strtolower($author);
                         $lower_orig_filter = urlencode($lower_orig_filter);
-                        $lower_orig_filter = preg_replace('/ /','+',$lower_orig_filter, -1);
 
                         echo '<a class="artist" href="./search/*:*/Artist:%22'.$lower_orig_filter.'%7C%7C%7C'.$orig_filter.'%22">'.$author.'</a>';
                         $num_authors++;
@@ -154,30 +154,50 @@
                     $i = 0;
                     foreach ($doc[$bitstream_field] as $bitstream) {
 
+                    $b_segments = explode("##", $bitstream);
+                    $b_filename = $b_segments[1];
+                    $b_handle = $b_segments[3];
+                    $b_seq = $b_segments[4];
+                    $b_handle_id = preg_replace('/^.*\//', '',$b_handle);
+                    $b_uri = './record/'.$b_handle_id.'/'.$b_seq.'/'.$b_filename;
+
+                    if ( $i == 0 && strpos($b_uri, ".jpg") > 0)
+                    {
+
                         if(isset($doc[$thumbnail_field])) {
+
                             $thumbnail = $doc[$thumbnail_field][0];
+
+                            $t_segments = explode("##", $thumbnail);
+                            $t_filename = $t_segments[1];
+                            $t_handle = $t_segments[3];
+                            $t_seq = $t_segments[4];
+                            $handle_id = preg_replace('/^.*\//', '',$t_handle);
+                            $t_uri = './record/'.$handle_id.'/'.$t_seq.'/'.$t_filename;
+
+                            $thumbnailLink = '<a title = "' . $doc[$title_field][0] . '" class="fancybox" rel="group' . $j . '" href=' . $b_uri . '> ';
+                            $thumbnailLink .= '<img src = "'.$t_uri.'" class="search-thumbnail" title="'. $doc[$title_field][0] .'" /></a>';
+
+
                         }
-                        else {
-                            $thumbnail = $doc[$bitstream_field][0];
+                        else { // there isn't a thumbnail
+
+                            $thumbnailLink = '<a title = "' . $doc[$title_field][0] . '" class="fancybox" rel="group' . $j . '" href=' . $b_uri . '> ';
+                            $thumbnailLink .= '<img src = "'.$b_uri.'" class="search-thumbnail" title="'. $doc[$title_field][0] .'" /></a>';
+
                         }
 
-                        if($i == 0) {
+                        echo $thumbnailLink;
 
-                            $segments = explode("##", $thumbnail);
-                            $filename = $segments[1];
-                            $handle = $segments[3];
-                            $seq = $segments[4];
-                            $handle_id = preg_replace('/^.*\//', '',$handle);
-                            $uri = './record/'.$handle_id.'/'.$seq.'/'.$filename;
+                    } // end if jpg
 
-                            $thumbnailLink = '<a title = "' . $doc[$title_field][0] . '" class="fancybox" rel="group" href=' . $uri . '> ';
-                            $thumbnailLink .= '<img src = "'.$uri.'" class="search-thumbnail" title="'. $doc[$title_field][0] .'" /></a>';
+                    $i++;
+                    $j++;
 
-                            echo $thumbnailLink;
-                        }
-                        $i++;
-                    }
-                }?>
+                } // end for each
+
+            } //end if bitstream ?>
+
             </div>
             <div class="clearfix"></div>
             </div> <!-- close item div -->

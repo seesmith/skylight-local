@@ -6,7 +6,7 @@ $config['skylight_theme'] = 'physics';
 
 $config['skylight_fullname'] = 'School of Physics and Astronomy Image Archive';
 
-$config['skylight_adminemail'] = 'example@example.com';
+$config['skylight_adminemail'] = 'lddt@mlist.is.ed.ac.uk';
 
 $config['skylight_oaipmhcollection'] = 'hdl_10683_8';
 
@@ -48,12 +48,10 @@ $config['skylight_recorddisplay'] = array('Title','Author','Subject','Type','Abs
 
 $config['skylight_searchresult_display'] = array('Title','Author','Subject','Type','Abstract', 'File', 'Thumbnail');
 
-$config['skylight_search_fields'] = array('Keywords' => 'text',
-    'Subject' => 'dc.subject',
-    'Type' => 'dc.type',
-    'Author' => 'dc.creator',
-    'File' => 'dc.format.original',
-    'Thumbnail' => 'dc.format.thumbnail'
+$config['skylight_search_fields'] = array('Title' => 'dc.title.en',
+    'Subject' => 'dc.subject.en',
+    'Type' => 'dc.type.en',
+    'Author' => 'dc.creator.en',
 );
 
 $config['skylight_sort_fields'] = array('Title' => 'dc.title_sort',

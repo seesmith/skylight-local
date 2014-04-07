@@ -32,12 +32,17 @@
         <!-- CSS: implied media="all" -->
         <link rel="stylesheet" href="<?php echo base_url(); ?>assets/bootstrap/dist/css/bootstrap.min.css">
         <link rel="stylesheet" href="<?php echo base_url(); ?>theme/<?php echo $this->config->item('skylight_theme'); ?>/css/style.css?v=2">
+        <link rel="stylesheet" href="<?php echo base_url(); ?>assets/fancybox/source/jquery.fancybox.css?v=2.1.4" type="text/css" media="screen" />
+        <link rel="stylesheet" href="<?php echo base_url(); ?>assets/fancybox/source/helpers/jquery.fancybox-buttons.css?v=1.0.5" type="text/css" media="screen" />
+        <link rel="stylesheet" href="<?php echo base_url(); ?>assets/fancybox/source/helpers/jquery.fancybox-thumbs.css?v=1.0.7" type="text/css" media="screen" />
 
         <!-- Uncomment if you are specifically targeting less enabled mobile browsers
         <link rel="stylesheet" media="handheld" href="css/handheld.css?v=2">  -->
 
         <!-- All JavaScript at the bottom, except for Modernizr which enables HTML5 elements & feature detects -->
         <script src="<?php echo base_url(); ?>assets/modernizr/modernizr-1.7.min.js"></script>
+        <script src="<?php echo base_url()?>assets/jquery-1.11.0/jquery-1.11.0.min.js"></script>
+        <script src="<?php echo base_url()?>assets/jquery-ui-1.10.4/ui/minified/jquery-ui.min.js"></script>
 
         <?php if (isset($solr)) { ?><link rel="schema.DC" href="http://purl.org/dc/elements/1.1/" />
         <link rel="schema.DCTERMS" href="http://purl.org/dc/terms/" />
@@ -71,7 +76,7 @@
             <header>
                 <nav id="menu">
                     <ul class="menu-links">
-                        <li><a href="./contact/" class="last">Contact</a></li>
+                        <li><a href="./feedback/" class="last">Contact</a></li>
                         <li><a href="http://www.ed.ac.uk/schools-departments/information-services/library-museum-gallery/crc/projects" target="_blank">Research</a></li>
                         <li><a href="http://libraryblogs.is.ed.ac.uk/" target="_blank">Blog</a></li>
                         <li><a href="./about/">About</a></li>
