@@ -69,12 +69,13 @@
         ?>
 
     <li<?php if($index == 0) { echo ' class="first"'; } elseif($index == sizeof($docs) - 1) { echo ' class="last"'; } ?>>
-        <span class="icon <?php echo $type?>"></span>
+
+
 
         <div class = "iteminfo">
             <h3><a href="./record/<?php echo $doc['id']?>?highlight=<?php echo $query ?>"><?php echo $doc[$title_field][0]; ?></a></h3>
-        <div class="tagdiv">
 
+        <div class="tagdiv">
 
         <?php if(array_key_exists($author_field,$doc)) { ?>
 
@@ -90,7 +91,7 @@
                echo '<a href="./search/*/Author:%22'.$orig_filter.'%22">'.$author.'</a>';
                 $num_authors++;
                 if($num_authors < sizeof($doc[$author_field])) {
-                    echo ' ';
+                    echo '<br />';
                 }
             }
 
@@ -99,79 +100,34 @@
         
             <?php } ?>
 
-       <?php if(array_key_exists($date_field, $doc)) { ?>
-            <span>
-                <?php
-                echo '(' . $doc[$date_field][0] . ')';
-          }
-                    elseif(array_key_exists('dateIssuedyear', $doc)) {
-                        echo '( ' . $doc['dateIssuedyear'][0] . ')';
-                    }
-
-                ?>
-                </span>
-        
-
-
-        <?php
-        // TODO: Make highlighting configurable
-
-        if(array_key_exists('highlights',$doc)) {
-            ?> <p><?php
-            foreach($doc['highlights'] as $highlight) {
-                echo "...".$highlight."...".'<br/>';
-            }
-            ?></p><?php
-        }
-        else {
-            if(array_key_exists($abstract_field, $doc)) {
-                echo '<p>';
-                $abstract =  $doc[$abstract_field][0];
-                $abstract_words = explode(' ',$abstract);
-                $shortened = '';
-                $max = 40;
-                $suffix = '...';
-                if($max > sizeof($abstract_words)) {
-                    $max = sizeof($abstract_words);
-                    $suffix = '';
-                }
-                for ($i=0 ; $i<$max ; $i++){
-                    $shortened .= $abstract_words[$i] . ' ';
-                }
-                echo $shortened.$suffix;
-                echo '</p>';
-            }
-        }
-
-        ?>
-
-
-
-
         </div> <!-- close tags div -->
-<div class =  "thumbnailImage">
-    <?php if(isset($doc[$bitstream_field])) {
-        //SR clone text from bitstream helpers to get individual aspects of bitstream. Cannot call bitstream helpers from here.
-        $i = 0;
-        foreach ($doc[$bitstream_field] as $bitstream) {
 
-        $thumbnail = $doc[$thumbnail_field][0];
-        $segments = explode("##", $thumbnail);
-        $filename = $segments[1];
-        $handle = $segments[3];
-        $seq = $segments[4];
-        $handle_id = preg_replace('/^.*\//', '',$handle);
-        $uri = './record/'.$handle_id.'/'.$seq.'/'.$filename;
-        $thumbnailLink = $this->skylight_utilities->getBitstreamThumbLinkParameterised($bitstream, $thumbnail, 'test', '140px', 0, 'style="display: block; margin-left: auto; margin-right: auto;" ');
-        if ($i == 0)
-        {
-          echo $thumbnailLink;
+
+    <div class =  "thumbnailImage">
+        <?php if(isset($doc[$bitstream_field])) {
+            //SR clone text from bitstream helpers to get individual aspects of bitstream. Cannot call bitstream helpers from here.
+            $i = 0;
+            foreach ($doc[$bitstream_field] as $bitstream) {
+
+            $thumbnail = $doc[$thumbnail_field][0];
+            $segments = explode("##", $thumbnail);
+            $filename = $segments[1];
+            $handle = $segments[3];
+            $seq = $segments[4];
+            $handle_id = preg_replace('/^.*\//', '',$handle);
+            $uri = './record/'.$handle_id.'/'.$seq.'/'.$filename;
+            $thumbnailLink = $this->skylight_utilities->getBitstreamThumbLinkParameterised($bitstream, $thumbnail, 'test', '140px', 0, 'style="display: block; margin-left: auto; margin-right: auto;" ');
+            if ($i == 0)
+            {
+              echo $thumbnailLink;
+            }
+            $i++;
         }
-        $i++;
-    }
-    }?>
-</div>
-        </div>
+        }?>
+    </div>
+
+
+
     </li>
         <?php }?>
     </ul>
