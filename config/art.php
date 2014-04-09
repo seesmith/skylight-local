@@ -53,7 +53,7 @@ $config['skylight_meta_fields'] = array(
     'Type' => 'dc.type.en'
 );
 
-$config['skylight_recorddisplay'] = array('Artist','Title','Alternative Title', 'Date', 'Material','Type','Description','Place Made','Subject','Collection','Dimensions','Classification','Signature', 'Inscription','Accession Number');
+$config['skylight_recorddisplay'] = array('Artist','Title','Alternative Title','Date','Description','Material','Dimensions','Type','Place Made','Subject','Collection','Classification','Signature', 'Inscription','Accession Number');
 
 $config['skylight_searchresult_display'] = array('Author','Title','Medium','Type','Description', 'Bitstream', 'Thumbnail', 'Date');
 
