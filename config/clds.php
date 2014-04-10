@@ -29,7 +29,7 @@ $config['skylight_fields'] = array('Title' => 'dc.title.en',
 );
 
 $config['skylight_date_filters'] = array();
-$config['skylight_filters'] = array('Type' => 'type_filter', 'Subject' => 'subject_filter', 'Origin' => 'origin_filter');
+$config['skylight_filters'] = array('Type' => 'type_filter', 'Subject' => 'subject_filter', 'Origin' => 'place_filter');
 
 $config['skylight_filter_delimiter'] = ':';
 
