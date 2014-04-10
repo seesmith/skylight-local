@@ -323,10 +323,11 @@ li.tile                             { display: inline; float: left; height: 188p
 }
 
 .tile a.caption span {
-    display: none;
+    display: block;
     position: absolute;
-    top: -176px;
-    width: 188px;
+    top: -166px;
+    left: 10px;
+    width: 168px;
     padding: 10px;
     background: #fff;
     color: #005784;

@@ -51,7 +51,7 @@
             <li class="tile">
                 <a href="<?php echo base_url(); echo $this->config->item('index_page'); ?>/search" class="caption">
                     <img src="<?php echo base_url(); ?>theme/<?php echo $this->config->item('skylight_theme'); ?>/images/museumstile.jpg" alt="Edinburgh University Museums &amp; Galleries">
-                    <span onmouseover="this.style.background='#005784';this.style.color='#FFF'" onmouseout="this.style.background='#FFFFFF';this.style.color='#005784'">Museums &amp; Galleries</span>
+                    <span onmouseover="this.style.background='#005784';this.style.color='#FFF'" onmouseout="this.style.background='#FFFFFF';this.style.color='#005784'">Museums &amp; </br>Galleries</span>
                 </a>
             </li>
             <li class="tile">
@@ -63,19 +63,19 @@
             <li class="tile">
                 <a href="http://exhibitions.ed.ac.uk/" target="_blank" class="caption">
                     <img src="<?php echo base_url(); ?>theme/<?php echo $this->config->item('skylight_theme'); ?>/images/exhibitionstile.jpg" alt="Edinburgh University Exhibitions">
-                    <span onmouseover="this.style.background='#005784';this.style.color='#FFF'" onmouseout="this.style.background='#FFFFFF';this.style.color='#005784'">Exhibitions</span>
+                    <span onmouseover="this.style.background='#005784';this.style.color='#FFF'" onmouseout="this.style.background='#FFFFFF';this.style.color='#005784'">Latest <br/>Exhibitions</span>
                 </a>
             </li>
             <li class="tile">
                 <a href="http://images.is.ed.ac.uk/" target="_blank" class="caption">
                     <img src="<?php echo base_url(); ?>theme/<?php echo $this->config->item('skylight_theme'); ?>/images/imagestile.jpg" alt="Edinburgh University Image Collections">
-                    <span onmouseover="this.style.background='#005784';this.style.color='#FFF'" onmouseout="this.style.background='#FFFFFF';this.style.color='#005784'">Images</span>
+                    <span onmouseover="this.style.background='#005784';this.style.color='#FFF'" onmouseout="this.style.background='#FFFFFF';this.style.color='#005784'">Image </br>Collections</span>
                 </a>
             </li>
             <li class="tile">
                 <a href="http://www.era.lib.ed.ac.uk" target="_blank" class="caption">
                     <img src="<?php echo base_url(); ?>theme/<?php echo $this->config->item('skylight_theme'); ?>/images/publicationstile.jpg" alt="Edinburgh University Science Publications">
-                    <span onmouseover="this.style.background='#005784';this.style.color='#FFF'" onmouseout="this.style.background='#FFFFFF';this.style.color='#005784'">Publications</span>
+                    <span onmouseover="this.style.background='#005784';this.style.color='#FFF'" onmouseout="this.style.background='#FFFFFF';this.style.color='#005784'">Theses &amp; Publications</span>
                 </a>
             </li>
         </ul>
