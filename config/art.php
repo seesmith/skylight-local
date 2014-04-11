@@ -14,10 +14,12 @@ $config['skylight_oaipmhcollection'] = 'hdl_10683_6';
 $config['skylight_container_id'] = '3';
 $config['skylight_container_field'] = 'location.coll';
 
-$config['skylight_fields'] = array('Title' => 'dc.title.en',
-    'Artist' => 'dc.contributor.author.en',
+$config['skylight_fields'] = array(
+    'Title' => 'dc.title.en',
+    'Alternative Title' => 'dc.title.alternative.en',
+    'Artist' => 'dc.contributor.authorfull.en',
     'Author' => 'dc.contributor.author.en',
-    'Classification' => 'dc.subject.class.en',
+    'Classification' => 'dc.subject.classification.en',
     'Type' => 'dc.type.en',
     'Abstract' => 'dc.description.abstract.en',
     'Date' => 'dc.coverage.temporal.en',
@@ -28,32 +30,36 @@ $config['skylight_fields'] = array('Title' => 'dc.title.en',
     'Accession Number'=> 'dc.identifier.en',
     'Collection' => 'dc.relation.ispartof.en',
     'Provenance' => 'dc.description.provenance',
+    'Material' => 'dc.format.en',
+    'Dimensions' => 'dc.format.extent.en',
+    'Signature' => 'dc.format.signature.en',
+    'Inscription' => 'dc.format.inscription.en',
+    'Subject' => 'dc.subject.en',
+    'Place Made' => 'dc.coverage.spatial.en'
 );
 
 $config['skylight_date_filters'] = array();
-$config['skylight_filters'] = array('Artist' => 'author_filter', 'Medium' => 'subject_filter');
+$config['skylight_filters'] = array('Artist' => 'author_filter', 'Classification' => 'classification_filter', 'Collection'=> 'collection_filter' );
 
 $config['skylight_filter_delimiter'] = ':';
 
-$config['skylight_meta_fields'] = array('Title' => 'dc.title.en',
-    'Artist' => 'dc.contributor.author.en',
-    'Author' => 'dc.contributor.author.en',
-    'Description' => 'dc.description.en',
-    'Classification' => 'dc.subject.class.en',
+$config['skylight_meta_fields'] = array(
+    'Title' => 'dc.title.en',
+    'Artist' => 'dc.contributor.authorfull.en',
+    //'Author' => 'dc.contributor.author.en',
+    //'Description' => 'dc.description.en',
+    'Classification' => 'dc.subject.classification.en',
     'Date' => 'dc.coverage.temporal.en',
-    'Type' => 'dc.type.en',
-    'Bitstream'=> 'dc.format.original',
-    'Thumbnail'=> 'dc.format.thumbnail',
-    'Accession Number'=> 'dc.identifier.en'
+    'Type' => 'dc.type.en'
 );
 
-$config['skylight_recorddisplay'] = array('Artist','Title', 'Date', 'Medium','Type','Description', 'Place Made', 'Accession Number','Collection');
+$config['skylight_recorddisplay'] = array('Artist','Title','Alternative Title','Date','Description','Material','Dimensions','Type','Place Made','Subject','Collection','Classification','Signature', 'Inscription','Accession Number');
 
-$config['skylight_searchresult_display'] = array('Title','Artist','Medium','Type','Description', 'Bitstream', 'Thumbnail', 'Date');
+$config['skylight_searchresult_display'] = array('Author','Title','Medium','Type','Description', 'Bitstream', 'Thumbnail', 'Date');
 
 $config['skylight_search_fields'] = array(
-    'Artist' => 'dc.contributor.author',
-    'Title' => 'dc.title',
+    'Artist' => 'dc.contributor.author.en',
+    'Title' => 'dc.title.en',
     'Classification' => 'dc.subject.en',
     'Accession Number'=> 'dc.identifier.en'
 );

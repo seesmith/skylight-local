@@ -10,9 +10,10 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <link rel="stylesheet" href="<?php echo base_url(); ?>theme/<?php echo $this->config->item('skylight_theme'); ?>/css/style.css?v=2">
 
-    <script src="<?php echo base_url(); ?>assets/modernizr/modernizr-1.7.min.js"></script>
+    <script src="<?php echo base_url()?>assets/modernizr/modernizr-1.7.min.js"></script>
     <script src="<?php echo base_url()?>assets/jquery-1.11.0/jquery-1.11.0.min.js"></script>
     <script src="<?php echo base_url()?>assets/jquery-ui-1.10.4/ui/minified/jquery-ui.min.js"></script>
+    <script src="<?php echo base_url()?>assets/bootstrap/dist/js/bootstrap.min.js"></script>
 
     <base href="<?php echo base_url() . index_page(); if (index_page() !== '') { echo '/'; } ?>">
 
