@@ -16,6 +16,7 @@ $config['skylight_container_field'] = 'location.coll';
 
 $config['skylight_fields'] = array('Title' => 'dc.title.en',
     'Author' => 'dc.creator.en',
+    'Department' => 'dc.creator.en',
     'Subject' => 'dc.subject.en',
     'Type' => 'dc.type.en',
     'Abstract' => 'dc.description.abstract',
@@ -28,7 +29,7 @@ $config['skylight_fields'] = array('Title' => 'dc.title.en',
 );
 
 $config['skylight_date_filters'] = array('Date' => 'dateIssued.year_sort');
-$config['skylight_filters'] = array('Department' => 'author_filter', 'Subject' => 'subject_filter');
+$config['skylight_filters'] = array('Department' => 'creator_filter', 'Subject' => 'subject_filter');
 
 $config['skylight_filter_delimiter'] = ':';
 
@@ -44,7 +45,7 @@ $config['skylight_meta_fields'] = array('Title' => 'dc.title',
     'Type' => 'dc.type');
 
 
-$config['skylight_recorddisplay'] = array('Title','Author','Subject','Type','Abstract', 'Place Made', 'File', 'Thumbnail','Date Made', 'Accession Number', 'Description', 'Collection');
+$config['skylight_recorddisplay'] = array('Title', 'Department', 'Date', 'Subject', 'Type', 'Description');
 
 $config['skylight_searchresult_display'] = array('Title','Author','Subject','Type','Abstract', 'File', 'Thumbnail');
 

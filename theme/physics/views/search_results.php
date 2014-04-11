@@ -71,9 +71,10 @@
     <li<?php if($index == 0) { echo ' class="first"'; } elseif($index == sizeof($docs) - 1) { echo ' class="last"'; } ?>>
 
 
+        <div class="iteminfo">
 
-        <div class = "iteminfo">
             <h3><a href="./record/<?php echo $doc['id']?>?highlight=<?php echo $query ?>"><?php echo $doc[$title_field][0]; ?></a></h3>
+
 
         <div class="tagdiv">
 
@@ -102,10 +103,13 @@
 
         </div> <!-- close tags div -->
 
+        </div>
 
-    <div class =  "thumbnailImage">
+        <div class="thumbnailimage">
         <?php if(isset($doc[$bitstream_field])) {
             //SR clone text from bitstream helpers to get individual aspects of bitstream. Cannot call bitstream helpers from here.
+
+            /*
             $i = 0;
             foreach ($doc[$bitstream_field] as $bitstream) {
 
@@ -122,9 +126,56 @@
               echo $thumbnailLink;
             }
             $i++;
-        }
+            }
+            */
+
+            $i = 0;
+            foreach ($doc[$bitstream_field] as $bitstream) {
+
+                $b_segments = explode("##", $bitstream);
+                $b_filename = $b_segments[1];
+                $b_handle = $b_segments[3];
+                $b_seq = $b_segments[4];
+                $b_handle_id = preg_replace('/^.*\//', '',$b_handle);
+                $b_uri = './record/'.$b_handle_id.'/'.$b_seq.'/'.$b_filename;
+
+                if ( $i == 0 && strpos($b_uri, ".jpg") > 0)
+                {
+
+                    if(isset($doc[$thumbnail_field])) {
+
+                        $thumbnail = $doc[$thumbnail_field][0];
+
+                        $t_segments = explode("##", $thumbnail);
+                        $t_filename = $t_segments[1];
+                        $t_handle = $t_segments[3];
+                        $t_seq = $t_segments[4];
+                        $handle_id = preg_replace('/^.*\//', '',$t_handle);
+                        $t_uri = './record/'.$handle_id.'/'.$t_seq.'/'.$t_filename;
+
+                        $thumbnailLink = '<a title = "' . $doc[$title_field][0] . '" class="fancybox"' . ' href=' . $b_uri . '> ';
+                        $thumbnailLink .= '<img src = "'.$t_uri.'" class="search-thumbnail" title="'. $doc[$title_field][0] .'" /></a>';
+
+
+                    }
+                    else { // there isn't a thumbnail
+
+                        $thumbnailLink = '<a title = "' . $doc[$title_field][0] . '" class="fancybox"' . ' href=' . $b_uri . '> ';
+                        $thumbnailLink .= '<img src = "'.$b_uri.'" class="search-thumbnail" title="'. $doc[$title_field][0] .'" /></a>';
+
+                    }
+
+                    echo $thumbnailLink;
+
+                } // end if jpg
+
+                $i++;
+                //$j++;
+
+            } // end for each
         }?>
-    </div>
+        </div>
+
 
 
 
