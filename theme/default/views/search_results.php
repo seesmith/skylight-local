@@ -149,7 +149,7 @@
         </div> <!-- close tags div -->
             <div class = "thumbnail-image">
                 <?php if(isset($doc[$bitstream_field])) {
-                    
+
                     $i = 0;
                     foreach ($doc[$bitstream_field] as $bitstream) {
 
