@@ -65,7 +65,7 @@ pre, code, kbd, samp                    { font-family: monospace, sans-serif; } 
 
 html                                 { overflow-y: scroll; } /* Always force a scrollbar in non-IE */
 a:hover, a:active         { outline: none; } /* Accessible focus treatment: people.opera.com/patrickl/experiments/keyboard/test */
-ul, ol                                 { margin-left: 2em; }
+ul, ol                    { margin-left: 2em; }
 ol                                         { list-style-type: decimal; }
 nav ul, nav li                 { margin: 0; list-style: none; list-style-image: none; } /* Remove margins for navigation lists */
 small                                 { font-size: 85%; }
@@ -169,9 +169,9 @@ header                          { position: relative; }
 .record-main-image              { max-width: 660px; max-height: 800px; }
 
 .tagdiv                         { position:relative;width: 250px;float:left; }
-.tagdiv a                       { font-size: 13px; color: #fff;background: #eb0955; -webkit-border-radius: 5px; -moz-border-radius: 5px; border-radius: 5px; padding: 2px 6px; margin-right: 8px; text-decoration: none; }
+.tagdiv a                       { font-size: 13px; color: #fff;background: #eb0955; -webkit-border-radius: 5px; -moz-border-radius: 5px; border-radius: 5px; padding: 2px 6px; line-height: 20px; margin-right: 8px; text-decoration: none;white-space:nowrap;}
 .tagdiv a.bold                  { font-weight: bold; }
-.listing li .tagdiv a:hover                 { background: #BBBBBC; color: #000; text-decoration: none; }
+.listing li .tagdiv a:hover     { background: #BBBBBC; color: #000; text-decoration: none; }
 
 .search							{ padding-bottom: 22px; border-bottom: 1px solid #093563; width: 660px; }
 .search input[type=text]		{
@@ -219,10 +219,10 @@ header                          { position: relative; }
 .col-sidebar ul.related li a.related-record { font-size: 14px; padding-bottom: 5px;}
 
 .tags                   { margin-top: 5px; margin: 0;}
-.tags a                 { font-size: 13px; color: #fff;background: #EB0955; -webkit-border-radius: 5px; -moz-border-radius: 5px; border-radius: 5px; padding: 2px 6px; line-height: 20px; margin-right: 8px; text-decoration: none; }
+.tags a                 { font-size: 13px; color: #fff;background: #EB0955; -webkit-border-radius: 5px; -moz-border-radius: 5px; border-radius: 5px; padding: 2px 6px; line-height: 20px; margin-right: 8px; text-decoration: none; display:inline-block; }
 .tags a.bold            { font-weight: bold; }
 .tags a:hover           { background: #093563; color: #ffffff; }
-.tags a.maker                   { display:inline-block; line-height: 15px; margin-bottom: 5px; }
+.tags a.maker           { display:inline-block; line-height: 15px; margin-bottom: 5px; }
 
 footer                  { display: block; border-bottom: 1px solid #093563; padding-bottom: 10px; margin-bottom: 15px; width: 660px; height: 130px;}
 

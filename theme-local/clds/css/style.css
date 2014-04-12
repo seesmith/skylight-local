@@ -182,7 +182,7 @@ header				{ position: relative; width: 940px; height: 141px; background-color: #
 .record-main-image              { max-width: 660px; max-height: 800px; }
 
 .tagdiv                         { position:relative; width: 250px;float:left; }
-.tagdiv a                       { font-size: 13px; color:#FFF; background: #00548e; -webkit-border-radius: 5px; -moz-border-radius: 5px; border-radius: 5px; padding: 2px 6px; line-height: 20px; margin-right: 8px; text-decoration: none; }
+.tagdiv a                       { font-size: 13px; color:#FFF; background: #00548e; -webkit-border-radius: 5px; -moz-border-radius: 5px; border-radius: 5px; padding: 2px 6px; line-height: 20px; margin-right: 8px; text-decoration: none; white-space:nowrap;}
 .tagdiv a.bold                  { font-weight: bold; }
 .listing li .tagdiv a:hover     { background: #FE2842; color: #fff; text-decoration: none; }
 
@@ -214,7 +214,7 @@ header				{ position: relative; width: 940px; height: 141px; background-color: #
 .col-sidebar ul.related li a.related-record { font-size: 14px; padding-bottom: 5px;}
 
 .tags					{ margin-top: 5px; margin: 0; }
-.tags a 				{ color: #fff; font-size: 13px; background: #00548e; -webkit-border-radius: 5px; -moz-border-radius: 5px; border-radius: 5px; padding: 2px 6px; margin-right: 5px; text-decoration: none; }
+.tags a 				{ color: #fff; font-size: 13px; background: #00548e; -webkit-border-radius: 5px; -moz-border-radius: 5px; border-radius: 5px; padding: 2px 6px; margin-right: 5px; text-decoration: none; display:inline-block; }
 .tags a.bold			{ font-weight: bold; }
 .tags a:hover			{ background: #FE2842; color: #fff; text-decoration: underline; }
 .tags a.subject         { display:inline-block; line-height: 15px; margin-bottom: 5px; }
