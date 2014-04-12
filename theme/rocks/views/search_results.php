@@ -146,33 +146,40 @@
 
         ?>
 
-
-
-
         </div> <!-- close tags div -->
-<div class =  "thumbnailImage">
-    <?php if(isset($doc[$bitstream_field])) {
-        //SR clone text from bitstream helpers to get individual aspects of bitstream. Cannot call bitstream helpers from here.
-        $i = 0;
-        foreach ($doc[$bitstream_field] as $bitstream) {
+            <div class = "thumbnail-image">
+                <?php if(isset($doc[$bitstream_field])) {
+                    //SR clone text from bitstream helpers to get individual aspects of bitstream. Cannot call bitstream helpers from here.
 
-        $thumbnail = $doc[$thumbnail_field][0];
-        $segments = explode("##", $thumbnail);
-        $filename = $segments[1];
-        $handle = $segments[3];
-        $seq = $segments[4];
-        $handle_id = preg_replace('/^.*\//', '',$handle);
-        $uri = './record/'.$handle_id.'/'.$seq.'/'.$filename;
-        $thumbnailLink = $this->skylight_utilities->getBitstreamThumbLinkParameterised($bitstream, $thumbnail, 'test', '140px', 0, 'style="display: block; margin-left: auto; margin-right: auto;" ');
+                    $i = 0;
+                    foreach ($doc[$bitstream_field] as $bitstream) {
 
-        if ($i == 0)
-        {
-          echo $thumbnailLink;
-        }
-        $i++;
-    }
-    }?>
-</div>
+                        $b_segments = explode("##", $bitstream);
+                        $b_filename = $b_segments[1];
+                        $b_handle = $b_segments[3];
+                        $b_seq = $b_segments[4];
+                        $b_handle_id = preg_replace('/^.*\//', '',$b_handle);
+                        $b_uri = './record/'.$b_handle_id.'/'.$b_seq.'/'.$b_filename;
+
+                        if (!$firstImg && strpos($b_uri, ".jpg") > 0)
+                        {
+                            $firstImg = true;
+                            //todo check as assumes there is always a thumbnail for a jpg
+                            $t_uri = $b_uri . '.jpg';
+
+                            $thumbnailLink = '<a title = "' . $doc[$title_field][0] . '" class="fancybox" rel="group' . $j . '" href=' . $b_uri . '> ';
+                            $thumbnailLink .= '<img src = "'.$t_uri.'" class="search-thumbnail" title="'. $doc[$title_field][0] .'" /></a>';
+
+                            echo $thumbnailLink;
+                        }
+
+                        $j++;
+
+                    } // end for each
+
+                } //end if bitstream ?>
+
+            </div>
         </div>
     </li>
         <?php }?>
