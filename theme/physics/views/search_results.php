@@ -106,6 +106,7 @@
         </div>
 
         <div class="thumbnailimage">
+
         <?php if(isset($doc[$bitstream_field])) {
             //SR clone text from bitstream helpers to get individual aspects of bitstream. Cannot call bitstream helpers from here.
 
@@ -129,7 +130,9 @@
             }
             */
 
-            $i = 0;
+            // We only display the first thumbnail, so Loop through the bitstreams until we find the first one that has a matching thumbnail to display.
+            // Assume the thumbnail will have the same name with '.jpg' appended.
+
             foreach ($doc[$bitstream_field] as $bitstream) {
 
                 $b_segments = explode("##", $bitstream);
@@ -139,13 +142,10 @@
                 $b_handle_id = preg_replace('/^.*\//', '',$b_handle);
                 $b_uri = './record/'.$b_handle_id.'/'.$b_seq.'/'.$b_filename;
 
-                if ( $i == 0 && strpos($b_uri, ".jpg") > 0)
-                {
 
-                    if(isset($doc[$thumbnail_field])) {
+                if(isset($doc[$thumbnail_field])) {
 
-                        $thumbnail = $doc[$thumbnail_field][0];
-
+                    foreach ($doc[$thumbnail_field] as $thumbnail) {
                         $t_segments = explode("##", $thumbnail);
                         $t_filename = $t_segments[1];
                         $t_handle = $t_segments[3];
@@ -153,31 +153,21 @@
                         $handle_id = preg_replace('/^.*\//', '',$t_handle);
                         $t_uri = './record/'.$handle_id.'/'.$t_seq.'/'.$t_filename;
 
-                        $thumbnailLink = '<a title = "' . $doc[$title_field][0] . '" class="fancybox"' . ' href=' . $b_uri . '> ';
-                        $thumbnailLink .= '<img src = "'.$t_uri.'" class="search-thumbnail" title="'. $doc[$title_field][0] .'" /></a>';
-
-
+                        if ($t_filename == $b_filename.'.jpg') {
+                            $thumbnailLink = '<a title = "' . $doc[$title_field][0] . '" class="fancybox"' . ' href="' . $b_uri . '"> ';
+                            $thumbnailLink .= '<img src = "'.$t_uri.'" class="search-thumbnail" title="'. $doc[$title_field][0] .'" /></a>';
+                            echo $thumbnailLink;
+                            // Ugly way of quitting the two foreach loops. Needs improved if someone has the time.
+                            break 2;
+                        }
                     }
-                    else { // there isn't a thumbnail
-
-                        $thumbnailLink = '<a title = "' . $doc[$title_field][0] . '" class="fancybox"' . ' href=' . $b_uri . '> ';
-                        $thumbnailLink .= '<img src = "'.$b_uri.'" class="search-thumbnail" title="'. $doc[$title_field][0] .'" /></a>';
-
-                    }
-
-                    echo $thumbnailLink;
-
-                } // end if jpg
-
-                $i++;
-                //$j++;
-
+                }
             } // end for each
         }?>
+
         </div>
 
-
-
+        <div class="clearfix"></div>
 
     </li>
         <?php }?>
