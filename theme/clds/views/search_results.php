@@ -149,9 +149,8 @@
 
             <div class = "thumbnail-image">
                 <?php if(isset($doc[$bitstream_field])) {
-                    //SR clone text from bitstream helpers to get individual aspects of bitstream. Cannot call bitstream helpers from here.
 
-                    $i = 0;
+                    $firstImg = false;
                     foreach ($doc[$bitstream_field] as $bitstream) {
 
                         $b_segments = explode("##", $bitstream);
@@ -161,10 +160,10 @@
                         $b_handle_id = preg_replace('/^.*\//', '',$b_handle);
                         $b_uri = './record/'.$b_handle_id.'/'.$b_seq.'/'.$b_filename;
 
+                        //todo check as assumes there is always a thumbnail for a jpg and only jpgs
                         if (!$firstImg && strpos($b_uri, ".jpg") > 0)
                         {
                             $firstImg = true;
-                            //todo check as assumes there is always a thumbnail for a jpg
                             $t_uri = $b_uri . '.jpg';
 
                             $thumbnailLink = '<a title = "' . $doc[$title_field][0] . '" class="fancybox" rel="group' . $j . '" href=' . $b_uri . '> ';

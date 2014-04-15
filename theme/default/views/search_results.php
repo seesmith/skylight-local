@@ -150,7 +150,8 @@
             <div class = "thumbnail-image">
                 <?php if(isset($doc[$bitstream_field])) {
 
-                    $i = 0;
+                    //todo check as assumes there is always a thumbnail for a jpg and only jpgs
+                    $firstImg = false;
                     foreach ($doc[$bitstream_field] as $bitstream) {
 
                         $b_segments = explode("##", $bitstream);
@@ -163,7 +164,6 @@
                         if (!$firstImg && strpos($b_uri, ".jpg") > 0)
                         {
                             $firstImg = true;
-                            //todo check as assumes there is always a thumbnail for a jpg
                             $t_uri = $b_uri . '.jpg';
 
                             $thumbnailLink = '<a title = "' . $doc[$title_field][0] . '" class="fancybox" rel="group' . $j . '" href=' . $b_uri . '> ';
