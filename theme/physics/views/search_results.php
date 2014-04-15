@@ -108,27 +108,6 @@
         <div class="thumbnailimage">
 
         <?php if(isset($doc[$bitstream_field])) {
-            //SR clone text from bitstream helpers to get individual aspects of bitstream. Cannot call bitstream helpers from here.
-
-            /*
-            $i = 0;
-            foreach ($doc[$bitstream_field] as $bitstream) {
-
-            $thumbnail = $doc[$thumbnail_field][0];
-            $segments = explode("##", $thumbnail);
-            $filename = $segments[1];
-            $handle = $segments[3];
-            $seq = $segments[4];
-            $handle_id = preg_replace('/^.*\//', '',$handle);
-            $uri = './record/'.$handle_id.'/'.$seq.'/'.$filename;
-            $thumbnailLink = $this->skylight_utilities->getBitstreamThumbLinkParameterised($bitstream, $thumbnail, 'test', '140px', 0, 'style="display: block; margin-left: auto; margin-right: auto;" ');
-            if ($i == 0)
-            {
-              echo $thumbnailLink;
-            }
-            $i++;
-            }
-            */
 
             // We only display the first thumbnail, so Loop through the bitstreams until we find the first one that has a matching thumbnail to display.
             // Assume the thumbnail will have the same name with '.jpg' appended.
@@ -154,7 +133,7 @@
                         $t_uri = './record/'.$handle_id.'/'.$t_seq.'/'.$t_filename;
 
                         if ($t_filename == $b_filename.'.jpg') {
-                            $thumbnailLink = '<a title = "' . $doc[$title_field][0] . '" class="fancybox"' . ' href="' . $b_uri . '"> ';
+                            $thumbnailLink = '<a title = "' . $doc[$title_field][0] . '" class="fancybox"' . ' href="' . $t_uri . '"> ';
                             $thumbnailLink .= '<img src = "'.$t_uri.'" class="search-thumbnail" title="'. $doc[$title_field][0] .'" /></a>';
                             echo $thumbnailLink;
                             // Ugly way of quitting the two foreach loops. Needs improved if someone has the time.

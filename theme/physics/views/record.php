@@ -84,15 +84,15 @@ if(isset($solr[$type_field])) {
 
 
 <?php if(isset($solr[$bitstream_field]) && $link_bitstream) { ?>
-    <div class="record_bitstreams"><h3>Digital Objects</h3>
-
+    <div class="record_bitstreams">
+        <h3>Digital Objects</h3>
+        <p>High quality versions of images are available on request by <a href="./feedback">email</a>.</p>
     <?php
     foreach($solr[$bitstream_field] as $bitstream) {
 
         $bitstreamLink = $this->skylight_utilities->getBitstreamLink($bitstream);
         $bitstreamLinkedImage = $this->skylight_utilities->getBitstreamLinkedImage($bitstream);
 
-        //echo $this->skylight_bitstream_helper->getBitstreamUri($bitstream);
 
         $segments = explode("##", $bitstream);
         $filename = $segments[1];
@@ -101,14 +101,33 @@ if(isset($solr[$type_field])) {
         $handle_id = preg_replace('/^.*\//', '',$handle);
         $uri = './record/'.$handle_id.'/'.$seq.'/'.$filename;
 
-        echo '<img src = "'.$uri.'" height = "280">';
+
+
+        if(isset($solr[$thumbnail_field])) {
+
+            foreach ($solr[$thumbnail_field] as $thumbnail) {
+                $t_segments = explode("##", $thumbnail);
+                $t_filename = $t_segments[1];
+                $t_handle = $t_segments[3];
+                $t_seq = $t_segments[4];
+                $handle_id = preg_replace('/^.*\//', '',$t_handle);
+                $t_uri = './record/'.$handle_id.'/'.$t_seq.'/'.$t_filename;
+
+                if ($t_filename == $filename.'.jpg') {
+                    //$thumbnailLink = '<a title = "' . $doc[$title_field][0] . '" class="fancybox"' . ' href="' . $b_uri . '"> ';
+                    //$thumbnailLink .= '<img src = "'.$t_uri.'" class="search-thumbnail" title="'. $doc[$title_field][0] .'" /></a>';
+                    //echo $thumbnailLink;
+                    echo '<img src = "'.$t_uri.'" >';
+                }
+            }
+        }
+
+
     ?>
-
-    <p><span class="label"></span><?php echo $bitstreamLink ?>
-    (<span class="bitstream_size"><?php echo getBitstreamSize($bitstream); ?></span>, <span class="bitstream_mime"><?php echo getBitstreamMimeType($bitstream); ?></span>, <span class="bitstream_description"><?php echo getBitstreamDescription($bitstream); ?></span>)</p>
-
     <?php
     } ?>
     </div>
 <?php
 } ?>
+
+
