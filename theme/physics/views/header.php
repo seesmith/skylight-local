@@ -18,7 +18,7 @@
         Remove this if you use the .htaccess -->
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 
-        <title>University of Edinburgh Art Collection</title>
+        <title>University of Edinburgh Physics Collection</title>
 
         <meta name="description" content="">
         <meta name="author" content="">
