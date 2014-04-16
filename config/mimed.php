@@ -6,6 +6,8 @@ $config['skylight_theme'] = 'mimed';
 
 $config['skylight_fullname'] = 'MUSICAL INSTRUMENT MUSEUMS';
 
+$config['skylight_ga_code'] = 'UA-XXXX-Y';
+
 $config['skylight_adminemail'] = 'lddt@mlist.is.ed.ac.uk';
 
 $config['skylight_oaipmhcollection'] = 'hdl_10683_14558';
