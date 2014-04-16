@@ -11,7 +11,7 @@
                 </div>
                 <div class="footer-policies">
                     <p>This collection is part of <a href="http://www.collections.ed.ac.uk" target="_blank">University Collections</a></p>
-                    <p><a href="http://www.ed.ac.uk/about/website/privacy" target="_blank">Privacy &amp; Cookies</a>&nbsp;&nbsp;<a href="./takedown" target="_blank">Takedown Policy</a></p>
+                    <p><a href="http://www.ed.ac.uk/about/website/privacy" target="_blank">Privacy &amp; Cookies</a>&nbsp;&nbsp;<a href="./takedown" target="_blank">Takedown Policy</a>&nbsp;&nbsp;<a href="./licensing" target="_blank">Licensing &amp; Copyright</a></p>
                     <p>Unless explicitly stated otherwise, all material is copyright &copy; <?php echo date("Y"); ?> <a href="http://www.ed.ac.uk" target="_blank">University of Edinburgh</a>.</p>
                 </div>
                 <div class="is-logo">
