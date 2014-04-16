@@ -149,9 +149,8 @@
 
             <div class = "thumbnail-image">
                 <?php if(isset($doc[$bitstream_field])) {
-                    //SR clone text from bitstream helpers to get individual aspects of bitstream. Cannot call bitstream helpers from here.
 
-                    $i = 0;
+                    $firstImg = false;
                     foreach ($doc[$bitstream_field] as $bitstream) {
 
                         $b_segments = explode("##", $bitstream);
@@ -161,37 +160,18 @@
                         $b_handle_id = preg_replace('/^.*\//', '',$b_handle);
                         $b_uri = './record/'.$b_handle_id.'/'.$b_seq.'/'.$b_filename;
 
-                        if ( $i == 0 && strpos($b_uri, ".jpg") > 0)
+                        //todo check as assumes there is always a thumbnail for a jpg and only jpgs
+                        if (!$firstImg && strpos($b_uri, ".jpg") > 0)
                         {
+                            $firstImg = true;
+                            $t_uri = $b_uri . '.jpg';
 
-                            if(isset($doc[$thumbnail_field])) {
-
-                                $thumbnail = $doc[$thumbnail_field][0];
-
-                                $t_segments = explode("##", $thumbnail);
-                                $t_filename = $t_segments[1];
-                                $t_handle = $t_segments[3];
-                                $t_seq = $t_segments[4];
-                                $handle_id = preg_replace('/^.*\//', '',$t_handle);
-                                $t_uri = './record/'.$handle_id.'/'.$t_seq.'/'.$t_filename;
-
-                                $thumbnailLink = '<a title = "' . $doc[$title_field][0] . '" class="fancybox" rel="group' . $j . '" href=' . $b_uri . '> ';
-                                $thumbnailLink .= '<img src = "'.$t_uri.'" class="search-thumbnail" title="'. $doc[$title_field][0] .'" /></a>';
-
-
-                            }
-                            else { // there isn't a thumbnail
-
-                                $thumbnailLink = '<a title = "' . $doc[$title_field][0] . '" class="fancybox" rel="group' . $j . '" href=' . $b_uri . '> ';
-                                $thumbnailLink .= '<img src = "'.$b_uri.'" class="search-thumbnail" title="'. $doc[$title_field][0] .'" /></a>';
-
-                            }
+                            $thumbnailLink = '<a title = "' . $doc[$title_field][0] . '" class="fancybox" rel="group' . $j . '" href=' . $b_uri . '> ';
+                            $thumbnailLink .= '<img src = "'.$t_uri.'" class="search-thumbnail" title="'. $doc[$title_field][0] .'" /></a>';
 
                             echo $thumbnailLink;
+                        }
 
-                        } // end if jpg
-
-                        $i++;
                         $j++;
 
                     } // end for each

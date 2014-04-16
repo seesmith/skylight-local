@@ -66,19 +66,17 @@
         } ?>
 
     </head>
-
-
     <body>
-
         <div id="container">
             <header>
                 <nav id="menu">
                     <ul class="menu-links">
-                        <li><a href="./feedback/" class="last">Contact</a></li>
-                        <li><a href="http://www.ed.ac.uk/schools-departments/information-services/library-museum-gallery/crc/projects" target="_blank">Research</a></li>
-                        <li><a href="http://libraryblogs.is.ed.ac.uk/" target="_blank">Blog</a></li>
-                        <li><a href="./about/">About</a></li>
-                        <li><a href="./">Home</a></li>
+                        <li><a href="./feedback/" title="Feedback" class="last">Feedback</a></li>
+                        <li><a href="http://www.ed.ac.uk/schools-departments/information-services/library-museum-gallery/crc/projects" title="Research" target="_blank">Research</a></li>
+                        <li><a href="http://libraryblogs.is.ed.ac.uk/" title="Library and University Collections Blog" target="_blank">Blog</a></li>
+                        <li><a href="http://www.ed.ac.uk/schools-departments/information-services/library-museum-gallery/crc" title="Centre for Research Collections" target="_blank">CRC</a></li>
+                        <li><a href="./about/" title="About this site">About</a></li>
+                        <li><a href="./" title="University Collections Home">Home</a></li>
                     </ul>
                 </nav>
                 <div id="collection-title">
@@ -89,7 +87,7 @@
                     <form action="./redirect/" method="post">
                         <fieldset class="search">
                             <input type="text" name="q" value="<?php if (isset($searchbox_query)) echo urldecode($searchbox_query); ?>" id="q" />
-                            <input type="submit" name="submit_search" class="btn" value="Search" id="submit_search" />
+                            <input type="submit" name="submit_search" class="btn" value="Search" Title="Find a collection" id="submit_search" />
                         </fieldset>
                     </form>
                 </div>
