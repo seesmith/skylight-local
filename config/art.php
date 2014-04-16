@@ -6,6 +6,8 @@ $config['skylight_theme'] = 'art';
 
 $config['skylight_fullname'] = 'University of Edinburgh Art Collection';
 
+$config['skylight_ga_code'] = 'UA-XXXX-Y';
+
 $config['skylight_adminemail'] = 'lddt@mlist.is.ed.ac.uk';
 
 $config['skylight_oaipmhcollection'] = 'hdl_10683_6';
