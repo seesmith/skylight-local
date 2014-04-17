@@ -353,8 +353,9 @@ table td                            { width: auto; color: #333333;}
 table tr                            { border-bottom: 1px dashed #D6D3C4; }
 table tr:last-child                 { border: 0; border-bottom: none; }
 
-.feedback_form                      { padding: 10px 0;}
+.feedback_form                      { padding: 20px 20px;}
 .feedback_form label                { display: block; width: 100px;}
+#recaptcha_table                    { width: 480px; }
 
 
 /* <END> Site Css \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\ */
