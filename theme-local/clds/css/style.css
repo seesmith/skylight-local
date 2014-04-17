@@ -193,8 +193,8 @@ header				{ position: relative; width: 940px; height: 141px; background-color: #
 }
 .col-sidebar h4 a:hover         { background: #FE2842 url(../images/bg-arrows.png) no-repeat 100% -92px; }
 .col-sidebar ul 				{ list-style-type: none; margin: 0 0 17px 0; font-size: 12px; }
-.col-sidebar ul li 				{ line-height: 16px; }
-.col-sidebar ul a 				{ text-decoration: none; display: block; padding: 0 17px; }
+.col-sidebar ul li 				{ line-height: 16px; padding: 0 17px; }
+.col-sidebar ul a 				{ text-decoration: none; display: block; }
 .col-sidebar ul a:hover			{ text-decoration: underline; }
 
 .col-sidebar ul.selected					{ background: #ffffff; -webkit-border-radius: 5px; -moz-border-radius: 5px; border-radius: 5px; padding: 7px 9px; margin: 0 17px 4px 17px; }
