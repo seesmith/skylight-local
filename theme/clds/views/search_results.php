@@ -166,7 +166,7 @@
                             $firstImg = true;
                             $t_uri = $b_uri . '.jpg';
 
-                            $thumbnailLink = '<a title = "' . $doc[$title_field][0] . '" class="fancybox" rel="group' . $j . '" href=' . $b_uri . '> ';
+                            $thumbnailLink = '<a title = "' . $doc[$title_field][0] . '" class="fancybox" rel="group' . $j . '" href="' . $b_uri . '"> ';
                             $thumbnailLink .= '<img src = "'.$t_uri.'" class="search-thumbnail" title="'. $doc[$title_field][0] .'" /></a>';
 
                             echo $thumbnailLink;
