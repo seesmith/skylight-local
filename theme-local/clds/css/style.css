@@ -226,7 +226,7 @@ footer                  { display: block; padding-bottom: 20px; padding-top: 20p
 .footer-links a.last	{ border: none; }
 .footer-links a:hover	{ text-decoration: underline; color: #005784; }
 
-.footer-disclaimer      { display: block; width: 95%; margin: auto; height: 70px;}
+.footer-disclaimer      { display: block; width: 612px; margin: auto; height: 70px;}
 .footer-logo            { display: block; float: left; }
 .is-logo                { display: block; float: left; padding-left: 10px; }
 .luclogo                { display: block; width: 64px; height: 64px; background: url(../images/CollectionsLUCLogo.png) no-repeat 0px 0px; }
