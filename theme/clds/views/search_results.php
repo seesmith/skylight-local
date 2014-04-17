@@ -98,7 +98,7 @@
                                 $lower_orig_filter = strtolower($type);
                                 $lower_orig_filter = urlencode($lower_orig_filter);
 
-                                echo '<a href="./search/*:*/Maker:%22'.$lower_orig_filter.'%7C%7C%7C'.$orig_filter.'%22">'.$type.'</a>';
+                                echo '<a href="./search/*:*/Type:%22'.$lower_orig_filter.'%7C%7C%7C'.$orig_filter.'%22">'.$type.'</a>';
                                 $num_types++;
                                 if($num_types < sizeof($doc[$type_field])) {
                                     echo ' ';
