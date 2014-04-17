@@ -96,17 +96,15 @@ if(isset($solr[$type_field])) {
 
         if (strpos($b_uri, ".jpg") > 0)
         {
+            // is there a main image
             if (!$mainImage) {
 
                 $bitstreamLink = '<div class="main-image">';
 
-                $bitstreamLink .= '<a title = "' . $record_title . '" class="fancybox" rel="group" href=' . $b_uri . '> ';
+                $bitstreamLink .= '<a title = "' . $record_title . '" class="fancybox" rel="group" href="' . $b_uri . '"> ';
                 $bitstreamLink .= '<img class="record-main-image" src = "'. $b_uri .'">';
                 $bitstreamLink .= '</a>';
 
-                /* $bitstreamLink .= '<p><span class="bitstream_size">';
-                $bitstreamLink .= getBitstreamSize($bitstream);
-                $bitstreamLink .= '</span></p>'; */
                 $bitstreamLink .= '</div>';
 
                 $mainImage = true;
@@ -114,33 +112,14 @@ if(isset($solr[$type_field])) {
             }
             else {
 
-                if(isset($doc[$thumbnail_field])) {
-                    $thumbnail = $doc[$thumbnail_field][0];
+                $t_uri = $b_uri . '.jpg';
 
-                    $t_segments = explode("##", $thumbnail);
-                    $t_filename = $t_segments[1];
-                    $t_handle = $t_segments[3];
-                    $t_seq = $t_segments[4];
-                    $t_handle_id = preg_replace('/^.*\//', '',$t_handle);
-                    $t_uri = './record/'.$t_handle_id.'/'.$t_seq.'/'.$t_filename;
-
-                    $thumbnailLink[$numThumbnails] = '<div class="thumbnail-tile';
-                    if($numThumbnails == 0 || $numThumbnails == 4) {
-                        $thumbnailLink[$numThumbnails] .= ' first';
-                    }
-                    $thumbnailLink[$numThumbnails] .= '"><a title = "' . $record_title . '" class="fancybox" rel="group" href=' . $t_uri . '> ';
-                    $thumbnailLink[$numThumbnails] .= '<img src = "'.$t_uri.'" class="record-thumbnail" title="'. $record_title .'" /></a></div>';
-
+                $thumbnailLink[$numThumbnails] = '<div class="thumbnail-tile';
+                if($numThumbnails % 4 === 0) {
+                    $thumbnailLink[$numThumbnails] .= ' first';
                 }
-                else {
-
-                    $thumbnailLink[$numThumbnails] = '<div class="thumbnail-tile';
-                    if($numThumbnails == 0 || $numThumbnails == 4) {
-                        $thumbnailLink[$numThumbnails] .= ' first';
-                    }
-                    $thumbnailLink[$numThumbnails] .= '"><a title = "' . $record_title . '" class="fancybox" rel="group" href=' . $b_uri . '> ';
-                    $thumbnailLink[$numThumbnails] .= '<img src = "'.$b_uri.'" class="record-thumbnail" title="'. $record_title .'" /></a></div>';
-                }
+                $thumbnailLink[$numThumbnails] .= '"><a title = "' . $record_title . '" class="fancybox" rel="group" href="' . $t_uri . '"> ';
+                $thumbnailLink[$numThumbnails] .= '<img src = "'.$t_uri.'" class="record-thumbnail" title="'. $record_title .'" /></a></div>';
 
                 $numThumbnails++;
 
@@ -174,13 +153,35 @@ if(isset($solr[$type_field])) {
         echo '<div class="clearfix"></div>';
     }
 
+    $i = 0;
+    $newStrip = false;
     if($numThumbnails > 0) {
 
         echo '<div class="thumbnail-strip">';
 
         foreach($thumbnailLink as $thumb) {
-            echo $thumb;
+
+            if($newStrip)
+            {
+
+                echo '</div><div class="clearfix"></div>';
+                echo '<div class="thumbnail-strip">';
+                echo $thumb;
+                $newStrip = false;
+            }
+            else {
+
+                echo $thumb;
+            }
+
+            $i++;
+
+            // if we're starting a new thumbnail strip
+            if($i % 4 === 0) {
+                $newStrip = true;
+            }
         }
+
         echo '</div><div class="clearfix"></div>';
     }
 

@@ -150,23 +150,23 @@
             <div class = "thumbnail-image">
                 <?php if(isset($doc[$bitstream_field])) {
 
-                    //todo check as assumes there is always a thumbnail for a jpg and only jpgs
                     $firstImg = false;
                     foreach ($doc[$bitstream_field] as $bitstream) {
 
-                    $b_segments = explode("##", $bitstream);
-                    $b_filename = $b_segments[1];
-                    $b_handle = $b_segments[3];
-                    $b_seq = $b_segments[4];
-                    $b_handle_id = preg_replace('/^.*\//', '',$b_handle);
-                    $b_uri = './record/'.$b_handle_id.'/'.$b_seq.'/'.$b_filename;
+                        $b_segments = explode("##", $bitstream);
+                        $b_filename = $b_segments[1];
+                        $b_handle = $b_segments[3];
+                        $b_seq = $b_segments[4];
+                        $b_handle_id = preg_replace('/^.*\//', '',$b_handle);
+                        $b_uri = './record/'.$b_handle_id.'/'.$b_seq.'/'.$b_filename;
 
+                        //todo check as assumes there is always a thumbnail for a jpg and only jpgs
                         if (!$firstImg && strpos($b_uri, ".jpg") > 0)
                         {
                             $firstImg = true;
-                             $t_uri = $b_uri . '.jpg';
+                            $t_uri = $b_uri . '.jpg';
 
-                            $thumbnailLink = '<a title = "' . $doc[$title_field][0] . '" class="fancybox" rel="group' . $j . '" href=' . $b_uri . '> ';
+                            $thumbnailLink = '<a title = "' . $doc[$title_field][0] . '" class="fancybox" rel="group' . $j . '" href="' . $b_uri . '"> ';
                             $thumbnailLink .= '<img src = "'.$t_uri.'" class="search-thumbnail" title="'. $doc[$title_field][0] .'" /></a>';
 
                             echo $thumbnailLink;
@@ -174,9 +174,9 @@
 
                         $j++;
 
-                } // end for each
+                    } // end for each
 
-            } //end if bitstream ?>
+                } //end if bitstream ?>
 
             </div>
             <div class="clearfix"></div>
