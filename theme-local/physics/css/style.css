@@ -110,7 +110,7 @@ h1 								{ font-size: 18px; line-height: 24px; margin: 30px 0 17px 0px; positi
 h2 								{ font-size: 16px; line-height: 36px; margin: 0 0 0 0; }
 h3 								{ font-size: 14px; line-height: 18px; margin: 0 0 9px 0; }
 
-h1.itemtitle 					{ font-size: 18px; line-height: 24px; margin: 30px 0 17px 54px; position: relative; }
+h1.itemtitle 					{ font-size: 18px; line-height: 24px; margin: 30px 0 17px 10px; position: relative; }
 
 p 								{ font-size: 13px; margin-bottom: 18px; }
 
@@ -156,6 +156,8 @@ header				{ position: relative; }
 .ie7 .menulogo 		            { top: -40px; }
 
 #collection-search              { width: 660px; padding-top: 60px;}
+
+.record_bitstreams  { padding-top: 10px; }
 
 /* Common Containers & Subclasses ----------------------------------------------------------------------------------------*/
 .logo				{ display: block; text-indent: -9999px; width: 240px; height: 136px;  background: url(../images/Sci-Fun.jpg) no-repeat 0px 0px; position: absolute; top: 8px; right: 0px;}
@@ -203,7 +205,7 @@ header				{ position: relative; }
 .col-sidebar ul.related .tags a 			{ padding: 2px 5px; display: inline; background: #ffffff; }
 .col-sidebar ul.related .tags a:hover		{ text-decoration: none; background: #00548e; }
 
-.tags					{ margin: 0 0 0 54px; }
+.tags					{ margin: 0 0 0 10px; }
 .tags a 				{ font-size: 13px; background: #def5fb; -webkit-border-radius: 5px; -moz-border-radius: 5px; border-radius: 5px; padding: 2px 6px; line-height: 20px; margin-right: 8px; text-decoration: none; }
 .tags a.bold			{ font-weight: bold; }
 .tags a:hover			{ background: #00548e; color: #fff; }
@@ -280,8 +282,7 @@ h1 .icon							{ top: -5px; left: -65px; }
 
 table								{ width: 100%; background: #f1f1f2; }
 table caption						{ text-align: left; background: #677077; color: #fff; font-size: 12px; text-transform: uppercase; font-weight: bold; padding: 8px 17px; border-bottom: 1px solid #fff;  }
-table td,
-table thx							{ padding: 8px 17px; }
+table td, table th					{ padding: 8px 17px; }
 table th							{ text-align: left; border-right: 1px solid #fff;  }
 table tr:nth-child(2n)				{ background: #e7e8ea; }
 
