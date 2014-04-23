@@ -16,7 +16,7 @@ if(isset($solr[$type_field])) {
 ?>
 
 
-<h1 class="itemtitle"><span class="icon <?php echo $type ?>"></span><?php echo $record_title ?></h1>
+<h1 class="itemtitle"><?php echo $record_title ?></h1>
 <div class="tags">
     <?php
 
@@ -28,20 +28,21 @@ if(isset($solr[$type_field])) {
         }
     }
 
-    $date_field = $this->skylight_utilities->getField("Date");
-    if (isset($solr[$date_field])) {
-        foreach($solr[$date_field] as $date) {
-            echo '<span>('.$date.')</span>';
-        }
-    }
-    else {
-        $date_field = $this->skylight_utilities->getField("Year");
-        if (isset($solr[$date_field])) {
-            foreach($solr[$date_field] as $date) {
-                echo '<span>('.$date.')</span>';
-            }
-        }
-    }
+    // Commented out date since we list it in the metadata. Robin.
+    //$date_field = $this->skylight_utilities->getField("Date");
+    //if (isset($solr[$date_field])) {
+    //    foreach($solr[$date_field] as $date) {
+    //        echo '<span>('.$date.')</span>';
+    //    }
+    //}
+    //else {
+    //    $date_field = $this->skylight_utilities->getField("Year");
+    //    if (isset($solr[$date_field])) {
+     //       foreach($solr[$date_field] as $date) {
+     //           echo '<span>('.$date.')</span>';
+     //       }
+     //   }
+    //}
 
     ?>
 </div>
@@ -114,18 +115,16 @@ if(isset($solr[$type_field])) {
                 $t_uri = './record/'.$handle_id.'/'.$t_seq.'/'.$t_filename;
 
                 if ($t_filename == $filename.'.jpg') {
-                    //$thumbnailLink = '<a title = "' . $doc[$title_field][0] . '" class="fancybox"' . ' href="' . $b_uri . '"> ';
-                    //$thumbnailLink .= '<img src = "'.$t_uri.'" class="search-thumbnail" title="'. $doc[$title_field][0] .'" /></a>';
-                    //echo $thumbnailLink;
-                    echo '<img src = "'.$t_uri.'" >';
+                    $thumbnailLink = '<a title = "' . $solr[$title_field][0] . '" class="fancybox"' . ' href="' . $t_uri . '"> ';
+                    $thumbnailLink .= '<img src = "'.$t_uri.'" title="'. $solr[$title_field][0] .'" /></a>';
+                    echo $thumbnailLink;
                 }
             }
         }
+    }
 
 
     ?>
-    <?php
-    } ?>
     </div>
 <?php
 } ?>
