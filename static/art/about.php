@@ -1,25 +1,30 @@
 <div class="content">
     <div class="content byEditor">
-        <h1>Holding text to be revisited for launch</h1>
-        <h2>About the University of Edinburgh Art Collection</h2>
+        <h1>About the University of Edinburgh Art Collection</h1>
         <p>
-            Info about the collection
+            The University holds around 2,500 works of art. The Art Collection is an amalgamation of the University of Edinburgh’s original Fine Art Collection, which spans some 400 years of collecting, and the Edinburgh College of Art (ECA) collection of prints, drawings, paintings and sculpture. The ECA collection tells a unique story of the artistic output of the College, particularly in the early to mid-20th Century. Some of the most respected names is Scottish art appear, such as S.J. Peploe, John Bellany, Anne Redpath and Elizabeth Blackadder.
+        </p>
+        <p>
+            The Art Collection has as its centrepiece the Torrie Collection of seventeenth-century Dutch and Italian Masters with works by Ruisdael, ten Oever, Van der Meulen and Giambologna. The University also holds the second largest collection of portraits in Scotland, ranging from seventeenth-century portraits of John Napier and John Knox to the recent dynamic painting of Nobel Prize winner Peter Higgs by Ken Currie.
+        </p>
+        <p>
+            In recent years, particular emphasis has been placed on collecting Modern and Contemporary art, including from graduating students at ECA and also artists who have exhibited at the University of Edinburgh’s Talbot Rice Gallery.
         </p>
 
-        <h2>Art Collections Online</h2>
+        <h1>Art Collections Online</h1>
         <p>
-            Info about this site
+            We aim to represent all of the University Art Collection online through this resource. This is an ongoing process as the existing collection continues to be catalogued and photographed and also as new acquisitions are brought in. Images accompany records where there is an existing image file of sufficient quality and images will be added to existing records as part of wider cataloguing efforts. If there is a particular work that is of interest that does not have an accompanying image, please contact us directly on the details below.
         </p>
-        <h2>University Collections</h2>
+        <h1>University Collections</h1>
         <p>
             Info about the University Collections link to collections.ed.ac.uk
         </p>
-        <h2>BBC Your Paintings</h2>
+        <h1>BBC Your Paintings</h1>
         <p>
         <a href="http://www.bbc.co.uk/arts/yourpaintings/galleries/locations/university-of-edinburgh-5095" title="" >University Collections on BBC Your Paintings</a><br/>
         <a href="http://www.bbc.co.uk/arts/yourpaintings/galleries/locations/eca-part-of-university-of-edinburgh-fine-art-collection-7553" title="" >Edinburgh College of Art Collections on BBC Your Paintings</a>
         <p/>
-        <h2>Contact Details</h2>
+        <h1>Contact Details</h1>
         <p>
             For further information about the University of Edinburgh Art Collections please contact:
         </p>
