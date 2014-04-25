@@ -26,6 +26,8 @@ $config['skylight_fields'] = array('Title' => 'dc.title.en',
     'Thumbnail'=> 'dc.format.thumbnail',
     'Description'=>'dc.description.en',
     'Origin' => 'dc.coverage.spatial.en',
+    'Parent Collection' => 'dc.relation.ispartof.en',
+    'Sub Collections' => 'dc.relation.haspart.en',
 );
 
 $config['skylight_date_filters'] = array();
