@@ -67,15 +67,15 @@
                 </a>
             </li>
             <li class="tile">
-                <a href="http://images.is.ed.ac.uk/" target="_blank" class="caption">
-                    <img src="<?php echo base_url(); ?>theme/<?php echo $this->config->item('skylight_theme'); ?>/images/imagestile.jpg" alt="Edinburgh University Image Collections">
-                    <span onmouseover="this.style.background='#005784';this.style.color='#FFF'" onmouseout="this.style.background='#FFFFFF';this.style.color='#005784'">Image </br>Collections</span>
+                <a href="http://www.ed.ac.uk/schools-departments/information-services/library-museum-gallery/crc/events" target="_blank" class="caption">
+                    <img src="<?php echo base_url(); ?>theme/<?php echo $this->config->item('skylight_theme'); ?>/images/pastexhibitionstile.jpg" alt="Edinburgh University Past Exhibitions">
+                    <span onmouseover="this.style.background='#005784';this.style.color='#FFF'" onmouseout="this.style.background='#FFFFFF';this.style.color='#005784'">Past <br />Exhibitions</span>
                 </a>
             </li>
             <li class="tile">
-                <a href="http://www.era.lib.ed.ac.uk" target="_blank" class="caption">
-                    <img src="<?php echo base_url(); ?>theme/<?php echo $this->config->item('skylight_theme'); ?>/images/publicationstile.jpg" alt="Edinburgh University Science Publications">
-                    <span onmouseover="this.style.background='#005784';this.style.color='#FFF'" onmouseout="this.style.background='#FFFFFF';this.style.color='#005784'">Theses &amp; Publications</span>
+                <a href="http://images.is.ed.ac.uk/" target="_blank" class="caption">
+                    <img src="<?php echo base_url(); ?>theme/<?php echo $this->config->item('skylight_theme'); ?>/images/lunatile.jpg" alt="Edinburgh University Image Collections">
+                    <span onmouseover="this.style.background='#005784';this.style.color='#FFF'" onmouseout="this.style.background='#FFFFFF';this.style.color='#005784'">Image </br>Collections</span>
                 </a>
             </li>
         </ul>
