@@ -62,7 +62,7 @@
             </li>
             <li class="tile">
                 <a href="http://exhibitions.ed.ac.uk/" target="_blank" class="caption">
-                    <img src="<?php echo base_url(); ?>theme/<?php echo $this->config->item('skylight_theme'); ?>/images/exhibitionstile.jpg" alt="Edinburgh University Exhibitions">
+                    <img src="<?php echo base_url(); ?>theme/<?php echo $this->config->item('skylight_theme'); ?>/images/currentexhibitionstile.jpg" alt="Edinburgh University Exhibitions">
                     <span onmouseover="this.style.background='#005784';this.style.color='#FFF'" onmouseout="this.style.background='#FFFFFF';this.style.color='#005784'">Latest <br/>Exhibitions</span>
                 </a>
             </li>
