@@ -142,11 +142,20 @@ header				{ position: relative; width: 940px; height: 141px; background-color: #
 
 /* Common Containers & Subclasses ----------------------------------------------------------------------------------------*/
 
-#menu                           { width: 940px; background-color: #333333; margin: 0 auto; height: 2.5em; }
-.menu-links li					{ display: inline; float: right; height: 2.5em; padding-left: 0; padding-right: 0; }
-.menu-links li a 			    { font-weight: bold; font-size: 11px; text-transform: uppercase; float: left; text-decoration: none; margin-left: 10px; color: #FFFFFF; display: inline-block; height: 32px; line-height: 2.5em; padding: 3px 20px 2px; text-align: center; }
-.menu-links li a:hover		    { background-color: #005784; }
-.menu-links li a.last		    { border: none; }
+#menu                               { width: 940px; background-color: #333333; margin: 0 auto; height: 33px; }
+.menu-links li					    { display: inline; float: right; height: 33px; padding-left: 0; padding-right: 0; }
+.menu-links li a 			        { font-weight: bold; font-size: 11px; text-transform: uppercase; float: left; text-decoration: none; margin-left: 10px; color: #FFFFFF; display: inline-block; height: 33px; line-height: 2.5em; padding: 3px 20px 2px; text-align: center; }
+.menu-links li a:hover		        { background-color: #005784; }
+.menu-links li a.last		        { border: none; }
+
+.social-links li                          { display: block; float: left; height: 33px; padding-left: 0; padding-right: 0; }
+.social-links li a                        { display: block; margin: 0; width: 33px; height: 33px; line-height: 33px; padding: 0;}
+.social-links li a.facebook-icon          { display: block; width: 33px; height: 33px; float: left; background: url(../images/facebookicon.png) no-repeat 0px 0px;}
+.social-links li a.facebook-icon:hover    { display: block; background: url(../images/facebookicon2.png) no-repeat 0px 0px; }
+.social-links li a.twitter-icon           { display: block; width: 33px; height: 33px; float: left; background: url(../images/twittericon.png) no-repeat 0px 0px;}
+.social-links li a.twitter-icon:hover     { display: block; background: url(../images/twittericon2.png) no-repeat 0px 0px; }
+.social-links li a.flickr-icon            { display: block; width: 33px; height: 33px; float: left; background: url(../images/flickricon.png) no-repeat 0px 0px;}
+.social-links li a.flickr-icon:hover      { display: block; background: url(../images/flickricon2.png) no-repeat 0px 0px; }
 
 #collection-title	            { display: block; width: 540px; height: 88px; padding: 10px 0; float: left; }
 .uoelogo                        { display: block; width: 119px; height: 88px; float: left; background: url(../images/UoELogo.gif) no-repeat 0px 0px;}
@@ -219,12 +228,19 @@ header				{ position: relative; width: 940px; height: 141px; background-color: #
 .tags a:hover			{ background: #FE2842; color: #fff; text-decoration: underline; }
 .tags a.subject         { display:inline-block; line-height: 15px; margin-bottom: 5px; }
 
-footer                  { display: block; padding-bottom: 20px; padding-top: 20px; width: 100%; background-color: #fff; border-top: 1px solid #005784; }
+footer                  { display: block; padding-bottom: 20px; width: 100%; background-color: #fff; }
 
-.footer-links			{ display: block; margin-top: 15px; margin-bottom: 15px; padding-top: 10px; padding-bottom: 10px; text-align: center; border-top: 1px solid #58A09D; border-bottom: 1px solid #58A09D; width: 660px;}
-.footer-links a 		{ font-size: 10px; text-transform: uppercase; color: #AAA79E  !important; text-decoration: none; font-weight: bold; border-right: 1px solid #cecece; padding-right: 15px; margin-right: 10px; }
+.footer-links			{ display: block; margin-bottom: 15px; padding-top: 10px; padding-bottom: 10px; text-align: center; border-top: 1px solid #005784; border-bottom: 1px solid #005784; width: 100%;}
+.footer-links a 		{ font-size: 10px; text-transform: uppercase; text-decoration: none; color: #AAA79E !important; font-weight: bold; border-right: 1px solid #cecece; padding-right: 15px; margin-right: 10px; }
 .footer-links a.last	{ border: none; }
-.footer-links a:hover	{ text-decoration: underline; color: #005784; }
+.footer-links a:hover	{ text-decoration: underline; }
+
+.footer-links a.collections, .collections:hover     { color: #FE2842 !important; }
+.footer-links a.art, .art:hover                     { color: #58A09D !important; }
+.footer-links a.mimed, .mimed:hover                 { color: #EB0955 !important; }
+.footer-links a.exhibitions, .exhibitions:hover     { color: #000000 !important; }
+.footer-links a.calendars, .calendars:hover         { color: #990066 !important; }
+.footer-links a.images, .images:hover         { color: #00548E !important; }
 
 .footer-disclaimer      { display: block; width: 625px; margin: auto; height: 70px;}
 
@@ -236,8 +252,6 @@ footer                  { display: block; padding-bottom: 20px; padding-top: 20p
 
 .is-logo                { display: block; float: left; padding-left: 10px; }
 .islogo                 { display: block; width: 50px; height: 64px; background: url(../images/islogo.gif) no-repeat 0px 0px; }
-
-
 
 /* Custom Containers & Subclasses ----------------------------------------------------------------------------------------*/
 

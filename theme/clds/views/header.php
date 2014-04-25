@@ -70,6 +70,11 @@
         <div id="container">
             <header>
                 <nav id="menu">
+                    <ul class="social-links">
+                        <li><a href="https://www.facebook.com/crc.edinburgh" class="facebook-icon" target="_blank" title="CRC on Facebook"></a></li>
+                        <li><a href="https://twitter.com/UofECRC" class="twitter-icon" target="_blank" title="CRC on Twitter"></a></li>
+                        <li><a href="https://www.flickr.com/photos/crcedinburgh" class="flickr-icon" target="_blank" title="CRC on Flickr"></a></li>
+                    </ul>
                     <ul class="menu-links">
                         <li><a href="./feedback/" title="Feedback" class="last">Feedback</a></li>
                         <li><a href="http://www.ed.ac.uk/schools-departments/information-services/library-museum-gallery/crc/projects" title="Research" target="_blank">Research</a></li>
@@ -79,6 +84,7 @@
                         <li><a href="./" title="University Collections Home">Home</a></li>
                     </ul>
                 </nav>
+                <div class="clearfix"></div>
                 <div id="collection-title">
                     <a href="http://www.ed.ac.uk" class="uoelogo" title="The University of Edinburgh" target="_blank"></a>
                     <a href="<?php echo base_url(); ?>" class="collectionslogo" title="University of Edinburgh Collections"></a>
