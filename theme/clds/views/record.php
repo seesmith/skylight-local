@@ -4,6 +4,8 @@ $subject_field = $this->skylight_utilities->getField("Subject");
 $type_field = $this->skylight_utilities->getField("Type");
 $bitstream_field = $this->skylight_utilities->getField("Bitstream");
 $thumbnail_field = $this->skylight_utilities->getField("Thumbnail");
+$parent_collection_field = $this->skylight_utilities->getField("Parent Collection");
+$child_collection_field = $this->skylight_utilities->getField("Sub Collections");
 
 
 $type = 'Unknown';
@@ -64,7 +66,66 @@ if(isset($solr[$type_field])) {
                 echo '</td></tr>';
             }
 
-        } ?>
+        }
+
+        if(isset($solr[$parent_collection_field])) {
+            echo '<tr><th>Parent Collection</th><td>';
+            foreach($solr[$parent_collection_field] as $parent) {
+                $find   = 'http://hdl.handle.net';
+                $pos = strpos($parent, $find);
+
+                if ($pos !== false)
+                {
+
+                    $parents= explode("|", $parent);
+                    //todo move into config
+                    $parent_link = str_replace("http://hdl.handle.net/10683/", "./record/",$parents[0]);
+                    $parent_name = $parents[1];
+
+                    echo '<a href="'.$parent_link.'">'.$parent_name.'</a>';
+
+                }
+                else{
+                    echo $parent;
+                }
+                if($index < sizeof($solr[$parent_collection_field]) - 1) {
+                    echo '; ';
+                }
+
+
+            }
+            echo '</td></tr>';
+        }
+        if(isset($solr[$child_collection_field])) {
+            echo '<tr><th>Sub Collections</th><td>';
+            foreach($solr[$child_collection_field] as $child) {
+                $find   = 'http://hdl.handle.net';
+                $pos = strpos($child, $find);
+
+                if ($pos !== false)
+                {
+
+                    $children= explode("|", $child);
+                    //todo move into config
+                    $link = str_replace("http://hdl.handle.net/10683/", "./record/",$children[0]);
+                    $name = $children[1];
+
+                    echo '<a href="'.$link.'">'.$name.'</a>';
+
+                }
+                else{
+                    echo $child;
+                }
+                if($index < sizeof($solr[$child_collection_field]) - 1) {
+                    echo '; ';
+                }
+
+
+            }
+            echo '</td></tr>';
+        }
+
+        ?>
         </tbody>
     </table>
 
