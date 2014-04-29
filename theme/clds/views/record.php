@@ -6,6 +6,7 @@ $bitstream_field = $this->skylight_utilities->getField("Bitstream");
 $thumbnail_field = $this->skylight_utilities->getField("Thumbnail");
 $parent_collection_field = $this->skylight_utilities->getField("Parent Collection");
 $child_collection_field = $this->skylight_utilities->getField("Sub Collections");
+$handle_prefix = $this->config->item('skylight_handle_prefix');
 
 
 $type = 'Unknown';
@@ -79,7 +80,7 @@ if(isset($solr[$type_field])) {
 
                     $parents= explode("|", $parent);
                     //todo move into config
-                    $parent_link = str_replace("http://hdl.handle.net/10683/", "./record/",$parents[0]);
+                    $parent_link = str_replace("http://hdl.handle.net/". $handle_prefix."/", "./record/",$parents[0]);
                     $parent_name = $parents[1];
 
                     echo '<a href="'.$parent_link.'">'.$parent_name.'</a>';
@@ -107,7 +108,7 @@ if(isset($solr[$type_field])) {
 
                     $children= explode("|", $child);
                     //todo move into config
-                    $link = str_replace("http://hdl.handle.net/10683/", "./record/",$children[0]);
+                    $link = str_replace("http://hdl.handle.net/". $handle_prefix."/", "./record/",$children[0]);
                     $name = $children[1];
 
                     echo '<a href="'.$link.'">'.$name.'</a>';

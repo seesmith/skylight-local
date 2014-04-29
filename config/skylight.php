@@ -3,6 +3,9 @@
     // The URL of the parent solr server
     $config['skylight_solrbase'] = 'http://localhost:8080/solr/search/';
 
+    //DSpace handle server prefix
+    $config['skylight_handle_prefix'] = '10683';
+
     // The platform and version of your repository.
     // Currently DSpace 1.7.1+ is the only supported repository
     $config['skylight_repository_type'] = 'dspace'; // Demo 'dspace'
@@ -31,7 +34,7 @@
     $config['skylight_oaipmhlink'] = 'http://hdl.handle.net/123456789/';
 
     // The URL base for where digital objects can be proxied from
-    $config['skylight_objectproxy_url'] = 'http://localhost:8080/xmlui/bitstream/10683/';
+    $config['skylight_objectproxy_url'] = 'http://localhost:8080/isdocs/bitstream/10683/';
 
 
     // Set to the number of minutes to cache pages for. Set to false for no caching.
