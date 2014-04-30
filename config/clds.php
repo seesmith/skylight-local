@@ -16,7 +16,7 @@ $config['skylight_container_field'] = 'location.coll';
 
 $config['skylight_fields'] = array('Title' => 'dc.title.en',
     'Custodian' => 'dc.creator.en',
-    'Custodial History' => 'cld.custodialHistory',
+    'Custodial History' => 'cld.custodialHistory.en',
     'Identifier' => 'dc.identifier.other',
     'Subject' => 'dc.subject.en',
     'Highlight' => 'dc.subject.highlight',
@@ -40,7 +40,7 @@ $config['skylight_meta_fields'] = array('Title' => 'dc.title',
     'Type' => 'dc.type',
 );
 
-$config['skylight_recorddisplay'] = array('Title','Type', 'Custodian','Custodian History', 'Subject', 'Description', 'Origin','Date','Identifier');
+$config['skylight_recorddisplay'] = array('Title','Type','Subject','Description','Custodian','Custodial History','Origin','Date','Identifier');
 
 $config['skylight_searchresult_display'] = array('Title','Custodian','Custodial History', 'Subject','Type','Origin', 'Bitstream', 'Thumbnail');
 
