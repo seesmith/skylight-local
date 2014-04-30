@@ -1,5 +1,8 @@
 <?php
 
+    // Uncomment this if you want to use urls of the form http://.../prefix/...
+    $config['skylight_url_prefixes'] = array('physics', 'mimed', 'art');
+
     // The URL of the parent solr server
     $config['skylight_solrbase'] = 'http://localhost:8080/solr/search/';
 
@@ -66,9 +69,9 @@
     // $config['skylight_debug'] = false;
 
     // Can configuration files be overwritten by the user ?config={vhostname}
-    $config['skylight_config_allowoverride'] = true;
+    $config['skylight_config_allowoverride'] = false;
 
     // Can themes be overridden by the user using ?theme={themename}
-    $config['skylight_theme_allowoverride'] = true;
+    $config['skylight_theme_allowoverride'] = false;
 
 ?>

@@ -2,9 +2,14 @@
 
 $config['skylight_appname'] = 'physics';
 
+// Uncomment this if you are using a url of the form http://.../physics/...
+$config['skylight_url_prefix'] = 'physics';
+
 $config['skylight_theme'] = 'physics';
 
 $config['skylight_fullname'] = 'School of Physics and Astronomy Image Archive';
+
+//$config['base_url']	= 'http://localhost/physics/';
 
 $config['skylight_ga_code'] = 'UA-XXXX-Y';
 
