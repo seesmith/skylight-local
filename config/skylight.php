@@ -1,5 +1,8 @@
 <?php
 
+    // Uncomment this if you want to use urls of the form http://.../prefix/...
+    $config['skylight_url_prefixes'] = array('physics', 'mimed', 'art');
+
     // The URL of the parent solr server
     $config['skylight_solrbase'] = 'http://localhost:8080/solr/search/';
 
