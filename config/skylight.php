@@ -69,9 +69,9 @@
     // $config['skylight_debug'] = false;
 
     // Can configuration files be overwritten by the user ?config={vhostname}
-    $config['skylight_config_allowoverride'] = false;
+    $config['skylight_config_allowoverride'] = true;
 
     // Can themes be overridden by the user using ?theme={themename}
-    $config['skylight_theme_allowoverride'] = false;
+    $config['skylight_theme_allowoverride'] = true;
 
 ?>
