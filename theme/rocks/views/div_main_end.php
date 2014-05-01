@@ -1,9 +1,16 @@
         <footer>
             <div class="footer-links">
-                <a href="./"><?php echo $site_title; ?></a>
-                <a href="./about">About this site</a>
-                <a href="./feedback">Feedback</a>
-                <a href="http://skylightui.org/" class="last" target="_blank">Powered by Skylight</a>
+                <div class="site-links">
+                    <a href="./"><?php echo $site_title; ?></a>
+                    <a href="./about">About this Collection</a>
+                    <a href="./feedback" class="last">Feedback</a>
+                </div>
+                <div class="social-links">
+                    <ul class="social-icons">
+                        <li><a href="https://www.facebook.com/crc.edinburgh" class="facebook-icon" target="_blank" title="CRC on Facebook"></a></li>
+                        <li><a href="https://twitter.com/UofECRC" class="twitter-icon" target="_blank" title="CRC on Twitter"></a></li>
+                    </ul>
+                </div>
             </div>
             <div class="footer-disclaimer">
                 <div class="footer-logo">
