@@ -227,7 +227,7 @@ footer                  { display: block; border-bottom: 1px solid #872379; padd
 
 .footer-links           { margin-top: 15px; margin-bottom: 15px; text-align: left;  border-top: 1px solid #872379; border-bottom: 1px solid #872379; width: 660px; height: 39px;}
 
-.site-links			    { display: block; padding-top: 10px; padding-bottom: 10px; width: 500px; float: left; height: 19px; }
+.site-links			    { display: block; padding-top: 10px; padding-bottom: 10px; width: 520px; float: left; height: 19px; }
 .site-links a 		    { font-size: 10px; text-transform: uppercase; color: #AAA79E  !important; text-decoration: none; font-weight: bold; border-right: 1px solid #cecece; padding-right: 15px; margin-right: 10px; }
 .site-links a.last	    { border: none; }
 .site-links a:hover	    { text-decoration: underline; color: #c78c86; }
