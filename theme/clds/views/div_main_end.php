@@ -1,4 +1,12 @@
         <footer>
+            <div class="footer-links">
+                <a href="./" title="University of Edinburgh Collections" class="collections">Home</a>
+                <a href="<?php echo base_url(); ?>?config=art&theme=art" title="University of Edinburgh Art Collection" class="art">Art</a>
+                <a href="<?php echo base_url(); ?>?config=mimed&theme=mimed" title="University of Edinburgh Musical Instrument Museums" class="mimed">Mimed</a>
+                <a href="http://exhibitions.ed.ac.uk/" title="University of Edinburgh Exhibitions" class="exhibitions">Exhibitions</a>
+                <a href="http://images.is.ed.ac.uk/" title="University of Edinburgh Image Collections" class="images">Images</a>
+                <a href="" title="University of Edinburgh Calendars" class="calendars last">Calendars</a>
+            </div>
             <div class="footer-disclaimer">
                 <div class="footer-logo">
                     <a href="http://www.ed.ac.uk/schools-departments/information-services/about/organisation/library-and-collections" target="_blank" class="luclogo" title="Library &amp; University Collections"></a>

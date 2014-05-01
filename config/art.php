@@ -2,6 +2,9 @@
 
 $config['skylight_appname'] = 'art';
 
+// Uncomment this if you are using a url of the form http://.../art/...
+$config['skylight_url_prefix'] = 'art';
+
 $config['skylight_theme'] = 'art';
 
 $config['skylight_fullname'] = 'University of Edinburgh Art Collection';

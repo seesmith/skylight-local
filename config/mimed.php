@@ -2,6 +2,9 @@
 
 $config['skylight_appname'] = 'mimed';
 
+// Uncomment this if you are using a url of the form http://.../art/...
+$config['skylight_url_prefix'] = 'art';
+
 $config['skylight_theme'] = 'mimed';
 
 $config['skylight_fullname'] = 'MUSICAL INSTRUMENT MUSEUMS';
