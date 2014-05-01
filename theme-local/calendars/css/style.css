@@ -133,7 +133,7 @@ input.btn:hover                                        { background: #c78c86; }
 #container                      { width: 940px; margin: auto auto; }
 header                          { position: relative; }
 .col-main                       { float: left; margin-right: 40px; width: 660px; }
-.col-sidebar                    { float: left; width: 240px; margin-top: -52px;  background: #e7e8ea; position: relative; z-index: 2; }
+.col-sidebar                    { float: left; width: 240px; margin-top: -52px;  background: #e5e3d7; position: relative; z-index: 2; }
 .ie7 .col-sidebar               { padding-bottom: 30px; }
 
 /* Uoe specific */

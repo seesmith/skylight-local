@@ -197,7 +197,7 @@ if(isset($solr[$type_field])) {
                     if ($Lunapos !== false)
                     {
 
-                        echo '<a href="'.$uri.'" title="Link to High Res version of image" target="_blank">High resolution version of photo</a>';
+                        echo '<a href="'.$uri.'" title="Link to High resolution version of image" target="_blank">High resolution version of photo</a>';
                     }
                     else{
                         echo '<a href="'.$uri.'" title="Link to '.$uri.'" target="_blank">'.$uri.'</a>';
