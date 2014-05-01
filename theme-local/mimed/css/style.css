@@ -106,7 +106,7 @@ body                            { background: #fff }
 body, select, input, textarea   { color: #555; line-height: 18px; font-family: Arial, Helvetica, sans-serif; }
 
 h1, h2, h3, h4, h5, h6          { text-rendering: optimizeLegibility; color: #000000; font-weight: bold; }
-h1                              { font-size: 18px; line-height: 24px; margin: 30px 0 17px 0px; position: relative; }
+h1                              { font-size: 18px; line-height: 24px; margin: 18px 0 17px 0px; position: relative; color: #033a5f;}
 h2                              { font-size: 16px; line-height: 36px; margin: 0 0 0 0; }
 h3                              { font-size: 14px; line-height: 18px; margin: 0 0 9px 0; }
 
@@ -345,7 +345,7 @@ table td, table th              { padding: 8px 17px; }
 table th                        { text-align: left; border-right: 1px solid #fff; }
 table tr:nth-child(2n)          { background: #e7e8ea; }
 
-.feedback_form                  { padding: 20px 20px;}
+.feedback_form                  { padding: 0 20px;}
 .feedback_form label            { display: block; width: 100px;}
 #recaptcha_table                { width: 480px; }
 
