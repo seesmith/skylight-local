@@ -75,7 +75,6 @@ if(isset($solr[$type_field])) {
 
     <?php
     if(isset($solr[$bitstream_field]) && $link_bitstream) {
-    //SR JIRA001-665 sort bitstreams by sequence to ensure they show in correct order
     $bitstream_array = array();
 
 
@@ -100,8 +99,6 @@ if(isset($solr[$type_field])) {
         $videoLink = "";
         $b_seq =  "";
 
-        //SR JIRA001-665 sort bitstreams by sequence to ensure they show in correct order
-        //foreach($solr[$bitstream_field] as $bitstream) {
         foreach($bitstream_array as $bitstream) {
 
             $b_segments = explode("##", $bitstream);
