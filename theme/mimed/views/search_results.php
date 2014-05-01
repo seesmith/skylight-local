@@ -135,11 +135,25 @@
                 </div> <!-- close item-info -->
 
                 <div class = "thumbnail-image">
-                    <?php if(isset($doc[$bitstream_field])) {
 
-                        $firstImg = false;
-                        foreach ($doc[$bitstream_field] as $bitstream) {
+                    <?php
+                    if(isset($doc[$bitstream_field])) {
+                        $bitstream_array = array();
 
+                        //SR JIRA001-665 sort bitstreams by sequence to ensure they show in correct order
+                        foreach ($doc[$bitstream_field] as $bitstream_for_array)
+                        {
+                            $b_segments = explode("##", $bitstream_for_array);
+                            $b_seq = $b_segments[4];
+                            $bitstream_array[$b_seq] = $bitstream_for_array;
+                        }
+
+                        ksort($bitstream_array);
+
+                         $firstImg = false;
+                         //SR JIRA001-665 sort bitstreams by sequence to ensure they show in correct order
+                         //foreach ($doc[$bitstream_field] as $bitstream) {
+                         foreach ($bitstream_array as $bitstream) {
                             $b_segments = explode("##", $bitstream);
                             $b_filename = $b_segments[1];
                             $b_handle = $b_segments[3];
