@@ -67,7 +67,24 @@ if(isset($solr[$type_field])) {
         </tbody>
     </table>
 
-    <?php if(isset($solr[$bitstream_field]) && $link_bitstream) {
+
+
+    <?php
+    //SR JIRA001-665 sort bitstreams by sequence to ensure they show in correct order
+    if(isset($solr[$bitstream_field]) && $link_bitstream) {
+        $bitstream_array = array();
+
+
+        foreach ($solr[$bitstream_field] as $bitstream_for_array)
+        {
+            $b_segments = explode("##", $bitstream_for_array);
+            $b_seq = $b_segments[4];
+            $bitstream_array[$b_seq] = $bitstream_for_array;
+        }
+
+        ksort($bitstream_array);
+
+
     ?><div class="record_bitstreams"><?php
 
 
@@ -77,7 +94,11 @@ if(isset($solr[$type_field])) {
         $audioFile = false;
         $audioLink = "";
         $videoLink = "";
-        foreach($solr[$bitstream_field] as $bitstream) {
+        $b_seq =  "";
+
+        //SR JIRA001-665 sort bitstreams by sequence to ensure they show in correct order
+        //foreach($solr[$bitstream_field] as $bitstream) {
+        foreach($bitstream_array as $bitstream) {
 
             $b_segments = explode("##", $bitstream);
             $b_filename = $b_segments[1];
@@ -179,12 +200,13 @@ if(isset($solr[$type_field])) {
 
         if($audioFile) {
 
-            echo $audioLink;
+
+            echo '<br>.<br>'.$audioLink;
         }
 
         if($videoFile) {
 
-            echo $videoLink;
+            echo '<br>.<br>'.$videoLink;
         }
 
         echo '</div><div class="clearfix"></div>';

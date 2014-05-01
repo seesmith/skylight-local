@@ -148,31 +148,45 @@
 
         </div> <!-- close tags div -->
             <div class = "thumbnail-image">
-                <?php if(isset($doc[$bitstream_field])) {
+                <?php
+                if(isset($doc[$bitstream_field])) {
+                    $bitstream_array = array();
 
-                    //todo check as assumes there is always a thumbnail for a jpg and only jpgs
-                    $firstImg = false;
-                    foreach ($doc[$bitstream_field] as $bitstream) {
-
-                        $b_segments = explode("##", $bitstream);
-                        $b_filename = $b_segments[1];
-                        $b_handle = $b_segments[3];
+                    //SR JIRA001-665 sort bitstreams by sequence to ensure they show in correct order
+                    foreach ($doc[$bitstream_field] as $bitstream_for_array)
+                    {
+                        $b_segments = explode("##", $bitstream_for_array);
                         $b_seq = $b_segments[4];
-                        $b_handle_id = preg_replace('/^.*\//', '',$b_handle);
-                        $b_uri = './record/'.$b_handle_id.'/'.$b_seq.'/'.$b_filename;
+                        $bitstream_array[$b_seq] = $bitstream_for_array;
+                    }
 
-                        if (!$firstImg && strpos($b_uri, ".jpg") > 0)
-                        {
-                            $firstImg = true;
-                            $t_uri = $b_uri . '.jpg';
+                    ksort($bitstream_array);
 
-                            $thumbnailLink = '<a title = "' . $doc[$title_field][0] . '" class="fancybox" rel="group' . $j . '" href=' . $b_uri . '> ';
-                            $thumbnailLink .= '<img src = "'.$t_uri.'" class="search-thumbnail" title="'. $doc[$title_field][0] .'" /></a>';
 
-                            echo $thumbnailLink;
-                        }
+                        $firstImg = false;
+                        //SR JIRA001-665 sort bitstreams by sequence to ensure they show in correct order
+                        //foreach ($doc[$bitstream_field] as $bitstream) {
+                        foreach ($bitstream_array as $bitstream) {
 
-                        $j++;
+                            $b_segments = explode("##", $bitstream);
+                            $b_filename = $b_segments[1];
+                            $b_handle = $b_segments[3];
+                            $b_seq = $b_segments[4];
+                            $b_handle_id = preg_replace('/^.*\//', '',$b_handle);
+                            $b_uri = './record/'.$b_handle_id.'/'.$b_seq.'/'.$b_filename;
+
+                            if (!$firstImg && strpos($b_uri, ".jpg") > 0)
+                            {
+                                $firstImg = true;
+                                $t_uri = $b_uri . '.jpg';
+
+                                $thumbnailLink = '<a title = "' . $doc[$title_field][0] . '" class="fancybox" rel="group' . $j . '" href=' . $b_uri . '> ';
+                                $thumbnailLink .= '<img src = "'.$t_uri.'" class="search-thumbnail" title="'. $doc[$title_field][0] .'" /></a>';
+
+                                echo $thumbnailLink;
+                            }
+
+                            $j++;
 
                     } // end for each
 
