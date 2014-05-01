@@ -30,5 +30,6 @@
             <a class="email" href="mailto:is-crc@ed.ac.uk">is-crc@ed.ac.uk</a><br />
 
         </p>
+        <br />
     </div>
 </div>
