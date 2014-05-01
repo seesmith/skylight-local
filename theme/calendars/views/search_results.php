@@ -11,7 +11,7 @@
         $bitstream_field = $this->skylight_utilities->getField('Bitstream');
         $thumbnail_field = $this->skylight_utilities->getField('Thumbnail');
         $abstract_field = $this->skylight_utilities->getField('Abstract');
-
+        $subject_field = $this->skylight_utilities->getField('Subject');
 
         $base_parameters = preg_replace("/[?&]sort_by=[_a-zA-Z+%20. ]+/","",$base_parameters);
         if($base_parameters == "") {
@@ -76,20 +76,20 @@
                     <div class="tagdiv">
 
 
-                        <?php if(array_key_exists($author_field,$doc)) { ?>
+                        <?php if(array_key_exists($subject_field,$doc)) { ?>
                             <?php
 
-                            $num_authors = 0;
-                            foreach ($doc[$author_field] as $author) {
+                            $num_subject = 0;
+                            foreach ($doc[$subject_field] as $subject) {
 
-                                $orig_filter = urlencode($author);
+                                $orig_filter = urlencode($subject);
 
-                                $lower_orig_filter = strtolower($author);
+                                $lower_orig_filter = strtolower($subject);
                                 $lower_orig_filter = urlencode($lower_orig_filter);
 
-                                echo '<a href="./search/*:*/Maker:%22'.$lower_orig_filter.'%7C%7C%7C'.$orig_filter.'%22">'.$author.'</a>';
-                                $num_authors++;
-                                if($num_authors < sizeof($doc[$author_field])) {
+                                echo '<a href="./search/*:*/Subject:%22'.$lower_orig_filter.'%7C%7C%7C'.$orig_filter.'%22">'.$subject.'</a>';
+                                $num_subject++;
+                                if($num_subject < sizeof($doc[$subject_field])) {
                                     echo ' ';
                                 }
                             }
