@@ -1,37 +1,36 @@
 <?php
 
-$config['skylight_appname'] = 'clds';
+$config['skylight_appname'] = 'calendars';
 
-$config['skylight_theme'] = 'clds';
+$config['skylight_theme'] = 'calendars';
 
-$config['skylight_fullname'] = 'Edinburgh University Collections';
+$config['skylight_fullname'] = 'University of Edinburgh Calendars';
 
 $config['skylight_adminemail'] = 'lddt@mlist.is.ed.ac.uk';
 
-$config['skylight_oaipmhcollection'] = 'hdl_10683_4';
+$config['skylight_oaipmhcollection'] = 'hdl_10683_21801';
 
 // Container ID and the field used in solr index to store this ID. Used for restricting search/browse scope.
-$config['skylight_container_id'] = '1';
+$config['skylight_container_id'] = '15';
 $config['skylight_container_field'] = 'location.coll';
 
 $config['skylight_fields'] = array('Title' => 'dc.title.en',
-    'Custodian' => 'dc.creator.en',
-    'Custodial History' => 'cld.custodialHistory.en',
-    'Identifier' => 'dc.identifier.other',
+    'Calendar Month' => 'dc.title.alternative.en',
+    'Creator' => 'dc.contributor.author.en',
+    'Reference' => 'dc.identifier.other',
+    'Link' => 'dc.identifier.uri',
     'Subject' => 'dc.subject.en',
-    'Highlight' => 'dc.subject.highlight',
     'Type' => 'dc.type.en',
-    'Date' => 'dc.coverage.temporal.en',
+    'Date' => 'dc.coverage.temporal',
     'Bitstream'=> 'dc.format.original',
     'Thumbnail'=> 'dc.format.thumbnail',
     'Description'=>'dc.description.en',
-    'Origin' => 'dc.coverage.spatial.en',
-    'Parent Collection' => 'dc.relation.ispartof.en',
-    'Sub Collections' => 'dc.relation.haspart.en',
+    'Format' => 'dc.format.en',
+    'Year'=> 'dc.date.issued'
 );
 
-$config['skylight_date_filters'] = array();
-$config['skylight_filters'] = array('Type' => 'type_filter', 'Subject' => 'subject_filter', 'Origin' => 'place_filter');
+$config['skylight_date_filters'] = array('Date' => 'dateIssued.year_sort');
+$config['skylight_filters'] = array('Subject' => 'subject_filter');
 
 $config['skylight_filter_delimiter'] = ':';
 
@@ -40,16 +39,14 @@ $config['skylight_meta_fields'] = array('Title' => 'dc.title',
     'Type' => 'dc.type',
 );
 
-$config['skylight_recorddisplay'] = array('Title','Type','Subject','Description','Custodian','Custodial History','Origin','Date','Identifier');
+$config['skylight_recorddisplay'] = array('Title','Creator','Date','Format','Subject','Calendar Month','Description','Identifier');
 
-$config['skylight_searchresult_display'] = array('Title','Custodian','Custodial History', 'Subject','Type','Origin', 'Bitstream', 'Thumbnail');
+$config['skylight_searchresult_display'] = array('Title','Subject','Type','Origin', 'Bitstream', 'Thumbnail');
 
-$config['skylight_search_fields'] = array('Keywords' => 'text',
+$config['skylight_search_fields'] = array(
     'Subject' => 'dc.subject',
     'Type' => 'dc.type',
-    'Highlight' => 'dc.subject.highlight.en',
-    'Bitstream'=> 'dc.format.original',
-    'Thumbnail'=> 'dc.format.thumbnail'
+    'Creator' => 'dc.type',
 );
 
 $config['skylight_sort_fields'] = array('Title' => 'dc.title_sort',
@@ -81,9 +78,9 @@ $config['skylight_lightbox_mimes'] = array('image/jpeg', 'image/gif', 'image/png
 // Language and locale settings
 $config['skylight_language_default'] = 'en';
 $config['skylight_language_options'] = array('en', 'ko', 'jp');
-$config['skylight_highlight_fields'] = 'dc.title.en,dc.creator,dc.subject.en,dc.description.en,dc.relation.ispartof.en';
+$config['skylight_highlight_fields'] = 'dc.title.en,dc.creator,dc.subject.en,dc.description.en';
 
 $config['skylight_homepage_recentitems'] = false;
-$config['skylight_homepage_fullwidth'] = true;
+$config['skylight_homepage_fullwidth'] = false;
 
 ?>
