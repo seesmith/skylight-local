@@ -88,6 +88,7 @@
             <div id="collection-title">
                 <a href="http://www.ed.ac.uk" class="uoelogo" title="The University of Edinburgh" target="_blank"></a>
                 <a href="<?php echo base_url(); ?>" class="logo" title="University of Edinburgh Calendars"></a>
+                <a href="<?php echo base_url(); ?>" class="menulogo" title="University of Edinburgh Calendars"></a>
             </div>
             <div id="collection-search">
                 <form action="./redirect/" method="post">

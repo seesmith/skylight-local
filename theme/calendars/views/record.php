@@ -1,10 +1,10 @@
 <?php
 
-$author_field = $this->skylight_utilities->getField("Author");
-$maker_field = $this->skylight_utilities->getField("Maker");
 $type_field = $this->skylight_utilities->getField("Type");
 $bitstream_field = $this->skylight_utilities->getField("Bitstream");
 $thumbnail_field = $this->skylight_utilities->getField("Thumbnail");
+$subject_field = $this->skylight_utilities->getField("Subject");
+$uri_field = $this->skylight_utilities->getField("Link");
 
 
 $type = 'Unknown';
@@ -20,15 +20,15 @@ if(isset($solr[$type_field])) {
 <div class="tags">
     <?php
 
-    if (isset($solr[$author_field])) {
-        foreach($solr[$author_field] as $author) {
+    if (isset($solr[$subject_field])) {
+        foreach($solr[$subject_field] as $subject) {
 
-            $orig_filter = urlencode($author);
+            $orig_filter = urlencode($subject);
 
-            $lower_orig_filter = strtolower($author);
+            $lower_orig_filter = strtolower($subject);
             $lower_orig_filter = urlencode($lower_orig_filter);
 
-            echo '<a class="maker" href="./search/*:*/Maker:%22'.$lower_orig_filter.'%7C%7C%7C'.$orig_filter.'%22">'.$author.'</a>';
+            echo '<a class="$month" href="./search/*:*/%22Subject'.$lower_orig_filter.'%7C%7C%7C'.$orig_filter.'%22">'.$subject.'</a>';
         }
     }
 
@@ -36,16 +36,6 @@ if(isset($solr[$type_field])) {
 </div>
 
 <div class="content">
-
-    <?php
-    $abstract_field = $this->skylight_utilities->getField("Abstract");
-    if(isset($solr[$abstract_field])) {
-        ?> <h3>Abstract</h3> <?php
-        foreach($solr[$abstract_field] as $abstract) {
-            echo '<p>'.$abstract.'</p>';
-        }
-    }
-    ?>
     <?php if(isset($solr[$bitstream_field]) && $link_bitstream) {
     ?><div class="record_bitstreams"><?php
 
@@ -173,6 +163,7 @@ if(isset($solr[$type_field])) {
         echo '</div>';
         ?>
 
+
     <table>
         <tbody>
         <?php foreach($recorddisplay as $key) {
@@ -189,7 +180,38 @@ if(isset($solr[$type_field])) {
                 echo '</td></tr>';
             }
 
-        } ?>
+        }
+
+        if(isset($solr[$uri_field])) {
+            echo '<tr><th>Link</th><td>';
+            foreach($solr[$uri_field] as $uri) {
+                $find   = 'http://hdl.handle.net';
+                $findLuna = 'http://images.is.ed.ac.uk';
+                $pos = strpos($uri, $find);
+
+                if ($pos === false)
+                {
+
+                    $Lunapos = strpos($uri, $findLuna);
+
+                    if ($Lunapos !== false)
+                    {
+
+                        echo '<a href="'.$uri.'" title="Link to High Res version of image" target="_blank">High resolution version of photo</a>';
+                    }
+                    else{
+                        echo '<a href="'.$uri.'" title="Link to '.$uri.'" target="_blank">'.$uri.'</a>';
+                    }
+                    if($index < sizeof($solr[$uri_field]) - 1) {
+                        echo '<br />';
+                    }
+                }
+
+
+            }
+            echo '</td></tr>';
+        }
+        ?>
         </tbody>
     </table>
 

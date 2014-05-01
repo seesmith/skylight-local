@@ -15,17 +15,18 @@ $config['skylight_container_id'] = '15';
 $config['skylight_container_field'] = 'location.coll';
 
 $config['skylight_fields'] = array('Title' => 'dc.title.en',
-    'Creator' => 'dc.creator.en',
+    'Calendar Month' => 'dc.title.alternative.en',
+    'Creator' => 'dc.contributor.author.en',
     'Reference' => 'dc.identifier.other',
     'Link' => 'dc.identifier.uri',
     'Subject' => 'dc.subject.en',
     'Type' => 'dc.type.en',
-    'Calendar Month' => 'dc.date.issued',
     'Date' => 'dc.coverage.temporal',
     'Bitstream'=> 'dc.format.original',
     'Thumbnail'=> 'dc.format.thumbnail',
     'Description'=>'dc.description.en',
     'Format' => 'dc.format.en',
+    'Year'=> 'dc.date.issued'
 );
 
 $config['skylight_date_filters'] = array('Date' => 'dateIssued.year_sort');
@@ -38,15 +39,14 @@ $config['skylight_meta_fields'] = array('Title' => 'dc.title',
     'Type' => 'dc.type',
 );
 
-$config['skylight_recorddisplay'] = array('Title','Creator','Date','Format','Subject','Description','Identifier','Link','Calendar Month');
+$config['skylight_recorddisplay'] = array('Title','Creator','Date','Format','Subject','Calendar Month','Description','Identifier');
 
 $config['skylight_searchresult_display'] = array('Title','Subject','Type','Origin', 'Bitstream', 'Thumbnail');
 
 $config['skylight_search_fields'] = array(
     'Subject' => 'dc.subject',
     'Type' => 'dc.type',
-    'Bitstream'=> 'dc.format.original',
-    'Thumbnail'=> 'dc.format.thumbnail'
+    'Creator' => 'dc.type',
 );
 
 $config['skylight_sort_fields'] = array('Title' => 'dc.title_sort',
@@ -81,6 +81,6 @@ $config['skylight_language_options'] = array('en', 'ko', 'jp');
 $config['skylight_highlight_fields'] = 'dc.title.en,dc.creator,dc.subject.en,dc.description.en';
 
 $config['skylight_homepage_recentitems'] = false;
-$config['skylight_homepage_fullwidth'] = true;
+$config['skylight_homepage_fullwidth'] = false;
 
 ?>

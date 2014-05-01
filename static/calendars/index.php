@@ -2,6 +2,6 @@
     <div class="content byEditor">
     <p>The calendars . . . </p>
         <p>L&UC  . . . </p>
-        <p>CRD ....  . . . </p>
+        <p>CRC ....  . . . </p>
     </div>
 </div>
