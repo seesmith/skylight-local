@@ -190,11 +190,6 @@ header				{ position: relative; width: 940px; height: 141px; background-color: #
 .main-image                     { max-width: 660px; display: block; }
 .record-main-image              { max-width: 660px; max-height: 800px; }
 
-.tagdiv                         { position:relative; width: 250px;float:left; }
-.tagdiv a                       { font-size: 13px; color:#FFF; background: #00548e; -webkit-border-radius: 5px; -moz-border-radius: 5px; border-radius: 5px; padding: 2px 6px; line-height: 20px; margin-right: 8px; text-decoration: none; white-space:nowrap;}
-.tagdiv a.bold                  { font-weight: bold; }
-.listing li .tagdiv a:hover     { background: #FE2842; color: #fff; text-decoration: none; }
-
 .col-sidebar h4					{ color: #fff; line-height: 26px; font-weight: bold; text-transform: uppercase; font-size: 12px; margin-bottom: 17px; background: #333333; padding: 0 17px; }
 .col-sidebar h4 a 				{
     background: #333333 url(../images/bg-arrows.png) no-repeat 100% -92px;
