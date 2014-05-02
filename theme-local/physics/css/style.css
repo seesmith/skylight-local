@@ -137,10 +137,6 @@ input.btn:hover					{ background: #033a5f; }
 #container 			{ width: 940px; margin: auto auto; }
 header				{ position: relative; }
 .iteminfo           { width: 500px; margin-top: 10px; min-height:120px; float:left;}
-.tagdiv             { width: 500px; }
-.tagdiv a           { font-size: 13px; background: #def5fb; -webkit-border-radius: 5px; -moz-border-radius: 5px; border-radius: 5px; padding: 2px 6px; line-height: 20px; margin-right: 8px; text-decoration: none; }
-.tagdiv a.bold      { font-weight: bold; }
-.tagdiv a:hover  	{ background: #00548e; color: #fff; }
 .thumbnailimage     { width: 120px; float:left;}
 .search-thumbnail   { max-width: 120px; max-height: 120px; }
 

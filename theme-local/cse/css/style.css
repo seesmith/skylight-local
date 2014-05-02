@@ -149,10 +149,7 @@ header                                { position: relative; }
 .banner  { width: 600px; height: 88px;padding-top: 20px;}
 .iteminfo {width: 660px; margin-top: 10px;position:relative; padding-right: 20px;min-height:32px;}
 .thumbnailimage {position:relative; width: 500px; float:left;}
-.tagdiv { position:relative;width: 250px;float:left; }
-.tagdiv a                                 { font-size: 13px; color: #fff;background: #ff0000; -webkit-border-radius: 5px; -moz-border-radius: 5px; border-radius: 5px; padding: 2px 6px; line-height: 20px; margin-right: 8px; text-decoration: none; }
-.tagdiv a.bold                        { font-weight: bold; }
-.tagdiv a:hover                        { background: #BBBBBC; color: #000; }
+
 .search                                                        { padding-bottom: 36px; border-bottom: 1px solid #ff0000; width: 660px; }
 .search input[type=text]                {
     box-shadow: 0px 0px 9px rgba(178,179,180, 0.3); -moz-box-shadow: 0px 0px 9px rgba(178,179,180, 0.75); -webkit-box-shadow: 0px 0px 9px rgba(178,179,180, 0.3);

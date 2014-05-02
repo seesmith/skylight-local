@@ -73,7 +73,7 @@
             <div class="item-div">
                 <div class = "iteminfo">
                     <h3><a href="./record/<?php echo $doc['id']?>?highlight=<?php echo $query ?>"><?php echo $doc[$title_field][0]; ?></a></h3>
-                    <div class="tagdiv">
+                    <div class="tags">
 
 
                         <?php if(array_key_exists($subject_field,$doc)) { ?>

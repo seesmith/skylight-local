@@ -109,7 +109,7 @@ else {
 
                             ?></a></h3>
 
-                    <div class="tagdiv">
+                    <div class="tags">
 
                         <?php
                         // TODO: Make highlighting configurable
