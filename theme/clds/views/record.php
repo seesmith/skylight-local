@@ -53,18 +53,41 @@ if(isset($solr[$type_field])) {
 
     <table>
         <tbody>
-        <?php foreach($recorddisplay as $key) {
 
+        <?php foreach($recorddisplay as $key) {
             $element = $this->skylight_utilities->getField($key);
             if(isset($solr[$element])) {
-                echo '<tr><th>'.$key.'</th><td>';
-                foreach($solr[$element] as $index => $metadatavalue) {
-                    echo $metadatavalue;
-                    if($index < sizeof($solr[$element]) - 1) {
-                        echo '; ';
+                // subject already displayed in tags
+                if($key !== "Subject") {
+                    echo '<tr><th>'.$key.'</th><td>';
+                    foreach($solr[$element] as $index => $metadatavalue) {
+                        // if it's a type
+                        if($key === "Type") {
+
+                            $orig_filter = urlencode($metadatavalue);
+                            $lower_orig_filter = strtolower($metadatavalue);
+                            $lower_orig_filter = urlencode($lower_orig_filter);
+
+                            echo '<a href="./search/*:*/Type:%22'.$lower_orig_filter.'%7C%7C%7C'.$orig_filter.'%22">'.$metadatavalue.'</a>';
+                        }
+//                      ADD THIS BACK IN ONCE LIB001-
+//                        else if($key === "Origin") {
+//
+//                            $orig_filter = urlencode($metadatavalue);
+//                            $lower_orig_filter = strtolower($metadatavalue);
+//                            $lower_orig_filter = urlencode($lower_orig_filter);
+
+//                            echo '<a href="./search/*:*/Origin:%22'.$lower_orig_filter.'%7C%7C%7C'.$orig_filter.'%22">'.$metadatavalue.'</a>';
+//                        }
+                        else {
+                            echo $metadatavalue;
+                        }
+                        if($index < sizeof($solr[$element]) - 1) {
+                            echo '; ';
+                        }
                     }
+                    echo '</td></tr>';
                 }
-                echo '</td></tr>';
             }
 
         }
