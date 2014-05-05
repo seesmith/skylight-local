@@ -79,11 +79,14 @@ if(isset($solr[$type_field])) {
                 {
 
                     $parents= explode("|", $parent);
+
                     //todo move into config
                     $parent_link = str_replace("http://hdl.handle.net/". $handle_prefix."/", "./record/",$parents[0]);
-                    $parent_name = $parents[1];
+
+                    $parent_name = (isset($parents[1]) ? $parents[1] : "Parent Collection");
 
                     echo '<a href="'.$parent_link.'">'.$parent_name.'</a>';
+
 
                 }
                 else{

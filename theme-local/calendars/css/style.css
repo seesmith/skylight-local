@@ -256,11 +256,8 @@ footer                  { display: block; border-bottom: 1px solid #872379; padd
 .listing li.last                        { padding-bottom: 30px; border-bottom: 1px solid #b8baba;}
 .listing li a                           { text-decoration: none; }
 .listing li a:hover                     { text-decoration: underline; }
-
-.listing li h3                          { margin-bottom: 8px; }
-.listing li .tags                       { margin: 0 0 8px 0; }
-.listing li .tags a                     { font-size: 12px; }
 .listing li .tags a:hover               { text-decoration: none; }
+.listing li h3                          { margin-bottom: 8px; }
 .listing li p                           { font-size: 12px; margin: 0; }
 
 .listing-filter                         { padding: 0; border: none; border-bottom: 1px solid #b8baba; line-height: 33px; text-align: right; position: relative; }
