@@ -7,6 +7,7 @@ $thumbnail_field = $this->skylight_utilities->getField("Thumbnail");
 $parent_collection_field = $this->skylight_utilities->getField("Parent Collection");
 $child_collection_field = $this->skylight_utilities->getField("Sub Collections");
 $handle_prefix = $this->config->item('skylight_handle_prefix');
+$filters = array_keys($this->config->item("skylight_filters"));
 
 
 $type = 'Unknown';
@@ -57,37 +58,27 @@ if(isset($solr[$type_field])) {
         <?php foreach($recorddisplay as $key) {
             $element = $this->skylight_utilities->getField($key);
             if(isset($solr[$element])) {
-                // subject already displayed in tags
-                if($key !== "Subject") {
-                    echo '<tr><th>'.$key.'</th><td>';
-                    foreach($solr[$element] as $index => $metadatavalue) {
-                        // if it's a type
-                        if($key === "Type") {
 
-                            $orig_filter = urlencode($metadatavalue);
-                            $lower_orig_filter = strtolower($metadatavalue);
-                            $lower_orig_filter = urlencode($lower_orig_filter);
+                echo '<tr><th>'.$key.'</th><td>';
+                foreach($solr[$element] as $index => $metadatavalue) {
+                    // if it's a facet search
+                    // make it a clickable search link
+                    if(in_array($key, $filters)) {
 
-                            echo '<a href="./search/*:*/Type:%22'.$lower_orig_filter.'%7C%7C%7C'.$orig_filter.'%22">'.$metadatavalue.'</a>';
-                        }
-//                      ADD THIS BACK IN ONCE LIB001-
-//                        else if($key === "Origin") {
-//
-//                            $orig_filter = urlencode($metadatavalue);
-//                            $lower_orig_filter = strtolower($metadatavalue);
-//                            $lower_orig_filter = urlencode($lower_orig_filter);
+                        $orig_filter = urlencode($metadatavalue);
+                        $lower_orig_filter = strtolower($metadatavalue);
+                        $lower_orig_filter = urlencode($lower_orig_filter);
 
-//                            echo '<a href="./search/*:*/Origin:%22'.$lower_orig_filter.'%7C%7C%7C'.$orig_filter.'%22">'.$metadatavalue.'</a>';
-//                        }
-                        else {
-                            echo $metadatavalue;
-                        }
-                        if($index < sizeof($solr[$element]) - 1) {
-                            echo '; ';
-                        }
+                        echo '<a href="./search/*:*/' . $key . ':%22'.$lower_orig_filter.'%7C%7C%7C'.$orig_filter.'%22">'.$metadatavalue.'</a>';
                     }
-                    echo '</td></tr>';
+                    else {
+                        echo $metadatavalue;
+                    }
+                    if($index < sizeof($solr[$element]) - 1) {
+                        echo '; ';
+                    }
                 }
+                echo '</td></tr>';
             }
 
         }
