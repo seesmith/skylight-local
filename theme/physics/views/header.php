@@ -86,7 +86,7 @@
     <header>
         <div id="collection-title">
             <a href="http://www.ed.ac.uk" class="uoelogo" title="The University of Edinburgh" target="_blank"></a>
-            <a href="<?php echo base_url(); ?>" class="physicslogo" title="School of Physics & Astronomy Image Archive"></a>
+            <a href="<?php echo base_url(); ?>physics" class="physicslogo" title="School of Physics & Astronomy Image Archive"></a>
             <a href="http://www.ph.ed.ac.uk" class="menulogo" title="School of Physics & Astronomy" target="_blank"></a>
         </div>
         <div id="collection-search">

@@ -111,6 +111,7 @@ h2                              { font-size: 16px; line-height: 36px; margin: 0 
 h3                              { font-size: 14px; line-height: 18px; margin: 0 0 9px 0; }
 
 h1.itemtitle                    { font-size: 18px; line-height: 24px; margin: 20px 0 10px 0px; position: relative; text-transform: uppercase; }
+.left-title h1.itemtitle        { margin-top: 0px; }
 
 p                               { font-size: 13px; margin-bottom: 18px; }
 
@@ -163,10 +164,13 @@ header                          { position: relative; }
 .thumbnail-strip .first         { margin-left: 0px; }
 .record-thumbnail               { max-width: 150px; max-height: 200px; }
 
-.record-bitstreams              { display: block; margin: 0 auto; width: 660px; margin-top: 20px; margin-bottom: 5px; }
+.left-title                     { width: 410px; float: left; }
+.right-image                    { width: 250px; float: right; text-align: center;}
+.left-metadata                  { width: 380px; float: left; padding-top: 10px; }
 
-.main-image                     { max-width: 660px; display: block; }
-.record-main-image              { max-width: 660px; max-height: 800px; }
+.record-bitstreams              { display: block; margin: 0 auto; width: 660px; margin-top: 20px; margin-bottom: 5px; }
+.main-image                     { max-width: 250px; display: block; }
+.record-main-image              { max-width: 250px; max-height: 400px; padding-top: 10px; }
 
 .search							{ padding-bottom: 22px; border-bottom: 1px solid #093563; width: 660px; }
 .search input[type=text]		{

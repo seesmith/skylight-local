@@ -164,6 +164,10 @@ header                          { position: relative; }
 
 .record-bitstreams              { display: block; margin: 0 auto; width: 660px; margin-top: 20px; margin-bottom: 5px; }
 
+.title-image                    { width: 660px; }
+.left-title                     { float: left; }
+.right-image                    { float: right; }
+
 .main-image                     { max-width: 660px; display: block; }
 .record-main-image              { max-width: 660px; max-height: 800px; }
 
