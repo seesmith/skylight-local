@@ -4,6 +4,9 @@ $config['skylight_appname'] = 'calendars';
 
 $config['skylight_theme'] = 'calendars';
 
+// Uncomment this if you are using a url of the form http://.../art/...
+$config['skylight_url_prefix'] = 'calendars';
+
 $config['skylight_fullname'] = 'University of Edinburgh Calendars';
 
 $config['skylight_adminemail'] = 'lddt@mlist.is.ed.ac.uk';
