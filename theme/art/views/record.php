@@ -8,6 +8,7 @@ $date_field = $this->skylight_utilities->getField("Date");
 $filters = array_keys($this->config->item("skylight_filters"));
 
 $type = 'Unknown';
+$mainImageTest = false;
 
 if(isset($solr[$type_field])) {
     $type = "media-" . strtolower(str_replace(' ','-',$solr[$type_field][0]));
@@ -16,7 +17,6 @@ if(isset($solr[$type_field])) {
 if(isset($solr[$bitstream_field]) && $link_bitstream) {
 
     $bitstream_array = array();
-
 
     foreach ($solr[$bitstream_field] as $bitstream_for_array)
     {
@@ -46,8 +46,10 @@ if(isset($solr[$bitstream_field]) && $link_bitstream) {
 
         if (strpos($b_uri, ".jpg") > 0)
         {
-            // is there a main image
             if (!$mainImage) {
+
+                // we have a main image
+                $mainImageTest = true;
 
                 $bitstreamLink = '<div class="main-image">';
 
@@ -102,7 +104,9 @@ if(isset($solr[$bitstream_field]) && $link_bitstream) {
 
 <div class="content">
 
+    <?php if($mainImageTest === true) { ?>
     <div class="left-title">
+    <?php } ?>
         <h1 class="itemtitle"><?php echo $record_title ?>
         <?php if(isset($solr[$date_field])) {
               echo " (" . $solr[$date_field][0] . ")";
@@ -125,13 +129,13 @@ if(isset($solr[$bitstream_field]) && $link_bitstream) {
 
             ?>
         </div>
+    <?php if($mainImageTest === true) { ?>
     </div>
-
     <?php if($mainImage) { ?>
-        <div class="right-image">
-            <?php echo $bitstreamLink; ?>
-        </div>
-
+            <div class="right-image">
+                <?php echo $bitstreamLink; ?>
+            </div>
+        <?php } ?>
     <?php } ?>
 
     <?php
@@ -143,7 +147,9 @@ if(isset($solr[$bitstream_field]) && $link_bitstream) {
         }
     }
     ?>
+    <?php if($mainImageTest === true) { ?>
     <div class="left-metadata">
+    <?php } ?>
         <table>
             <tbody>
             <?php $excludes = array(""); ?>
@@ -179,7 +185,9 @@ if(isset($solr[$bitstream_field]) && $link_bitstream) {
             } ?>
             </tbody>
         </table>
+    <?php if($mainImageTest === true) { ?>
     </div>
+    <?php } ?>
     <div class="clearfix"></div>
 
     <?php
