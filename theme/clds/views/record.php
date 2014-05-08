@@ -6,9 +6,10 @@ $bitstream_field = $this->skylight_utilities->getField("Bitstream");
 $thumbnail_field = $this->skylight_utilities->getField("Thumbnail");
 $parent_collection_field = $this->skylight_utilities->getField("Parent Collection");
 $child_collection_field = $this->skylight_utilities->getField("Sub Collections");
+$internal_uri_field = $this->skylight_utilities->getField("Internal URI");
+$external_uri_field = $this->skylight_utilities->getField("External URI");
 $handle_prefix = $this->config->item('skylight_handle_prefix');
 $filters = array_keys($this->config->item("skylight_filters"));
-
 
 $type = 'Unknown';
 
@@ -16,11 +17,25 @@ if(isset($solr[$type_field])) {
     $type = "media-" . strtolower(str_replace(' ','-',$solr[$type_field][0]));
 }
 
-
 ?>
 
-
 <h1 class="itemtitle"><?php echo $record_title ?></h1>
+<?php
+
+if (isset($solr[$internal_uri_field])) {
+    foreach($solr[$internal_uri_field] as $internalURI) {
+        $internalURI = str_replace('"', '%22', $internalURI);
+        $internalURI = str_replace('|', '%7C', $internalURI);
+        echo '<h3><a href="'. $internalURI . '">View Collection</a></h3>';
+    }
+}
+else if (isset($solr[$external_uri_field][0])) {
+    foreach($solr[$external_uri_field] as $externalURI) {
+        echo '<h3><a href="'.$externalURI.'">View Collection</a></h3>';
+    }
+}
+
+?>
 <div class="tags">
     <?php
 
