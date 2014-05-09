@@ -163,23 +163,9 @@ else if (isset($solr[$external_uri_field][0])) {
     </table>
 
     <?php
-    if(isset($solr[$bitstream_field]) && $link_bitstream) {
-    ?><div class="record_bitstreams"><?php
-    //SR JIRA001-665 sort bitstreams by sequence to ensure they show in correct order
-    $bitstream_array = array();
+    if(isset($solr[$bitstream_field]) && $link_bitstream) { ?>
 
-
-    foreach ($solr[$bitstream_field] as $bitstream_for_array)
-    {
-        $b_segments = explode("##", $bitstream_for_array);
-        $b_seq = $b_segments[4];
-        $bitstream_array[$b_seq] = $bitstream_for_array;
-    }
-
-    ksort($bitstream_array);
-
-
-
+        <div class="record_bitstreams"><?php
 
         $numThumbnails = 0;
         $mainImage = false;
@@ -187,6 +173,24 @@ else if (isset($solr[$external_uri_field][0])) {
         $audioFile = false;
         $audioLink = "";
         $videoLink = "";
+        $bitstream_array = array();
+
+        foreach ($solr[$bitstream_field] as $bitstream)
+        {
+            $b_segments = explode("##", $bitstream);
+            $b_filename = $b_segments[1];
+            $b_seq = $b_segments[4];
+
+            if((strpos($b_filename, ".jpg") > 0)) {
+
+                $bitstream_array[$b_seq] = $bitstream;
+
+            }
+        }
+
+        // sorting array so main image is first
+        ksort($bitstream_array);
+
         $b_seq =  "";
 
         //SR JIRA001-665 sort bitstreams by sequence to ensure they show in correct order
@@ -216,18 +220,35 @@ else if (isset($solr[$external_uri_field][0])) {
                     $mainImage = true;
 
                 }
+                // we need to display a thumbnail
                 else {
 
-                    $t_uri = $b_uri . '.jpg';
+                    // if there are thumbnails
+                    if(isset($solr[$thumbnail_field])) {
+                        foreach ($solr[$thumbnail_field] as $thumbnail) {
 
-                    $thumbnailLink[$numThumbnails] = '<div class="thumbnail-tile';
-                    if($numThumbnails % 4 === 0) {
-                        $thumbnailLink[$numThumbnails] .= ' first';
+                            $t_segments = explode("##", $thumbnail);
+                            $t_filename = $t_segments[1];
+
+                            if ($t_filename === $b_filename . ".jpg") {
+
+                                $t_handle = $t_segments[3];
+                                $t_seq = $t_segments[4];
+                                $t_uri = './record/'.$b_handle_id.'/'.$t_seq.'/'.$t_filename;
+
+                                $thumbnailLink[$numThumbnails] = '<div class="thumbnail-tile';
+
+                                if($numThumbnails % 4 === 0) {
+                                    $thumbnailLink[$numThumbnails] .= ' first';
+                                }
+
+                                $thumbnailLink[$numThumbnails] .= '"><a title = "' . $record_title . '" class="fancybox" rel="group" href="' . $b_uri . '"> ';
+                                $thumbnailLink[$numThumbnails] .= '<img src = "'.$t_uri.'" class="record-thumbnail" title="'. $record_title .'" /></a></div>';
+
+                                $numThumbnails++;
+                            }
+                        }
                     }
-                    $thumbnailLink[$numThumbnails] .= '"><a title = "' . $record_title . '" class="fancybox" rel="group" href="' . $t_uri . '"> ';
-                    $thumbnailLink[$numThumbnails] .= '<img src = "'.$t_uri.'" class="record-thumbnail" title="'. $record_title .'" /></a></div>';
-
-                    $numThumbnails++;
 
                 }
 
@@ -251,7 +272,7 @@ else if (isset($solr[$external_uri_field][0])) {
 
             ?>
         <?php
-        }
+        } // end for each bitstream
 
         if($mainImage) {
 
@@ -304,7 +325,7 @@ else if (isset($solr[$external_uri_field][0])) {
 
         echo '</div><div class="clearfix"></div>';
 
-        }
+    } // end if there are bitstreams
 
-        echo '</div>';
-        ?>
+    echo '</div>';
+    ?>
