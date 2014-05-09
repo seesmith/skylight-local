@@ -111,7 +111,7 @@ h2 								{ font-size: 16px; line-height: 36px; margin: 0 0 0 0; }
 h3 								{ color: #00315F; font-size: 14px; line-height: 18px; margin: 0 0 9px 0; }
 
 h1.itemtitle 					{ font-size: 18px; line-height: 24px; margin: 15px 0 10px 0px; position: relative; color: #00315F; }
-.left-title h1.itemtitle        { margin-top: 0px; }
+.left-title h1.itemtitle, .full-title h1.itemtitle { margin-top: 0px; }
 
 p 								{ font-size: 13px; margin-bottom: 18px; }
 
@@ -174,12 +174,13 @@ header				{ position: relative; width: 940px;}
 .record-thumbnail               { max-width: 150px; max-height: 200px; }
 
 .left-title                     { width: 410px; float: left; }
-.right-image                    { width: 250px; float: right; text-align: center;}
+.right-image                    { width: 250px; float: right; text-align: center; }
 .left-metadata                  { width: 380px; float: left; padding-top: 10px; }
+.full-image                     { margin-top: 10px; }
 
 .record-bitstreams              { display: block; margin: 0 auto; width: 660px; margin-top: 20px; margin-bottom: 5px; }
 .main-image                     { max-width: 250px; display: block; }
-.record-main-image              { max-width: 250px; max-height: 300px; }
+.record-main-image              { max-width: 660px; }
 
 .col-sidebar h4						{ color: #fff; line-height: 26px; font-weight: bold; text-transform: uppercase; font-size: 12px; margin-bottom: 17px; background: #00315F; padding: 0 17px; }
 .col-sidebar h4 a 					{
@@ -313,7 +314,7 @@ h1 .icon							{ top: -5px; left: -65px; }
 .browse_results                     { margin-top: 30px; }
 .browse_facets                      { margin-top: 20px; }
 
-.content 							{ margin-top: 20px; }
+.content 							{ margin-top: 10px; }
 .content ul 						{ margin: 0 0 18px 1.2em; }
 
 table								{ width: 100%; }

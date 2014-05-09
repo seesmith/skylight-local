@@ -122,7 +122,7 @@ if(isset($solr[$bitstream_field]) && $link_bitstream) {
 <div class="content">
 
     <?php if($mainImageTest === true) { ?>
-    <div class="left-title">
+    <div class="full-title">
     <?php } ?>
         <h1 class="itemtitle"><?php echo $record_title ?>
         <?php if(isset($solr[$date_field])) {
@@ -149,7 +149,7 @@ if(isset($solr[$bitstream_field]) && $link_bitstream) {
     <?php if($mainImageTest === true) { ?>
     </div>
     <?php if($mainImage) { ?>
-            <div class="right-image">
+            <div class="full-image">
                 <?php echo $bitstreamLink; ?>
             </div>
         <?php } ?>
@@ -165,7 +165,7 @@ if(isset($solr[$bitstream_field]) && $link_bitstream) {
     }
     ?>
     <?php if($mainImageTest === true) { ?>
-    <div class="left-metadata">
+    <div class="full-metadata">
     <?php } ?>
         <table>
             <tbody>
