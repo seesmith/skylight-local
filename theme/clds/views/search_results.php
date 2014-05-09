@@ -8,10 +8,10 @@
         $author_field = $this->skylight_utilities->getField('Author');
         $date_field = $this->skylight_utilities->getField('Date Made');
         $type_field = $this->skylight_utilities->getField('Type');
+        $type_field = $this->skylight_utilities->getField('Type');
         $bitstream_field = $this->skylight_utilities->getField('Bitstream');
         $thumbnail_field = $this->skylight_utilities->getField('Thumbnail');
         $abstract_field = $this->skylight_utilities->getField('Abstract');
-
 
         $base_parameters = preg_replace("/[?&]sort_by=[_a-zA-Z+%20. ]+/","",$base_parameters);
         if($base_parameters == "") {
@@ -56,147 +56,184 @@
     <ul class="listing">
 
 
-        <?php
+    <?php
 
-        $j = 0;
-        foreach ($docs as $index => $doc) {
-        ?>
-
-
-        <?php
-        $type = 'Unknown';
-
-        if(isset($doc[$type_field])) {
-                    $type = "media-" . strtolower(str_replace(' ','-',$doc[$type_field][0]));
-                }
-
-        ?>
-
-    <li<?php if($index == 0) { echo ' class="first"'; } elseif($index == sizeof($docs) - 1) { echo ' class="last"'; } ?>>
-
-        <div class="item-div">
-
-            <div class = "iteminfo">
-
-                <h3><a href="./record/<?php echo $doc['id']?>?highlight=<?php echo $query ?>"><?php echo $doc[$title_field][0]; ?></a></h3>
-
-                    <div class="tags">
+    $j = 0;
+    foreach ($docs as $index => $doc) {
+    ?>
 
 
-                        <?php if(array_key_exists($type_field,$doc)) { ?>
+    <?php
+    $type = 'Unknown';
+
+    if(isset($doc[$type_field])) {
+                $type = "media-" . strtolower(str_replace(' ','-',$doc[$type_field][0]));
+            }
+
+    ?>
+
+        <li<?php if($index == 0) { echo ' class="first"'; } elseif($index == sizeof($docs) - 1) { echo ' class="last"'; } ?>>
+
+            <div class="item-div">
+
+                <div class = "iteminfo">
+
+                    <h3><a href="./record/<?php echo $doc['id']?>?highlight=<?php echo $query ?>"><?php echo $doc[$title_field][0]; ?></a></h3>
+
+                        <div class="tags">
+
+
+                            <?php if(array_key_exists($type_field,$doc)) { ?>
+
+                                <?php
+
+                                $num_types = 0;
+                                foreach ($doc[$type_field] as $type) {
+                                    // test author linking
+                                    // quick hack that only works if the filter key
+                                    // and recorddisplay key match and the delimiter is :
+
+                                    $orig_filter = urlencode($type);
+
+                                    $lower_orig_filter = strtolower($type);
+                                    $lower_orig_filter = urlencode($lower_orig_filter);
+
+                                    echo '<a href="./search/*:*/Type:%22'.$lower_orig_filter.'%7C%7C%7C'.$orig_filter.'%22">'.$type.'</a>';
+                                    $num_types++;
+                                    if($num_types < sizeof($doc[$type_field])) {
+                                        echo ' ';
+                                    }
+                                }
+
+
+                                ?>
+
+                                <?php } ?>
 
                             <?php
+                            // TODO: Make highlighting configurable
 
-                            $num_types = 0;
-                            foreach ($doc[$type_field] as $type) {
-                                // test author linking
-                                // quick hack that only works if the filter key
-                                // and recorddisplay key match and the delimiter is :
-
-                                $orig_filter = urlencode($type);
-
-                                $lower_orig_filter = strtolower($type);
-                                $lower_orig_filter = urlencode($lower_orig_filter);
-
-                                echo '<a href="./search/*:*/Type:%22'.$lower_orig_filter.'%7C%7C%7C'.$orig_filter.'%22">'.$type.'</a>';
-                                $num_types++;
-                                if($num_types < sizeof($doc[$type_field])) {
-                                    echo ' ';
+                            if(array_key_exists('highlights',$doc)) {
+                                ?> <p><?php
+                                foreach($doc['highlights'] as $highlight) {
+                                    echo "...".$highlight."...".'<br/>';
+                                }
+                                ?></p><?php
+                            }
+                            else {
+                                if(array_key_exists($abstract_field, $doc)) {
+                                    echo '<p>';
+                                    $abstract =  $doc[$abstract_field][0];
+                                    $abstract_words = explode(' ',$abstract);
+                                    $shortened = '';
+                                    $max = 40;
+                                    $suffix = '...';
+                                    if($max > sizeof($abstract_words)) {
+                                        $max = sizeof($abstract_words);
+                                        $suffix = '';
+                                    }
+                                    for ($i=0 ; $i<$max ; $i++){
+                                        $shortened .= $abstract_words[$i] . ' ';
+                                    }
+                                    echo $shortened.$suffix;
+                                    echo '</p>';
                                 }
                             }
-
 
                             ?>
 
-                            <?php } ?>
+                        </div> <!-- close tags div -->
 
-                        <?php
-                        // TODO: Make highlighting configurable
-
-                        if(array_key_exists('highlights',$doc)) {
-                            ?> <p><?php
-                            foreach($doc['highlights'] as $highlight) {
-                                echo "...".$highlight."...".'<br/>';
-                            }
-                            ?></p><?php
-                        }
-                        else {
-                            if(array_key_exists($abstract_field, $doc)) {
-                                echo '<p>';
-                                $abstract =  $doc[$abstract_field][0];
-                                $abstract_words = explode(' ',$abstract);
-                                $shortened = '';
-                                $max = 40;
-                                $suffix = '...';
-                                if($max > sizeof($abstract_words)) {
-                                    $max = sizeof($abstract_words);
-                                    $suffix = '';
-                                }
-                                for ($i=0 ; $i<$max ; $i++){
-                                    $shortened .= $abstract_words[$i] . ' ';
-                                }
-                                echo $shortened.$suffix;
-                                echo '</p>';
-                            }
-                        }
-
-                        ?>
-
-                    </div> <!-- close tags div -->
-
-            </div> <!-- close item-info -->
+                </div> <!-- close item-info -->
 
 
-            <div class = "thumbnail-image">
-                <?php $bitstream_array = array();
-                if(isset($doc[$bitstream_field])) {
-                //SR JIRA001-665 sort bitstreams by sequence to ensure they show in correct order
-                foreach ($doc[$bitstream_field] as $bitstream_for_array)
-                {
-                    $b_segments = explode("##", $bitstream_for_array);
-                    $b_seq = $b_segments[4];
-                    $bitstream_array[$b_seq] = $bitstream_for_array;
-                }
+                <div class = "thumbnail-image">
+                    <?php
 
-                ksort($bitstream_array);
+                    $bitstream_array = array();
 
+                    if(isset($doc[$bitstream_field])) {
 
-                    $firstImg = false;
-                    //SR JIRA001-665 sort bitstreams by sequence to ensure they show in correct order
-                    //foreach ($doc[$bitstream_field] as $bitstream) {
-                    foreach ($bitstream_array as $bitstream) {
-
-                        $b_segments = explode("##", $bitstream);
-                        $b_filename = $b_segments[1];
-                        $b_handle = $b_segments[3];
-                        $b_seq = $b_segments[4];
-                        $b_handle_id = preg_replace('/^.*\//', '',$b_handle);
-                        $b_uri = './record/'.$b_handle_id.'/'.$b_seq.'/'.$b_filename;
-
-                        //todo check as assumes there is always a thumbnail for a jpg and only jpgs
-                        if (!$firstImg && strpos($b_uri, ".jpg") > 0)
+                        $i = 0;
+                        $started = false;
+                        // loop through to get min sequence
+                        foreach ($doc[$bitstream_field] as $bitstream)
                         {
-                            $firstImg = true;
-                            $t_uri = $b_uri . '.jpg';
+                            $b_segments = explode("##", $bitstream);
+                            $b_filename = $b_segments[1];
+                            $b_seq = $b_segments[4];
 
-                            $thumbnailLink = '<a title = "' . $doc[$title_field][0] . '" class="fancybox" rel="group' . $j . '" href="' . $b_uri . '"> ';
-                            $thumbnailLink .= '<img src = "'.$t_uri.'" class="search-thumbnail" title="'. $doc[$title_field][0] .'" /></a>';
+                            if((strpos($b_filename, ".jpg") > 0)) {
+
+                                $bitstream_array[$b_seq] = $bitstream;
+
+                                if ($started) {
+                                    if ($b_seq < $min_seq) {
+                                        $min_seq = $b_seq;
+                                    }
+                                }
+                                else {
+                                    $min_seq = $b_seq;
+                                    $started = true;
+                                }
+                            }
+
+                            $i++;
+
+                        }
+
+                        // if there is a thumbnail and a bitstream
+                        if(isset($min_seq) && count($bitstream_array) > 0) {
+
+                            // get all the information
+                            $b_segments = explode("##", $bitstream_array[$min_seq]);
+                            $b_filename = $b_segments[1];
+                            $b_handle = $b_segments[3];
+                            $b_seq = $b_segments[4];
+                            $b_handle_id = preg_replace('/^.*\//', '',$b_handle);
+                            $b_uri = './record/'.$b_handle_id.'/'.$b_seq.'/'.$b_filename;
+                            $thumbnailLink = "";
+
+                            if(isset($doc[$thumbnail_field])) {
+                                foreach ($doc[$thumbnail_field] as $thumbnail) {
+
+                                    $t_segments = explode("##", $thumbnail);
+                                    $t_filename = $t_segments[1];
+
+                                    if ($t_filename === $b_filename . ".jpg") {
+
+                                        $t_handle = $t_segments[3];
+                                        $t_seq = $t_segments[4];
+                                        $t_uri = './record/'.$b_handle_id.'/'.$t_seq.'/'.$t_filename;
+
+                                        $thumbnailLink = '<a title = "' . $doc[$title_field][0] . '" class="fancybox" rel="group' . $j .'" href="' . $b_uri . '"> ';
+                                        $thumbnailLink .= '<img src = "'.$t_uri.'" class="search-thumbnail" title="'. $doc[$title_field][0] .'" /></a>';
+                                    }
+                                }
+                            }
+                            // there isn't a thumbnail so display the bitstream itself
+                            else {
+                                $thumbnailLink = '<a title = "' . $doc[$title_field][0] . '" class="fancybox" rel="group' . $j .'" href="' . $b_uri . '"> ';
+                                $thumbnailLink .= '<img src = "'.$b_uri.'" class="search-thumbnail" title="'. $doc[$title_field][0] .'" /></a>';
+                            }
 
                             echo $thumbnailLink;
                         }
 
-                        $j++;
+                    } //end if there are bitstreams ?>
 
-                    } // end for each
+                </div>
+                <div class="clearfix"></div>
+            </div> <!-- close item div -->
 
-                } //end if bitstream ?>
+        </li>
+        <?php
 
-            </div>
-            <div class="clearfix"></div>
-        </div> <!-- close item div -->
+        $j++;
 
-    </li>
-        <?php }?>
+        } // end for each search result
+
+        ?>
     </ul>
 
     <div class="pagination">
