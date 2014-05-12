@@ -26,12 +26,12 @@ if (isset($solr[$internal_uri_field])) {
     foreach($solr[$internal_uri_field] as $internalURI) {
         $internalURI = str_replace('"', '%22', $internalURI);
         $internalURI = str_replace('|', '%7C', $internalURI);
-        echo '<h3><a href="'. $internalURI . '">View Collection</a></h3>';
+        echo '<h3><a href="'. $internalURI . '" target="_blank">View Collection</a></h3>';
     }
 }
 else if (isset($solr[$external_uri_field][0])) {
     foreach($solr[$external_uri_field] as $externalURI) {
-        echo '<h3><a href="'.$externalURI.'">View Collection</a></h3>';
+        echo '<h3><a href="'.$externalURI.'" target="_blank">View Collection</a></h3>';
     }
 }
 
