@@ -226,13 +226,7 @@
             <div class="clearfix"></div>
             </div> <!-- close item div -->
         </li>
-            <?php
-
-            $j++;
-
-        } // end for each search result
-
-        ?>
+            <?php }?>
     </ul>
 
 
