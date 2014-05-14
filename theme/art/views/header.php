@@ -85,9 +85,9 @@
         <div id="container">
             <header>
                <div id="collection-title">
-                <a href="http://www.ed.ac.uk" class="uoelogo" title="The University of Edinburgh" target="_blank"></a>
-                <a href="<?php echo base_url(); ?>art" class="artlogo" title="University of Edinburgh Art Collection"></a>
-                <a href="<?php echo base_url(); ?>art" class="menulogo" title="University of Edinburgh Art Collection"></a>
+                <a href="http://www.ed.ac.uk" class="uoelogo" title="The University of Edinburgh Home" target="_blank"></a>
+                <a href="<?php echo base_url(); ?>art" class="artlogo" title="University of Edinburgh Art Collection Home"></a>
+                <a href="<?php echo base_url(); ?>art" class="menulogo" title="University of Edinburgh Art Collection Home"></a>
                </div>
                <div id="collection-search">
                 <form action="./redirect/" method="post">

@@ -8,7 +8,7 @@
     <meta charset="utf-8">
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 
-    <base href="<?php echo base_url() . index_page(); if (index_page() !== '') { echo '/'; } ?>">
+    <base href="<?php echo base_url() . index_page(); if (index_page() !== '') { echo '/'; } echo $this->config->item('skylight_url_prefix'); echo '/' ?>">
 
     <title><?php echo $page_title; ?></title>
 
@@ -86,9 +86,9 @@
 
         <header>
             <div id="collection-title">
-                <a href="http://www.ed.ac.uk" class="uoelogo" title="The University of Edinburgh" target="_blank"></a>
-                <a href="<?php echo base_url(); ?>calendars" class="logo" title="University of Edinburgh Calendars"></a>
-                <a href="<?php echo base_url(); ?>calendars" class="menulogo" title="University of Edinburgh Calendars"></a>
+                <a href="http://www.ed.ac.uk" class="uoelogo" title="The University of Edinburgh Home" target="_blank"></a>
+                <a href="<?php echo base_url(); ?>calendars" class="logo" title="University of Edinburgh Calendars Home"></a>
+                <a href="<?php echo base_url(); ?>calendars" class="menulogo" title="University of Edinburgh Calendars Home"></a>
             </div>
             <div id="collection-search">
                 <form action="./redirect/" method="post">

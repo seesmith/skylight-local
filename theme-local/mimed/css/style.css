@@ -133,7 +133,7 @@ input.btn:hover                                        { background: #033a5f; }
 #container                      { width: 940px; margin: auto auto; }
 header                          { position: relative; }
 .col-main                       { float: left; margin-right: 40px; width: 660px; }
-.col-sidebar                    { float: left; width: 240px; margin-top: -52px; background: #c9c9c9; position: relative; z-index: 2; }
+.col-sidebar                    { float: left; width: 240px; margin-top: -52px; background: #dedede; position: relative; z-index: 2; }
 .ie7 .col-sidebar               { padding-bottom: 30px; }
 
 /* Uoe specific */
@@ -246,16 +246,16 @@ footer                  { display: block; border-bottom: 1px solid #093563; padd
 .social-icons li a.twitter-icon           { display: block; width: 33px; height: 33px; float: left; background: url(../images/twittericonfooter.png) no-repeat 0px 0px;}
 .social-icons li a.twitter-icon:hover     { display: block; background: url(../images/twittericonfooter2.png) no-repeat 0px 0px; }
 
-.footer-disclaimer      { display:block; width: 90%; margin: auto; }
+.footer-disclaimer      { display: block; width: 660px; margin: 5px; }
 
 .footer-logo            { display: block; float: left; }
-.recognised-logo        { display: block; float: left; padding-left: 10px; }
-.is-logo                { display: block; float: left; padding-left: 10px; }
+.recognised-logo        { display: block; float: left; padding-left: 5px; }
+.is-logo                { display: block; float: left; padding-left: 5px; }
 .luclogo                { display: block; width: 64px; height: 64px; background: url(../images/MimedLUCLogo.png) no-repeat 0px 0px; }
-.recognisedlogo         { display: block; float: left; width: 100px; height: 64px; background: url(../images/recognised.gif) no-repeat 0px 0px; }
 .islogo                 { display: block; float: left; width: 50px; height: 64px; background: url(../images/islogo.gif) no-repeat 0px 0px; }
+.recognisedlogo         { display: block; float: left; width: 100px; height: 64px; background: url(../images/recognised.gif) no-repeat 0px 0px; }
 
-.footer-policies        { display: block; float: left; padding-left: 10px; width: 328px; }
+.footer-policies        { display: block; float: left; padding-left: 5px; width: 420px; }
 .footer-policies p      { font-size: 12px; margin-bottom: 5px; color: #555555}
 
 /* Custom Containers & Subclasses ----------------------------------------------------------------------------------------*/

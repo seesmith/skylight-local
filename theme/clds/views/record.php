@@ -193,8 +193,6 @@ else if (isset($solr[$external_uri_field][0])) {
 
         $b_seq =  "";
 
-        //SR JIRA001-665 sort bitstreams by sequence to ensure they show in correct order
-        //foreach($solr[$bitstream_field] as $bitstream) {
         foreach($bitstream_array as $bitstream) {
 
             $b_segments = explode("##", $bitstream);
@@ -211,7 +209,7 @@ else if (isset($solr[$external_uri_field][0])) {
 
                     $bitstreamLink = '<div class="main-image">';
 
-                    $bitstreamLink .= '<a title = "' . $record_title . '" class="fancybox" rel="group" href="' . $b_uri . '"> ';
+                    $bitstreamLink .= '<a title = "' . $record_title . ' ' .$b_filename.'" class="fancybox" rel="group" href="' . $b_uri . '"> ';
                     $bitstreamLink .= '<img class="record-main-image" src = "'. $b_uri .'">';
                     $bitstreamLink .= '</a>';
 
@@ -243,7 +241,7 @@ else if (isset($solr[$external_uri_field][0])) {
                                 }
 
                                 $thumbnailLink[$numThumbnails] .= '"><a title = "' . $record_title . '" class="fancybox" rel="group" href="' . $b_uri . '"> ';
-                                $thumbnailLink[$numThumbnails] .= '<img src = "'.$t_uri.'" class="record-thumbnail" title="'. $record_title .'" /></a></div>';
+                                $thumbnailLink[$numThumbnails] .= '<img src = "'.$t_uri.'" class="record-thumbnail" title="'. $record_title .' '.$t_filename.'" /></a></div>';
 
                                 $numThumbnails++;
                             }

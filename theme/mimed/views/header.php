@@ -86,9 +86,9 @@
 
         <header>
             <div id="collection-title">
-                <a href="http://www.ed.ac.uk" class="uoelogo" title="The University of Edinburgh" target="_blank"></a>
-                <a href="<?php echo base_url(); ?>mimed" class="mimedlogo" title="University of Edinburgh Musical Instrument Museums"></a>
-                <a href="http://www.stcecilias.ed.ac.uk/" class="menulogo" title="St Cecilia's Hall" target="_blank"></a>
+                <a href="http://www.ed.ac.uk" class="uoelogo" title="The University of Edinburgh Homepage Link" target="_blank"></a>
+                <a href="<?php echo base_url(); ?>mimed" class="mimedlogo" title="Musical Instrument Museums Edinburgh Home"></a>
+                <a href="http://www.stcecilias.ed.ac.uk/" class="menulogo" title="St Cecilia's Hall Link" target="_blank"></a>
             </div>
             <div id="collection-search">
                 <form action="./redirect/" method="post">
