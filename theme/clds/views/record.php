@@ -57,16 +57,6 @@ else if (isset($solr[$external_uri_field][0])) {
 
 <div class="content">
 
-    <?php
-    $abstract_field = $this->skylight_utilities->getField("Abstract");
-    if(isset($solr[$abstract_field])) {
-        ?> <h3>Abstract</h3> <?php
-        foreach($solr[$abstract_field] as $abstract) {
-            echo '<p>'.$abstract.'</p>';
-        }
-    }
-    ?>
-
     <table>
         <tbody>
 

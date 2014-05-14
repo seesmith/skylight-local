@@ -1,8 +1,11 @@
 <?php
 
-    $config['skylight_appname'] = 'geology';
+    $config['skylight_appname'] = 'cockburn';
 
     $config['skylight_theme'] = 'rocks';
+
+    // Uncomment this if you are using a url of the form http://.../art/...
+    $config['skylight_url_prefix'] = 'cockburn';
 
     $config['skylight_fullname'] = 'Cockburn Collection';
 
@@ -12,7 +15,7 @@
 
 
     // Container ID and the field used in solr index to store this ID. Used for restricting search/browse scope.
-    $config['skylight_container_id'] = '13';
+    $config['skylight_container_id'] = '15';
     $config['skylight_container_field'] = 'location.coll';
 
     $config['skylight_fields'] = array('Title' => 'dc.title.en',

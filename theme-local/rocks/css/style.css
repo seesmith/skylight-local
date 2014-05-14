@@ -92,8 +92,8 @@ input:valid, textarea:valid   								{  } /* Colors for form validity */
 input:invalid, textarea:invalid 							{ border-radius: 1px; -moz-box-shadow: 0px 0px 5px red; -webkit-box-shadow: 0px 0px 5px red; box-shadow: 0px 0px 5px red; }
 .no-boxshadow input:invalid, .no-boxshadow textarea:invalid { background-color: #f0dddd; }
 
-::-moz-selection 	{ background: #00548e; color: #fff; text-shadow: none; } /* These selection declarations have to be separate No text-shadow: twitter.com/miketaylr/status/12228805301 Also: hot pink! */
-::selection 		{ background: #00548e; color: #fff; text-shadow: none; }
+::-moz-selection 	{ background: #771301; color: #fff; text-shadow: none; } /* These selection declarations have to be separate No text-shadow: twitter.com/miketaylr/status/12228805301 Also: hot pink! */
+::selection 		{ background: #771301; color: #fff; text-shadow: none; }
 a:link 				{ -webkit-tap-highlight-color: #FF5E99; } /* j.mp/webkit-tap-highlight-color */
 
 button 				{  width: auto; overflow: visible; } /* Make buttons play nice in IE: www.viget.com/inspire/styling-the-button-element-in-internet-explorer/ */
@@ -162,7 +162,6 @@ header				{ position: relative; width: 940px;}
 .item-div                       { width: 660px; text-align: left; display: block; }
 .iteminfo                       { display: block; min-height:100px; text-align: left; width: 75%; float:left; }
 .iteminfo h3                    { font-size: 18px; margin-top: 5px; }
-.iteminfo .artist               { font-size: 14px; color: #58A09D; font-weight: bold; }
 
 .thumbnail-image                { display: block; text-align: center; width: 23%; float: right; }
 
@@ -191,8 +190,8 @@ span[id^="video-"]              { margin: 5px 0; }
 .col-sidebar ul a:hover				{ text-decoration: underline; }
 
 .col-sidebar ul.selected					{ background: #ffffff; -webkit-border-radius: 5px; -moz-border-radius: 5px; border-radius: 5px; padding: 7px 9px; margin: 0 17px 4px 17px; }
-.col-sidebar ul.selected li 				{ position: relative; color: #71c53d; }
-.col-sidebar ul.selected a					{ color: #71c53d; padding: 0; }
+.col-sidebar ul.selected li 				{ position: relative;}
+.col-sidebar ul.selected a					{ padding: 0; text-decoration: underline; color: #771301; }
 .col-sidebar ul.selected a:hover			{ background: none; }
 .col-sidebar ul.selected a.deselect			{ display: block; width: 13px; height: 13px; background: url(../images/bg-deselect.png) no-repeat 0px 0px; text-indent: -9999px; position: absolute; top: 0; right: 0; }
 .col-sidebar ul.selected a.deselect:hover	{ background-position: 0px -15px; }
@@ -201,8 +200,8 @@ span[id^="video-"]              { margin: 5px 0; }
 .col-sidebar ul.related li a 				{ padding: 0; }
 .col-sidebar ul.related li a:hover			{ background: none; text-decoration: underline; }
 .col-sidebar ul.related .tags				{ margin: 0px 0 0 0; }
-.col-sidebar ul.related .tags a 			{ padding: 2px 5px; display: inline-block; background: #ffffff; color: #00315F;}
-.col-sidebar ul.related .tags a:hover		{ text-decoration: none; background: #771301; }
+.col-sidebar ul.related .tags a 			{ padding: 2px 5px; display: inline-block; background: #ffffff; color: #771301;}
+.col-sidebar ul.related .tags a:hover		{ text-decoration: none; color: #ffffff; background: #771301; }
 
 .col-sidebar ul.related li a.related-record { font-size: 14px; padding-bottom: 5px;}
 
@@ -247,7 +246,7 @@ footer                  { display: block; border-bottom: 1px solid #71c53d; padd
 .listing li p 						{ font-size: 12px; margin: 0; }
 
 .tags					{ margin-top: 5px; margin: 0; }
-.tags a 				{ font-size: 13px; background: #AAA79E; -webkit-border-radius: 5px; -moz-border-radius: 5px; border-radius: 5px; padding: 2px 6px; line-height: 20px; margin-right: 8px; text-decoration: none; }
+.tags a 				{ font-size: 13px; background: #D6D3C4; -webkit-border-radius: 5px; -moz-border-radius: 5px; border-radius: 5px; padding: 2px 6px; line-height: 20px; margin-right: 8px; text-decoration: none; }
 .tags a.bold			{ font-weight: bold; }
 .tags a:hover			{ background: #771301; color: #fff; }
 
