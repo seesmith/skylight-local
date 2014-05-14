@@ -163,19 +163,14 @@ header                          { position: relative; }
 .thumbnail-strip .first         { margin-left: 0px; }
 .record-thumbnail               { max-width: 150px; max-height: 200px; }
 
-.left-title                     { width: 410px; float: left; }
-.right-image                    { width: 250px; float: right; text-align: center; }
-.left-metadata                  { width: 380px; float: left; padding-top: 10px; }
-
-.left-image-strip               { width: 230px; float: left; padding: 0 10px 10px 0; text-align: center; }
-.right-metadata                 { width: 410px; float: right; }
-.full-metadata                  { width: 660px; }
-.bitstream-image                {  }
-.record-image                   { max-width: 230px; }
+#right-image-strip              { float: left; padding: 0 0 0 10px; text-align: center; }
+#left-metadata                  { float: left; padding: 0 10px 10px 0; }
+#full-metadata                  { width: 660px; }
 
 .record-bitstreams              { display: block; width: 660px; margin: 5px 0; }
-.main-image                     { max-width: 250px; display: block; }
-.record-main-image              { max-width: 250px; max-height: 400px; padding-top: 10px; }
+.record-image                   { float: left; max-width: 230px; max-height: 200px; margin: 5px 5px 0px 0px; border: solid 1px #093563; }
+#main-image                     { max-width: 250px; display: block; border: solid 1px #093563;}
+#second-image                   { max-width: 250px; display: block; border: solid 1px #093563; margin: 5px 5px 0px 0px; }
 
 audio[id^="audio-"]             { margin: 5px 0; }
 span[id^="video-"]              { margin: 5px 0; }

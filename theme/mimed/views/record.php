@@ -46,10 +46,21 @@ if(isset($solr[$bitstream_field]) && $link_bitstream) {
 
         if (strpos($b_uri, ".jpg") > 0)
         {
+
             $bitstreamLinks[$numBitstreams] = '<div class="bitstream-image">';
 
             $bitstreamLinks[$numBitstreams] .= '<a title = "' . $record_title . '" class="fancybox" rel="group" href="' . $b_uri . '"> ';
-            $bitstreamLinks[$numBitstreams] .= '<img class="record-image" src = "'. $b_uri .'">';
+
+            if($numBitstreams == 0) {
+                $bitstreamLinks[$numBitstreams] .= '<img id="main-image"';
+            }
+            else if($numBitstreams == 1) {
+                $bitstreamLinks[$numBitstreams] .= '<img id="second-image" class="record-image"';
+            }
+            else {
+                $bitstreamLinks[$numBitstreams] .= '<img class="record-image"';
+            }
+            $bitstreamLinks[$numBitstreams] .= ' src = "'. $b_uri .'">';
             $bitstreamLinks[$numBitstreams] .= '</a>';
 
             $bitstreamLinks[$numBitstreams] .= '</div>';
@@ -128,23 +139,11 @@ if(isset($solr[$bitstream_field]) && $link_bitstream) {
     <?php
     if($numBitstreams > 0) { ?>
 
-        <div class="left-image-strip">
-
-        <?php
-
-            foreach($bitstreamLinks as $bitstreamLink) {
-
-                echo $bitstreamLink;
-            }
-
-        ?>
-        </div>
-
-        <div class="right-metadata">
+        <div id="left-metadata">
 
     <?php } else { ?>
 
-        <div class="full-metadata">
+        <div id="full-metadata">
 
     <?php } ?>
 
@@ -183,6 +182,15 @@ if(isset($solr[$bitstream_field]) && $link_bitstream) {
             </tbody>
         </table>
     </div>
+
+    <?php
+
+        foreach($bitstreamLinks as $bitstreamLink) {
+
+            echo $bitstreamLink;
+        }
+
+    ?>
 
     <div class="clearfix"></div>
 
