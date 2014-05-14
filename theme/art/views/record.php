@@ -155,15 +155,6 @@ if(isset($solr[$bitstream_field]) && $link_bitstream) {
         <?php } ?>
     <?php } ?>
 
-    <?php
-    $abstract_field = $this->skylight_utilities->getField("Abstract");
-    if(isset($solr[$abstract_field])) {
-        ?> <h3>Abstract</h3> <?php
-        foreach($solr[$abstract_field] as $abstract) {
-            echo '<p>'.$abstract.'</p>';
-        }
-    }
-    ?>
     <?php if($mainImageTest === true) { ?>
     <div class="full-metadata">
     <?php } ?>

@@ -66,8 +66,6 @@ if(isset($solr[$type_field])) {
 
         $b_seq =  "";
 
-        //SR JIRA001-665 sort bitstreams by sequence to ensure they show in correct order
-        //foreach($solr[$bitstream_field] as $bitstream) {
         foreach($bitstream_array as $bitstream) {
 
             $b_segments = explode("##", $bitstream);
