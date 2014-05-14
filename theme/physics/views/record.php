@@ -94,18 +94,20 @@ if(isset($solr[$type_field])) {
 
 </div>
 
-
-
 <?php if(isset($solr[$bitstream_field]) && $link_bitstream) { ?>
     <div class="record_bitstreams">
         <h3>Digital Objects</h3>
-        <p>High quality versions of images are available on request by <a href="./feedback">email</a>.</p>
+        <?php if ($isAuthorised != '1') { ?>
+            <p>High quality versions of images are available on request by <a href="./feedback">email</a>.</p>
+        <?php } else { ?>
+            <p>Click on a thumbnail to see the high resolution image.</p>
+        <?php } ?>
+
     <?php
     foreach($solr[$bitstream_field] as $bitstream) {
 
         $bitstreamLink = $this->skylight_utilities->getBitstreamLink($bitstream);
         $bitstreamLinkedImage = $this->skylight_utilities->getBitstreamLinkedImage($bitstream);
-
 
         $segments = explode("##", $bitstream);
         $filename = $segments[1];
@@ -113,8 +115,6 @@ if(isset($solr[$type_field])) {
         $seq = $segments[4];
         $handle_id = preg_replace('/^.*\//', '',$handle);
         $uri = './record/'.$handle_id.'/'.$seq.'/'.$filename;
-
-
 
         if(isset($solr[$thumbnail_field])) {
 
@@ -127,12 +127,17 @@ if(isset($solr[$type_field])) {
                 $t_uri = './record/'.$handle_id.'/'.$t_seq.'/'.$t_filename;
 
                 if ($t_filename == $filename.'.jpg') {
-                    $thumbnailLink = '<a title = "' . $solr[$title_field][0] . '" class="fancybox"' . ' href="' . $t_uri . '"> ';
+                    if ($isAuthorised != '1') {
+                        $thumbnailLink = '<a title = "' . $solr[$title_field][0] . '" class="fancybox"' . ' href="' . $t_uri . '"> ';
+                    } else {
+                        $thumbnailLink = '<a title = "' . $solr[$title_field][0] . '" class="fancybox"' . ' href="' . $uri . '"> ';
+                    }
                     $thumbnailLink .= '<img src = "'.$t_uri.'" title="'. $solr[$title_field][0] .'" /></a>';
                     echo $thumbnailLink;
                 }
             }
         }
+
     }
 
 

@@ -9,7 +9,8 @@ $config['skylight_theme'] = 'physics';
 
 $config['skylight_fullname'] = 'School of Physics and Astronomy Image Archive';
 
-//$config['base_url']	= 'http://localhost/physics/';
+// Uncomment this if you wish to restrict access to high res images to these IP ranges or addresses.
+$config['skylight_ip_ranges'] = array('/^::1/', '/^129\.215/');
 
 $config['skylight_ga_code'] = 'UA-XXXX-Y';
 
