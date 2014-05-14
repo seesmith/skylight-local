@@ -162,7 +162,7 @@ header                          { position: relative; }
 .thumbnail-strip .first         { margin-left: 0px; }
 .record-thumbnail               { max-width: 150px; max-height: 200px; }
 
-.record-bitstreams              { display: block; margin: 0 auto; width: 660px; margin-top: 20px; margin-bottom: 5px; }
+.record-bitstreams              { display: block; width: 660px; margin: 5px 0; }
 
 .title-image                    { width: 660px; }
 .left-title                     { float: left; }
@@ -170,6 +170,9 @@ header                          { position: relative; }
 
 .main-image                     { max-width: 660px; display: block; }
 .record-main-image              { max-width: 660px; max-height: 800px; }
+
+audio[id^="audio-"]             { margin: 5px 0; }
+span[id^="video-"]              { margin: 5px 0; }
 
 .search							{ padding-bottom: 22px; border-bottom: 1px solid #872379; width: 660px; }
 .search input[type=text]		{

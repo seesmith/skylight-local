@@ -267,6 +267,8 @@ table tr:nth-child(2n)				{ background: #e7e8ea; }
 .feedback_form label                { display: block; width: 100px;}
 
 
+audio[id^="audio-"]             { margin: 5px 0; }
+span[id^="video-"]              { margin: 5px 0; }
 
 /* <END> Site Css \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\ */
 
