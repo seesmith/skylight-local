@@ -6,8 +6,10 @@ $bitstream_field = $this->skylight_utilities->getField("Bitstream");
 $thumbnail_field = $this->skylight_utilities->getField("Thumbnail");
 $parent_collection_field = $this->skylight_utilities->getField("Parent Collection");
 $child_collection_field = $this->skylight_utilities->getField("Sub Collections");
+$internal_uri_field = $this->skylight_utilities->getField("Internal URI");
+$external_uri_field = $this->skylight_utilities->getField("External URI");
 $handle_prefix = $this->config->item('skylight_handle_prefix');
-
+$filters = array_keys($this->config->item("skylight_filters"));
 
 $type = 'Unknown';
 
@@ -15,11 +17,25 @@ if(isset($solr[$type_field])) {
     $type = "media-" . strtolower(str_replace(' ','-',$solr[$type_field][0]));
 }
 
-
 ?>
 
-
 <h1 class="itemtitle"><?php echo $record_title ?></h1>
+<?php
+
+if (isset($solr[$internal_uri_field])) {
+    foreach($solr[$internal_uri_field] as $internalURI) {
+        $internalURI = str_replace('"', '%22', $internalURI);
+        $internalURI = str_replace('|', '%7C', $internalURI);
+        echo '<h3><a href="'. $internalURI . '" target="_blank">View Collection</a></h3>';
+    }
+}
+else if (isset($solr[$external_uri_field][0])) {
+    foreach($solr[$external_uri_field] as $externalURI) {
+        echo '<h3><a href="'.$externalURI.'" target="_blank">View Collection</a></h3>';
+    }
+}
+
+?>
 <div class="tags">
     <?php
 
@@ -53,13 +69,26 @@ if(isset($solr[$type_field])) {
 
     <table>
         <tbody>
-        <?php foreach($recorddisplay as $key) {
 
+        <?php foreach($recorddisplay as $key) {
             $element = $this->skylight_utilities->getField($key);
             if(isset($solr[$element])) {
+
                 echo '<tr><th>'.$key.'</th><td>';
                 foreach($solr[$element] as $index => $metadatavalue) {
-                    echo $metadatavalue;
+                    // if it's a facet search
+                    // make it a clickable search link
+                    if(in_array($key, $filters)) {
+
+                        $orig_filter = urlencode($metadatavalue);
+                        $lower_orig_filter = strtolower($metadatavalue);
+                        $lower_orig_filter = urlencode($lower_orig_filter);
+
+                        echo '<a href="./search/*:*/' . $key . ':%22'.$lower_orig_filter.'%7C%7C%7C'.$orig_filter.'%22">'.$metadatavalue.'</a>';
+                    }
+                    else {
+                        echo $metadatavalue;
+                    }
                     if($index < sizeof($solr[$element]) - 1) {
                         echo '; ';
                     }
@@ -79,11 +108,14 @@ if(isset($solr[$type_field])) {
                 {
 
                     $parents= explode("|", $parent);
+
                     //todo move into config
                     $parent_link = str_replace("http://hdl.handle.net/". $handle_prefix."/", "./record/",$parents[0]);
-                    $parent_name = $parents[1];
+
+                    $parent_name = (isset($parents[1]) ? $parents[1] : "Parent Collection");
 
                     echo '<a href="'.$parent_link.'">'.$parent_name.'</a>';
+
 
                 }
                 else{
@@ -131,23 +163,9 @@ if(isset($solr[$type_field])) {
     </table>
 
     <?php
-    if(isset($solr[$bitstream_field]) && $link_bitstream) {
-    ?><div class="record_bitstreams"><?php
-    //SR JIRA001-665 sort bitstreams by sequence to ensure they show in correct order
-    $bitstream_array = array();
+    if(isset($solr[$bitstream_field]) && $link_bitstream) { ?>
 
-
-    foreach ($solr[$bitstream_field] as $bitstream_for_array)
-    {
-        $b_segments = explode("##", $bitstream_for_array);
-        $b_seq = $b_segments[4];
-        $bitstream_array[$b_seq] = $bitstream_for_array;
-    }
-
-    ksort($bitstream_array);
-
-
-
+        <div class="record_bitstreams"><?php
 
         $numThumbnails = 0;
         $mainImage = false;
@@ -155,6 +173,24 @@ if(isset($solr[$type_field])) {
         $audioFile = false;
         $audioLink = "";
         $videoLink = "";
+        $bitstream_array = array();
+
+        foreach ($solr[$bitstream_field] as $bitstream)
+        {
+            $b_segments = explode("##", $bitstream);
+            $b_filename = $b_segments[1];
+            $b_seq = $b_segments[4];
+
+            if((strpos($b_filename, ".jpg") > 0)) {
+
+                $bitstream_array[$b_seq] = $bitstream;
+
+            }
+        }
+
+        // sorting array so main image is first
+        ksort($bitstream_array);
+
         $b_seq =  "";
 
         //SR JIRA001-665 sort bitstreams by sequence to ensure they show in correct order
@@ -184,18 +220,35 @@ if(isset($solr[$type_field])) {
                     $mainImage = true;
 
                 }
+                // we need to display a thumbnail
                 else {
 
-                    $t_uri = $b_uri . '.jpg';
+                    // if there are thumbnails
+                    if(isset($solr[$thumbnail_field])) {
+                        foreach ($solr[$thumbnail_field] as $thumbnail) {
 
-                    $thumbnailLink[$numThumbnails] = '<div class="thumbnail-tile';
-                    if($numThumbnails % 4 === 0) {
-                        $thumbnailLink[$numThumbnails] .= ' first';
+                            $t_segments = explode("##", $thumbnail);
+                            $t_filename = $t_segments[1];
+
+                            if ($t_filename === $b_filename . ".jpg") {
+
+                                $t_handle = $t_segments[3];
+                                $t_seq = $t_segments[4];
+                                $t_uri = './record/'.$b_handle_id.'/'.$t_seq.'/'.$t_filename;
+
+                                $thumbnailLink[$numThumbnails] = '<div class="thumbnail-tile';
+
+                                if($numThumbnails % 4 === 0) {
+                                    $thumbnailLink[$numThumbnails] .= ' first';
+                                }
+
+                                $thumbnailLink[$numThumbnails] .= '"><a title = "' . $record_title . '" class="fancybox" rel="group" href="' . $b_uri . '"> ';
+                                $thumbnailLink[$numThumbnails] .= '<img src = "'.$t_uri.'" class="record-thumbnail" title="'. $record_title .'" /></a></div>';
+
+                                $numThumbnails++;
+                            }
+                        }
                     }
-                    $thumbnailLink[$numThumbnails] .= '"><a title = "' . $record_title . '" class="fancybox" rel="group" href="' . $t_uri . '"> ';
-                    $thumbnailLink[$numThumbnails] .= '<img src = "'.$t_uri.'" class="record-thumbnail" title="'. $record_title .'" /></a></div>';
-
-                    $numThumbnails++;
 
                 }
 
@@ -219,7 +272,7 @@ if(isset($solr[$type_field])) {
 
             ?>
         <?php
-        }
+        } // end for each bitstream
 
         if($mainImage) {
 
@@ -272,7 +325,7 @@ if(isset($solr[$type_field])) {
 
         echo '</div><div class="clearfix"></div>';
 
-        }
+    } // end if there are bitstreams
 
-        echo '</div>';
-        ?>
+    echo '</div>';
+    ?>

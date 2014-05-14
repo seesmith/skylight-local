@@ -5,7 +5,7 @@ $bitstream_field = $this->skylight_utilities->getField("Bitstream");
 $thumbnail_field = $this->skylight_utilities->getField("Thumbnail");
 $subject_field = $this->skylight_utilities->getField("Subject");
 $uri_field = $this->skylight_utilities->getField("Link");
-
+$filters = array_keys($this->config->item("skylight_filters"));
 
 $type = 'Unknown';
 
@@ -36,9 +36,9 @@ if(isset($solr[$type_field])) {
 </div>
 
 <div class="content">
-    <?php if(isset($solr[$bitstream_field]) && $link_bitstream) {
-    ?><div class="record_bitstreams"><?php
+    <?php if(isset($solr[$bitstream_field]) && $link_bitstream) { ?>
 
+        <div class="record_bitstreams"><?php
 
         $numThumbnails = 0;
         $mainImage = false;
@@ -46,7 +46,29 @@ if(isset($solr[$type_field])) {
         $audioFile = false;
         $audioLink = "";
         $videoLink = "";
-        foreach($solr[$bitstream_field] as $bitstream) {
+        $bitstream_array = array();
+
+        foreach ($solr[$bitstream_field] as $bitstream)
+        {
+            $b_segments = explode("##", $bitstream);
+            $b_filename = $b_segments[1];
+            $b_seq = $b_segments[4];
+
+            if((strpos($b_filename, ".jpg") > 0)) {
+
+                $bitstream_array[$b_seq] = $bitstream;
+
+            }
+        }
+
+        // sorting array so main image is first
+        ksort($bitstream_array);
+
+        $b_seq =  "";
+
+        //SR JIRA001-665 sort bitstreams by sequence to ensure they show in correct order
+        //foreach($solr[$bitstream_field] as $bitstream) {
+        foreach($bitstream_array as $bitstream) {
 
             $b_segments = explode("##", $bitstream);
             $b_filename = $b_segments[1];
@@ -71,18 +93,35 @@ if(isset($solr[$type_field])) {
                     $mainImage = true;
 
                 }
+                // we need to display a thumbnail
                 else {
 
-                    $t_uri = $b_uri . '.jpg';
+                    // if there are thumbnails
+                    if(isset($solr[$thumbnail_field])) {
+                        foreach ($solr[$thumbnail_field] as $thumbnail) {
 
-                    $thumbnailLink[$numThumbnails] = '<div class="thumbnail-tile';
-                    if($numThumbnails % 4 === 0) {
-                        $thumbnailLink[$numThumbnails] .= ' first';
+                            $t_segments = explode("##", $thumbnail);
+                            $t_filename = $t_segments[1];
+
+                            if ($t_filename === $b_filename . ".jpg") {
+
+                                $t_handle = $t_segments[3];
+                                $t_seq = $t_segments[4];
+                                $t_uri = './record/'.$b_handle_id.'/'.$t_seq.'/'.$t_filename;
+
+                                $thumbnailLink[$numThumbnails] = '<div class="thumbnail-tile';
+
+                                if($numThumbnails % 4 === 0) {
+                                    $thumbnailLink[$numThumbnails] .= ' first';
+                                }
+
+                                $thumbnailLink[$numThumbnails] .= '"><a title = "' . $record_title . '" class="fancybox" rel="group" href="' . $b_uri . '"> ';
+                                $thumbnailLink[$numThumbnails] .= '<img src = "'.$t_uri.'" class="record-thumbnail" title="'. $record_title .'" /></a></div>';
+
+                                $numThumbnails++;
+                            }
+                        }
                     }
-                    $thumbnailLink[$numThumbnails] .= '"><a title = "' . $record_title . '" class="fancybox" rel="group" href="' . $t_uri . '"> ';
-                    $thumbnailLink[$numThumbnails] .= '<img src = "'.$t_uri.'" class="record-thumbnail" title="'. $record_title .'" /></a></div>';
-
-                    $numThumbnails++;
 
                 }
 
@@ -106,7 +145,8 @@ if(isset($solr[$type_field])) {
 
             ?>
         <?php
-        }
+        } // end for each bitstream
+
 
         if($mainImage) {
 
@@ -172,7 +212,19 @@ if(isset($solr[$type_field])) {
             if(isset($solr[$element])) {
                 echo '<tr><th>'.$key.'</th><td>';
                 foreach($solr[$element] as $index => $metadatavalue) {
-                    echo $metadatavalue;
+                    // if it's a facet search
+                    // make it a clickable search link
+                    if(in_array($key, $filters)) {
+
+                        $orig_filter = urlencode($metadatavalue);
+                        $lower_orig_filter = strtolower($metadatavalue);
+                        $lower_orig_filter = urlencode($lower_orig_filter);
+
+                        echo '<a href="./search/*:*/' . $key . ':%22'.$lower_orig_filter.'%7C%7C%7C'.$orig_filter.'%22">'.$metadatavalue.'</a>';
+                    }
+                    else {
+                        echo $metadatavalue;
+                    }
                     if($index < sizeof($solr[$element]) - 1) {
                         echo '; ';
                     }

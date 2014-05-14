@@ -11,7 +11,7 @@
         <!-- Wrapper for slides -->
         <div class="carousel-inner">
             <div class="item active">
-                <a href="<?php echo base_url(); ?>?config=art&theme=art">
+                <a href="<?php echo base_url(); ?>art">
                 <img src="<?php echo base_url(); ?>theme/<?php echo $this->config->item('skylight_theme'); ?>/images/artslide.png" title="Edinburgh University Art Collection" alt="Edinburgh University Art Collection">
                 <div class="carousel-caption caption-art" onmouseover="this.style.background='#005784';this.style.color='#FFF'" onmouseout="this.style.background='#FFFFFF';this.style.color='#005784'">
                     Edinburgh University Art Collection
@@ -19,7 +19,7 @@
                 </a>
             </div>
             <div class="item">
-                <a href="<?php echo base_url(); ?>?config=mimed&theme=mimed">
+                <a href="<?php echo base_url(); ?>mimed">
                 <img src="<?php echo base_url(); ?>theme/<?php echo $this->config->item('skylight_theme'); ?>/images/mimedslide.png" title="Edinburgh University Musical Instrument Museums" alt="Edinburgh University Musical Instrument Museums">
                 <div class="carousel-caption caption-mimed" onmouseover="this.style.background='#005784';this.style.color='#FFF'" onmouseout="this.style.background='#FFFFFF';this.style.color='#005784'">
                     Edinburgh University Musical Instrument Museums
@@ -27,7 +27,7 @@
                 </a>
             </div>
             <div class="item">
-                <a href="<?php echo base_url(); ?>">
+                <a href="<?php echo base_url(); ?>mimed/search/*/Collection:%22raymond+russell+collection%7C%7C%7CRaymond+Russell+Collection%22">
                 <img src="<?php echo base_url(); ?>theme/<?php echo $this->config->item('skylight_theme'); ?>/images/harpsichordslide.png" title="Raymond Russell Keyboards Collection" alt="Raymond Russell Keyboards Collection">
                 <div class="carousel-caption caption-russell" onmouseover="this.style.background='#005784';this.style.color='#FFF'" onmouseout="this.style.background='#FFFFFF';this.style.color='#005784'">
                     Raymond Russell Keyboards Collection

@@ -3,7 +3,7 @@
 $config['skylight_appname'] = 'mimed';
 
 // Uncomment this if you are using a url of the form http://.../art/...
-$config['skylight_url_prefix'] = 'art';
+$config['skylight_url_prefix'] = 'mimed';
 
 $config['skylight_theme'] = 'mimed';
 
@@ -53,7 +53,7 @@ $config['skylight_fields'] = array(
 
 
 $config['skylight_date_filters'] = array();
-$config['skylight_filters'] = array('Instrument Type' => 'type_filter', 'Maker' => 'author_filter', 'Place Made' => 'place_filter', 'Collection'=> 'collection_filter' );
+$config['skylight_filters'] = array('Instrument' => 'type_filter', 'Maker' => 'author_filter', 'Place Made' => 'place_filter', 'Collection'=> 'collection_filter' );
 $config['skylight_filter_delimiter'] = ':';
 
 $config['skylight_meta_fields'] = array('Title' => 'dc.title',
@@ -62,7 +62,7 @@ $config['skylight_meta_fields'] = array('Title' => 'dc.title',
     'Subject' => 'dc.subject',
     'Type' => 'dc.type');
 
-$config['skylight_recorddisplay'] = array('Title','Alternative Title','Instrument','Instrument Family','Maker','Subject','Abstract','Place Made','Date Made','Description','Other Information','Notes','Decorations','Measurements','Provenance','Inscription','Signature','Acquisition','Collection','Rights Holder','Accession Number');
+$config['skylight_recorddisplay'] = array('Alternative Title','Instrument','Instrument Family','Maker','Subject','Abstract','Place Made','Date Made','Description','Other Information','Notes','Decorations','Measurements','Provenance','Inscription','Signature','Acquisition','Collection','Rights Holder','Accession Number');
 
 $config['skylight_searchresult_display'] = array('Title','Instrument','Maker','Subject','Abstract', 'Bitstream', 'Thumbnail');
 
@@ -91,7 +91,7 @@ $config['skylight_feed_fields'] = array('Title' => 'Title',
 $config['skylight_results_per_page'] = 10;
 $config['skylight_share_buttons'] = false;
 
-// $config['skylight_homepage_recentitems'] = false;
+$config['skylight_homepage_recentitems'] = false;
 
 // Set to the number of minutes to cache pages for. Set to false for no caching.
 // This overrides the setting in skylight.php so is commented by Demo

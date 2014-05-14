@@ -73,7 +73,7 @@
             <div class="item-div">
                 <div class = "iteminfo">
                     <h3><a href="./record/<?php echo $doc['id']?>?highlight=<?php echo $query ?>"><?php echo $doc[$title_field][0]; ?></a></h3>
-                    <div class="tagdiv">
+                    <div class="tags">
 
 
                         <?php if(array_key_exists($subject_field,$doc)) { ?>
@@ -135,35 +135,79 @@
                 </div> <!-- close item-info -->
 
                 <div class = "thumbnail-image">
-                    <?php if(isset($doc[$bitstream_field])) {
+                    <?php
 
-                        $firstImg = false;
-                        foreach ($doc[$bitstream_field] as $bitstream) {
+                    $bitstream_array = array();
 
+                    if(isset($doc[$bitstream_field])) {
+
+                        $i = 0;
+                        $started = false;
+                        // loop through to get min sequence
+                        foreach ($doc[$bitstream_field] as $bitstream)
+                        {
                             $b_segments = explode("##", $bitstream);
+                            $b_filename = $b_segments[1];
+                            $b_seq = $b_segments[4];
+
+                            if((strpos($b_filename, ".jpg") > 0)) {
+
+                                $bitstream_array[$b_seq] = $bitstream;
+
+                                if ($started) {
+                                    if ($b_seq < $min_seq) {
+                                        $min_seq = $b_seq;
+                                    }
+                                }
+                                else {
+                                    $min_seq = $b_seq;
+                                    $started = true;
+                                }
+                            }
+
+                            $i++;
+
+                        }
+
+                        // if there is a thumbnail and a bitstream
+                        if(isset($min_seq) && count($bitstream_array) > 0) {
+
+                            // get all the information
+                            $b_segments = explode("##", $bitstream_array[$min_seq]);
                             $b_filename = $b_segments[1];
                             $b_handle = $b_segments[3];
                             $b_seq = $b_segments[4];
                             $b_handle_id = preg_replace('/^.*\//', '',$b_handle);
                             $b_uri = './record/'.$b_handle_id.'/'.$b_seq.'/'.$b_filename;
+                            $thumbnailLink = "";
 
-                            //todo check as assumes there is always a thumbnail for a jpg and only jpgs
-                            if (!$firstImg && strpos($b_uri, ".jpg") > 0)
-                            {
-                                $firstImg = true;
-                                $t_uri = $b_uri . '.jpg';
+                            if(isset($doc[$thumbnail_field])) {
+                                foreach ($doc[$thumbnail_field] as $thumbnail) {
 
-                                $thumbnailLink = '<a title = "' . $doc[$title_field][0] . '" class="fancybox" rel="group' . $j . '" href="' . $b_uri . '"> ';
-                                $thumbnailLink .= '<img src = "'.$t_uri.'" class="search-thumbnail" title="'. $doc[$title_field][0] .'" /></a>';
+                                    $t_segments = explode("##", $thumbnail);
+                                    $t_filename = $t_segments[1];
 
-                                echo $thumbnailLink;
+                                    if ($t_filename === $b_filename . ".jpg") {
+
+                                        $t_handle = $t_segments[3];
+                                        $t_seq = $t_segments[4];
+                                        $t_uri = './record/'.$b_handle_id.'/'.$t_seq.'/'.$t_filename;
+
+                                        $thumbnailLink = '<a title = "' . $doc[$title_field][0] . '" class="fancybox" rel="group' . $j .'" href="' . $b_uri . '"> ';
+                                        $thumbnailLink .= '<img src = "'.$t_uri.'" class="search-thumbnail" title="'. $doc[$title_field][0] .'" /></a>';
+                                    }
+                                }
+                            }
+                            // there isn't a thumbnail so display the bitstream itself
+                            else {
+                                $thumbnailLink = '<a title = "' . $doc[$title_field][0] . '" class="fancybox" rel="group' . $j .'" href="' . $b_uri . '"> ';
+                                $thumbnailLink .= '<img src = "'.$b_uri.'" class="search-thumbnail" title="'. $doc[$title_field][0] .'" /></a>';
                             }
 
-                            $j++;
+                            echo $thumbnailLink;
+                        }
 
-                        } // end for each
-
-                    } //end if bitstream ?>
+                    } //end if there are bitstreams ?>
 
                 </div>
                 <div class="clearfix"></div>
