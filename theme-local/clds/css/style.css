@@ -185,10 +185,13 @@ header				{ position: relative; width: 940px; height: 141px; background-color: #
 .thumbnail-strip .first         { margin-left: 0px; }
 .record-thumbnail               { max-width: 150px; max-height: 200px; }
 
-.record-bitstreams              { display: block; margin: 0 auto; width: 660px; margin-top: 20px; margin-bottom: 5px; }
+.record-bitstreams              { display: block; width: 660px; margin: 5px 0; }
 
 .main-image                     { max-width: 660px; display: block; }
 .record-main-image              { max-width: 660px; max-height: 800px; }
+
+audio[id^="audio-"]             { margin: 5px 0; }
+span[id^="video-"]              { margin: 5px 0; }
 
 .col-sidebar h4					{ color: #fff; line-height: 26px; font-weight: bold; text-transform: uppercase; font-size: 12px; margin-bottom: 17px; background: #333333; padding: 0 17px; }
 .col-sidebar h4 a 				{

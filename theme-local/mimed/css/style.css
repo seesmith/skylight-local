@@ -173,9 +173,12 @@ header                          { position: relative; }
 .bitstream-image                {  }
 .record-image                   { max-width: 230px; }
 
-.record-bitstreams              { display: block; margin: 0 auto; width: 660px; margin-top: 20px; margin-bottom: 5px; }
+.record-bitstreams              { display: block; width: 660px; margin: 5px 0; }
 .main-image                     { max-width: 250px; display: block; }
 .record-main-image              { max-width: 250px; max-height: 400px; padding-top: 10px; }
+
+audio[id^="audio-"]             { margin: 5px 0; }
+span[id^="video-"]              { margin: 5px 0; }
 
 .search							{ padding-bottom: 22px; border-bottom: 1px solid #093563; width: 660px; }
 .search input[type=text]		{
