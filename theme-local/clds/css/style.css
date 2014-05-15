@@ -183,12 +183,12 @@ header				{ position: relative; width: 940px; height: 141px; background-color: #
 .thumbnail-strip                { max-width: 660px; display: block; }
 .thumbnail-tile                 { margin-top: 20px; margin-left: 20px; float: left; }
 .thumbnail-strip .first         { margin-left: 0px; }
-.record-thumbnail               { max-width: 150px; max-height: 200px; }
+.record-thumbnail               { max-width: 150px; max-height: 200px; border: solid 1px #093563; }
 
 .record-bitstreams              { display: block; width: 660px; margin: 5px 0; }
 
 .main-image                     { max-width: 660px; display: block; }
-.record-main-image              { max-width: 660px; max-height: 800px; }
+.record-main-image              { max-width: 660px; max-height: 800px; border: solid 1px #093563; }
 
 audio[id^="audio-"]             { margin: 5px 0; }
 span[id^="video-"]              { margin: 5px 0; }
