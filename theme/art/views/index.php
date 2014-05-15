@@ -5,7 +5,19 @@
         collection of prints, drawings, paintings and sculpture. The ECA collection tells a unique story of the artist
         output of the College, particularly in the early to mid-20th Century. Some of the most respected names is Scottish
         art appear, such as <a href="./search/Peploe">Samuel Peploe</a>, <a href="./search/Bellany">John Bellany</a>,
-        <a href="./search/Redpath">Anne Redpath</a> and <a href="./search/Blackadder">Elizabeth Blackadder</a>.</p>
+        <a href="./search/Redpath">Anne Redpath</a> and <a href="./search/Blackadder">Elizabeth Blackadder</a>.
+    </p>
+    <div id="tile-block">
+        <a href="./art/record/20416" alt="S.J. Peploe Nude in Studio Interior" title="S.J. Peploe Nude in Studio Interior"><div id="tile-1" class="art-tile"></div></a>
+        <a href="./art/record/19807" alt="Henry Raeburn, John Robison" title="Henry Raeburn, John Robison"><div id="tile-2" class="art-tile"></div></a>
+        <a href="./art/record/20418" alt="John Bellany, Self Portrait" title="John Bellany, Self Portrait"><div id="tile-3" class="art-tile"></div></a>
+        <a href="./art/record/19578" alt="Hendrick ten Oever, Canal Landscape with Figures Bathing" title="Hendrick ten Oever, Canal Landscape with Figures Bathing"><div id="tile-4" class="art-tile"></div></a>
+        <a href="./art/record/19496" alt="De Vries, Cain and Abel" title="De Vries, Cain and Abel"><div id="tile-5" class="art-tile"></div></a>
+        <a href="./art/record/20412" alt="Anne Redpath, Life Painting" title="Anne Redpath, Life Painting"><div id="tile-6" class="art-tile"></div></a>
+        <a href="./art/search/David Batchelor" alt="David Batchelor, Blob 5 (blue)" title="David Batchelor, Blob 5 (blue)"><div id="tile-7" class="art-tile"></div></a>
+        <a href="./art/record/19494" alt="Giambologna, Horse" title="Giambologna, Horse"><div id="tile-8" class="art-tile"></div></a>
+        <a href="./art/search/Eduardo Paolozzi" alt="Eduardo Paolozzi, Krokadeel" title="Eduardo Paolozzi, Krokadeel"><div id="tile-9" class="art-tile"></div></a>
+    </div>
     <p>
         The Art Collection has as its centrepiece the Torrie Collection of seventeenth-century Dutch and Italian Masters
         with works by <a href="./search/Ruisdael">Ruisdael</a>, <a href="./search/ten%20Oever">ten Oever</a>,
