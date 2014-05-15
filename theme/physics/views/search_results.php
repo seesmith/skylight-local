@@ -133,9 +133,14 @@
                         $t_uri = './record/'.$handle_id.'/'.$t_seq.'/'.$t_filename;
 
                         if ($t_filename == $b_filename.'.jpg') {
-                            $thumbnailLink = '<a title = "' . $doc[$title_field][0] . '" class="fancybox"' . ' href="' . $t_uri . '"> ';
+                            if ($isAuthorised != '1') {
+                                $thumbnailLink = '<a title = "' . $doc[$title_field][0] . '" class="fancybox"' . ' href="' . $t_uri . '"> ';
+                            } else {
+                                $thumbnailLink = '<a title = "' . $doc[$title_field][0] . '" class="fancybox"' . ' href="' . $b_uri . '"> ';
+                            }
                             $thumbnailLink .= '<img src = "'.$t_uri.'" class="search-thumbnail" title="'. $doc[$title_field][0] .'" /></a>';
                             echo $thumbnailLink;
+
                             // Ugly way of quitting the two foreach loops. Needs improved if someone has the time.
                             break 2;
                         }
