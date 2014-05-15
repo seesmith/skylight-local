@@ -113,6 +113,9 @@ h3 								{ color: #00315F; font-size: 14px; line-height: 18px; margin: 0 0 9px
 h1.itemtitle 					{ font-size: 18px; line-height: 24px; margin: 15px 0 10px 0px; position: relative; color: #00315F; }
 .left-title h1.itemtitle, .full-title h1.itemtitle { margin-top: 0px; }
 
+h1 a.heading-link               { color: #58A09D; text-decoration: none; }
+h1 a.heading-link:hover         { text-decoration: underline; }
+
 p 								{ font-size: 13px; margin-bottom: 18px; }
 
 a, a:active, a:visited          { color: #00315F; }
