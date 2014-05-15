@@ -6,6 +6,7 @@
     <?php
     $type_field = $this->skylight_utilities->getField('Type');
     $year_field = $this->skylight_utilities->getField('Year');
+    $version_field = $this->skylight_utilities->getField('Version');
 
     foreach ($related_items as $index => $doc) {
 
@@ -28,9 +29,6 @@
 
                     $num_year = 0;
                     foreach ($doc[$year_field] as $year) {
-                        // test author linking
-                        // quick hack that only works if the filter key
-                        // and recorddisplay key match and the delimiter is :
                         $orig_filter = preg_replace('/ /','+',$year, -1);
                         $orig_filter = preg_replace('/,/','%2C',$orig_filter, -1);
                         echo '<a href=\'./search/*/Year:"'.$orig_filter.'"\'>'.$year.'</a>';
@@ -40,6 +38,22 @@
                         }
                     }
 
+                    ?>
+
+                <?php } ?>
+                <?php if(array_key_exists($version_field,$doc)) { ?>
+
+                    <?php
+                    $num_version = 0;
+                    foreach ($doc[$version_field] as $version) {
+                         $orig_filter = preg_replace('/ /','+',$version, -1);
+                        $orig_filter = preg_replace('/,/','%2C',$orig_filter, -1);
+                        echo '<a href=\'./search/*/Type:"'.$orig_filter.'"\'>'.$version.'</a>';
+                        $num_version++;
+                        if($num_version < sizeof($doc[$version_field])) {
+                            echo ' ';
+                        }
+                    }
 
                     ?>
 

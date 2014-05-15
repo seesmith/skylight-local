@@ -7,7 +7,7 @@
         $title_field = $this->skylight_utilities->getField('Title');
         $author_field = $this->skylight_utilities->getField('Author');
         $version_field = $this->skylight_utilities->getField('Version');
-        $year_field = $this->skylight_utilities->getField('Academic Year');
+        $year_field = $this->skylight_utilities->getField('Year');
         $date_field = $this->skylight_utilities->getField('Date');
         $type_field = $this->skylight_utilities->getField('Type');
 

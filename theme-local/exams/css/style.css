@@ -265,8 +265,12 @@ footer                  { display: block; border-bottom: 1px solid #00548e; padd
 
 .footer-disclaimer      { display: block; width: 660px; margin: auto; }
 .footer-logo            { display: block; float: left; }
-.footer-policies        { display: block; float: left; padding-left: 10px; width: 100%;}
+.footer-policies        { display: block; float: left; padding-left: 10px; width: 580px;}
 .footer-policies p      { font-size: 12px; margin-bottom: 5px; color: #555555}
+
+.is-logo                { display: block; float: left; padding-left: 10px; }
+.islogo                 { display: block; float: left; width: 50px; height: 64px; background: url(../images/islogo.gif) no-repeat 0px 0px; }
+
 
 
 /* Custom Containers & Subclasses ----------------------------------------------------------------------------------------*/

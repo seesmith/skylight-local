@@ -23,7 +23,7 @@
         <?php }
 
         // Apologies for the hard coding! Its a pity Solr won't return results in reverse alphanumeric order.
-        if ($facet['name'] == 'Academic Year') {
+        if ($facet['name'] == 'Year') {
             $ordered_terms = array_reverse($facet['terms']);
         }
         else
