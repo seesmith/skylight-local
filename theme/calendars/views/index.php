@@ -1,6 +1,6 @@
 <div class="record">
     <div class="content byEditor">
-        <h1>Centre for Research Collections Calendar 2014 - Bygone Edinburgh</h1>
+        <h1>The University of Edinburgh Calendar 2014 - Bygone Edinburgh</h1>
 
         <div id="tile-block">
             <a href="./record/21816" alt="Curling at Blackford Pond" title="January, Curling at Blackford Pond"><div id="tile-1" class="art-tile"></div></a>
