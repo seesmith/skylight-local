@@ -98,14 +98,6 @@
         
             <?php } ?>
 
-            <?php if(array_key_exists($version_field, $doc)) { ?>
-            <span>
-                <?php
-                echo $doc[$version_field][0];
-                }
-                ?>
-            </span>
-
             <?php if(array_key_exists($year_field, $doc)) { ?>
             <span>
                 <?php
@@ -114,9 +106,13 @@
                 ?>
             </span>
 
-
-
-
+            <?php if(array_key_exists($version_field, $doc)) { ?>
+            <span>
+                <?php
+                echo $doc[$version_field][0];
+                }
+                ?>
+            </span>
 
         <?php
         // TODO: Make highlighting configurable

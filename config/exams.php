@@ -39,7 +39,7 @@ $config['skylight_fields'] = array(
 
 $config['skylight_date_filters'] = array();
 //$config['skylight_date_filters'] = array('Date' => 'dateIssued.year_sort');
-$config['skylight_filters'] = array('School' => 'creator_filter', 'Subject' => 'subject_filter', 'Year' => 'coverageTemporal_filter', 'Title' => 'title_filter');
+$config['skylight_filters'] = array('School' => 'creator_filter', 'Subject' => 'subject_filter', 'Year' => 'temporal_filter', 'Title' => 'title_filter');
 $config['skylight_filter_delimiter'] = ':';
 
 // These fields are 'displayed' in the html <head> section.

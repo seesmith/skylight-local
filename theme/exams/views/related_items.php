@@ -23,41 +23,35 @@
             <div class="tags">
 
 
-                <?php if(array_key_exists($year_field,$doc)) { ?>
-
-                    <?php
+                <?php if(array_key_exists($year_field,$doc)) {
 
                     $num_year = 0;
                     foreach ($doc[$year_field] as $year) {
-                        $orig_filter = preg_replace('/ /','+',$year, -1);
-                        $orig_filter = preg_replace('/,/','%2C',$orig_filter, -1);
-                        echo '<a href=\'./search/*/Year:"'.$orig_filter.'"\'>'.$year.'</a>';
+                        $orig_filter = urlencode($year);
+                        $lower_orig_filter = strtolower($year);
+                        $lower_orig_filter = urlencode($lower_orig_filter);
+                        echo '<a href="./search/*:*/Year:%22'.$lower_orig_filter.'%7C%7C%7C'.$orig_filter.'%22">'.$year.'</a>';
                         $num_year++;
                         if($num_year < sizeof($doc[$year_field])) {
                             echo ' ';
                         }
                     }
+                } ?>
 
-                    ?>
-
-                <?php } ?>
-                <?php if(array_key_exists($version_field,$doc)) { ?>
-
-                    <?php
+                <?php if(array_key_exists($version_field,$doc)) {
                     $num_version = 0;
                     foreach ($doc[$version_field] as $version) {
-                         $orig_filter = preg_replace('/ /','+',$version, -1);
-                        $orig_filter = preg_replace('/,/','%2C',$orig_filter, -1);
-                        echo '<a href=\'./search/*/Type:"'.$orig_filter.'"\'>'.$version.'</a>';
+                        $orig_filter = urlencode($version);
+                        $lower_orig_filter = strtolower($version);
+                        $lower_orig_filter = urlencode($lower_orig_filter);
+                        echo '<a href="./search/*:*/Type:%22'.$lower_orig_filter.'%7C%7C%7C'.$orig_filter.'%22">'.$version.'</a>';
                         $num_version++;
                         if($num_version < sizeof($doc[$version_field])) {
                             echo ' ';
                         }
                     }
 
-                    ?>
-
-                <?php } ?>
+                } ?>
 
         </li>
     <?php } ?>
