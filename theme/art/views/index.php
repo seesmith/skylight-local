@@ -4,7 +4,7 @@
 
     <div id="tile-block">
         <a href="./record/20416" alt="S.J. Peploe Nude in Studio Interior" title="S.J. Peploe Nude in Studio Interior"><div id="tile-1" class="art-tile"></div></a>
-        <a href="./record/19807" alt="Henry Raeburn, John Robison" title="Henry Raeburn, John Robison"><div id="tile-2" class="art-tile"></div></a>
+        <a href="./record/379" alt="Henry Raeburn, John Robison" title="Henry Raeburn, John Robison"><div id="tile-2" class="art-tile"></div></a>
         <a href="./record/20418" alt="John Bellany, Self Portrait" title="John Bellany, Self Portrait"><div id="tile-3" class="art-tile"></div></a>
         <a href="./record/19578" alt="Hendrick ten Oever, Canal Landscape with Figures Bathing" title="Hendrick ten Oever, Canal Landscape with Figures Bathing"><div id="tile-4" class="art-tile"></div></a>
         <a href="./record/19496" alt="De Vries, Cain and Abel" title="De Vries, Cain and Abel"><div id="tile-5" class="art-tile"></div></a>

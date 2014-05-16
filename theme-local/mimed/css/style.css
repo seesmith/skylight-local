@@ -170,7 +170,7 @@ header                          { position: relative; }
 .record-bitstreams              { display: block; width: 660px; margin: 5px 0; }
 .record-image                   { float: left; max-width: 230px; max-height: 200px; margin: 5px 5px 0px 0px; border: solid 1px #093563; }
 #main-image                     { max-width: 250px; display: block; border: solid 1px #093563;}
-#second-image                   { max-width: 250px; display: block; border: solid 1px #093563; margin: 5px 5px 0px 0px; }
+#second-image                   { max-width: 250px; max-height: 200px; display: block; border: solid 1px #093563; margin: 5px 5px 0px 0px; }
 
 audio[id^="audio-"]             { margin: 5px 0; }
 span[id^="video-"]              { margin: 5px 0; }
