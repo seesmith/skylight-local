@@ -34,6 +34,14 @@
                 </div>
                 </a>
             </div>
+            <div class="item">
+                <a href="<?php echo base_url(); ?>calendars">
+                    <img src="<?php echo base_url(); ?>theme/<?php echo $this->config->item('skylight_theme'); ?>/images/calendarslide.png" title="Edinburgh University Calendars" alt="Edinburgh University Calendars">
+                    <div class="carousel-caption caption-calendars" onmouseover="this.style.background='#005784';this.style.color='#FFF'" onmouseout="this.style.background='#FFFFFF';this.style.color='#005784'">
+                        Edinburgh University Calendars
+                    </div>
+                </a>
+            </div>
         </div>
 
         <!-- Controls -->
