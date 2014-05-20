@@ -169,7 +169,7 @@ header                          { position: relative; }
 .right-image                    { float: right; }
 
 .main-image                     { max-width: 660px; display: block; }
-.record-main-image              { max-width: 660px; max-height: 800px; }
+.record-main-image              { max-width: 660px; max-height: 800px; border: 1px solid #333; }
 
 audio[id^="audio-"]             { margin: 5px 0; }
 span[id^="video-"]              { margin: 5px 0; }
@@ -242,8 +242,6 @@ footer                  { display: block; border-bottom: 1px solid #872379; padd
 .social-icons li a.facebook-icon:hover    { display: block; background: url(../images/facebookiconfooter2.png) no-repeat 0px 0px; }
 .social-icons li a.twitter-icon           { display: block; width: 33px; height: 33px; float: left; background: url(../images/twittericonfooter.png) no-repeat 0px 0px;}
 .social-icons li a.twitter-icon:hover     { display: block; background: url(../images/twittericonfooter2.png) no-repeat 0px 0px; }
-.social-icons li a.tumblr-icon            { display: block; width: 33px; height: 33px; float: left; background: url(../images/tumblriconfooter.png) no-repeat 0px 0px;}
-.social-icons li a.tumblr-icon:hover      { display: block; background: url(../images/tumblriconfooter2.png) no-repeat 0px 0px; }
 
 .footer-disclaimer      { display: block; width: 95%; margin: auto; }
 .footer-logo            { display: block; float: left; }
@@ -254,6 +252,24 @@ footer                  { display: block; border-bottom: 1px solid #872379; padd
 
 .footer-policies        { display: block; float: left; padding-left: 10px; }
 .footer-policies p      { font-size: 12px; margin-bottom: 5px; color: #555555}
+
+#tile-block             { width: 660px; height: 680px; margin-bottom: 18px; }
+#tile-block a           { padding: 0; margin: 0; }
+.art-tile               { float: left; display: block; width: 218px; height: 168px; border-right: 1px solid #333; border-bottom: 1px solid #333;}
+
+#tile-1                 { background: url(../images/jan-tile.jpg) no-repeat 0px 0px; border-top: 1px solid #333; border-left: 1px solid #333;}
+#tile-2                 { background: url(../images/feb-tile.jpg) no-repeat 0px 0px;  border-top: 1px solid #333; }
+#tile-3                 { background: url(../images/mar-tile.jpg) no-repeat 0px 0px;  border-top: 1px solid #333; }
+#tile-4                 { background: url(../images/april-tile.jpg) no-repeat 0px 0px; border-left: 1px solid #333;}
+#tile-5                 { background: url(../images/may-tile.jpg) no-repeat 0px 0px; }
+#tile-6                 { background: url(../images/june-tile.jpg) no-repeat 0px 0px; }
+#tile-7                 { background: url(../images/july-tile.jpg) no-repeat 0px 0px; border-left: 1px solid #333;}
+#tile-8                 { background: url(../images/aug-tile.jpg) no-repeat 0px 0px; }
+#tile-9                 { background: url(../images/sept-tile.jpg) no-repeat 0px 0px; }
+#tile-10                { background: url(../images/oct-tile.jpg) no-repeat 0px 0px; border-left: 1px solid #333;}
+#tile-11                { background: url(../images/nov-tile.jpg) no-repeat 0px 0px; }
+#tile-12                { background: url(../images/dec-tile.jpg) no-repeat 0px 0px; }
+
 
 /* Custom Containers & Subclasses ----------------------------------------------------------------------------------------*/
 

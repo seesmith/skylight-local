@@ -6,6 +6,10 @@ $config['skylight_theme'] = 'exams';
 
 $config['skylight_fullname'] = 'Exams';
 
+
+// Uncomment this if you are using a url of the form http://.../art/...
+$config['skylight_url_prefix'] = 'exams';
+
 $config['skylight_ga_code'] = 'UA-XXXX-Y';
 
 $config['skylight_adminemail'] = 'lddt@mlist.is.ed.ac.uk';
@@ -15,20 +19,17 @@ $config['skylight_oaipmhcollection'] = 'hdl_123456789_1';
 $config['skylight_repository_version'] = 'exams';
 $config['skylight_homepage_recentitems'] = false;
 
-
-
 // Container ID and the field used in solr index to store this ID. Used for restricting search/browse scope.
-$config['skylight_container_id'] = '*';
+$config['skylight_container_id'] = '16';
 $config['skylight_container_field'] = 'location.coll';
 
 // This array only appears to be used in Utilities to translate label to value and vice versa. Robin.
 $config['skylight_fields'] = array(
     'School' => 'dc.creator.en',
     'Subject' => 'dc.subject.en',
-    'Academic Year' => 'dc.coverage.temporal.en',
+    'Year' => 'dc.coverage.temporal.en',
     'Title' => 'dc.title.en',
     'Course Code' => 'dc.identifier',
-
     'Version' => 'dc.description.version.en',
     'Type' => 'dc.type.en',
     'Abstract' => 'dc.description.abstract',
@@ -38,7 +39,7 @@ $config['skylight_fields'] = array(
 
 $config['skylight_date_filters'] = array();
 //$config['skylight_date_filters'] = array('Date' => 'dateIssued.year_sort');
-$config['skylight_filters'] = array('School' => 'author_filter', 'Subject' => 'subject_filter', 'Academic Year' => 'coverageTemporal_filter', 'Title' => 'title_filter');
+$config['skylight_filters'] = array('School' => 'creator_filter', 'Subject' => 'subject_filter', 'Year' => 'temporal_filter', 'Title' => 'title_filter');
 $config['skylight_filter_delimiter'] = ':';
 
 // These fields are 'displayed' in the html <head> section.
@@ -50,7 +51,7 @@ $config['skylight_meta_fields'] = array('Title' => 'dc.title', 'Course Code' => 
     'Type' => 'dc.type');
 
 // These fields appear on the individual record page.
-$config['skylight_recorddisplay'] = array('School','Subject','Title','Course Code','Version','Academic Year','Date');
+$config['skylight_recorddisplay'] = array('School','Subject','Title','Course Code','Version','Year');
 
 // I suspect this one is redundant, they are currently hardcoded into search-results.php!
 //$config['skylight_searchresult_display'] = array('Title','Author','Subject','Type','Abstract');
@@ -58,9 +59,8 @@ $config['skylight_recorddisplay'] = array('School','Subject','Title','Course Cod
 // This is used for Advanced Search which I have hidden for the Exam Papers
 $config['skylight_search_fields'] = array('School' => 'dc.creator',
     'Subject' => 'dc.subject',
-    'Academic Year' => 'dc.coverage.temporal',
-    'Title' => 'dc.title',
-    'Keywords' => 'text'
+    'Year' => 'dc.coverage.temporal',
+    'Title' => 'dc.title'
 );
 
 $config['skylight_sort_fields'] = array('Title' => 'dc.title_sort',

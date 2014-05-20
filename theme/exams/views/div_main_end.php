@@ -1,10 +1,22 @@
-
-<!--
         <footer>
-            <a href="./"><?php echo $site_title; ?></a>
-            <a href="./about">About this site</a>
-            <a href="./feedback">Feedback</a>
-            <a href="http://skylightui.org/"class="last">Powered by Skylight</a>
+            <div class="footer-links">
+                <div class="site-links">
+                    <a href="./"><?php echo $site_title; ?>&nbsp;Home</a>
+                    <a href="./about">About this Collection</a>
+                    <a href="./feedback" class="last">Feedback</a>
+                </div>
+            </div>
+            <div class="footer-disclaimer">
+                <div class="footer-policies">
+                    <p><a href="http://www.ed.ac.uk/about/website/privacy" title="Privacy and Cookies Link"  target="_blank">Privacy &amp; Cookies</a>
+                        &nbsp;&nbsp;<a href="./takedown" title="Takedown Policy Link"  target="_blank">Takedown Policy</a>
+                       &nbsp;&nbsp;<a href="http://www.ed.ac.uk/about/website/accessibility" title="Website Accessibility Link" target="_blank">Accessibility</a></p>
+                    <p>The University of Edinburgh is a charitable body, registered in Scotland, with registration number SC005336, VAT Registration Number GB 592 9507 00, and is acknowledged by the UK authorities as a <a href="https://www.gov.uk/recognised-uk-degrees" title="UK Government Recognised Degrees Link" target="_blank">“Recognised Body”</a> which has been granted degree awarding powers.<p>
+                    <p>Unless explicitly stated otherwise, all material is copyright &copy; <?php echo date("Y"); ?> <a href="http://www.ed.ac.uk" title="University of Edinburgh Home" target="_blank">University of Edinburgh</a>.</p>
+                </div>
+                <div class="is-logo">
+                    <a href="http://www.is.ed.ac.uk" target="_blank" class="islogo" title="University of Edinburgh Information Services Home"></a>
+                </div>
+            </div>
         </footer>
--->
 </div>

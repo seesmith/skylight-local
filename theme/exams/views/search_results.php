@@ -7,7 +7,7 @@
         $title_field = $this->skylight_utilities->getField('Title');
         $author_field = $this->skylight_utilities->getField('Author');
         $version_field = $this->skylight_utilities->getField('Version');
-        $year_field = $this->skylight_utilities->getField('Academic Year');
+        $year_field = $this->skylight_utilities->getField('Year');
         $date_field = $this->skylight_utilities->getField('Date');
         $type_field = $this->skylight_utilities->getField('Type');
 
@@ -98,14 +98,6 @@
         
             <?php } ?>
 
-            <?php if(array_key_exists($version_field, $doc)) { ?>
-            <span>
-                <?php
-                echo $doc[$version_field][0];
-                }
-                ?>
-            </span>
-
             <?php if(array_key_exists($year_field, $doc)) { ?>
             <span>
                 <?php
@@ -114,9 +106,13 @@
                 ?>
             </span>
 
-
-
-
+            <?php if(array_key_exists($version_field, $doc)) { ?>
+            <span>
+                <?php
+                echo $doc[$version_field][0];
+                }
+                ?>
+            </span>
 
         <?php
         // TODO: Make highlighting configurable
