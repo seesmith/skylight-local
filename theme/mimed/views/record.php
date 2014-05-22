@@ -9,6 +9,8 @@ $filters = array_keys($this->config->item("skylight_filters"));
 
 $type = 'Unknown';
 $mainImageTest = false;
+$numBitstreams = 0;
+$bitstreamLinks = array();
 
 if(isset($solr[$type_field])) {
     $type = "media-" . strtolower(str_replace(' ','-',$solr[$type_field][0]));
@@ -27,8 +29,6 @@ if(isset($solr[$bitstream_field]) && $link_bitstream) {
 
     ksort($bitstream_array);
 
-    $bitstreamLinks = array();
-    $numBitstreams = 0;
     $videoFile = false;
     $audioFile = false;
     $audioLink = "";
