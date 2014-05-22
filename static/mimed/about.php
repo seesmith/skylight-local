@@ -23,6 +23,7 @@
         <p>
             Further information about the <a href="http://www.ed.ac.uk/schools-departments/information-services/library-museum-gallery/crc" title="Centre for Research Collections" target="_blank">Centre for Research Collections</a>.
         </p>
+        <h1>Contact</h1>
         <p>For further information about the St Cecilia's Hall collection of musical instruments and Musical Instrument Museum Edinburgh please contact </p>
         <p><strong>Dr Darryl Martin</strong><br />
             Principal Curator, <br />

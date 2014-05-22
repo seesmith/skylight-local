@@ -17,7 +17,7 @@
         <p>
             Further information about the <a href="http://www.ed.ac.uk/schools-departments/information-services/library-museum-gallery/crc" title="Centre for Research Collections" target="_blank">Centre for Research Collections</a>.
         </p>
-        <h2>Contact</h2>
+        <h1>Contact</h1>
         <p>
             Centre for Research Collections<br />
             Edinburgh University Library,<br />
