@@ -8,6 +8,8 @@ $uri_field = $this->skylight_utilities->getField("Link");
 $filters = array_keys($this->config->item("skylight_filters"));
 
 $type = 'Unknown';
+$numThumbnails = 0;
+$bitstreamLinks = array();
 
 if(isset($solr[$type_field])) {
     $type = "media-" . strtolower(str_replace(' ','-',$solr[$type_field][0]));
@@ -40,13 +42,11 @@ if(isset($solr[$type_field])) {
 
         <div class="record_bitstreams"><?php
 
-        $numThumbnails = 0;
         $mainImage = false;
         $videoFile = false;
         $audioFile = false;
         $audioLink = "";
         $videoLink = "";
-        $bitstream_array = array();
 
         foreach ($solr[$bitstream_field] as $bitstream)
         {
