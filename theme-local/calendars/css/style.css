@@ -345,6 +345,7 @@ h1 .icon                                { top: -5px; left: -65px; }
 
 .content                        { margin-top: 20px; }
 .content ul                     { margin: 0 0 18px 1.2em; }
+.about li                       { list-style-position: inside; list-style-type: none;  }
 
 .record_bitstreams              { margin-top: 20px; }
 
