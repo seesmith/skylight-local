@@ -40,11 +40,12 @@ $config['skylight_fields'] = array(
     'Signature' => 'dc.format.signature.en',
     'Inscription' => 'dc.format.inscription.en',
     'Subject' => 'dc.subject.en',
-    'Place Made' => 'dc.coverage.spatial.en'
+    'Place Made' => 'dc.coverage.spatial.en',
+    'Period' => 'dc.coverage.temporalperiod.en'
 );
 
 $config['skylight_date_filters'] = array();
-$config['skylight_filters'] = array('Artist' => 'author_filter', 'Classification' => 'classification_filter', 'Collection'=> 'collection_filter' );
+$config['skylight_filters'] = array('Artist' => 'author_filter', 'Classification' => 'classification_filter', 'Collection'=> 'collection_filter', 'Period' => 'period_filter' );
 
 $config['skylight_filter_delimiter'] = ':';
 
@@ -58,7 +59,7 @@ $config['skylight_meta_fields'] = array(
     'Type' => 'dc.type.en'
 );
 
-$config['skylight_recorddisplay'] = array('Artist','Title','Alternative Title','Date','Description','Material','Dimensions','Type','Place Made','Subject','Collection','Classification','Signature', 'Inscription','Accession Number');
+$config['skylight_recorddisplay'] = array('Artist','Title','Alternative Title','Date','Period','Description','Material','Dimensions','Type','Place Made','Subject','Collection','Classification','Signature', 'Inscription','Accession Number');
 
 $config['skylight_searchresult_display'] = array('Author','Title','Medium','Type','Description', 'Bitstream', 'Thumbnail', 'Date');
 

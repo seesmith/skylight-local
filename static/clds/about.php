@@ -1,7 +1,6 @@
 <div class="content">
     <div class="content byEditor">
-        <h1>Holding text to be revisited for launch</h1>
-        <h2>About the Collections</h2>
+        <h1>About the University Collections</h1>
         <p>
             Special Collections include manuscripts and archives, rare books, photographs, printed and handwritten music,
             architectural drawings, theses and microfilms. The collections relate to University of Edinburgh and its history,
@@ -10,15 +9,15 @@
         <p>
             In total we have about 35 kilometres of historic material, much of which cannot be found anywhere else in the world.
         </p>
-        <h2>University Collections Online</h2>
+        <h1>University Collections Online</h1>
         <p>
-            Info about this site
+            We aim to represent all of the University's rare and unique collections on this site, where possible there are links to websites where you can view the items within the collection.
         </p>
-        <h2>Centre for Research Collections</h2>
+        <h1>Centre for Research Collections</h1>
         <p>
             Further information about the <a href="http://www.ed.ac.uk/schools-departments/information-services/library-museum-gallery/crc" title="Centre for Research Collections" target="_blank">Centre for Research Collections</a>.
         </p>
-        <h2>Contact</h2>
+        <h1>Contact</h1>
         <p>
             Centre for Research Collections<br />
             Edinburgh University Library,<br />
