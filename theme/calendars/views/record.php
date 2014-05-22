@@ -256,7 +256,7 @@ if(isset($solr[$type_field])) {
         }
 
         if(isset($solr[$uri_field])) {
-            echo '<tr><th>Link</th><td>';
+
             foreach($solr[$uri_field] as $uri) {
                 $find   = 'http://hdl.handle.net';
                 $findLuna = 'http://images.is.ed.ac.uk';
@@ -264,7 +264,7 @@ if(isset($solr[$type_field])) {
 
                 if ($pos === false)
                 {
-
+                    echo '<tr><th>Link</th><td>';
                     $Lunapos = strpos($uri, $findLuna);
 
                     if ($Lunapos !== false)
@@ -278,11 +278,9 @@ if(isset($solr[$type_field])) {
                     if($index < sizeof($solr[$uri_field]) - 1) {
                         echo '<br />';
                     }
+                    echo '</td></tr>';
                 }
-
-
             }
-            echo '</td></tr>';
         }
         ?>
         </tbody>
