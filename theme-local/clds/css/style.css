@@ -112,7 +112,10 @@ h1                              { font-size: 20px; line-height: 24px; margin: 18
 h2                              { font-size: 16px; line-height: 36px; margin: 0 0 0 0; }
 h3                              { color: #333333; font-size: 14px; line-height: 18px; margin: 0 0 9px 0; }
 
-h1.itemtitle 					{ font-size: 18px; line-height: 24px; margin: 20px 0 10px 0px; position: relative; color: #333333; }
+h1.itemtitle 					{ font-size: 20px; line-height: 24px; margin: 20px 0 10px 0px; position: relative; color: #333333; }
+h3.collection-link              { font-size: 16px;  margin-bottom: 15px; }
+h3.collection-link a            { color: #FE2842; text-decoration: none; }
+h3.collection-link a:hover      { text-decoration: underline; }
 
 p 								{ font-size: 13px; padding-bottom: 10px; }
 
