@@ -198,8 +198,8 @@ span[id^="video-"]              { margin: 5px 0; }
     display: block; color: #fff; text-decoration: none; width: 223px; padding-left: 17px; position: relative; left: -17px;
 }
 .col-sidebar h4 a:hover         { background: #093563 url(../images/bg-arrows.png) no-repeat 100% -92px; }
-.col-sidebar ul                 { list-style-type: none; margin: 2px 2px 25px 2px; font-size: 12px; }
-.col-sidebar ul li              { line-height: 16px; margin-top: 5px; padding: 0 17px; }
+.col-sidebar ul                 { list-style-type: none; margin: 0 0 17px 0;; font-size: 12px; }
+.col-sidebar ul li              { line-height: 16px; padding: 0 17px; }
 .col-sidebar ul a               { text-decoration: none; display: block; }
 .col-sidebar ul a:hover         { text-decoration: underline; }
 
