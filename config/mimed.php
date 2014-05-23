@@ -7,7 +7,7 @@ $config['skylight_url_prefix'] = 'mimed';
 
 $config['skylight_theme'] = 'mimed';
 
-$config['skylight_fullname'] = 'MUSICAL INSTRUMENT MUSEUMS';
+$config['skylight_fullname'] = 'MUSICAL INSTRUMENT MUSEUMS EDINBURGH';
 
 $config['skylight_ga_code'] = 'UA-XXXX-Y';
 
@@ -35,11 +35,12 @@ $config['skylight_fields'] = array(
     'Thumbnail'=> 'dc.format.thumbnail.en',
     'Place Made' => 'dc.coverage.spatial.en',
     'Date Made' => 'dc.date.created',
+    'Period' => 'dc.coverage.temporalperiod.en',
     'Accession Number' => 'dc.identifier.en',
     'Description' => 'dc.description.en',
     'Other Information' => 'dc.description.usage.en',
     'Collection' => 'dc.relation.ispartof.en',
-    'Notes' => 'dc.creator.notes',
+    'Notes' => 'dc.description.cataloguernotes',
     'Measurements' => 'dc.format.extent.en',
     'Signature' => 'dc.format.signature.en',
     'Inscription' => 'dc.format.inscription.en',
@@ -53,7 +54,7 @@ $config['skylight_fields'] = array(
 
 
 $config['skylight_date_filters'] = array();
-$config['skylight_filters'] = array('Instrument' => 'type_filter', 'Maker' => 'author_filter', 'Place Made' => 'place_filter', 'Collection'=> 'collection_filter' );
+$config['skylight_filters'] = array('Instrument' => 'type_filter', 'Maker' => 'author_filter', 'Place Made' => 'place_filter', 'Period' => 'period_filter', 'Collection'=> 'collection_filter' );
 $config['skylight_filter_delimiter'] = ':';
 
 $config['skylight_meta_fields'] = array('Title' => 'dc.title',
