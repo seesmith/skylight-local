@@ -132,7 +132,7 @@ input.btn						{
 }
 input.btn:hover					{ color: #fff; background: #005784; }
 
-.searchform input.btn          { margin-bottom: 10px; }
+.searchform input.btn, .feedback_form input.btn { margin-bottom: 10px; }
 
 /* Site Css ///////////////////////////////////////////////////////////////////////////////////////////////////////////// */
 
