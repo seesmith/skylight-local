@@ -3,8 +3,8 @@
                 <a href="./" title="University of Edinburgh Collections" class="collections">Home</a>
                 <a href="<?php echo base_url(); ?>art" title="University of Edinburgh Art Collection" class="art">Art</a>
                 <a href="<?php echo base_url(); ?>mimed" title="University of Edinburgh Musical Instrument Museums" class="mimed">Mimed</a>
-                <a href="http://exhibitions.ed.ac.uk/" title="University of Edinburgh Exhibitions" class="exhibitions">Exhibitions</a>
-                <a href="http://images.is.ed.ac.uk/" title="University of Edinburgh Image Collections" class="images">Images</a>
+                <a href="http://exhibitions.ed.ac.uk/" title="University of Edinburgh Exhibitions" class="exhibitions" target="_blank">Exhibitions</a>
+                <a href="http://images.is.ed.ac.uk/" title="University of Edinburgh Image Collections" class="images" target="_blank">Images</a>
                 <a href="<?php echo base_url(); ?>calendars" title="University of Edinburgh Calendars" class="calendars last">Calendars</a>
             </div>
             <div class="footer-disclaimer">
