@@ -105,7 +105,7 @@ if(isset($solr[$bitstream_field]) && $link_bitstream) {
         {
 
             // if it's chrome, use webm if it exists
-            if (strpos($_SERVER['HTTP_USER_AGENT'], 'Chrome') === false) {
+            if (strpos($_SERVER['HTTP_USER_AGENT'], 'Chrome') == false) {
 
                 $videoLink .= '<video id="video-' . $b_seq. '"';
                 $videoLink .= 'controls preload="true" width="600">';
@@ -121,7 +121,7 @@ if(isset($solr[$bitstream_field]) && $link_bitstream) {
         {
 
             // if it's chrome, use webm if it exists
-            if (strpos($_SERVER['HTTP_USER_AGENT'], 'Chrome') === true) {
+            if (strpos($_SERVER['HTTP_USER_AGENT'], 'Chrome') == true) {
 
                 $videoLink .= '<video id="video-' . $b_seq. '"';
                 $videoLink .= 'controls preload="true" width="600">';
