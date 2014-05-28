@@ -13,8 +13,8 @@
                     <li><a href="./record/16327">
                         <img alt="Triple Manual Harpsichord" title="Triple Manual Harpsichord" src="<?php echo base_url(); ?>theme/mimed/images/carousel/triple-manual-harpsichord.jpg">
                     </a></li>
-                    <li><a href="./record/17674">
-                        <img alt="Bass Saxophone" title="Bass Saxophone" src="<?php echo base_url(); ?>theme/mimed/images/carousel/bass-saxophone.jpg">
+                    <li><a href="./record/15630">
+                        <img alt="Bombardon" title="Bombardon" src="<?php echo base_url(); ?>theme/mimed/images/carousel/bombardon.jpg">
                     </a></li>
                     <li><a href="./record/16782">
                         <img alt="Kettle Drum" title="Kettle Drum" src="<?php echo base_url(); ?>theme/mimed/images/carousel/kettle-drum.jpg">
@@ -25,7 +25,7 @@
                     <li><a href="./record/17041">
                         <img alt="Tam-Tam" title="Tam-Tam" src="<?php echo base_url(); ?>theme/mimed/images/carousel/tam-tam.jpg">
                     </a></li>
-                    <li><a href="./record/14715">
+                    <li><a href="./record/15288">
                         <img alt="Upright Pianoforte" title="Upright Pianoforte" src="<?php echo base_url(); ?>theme/mimed/images/carousel/upright-pianoforte.jpg">
                     </a></li>
                     <li><a href="./record/17987">
