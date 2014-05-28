@@ -6,11 +6,10 @@ $config['skylight_theme'] = 'exams';
 
 $config['skylight_fullname'] = 'Exams';
 
-
 // Uncomment this if you are using a url of the form http://.../art/...
 $config['skylight_url_prefix'] = 'exams';
 
-$config['skylight_ga_code'] = 'UA-XXXX-Y';
+$config['skylight_ga_code'] = 'UA-25737241-9';
 
 $config['skylight_adminemail'] = 'lddt@mlist.is.ed.ac.uk';
 

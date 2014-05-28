@@ -9,7 +9,7 @@ $config['skylight_theme'] = 'art';
 
 $config['skylight_fullname'] = 'University of Edinburgh Art Collection';
 
-$config['skylight_ga_code'] = 'UA-XXXX-Y';
+$config['skylight_ga_code'] = 'UA-25737241-9';
 
 $config['skylight_adminemail'] = 'lddt@mlist.is.ed.ac.uk';
 

@@ -9,7 +9,7 @@ $config['skylight_theme'] = 'mimed';
 
 $config['skylight_fullname'] = 'MUSICAL INSTRUMENT MUSEUMS EDINBURGH';
 
-$config['skylight_ga_code'] = 'UA-XXXX-Y';
+$config['skylight_ga_code'] = 'UA-25737241-9';
 
 $config['skylight_adminemail'] = 'lddt@mlist.is.ed.ac.uk';
 

@@ -9,12 +9,14 @@ $config['skylight_url_prefix'] = 'calendars';
 
 $config['skylight_fullname'] = 'University of Edinburgh Calendars';
 
+$config['skylight_ga_code'] = 'UA-25737241-9';
+
 $config['skylight_adminemail'] = 'lddt@mlist.is.ed.ac.uk';
 
 $config['skylight_oaipmhcollection'] = 'hdl_10683_21801';
 
 // Container ID and the field used in solr index to store this ID. Used for restricting search/browse scope.
-$config['skylight_container_id'] = '13';
+$config['skylight_container_id'] = '14';
 $config['skylight_container_field'] = 'location.coll';
 
 $config['skylight_fields'] = array('Title' => 'dc.title.en',
