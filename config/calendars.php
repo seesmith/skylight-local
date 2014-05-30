@@ -32,6 +32,8 @@ $config['skylight_fields'] = array('Title' => 'dc.title.en',
     'Year'=> 'dc.date.issued'
 );
 
+$config['skylight_related_fields'] = array('Title','Subject','Format','Creator');
+
 $config['skylight_date_filters'] = array('Date' => 'dateIssued.year_sort');
 $config['skylight_filters'] = array('Subject' => 'subject_filter');
 
@@ -61,7 +63,7 @@ $config['skylight_feed_fields'] = array('Title' => 'Title',
     'Origin' => 'Origin',
     'Identifier' => 'Identifier');
 
-$config['skylight_results_per_page'] = 10;
+$config['skylight_results_per_page'] = 15;
 $config['skylight_share_buttons'] = false;
 
 // $config['skylight_homepage_recentitems'] = false;
