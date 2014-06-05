@@ -190,7 +190,7 @@ if(isset($solr[$bitstream_field]) && $link_bitstream) {
                         foreach($solr[$element] as $index => $metadatavalue) {
                             // if it's a facet search
                             // make it a clickable search link
-                            if(in_array($key, $filters)) {
+                            if(in_array($key, $filters) && $key != "Artist") {
 
                                 $orig_filter = urlencode($metadatavalue);
                                 $lower_orig_filter = strtolower($metadatavalue);
