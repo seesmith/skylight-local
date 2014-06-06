@@ -96,7 +96,7 @@ if(isset($solr[$bitstream_field]) && $link_bitstream) {
         }
         else if (strpos($b_uri, ".mp3") > 0) {
 
-            $audioLink .= '<audio id="audio'; //-' . $b_seq. '"
+            $audioLink .= '<audio id="audio-' . $b_seq;
             $audioLink .= '" title="' . $record_title . ": " . $b_filename . '" ';
             $audioLink .= 'controls preload="true" width="600">';
             $audioLink .= '<source src="' . $b_uri . '" type="audio/mpeg" />Audio loading...';

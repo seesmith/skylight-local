@@ -243,7 +243,7 @@ else if (isset($solr[$external_uri_field][0])) {
             }
             else if (strpos($b_uri, ".mp3") > 0) {
 
-                $audioLink .= '<audio id="audio'; //-' . $b_seq. '"
+                $audioLink .= '<audio id="audio-' . $b_seq;
                 $audioLink .= '" title="' . $record_title . ": " . $b_filename . '" ';
                 $audioLink .= 'controls preload="true" width="600">';
                 $audioLink .= '<source src="' . $b_uri . '" type="audio/mpeg" />Audio loading...';
