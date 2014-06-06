@@ -44,12 +44,35 @@
         <script src="<?php echo base_url()?>assets/jquery-1.11.0/jquery-1.11.0.min.js"></script>
         <script src="<?php echo base_url()?>assets/jquery-ui-1.10.4/ui/minified/jquery-ui.min.js"></script>
         <script src="<?php echo base_url()?>assets/bootstrap/dist/js/bootstrap.min.js"></script>
-        <script src="http://api.html5media.info/1.1.6/html5media.min.js"></script>
+        <script src="<?php echo base_url()?>assets/jquery-1.11.0/jcarousel/jquery.jcarousel.min.js"></script>
+        <script src="http://www.google-analytics.com/analytics.js"></script>
+
+        <!-- Google Analytics -->
+        <script>
+            (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+                (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+                m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+            })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+            ga('create', '<?php echo $ga_code ?>', 'auto');
+            ga('send', 'pageview');
+
+        </script>
+        <!-- End Google Analytics -->
+
+        <script src="http://releases.flowplayer.org/5.4.6/flowplayer.min.js"></script>
+
+        <!-- global options -->
+        <script>
+            flowplayer.conf = {
+                analytics: "<?php echo $ga_code ?>"
+            };
+        </script>
 
         <?php if (isset($solr)) { ?><link rel="schema.DC" href="http://purl.org/dc/elements/1.1/" />
-        <link rel="schema.DCTERMS" href="http://purl.org/dc/terms/" />
+            <link rel="schema.DCTERMS" href="http://purl.org/dc/terms/" />
 
-        <?php
+            <?php
 
             foreach($metafields as $label => $element) {
                 $field = "";
@@ -65,19 +88,6 @@
             }
 
         } ?>
-
-        <!-- Google Analytics -->
-        <script>
-            (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-                (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-                m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-            })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-
-            ga('create', '<?php echo $ga_code ?>', 'auto');
-            ga('send', 'pageview');
-
-        </script>
-        <!-- End Google Analytics -->
 
     </head>
 

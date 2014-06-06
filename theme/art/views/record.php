@@ -96,42 +96,50 @@ if(isset($solr[$bitstream_field]) && $link_bitstream) {
         }
         else if (strpos($b_uri, ".mp3") > 0) {
 
-            $audioLink .= '<audio id="audio-' . $b_seq. '" . src="'.$b_uri.'" controls preload></audio>';
-
+            $audioLink .= '<audio id="audio'; //-' . $b_seq. '"
+            $audioLink .= '" title="' . $record_title . ": " . $b_filename . '" ';
+            $audioLink .= 'controls preload="true" width="600">';
+            $audioLink .= '<source src="' . $b_uri . '" type="audio/mpeg" />Audio loading...';
+            $audioLink .= '</audio>';
             $audioFile = true;
 
         }
+
         else if (strpos($b_uri, ".mp4") > 0)
         {
 
             // if it's chrome, use webm if it exists
             if (strpos($_SERVER['HTTP_USER_AGENT'], 'Chrome') == false) {
 
-                $videoLink .= '<video id="video-' . $b_seq. '"';
+                $videoLink .= '<div class="flowplayer" data-analytics="' . $ga_code . '" title="' . $record_title . ": " . $b_filename . '">';
+                $videoLink .= '<video id="video-' . $b_seq. '" title="' . $record_title . ": " . $b_filename . '" ';
                 $videoLink .= 'controls preload="true" width="600">';
                 $videoLink .= '<source src="' . $b_uri . '" type="video/mp4" />Video loading...';
                 $videoLink .= '</video>';
+                $videoLink .= '</div>';
 
                 $videoFile = true;
 
             }
         }
-
         else if (strpos($b_uri, ".webm") > 0)
         {
 
             // if it's chrome, use webm if it exists
             if (strpos($_SERVER['HTTP_USER_AGENT'], 'Chrome') == true) {
 
-                $videoLink .= '<video id="video-' . $b_seq. '"';
-                $videoLink .= 'controls preload="true" width="600">';
+                $videoLink .= '<div class="flowplayer" data-analytics="' . $ga_code . '" title="' . $record_title . ": " . $b_filename . '">';
+                $videoLink .= '<video id="video-' . $b_seq. '" title="' . $record_title . ": " . $b_filename . '" ';
+                $videoLink .= 'controls preload="none" width="600">';
                 $videoLink .= '<source src="' . $b_uri . '" type="video/webm" />Video loading...';
                 $videoLink .= '</video>';
+                $videoLink .= '</div>';
 
                 $videoFile = true;
 
             }
         }
+
         ?>
     <?php
     }
