@@ -21,8 +21,8 @@ $config['skylight_fields'] = array('Title' => 'dc.title.en',
     'Type' => 'dc.type.en',
     'Abstract' => 'dc.description.abstract',
     'Date' => 'dc.date.issued_dt',
-    'Bitstream'=> 'dc.format.original',
-    'Thumbnail'=> 'dc.format.thumbnail',
+    'Bitstream'=> 'dc.format.original.en',
+    'Thumbnail'=> 'dc.format.thumbnail.en',
     'Description'=>'dc.description.en'
 );
 
