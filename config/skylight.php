@@ -44,10 +44,6 @@ $config['skylight_objectproxy_url'] = 'http://collectionsmanager.is.ed.ac.uk/bit
 // This can be overridden in site-specific configuration files.
 $config['skylight_cache'] = false;
 
-// Keys required for the recapthca system
-$config['skylight_recaptcha_key_public'] = '6LfwNvESAAAAAGjRS4uoS8SXEn-OjY3XPqF4bwcz';
-$config['skylight_recaptcha_key_private'] = '6LfwNvESAAAAAFqj8NQPkTZ4wKAoa0h6vEDNfSLi';
-
 // Digital object management
 $config['skylight_bitstream_field'] = 'dc.format.original';
 $config['skylight_thumbnail_field'] = 'dc.format.thumbnail';
