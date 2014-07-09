@@ -3,6 +3,9 @@
 // Uncomment this if you want to use urls of the form http://.../prefix/...
 $config['skylight_url_prefixes'] = array('physics', 'mimed', 'art', 'calendars');
 
+// Specific hostnames pointing at skylight
+$config['skylight_hostnames'] = array('test.exampapers.ed.ac.uk', 'exampapers.ed.ac.uk', 'images.ph.ed.ac.uk');
+
 // The URL of the parent solr server
 $config['skylight_solrbase'] = 'http://collectionsmanager.is.ed.ac.uk/solr/search/';
 

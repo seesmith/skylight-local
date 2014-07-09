@@ -1,5 +1,13 @@
 <?php
 
+// set the base url
+if (strpos($_SERVER['HTTP_HOST'], "test") !== false) {
+    $config['base_url']	= 'https://test.exampapers.ed.ac.uk/';
+}
+else {
+    $config['base_url']	= 'https://exampapers.ed.ac.uk/';
+}
+
 $config['skylight_appname'] = 'Exams';
 
 $config['skylight_theme'] = 'exams';
