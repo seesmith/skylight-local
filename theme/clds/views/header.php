@@ -97,7 +97,7 @@
                 <nav id="menu">
                     <ul class="social-links">
                         <li><a href="https://www.facebook.com/crc.edinburgh" class="facebook-icon" target="_blank" title="CRC on Facebook"></a></li>
-                        <li><a href="https://twitter.com/UofECRC" class="twitter-icon" target="_blank" title="CRC on Twitter"></a></li>
+                        <li><a href="https://twitter.com/CRC_EdUni" class="twitter-icon" target="_blank" title="CRC on Twitter"></a></li>
                         <li><a href="https://www.flickr.com/photos/crcedinburgh" class="flickr-icon" target="_blank" title="CRC on Flickr"></a></li>
                     </ul>
                     <ul class="menu-links">
