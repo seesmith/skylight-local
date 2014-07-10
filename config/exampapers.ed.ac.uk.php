@@ -8,11 +8,11 @@ else {
     $config['base_url'] = 'https://exampapers.ed.ac.uk/';
 }
 
-$config['skylight_appname'] = 'Exams';
+$config['skylight_appname'] = 'exams';
 
 $config['skylight_theme'] = 'exams';
 
-$config['skylight_fullname'] = 'Exams';
+$config['skylight_fullname'] = 'exams';
 
 // Uncomment this if you are using a url of the form http://.../art/...
 $config['skylight_url_prefix'] = 'exams';
