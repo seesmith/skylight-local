@@ -34,7 +34,7 @@ $config['skylight_fields'] = array('Title' => 'dc.title.en',
 );
 
 $config['skylight_date_filters'] = array('Date' => 'dateIssued.year_sort');
-$config['skylight_filters'] = array('Author' => 'author_filter', 'Subject' => 'subject_filter');
+$config['skylight_filters'] = array('Author' => 'author_filter', 'Subject' => 'subject_filter', 'Series' => 'series_filter');
 $config['skylight_filter_delimiter'] = ':';
 
 $config['skylight_meta_fields'] = array('Title' => 'dc.title.en',
@@ -44,14 +44,15 @@ $config['skylight_meta_fields'] = array('Title' => 'dc.title.en',
     'Date' => 'dc.date.issued',
     'Type' => 'dc.type');
 
-$config['skylight_recorddisplay'] = array('Title','Author','Subject','Citation','Series','Date','Page Numbers','Number of Pages','Publisher','ISBN','Type','Abstract');
+$config['skylight_recorddisplay'] = array('Title','Series','Author','Subject','Citation','Date','Page Numbers','Number of Pages','Publisher','ISBN','Type','Abstract');
 
-$config['skylight_searchresult_display'] = array('Title','Author','Subject','Type','Abstract');
+$config['skylight_searchresult_display'] = array('Title','Series','Author','Subject','Type','Abstract');
 
 $config['skylight_search_fields'] = array('Keywords' => 'text',
     'Subject' => 'dc.subject',
     'Type' => 'dc.type',
-    'Author' => 'dc.creator'
+    'Author' => 'dc.creator',
+    'Series' => 'dc.relation.ispartofseries'
 );
 
 $config['skylight_sort_fields'] = array('Title' => 'dc.title',

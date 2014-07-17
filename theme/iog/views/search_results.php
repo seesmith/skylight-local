@@ -11,6 +11,7 @@
         $bitstream_field = $this->skylight_utilities->getField('Bitstream');
         $thumbnail_field = $this->skylight_utilities->getField('Thumbnail');
         $abstract_field = $this->skylight_utilities->getField('Abstract');
+        $series_field = $this->skylight_utilities->getField('Series');
 
 
         $base_parameters = preg_replace("/[?&]sort_by=[_a-zA-Z+%20. ]+/","",$base_parameters);
@@ -74,7 +75,8 @@
 
         <div class = "iteminfo">
             <h3><a href="./record/<?php echo $doc['id']?>?highlight=<?php echo $query ?>"><?php echo $doc[$title_field][0]; ?></a></h3>
-        <div class="tags">
+
+            <div class="tags">
 
 
         <?php if(array_key_exists($author_field,$doc)) { ?>
@@ -147,12 +149,13 @@
         ?>
 
         </div> <!-- close tags div -->
+            <p><?php echo $doc[$series_field][0]; ?></p>
+
             <div class = "thumbnail-image">
                 <?php
                 if(isset($doc[$bitstream_field])) {
                     $bitstream_array = array();
 
-                    //SR JIRA001-665 sort bitstreams by sequence to ensure they show in correct order
                     foreach ($doc[$bitstream_field] as $bitstream_for_array)
                     {
                         $b_segments = explode("##", $bitstream_for_array);

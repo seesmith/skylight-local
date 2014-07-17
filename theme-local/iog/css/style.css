@@ -108,7 +108,7 @@ body, select, input, textarea 	{ color: #555; line-height: 18px; font-family: Ar
 h1, h2, h3, h4, h5, h6 			{ text-rendering: optimizeLegibility; color: #00548e; font-weight: bold; }
 h1 								{ font-size: 18px; line-height: 24px; margin: 30px 0 17px 0px; position: relative; }
 h2 								{ font-size: 16px; line-height: 36px; margin: 0 0 0 0; }
-h3 								{ font-size: 14px; line-height: 18px; margin: 0 0 9px 0; }
+h3 								{ font-size: 14px; line-height: 18px; margin: 0 0 5px 0; }
 
 h1.itemtitle                    { font-size: 18px; line-height: 24px; margin: 20px 0 10px 0px; position: relative; }
 
@@ -141,7 +141,7 @@ header				{ position: relative; }
 #menu                               { width: 940px; background-color: #333333; margin: 0 auto; height: 33px; }
 .menu-links li					    { display: inline; float: right; height: 33px; padding-left: 0; padding-right: 0; }
 .menu-links li a 			        { font-weight: bold; font-size: 11px; text-transform: uppercase; float: left; text-decoration: none; margin-left: 10px; color: #FFFFFF; display: inline-block; height: 33px; line-height: 2.5em; padding: 3px 20px 2px; text-align: center; }
-.menu-links li a:hover		        { background-color: #005784; }
+.menu-links li a:hover		        { background-color: #ffffff; color: #333333}
 .menu-links li a.last		        { border: none; }
 
 /* Uoe specific */
@@ -220,11 +220,11 @@ a.logo:hover span {
 
 .col-sidebar ul.related li a.related-record { font-size: 14px; padding-bottom: 5px;}
 
-.tags                       { margin-top: 5px; margin: 0;}
-.tags a                     { font-size: 13px; color: #fff;background: #00548e; -webkit-border-radius: 5px; -moz-border-radius: 5px; border-radius: 5px; padding: 2px 6px; line-height: 20px; margin-right: 8px; text-decoration: none; display:inline-block; }
-.tags a.bold                { font-weight: bold; }
-.tags a:hover               { background: #666; color: #ffffff; }
-.tags a.maker               { display:inline-block; line-height: 15px; margin-bottom: 5px; }
+
+.tags					{ margin: 0 0 0 54px; }
+.tags a 				{ font-size: 13px; background: #f1f1f2; -webkit-border-radius: 5px; -moz-border-radius: 5px; border-radius: 5px; padding: 2px 6px; line-height: 20px; margin-right: 8px; text-decoration: none; }
+.tags a.bold			{ font-weight: bold; }
+.tags a:hover			{ background: #e7e8ea; color: #666; }
 
 footer 						{ margin-top: 40px; }
 footer a 					{ font-size: 10px; text-transform: uppercase; color: #666 !important; text-decoration: none; font-weight: bold; padding-right: 9px; margin-right: 5px; }
@@ -384,5 +384,64 @@ table tr:last-child                 { border: 0; border-bottom: none; }
   @page { margin: 0.5cm; }
   p, h2, h3 { orphans: 3; widows: 3; }
   h2, h3{ page-break-after: avoid; }
+}
+
+
+.jcarousel-wrapper {
+    margin: 10px auto;
+    position: relative;
+    border: 25px solid #fff;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    -webkit-box-shadow: 0 0 2px #999;
+    -moz-box-shadow: 0 0 2px #999;
+    box-shadow: 0 0 2px #999;
+}
+/** Carousel **/
+.jcarousel {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+}
+.jcarousel ul {
+    width: 20000em;
+    position: relative;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+.jcarousel li {
+    float: left;
+    border: 1px solid #fff;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+.jcarousel img {
+    display: block;
+    max-width: 100%;
+    height: auto !important;
+}
+/** Carousel Controls **/
+.jcarousel-control-prev,
+.jcarousel-control-next {
+    position: absolute;
+    top: 50%;
+    margin-top: -15px;
+    margin-left: -7px;
+    margin-right: -7px;
+    text-align: center;
+    color: #EB0955;
+    text-decoration: none;
+    text-shadow: 0 0 1px #000;
+    font: 36px Arial, sans-serif;
+
+}
+.jcarousel-control-prev {
+    left: -11px;
+}
+.jcarousel-control-next {
+    right: -11px;
 }
 
