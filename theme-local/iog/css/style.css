@@ -445,3 +445,27 @@ table tr:last-child                 { border: 0; border-bottom: none; }
     right: -11px;
 }
 
+/* Bootstrap CSS */
+
+.carousel-caption {
+    padding-bottom: 20px;
+    color: #ffffff;
+    padding-top: 20px;
+    text-align: center;
+    text-shadow: none;
+    text-transform: uppercase;
+    z-index: 10;
+
+    /* styling below */
+    background-color: #005784;
+    font-size: 14px;
+    font-weight: bold;
+    /* opacity: 0.80; /* transparency */
+    /* filter: alpha(opacity=80); /* IE transparency */
+}
+
+.caption-iog  { top: 6%; right: 1%; bottom: 1%; left: 2%;}
+
+.pagenotfound {
+    border-top: 1px solid #005784;
+}
