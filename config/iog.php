@@ -22,7 +22,7 @@ $config['skylight_fields'] = array('Title' => 'dc.title.en',
     'Author' => 'dc.contributor.author.en',
     'Subject' => 'dc.subject.en',
     'Type' => 'dc.type.en',
-    'Abstract' => 'dc.description.abstract',
+    'Abstract' => 'dc.description.abstract.en',
     'Date' => 'dc.date.issued',
     'Accession Date' => 'dc.date.accessioned_dt',
     'Number of Pages' => 'dc.coverage.spatial',
@@ -55,9 +55,9 @@ $config['skylight_search_fields'] = array('Keywords' => 'text',
     'Series' => 'dc.relation.ispartofseries'
 );
 
-$config['skylight_sort_fields'] = array('Title' => 'dc.title',
-    'Date' => 'dc.date.issued_dt',
-    'Author' => 'dc.creator'
+$config['skylight_sort_fields'] = array('Author' => 'dc.contributor.author_sort ',
+    'Title' => 'dc.title_sort',
+    'Date' => 'dc.date.issued_dt'
 );
 
 $config['skylight_feed_fields'] = array('Title' => 'Title',
