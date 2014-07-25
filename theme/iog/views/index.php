@@ -17,7 +17,7 @@
                                 Media
                             </div>
                         </a></li>
-                    <li><a href='./search/*:*/Subject:"health%7C%7C%7CHealth"'>
+                    <li><a href='./search/*:*/Subject:"health+service%7C%7C%7CHealth+Service"'>
                         <img alt="Health" title="Health" src="<?php echo base_url(); ?>theme/iog/images/carousel/0041847c.jpg">
                             <div class="carousel-caption caption-iog" onmouseover="this.style.background='#eff';this.style.color='#005784'" onmouseout="this.style.background='#005784';this.style.color='#ffffff'">
                                 Health
@@ -29,13 +29,13 @@
                                 Devolution
                             </div>
                         </a></li>
-                    <li><a href='./search/*:*/Subject:"highlands%7C%7C%7CHighlands"'>
-                        <img alt="Highlands" title="Highlands" src="<?php echo base_url(); ?>theme/iog/images/carousel/0028004c.jpg">
+                    <li><a href='./search/*:*/Subject:"islands%7C%7C%7CIslands"'>
+                        <img alt="Islands" title="Islands" src="<?php echo base_url(); ?>theme/iog/images/carousel/0028004c.jpg">
                             <div class="carousel-caption caption-iog" onmouseover="this.style.background='#eff';this.style.color='#005784'"  onmouseout="this.style.background='#005784';this.style.color='#FFFFFF'">
-                                Highlands
+                                Islands
                             </div>
                     </a></li>
-                    <li><a href='./search/*:*/Subject:"gender%7C%7C%7CGender"'>
+                    <li><a href='./search/*:*/Subject:"local+government%7C%7C%7CLocal+Government"'>
                         <img alt="Local Government" title="Local Government" src="<?php echo base_url(); ?>theme/iog/images/carousel/ol00044.jpg">
                             <div class="carousel-caption caption-iog" onmouseover="this.style.background='#eff';this.style.color='#005784'" onmouseout="this.style.background='#005784';this.style.color='#FFFFFF'">
                                 Local Government
@@ -47,18 +47,16 @@
                             Religion
                         </div>
                     </a></li>
-
-
                     <li><a href='./search/*:*/Subject:"elections%7C%7C%7CElections"'>
                         <img alt="Elections" title="Elections" src="<?php echo base_url(); ?>theme/iog/images/carousel/3598534263_aaba5a75c0_z.jpg">
                         <div class="carousel-caption caption-iog" onmouseover="this.style.background='#eff';this.style.color='#005784'" onmouseout="this.style.background='#005784';this.style.color='#FFFFFF'">
                             Elections
                         </div>
                     </a></li>
-                    <li><a href='./search/*:*/Subject:"nationalism%7C%7C%7CNationalism"'>
-                        <img alt="Nationalism" title="Nationalism" src="<?php echo base_url(); ?>theme/iog/images/carousel/4917919154_74e84a09a1_z.jpg">
+                    <li><a href='./search/*:*/Subject:"scottish+office%7C%7C%7CScottish+Office"'>
+                        <img alt="Scottish Office" title="Scottish Office" src="<?php echo base_url(); ?>theme/iog/images/carousel/4917919154_74e84a09a1_z.jpg">
                         <div class="carousel-caption caption-iog" onmouseover="this.style.background='#eff';this.style.color='#005784'" onmouseout="this.style.background='#005784';this.style.color='#FFFFFF'">
-                            Nationalism
+                            Scottish Office
                         </div>
                     </a></li>
                 </ul>

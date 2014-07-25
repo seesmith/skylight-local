@@ -97,6 +97,7 @@
                 <li><a href="./feedback/" title="Feedback Link" class="last">Feedback</a></li>
                 <li><a href="" title="Blog" target="_blank">Blog</a></li>
                 <li><a href="http://www.institute-of-governance.org" title="Institute of Governance Home" target="_blank">IOG</a></li>
+                <li><a href=" http://www.sps.ed.ac.uk/" title="School of Social and Political Science" target="_blank">SPS</a></li>
                 <li><a href="./about/" title="About this site">About</a></li>
                 <li><a href="./" title="<?php echo $site_title; ?> Home">Home</a></li>
             </ul>

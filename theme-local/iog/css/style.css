@@ -469,3 +469,6 @@ table tr:last-child                 { border: 0; border-bottom: none; }
 .pagenotfound {
     border-top: 1px solid #005784;
 }
+
+.italic { font-style: italic; }
+.bold { font-weight: bold; }
