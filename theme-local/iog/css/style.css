@@ -144,10 +144,14 @@ header				{ position: relative; }
 .menu-links li a:hover		        { background-color: #ffffff; color: #333333}
 .menu-links li a.last		        { border: none; }
 
+.uoe-links li                          { display: block; float: left; height: 33px; padding-left: 0; padding-right: 0; }
+.uoe-links li a                        { font-weight: bold; font-size: 11px; text-transform: uppercase; float: left; text-decoration: none; margin-left: 10px; color: #FFFFFF; display: inline-block; height: 33px; line-height: 2.5em; padding: 3px 0px 2px; text-align: center; }
+
+
 /* Uoe specific */
 #collection-search              { width: 660px; padding-top: 20px;}
-#collection-title	            { display: block; width: 940px; height: 130px; padding-top: 0px; }
-.logo                           { display: block; width: 940px; height: 130px; float: left; background: #444 url(../images/bannerbg.gif) no-repeat 0px 0px;}
+#collection-title	            { display: block; width: 940px; height: 150px; padding-top: 0px; }
+.logo                           { display: block; width: 940px; height: 150px; float: left; background: #444 url(../images/bannerbg-2.jpg) no-repeat 0px 0px;}
 
 li.tile                         { display: inline; float: left; height: 188px; }
 
