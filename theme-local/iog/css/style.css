@@ -135,7 +135,7 @@ input.btn:hover					{ background: #033a5f; }
 #container 			{ width: 940px; margin: auto auto; }
 header				{ position: relative; }
 .col-main			{ float: left; margin-right: 40px; width: 660px; }
-.col-sidebar		{ float: left; width: 240px; margin-top: -66px; background: #def5fb; position: relative; z-index: 2; }
+.col-sidebar		{ float: left; width: 240px; margin-top: -66px; background: #ACDDEE; position: relative; z-index: 2; }
 .ie7 .col-sidebar	{ padding-bottom: 30px; }
 
 #menu                               { width: 940px; background-color: #333333; margin: 0 auto; height: 33px; }
@@ -231,24 +231,24 @@ a.logo:hover span {
 .tags a:hover			{ background: #e7e8ea; color: #666; }
 
 footer 						{ margin-top: 40px; }
-footer a 					{ font-size: 10px; text-transform: uppercase; color: #666 !important; text-decoration: none; font-weight: bold; padding-right: 9px; margin-right: 5px; }
 footer a.border				{ border-right: 1px solid #cecece;  }
 footer a:hover				{ color: #333 !important; text-decoration: underline; }
 
-.ioglogo                    { display: block; float: left; width: 80px; height: 70px; background: url(../images/iog-logo.jpg) no-repeat 0px 0px; border-right: 0;}
+.iog-logo                   { display: block; float: left; }
+.ioglogo                    { display: block; float: left; width: 80px; height: 70px; background: url(../images/iog-logo.jpg) no-repeat 0 0; border-right: 0;}
+.uoelogo                    { display: block; float: left; width: 70px; height: 70px; background: url(../images/uofe-logo.png) no-repeat 0 0; }
 
-
-.footer-links               { margin-top: 0px; margin-bottom: 0px; text-align: left;  border-top: 1px solid #00548e; border-bottom: 0; width: 660px; }
-.footer-policies            { margin-top: 0px; margin-bottom: 0px; text-align: left;  border-bottom: 1px solid #00548e; width: 660px; }
-.footer-policies a          { font-size:13px; font-weight: normal; color: #00548e;  text-transform: none; border: none; }
-.footer-policies a:hover    { color: red !important; text-decoration: underline; border: none;}
-
-
-.site-links			        { display: block; padding-top: 5px; padding-bottom: 5px; width: 660px; float: left; }
+.site-links			        { display: block; padding-top: 5px; padding-bottom: 0; width: 660px; float: left; }
 .site-links a 		        { font-size: 10px; text-transform: uppercase; color: #AAA79E  !important; text-decoration: none; font-weight: bold;  padding-right: 15px; margin-right: 10px; }
-.site-links a.border	        { border-right: 1px solid #cecece;}
+.site-links a.border	    { border-right: 1px solid #cecece;}
 .site-links a:hover	        { text-decoration: underline; color: #666; }
 
+.footer-links               { margin-top: 0; margin-bottom: 0; padding-bottom: 0; text-align: left;  border-top: 1px solid #00548e; border-bottom: 0; width: 660px; }
+.footer-policies            { display: block; float: left; margin-top: 0; margin-bottom: 0; padding-left: 5px; padding-top: 2px; width: 440px; }
+.footer-policies a:hover    { color: #333 !important; text-decoration: underline; border: none;}
+
+.copyright-policies            { margin-top: 0; margin-bottom: 0; padding-left: 5px; padding-top: 2px; text-align: center;  border-bottom: 1px solid #00548e; width: 660px; }
+.copyright-policies a:hover    { color: #333 !important; text-decoration: underline; border: none;}
 
 
 /* Custom Containers & Subclasses ----------------------------------------------------------------------------------------*/
