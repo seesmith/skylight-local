@@ -48,9 +48,10 @@
         <h1>Homepage Image Credits</h1>
         <p>
             <ul>
-            <li><a href="https://www.flickr.com/photos/chris-yunker/2504698578" target="_blank">Devolution</a> CC-BY-SA 2.0 Chris Yunker
+            <li><a href="https://www.flickr.com/photos/hetteix/6011206627" target="_blank">Header Image</a> CC BY-NC-SA 2.0 Hetx</li>
+            <li><a href="https://www.flickr.com/photos/chris-yunker/2504698578" target="_blank">Devolution</a> CC BY-SA 2.0 Chris Yunker
             </li>
-            <li><a href="https://www.flickr.com/photos/secretlondon/3598534263" target="_blank">Elections</a> CC-BY-NC 2.0 marian_ey
+            <li><a href="https://www.flickr.com/photos/secretlondon/3598534263" target="_blank">Elections</a> CC BY-NC 2.0 marian_ey
             </li>
             <li><a href="http://images.is.ed.ac.uk/luna/servlet/s/a6p4ip" target="_blank">Gender</a>
                 &copy; The University of Edinburgh
@@ -64,9 +65,9 @@
             <li><a href="http://collections.ed.ac.uk/calendars/record/22061" target="_blank"">Local Government</a>
                 &copy; The University of Edinburgh
             </li>
-            <li><a href="https://www.flickr.com/photos/noodlepie/1037285312" target="_blank">Media</a> CC-BY-NC-SA 2.0 Graham Holliday
+            <li><a href="https://www.flickr.com/photos/noodlepie/1037285312" target="_blank">Media</a> CC BY-NC-SA 2.0 Graham Holliday
             </li>
-            <li><a href="https://www.flickr.com/photos/conner395/4917919154" target="_blank">Scottish Office</a> CC-BY 2.0 Dave Conner
+            <li><a href="https://www.flickr.com/photos/conner395/4917919154" target="_blank">Scottish Office</a> CC BY 2.0 Dave Conner
             </li>
             <li><a href="http://images.is.ed.ac.uk/luna/servlet/s/2ot58r" target="_blank">Religion</a> &copy; The University of Edinburgh
             </li>
