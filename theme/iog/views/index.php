@@ -68,16 +68,8 @@
             <a class="jcarousel-control-next" href="#" data-jcarouselcontrol="true">›</a>
 
         </div>
-        <p>The Unit was set up in the mid-1970s
-            to address 'Our Changing Scotland' and the certainty – as it seemed at the time – of a devolved Assembly in
-            Edinburgh. The <span class="italic">Yearbooks</span> reflect the spirit of that enterprise: contributions cut
-            across academic disciplines … sociology, political science, social policy, history, economics, theology, education, medicine, law.
-            And they spanned a wide range of academic institutions, centred upon – but not limited to – Scotland’s universities.
-            But the Yearbooks went beyond academia to embrace lawyers, journalists, political activists, policy makers,
-            civil servants, public sector managers, local government officers and clerics. Through this rich mix the
-            <span class="italic">Yearbooks</span> sought, as the opening volume’s <a
-                href="https://www.era.lib.ed.ac.uk/bitstream/1842/8996/1/1976_1_Our%20changing%20Scotland.pdf" target="_blank">editorial</a> made clear, to engage with a Scotland which was proving
-            to be "a perplexing place".
+        <p><h6>This archive was constructed by the Unit's successor, the <a href="http://www.institute-of-governance.org/" target="_blank">Institute of Governance</a>. Please feel
+            free to browse using the links above, or by using the search function.</h6>
         </p>
     </div>
 

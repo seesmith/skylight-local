@@ -76,8 +76,11 @@ $config['skylight_homepage_recentitems'] = false;
 $config['skylight_cache'] = false;
 
 // Digital object management
-$config['skylight_display_thumbnail'] = true;
+$config['skylight_bitstream_field'] = 'dc.format.original';
+$config['skylight_thumbnail_field'] = 'dc.format.thumbnail';
+$config['skylight_display_thumbnail'] = false;
 $config['skylight_link_bitstream'] = true;
+
 
 // Display common image formats in "light box" gallery?
 $config['skylight_lightbox'] = true;
