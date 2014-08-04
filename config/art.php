@@ -41,7 +41,8 @@ $config['skylight_fields'] = array(
     'Inscription' => 'dc.format.inscription.en',
     'Subject' => 'dc.subject.en',
     'Place Made' => 'dc.coverage.spatial.en',
-    'Period' => 'dc.coverage.temporalperiod.en'
+    'Period' => 'dc.coverage.temporalperiod.en',
+    'Link' => 'dc.identifier.uri'
 );
 
 $config['skylight_date_filters'] = array();
