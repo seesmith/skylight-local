@@ -6,6 +6,7 @@ $bitstream_field = $this->skylight_utilities->getField("Bitstream");
 $thumbnail_field = $this->skylight_utilities->getField("Thumbnail");
 $date_field = $this->skylight_utilities->getField("Date");
 $filters = array_keys($this->config->item("skylight_filters"));
+$link_uri_field = $this->skylight_utilities->getField("Link");
 
 $type = 'Unknown';
 $mainImageTest = false;
@@ -151,10 +152,10 @@ if(isset($solr[$bitstream_field]) && $link_bitstream) {
 
     <?php if($mainImageTest === true) { ?>
     <div class="full-title">
-    <?php } ?>
+        <?php } ?>
         <h1 class="itemtitle"><?php echo $record_title ?>
-        <?php if(isset($solr[$date_field])) {
-              echo " (" . $solr[$date_field][0] . ")";
+            <?php if(isset($solr[$date_field])) {
+                echo " (" . $solr[$date_field][0] . ")";
             } ?>
         </h1>
         <div class="tags">
@@ -174,24 +175,47 @@ if(isset($solr[$bitstream_field]) && $link_bitstream) {
 
             ?>
         </div>
-    <?php if($mainImageTest === true) { ?>
+        <?php if($mainImageTest === true) { ?>
     </div>
-    <?php if($mainImage) { ?>
-            <div class="full-image">
-                <?php echo $bitstreamLink; ?>
-            </div>
-        <?php } ?>
-    <?php } ?>
+<?php if($mainImage) { ?>
+    <div class="full-image">
+        <?php echo $bitstreamLink; ?>
+    </div>
+<?php } ?>
+<?php } ?>
 
     <?php if($mainImageTest === true) { ?>
     <div class="full-metadata">
-    <?php } ?>
+        <?php } ?>
         <table>
             <tbody>
             <?php $excludes = array(""); ?>
-            <?php foreach($recorddisplay as $key) {
+            <?php
+            $i = 0;
+            if (isset($solr[$link_uri_field])) {
+                foreach($solr[$link_uri_field] as $linkURI) {
+                    $linkURI = str_replace('"', '%22', $linkURI);
+                    $linkURI = str_replace('|', '%7C', $linkURI);
+                    if ($i == 1)
+                    {
+                        $image_no = "";
+                    }
+                    else
+                    {
+                        $image_no = "(".$i.") ";
+                    }
+                    if (strpos($linkURI,"images.is.ed.ac.uk") != false)
+                    {
+                        echo '<h3 class="collection-link"><a href="'. $linkURI . '" target="_blank">View high resolution image '.$image_no.' (opens in new window)</a></h3>';
+                    }
+                    $i++;
+                }
+            }
+
+            foreach($recorddisplay as $key) {
 
                 $element = $this->skylight_utilities->getField($key);
+
                 if(isset($solr[$element])) {
                     if(!in_array($key, $excludes)) {
                         echo '<tr><th>'.$key.'</th><td>';
@@ -221,14 +245,14 @@ if(isset($solr[$bitstream_field]) && $link_bitstream) {
             } ?>
             </tbody>
         </table>
-    <?php if($mainImageTest === true) { ?>
+        <?php if($mainImageTest === true) { ?>
     </div>
-    <?php } ?>
+<?php } ?>
     <div class="clearfix"></div>
 
     <?php
 
-        if(isset($solr[$bitstream_field]) && $link_bitstream) {
+    if(isset($solr[$bitstream_field]) && $link_bitstream) {
 
         echo '<div class="record_bitstreams">';
 
@@ -277,9 +301,7 @@ if(isset($solr[$bitstream_field]) && $link_bitstream) {
 
         echo '</div><div class="clearfix"></div>';
 
-        }
+    }
 
     echo '</div>';
     ?>
-
-
