@@ -191,24 +191,26 @@ if(isset($solr[$bitstream_field]) && $link_bitstream) {
             <tbody>
             <?php $excludes = array(""); ?>
             <?php
-            $i = 0;
+            $i = 1;
             if (isset($solr[$link_uri_field])) {
                 foreach($solr[$link_uri_field] as $linkURI) {
                     $linkURI = str_replace('"', '%22', $linkURI);
                     $linkURI = str_replace('|', '%7C', $linkURI);
-                    if ($i == 1)
-                    {
-                        $image_no = "";
-                    }
-                    else
-                    {
-                        $image_no = "(".$i.") ";
-                    }
+
                     if (strpos($linkURI,"images.is.ed.ac.uk") != false)
                     {
+                        if ($i == 1)
+                        {
+                            $image_no = "";
+                        }
+                        else
+                        {
+                            $image_no = "(".$i.") ";
+                        }
                         echo '<h3 class="collection-link"><a href="'. $linkURI . '" target="_blank">View high resolution image '.$image_no.' (opens in new window)</a></h3>';
+                        $i++;
                     }
-                    $i++;
+
                 }
             }
 

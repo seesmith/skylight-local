@@ -179,11 +179,11 @@ header				{ position: relative; width: 940px;}
 .left-title                     { width: 410px; float: left; }
 .right-image                    { width: 250px; float: right; text-align: center; }
 .left-metadata                  { width: 380px; float: left; padding-top: 10px; }
-.full-image                     { margin-top: 10px; }
+.full-image                     { display: block; margin-top: 10px; width: 660px;}
 
 .record-bitstreams              { display: block; width: 660px; margin: 5px 0; }
-.main-image                     { max-width: 250px; display: block; }
-.record-main-image              { max-width: 660px; }
+.main-image                     { display: block; margin: auto;}
+.record-main-image              { display: block;  max-width: 660px; max-height: 660px;margin: auto;}
 
 audio[id^="audio-"]             { margin: 5px 0; }
 span[id^="video-"]              { margin: 5px 0; }
