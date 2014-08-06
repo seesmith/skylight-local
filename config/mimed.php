@@ -49,7 +49,6 @@ $config['skylight_fields'] = array(
     'Genus' => 'dc.type.genus',
     'Provenance' => 'dc.provenance.en',
     'Decorations' => 'dc.description.decoration.en',
-    'Acquisition' => 'dc.description.acquisition.en'
 );
 
 
@@ -63,7 +62,7 @@ $config['skylight_meta_fields'] = array('Title' => 'dc.title',
     'Subject' => 'dc.subject',
     'Type' => 'dc.type');
 
-$config['skylight_recorddisplay'] = array('Alternative Title','Instrument','Instrument Family','Maker','Subject','Abstract','Place Made','Date Made','Description','Other Information','Notes','Decorations','Measurements','Provenance','Inscription','Signature','Acquisition','Collection','Rights Holder','Accession Number');
+$config['skylight_recorddisplay'] = array('Alternative Title','Instrument','Instrument Family','Maker','Subject','Abstract','Place Made','Date Made','Description','Other Information','Notes','Decorations','Measurements','Provenance','Inscription','Signature','Collection','Rights Holder','Accession Number');
 
 $config['skylight_searchresult_display'] = array('Title','Instrument','Maker','Subject','Abstract', 'Bitstream', 'Thumbnail');
 
