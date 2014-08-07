@@ -231,7 +231,7 @@ a:hover #parentTitle
 }
 .col-sidebar h4 a:hover				{ background: #033a5f url(../images/bg-arrows.png) no-repeat 100% -92px; }
 .col-sidebar ul 					{ list-style-type: none; margin: 0 0 17px 0; font-size: 12px; }
-.col-sidebar ul li 					{ line-height: 16px; padding: 0 17px; }
+.col-sidebar ul li 					{ line-height: 16px; padding: 0; padding-right: 17px;}
 .col-sidebar ul a 					{ text-decoration: none; display: block; }
 .col-sidebar ul a:hover				{ text-decoration: underline; }
 
