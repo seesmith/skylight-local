@@ -338,12 +338,13 @@ h1 .icon							{ top: -5px; left: -65px; }
 .content 							{ margin-top: 30px; }
 .content ul 						{ margin: 0 0 18px 1.2em; }
 
-table								{ width: 100%; background: #f1f1f2; }
-table caption						{ text-align: left; background: #677077; color: #fff; font-size: 12px; text-transform: uppercase; font-weight: bold; padding: 8px 17px; border-bottom: 1px solid #fff;  }
-table td                			{ padding: 8px 17px; }
-table th							{ padding: 8px 17px; text-align: left; border-right: 1px solid #fff;  }
-table tr:nth-child(2n)				{ background: #e7e8ea; }
-
+table								{ width: 100%; background: #fff; }
+table td,
+table th							{ padding: 8px 17px; text-align: left; color: #00548e; }
+table th                            { border-right: 1px dashed #D6D3C4; width: 20%; }
+table td                            { width: auto; color: #222222;}
+table tr                            { border-bottom: 1px dashed #D6D3C4; }
+table tr:last-child                 { border: 0; border-bottom: none; }
 
 #breadTrail ul {
     margin-left: 0em;

@@ -1,18 +1,25 @@
 <?php
 
-    $author_field = $this->skylight_utilities->getField("Author");
-    $type_field = $this->skylight_utilities->getField("Type");
-    $filters = array_keys($this->config->item("skylight_filters"));
+$author_field = $this->skylight_utilities->getField("Author");
+$type_field = $this->skylight_utilities->getField("Type");
+$year_field = $this->skylight_utilities->getField("Year");
+$version_field = $this->skylight_utilities->getField("Version");
+$filters = array_keys($this->config->item("skylight_filters"));
+$bitstreamLinks = array();
 ?>
 
-
-<h1 class="itemtitle"><?php echo $record_title ?></h1>
+<h1 class="itemtitle"><?php echo $record_title ?>
+    <?php if(isset($solr[$year_field])) {
+        echo " " . $solr[$year_field][0];
+        if(isset($solr[$version_field]) && $solr[$version_field][0] == "Resit") {
+            echo " Resit";
+        }
+    } ?>
+</h1>
 
     <div class="content">
-
         <table>
-		    <caption>Description</caption>
-		    <tbody>
+            <tbody>
             <?php foreach($recorddisplay as $key) {
 
                 $element = $this->skylight_utilities->getField($key);
@@ -21,7 +28,7 @@
                     foreach($solr[$element] as $index => $metadatavalue) {
                         // if it's a facet search
                         // make it a clickable search link
-                        if(in_array($key, $filters)) {
+                        if(in_array($key, $filters) && $key != "Year") {
 
                             $orig_filter = urlencode($metadatavalue);
                             $lower_orig_filter = strtolower($metadatavalue);
@@ -30,8 +37,14 @@
                             echo '<a href="./search/*:*/' . $key . ':%22'.$lower_orig_filter.'%7C%7C%7C'.$orig_filter.'%22">'.$metadatavalue.'</a>';
                         }
                         else {
-                            echo $metadatavalue;
+                            if($key == "Course Code") {
+                                echo strtoupper($metadatavalue);
+                            }
+                            else {
+                                echo $metadatavalue;
+                            }
                         }
+
                         if($index < sizeof($solr[$element]) - 1) {
                             echo '; ';
                         }
@@ -40,18 +53,32 @@
                 }
 
             } ?>
-			</tbody>
+            </tbody>
         </table>
+
+        <?php if(isset($solr[$bitstream_field]) && $link_bitstream) {
+            ?><div class="record_bitstreams"><?php
+            foreach($solr[$bitstream_field] as $bitstream) {
+                $bitstreamLink = $this->skylight_utilities->getBitstreamLink($bitstream);
+                $bitstreamUri = $this->skylight_utilities->getBitstreamUri($bitstream);
+                ?>
+                <br />
+                <object data="<?php echo $bitstreamUri ?>" type="application/pdf" width="660" height="928">
+                    <p><span class="label">
+                        It appears you don't have a PDF plugin for this browser.</span>
+                        Click <?php echo $bitstreamLink ?> to download.
+                        (<span class="bitstream_size"><?php echo getBitstreamSize($bitstream); ?></span>)
+                    </p>
+
+                </object>
+
+
+
+            <?php
+            } ?></div> <?php
+        } ?>
 
     </div>
 
 
-    <?php if(isset($solr[$bitstream_field]) && $link_bitstream) {
-            ?><div class="record_bitstreams"><h3>Files</h3><?php
-            foreach($solr[$bitstream_field] as $bitstream) {
-                $bitstreamLink = $this->skylight_utilities->getBitstreamLink($bitstream);
-                ?><p><span class="label"></span><?php echo $bitstreamLink ?>
-                (<span class="bitstream_size"><?php echo getBitstreamSize($bitstream); ?></span>)</p>
-        <?php
-            } ?></div> <?php
-    } ?>
+
