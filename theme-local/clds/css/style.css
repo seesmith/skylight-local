@@ -210,7 +210,7 @@ span[id^="video-"]              { margin: 5px 0; }
 .col-sidebar ul a:hover			{ text-decoration: underline; }
 
 .col-sidebar ul.selected					{ background: #ffffff; -webkit-border-radius: 5px; -moz-border-radius: 5px; border-radius: 5px; padding: 7px 9px; margin: 0 17px 4px 17px; }
-.col-sidebar ul.selected li 				{ position: relative; color: #FE2842; }
+.col-sidebar ul.selected li 				{ position: relative; color: #FE2842; padding: 0; padding-right: 17px;}
 .col-sidebar ul.selected a					{ color: #FE2842; padding: 0; }
 .col-sidebar ul.selected a:hover			{ background: none; }
 .col-sidebar ul.selected a.deselect			{ display: block; width: 13px; height: 13px; background: url(../images/bg-deselect.png) no-repeat 0px 0px; text-indent: -9999px; position: absolute; top: 0; right: 0; }
