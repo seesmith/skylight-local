@@ -139,7 +139,7 @@ input.btn:hover					{ background: #fcb814 ; color: #00325f}
 #container 			{ width: 940px; margin: auto auto; }
 header				{ position: relative; width: 940px;}
 .col-main			{ float: left; margin-right: 40px; width: 660px; }
-.col-sidebar		{ float: left; width: 240px; margin-top: -52px; background: #e1dfd4; position: relative; z-index: 2;}
+.col-sidebar		{ float: left; width: 240px; margin-top: -52px; background: #FFF4DA; position: relative; z-index: 2;}
 .ie7 .col-sidebar	{ padding-bottom: 30px; }
 
 /* Common Containers & Subclasses ----------------------------------------------------------------------------------------*/
@@ -260,7 +260,9 @@ footer                  { display: block; border-bottom: 1px solid #00325f ; pad
 .tags					{ margin-top: 5px; margin: 0; }
 .tags a 				{ color: #00325f; font-size: 13px; background: #fcb814 ; -webkit-border-radius: 5px; -moz-border-radius: 5px; border-radius: 5px; padding: 2px 6px; line-height: 20px; margin-right: 8px; text-decoration: none; display:inline-block; }
 .tags a.bold			{ font-weight: bold; }
-.tags a:hover			{ background: #00325f; color: #fff; text-decoration: underline;  }
+.tags a:hover			{ background: #00325f; color: #fcb814; text-decoration: underline;  }
+.tags a.reverse:hover   { background: #fcb814; color: #00325f; }
+.tags a.reverse         { background: #00325f; color: #fcb814; }
 
 .listing-filter						{ padding: 0; border: none; border-bottom: 1px solid #b8baba; line-height: 33px; text-align: right; position: relative; }
 .listing-filter .no-results			{ position: absolute; top: 0; left: 0; }
