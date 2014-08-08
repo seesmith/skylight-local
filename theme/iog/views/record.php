@@ -107,16 +107,13 @@ if(isset($solr[$type_field])) {
         $bitstreamUri = $this->skylight_utilities->getBitstreamUri($bitstream);
         ?>
 
-        <object height="800" data="<?php echo $bitstreamUri ?>" type="application/pdf" width="800">
+        <object class="pdfviewer" height="800" data="<?php echo $bitstreamUri ?>" type="application/pdf" width="800">
             <p><span class="label">
-            It appears you don't have a PDF plugin for this browser.</span>
-                Click <?php echo $bitstreamLink ?> to download.
-                (<span class="bitstream_size"><?php echo getBitstreamSize($bitstream); ?></span>)
+            It appears you do not have a PDF plugin for this browser.</span>
             </p>
-
         </object>
-
-
+        Click <?php echo $bitstreamLink ?> to download.
+        (<span class="bitstream_size"><?php echo getBitstreamSize($bitstream); ?></span>)
 
     <?php
     } ?></div> <?php

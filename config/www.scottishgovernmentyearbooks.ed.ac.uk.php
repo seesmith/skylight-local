@@ -5,6 +5,13 @@ $config['skylight_appname'] = 'iog';
 // Uncomment this if you are using a url of the form http://.../art/...
 $config['skylight_url_prefix'] = 'iog';
 
+// set the base url
+//if (strpos($_SERVER['HTTP_HOST'], "test") !== false) {
+ //   $config['base_url'] = 'https://test.exampapers.ed.ac.uk/';
+//}
+//else {
+//    $config['base_url'] = 'https://exampapers.ed.ac.uk/';
+//}
 
 $config['skylight_theme'] = 'iog';
 
