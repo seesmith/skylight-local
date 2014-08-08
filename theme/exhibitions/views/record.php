@@ -1,6 +1,6 @@
 <?php
 
-$author_field = $this->skylight_utilities->getField("Author");
+$author_field = $this->skylight_utilities->getField("Creator");
 $type_field = $this->skylight_utilities->getField("Type");
 $bitstream_field = $this->skylight_utilities->getField("Bitstream");
 $thumbnail_field = $this->skylight_utilities->getField("Thumbnail");
@@ -169,7 +169,7 @@ if(isset($solr[$bitstream_field]) && $link_bitstream) {
                     $lower_orig_filter = strtolower($author);
                     $lower_orig_filter = urlencode($lower_orig_filter);
 
-                    echo '<a class="artist" href="./search/*:*/Artist:%22'.$lower_orig_filter.'%7C%7C%7C'.$orig_filter.'%22">'.$author.'</a>';
+                    echo '<a class="artist" href="./search/*:*/Creator:%22'.$lower_orig_filter.'%7C%7C%7C'.$orig_filter.'%22">'.$author.'</a>';
                 }
             }
 
