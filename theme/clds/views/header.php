@@ -99,6 +99,7 @@
                         <li><a href="https://www.facebook.com/crc.edinburgh" class="facebook-icon" target="_blank" title="CRC on Facebook"></a></li>
                         <li><a href="https://twitter.com/CRC_EdUni" class="twitter-icon" target="_blank" title="CRC on Twitter"></a></li>
                         <li><a href="https://www.flickr.com/photos/crcedinburgh" class="flickr-icon" target="_blank" title="CRC on Flickr"></a></li>
+                        <li><a href="https://libraryblogs.is.ed.ac.uk" class="wordpress-icon" target="_blank" title="L&UC Blogs"></a></li>
                     </ul>
                     <ul class="menu-links">
                         <li><a href="./feedback/" title="Feedback Link" class="last">Feedback</a></li>

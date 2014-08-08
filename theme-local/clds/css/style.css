@@ -161,6 +161,9 @@ header				{ position: relative; width: 940px; height: 141px; background-color: #
 .social-links li a.twitter-icon:hover     { display: block; background: url(../images/twittericon2.png) no-repeat 0px 0px; }
 .social-links li a.flickr-icon            { display: block; width: 33px; height: 33px; float: left; background: url(../images/flickricon.png) no-repeat 0px 0px;}
 .social-links li a.flickr-icon:hover      { display: block; background: url(../images/flickricon2.png) no-repeat 0px 0px; }
+.social-links li a.wordpress-icon         { display: block; width: 33px; height: 33px; float: left; background: url(../images/wordpressicon.png) no-repeat 0px 0px;}
+.social-links li a.wordpress-icon:hover   { display: block; background: url(../images/wordpressicon2.png) no-repeat 0px 0px; }
+
 
 #collection-title	            { display: block; width: 540px; height: 88px; padding: 10px 0; float: left; }
 .uoelogo                        { display: block; width: 119px; height: 88px; float: left; background: url(../images/UoELogo.gif) no-repeat 0px 0px;}
