@@ -331,8 +331,6 @@ audio[id^="audio-"]             { margin: 5px 0; }
 span[id^="video-"]              { margin: 5px 0; }
 
 .pdfviewer{
-    height: 800;
-    width :600;
     border: 1px solid black;
 
 }
