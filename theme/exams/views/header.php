@@ -71,7 +71,7 @@
             <a href="http://www.ed.ac.uk" title="University of Edinburgh Home" class="uofe-title"></a>
         </div>
         <div class="is-stuff">
-            <a href="http://www.ed.ac.uk/schools-departments/information-services" title="Information Systems Link" class="argos"><span id="parentTitle">Information Services</span></a>
+            <a href="/" title="Exam Papers Online" class="exams-banner"></a>
         </div>
 
         <!-- Breadcrumbs -->
