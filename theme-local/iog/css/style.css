@@ -144,8 +144,9 @@ header				{ position: relative; }
 .menu-links li a:hover		        { background-color: #ffffff; color: #333333}
 .menu-links li a.last		        { border: none; }
 
-.uoe-links li                          { display: block; float: left; height: 33px; padding-left: 0; padding-right: 0; }
-.uoe-links li a                        { font-weight: bold; font-size: 11px; text-transform: uppercase; float: left; text-decoration: none; margin-left: 10px; color: #FFFFFF; display: inline-block; height: 33px; line-height: 2.5em; padding: 3px 0px 2px; text-align: center; }
+.uoe-links li                       { display: block; float: left; height: 33px; padding-left: 0; padding-right: 0; }
+.uoe-links li a                     { font-weight: bold; font-size: 11px; text-transform: uppercase; float: left; text-decoration: none; margin-left: 0px; color: #FFFFFF; display: inline-block; height: 33px; line-height: 2.5em; padding: 3px 20px 2px; text-align: center; }
+.uoe-links li a:hover		        { background-color: #ffffff; color: #333333}
 
 
 /* Uoe specific */
