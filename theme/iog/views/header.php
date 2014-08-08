@@ -106,7 +106,7 @@
         </nav>
         <div class="clearfix"></div>
         <div id="collection-title">
-            <a href="<?php echo base_url(); ?>iog" class="logo" title="<?php echo $this->config->item('skylight_fullname');?> Home">
+            <a href="<?php echo base_url(); ?>" class="logo" title="<?php echo $this->config->item('skylight_fullname');?> Home">
                 <span onmouseover="this.style.background='#005784';this.style.color='#FFF'" onmouseout="this.style.background='#FFFFFF';this.style.color='#005784'"><?php echo $site_title; ?></span>
             </a>
         </div>

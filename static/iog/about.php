@@ -41,7 +41,7 @@
         </p>
         <p>
             The Archive was supported by funds from the University of Edinburgh’s <a href="http://www.sps.ed.ac.uk/" target="_blank">School of Social & Political Science</a>,
-            and by the kind assistance of the University’s <a href="http://www.ed.ac.uk/schools-departments/information-services/about/organisation/library-and-collections/library-and-collections" target="_blank">Library and University Collections</a>.
+            and by the kind assistance of the University’s <a href="http://www.ed.ac.uk/schools-departments/information-services/about/organisation/library-and-collections/library-and-collections" target="_blank">Library and University Collections</a>. Developed by the Library Digital Development Team <a class="email" href="mailto:lddt@mlist.is.ed.ac.uk">lddt@mlist.is.ed.ac.uk</a>
         </p>
 
         </p>
