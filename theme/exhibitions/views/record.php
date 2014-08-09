@@ -223,14 +223,21 @@ if(isset($solr[$bitstream_field]) && $link_bitstream) {
             }
             if(isset($solr[$uri_field])) {
 
+                $first = false;
                 foreach($solr[$uri_field] as $uri) {
                     $find   = 'http://hdl.handle.net';
                     $findLuna = 'http://images.is.ed.ac.uk';
                     $pos = strpos($uri, $find);
 
+
                     if ($pos === false)
                     {
-                        echo '<tr><th>Link</th><td>';
+                        if (!$first)
+                        {
+                            echo '<tr><th>Link</th><td>';
+
+                        }
+
                         $Lunapos = strpos($uri, $findLuna);
 
                         if ($Lunapos !== false)
@@ -244,8 +251,17 @@ if(isset($solr[$bitstream_field]) && $link_bitstream) {
                         if($index < sizeof($solr[$uri_field]) - 1) {
                             echo '<br />';
                         }
-                        echo '</td></tr>';
+                        if (!$first)
+                        {
+                            $first = true;
+                        }
+
+
                     }
+                }
+                if ($first)
+                {
+                    echo '</td></tr>';
                 }
             }
             ?>
