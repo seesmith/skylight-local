@@ -1,10 +1,11 @@
 <?php
 
-$author_field = $this->skylight_utilities->getField("Author");
+$author_field = $this->skylight_utilities->getField("Creator");
 $type_field = $this->skylight_utilities->getField("Type");
 $bitstream_field = $this->skylight_utilities->getField("Bitstream");
 $thumbnail_field = $this->skylight_utilities->getField("Thumbnail");
 $date_field = $this->skylight_utilities->getField("Date");
+$uri_field = $this->skylight_utilities->getField("Link");
 $filters = array_keys($this->config->item("skylight_filters"));
 
 $type = 'Unknown';
@@ -168,7 +169,7 @@ if(isset($solr[$bitstream_field]) && $link_bitstream) {
                     $lower_orig_filter = strtolower($author);
                     $lower_orig_filter = urlencode($lower_orig_filter);
 
-                    echo '<a class="artist" href="./search/*:*/Artist:%22'.$lower_orig_filter.'%7C%7C%7C'.$orig_filter.'%22">'.$author.'</a>';
+                    echo '<a class="artist" href="./search/*:*/Creator:%22'.$lower_orig_filter.'%7C%7C%7C'.$orig_filter.'%22">'.$author.'</a>';
                 }
             }
 
@@ -198,7 +199,7 @@ if(isset($solr[$bitstream_field]) && $link_bitstream) {
                         foreach($solr[$element] as $index => $metadatavalue) {
                             // if it's a facet search
                             // make it a clickable search link
-                            if(in_array($key, $filters) && $key != "Artist") {
+                            if(in_array($key, $filters)) {
 
                                 $orig_filter = urlencode($metadatavalue);
                                 $lower_orig_filter = strtolower($metadatavalue);
@@ -218,7 +219,52 @@ if(isset($solr[$bitstream_field]) && $link_bitstream) {
                     }
                 }
 
-            } ?>
+
+            }
+            if(isset($solr[$uri_field])) {
+
+                $first = false;
+                foreach($solr[$uri_field] as $uri) {
+                    $find   = 'http://hdl.handle.net';
+                    $findLuna = 'http://images.is.ed.ac.uk';
+                    $pos = strpos($uri, $find);
+
+
+                    if ($pos === false)
+                    {
+                        if (!$first)
+                        {
+                            echo '<tr><th>Link</th><td>';
+
+                        }
+
+                        $Lunapos = strpos($uri, $findLuna);
+
+                        if ($Lunapos !== false)
+                        {
+
+                            echo '<a href="'.$uri.'" title="Link to High resolution version of image" target="_blank">High resolution version of photo</a>';
+                        }
+                        else{
+                            echo '<a href="'.$uri.'" title="Link to '.$uri.'" target="_blank">'.$uri.'</a>';
+                        }
+                        if($index < sizeof($solr[$uri_field]) - 1) {
+                            echo '<br />';
+                        }
+                        if (!$first)
+                        {
+                            $first = true;
+                        }
+
+
+                    }
+                }
+                if ($first)
+                {
+                    echo '</td></tr>';
+                }
+            }
+            ?>
             </tbody>
         </table>
     <?php if($mainImageTest === true) { ?>

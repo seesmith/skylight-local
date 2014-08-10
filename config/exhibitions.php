@@ -19,7 +19,7 @@ $config['skylight_container_id'] = '16';
 $config['skylight_container_field'] = 'location.coll';
 
 $config['skylight_fields'] = array('Title' => 'dc.title.en',
-    'Author' => 'dc.contributor.authorza.en',
+    'Creator' => 'dc.contributor.author.en',
     'Subject' => 'dc.subject.en',
     'Type' => 'dc.type.en',
     'Abstract' => 'dc.description.abstract',
@@ -31,16 +31,16 @@ $config['skylight_fields'] = array('Title' => 'dc.title.en',
     'Rights' => 'dc.rights.en',
     'Link' => 'dc.identifier.uri.en',
     'Alternative' => 'dc.title.alternative.en',
-    'Identifier' => 'dc.identifier'
+    'Identifier' => 'dc.identifier',
+    'Exhibition' => 'dc.relation.ispartofexhibition.en'
 );
 
-$config['skylight_date_filters'] = array('Date' => 'dateIssued.year_sort');
-$config['skylight_filters'] = array('Author' => 'author_filter', 'Subject' => 'subject_filter', 'Type' => 'type_filter');
+$config['skylight_date_filters'] = array();
+$config['skylight_filters'] = array('Exhibition' => 'exhibition_filter','Creator' => 'author_filter', 'Subject' => 'subject_filter', 'Type' => 'type_filter');
 $config['skylight_filter_delimiter'] = ':';
 
 $config['skylight_meta_fields'] = array('Title' => 'dc.title.en',
-    'Author' => 'dc.contributor.author',
-    'Abstract' => 'dc.description.abstract',
+    'Creator' => 'dc.contributor.author.en',
     'Subject' => 'dc.subject.en',
     'Date' => 'dc.date.issued_dt',
     'Type' => 'dc.type.en',
@@ -48,22 +48,22 @@ $config['skylight_meta_fields'] = array('Title' => 'dc.title.en',
     'Thumbnail'=> 'dc.format.thumbnail'
 );
 
-$config['skylight_recorddisplay'] = array('Title','Alternative','Author','Subject','Type','Description','Date','Link','Collection','Rights');
+$config['skylight_recorddisplay'] = array('Title','Alternative','Creator','Exhibition','Subject','Type','Description','Date','Collection','Rights');
 
-$config['skylight_searchresult_display'] = array('Title','Author','Subject','Type','Abstract');
+$config['skylight_searchresult_display'] = array('Title','Creator','Subject','Type','Exhibition');
 
-$config['skylight_search_fields'] = array('Keywords' => 'text',
+$config['skylight_search_fields'] = array(
     'Subject' => 'dc.subject.en',
-    'Type' => 'dc.type.en',
-    'Author' => 'dc.contributor.author'
+    'Title' => 'dc.title.en',
+    'Creator' => 'dc.contributor.author.en',
 );
 
 $config['skylight_sort_fields'] = array(
-    'Artist' => 'dc.contributor.author_sort ', 'Title' => 'dc.title_sort'
+    'Creator' => 'dc.contributor.author_sort ', 'Title' => 'dc.title_sort'
 );
 
 $config['skylight_feed_fields'] = array('Title' => 'Title',
-    'Author' => 'Author',
+    'Creator' => 'Creator',
     'Subject' => 'Subject',
     'Description' => 'Abstract',
     'Date' => 'Date');
@@ -88,6 +88,6 @@ $config['skylight_lightbox_mimes'] = array('image/jpeg', 'image/gif', 'image/png
 // Language and locale settings
 $config['skylight_language_default'] = 'en';
 $config['skylight_language_options'] = array('en', 'ko', 'jp');
-$config['skylight_highlight_fields'] = 'dc.title.en,dc.contributor.author,dc.subject.en,dc.description.en,dc.relation.ispartof.en';
+$config['skylight_highlight_fields'] = 'dc.title.en,dc.contributor.author.en,dc.subject.en,dc.description.en,dc.relation.ispartof.en';
 
 ?>

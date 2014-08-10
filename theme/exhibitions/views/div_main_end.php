@@ -1,15 +1,16 @@
         <footer>
             <div class="footer-links">
                 <div class="site-links">
-                    <a href="./"><?php echo $site_title; ?></a>
+                    <a href="./">Exhibitions Home</a>
                     <a href="./about">About this Collection</a>
                     <a href="./feedback" class="last">Feedback</a>
                 </div>
                 <div class="social-links">
                     <ul class="social-icons">
-                        <li><a href="https://www.facebook.com/UniversityOfEdinburghFineArtCollection" class="facebook-icon" target="_blank" title="Art Collection on Facebook"></a></li>
-                        <li><a href="https://twitter.com/UoEArtArchives" class="twitter-icon" target="_blank" title="Art Collection on Twitter"></a></li>
-                        <li><a href="http://uoeartandarchives.tumblr.com/" class="tumblr-icon" target="_blank" title="Art Collection on Tumblr"></a></li>
+                        <li><a href="https://www.facebook.com/crc.edinburgh" class="facebook-icon" target="_blank" title="CRC on Facebook"></a></li>
+                        <li><a href="https://twitter.com/CRC_EdUni" class="twitter-icon" target="_blank" title="CRC on Twitter"></a></li>
+                        <li><a href="https://www.flickr.com/photos/crcedinburgh" class="flickr-icon" target="_blank" title="CRC on Flickr"></a></li>
+                        <li><a href="http://libraryblogs.is.ed.ac.uk/" class="wordpress-icon" target="_blank" title="L&UC Blogs"></a></li>
                     </ul>
                 </div>
             </div>

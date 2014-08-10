@@ -229,7 +229,7 @@ footer                  { display: block; border-bottom: 1px solid #872379; padd
 
 .footer-links           { margin-top: 15px; margin-bottom: 15px; text-align: left;  border-top: 1px solid #872379; border-bottom: 1px solid #872379; width: 660px; height: 39px;}
 
-.site-links			    { display: block; padding-top: 10px; padding-bottom: 10px; width: 520px; float: left; height: 19px; }
+.site-links			    { display: block; padding-top: 10px; padding-bottom: 10px; width: 480px; float: left; height: 19px; }
 .site-links a 		    { font-size: 10px; text-transform: uppercase; color: #AAA79E  !important; text-decoration: none; font-weight: bold; border-right: 1px solid #cecece; padding-right: 15px; margin-right: 10px; }
 .site-links a.last	    { border: none; }
 .site-links a:hover	    { text-decoration: underline; color: #c78c86; }
@@ -242,6 +242,11 @@ footer                  { display: block; border-bottom: 1px solid #872379; padd
 .social-icons li a.facebook-icon:hover    { display: block; background: url(../images/facebookiconfooter2.png) no-repeat 0px 0px; }
 .social-icons li a.twitter-icon           { display: block; width: 33px; height: 33px; float: left; background: url(../images/twittericonfooter.png) no-repeat 0px 0px;}
 .social-icons li a.twitter-icon:hover     { display: block; background: url(../images/twittericonfooter2.png) no-repeat 0px 0px; }
+.social-icons li a.wordpress-icon         { display: block; width: 33px; height: 33px; float: left; background: url(../images/wordpressicon.jpg) no-repeat 0px 0px;}
+.social-icons li a.wordpress-icon:hover   { display: block; background: url(../images/wordpressicon2.jpg) no-repeat 0px 0px; }
+.social-icons li a.flickr-icon         { display: block; width: 33px; height: 33px; float: left; background: url(../images/flickricon.gif) no-repeat 0px 0px;}
+.social-icons li a.flickr-icon:hover   { display: block; background: url(../images/flickricon2.gif) no-repeat 0px 0px; }
+
 
 .footer-disclaimer      { display: block; width: 95%; margin: auto; }
 .footer-logo            { display: block; float: left; }
