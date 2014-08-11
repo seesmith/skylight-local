@@ -106,7 +106,7 @@ body                            { background-color: #e6e6e6; }
 body, select, input, textarea   { color: #555; line-height: 18px; font-family: Arial, Helvetica, sans-serif; }
 
 h1, h2, h3, h4, h5, h6          { text-rendering: optimizeLegibility; color: #00548e; font-weight: bold; }
-h1                              { font-size: 18px; line-height: 24px; margin: 30px 0 17px 0; position: relative; }
+h1                              { font-size: 18px; line-height: 24px; margin: 15px 0 17px 0; position: relative; }
 h2                              { font-size: 16px; line-height: 36px; margin: 0 0 0 0; }
 h3                              { font-size: 14px; line-height: 18px; margin: 0 0 9px 0; }
 
@@ -297,7 +297,7 @@ h1 .icon                            { top: -5px; left: -65px; }
 .pagination .prev:hover,
 .pagination .next:hover             { background: #def5fb url(../images/bg-arrows.png) no-repeat; }
 
-.content                            { margin-top: 30px; }
+.content                            { margin-top: 0px; }
 .content ul                         { margin: 0 0 18px 1.2em; }
 
 table                               { width: 100%; background: #fff; }

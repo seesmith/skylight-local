@@ -1,9 +1,11 @@
         <footer>
             <div class="footer-links">
                 <div class="site-links">
-                    <a href="/"><?php echo $site_title; ?>&nbsp;Home</a>
-                    <a href="/about">About this Collection</a>
-                    <a href="/feedback" class="last">Feedback</a>
+                    &nbsp;&nbsp;
+                    <a href="./">Exam Papers Online Home</a>
+                    <a href="./about">About</a>
+                    <a href="./help">Help</a>
+                    <a href="./feedback" class="last">Feedback</a>
                 </div>
             </div>
             <div class="footer-disclaimer">
