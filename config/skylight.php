@@ -7,7 +7,7 @@ $config['skylight_url_prefixes'] = array('physics', 'mimed', 'art', 'calendars',
 $config['skylight_hostnames'] = array('test.exampapers.ed.ac.uk', 'exampapers.ed.ac.uk', 'images.ph.ed.ac.uk', 'test.exampapers.ed.ac.uk', 'www.scottishgovernmentyearbooks.ed.ac.uk', 'test.scottishgovernmentyearbooks.ed.ac.uk', 'exhibitions.ed.ac.uk', 'test.exhibitions.ed.ac.uk');
 
 // The URL of the parent solr server
-$config['skylight_solrbase'] = 'http://localhost:8080/isdocs/solr/search/';
+$config['skylight_solrbase'] = 'http://collectionsmanager.is.ed.ac.uk/solr/search/';
 
 //DSpace handle server prefix
 $config['skylight_handle_prefix'] = '10683';
@@ -31,16 +31,16 @@ $config['skylight_adminldap_context'] = "ou=users,dc=example,dc=com";
 $config['skylight_adminldap_allowed'] = array('id1', 'id2');
 
 // The OAI-PMH base for the parent server
-$config['skylight_oaipmhbase'] = 'http://localhost:8080/oai/request?';
+$config['skylight_oaipmhbase'] = 'http://collectionsmanager.is.ed.ac.uk/oai/request?';
 
 // The OAI-PMH identifier to replace in OAI-PMH responses
-$config['skylight_oaipmhid'] = 'your.repository.org:123456789/';
+$config['skylight_oaipmhid'] = 'oai:collectionsmanager.is.ed.ac.uk:10683/';
 
 // The link in OAI-PMH responses to replace with the skylight record URL
-$config['skylight_oaipmhlink'] = 'http://hdl.handle.net/123456789/';
+$config['skylight_oaipmhlink'] = 'http://hdl.handle.net/10683/';
 
 // The URL base for where digital objects can be proxied from
-$config['skylight_objectproxy_url'] = 'http://localhost:8080/xmlui/bitstream/10683/';
+$config['skylight_objectproxy_url'] = 'http://collectionsmanager.is.ed.ac.uk/bitstream/10683/';
 
 
 // Set to the number of minutes to cache pages for. Set to false for no caching.
