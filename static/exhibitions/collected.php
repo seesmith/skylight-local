@@ -1,6 +1,6 @@
 <div class="content">
     <div class="content byEditor">
-        <a href "./"><h1>Collect.ed</h1></a>
+        <a href='search/*:*/Exhibition:"collected%7C%7C%7CCollected"'><h1>Collect.ed</h1></a>
         <div id="exhib-page-block">
             <div id="exhib-tile-6" class="art-tile"></div>
         </div>
@@ -16,9 +16,5 @@
         Embodying both the satisfaction of imposed order and the human desire to possess, early collecting focused on the unclassified and unique, aiming as much to instil wonder as to enlighten. This exhibition explores the unexpected and showcases the rare and remarkable from the University’s collections.
         </p>
 
-      <h2> Further Resources</h2>
-        <p>
-
-        </p>
     </div>
 </div>

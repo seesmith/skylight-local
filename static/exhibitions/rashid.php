@@ -1,6 +1,6 @@
 <div class="content">
     <div class="content byEditor">
-        <a href = "./"><h1>The World History of Rashid al-Din, 1314</h1></a>
+        <a href = 'search/*:*/Exhibition:"rashid+al-din%7C%7C%7CRashid+al-Din"'><h1>The World History of Rashid al-Din, 1314</h1></a>
         <div id="exhib-page-block">
             <div id="exhib-tile-4" class="art-tile"></div>
         </div>
@@ -13,9 +13,13 @@
         <h2> Further Resources</h2>
         <p>
             <a href = "http://images.is.ed.ac.uk/luna/servlet/view/search?search=Search&q=World+History" target = "_blank" title = "Hi-res Rashid images" alt = "hi-res Rashid images"> High resolution images</a> of all of the pages in the book can be found in the LUNA imaging platform (Oriental Manuscripts collection).
-
-            <a href = "http://images.is.ed.ac.uk/luna/servlet/s/kwl89a" target = "_blank"  title = "World History book reader" alt = "World History book reader">The full book</a> is available using LUNA's page-turning software.
-
         </p>
+        <p>
+            <a href = "http://images.is.ed.ac.uk/luna/servlet/s/kwl89a" target = "_blank"  title = "World History book reader" alt = "World History book reader">The full book</a> is available using LUNA's page-turning software.
+        </p>
+        <p>
+            <a href = "http://vimeo.com/103231632" target = "_blank"  title = "Rashid al-din Exhibition Installation" alt = "Rashid al-din Exhibition Installation">The time lapse film</a> by the Digital Imaging Unit of the Exhibition installation on Vimeo.
+        </p>
+
     </div>
 </div>

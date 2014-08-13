@@ -354,6 +354,9 @@ table tr:last-child                 { border: 0; border-bottom: none; }
 .laing a                { color: #872379; text-decoration: underline;}
 .laing a:hover          { color: #c78c86; }
 
+.info            { display: block; width: 440px; float: left; font-size: 14px;}
+.signature       { display: block; float: right; }
+
 
 /* <END> Site Css \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\ */
 

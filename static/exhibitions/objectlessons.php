@@ -1,6 +1,6 @@
 <div class="content">
     <div class="content byEditor">
-        <a href ="./"><h1>Object Lessons</h1></a>
+        <a href ='search/*:*/Exhibition:"object+lessons%7C%7C%7CObject+Lessons"'><h1>Object Lessons</h1></a>
         <div id="exhib-page-little-block">
             <div id="exhib-tile-1" class="art-tile"></div>
         </div>

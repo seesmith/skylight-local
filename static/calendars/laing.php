@@ -111,6 +111,6 @@
             EH1 1HT<br/>
             <a mail="laingcollection@ed.ac.uk">laingcollection@ed.ac.uk</a></a><br/>
         </p>
-        <a href="./search/*:*/Subject:%22images+from+the+david+laing+collection+2015%7C%7C%7CImages+from+the+David+Laing+Collection+2015%22">Images from the Laing Collection</a>
+        <h2><a href="./search/*:*/Subject:%22images+from+the+david+laing+collection+2015%7C%7C%7CImages+from+the+David+Laing+Collection+2015%22">View 2015 Calendar: Images from the Laing Collection</a></h2>
     </div>
 </div>
