@@ -1,20 +1,119 @@
 <div class="record">
     <div class="content byEditor">
-        <h1>The University of Edinburgh Calendar 2014 - Bygone Edinburgh</h1>
+        <h1 class="laing">University Calendar 2015: Images from the <a href='./laing'>David Laing Collection</a></h1>
 
-        <div id="tile-block">
-            <a href="./record/19457" alt="Curling at Blackford Pond" title="January, Curling at Blackford Pond"><div id="tile-1" class="art-tile"></div></a>
-            <a href="./record/19458" alt="Anatomy Museum in the University of Edinburgh Medical School" title="February, Anatomy Museum in the University of Edinburgh Medical School"><div id="tile-2" class="art-tile"></div></a>
-            <a href="./record/19459" alt="Demonstration of the Cantilever Principle of the Forth Bridge" title="March, Demonstration of the Cantilever Principle of the Forth Bridge"><div id="tile-3" class="art-tile"></div></a>
-            <a href="./record/19460" alt="Edinburgh from Calton Hill" title="April, Edinburgh from Calton Hill"><div id="tile-4" class="art-tile"></div></a>
-            <a href="./record/19461" alt="Newhaven Fishermen" title="May, Newhaven Fishermen"><div id="tile-5" class="art-tile"></div></a>
-            <a href="./record/19462" alt="Children in Tron Square, Edinburgh" title="June, Children in Tron Square, Edinburgh"><div id="tile-6" class="art-tile"></div></a>
-            <a href="./record/19463" alt="The High Street with John Knox's House" title="July, The High Street with John Knox's House"><div id="tile-7" class="art-tile"></div></a>
-            <a href="./record/19464" alt="The Forth Bridge under Construction" title="August, The Forth Bridge under Construction"><div id="tile-8" class="art-tile"></div></a>
-            <a href="./record/19465" alt="Boys at Newhaven, Edinburgh" title="September, Boys at Newhaven, Edinburgh"><div id="tile-9" class="art-tile"></div></a>
-            <a href="./record/19466" alt="Trinity College Chapel and Hospital, with Calton Hill in the background, Edinburgh" title="October, Trinity College Chapel and Hospital, with Calton Hill in the background, Edinburgh"><div id="tile-10" class="art-tile"></div></a>
-            <a href="./record/19467" alt="Old College Quadrangle, University of Edinburghh" title="November, Old College Quadrangle, University of Edinburgh"><div id="tile-11" class="art-tile"></div></a>
-            <a href="./record/19468" alt="Skating on Duddingston Loch" title="December, Skating on Duddingston Loch"><div id="tile-12" class="art-tile"></div></a>
+        <div class="jcarousel-wrapper">
+            <div class="jcarousel" data-jcarousel="true">
+                <ul style="left: 0; top: 0;">
+                    <li><a href='./'>
+                            <img alt="Petition to the Pope" title="Petition to the Pope" src="<?php echo base_url(); ?>theme/calendars/images/carousel/oct14.jpg">
+                            <div class="carousel-caption caption-iog" onmouseover="this.style.background='#c78c86';this.style.color='#ffffff'" onmouseout="this.style.background='#872379';this.style.color='#ffffff'">
+                                Petition to the Pope
+                            </div>
+                        </a></li>
+                    <li><a href='./'>
+                            <img alt="Foreign Knight in Armour" title="Foreign Knight in Armour" src="<?php echo base_url(); ?>theme/calendars/images/carousel/nov14.jpg">
+                            <div class="carousel-caption caption-iog" onmouseover="this.style.background='#c78c86';this.style.color='#ffffff'" onmouseout="this.style.background='#872379';this.style.color='#FFFFFF'">
+                                Foreign Knight in Armour
+                            </div>
+                        </a></li>
+                    <li><a href='./'>
+                            <img alt="Agony in the Garden" title="Agony in the Garden" src="<?php echo base_url(); ?>theme/calendars/images/carousel/dec14.jpg">
+                            <div class="carousel-caption caption-iog" onmouseover="this.style.background='#c78c86';this.style.color='#ffffff'" onmouseout="this.style.background='#872379';this.style.color='#ffffff'">
+                                Agony in the Garden
+                            </div>
+                        </a></li>
+                    <li><a href='./'>
+                            <img alt="Seal of Robert Burns" title="Seal of Robert Burns" src="<?php echo base_url(); ?>theme/calendars/images/carousel/jan15.jpg">
+                            <div class="carousel-caption caption-iog" onmouseover="this.style.background='#c78c86';this.style.color='#ffffff'" onmouseout="this.style.background='#872379';this.style.color='#FFFFFF'">
+                                Seal of Robert Burns
+                            </div>
+                        </a></li>
+                    <li><a href='./'>
+                            <img alt="Commission from the Doge of Venice" title="Commission from the Doge of Venice" src="<?php echo base_url(); ?>theme/calendars/images/carousel/feb15.jpg">
+                            <div class="carousel-caption caption-iog" onmouseover="this.style.background='#c78c86';this.style.color='#ffffff'" onmouseout="this.style.background='#872379';this.style.color='#FFFFFF'">
+                                Commission from the Doge of Venice
+                            </div>
+                        </a></li>
+                    <li><a href='./'>
+                            <img alt="Wind propelled Wagon" title="Wind propelled Wagon" src="<?php echo base_url(); ?>theme/calendars/images/carousel/mar15.jpg">
+                            <div class="carousel-caption caption-iog" onmouseover="this.style.background='#c78c86';this.style.color='#ffffff'" onmouseout="this.style.background='#872379';this.style.color='#FFFFFF'">
+                                Wind propelled Wagon
+                            </div>
+                        </a></li>
+                    <li><a href='./'>
+                            <img alt="Seal of Kelso Abbey" title="Seal of Kelso Abbey" src="<?php echo base_url(); ?>theme/calendars/images/carousel/apr15.jpg">
+                            <div class="carousel-caption caption-iog" onmouseover="this.style.background='#c78c86';this.style.color='#ffffff'" onmouseout="this.style.background='#872379';this.style.color='#FFFFFF'">
+                                Seal of Kelso Abbey
+                            </div>
+                        </a></li>
+                    <li><a href='./'>
+                            <img alt="House of Lords" title="House of Lords" src="<?php echo base_url(); ?>theme/calendars/images/carousel/may15.jpg">
+                            <div class="carousel-caption caption-iog" onmouseover="this.style.background='#c78c86';this.style.color='#ffffff'" onmouseout="this.style.background='#872379';this.style.color='#FFFFFF'">
+                                House of Lords
+                            </div>
+                        </a></li>
+                    <li><a href='./'>
+                            <img alt="Harbour Scene" title="Harbour Scene" src="<?php echo base_url(); ?>theme/calendars/images/carousel/jun15.jpg">
+                            <div class="carousel-caption caption-iog" onmouseover="this.style.background='#c78c86';this.style.color='#ffffff'" onmouseout="this.style.background='#872379';this.style.color='#FFFFFF'">
+                                Harbour Scene
+                            </div>
+                        </a></li>
+                    <li><a href='./'>
+                            <img alt="Lady Grange Letters" title="Lady Grange Letters" src="<?php echo base_url(); ?>theme/calendars/images/carousel/jul15.jpg">
+                            <div class="carousel-caption caption-iog" onmouseover="this.style.background='#c78c86';this.style.color='#ffffff'" onmouseout="this.style.background='#872379';this.style.color='#FFFFFF'">
+                                Lady Grange Letters
+                            </div>
+                        </a></li>
+                    <li><a href='./'>
+                            <img alt="Falconry" title="Falconry" src="<?php echo base_url(); ?>theme/calendars/images/carousel/aug15.jpg">
+                            <div class="carousel-caption caption-iog" onmouseover="this.style.background='#c78c86';this.style.color='#ffffff'" onmouseout="this.style.background='#872379';this.style.color='#FFFFFF'">
+                                Falconry
+                            </div>
+                        </a></li>
+                    <li><a href='./'>
+                            <img alt="Solemn League and Covenant for Reformation" title="Solemn League and Covenant for Reformation" src="<?php echo base_url(); ?>theme/calendars/images/carousel/sep15.jpg">
+                            <div class="carousel-caption caption-iog" onmouseover="this.style.background='#c78c86';this.style.color='#ffffff'" onmouseout="this.style.background='#872379';this.style.color='#FFFFFF'">
+                                Covenant for Reformation
+                            </div>
+                        </a></li>
+                    <li><a href='./'>
+                            <img alt="Burgess Ticket" title="Burgess Ticket" src="<?php echo base_url(); ?>theme/calendars/images/carousel/oct15.jpg">
+                            <div class="carousel-caption caption-iog" onmouseover="this.style.background='#c78c86';this.style.color='#ffffff'" onmouseout="this.style.background='#872379';this.style.color='#FFFFFF'">
+                                Burgess Ticket
+                            </div>
+                        </a></li>
+                    <li><a href='./'>
+                            <img alt="Four Gospels" title="Four Gospels" src="<?php echo base_url(); ?>theme/calendars/images/carousel/nov15.jpg">
+                            <div class="carousel-caption caption-iog" onmouseover="this.style.background='#c78c86';this.style.color='#ffffff'" onmouseout="this.style.background='#872379';this.style.color='#ffffff'">
+                            Four Gospels
+                            </div>
+                        </a></li>
+                    <li><a href='./'>
+                            <img alt="Manuscript Fragment" title="Manuscript Fragment"" src="<?php echo base_url(); ?>theme/calendars/images/carousel/dec15.jpg">
+                            <div class="carousel-caption caption-iog" onmouseover="this.style.background='#c78c86';this.style.color='#ffffff'" onmouseout="this.style.background='#872379';this.style.color='#FFFFFF'">
+                                Manuscript Fragment
+                            </div>
+                        </a></li>
+                    <li><a href='./'>
+                            <img alt="Astronomical Instrument" title="Astronomical Instrument" src="<?php echo base_url(); ?>theme/calendars/images/carousel/cover.jpg">
+                            <div class="carousel-caption caption-iog" onmouseover="this.style.background='#c78c86';this.style.color='#ffffff'" onmouseout="this.style.background='#872379';this.style.color='#FFFFFF'">
+                                Astronomical Instrument
+                            </div>
+                        </a></li>
+                    <li><a href='./laing'>
+                            <img alt="David Laing" title="David Laing" src="<?php echo base_url(); ?>theme/calendars/images/carousel/0002766c_edited.jpg">
+                            <div class="carousel-caption caption-iog" onmouseover="this.style.background='#c78c86';this.style.color='#ffffff'" onmouseout="this.style.background='#872379';this.style.color='#FFFFFF'">
+                                David Laing
+                            </div>
+                        </a></li>
+                </ul>
+            </div>
+
+
+            <a class="jcarousel-control-prev" href="#" data-jcarouselcontrol="true">‹</a>
+            <a class="jcarousel-control-next" href="#" data-jcarouselcontrol="true">›</a>
+
         </div>
 
     </div>

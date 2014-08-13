@@ -258,23 +258,6 @@ footer                  { display: block; border-bottom: 1px solid #872379; padd
 .footer-policies        { display: block; float: left; padding-left: 10px; }
 .footer-policies p      { font-size: 12px; margin-bottom: 5px; color: #555555}
 
-#tile-block             { width: 660px; height: 680px; margin-bottom: 18px; }
-#tile-block a           { padding: 0; margin: 0; }
-.art-tile               { float: left; display: block; width: 218px; height: 168px; border-right: 1px solid #333; border-bottom: 1px solid #333;}
-
-#tile-1                 { background: url(../images/jan-tile.jpg) no-repeat 0px 0px; border-top: 1px solid #333; border-left: 1px solid #333;}
-#tile-2                 { background: url(../images/feb-tile.jpg) no-repeat 0px 0px;  border-top: 1px solid #333; }
-#tile-3                 { background: url(../images/mar-tile.jpg) no-repeat 0px 0px;  border-top: 1px solid #333; }
-#tile-4                 { background: url(../images/april-tile.jpg) no-repeat 0px 0px; border-left: 1px solid #333;}
-#tile-5                 { background: url(../images/may-tile.jpg) no-repeat 0px 0px; }
-#tile-6                 { background: url(../images/june-tile.jpg) no-repeat 0px 0px; }
-#tile-7                 { background: url(../images/july-tile.jpg) no-repeat 0px 0px; border-left: 1px solid #333;}
-#tile-8                 { background: url(../images/aug-tile.jpg) no-repeat 0px 0px; }
-#tile-9                 { background: url(../images/sept-tile.jpg) no-repeat 0px 0px; }
-#tile-10                { background: url(../images/oct-tile.jpg) no-repeat 0px 0px; border-left: 1px solid #333;}
-#tile-11                { background: url(../images/nov-tile.jpg) no-repeat 0px 0px; }
-#tile-12                { background: url(../images/dec-tile.jpg) no-repeat 0px 0px; }
-
 
 /* Custom Containers & Subclasses ----------------------------------------------------------------------------------------*/
 
@@ -368,6 +351,9 @@ table tr:last-child                 { border: 0; border-bottom: none; }
 .feedback_form label            { display: block; width: 100px;}
 #recaptcha_table                { width: 480px; }
 
+.laing a                { color: #872379; text-decoration: underline;}
+.laing a:hover          { color: #c78c86; }
+
 
 /* <END> Site Css \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\ */
 
@@ -419,4 +405,94 @@ table tr:last-child                 { border: 0; border-bottom: none; }
 }
 
 
+.jcarousel-wrapper {
+    margin: 10px auto;
+    position: relative;
+    border: 25px solid #fff;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    -webkit-box-shadow: 0 0 2px #999;
+    -moz-box-shadow: 0 0 2px #999;
+    box-shadow: 0 0 2px #999;
+}
+/** Carousel **/
+.jcarousel {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+}
+.jcarousel ul {
+    width: 20000em;
+    position: relative;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+.jcarousel li {
+    float: left;
+    border: 1px solid #fff;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+.jcarousel img {
+    display: block;
+    max-width: 100%;
+    height: auto !important;
+}
+/** Carousel Controls **/
+.jcarousel-control-prev,
+.jcarousel-control-next {
+    position: absolute;
+    top: 50%;
+    margin-top: -15px;
+    margin-left: -7px;
+    margin-right: -7px;
+    text-align: center;
+    color: #EB0955;
+    text-decoration: none;
+    text-shadow: 0 0 1px #000;
+    font: 36px Arial, sans-serif;
 
+}
+.jcarousel-control-prev {
+    left: -11px;
+}
+.jcarousel-control-next {
+    right: -11px;
+}
+
+.jcarousel a { text-decoration: none;}
+
+/* Bootstrap CSS */
+
+.carousel-caption {
+
+    padding-bottom: 20px;
+    color: #ffffff;
+    padding-top: 20px;
+    text-align: center;
+    text-shadow: none;
+    text-transform: uppercase;
+    z-index: 10;
+
+    /* styling below */
+    background-color: #872379;
+    font-size: 12px;
+    font-weight: bold;
+
+    /* opacity: 0.80; /* transparency */
+    /* filter: alpha(opacity=80); /* IE transparency */
+}
+
+
+
+.caption-iog  { top: 6%; right: 1%; bottom: 1%; left: 2%;}
+
+.pagenotfound {
+    border-top: 1px solid #872379;
+}
+
+.italic { font-style: italic; }
+.bold { font-weight: bold; }

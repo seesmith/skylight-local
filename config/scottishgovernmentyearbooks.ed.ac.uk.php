@@ -3,15 +3,15 @@
 $config['skylight_appname'] = 'iog';
 
 // Uncomment this if you are using a url of the form http://.../art/...
-$config['skylight_url_prefix'] = 'iog';
+//$config['skylight_url_prefix'] = 'iog';
 
 // set the base url
-//if (strpos($_SERVER['HTTP_HOST'], "test") !== false) {
- //   $config['base_url'] = 'https://test.exampapers.ed.ac.uk/';
-//}
-//else {
-//    $config['base_url'] = 'https://exampapers.ed.ac.uk/';
-//}
+if (strpos($_SERVER['HTTP_HOST'], "test") !== false) {
+    $config['base_url'] = 'http://test.scottishgovernmentyearbooks.ed.ac.uk/';
+}
+else {
+    $config['base_url'] = 'http://scottishgovernmentyearbooks.ed.ac.uk/';
+}
 
 $config['skylight_theme'] = 'iog';
 
@@ -84,7 +84,7 @@ $config['skylight_homepage_recentitems'] = false;
 $config['skylight_cache'] = false;
 
 // Digital object management
-$config['skylight_bitstream_field'] = 'dc.format.original';
+$config['skylight_bitstream_field'] = 'dc.format.original.en';
 $config['skylight_thumbnail_field'] = 'dc.format.thumbnail';
 $config['skylight_display_thumbnail'] = false;
 $config['skylight_link_bitstream'] = true;

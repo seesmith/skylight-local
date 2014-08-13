@@ -3,7 +3,15 @@
 $config['skylight_appname'] = 'exhibitions';
 
 // Uncomment this if you are using a url of the form http://.../art/...
-$config['skylight_url_prefix'] = 'exhibitions';
+//$config['skylight_url_prefix'] = 'exhibitions';
+
+// set the base url
+if (strpos($_SERVER['HTTP_HOST'], "test") !== false) {
+    $config['base_url'] = 'http://test.exhibitions.ed.ac.uk/';
+}
+else {
+    $config['base_url'] = 'http://exhibitions.ed.ac.uk/';
+}
 
 $config['skylight_theme'] = 'exhibitions';
 
