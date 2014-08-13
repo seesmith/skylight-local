@@ -248,6 +248,36 @@ footer                  { display: block; border-bottom: 1px solid #00325f ; pad
 
 .footer-policies a           { text-decoration: none;}
 .footer-policies a:hover     { text-decoration: underline;}
+
+
+#tile-block             { width: 660px; height: 500px; margin-bottom: 18px; }
+#past-exhib-block       { width: 660px; height: 250px; margin: auto; }
+#exhib-page-little-block       { width: 660px; height: 100px; margin: auto; }
+#exhib-page-block       { width: 660px; height: 225px; margin: auto; }
+#exhib-page-big-block       { width: 660px; height: 480px; margin: auto; }
+#tile-block a           { padding: 0; margin: 0; }
+.art-tile               { float: left; display: block;}
+
+#tile-1                 { width: 495px; height: 305px; background: url(../images/Rashidblogbanner2.jpg) no-repeat 0px 0px; }
+#tile-2                 { width: 200px; height: 95px; background: url(../images/0003467cbit.jpg) no-repeat 0px 0px; }
+#tile-3                 { width: 95px; height: 200px; background: url(../images/0003503cbit.jpg) no-repeat 0px 0px; }
+#tile-4                 { width: 95px; height: 95px; background: url(../images/0003529cbit.jpg) no-repeat 0px 0px; }
+#tile-5                 { width: 95px; height: 200px; background: url(../images/0003523cbit.jpg) no-repeat 0px 0px; }
+#tile-6                 { width: 95px; height: 200px; background: url(../images/0003524cbit.jpg) no-repeat 0px 0px; }
+#tile-7                 { width: 95px; height: 200px; background: url(../images/0003489cbit.jpg) no-repeat 0px 0px; }
+#tile-8                 { width: 200px; height: 95px; background: url(../images/0003510cbit.jpg) no-repeat 0px 0px; }
+#tile-9                 { width: 200px; height: 95px; background: url(../images/0003512cbit.jpg) no-repeat 0px 0px; }
+#tile-10                { width: 200px; height: 95px; background: url(../images/0003602cbit.jpg) no-repeat 0px 0px; }
+#exhib-tile-1 { width: 660px; height: 110px; background: url(../images/logo_set.jpg) no-repeat 0px 0px; }
+#exhib-tile-2 { width: 200px; height: 110px; background: url(../images/50-years-banner-logo-narrow.jpg) no-repeat 0px 0px; margin: auto;}
+#exhib-tile-3 { width: 200px; height: 110px; background: url(../images/Collectedtitle.jpg) no-repeat 0px 0px; margin: auto;}
+#exhib-tile-4 { width: 660px; height: 212px; background: url(../images/Rashidblogbanner2-full.jpg) no-repeat 0px 0px; }
+#exhib-tile-5 { width: 660px; height: 480px; background: url(../images/50yearsbanner.jpg) no-repeat 0px 0px;margin: auto; }
+#exhib-tile-6 { width: 660px; height: 201px; background: url(../images/Collectedtitlebig.jpg) no-repeat 0px 0px; }
+#exhib-tile-7 { width: 153px; height: 70px; background: url(../images/sca.gif) no-repeat 0px 0px; }
+#exhib-tile-8 { width: 78px; height: 70px; background: url(../images/talbot.gif) no-repeat 0px 0px; }
+#exhib-tile-9 { width: 200px; height: 110px; background: url(../images/logo_set.gif) no-repeat 0px 0px; margin: auto; }
+
 /* Custom Containers & Subclasses ----------------------------------------------------------------------------------------*/
 
 .listing 							{ list-style-type: none; margin: 0; }
@@ -337,6 +367,10 @@ table th                            { border-right: 1px dotted #fcb814; width: 3
 table td                            { width: auto; color: #00325f;}
 table tr                            { border-bottom: 1px dotted #fcb814; }
 table tr:last-child                 { border: 0; border-bottom: none; }
+.indextr                   { border: 0; border-bottom: none; }
+.indextd  { border: 0; border-bottom: none; padding: 0;}
+.ex-front-td { border: 0; border-bottom: none; padding: 0; width: 220px; margin:auto; }
+
 
 .feedback_form                      { padding: 0 20px;}
 .feedback_form label                { display: block; width: 100px;}
