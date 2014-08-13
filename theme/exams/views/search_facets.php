@@ -83,12 +83,16 @@
         </ul>
 
         <?php
-        // This is a bit of an ugly hack to only display one inactive facet. It would be nicer to only pass to the view the facets that we want to display. Robin.
-        if (isset($last_facet_display)) {
-            if ($facet['name'] == $last_facet_display) {
-                break;
-            }
-        }
+         // only limit the facets if there isn't a search term
+         if (!preg_match("/^\.\/search\/[a-zA-Z0-9]+$/", $base_search) || $base_search == "./search/*:*" || $base_search == "./search/*")
+         {
+             // This is a bit of an ugly hack to only display one inactive facet. It would be nicer to only pass to the view the facets that we want to display. Robin.
+             if (isset($last_facet_display)) {
+                 if ($facet['name'] == $last_facet_display) {
+                     break;
+                 }
+             }
+         }
         ?>
 
     <?php } ?>
