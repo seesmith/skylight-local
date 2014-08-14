@@ -242,8 +242,8 @@ footer                  { display: block; border-bottom: 1px solid #872379; padd
 .social-icons li a.facebook-icon:hover    { display: block; background: url(../images/facebookiconfooter2.png) no-repeat 0px 0px; }
 .social-icons li a.twitter-icon           { display: block; width: 33px; height: 33px; float: left; background: url(../images/twittericonfooter.png) no-repeat 0px 0px;}
 .social-icons li a.twitter-icon:hover     { display: block; background: url(../images/twittericonfooter2.png) no-repeat 0px 0px; }
-.social-icons li a.wordpress-icon         { display: block; width: 33px; height: 33px; float: left; background: url(../images/wordpressicon.jpg) no-repeat 0px 0px;}
-.social-icons li a.wordpress-icon:hover   { display: block; background: url(../images/wordpressicon2.jpg) no-repeat 0px 0px; }
+.social-icons li a.wordpress-icon         { display: block; width: 33px; height: 33px; float: left; background: url(../images/wordpressicon.png) no-repeat 0px 0px;}
+.social-icons li a.wordpress-icon:hover   { display: block; background: url(../images/wordpressicon2.png) no-repeat 0px 0px; }
 .social-icons li a.flickr-icon         { display: block; width: 33px; height: 33px; float: left; background: url(../images/flickricon.gif) no-repeat 0px 0px;}
 .social-icons li a.flickr-icon:hover   { display: block; background: url(../images/flickricon2.gif) no-repeat 0px 0px; }
 
