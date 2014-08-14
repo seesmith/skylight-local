@@ -1,6 +1,6 @@
 <div class="record">
 
-    <h2>University of Edinburgh Exam Papers Online: 2004-05 to 2012-13</h2>
+    <h2>University of Edinburgh Exam Papers Online: 2004-05 to 2013-14</h2>
     <p>
         Exam Papers Online is a service provided by Edinburgh
         University Library for students and staff of The University of Edinburgh.
