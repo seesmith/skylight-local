@@ -63,18 +63,18 @@
 
 <body>
 
+<nav id="menu">
+    <ul class="menu-links">
+        <li><a href="./feedback/" title="Feedback Link" class="last">Feedback</a></li>
+        <li><a href="./help" title="Help Page">Help</a></li>
+        <li><a href="./about/" title="About Exam Papers Online">About</a></li>
+        <li><a href="./" title="Exam Papers Online Home">Home</a></li>
+    </ul>
+</nav>
+<div class="clearfix"></div>
 <div id="container">
 
     <header>
-        <nav id="menu">
-            <ul class="menu-links">
-                <li><a href="./feedback/" title="Feedback Link" class="last">Feedback</a></li>
-                <li><a href="./help" title="Help Page">Help</a></li>
-                <li><a href="./about/" title="About Exam Papers Online">About</a></li>
-                <li><a href="./" title="Exam Papers Online Home">Home</a></li>
-            </ul>
-        </nav>
-        <div class="clearfix"></div>
         <div class="uofe-stuff">
             <a href="http://www.ed.ac.uk" title="University of Edinburgh Home" class="uofe-logo"></a>
             <a href="http://www.ed.ac.uk" title="University of Edinburgh Home" class="uofe-title"></a>
