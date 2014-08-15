@@ -146,10 +146,10 @@ header                  { position: relative; }
 .exams-banner           { display: inline-block; background: url("../images/examsbanner.png") no-repeat 0px 0px; width: 940px; height: 178px; padding-bottom: 10px;}
 .exams-banner:hover     { background: url("../images/examsbannerhover.png") no-repeat 0px 0px; }
 
-a.downloadButton, a.downloadButton:visited
+.listing li a.downloadButton, a.downloadButton:visited
 {
     float: right;
-    border: none; height: 18px; color: #fff; text-transform: uppercase; font-size: 12px; font-weight: bold; padding: 5px 10px;
+    border: none; height: 18px; color: #fff; text-transform: uppercase; font-size: 12px; text-decoration: none; font-weight: bold; padding: 5px 10px;
     -webkit-border-radius: 5px; -moz-border-radius: 5px; border-radius: 5px; text-shadow: rgba(0,0,0,0.3) 0 -1px 0;
     background: url("../images/bg-arrows2.png") no-repeat scroll 100% 0px #196599;
     padding-right: 24px;
@@ -248,15 +248,15 @@ footer                  { display: block; border-bottom: 1px solid #00548e; padd
 .listing li                         { padding: 10px 0 10px 10px; position: relative; border-top: 1px dashed #b8baba;}
 .listing li.first                   { padding-top: 20px; border-top: none;}
 .listing li.last                    { padding-bottom: 20px; }
-.listing li a                       { text-decoration: none; }
-.listing li a:hover                 { text-decoration: underline; }
+.listing li a                       { text-decoration: underline; }
+.listing li a:hover                 { }
 
 .listing li h3                      { display: inline-block; margin-bottom: 8px; }
+.listing li h3 a                    { text-decoration: none; }
 
 
 .listing li .tags                   { margin: 0 0 8px 0; }
 .listing li .tags a                 { font-size: 12px; }
-.listing li .tags a:hover           { text-decoration: none; }
 .listing li p                       { font-size: 12px; margin: 0; }
 
 .listing-filter                     { padding: 0; border: none; border-bottom: 1px solid #b8baba; line-height: 33px; text-align: right; position: relative; }
