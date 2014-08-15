@@ -171,9 +171,9 @@ a.downloadButton, a.downloadButton:visited
 .ie7 .logo              { top: -40px; }
 .collection-title       { color: #00548e; font-size: 28px; line-height: 88px; padding-top: 20px; text-shadow: rgba(255,255,255,0.3) 0px 1px 0px; margin: 0; }
 
-#menu                               { width: 940px; background-color: #00548e; margin: 0 auto; height: 33px; }
+#menu                               { width: 1000px; background-color: #196599; margin: 0 auto; height: 33px; }
 .menu-links li					    { display: inline; float: right; height: 33px; padding-left: 0; padding-right: 0; }
-.menu-links li a 			        { font-weight: bold; font-size: 11px; text-transform: uppercase; float: left; text-decoration: none; margin-left: 10px; color: #FFFFFF; display: inline-block; height: 33px; line-height: 2.5em; padding: 3px 20px 2px; text-align: center; }
+.menu-links li a 			        { font-weight: bold; font-size: 11px; text-transform: uppercase; float: left; text-decoration: none; margin-left: 10px; color: #FFFFFF; display: inline-block; line-height: 2.5em; padding: 3px 20px 2px; text-align: center; }
 .menu-links li a:hover		        { background-color: #333333; }
 .menu-links li a.last		        { border: none; }
 
