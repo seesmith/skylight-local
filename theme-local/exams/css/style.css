@@ -143,8 +143,8 @@ header                  { position: relative; }
 .uofe-stuff             { padding-top: 20px; padding-bottom: 20px; }
 .uofe-logo              { display: inline-block; width: 70px; height: 70px; background: url(../images/uofe-logo.png) no-repeat 0px 0px; }
 .uofe-title             { display: inline-block; width: 351px; height: 25px; background: url(../images/uofe-title.png) no-repeat 0px 0px; margin-left: 10px; margin-bottom: 25px;}
-.exams-banner           { display: inline-block; background: url("../images/examsbanner.jpg") no-repeat 0px 0px; width: 940px; height: 178px; padding-bottom: 10px;}
-.exams-banner:hover     { background: url("../images/examsbannerhover.jpg") no-repeat 0px 0px; }
+.exams-banner           { display: inline-block; background: url("../images/examsbanner.png") no-repeat 0px 0px; width: 940px; height: 178px; padding-bottom: 10px;}
+.exams-banner:hover     { background: url("../images/examsbannerhover.png") no-repeat 0px 0px; }
 
 a.downloadButton, a.downloadButton:visited
 {
@@ -170,6 +170,12 @@ a.downloadButton, a.downloadButton:visited
 .logo                   { display: block; text-indent: -9999px; width: 259px; height: 109px; background: url(../images/skylight.png) no-repeat 0px 0px; position: absolute; top: 0; right: 0; }
 .ie7 .logo              { top: -40px; }
 .collection-title       { color: #00548e; font-size: 28px; line-height: 88px; padding-top: 20px; text-shadow: rgba(255,255,255,0.3) 0px 1px 0px; margin: 0; }
+
+#menu                               { width: 940px; background-color: #00548e; margin: 0 auto; height: 33px; }
+.menu-links li					    { display: inline; float: right; height: 33px; padding-left: 0; padding-right: 0; }
+.menu-links li a 			        { font-weight: bold; font-size: 11px; text-transform: uppercase; float: left; text-decoration: none; margin-left: 10px; color: #FFFFFF; display: inline-block; height: 33px; line-height: 2.5em; padding: 3px 20px 2px; text-align: center; }
+.menu-links li a:hover		        { background-color: #333333; }
+.menu-links li a.last		        { border: none; }
 
 .search                 { padding-bottom: 20px; border-bottom: 1px solid #b8baba; width: 660px; }
 .search input[type=text]                {

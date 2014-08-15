@@ -6,7 +6,7 @@
          $active_terms = array();
          ?>
 
-        <h4><a href="./browse/<?php echo $facet['name']; ?>"><?php echo $facet['name'] ?></a></h4>
+        <h4><a href="./browse/<?php echo $facet['name']; ?>"><?php echo "Browse by " . $facet['name'] ?></a></h4>
 
         <?php if(preg_match('/Date/',$base_search) && $facet['name'] == 'Date') {
             $fpattern =  '#\/'.$facet['name'].'.*\]#';
