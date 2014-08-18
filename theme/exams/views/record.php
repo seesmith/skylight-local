@@ -53,6 +53,23 @@ $bitstreamLinks = array();
                 }
 
             } ?>
+            <tr>
+                <th>PDF Version</th>
+                <td>
+                    <?php if(isset($doc[$bitstream_field]) && $link_bitstream) {
+
+                        foreach($doc[$bitstream_field] as $bitstream) {
+
+                            $bitstreamLink = $this->skylight_utilities->getBitstreamURI($bitstream);
+                            echo '<a href="'.$bitstreamLink.'" class="downloadButton">Download Paper</a>';
+                        }
+                    }
+                    else { ?>
+
+                        <a href="./unavailable">Paper unavailable</a>
+
+                    <?php } ?>
+            </td></tr>
             </tbody>
         </table>
 
