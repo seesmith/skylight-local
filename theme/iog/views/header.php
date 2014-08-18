@@ -12,7 +12,7 @@
 
         <title><?php echo $page_title; ?></title>
 
-        <link rel="pingback" href="<?php echo base_url() . index_page(); if (index_page() !== '') { echo '/'; } echo 'pingback'; ?>" />
+        <base href="<?php echo base_url() . index_page(); if (index_page() !== '') { echo '/'; } ?>">
 
         <!-- Always force latest IE rendering engine (even in intranet) & Chrome Frame
         Remove this if you use the .htaccess -->
