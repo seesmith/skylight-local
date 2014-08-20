@@ -23,6 +23,8 @@ $config['skylight_adminemail'] = 'exam.papers@ed.ac.uk';
 
 $config['skylight_oaipmhcollection'] = 'hdl_123456789_1';
 
+$config['skylight_oaipmhallowed'] = false;
+
 $config['skylight_repository_version'] = 'exams';
 $config['skylight_homepage_recentitems'] = false;
 
