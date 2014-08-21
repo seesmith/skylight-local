@@ -11,7 +11,7 @@
 
     <link rel="stylesheet" href="<?php echo base_url(); ?>assets/jquery-ui-1.10.4/themes/base/minified/jquery-ui.min.css">
 
-    <base href="<?php echo base_url() . index_page(); if (index_page() !== '') { echo '/'; } echo $this->config->item('skylight_url_prefix'); echo '/' ?>">
+    <base href="<?php echo base_url() . index_page(); if (index_page() !== '') { echo '/'; } ?>">
 
     <!-- Place favicon.ico & apple-touch-icon.png in the root of your domain and delete these references -->
     <link rel="shortcut icon" href="<?php echo base_url(); ?>theme/<?php echo $this->config->item('skylight_theme'); ?>/images/favicon.ico">
@@ -63,6 +63,15 @@
 
 <body>
 
+<nav id="menu">
+    <ul class="menu-links">
+        <li><a href="./feedback/" title="Feedback Link" class="last">Feedback</a></li>
+        <li><a href="./help" title="Help Page">Help</a></li>
+        <li><a href="./about/" title="About Exam Papers Online">About</a></li>
+        <li><a href="./" title="Exam Papers Online Home">Home</a></li>
+    </ul>
+</nav>
+<div class="clearfix"></div>
 <div id="container">
 
     <header>
@@ -79,16 +88,16 @@
             <ul>
                 <li class="breadHome"><a href="http://www.ed.ac.uk.ezproxy.is.ed.ac.uk" title="University of Edinburgh Home">University Homepage</a></li>
                 <li>
-                    <a href="http://www.ed.ac.uk.ezproxy.is.ed.ac.uk/schools-departments" title="Schools and Departments">Schools &amp; departments</a>
+                    <a href="http://www.ed.ac.uk.ezproxy.is.ed.ac.uk/schools-departments" title="Schools and Departments">Schools &amp; Departments</a>
                 </li>
                 <li>
                    <a href="http://www.ed.ac.uk.ezproxy.is.ed.ac.uk/schools-departments/information-services" title="Information Services">Information Services</a>
                 </li>
                 <li>
-                    <a href="http://www.ed.ac.uk.ezproxy.is.ed.ac.uk/schools-departments/information-services/library-museum-gallery" title="Library Essentials">Library essentials</a>
+                    <a href="http://www.ed.ac.uk.ezproxy.is.ed.ac.uk/schools-departments/information-services/library-museum-gallery" title="Library Essentials">Library Essentials</a>
                 </li>
                 <li class="breadThis">
-                    <a href="">Exam papers online</a>
+                    <a href="">Exam Papers Online Home</a>
                 </li>
             </ul>
         </div>

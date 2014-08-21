@@ -1,13 +1,13 @@
 <?php
 
-// Uncomment this if you want to use urls of the form http://.../prefix/...
-$config['skylight_url_prefixes'] = array('physics', 'mimed', 'art', 'calendars', 'iog', 'exhibitions');
+// hostnames
+$config['skylight_hostnames'] = array('test.exampapers.ed.ac.uk', 'exampapers.ed.ac.uk', 'images.ph.ed.ac.uk', 'test.exampapers.ed.ac.uk', 'www.scottishgovernmentyearbooks.ed.ac.uk', 'test.scottishgovernmentyearbooks.ed.ac.uk', 'test.exhibitions.ed.ac.uk', 'exhibitions.ed.ac.uk');
 
-// Specific hostnames pointing at skylight
-$config['skylight_hostnames'] = array('test.exampapers.ed.ac.uk', 'exampapers.ed.ac.uk', 'images.ph.ed.ac.uk', 'test.exampapers.ed.ac.uk', 'www.scottishgovernmentyearbooks.ed.ac.uk', 'test.scottishgovernmentyearbooks.ed.ac.uk', 'exhibitions.ed.ac.uk', 'test.exhibitions.ed.ac.uk');
+// Uncomment this if you want to use urls of the form http://.../prefix/...
+$config['skylight_url_prefixes'] = array('mimed', 'art','calendars');
 
 // The URL of the parent solr server
-$config['skylight_solrbase'] = 'http://collectionsmanager.is.ed.ac.uk/solr/search/';
+$config['skylight_solrbase'] = 'http://collectionsinternal.is.ed.ac.uk:8080/solr/search/';
 
 //DSpace handle server prefix
 $config['skylight_handle_prefix'] = '10683';
@@ -31,7 +31,7 @@ $config['skylight_adminldap_context'] = "ou=users,dc=example,dc=com";
 $config['skylight_adminldap_allowed'] = array('id1', 'id2');
 
 // The OAI-PMH base for the parent server
-$config['skylight_oaipmhbase'] = 'http://collectionsmanager.is.ed.ac.uk/oai/request?';
+$config['skylight_oaipmhbase'] = 'https://collectionsmanager.is.ed.ac.uk/oai/request?';
 
 // The OAI-PMH identifier to replace in OAI-PMH responses
 $config['skylight_oaipmhid'] = 'oai:collectionsmanager.is.ed.ac.uk:10683/';
@@ -40,12 +40,18 @@ $config['skylight_oaipmhid'] = 'oai:collectionsmanager.is.ed.ac.uk:10683/';
 $config['skylight_oaipmhlink'] = 'http://hdl.handle.net/10683/';
 
 // The URL base for where digital objects can be proxied from
-$config['skylight_objectproxy_url'] = 'http://collectionsmanager.is.ed.ac.uk/bitstream/10683/';
+$config['skylight_objectproxy_url'] = 'http://collectionsinternal.is.ed.ac.uk:8080/bitstream/10683/';
 
+// Default OAI not permitted
+$config['skylight_oaipmhallowed'] = false;
 
 // Set to the number of minutes to cache pages for. Set to false for no caching.
 // This can be overridden in site-specific configuration files.
 $config['skylight_cache'] = false;
+
+// Keys required for the recapthca system
+// $config['skylight_recaptcha_key_public'] = 'ENTER-HERE';
+// $config['skylight_recaptcha_key_private'] = 'ENTER-HERE';
 
 // Digital object management
 $config['skylight_bitstream_field'] = 'dc.format.original';
@@ -60,12 +66,11 @@ $config['skylight_homepage_recentitems'] = true;
 // Dictionaries must be set up in your local solr configuration
 $config['skylight_solr_dictionary'] = 'default';
 
-
 /**
- * Debug / development options.
- *
- * We recommend that these are disabled (or commented out) for production systems
- */
+* Debug / development options.
+*
+* We recommend that these are disabled (or commented out) for production systems
+*/
 
 // Set to true to enable debugging / profiling information
 // $config['skylight_debug'] = false;

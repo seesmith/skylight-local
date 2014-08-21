@@ -1,12 +1,12 @@
 <div class="record">
 
-    <h2>University of Edinburgh Exam Papers Online: 2004-05 to 2012-13</h2>
+    <h2>University of Edinburgh Exam Papers Online: 2004-05 to 2013-14</h2>
     <p>
         Exam Papers Online is a service provided by Edinburgh
         University Library for students and staff of The University of Edinburgh.
     </p>
     <p>
-        The very latest papers added are from the 2012-13  diet. These
+        The very latest papers added are from the 2013-14  diet. These
         pages will be updated periodically, as more papers become available.
         If you cannot find the paper you are looking for, please email <a href="mailto:exam.papers@ed.ac.uk">exam.papers@ed.ac.uk</a>,
         or try visiting again at a later date.

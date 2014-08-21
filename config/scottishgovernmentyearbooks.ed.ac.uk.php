@@ -11,6 +11,7 @@ if (strpos($_SERVER['HTTP_HOST'], "test") !== false) {
 }
 else {
     $config['base_url'] = 'http://www.scottishgovernmentyearbooks.ed.ac.uk/';
+    $config['skylight_ga_code'] = 'UA-25737241-11';
 }
 
 $config['skylight_theme'] = 'iog';
@@ -19,12 +20,12 @@ $config['skylight_fullname'] = 'Scottish Government Yearbooks';
 
 $config['skylight_adminemail'] = 'lddt@mlist.is.ed.ac.uk';
 
-$config['skylight_oaipmhcollection'] = 'hdl_10683_22745';
+$config['skylight_oaipmhcollection'] = 'hdl_10683_4';
 
 $config['skylight_ga_code'] = 'UA-25737241-11';
 
 // Container ID and the field used in solr index to store this ID. Used for restricting search/browse scope.
-$config['skylight_container_id'] = '16';
+$config['skylight_container_id'] = '15';
 $config['skylight_container_field'] = 'location.coll';
 
 $config['skylight_fields'] = array('Title' => 'dc.title.en',

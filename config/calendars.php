@@ -15,6 +15,8 @@ $config['skylight_adminemail'] = 'lddt@mlist.is.ed.ac.uk';
 
 $config['skylight_oaipmhcollection'] = 'hdl_10683_21801';
 
+$config['skylight_oaipmhallowed'] = true;
+
 // Container ID and the field used in solr index to store this ID. Used for restricting search/browse scope.
 $config['skylight_container_id'] = '14';
 $config['skylight_container_field'] = 'location.coll';

@@ -3,9 +3,11 @@
 // set the base url
 if (strpos($_SERVER['HTTP_HOST'], "test") !== false) {
     $config['base_url'] = 'https://test.exampapers.ed.ac.uk/';
+    $config['skylight_ga_code'] = 'UA-25737241-6';
 }
 else {
     $config['base_url'] = 'https://exampapers.ed.ac.uk/';
+    $config['skylight_ga_code'] = 'UA-25737241-12';
 }
 
 $config['skylight_appname'] = 'exams';
@@ -15,13 +17,13 @@ $config['skylight_theme'] = 'exams';
 $config['skylight_fullname'] = 'exams';
 
 // Uncomment this if you are using a url of the form http://.../art/...
-$config['skylight_url_prefix'] = 'exams';
-
-$config['skylight_ga_code'] = 'UA-25737241-9';
+//$config['skylight_url_prefix'] = 'exams';
 
 $config['skylight_adminemail'] = 'exam.papers@ed.ac.uk';
 
 $config['skylight_oaipmhcollection'] = 'hdl_123456789_1';
+
+$config['skylight_oaipmhallowed'] = false;
 
 $config['skylight_repository_version'] = 'exams';
 $config['skylight_homepage_recentitems'] = false;
