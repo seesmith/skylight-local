@@ -98,8 +98,8 @@
             <header>
                <div id="collection-title">
                 <a href="http://www.ed.ac.uk" class="uoelogo" title="The University of Edinburgh Home" target="_blank"></a>
-                <a href="<?php echo base_url(); ?><?php echo $this->config->item('skylight_theme'); ?>" class="exlogo" title="University of Edinburgh Exhibitions Home"></a>
-                <a href="<?php echo base_url(); ?><?php echo $this->config->item('skylight_theme'); ?>" class="menulogo" title="University of Edinburgh Exhibitions Home"></a>
+                <a href="<?php echo base_url(); ?>" class="exlogo" title="University of Edinburgh Exhibitions Home"></a>
+                <a href="<?php echo base_url(); ?>" class="menulogo" title="University of Edinburgh Exhibitions Home"></a>
                </div>
                <div id="collection-search">
                 <form action="./redirect/" method="post">
