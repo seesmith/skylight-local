@@ -1,6 +1,6 @@
 <?php
 
-// set the base url
+// set the base url and ga code
 if (strpos($_SERVER['HTTP_HOST'], "test") !== false) {
     $config['base_url'] = 'https://test.exampapers.ed.ac.uk/';
     $config['skylight_ga_code'] = 'UA-25737241-6';
@@ -21,7 +21,7 @@ $config['skylight_fullname'] = 'exams';
 
 $config['skylight_adminemail'] = 'exam.papers@ed.ac.uk';
 
-$config['skylight_oaipmhcollection'] = 'hdl_123456789_1';
+$config['skylight_oaipmhcollection'] = 'hdl_10683_23251';
 
 $config['skylight_oaipmhallowed'] = false;
 
