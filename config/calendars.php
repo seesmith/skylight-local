@@ -33,7 +33,8 @@ $config['skylight_fields'] = array('Title' => 'dc.title.en',
     'Thumbnail'=> 'dc.format.thumbnail.en',
     'Description'=>'dc.description.en',
     'Format' => 'dc.format.en',
-    'Year'=> 'dc.date.issued'
+    'Year'=> 'dc.date.issued',
+    'Shelf Mark' => 'dc.identifier.other'
 );
 
 $config['skylight_related_fields'] = array('Title','Subject','Format','Creator');
@@ -48,14 +49,14 @@ $config['skylight_meta_fields'] = array('Title' => 'dc.title',
     'Type' => 'dc.type',
 );
 
-$config['skylight_recorddisplay'] = array('Title','Creator','Date','Format','Subject','Calendar Month','Description','Identifier');
+$config['skylight_recorddisplay'] = array('Title','Creator','Date','Format','Subject','Calendar Month','Description','Shelf Mark');
 
 $config['skylight_searchresult_display'] = array('Title','Subject','Type','Origin', 'Bitstream', 'Thumbnail');
 
 $config['skylight_search_fields'] = array(
     'Subject' => 'dc.subject',
     'Type' => 'dc.type',
-    'Creator' => 'dc.type',
+    'Creator' => 'dc.contributor.author',
 );
 
 $config['skylight_sort_fields'] = array('Title' => 'dc.title_sort',
