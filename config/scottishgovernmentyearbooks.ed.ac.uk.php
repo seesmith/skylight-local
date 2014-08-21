@@ -19,7 +19,7 @@ $config['skylight_fullname'] = 'Scottish Government Yearbooks';
 
 $config['skylight_adminemail'] = 'lddt@mlist.is.ed.ac.uk';
 
-$config['skylight_oaipmhcollection'] = 'hdl_10683_4';
+$config['skylight_oaipmhcollection'] = 'hdl_10683_22745';
 
 $config['skylight_ga_code'] = 'UA-25737241-11';
 
