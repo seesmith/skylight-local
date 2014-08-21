@@ -54,7 +54,7 @@ $config['skylight_searchresult_display'] = array('Title','Subject','Type','Origi
 $config['skylight_search_fields'] = array(
     'Subject' => 'dc.subject',
     'Type' => 'dc.type',
-    'Creator' => 'dc.type',
+    'Creator' => 'dc.contributor.author',
 );
 
 $config['skylight_sort_fields'] = array('Title' => 'dc.title_sort',
