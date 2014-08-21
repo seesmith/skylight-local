@@ -9,30 +9,30 @@
                <td class="indextd">
                 <table>
                     <tr class="indextr">
-                        <td class="indextd"><a href="./rashid" alt="Bit" title="Bit"><div id="tile-7" class="art-tile"></div></a></td>
+                        <td class="indextd"><a href="./record/23140" alt="The Negus of Abyssinia" title="The Negus of Abyssinia"><div id="tile-7" class="art-tile"></div></a></td>
                     </tr>
                     <tr class="indextr">
-                        <td class="indextd"><a href="./rashid.php" alt="Bit" title="More about the exhibition"><div id="tile-4" class="art-tile"></div></a></td>
+                        <td class="indextd"><a href="./record/23147" alt="Illumination Page" title="Illumination Page"><div id="tile-4" class="art-tile"></div></a></td>
                     </tr>
                     <tr>
-                        <td class="indextd"><a href="./rashid.php" alt="Bit" title="Bit"><div id="tile-5" class="art-tile"></div></a></td>
+                        <td class="indextd"><a href="./record/23145" alt="Sultan Muhammad ibn Malikshah" title="Sultan Muhammad ibn Malikshah"><div id="tile-5" class="art-tile"></div></a></td>
                     </tr>
                 </table>
                </td>
                   <td class="indextd">
                   <table>
                     <tr class="indextr">
-                        <td class="indextd"><a href="./rashid.php" alt="Bit" title="Bit"><div id="tile-2" class="art-tile"></div></a></td>
-                        <td class="indextd"><a href="./rashid.php" alt="Bit" title="More about the exhibition"><div id="tile-4" class="art-tile"></div></a></td>
-                        <td class="indextd"><a href="./rashid.php" alt="Bit" title="Bit"><div id="tile-8" class="art-tile"></div></a></td>
+                        <td class="indextd"><a href="./record/23136" alt="Qarun (Korah) and his tribe" title="Qarun (Korah) and his tribe"><div id="tile-2" class="art-tile"></div></a></td>
+                        <td class="indextd"><a href="./record/23147" alt="Illumination Page" title="Illumination Page"><div id="tile-4" class="art-tile"></div></a></td>
+                        <td class="indextd"><a href="./record/23143" alt="Mahmud ibn Sebuktegin- attack" title="Mahmud ibn Sebuktegin- attack"><div id="tile-8" class="art-tile"></div></a></td>
                     </tr>
                     <tr class="indextr">
                         <td  class="indextd" colspan ="3"><a href="./rashid" alt="Bit" title="More about the exhibition"><div id="tile-1" class="art-tile"></div></a></td>
                     </tr>
                     <tr class="indextr">
-                        <td class="indextd"><a href="./rashid.php" alt="Bit" title="Bit"><div id="tile-9" class="art-tile"></div></a></td>
-                        <td class="indextd"><a href="./rashid.php" alt="Bit" title="More about the exhibition"><div id="tile-4" class="art-tile"></div></a></td>
-                        <td class="indextd"><a href="./rashid.php" alt="Bit" title="Bit"><div id="tile-10" class="art-tile"></div></a></td>
+                        <td class="indextd"><a href="./record/23144" alt="Mahmud ibn Sebuktegin- Ganges" title="Mahmud ibn Sebuktegin- Ganges"><div id="tile-9" class="art-tile"></div></a></td>
+                        <td class="indextd"><a href="./record/23147" alt="Illumination Page" title="Illumination Page"><div id="tile-4" class="art-tile"></div></a></td>
+                        <td class="indextd"><a href="./record/23149" alt="Shah of Khwarazm" title="Shah of Khwarazm"><div id="tile-10" class="art-tile"></div></a></td>
                     </tr>
                 </table>
 
@@ -40,13 +40,13 @@
                   <td class="indextd">
                 <table>
                     <tr class="indextr">
-                        <td class="indextd"><a href="./rashid.php" alt="Bit" title="Bit"><div id="tile-3" class="art-tile"></div></a></td>
+                        <td class="indextd"><a href="./record/23141" alt="Fighting between Mahmud and Isma'il" title="Fighting between Mahmud and Isma'il"><div id="tile-3" class="art-tile"></div></a></td>
                     </tr>
                     <tr class="indextr">
-                        <td class="indextd"><a href="./rashid.php" alt="Bit" title="More about the exhibition"><div id="tile-4" class="art-tile"></div></a></td>
+                        <td class="indextd"><a href="./record/23147" alt="Illumination Page" title="Illumination Page"><div id="tile-4" class="art-tile"></div></a></td>
                     </tr>
                     <tr class="indextr">
-                        <td class="indextd"><a href="./rashid.php" alt="Bit" title="Bit"><div id="tile-6" class="art-tile"></div></a></td>
+                        <td class="indextd"><a href="./record/23146" alt="Sultan Berkyaruq ibn Malikshah" title="Sultan Berkyaruq ibn Malikshah"><div id="tile-6" class="art-tile"></div></a></td>
                     </tr>
                 </table>
                </td>

@@ -1,6 +1,6 @@
 <div class="content">
     <div class="content byEditor">
-        <a href ='search/*:*/Exhibition:"50+Years-din%7C%7C%7C50+years"'><h1>Fifty Years, Fifty Books</h1></a>
+        <a href ='search/*:*/Exhibition:"50+years+50+books%7C%7C%7C50+Years+50+Books"'><h1>Fifty Years, Fifty Books</h1></a>
         <div id="exhib-page-big-block">
             <div id="exhib-tile-5" class="art-tile"></div>
         </div>
