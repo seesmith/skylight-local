@@ -44,7 +44,7 @@
                 </a>
             </div>
             <div class="item">
-                <a href="https://www.exhibitions.ed.ac.uk">
+                <a href="https://exhibitions.ed.ac.uk">
                     <img src="<?php echo base_url(); ?>theme/<?php echo $this->config->item('skylight_theme'); ?>/images/exhibitionsslide.png" title="University of Edinburgh Exhibitions" alt="University of Edinburgh Exhibitions">
                     <div class="carousel-caption caption-exhibitions" onmouseover="this.style.background='#005784';this.style.color='#FFF'" onmouseout="this.style.background='#FFFFFF';this.style.color='#005784'">
                         University of Edinburgh Exhibitions
