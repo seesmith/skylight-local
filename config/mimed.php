@@ -79,6 +79,7 @@ $config['skylight_search_fields'] = array(
     'Type' => 'dc.type',
     'Maker' => 'dc.contributor.author',
     'Place Made' => 'dc.coverage.spatial',
+    'Accession Number' => 'dc.identifier.en'
 );
 
 //only by title, no date at the moment
