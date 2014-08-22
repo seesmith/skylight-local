@@ -13,17 +13,17 @@
         <div class="carousel-inner">
             <div class="item active">
                 <a href="<?php echo base_url(); ?>art">
-                <img src="<?php echo base_url(); ?>theme/<?php echo $this->config->item('skylight_theme'); ?>/images/artslide.png" title="Edinburgh University Art Collection" alt="Edinburgh University Art Collection">
+                <img src="<?php echo base_url(); ?>theme/<?php echo $this->config->item('skylight_theme'); ?>/images/artslide.png" title="University of Edinburgh Art Collection" alt="University of Edinburgh Art Collection">
                 <div class="carousel-caption caption-art" onmouseover="this.style.background='#005784';this.style.color='#FFF'" onmouseout="this.style.background='#FFFFFF';this.style.color='#005784'">
-                    Edinburgh University Art Collection
+                    University of Edinburgh Art Collection
                 </div>
                 </a>
             </div>
             <div class="item">
                 <a href="<?php echo base_url(); ?>mimed">
-                <img src="<?php echo base_url(); ?>theme/<?php echo $this->config->item('skylight_theme'); ?>/images/mimedslide.png" title="Edinburgh University Musical Instrument Museums" alt="Edinburgh University Musical Instrument Museums">
+                <img src="<?php echo base_url(); ?>theme/<?php echo $this->config->item('skylight_theme'); ?>/images/mimedslide.png" title="Musical Instrument Museums Edinburgh" alt="Musical Instrument Museums Edinburgh">
                 <div class="carousel-caption caption-mimed" onmouseover="this.style.background='#005784';this.style.color='#FFF'" onmouseout="this.style.background='#FFFFFF';this.style.color='#005784'">
-                    Edinburgh University Musical Instrument Museums
+                    Musical Instrument Museums Edinburgh
                 </div>
                 </a>
             </div>
@@ -37,9 +37,17 @@
             </div>
             <div class="item">
                 <a href="<?php echo base_url(); ?>calendars">
-                    <img src="<?php echo base_url(); ?>theme/<?php echo $this->config->item('skylight_theme'); ?>/images/calendarslide.png" title="Edinburgh University Calendars" alt="Edinburgh University Calendars">
+                    <img src="<?php echo base_url(); ?>theme/<?php echo $this->config->item('skylight_theme'); ?>/images/calendarslide.png" title="University of Edinburgh Calendars" alt="University of Edinburgh Calendars">
                     <div class="carousel-caption caption-calendars" onmouseover="this.style.background='#005784';this.style.color='#FFF'" onmouseout="this.style.background='#FFFFFF';this.style.color='#005784'">
-                        Edinburgh University Calendars
+                        University of Edinburgh Calendars
+                    </div>
+                </a>
+            </div>
+            <div class="item">
+                <a href="https://www.exhibitions.ed.ac.uk">
+                    <img src="<?php echo base_url(); ?>theme/<?php echo $this->config->item('skylight_theme'); ?>/images/exhibitionsslide.png" title="University of Edinburgh Exhibitions" alt="University of Edinburgh Exhibitions">
+                    <div class="carousel-caption caption-exhibitions" onmouseover="this.style.background='#005784';this.style.color='#FFF'" onmouseout="this.style.background='#FFFFFF';this.style.color='#005784'">
+                        University of Edinburgh Exhibitions
                     </div>
                 </a>
             </div>
@@ -76,7 +84,7 @@
                 </a>
             </li>
             <li class="tile">
-                <a href="http://www.ed.ac.uk/schools-departments/information-services/library-museum-gallery/crc/events" target="_blank" class="caption">
+                <a href="http://www.ed.ac.uk/schools-departments/information-services/library-museum-gallery/crc/events-exhibitions" target="_blank" class="caption">
                     <img src="<?php echo base_url(); ?>theme/<?php echo $this->config->item('skylight_theme'); ?>/images/pastexhibitionstile.jpg" alt="Edinburgh University Past Exhibitions Home" title="Edinburgh University Past Exhibitions Home">
                     <span onmouseover="this.style.background='#005784';this.style.color='#FFF'" onmouseout="this.style.background='#FFFFFF';this.style.color='#005784'">Past <br />Exhibitions</span>
                 </a>
