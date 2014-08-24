@@ -5,9 +5,10 @@ $config['skylight_appname'] = 'iog';
 // Uncomment this if you are using a url of the form http://.../art/...
 //$config['skylight_url_prefix'] = 'iog';
 
-// set the base url
+// set the base url and ga code
 if (strpos($_SERVER['HTTP_HOST'], "test") !== false) {
     $config['base_url'] = 'http://test.scottishgovernmentyearbooks.ed.ac.uk/';
+    $config['skylight_ga_code'] = 'UA-25737241-6';
 }
 else {
     $config['base_url'] = 'http://www.scottishgovernmentyearbooks.ed.ac.uk/';
@@ -20,9 +21,9 @@ $config['skylight_fullname'] = 'Scottish Government Yearbooks';
 
 $config['skylight_adminemail'] = 'lddt@mlist.is.ed.ac.uk';
 
-$config['skylight_oaipmhcollection'] = 'hdl_10683_4';
+$config['skylight_oaipmhcollection'] = 'hdl_10683_22746';
 
-$config['skylight_ga_code'] = 'UA-25737241-11';
+$config['skylight_oaipmhallowed'] = true;
 
 // Container ID and the field used in solr index to store this ID. Used for restricting search/browse scope.
 $config['skylight_container_id'] = '16';
