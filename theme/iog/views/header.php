@@ -8,11 +8,9 @@
     <meta charset="utf-8">
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 
-    <base href="<?php echo base_url() . index_page(); if (index_page() !== '') { echo '/'; } echo $this->config->item('skylight_url_prefix'); echo '/' ?>">
+        <base href="<?php echo base_url() . index_page(); if (index_page() !== '') { echo '/'; } ?>">
 
         <title><?php echo $page_title; ?></title>
-
-        <base href="<?php echo base_url() . index_page(); if (index_page() !== '') { echo '/'; } ?>">
 
         <!-- Always force latest IE rendering engine (even in intranet) & Chrome Frame
         Remove this if you use the .htaccess -->
