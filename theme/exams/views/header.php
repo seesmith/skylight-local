@@ -89,15 +89,15 @@
         <!-- Breadcrumbs -->
         <div id="breadTrail">
             <ul>
-                <li class="breadHome"><a href="http://www.ed.ac.uk.ezproxy.is.ed.ac.uk" title="University of Edinburgh Home">University Homepage</a></li>
+                <li class="breadHome"><a href="http://www.ed.ac.uk" title="University of Edinburgh Home">University Homepage</a></li>
                 <li>
-                    <a href="http://www.ed.ac.uk.ezproxy.is.ed.ac.uk/schools-departments" title="Schools and Departments">Schools &amp; Departments</a>
+                    <a href="http://www.ed.ac.uk/schools-departments" title="Schools and Departments">Schools &amp; Departments</a>
                 </li>
                 <li>
-                   <a href="http://www.ed.ac.uk.ezproxy.is.ed.ac.uk/schools-departments/information-services" title="Information Services">Information Services</a>
+                   <a href="http://www.ed.ac.uk/schools-departments/information-services" title="Information Services">Information Services</a>
                 </li>
                 <li>
-                    <a href="http://www.ed.ac.uk.ezproxy.is.ed.ac.uk/schools-departments/information-services/library-museum-gallery" title="Library Essentials">Library Essentials</a>
+                    <a href="http://www.ed.ac.uk/schools-departments/information-services/library-museum-gallery" title="Library Essentials">Library Essentials</a>
                 </li>
                 <li class="breadThis">
                     <a href="">Exam Papers Online Home</a>

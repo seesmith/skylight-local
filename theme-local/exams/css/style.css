@@ -166,6 +166,22 @@ header                  { position: relative; }
 
 /* end of my stuff */
 
+.homepage h4 {
+    margin-bottom: 10px;
+}
+
+.homepage h3 {
+    margin-bottom: 15px;
+}
+
+.info-box {
+    background-color: #def5fb;
+    border-radius: 10px;
+    float: left;
+    margin: 0;
+    padding: 12px;
+    width: 637px;
+}
 
 .logo                   { display: block; text-indent: -9999px; width: 259px; height: 109px; background: url(../images/skylight.png) no-repeat 0px 0px; position: absolute; top: 0; right: 0; }
 .ie7 .logo              { top: -40px; }
