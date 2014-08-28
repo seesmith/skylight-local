@@ -56,12 +56,12 @@ $bitstreamLinks = array();
             <tr>
                 <th>PDF Version</th>
                 <td>
-                    <?php if(isset($doc[$bitstream_field]) && $link_bitstream) {
+                    <?php if(isset($solr[$bitstream_field]) && $link_bitstream) {
 
-                        foreach($doc[$bitstream_field] as $bitstream) {
+                        foreach($solr[$bitstream_field] as $bitstream) {
 
                             $bitstreamLink = $this->skylight_utilities->getBitstreamURI($bitstream);
-                            echo '<a href="'.$bitstreamLink.'" class="downloadButton">Download Paper</a>';
+                            echo '<a href="'.$bitstreamLink.'">Download Paper</a>';
                         }
                     }
                     else { ?>
