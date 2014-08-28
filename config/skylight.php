@@ -31,7 +31,7 @@ $config['skylight_adminldap_context'] = "ou=users,dc=example,dc=com";
 $config['skylight_adminldap_allowed'] = array('id1', 'id2');
 
 // The OAI-PMH base for the parent server
-$config['skylight_oaipmhbase'] = 'https://collectionsmanager.is.ed.ac.uk/oai/request?';
+$config['skylight_oaipmhbase'] = 'http://collectionsinternal.is.ed.ac.uk:8080/oai/request?';
 
 // The OAI-PMH identifier to replace in OAI-PMH responses
 $config['skylight_oaipmhid'] = 'oai:collectionsmanager.is.ed.ac.uk:10683/';
@@ -84,6 +84,5 @@ $config['skylight_config_allowoverride'] = false;
 
 // Can themes be overridden by the user using ?theme={themename}
 $config['skylight_theme_allowoverride'] = false;
-
 
 ?>
