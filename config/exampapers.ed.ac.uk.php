@@ -65,6 +65,10 @@ $config['skylight_recorddisplay'] = array('School','Subject','Title','Course Cod
 // I suspect this one is redundant, they are currently hardcoded into search-results.php!
 //$config['skylight_searchresult_display'] = array('Title','Author','Subject','Type','Abstract');
 
+// Used for Related Items
+$config['skylight_related_fields'] = array('Title' => 'dc.title.en', 'Course Code' => 'dc.identifier.en');
+$config['skylight_related_number'] = 10;
+
 // This is used for Advanced Search which I have hidden for the Exam Papers
 $config['skylight_search_fields'] = array('School' => 'dc.creator',
     'Subject' => 'dc.subject',

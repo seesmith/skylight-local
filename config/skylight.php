@@ -1,7 +1,7 @@
 <?php
 
 // hostnames
-$config['skylight_hostnames'] = array('test.exampapers.ed.ac.uk', 'exampapers.ed.ac.uk', 'images.ph.ed.ac.uk', 'test.exampapers.ed.ac.uk', 'www.scottishgovernmentyearbooks.ed.ac.uk', 'test.scottishgovernmentyearbooks.ed.ac.uk', 'test.exhibitions.ed.ac.uk', 'exhibitions.ed.ac.uk');
+$config['skylight_hostnames'] = array('test.exampapers.ed.ac.uk', 'exampapers.ed.ac.uk', 'images.ph.ed.ac.uk', 'www.scottishgovernmentyearbooks.ed.ac.uk', 'test.scottishgovernmentyearbooks.ed.ac.uk', 'test.exhibitions.ed.ac.uk', 'exhibitions.ed.ac.uk');
 
 // Uncomment this if you want to use urls of the form http://.../prefix/...
 $config['skylight_url_prefixes'] = array('mimed', 'art','calendars');
@@ -66,6 +66,10 @@ $config['skylight_homepage_recentitems'] = true;
 // Dictionaries must be set up in your local solr configuration
 $config['skylight_solr_dictionary'] = 'default';
 
+// Used for Related Items
+$config['skylight_related_fields'] = array('Title' => 'dc.title.en', 'Subject' => 'dc.subject.en');
+$config['skylight_related_number'] = 10;
+
 /**
 * Debug / development options.
 *
@@ -80,5 +84,6 @@ $config['skylight_config_allowoverride'] = false;
 
 // Can themes be overridden by the user using ?theme={themename}
 $config['skylight_theme_allowoverride'] = false;
+
 
 ?>
