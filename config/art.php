@@ -79,6 +79,9 @@ $config['skylight_search_fields'] = array(
     'Accession Number'=> 'dc.identifier.en'
 );
 
+$config['skylight_related_fields'] = array('Artist' => 'dc.contributor.authorfull.en', 'Subject' => 'dc.subject.en');
+$config['skylight_related_number'] = 5;
+
 $config['skylight_sort_fields'] = array(
     'Artist' => 'dc.contributor.author_sort ', 'Title' => 'dc.title_sort'
 );

@@ -65,6 +65,8 @@ $config['skylight_search_fields'] = array(
     'Creator' => 'dc.contributor.author',
 );
 
+$config['skylight_related_fields'] = array('Subject' => 'dc.subject.en', 'Creator' => 'dc.contributor.author.en');
+
 $config['skylight_sort_fields'] = array('Title' => 'dc.title_sort',
     'Subject' => 'dc.subject_sort'
 );
