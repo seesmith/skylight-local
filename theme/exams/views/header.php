@@ -8,7 +8,7 @@
     <meta charset="utf-8">
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 
-    <base href="<?php echo base_url() . index_page(); if (index_page() !== '') { echo '/'; } ?>">
+    <base href="<?php echo base_url() . index_page(); if (index_page() !== '') { echo '/'; } echo $this->config->item('skylight_url_prefix'); echo '/' ?>">
 
     <title><?php echo $page_title; ?></title>
 
@@ -19,6 +19,12 @@
     <!-- Place favicon.ico & apple-touch-icon.png in the root of your domain and delete these references -->
     <link rel="shortcut icon" href="<?php echo base_url(); ?>theme/<?php echo $this->config->item('skylight_theme'); ?>/images/favicon.ico">
 
+    <!-- All JavaScript at the bottom, except for Modernizr which enables HTML5 elements & feature detects -->
+    <script src="<?php echo base_url()?>assets/modernizr/modernizr-1.7.min.js"></script>
+    <script src="<?php echo base_url()?>assets/jquery-1.11.0/jquery-1.11.0.min.js"></script>
+    <script src="<?php echo base_url()?>assets/jquery-ui-1.10.4/ui/minified/jquery-ui.min.js"></script>
+    <script src="<?php echo base_url()?>assets/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="http://www.google-analytics.com/analytics.js"></script>
 
     <?php if (isset($solr)) { ?><link rel="schema.DC" href="http://purl.org/dc/elements/1.1/" />
         <link rel="schema.DCTERMS" href="http://purl.org/dc/terms/" />
