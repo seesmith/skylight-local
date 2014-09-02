@@ -6,7 +6,7 @@
          $active_terms = array();
          ?>
 
-        <h4><a href="./browse/<?php echo $facet['name']; ?>"><?php echo "Browse by " . $facet['name'] ?></a></h4>
+        <h4><a href="./browse/<?php echo $facet['name']; ?>" title="Browse for exam papers by <?php  echo $facet['name']; ?>"><?php echo "Browse by " . $facet['name'] ?></a></h4>
 
         <?php if(preg_match('/Date/',$base_search) && $facet['name'] == 'Date') {
             $fpattern =  '#\/'.$facet['name'].'.*\]#';
@@ -17,7 +17,7 @@
         ?>
             <ul class="selected">
                 <li>
-                    Clear <?php echo $facet['name']; ?> filters <a class="deselect" href='<?php echo $fremove;?>'></a>
+                    Clear <?php echo $facet['name']; ?> filters <a class="deselect" href='<?php echo $fremove;?>' title="Clear <?php echo $facet['name']; ?> filters"></a>
                 </li>
             </ul>
         <?php }
@@ -45,7 +45,7 @@
                $pattern =  '#\/'.rawurlencode($facet['name']).':%22'.preg_quote($term['name'],-1).'%22#';
                $remove = preg_replace($pattern,'',$base_search, -1);
             ?>
-            <li><?php echo $term['display_name'];?> (<?php echo $term['count']; ?>) <a class="deselect" href='<?php echo $remove;?>'></a></li>
+            <li><?php echo $term['display_name'];?> (<?php echo $term['count']; ?>) <a class="deselect" href='<?php echo $remove;?>' title="Clear <?php echo $facet['name']; ?> filters"></a></li>
         <?php
             }
         ?> </ul> <?php
@@ -70,7 +70,7 @@
             if($term['count'] > 0) {
             ?>
             <li>
-                <a class="deselect" href='<?php echo $remove; ?>/<?php echo $facet['name']; ?>:<?php echo $term['name']; ?><?php if(isset($operator)) echo '?operator='.$operator; ?>'><?php echo $term['display_name'];?> (<?php echo $term['count']; ?>)
+                <a class="deselect"  title="Clear <?php echo $facet['name']; ?> filters" href='<?php echo $remove; ?>/<?php echo $facet['name']; ?>:<?php echo $term['name']; ?><?php if(isset($operator)) echo '?operator='.$operator; ?>'><?php echo $term['display_name'];?> (<?php echo $term['count']; ?>)
                 </a>
             </li>
             <?php

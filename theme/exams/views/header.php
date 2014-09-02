@@ -8,7 +8,7 @@
     <meta charset="utf-8">
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 
-    <base href="<?php echo base_url() . index_page(); if (index_page() !== '') { echo '/'; } ?>">
+    <base href="<?php echo base_url() . index_page(); if (index_page() !== '') { echo '/'; } if ($this->config->item('skylight_url_prefix') != "") { echo $this->config->item('skylight_url_prefix'); echo '/'; } ?>">
 
     <title><?php echo $page_title; ?></title>
 
@@ -74,10 +74,10 @@
 
 <nav id="menu">
     <ul class="menu-links">
-        <li><a href="./feedback/" title="Feedback Link" class="last">Feedback</a></li>
-        <li><a href="./help" title="Help Page">Help</a></li>
-        <li><a href="./about/" title="About Exam Papers Online">About</a></li>
-        <li><a href="./" title="Exam Papers Online Home">Home</a></li>
+        <li><a href="./feedback/" title="Feedback Link" class="last" tabindex="4">Feedback</a></li>
+        <li><a href="./help" title="Help Page" tabindex="3">Help</a></li>
+        <li><a href="./about/" title="About Exam Papers Online" tabindex="2">About</a></li>
+        <li><a href="./" title="Exam Papers Online Home" tabindex="1">Home</a></li>
     </ul>
 </nav>
 <div class="clearfix"></div>
@@ -89,7 +89,7 @@
             <a href="http://www.ed.ac.uk" title="University of Edinburgh Home" class="uofe-title"></a>
         </div>
         <div class="is-stuff">
-            <a href="/" title="Exam Papers Online" class="exams-banner"></a>
+            <a href="/" title="Exam Papers Online banner showing students studying for exams" class="exams-banner"></a>
         </div>
 
         <!-- Breadcrumbs -->
@@ -114,9 +114,9 @@
 
         <form action="./redirect/" method="post">
             <fieldset class="search">
-                <input type="text" name="q" value="<?php if (isset($searchbox_query)) echo urldecode($searchbox_query); ?>" id="q"  placeholder="Title / Subject / Course Code"//>
-                <input type="submit" name="submit_search" class="btn" value="Search" id="submit_search">
-                <a href="./search" class="advanced">Reset search</a>
+                <input type="text" name="q" value="<?php if (isset($searchbox_query)) echo urldecode($searchbox_query); ?>" id="q"  placeholder="Title / Subject / Course Code"  tabindex="5" />
+                <input type="button" name="submit_search" class="btn" value="Search" id="submit_search" title="Submit search">
+                <a href="./search" class="advanced" title="Reset search text">Reset search</a>
 
             </fieldset>
         </form>
