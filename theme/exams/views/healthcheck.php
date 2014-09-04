@@ -5,8 +5,14 @@
     $errorMessage = "";
 
     // check if we can get to solr
-
-    // check if we can display a bitstream
+    if($error_message !== "") {
+        $errors = true;
+        $errorMessage = "Unable to connect to solr.";
+    }
+    else if(!count($docs) > 0) {
+        $errors = true;
+        $errorMessage = "There are no items in this collection.";
+    }
 
     ?>
 
