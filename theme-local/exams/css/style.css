@@ -319,6 +319,8 @@ h1 .icon                            { top: -5px; left: -65px; }
 .pagination .prev:hover,
 .pagination .next:hover             { background: #def5fb url(../images/bg-arrows.png) no-repeat; }
 
+.curpage                            { color: #00548e; display: inline-block; padding: 0 5px; }
+
 .content                            { margin-top: 0px; }
 .content ul                         { margin: 0 0 18px 1.2em; }
 
