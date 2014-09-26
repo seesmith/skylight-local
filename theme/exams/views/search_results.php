@@ -85,7 +85,7 @@ else {
                             $lower_orig_filter = strtolower($the_title);
                             $lower_orig_filter = urlencode($lower_orig_filter);
 
-                            echo '<a href="./search/*:*/Title:%22'.$lower_orig_filter.'%7C%7C%7C'.$orig_filter.'%22">All '.$the_title.' Papers</a>';
+                            echo '<a href="./search/*:*/Title:%22'.$lower_orig_filter.'%7C%7C%7C'.$orig_filter.'%22">All papers for this course title</a>';
                             $num_titles++;
                             if($num_titles < sizeof($doc[$title_field])) {
                                 echo ' ';
@@ -93,6 +93,25 @@ else {
                         }
 
                         ?>
+                    <?php } ?>
+
+                    <?php if(array_key_exists($course_field,$doc)) { ?>
+
+                        <?php
+
+                        $num_courses = 0;
+                        foreach ($doc[$course_field] as $course) {
+
+                            echo '<a href="./search/'.strtoupper($course).'">'.strtoupper($course).'</a>';
+                            $num_courses++;
+                            if($num_courses < sizeof($doc[$course_field])) {
+                                echo ' ';
+                            }
+                        }
+
+
+                        ?>
+
                     <?php } ?>
 
 
