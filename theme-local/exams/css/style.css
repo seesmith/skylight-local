@@ -309,7 +309,7 @@ h1 .icon                            { top: -5px; left: -65px; }
 .small-icon.media-book              { background-position: 0px -60px; }
 
 .pagination                         { border-bottom: 1px solid #b8baba; border-top: 1px solid #b8baba; line-height: 33px; text-align: center; position: relative; font-size: 11px; font-weight: bold; }
-.pagination a                       { color: #666; text-decoration: none; display: inline-block; padding: 0 5px; }
+.pagination a                       { color: #999; text-decoration: none; display: inline-block; padding: 0 5px; }
 .pagination a.selected              { background: #e8e8e8; color: #333; }
 .pagination a:hover                 { color: #333; text-decoration: underline; }
 .pagination .prev,
@@ -318,6 +318,8 @@ h1 .icon                            { top: -5px; left: -65px; }
 .pagination .next                   { right: 0; padding: 0 25px 0 10px; background-position: 100% -33px !important; }
 .pagination .prev:hover,
 .pagination .next:hover             { background: #def5fb url(../images/bg-arrows.png) no-repeat; }
+
+.curpage                            { color: #00548e; display: inline-block; padding: 0 5px; }
 
 .content                            { margin-top: 0px; }
 .content ul                         { margin: 0 0 18px 1.2em; }
