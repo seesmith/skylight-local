@@ -162,7 +162,8 @@ header                  { position: relative; }
     text-decoration: none;
     background: url("../images/bg-arrows3.png") no-repeat scroll 100% 0px #def5fb;
 }
-.record-bitstreams      { display: block; width: 330px; margin: 5px 0; text-align: right; float: right; font-size: 13px;}
+.record-bitstreams          { display: block; width: 330px; margin: 5px 0; text-align: right; float: right; font-size: 13px;}
+.record-bitstreams a:hover  { color: #999; }
 
 /* end of my stuff */
 
@@ -269,6 +270,7 @@ footer                  { display: block; border-bottom: 1px solid #00548e; padd
 
 .listing li h3                      { display: inline-block; margin-bottom: 8px; }
 .listing li h3 a                    { text-decoration: none; }
+.listing li h3 a:hover              { text-decoration: underline; }
 
 
 .listing li .tags                   { margin: 0 0 8px 0; }
