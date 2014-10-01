@@ -24,7 +24,8 @@
     <script src="<?php echo base_url()?>assets/jquery-1.11.0/jquery-1.11.0.min.js"></script>
     <script src="<?php echo base_url()?>assets/jquery-ui-1.10.4/ui/minified/jquery-ui.min.js"></script>
     <script src="<?php echo base_url()?>assets/bootstrap/dist/js/bootstrap.min.js"></script>
-    <script src="http://www.google-analytics.com/analytics.js"></script>
+    <script src="<?php echo base_url()?>assets/jquery-1.11.0/jcarousel/jquery.jcarousel.min.js"></script>
+    <script src="https://www.google-analytics.com/analytics.js"></script>
 
     <?php if (isset($solr)) { ?><link rel="schema.DC" href="http://purl.org/dc/elements/1.1/" />
         <link rel="schema.DCTERMS" href="http://purl.org/dc/terms/" />
@@ -50,7 +51,12 @@
         $(function() {
            $( "#q" ).autocomplete({
                 source: "<?php echo base_url() . index_page(); if (index_page() !== '') { echo '/'; } ?>autocomplete",
-                minLength: 2
+                minLength: 2,
+                select: function(event, ui) {
+                   $("#q").val(ui.item.label);
+                   $("#searchForm").submit();
+               }
+
            });
         });
     </script>
@@ -112,10 +118,10 @@
         </div>
         <!-- end of Breadcrumbs -->
 
-        <form action="./redirect/" method="post">
+        <form action="./redirect/" method="post" id="searchForm">
             <fieldset class="search">
-                <input type="text" name="q" value="<?php if (isset($searchbox_query)) echo urldecode($searchbox_query); ?>" id="q"  placeholder="Title / Subject / Course Code"  tabindex="5" />
-                <input type="button" name="submit_search" class="btn" value="Search" id="submit_search" title="Submit search">
+                <input type="text" name="q" value="<?php if (isset($searchbox_query)) echo str_replace("+", " ", urldecode($searchbox_query)); ?>" id="q"  placeholder="Course Title / Course Code"  tabindex="5" />
+                <input type="submit" name="submit_search" class="btn" value="Search" id="submit_search" title="Submit search">
                 <a href="./search" class="advanced" title="Reset search text">Reset search</a>
 
             </fieldset>
