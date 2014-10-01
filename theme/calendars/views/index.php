@@ -127,6 +127,11 @@
             </a>
 
         </div>
+        <div class="digfoot">
+            <a href='http://www.ed.ac.uk/schools-departments/institute-academic-development/about-us/projects/digital-footprint' target='blank'>
+                <img alt="Digital Footprint" title="Digital Footprint" src="<?php echo base_url(); ?>theme/calendars/images/foundafoot.jpg">
+            </a>
+        </div>
         <div class="clearfix"></div>
 
     </div>
