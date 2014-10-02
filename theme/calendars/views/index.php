@@ -120,12 +120,17 @@
             Still largely unexplored, the David Laing collection is one of the most rich and complex collections of its kind.
             David Laing was the son of an Edinburgh bookseller and one of the greatest collectors of the culture and history
             of Scotland and the world. On his death in 1878, his extensive collection of manuscripts was bequeathed to the
-            University of Edinburgh. </div>
+            University of Edinburgh. Buy online at the University <a href="http://www.giftshop.ed.ac.uk/2015-Calendar.html" target="_blank" title="Gift Shop Link" >gift shop</a>.</div>
         <div class="signature">
             <a href='./laing'>
                 <img alt="David Laing Signature" title="David Laing Signature" src="<?php echo base_url(); ?>theme/calendars/images/DavidLaingSignature.jpg">
             </a>
 
+        </div>
+        <div class="digfoot">
+            <a href='http://www.ed.ac.uk/schools-departments/institute-academic-development/about-us/projects/digital-footprint' target='_blank'>
+                <img alt="Digital Footprint" title="Digital Footprint" src="<?php echo base_url(); ?>theme/calendars/images/foundafoot.jpg">
+            </a>
         </div>
         <div class="clearfix"></div>
 
