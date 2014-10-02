@@ -100,6 +100,8 @@
             his labours likewise demand the best combination of 21st century technology, skills and knowledge to make
             these treasures fully accessible at last.
         </p>
+        <p>The calendar is available to buy online at the University <a href="http://www.giftshop.ed.ac.uk/2015-Calendar.html" target="_blank" title="GiftShop Link" >gift shop</a>.
+        </p>
         <p>
             <h5>If you would like to talk to us about supporting the Laing Collection project, please contact:</h5>
             Development Officer<br/>
