@@ -10,7 +10,6 @@
         $type_field = $this->skylight_utilities->getField('Type');
         $bitstream_field = $this->skylight_utilities->getField('Bitstream');
         $thumbnail_field = $this->skylight_utilities->getField('Thumbnail');
-        $abstract_field = $this->skylight_utilities->getField('Abstract');
         $subject_field = $this->skylight_utilities->getField('Subject');
 
         $base_parameters = preg_replace("/[?&]sort_by=[_a-zA-Z+%20. ]+/","",$base_parameters);
@@ -107,25 +106,6 @@
                                 echo "...".$highlight."...".'<br/>';
                             }
                             ?></p><?php
-                        }
-                        else {
-                            if(array_key_exists($abstract_field, $doc)) {
-                                echo '<p>';
-                                $abstract =  $doc[$abstract_field][0];
-                                $abstract_words = explode(' ',$abstract);
-                                $shortened = '';
-                                $max = 40;
-                                $suffix = '...';
-                                if($max > sizeof($abstract_words)) {
-                                    $max = sizeof($abstract_words);
-                                    $suffix = '';
-                                }
-                                for ($i=0 ; $i<$max ; $i++){
-                                    $shortened .= $abstract_words[$i] . ' ';
-                                }
-                                echo $shortened.$suffix;
-                                echo '</p>';
-                            }
                         }
 
                         ?>
