@@ -229,12 +229,12 @@ footer                  { display: block; border-bottom: 1px solid #EB0955; padd
 
 .footer-links           { margin-top: 15px; margin-bottom: 15px; text-align: left;  border-top: 1px solid #EB0955; border-bottom: 1px solid #EB0955; width: 660px; height: 39px;}
 
-.site-links			    { display: block; padding-top: 10px; padding-bottom: 10px; width: 480px; float: left; height: 19px; }
+.site-links			    { display: block; padding-top: 10px; padding-bottom: 10px; width: 515px; float: left; height: 19px; }
 .site-links a 		    { font-size: 10px; text-transform: uppercase; color: #AAA79E  !important; text-decoration: none; font-weight: bold; border-right: 1px solid #e6e4d5; padding-right: 15px; margin-right: 10px; }
 .site-links a.last	    { border: none; }
 .site-links a:hover	    { text-decoration: underline; color: #c78c86; }
 
-.social-links           { display: block; float: right; padding: 3px;}
+.social-links           { display: block;  padding: 0; }
 
 .social-icons li                          { display: block; float: left; height: 33px; padding-left: 0; padding-right: 0; }
 .social-icons li a                        { display: block; margin: 0; width: 33px; height: 33px; line-height: 33px; padding: 0;}
@@ -351,11 +351,8 @@ table tr:last-child                 { border: 0; border-bottom: none; }
 .feedback_form label            { display: block; width: 100px;}
 #recaptcha_table                { width: 480px; }
 
-.laing a                { color: #EB0955; text-decoration: underline;}
-.laing a:hover          { color: #c78c86; }
 
 .info            { display: block; width: 440px; float: left; font-size: 14px;}
-.signature       { display: block; float: right; }
 
 
 /* <END> Site Css \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\ */
