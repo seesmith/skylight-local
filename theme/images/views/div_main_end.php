@@ -14,8 +14,8 @@
                 <div class="footer-policies">
                     <h3><a href="<?php echo base_url(); ?> "title="University Collections Home">University Collections</a></h3>
                     <p><a href="http://www.ed.ac.uk/about/website/privacy" title="Privacy and Cookies Link"  target="_blank">Privacy &amp; Cookies</a>
-                        &nbsp;&nbsp;<a href="./takedown" title="Takedown Policy Link">Takedown Policy</a>
-                        &nbsp;&nbsp;<a href="./licensing" title="Licensing and Copyright Link">Licensing &amp; Copyright</a>
+                        &nbsp;&nbsp;<a href="./<?php echo $this->config->item('skylight_theme'); ?>/takedown" title="Takedown Policy Link">Takedown Policy</a>
+                        &nbsp;&nbsp;<a href="./<?php echo $this->config->item('skylight_theme'); ?>/licensing" title="Licensing and Copyright Link">Licensing &amp; Copyright</a>
                         &nbsp;&nbsp;<a href="http://www.ed.ac.uk/about/website/accessibility" title="Website Accessibility Link" target="_blank">Accessibility</a></p>
                     <p>Unless explicitly stated otherwise, all material is copyright &copy; <?php echo date("Y"); ?> <a href="http://www.ed.ac.uk" title="University of Edinburgh Home" target="_blank">University of Edinburgh</a>.</p>
                 </div>
