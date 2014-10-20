@@ -251,7 +251,7 @@ footer                  { display: block; border-bottom: 1px solid #00325f ; pad
 
 
 #tile-block             { width: 660px; height: 500px; margin-bottom: 18px; }
-#past-exhib-block       { width: 660px; height: 250px; margin: auto; }
+#past-exhib-block       { width: 660px; height: 240px; margin: auto; }
 #exhib-page-little-block       { width: 660px; height: 100px; margin: auto; }
 #exhib-page-block       { width: 660px; height: 225px; margin: auto; }
 #exhib-page-big-block       { width: 660px; height: 480px; margin: auto; }
@@ -269,15 +269,17 @@ footer                  { display: block; border-bottom: 1px solid #00325f ; pad
 #tile-9                 { width: 195px; height: 90px; background: url(../images/0003512cbit.jpg) no-repeat 0px 0px; }
 #tile-10                { width: 195px; height: 90px; background: url(../images/0003602cbit.jpg) no-repeat 0px 0px; }
 #exhib-tile-1 { width: 660px; height: 110px; background: url(../images/logo_set.jpg) no-repeat 0px 0px; }
-#exhib-tile-2 { width: 200px; height: 110px; background: url(../images/50-years-banner-logo-narrow.jpg) no-repeat 0px 0px; margin: auto;}
-#exhib-tile-3 { width: 200px; height: 110px; background: url(../images/Collectedtitle.jpg) no-repeat 0px 0px; margin: auto;}
+#exhib-tile-2 { width: 160px; height: 110px; padding-bottom: 10px;background: url(../images/50-years-banner-logo-narrow.jpg) no-repeat 0px 0px; margin: auto;}
+#exhib-tile-3 { width: 160px; height: 110px; padding-bottom: 10px;background: url(../images/Collectedtitle.jpg) no-repeat 0px 10px; margin: auto;}
 #exhib-tile-4 { width: 660px; height: 212px; background: url(../images/Rashidblogbanner2-full.jpg) no-repeat 0px 0px; }
 #exhib-tile-5 { width: 660px; height: 480px; background: url(../images/50yearsbanner.jpg) no-repeat 0px 0px;margin: auto; }
 #exhib-tile-6 { width: 660px; height: 201px; background: url(../images/Collectedtitlebig.jpg) no-repeat 0px 0px; }
 #exhib-tile-7 { width: 153px; height: 70px; background: url(../images/sca.gif) no-repeat 0px 0px; }
 #exhib-tile-8 { width: 78px; height: 70px; background: url(../images/talbot.gif) no-repeat 0px 0px; }
-#exhib-tile-9 { width: 200px; height: 110px; background: url(../images/logo_set.gif) no-repeat 0px 0px; margin: auto; }
-
+#exhib-tile-9 { width: 160px; height: 110px; background: url(../images/logo_set.gif) no-repeat 20px 10px; margin: auto; }
+#exhib-tile-10 { width: 160px; height: 110px;  background: url(../images/cradle.jpeg) no-repeat 20px 0px; margin: auto; }
+#exhib-tile-11 { width: 660px; height: 190px; background: url(../images/Cradle1.jpg) no-repeat 0px 0px; margin: auto; }
+#exhib-tile-12 { width: 660px; height: 100px; background: url(../images/bg-icons.png) no-repeat 0px 0px; margin: auto; }
 /* Custom Containers & Subclasses ----------------------------------------------------------------------------------------*/
 
 .listing 							{ list-style-type: none; margin: 0; }
@@ -307,17 +309,17 @@ footer                  { display: block; border-bottom: 1px solid #00325f ; pad
 .listing-filter .sort em			{ padding-left: 10px; font-style: normal; }
 .search-thumbnail                   { max-width: 120px; max-height: 120px; }
 
-.icon 								{ display: block; width: 54px; height: 32px; background: url(../images/bg-icons.png) no-repeat 0px 0px; position: absolute; top: 0; left: -54px; background-position: -908px 0; }
+.icon 								{ display: inline-block; width: 40px; height: 32px; background: url(../images/bg-icons.png) no-repeat 0px 0px; top: 0; left: -54px; background-position: -908px 0; }
 h1 .icon							{ top: -5px; left: -65px; }
 .listing li .icon					{ top: 10px; }
 .listing li.first .icon				{ top: 30px; }
-.media-artwork{ background-position: 0 0; width: 32px; height: 22px; }
-.media-audiovisual-material, .media-filmorbroadcast, .media-movingimage, .media-video{ background-position: -72px 0; }
-.media-book-section, .media-book, .media-conference-proceedings, media-edited-book, .media-electronic-book{ background-position: -154px 0; }
+.media-artwork{ background-position: 0 0; width: 40px; height: 32px; }
+.media-audiovisual-material, .media-filmorbroadcast, .media-movingimage, .media-video{ background-position: -81px 0; }
+.media-book-section, .media-book, .media-conference-proceedings, media-edited-book, .media-electronic-book{ background-position: -163px 0; }
 .media-conference-paper, .media-electronic-article{ background-position: -232px 0; }
 .media-journal-article{ background-position: -318px 0; }
 .media-magazine-article, .media-newspaper-article, .media-newspaper{ background-position: -400px 0; }
-.media-online-multimedia, .media-web-page{ background-position: -480px 0; }
+.media-online-multimedia, .media-web-page{ background-position: -490px 0; width: 41px; height: 32px;}
 .media-presentation{ background-position: -564px 0; }
 .media-report{ background-position: -646px 0; }
 .media-serial{ background-position: -728px 0; }
@@ -369,7 +371,7 @@ table tr                            { border-bottom: 1px dotted #fcb814; }
 table tr:last-child                 { border: 0; border-bottom: none; }
 .indextr                   { border: 0; border-bottom: none; }
 .indextd  { border: 0; border-bottom: none; padding: 0;}
-.ex-front-td { border: 0; border-bottom: none; padding: 0; width: 220px; margin:auto; }
+.ex-front-td { border: 0; border-bottom: none; padding: 0; width: 220px; margin:auto;text-align:center; }
 
 
 .feedback_form                      { padding: 0 20px;}

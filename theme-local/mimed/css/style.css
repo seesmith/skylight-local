@@ -280,14 +280,14 @@ footer                  { display: block; border-bottom: 1px solid #093563; padd
 .listing-filter .sort strong            { color: #333; }
 .listing-filter .sort em                { padding-left: 10px; font-style: normal; }
 
-.icon                                   { display: block; width: 54px; height: 32px; background: url(../images/bg-icons.png) no-repeat 0px 0px; position: absolute; top: 0; left: -54px; background-position: -908px 0; }
+.icon 								{ display: inline-block; width: 54px; height: 32px; background: url(../images/bg-icons.png) no-repeat 0px 0px; top: 0; left: -54px; background-position: -908px 0; }
 h1 .icon                                { top: -5px; left: -65px; }
 .listing li .icon                       { top: 10px; }
 .listing li.first .icon                 { top: 30px; }
 .search-thumbnail                       { max-width: 120px; max-height: 120px; }
 
 
-.media-artwork{ background-position: 0 0; width: 32px; height: 22px; }
+.media-artwork{ background-position: 0 0; width: 40px; height: 30px; }
 .media-audiovisual-material, .media-filmorbroadcast, .media-movingimage, .media-video{ background-position: -72px 0; }
 .media-book-section, .media-book, .media-conference-proceedings, media-edited-book, .media-electronic-book{ background-position: -154px 0; }
 .media-conference-paper, .media-electronic-article{ background-position: -232px 0; }

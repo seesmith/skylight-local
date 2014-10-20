@@ -60,17 +60,22 @@
             <tr class="indextr">
                 <td class="ex-front-td">
                     <h3>50 Years, 50 Books</h3>
-                    <p>28th Mar - 14th Jun 2013</p>
+                    <p>28 Mar - 14 Jun 2013</p>
                     <a href="./50years" alt="50 Years, 50 Books" title="50 Years, 50 Books"><div id="exhib-tile-2" class="art-tile"></div></a>
                 </td>
                 <td class="ex-front-td">
                     <h3>Collect.ed </h3>
-                    <p>6th Dec 2013 - 1st Mar 2014</p>
+                    <p>6 Dec 2013 - 1 Mar 2014</p>
                     <a href="./collected" alt="Collect.ed" title="Collect.ed"><div id="exhib-tile-3" class="art-tile"></div></a>
                 </td>
                 <td class="ex-front-td">
+                    <h3>Cradle of Chemistry </h3>
+                    <p>1 Aug 2013 - 2 Nov 2013</p>
+                    <a href="./cradle" alt="Cradle of Chemistry" title="Cradle of Chemistry"><div id="exhib-tile-10" class="art-tile"></div></a>
+                </td>
+                <td class="ex-front-td">
                     <h3>Object Lessons</h3>
-                    <p>7th Jun - 19th Jul 2003</p>
+                    <p>7 Jun - 19 Jul 2003</p>
                     <a href="./objectlessons" alt="Object Lessons" title="Object Lessons"><div id="exhib-tile-9" class="art-tile"></div></a>
                 </td>
             </tr>
