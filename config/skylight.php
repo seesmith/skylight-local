@@ -4,10 +4,10 @@
 $config['skylight_hostnames'] = array('test.exampapers.ed.ac.uk', 'exampapers.ed.ac.uk', 'images.ph.ed.ac.uk', 'test.exampapers.ed.ac.uk', 'www.scottishgovernmentyearbooks.ed.ac.uk', 'test.scottishgovernmentyearbooks.ed.ac.uk', 'test.exhibitions.ed.ac.uk', 'exhibitions.ed.ac.uk');
 
 // Uncomment this if you want to use urls of the form http://.../prefix/...
-$config['skylight_url_prefixes'] = array('mimed', 'art','calendars');
+$config['skylight_url_prefixes'] = array('mimed', 'art','calendars', 'exhibitions', 'exhibitions.ed.ac.uk');
 
 // The URL of the parent solr server
-$config['skylight_solrbase'] = 'http://collectionsinternal.is.ed.ac.uk:8080/solr/search/';
+$config['skylight_solrbase'] = 'http://localhost:8081/solr/search/';
 
 //DSpace handle server prefix
 $config['skylight_handle_prefix'] = '10683';

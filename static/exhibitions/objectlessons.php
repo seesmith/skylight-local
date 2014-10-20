@@ -31,6 +31,24 @@
             The theme of Object Lessons is not just the history of collecting, it is also the way in which the whole approach to learning in many key areas in the history of Western thought has been shaped by the same processes of visual analysis and enquiry that have produced these collections. The exhibition also tells part of the story of the University itself, for it is especially in these areas of thought that it has played, and continues to play, a distinguished part. Visual skills have been central to this story, where art and science have often worked much more closely together than we might imagine. The themes into which the exhibition is divided have been chosen to illustrate how these continuities of thought link the past with the present and future.
         </p>
 
+
+        <h2>Resources</h2>
+        <h3> <a href = "http://images.is.ed.ac.uk/luna/servlet/UoEhal~2~2" target = "_blank" title = "High res images" alt = "High res images"><span class="icon media-artwork"></span>High resolution images</a> on the LUNA imaging platform.
+        </h3>
+        <h3><span class="icon media-web-page"></span>Exhibition Panoramas (require QuickTime plugin)</h3>
+        <ul>
+            <li><a href = "http://www.objectlessons.lib.ed.ac.uk/hi_res_panos/bodies.htm" target = "_blank" title = "Bodies, inside and out" alt = "Bodies, inside and out">Bodies, inside and out</a></li>
+            <li><a href = "http://www.objectlessons.lib.ed.ac.uk/hi_res_panos/main.htm" target = "_blank" title = "From bones to boards" alt = "From bones to boards">From bones to boards and housing knowledge</a></li>
+            <li><a href = "http://www.objectlessons.lib.ed.ac.uk/hi_res_panos/face.htm" target = "_blank" title = "The human face" alt = "The human face">The human face</a></li>
+            <li><a href = "http://www.objectlessons.lib.ed.ac.uk/hi_res_panos/sound.htm" target = "_blank" title = "Sound" alt = "Sound">Sound</a></li>
+            <li><a href = "http://www.objectlessons.lib.ed.ac.uk/hi_res_panos/figures1.htm" target = "_blank" title = "Figures in the landscape" alt = "Figures in the landscape">Figures in the landscape (1)</a></li>
+            <li><a href = "http://www.objectlessons.lib.ed.ac.uk/hi_res_panos/figures2.htm" target = "_blank" title = "Figures in the landscape" alt = "Figures in the landscape">Figures in the landscape (2)</a></li>
+            <li><a href = "http://www.objectlessons.lib.ed.ac.uk/hi_res_panos/barker.htm" target = "_blank" title = "Barker's Panorama" alt = "Barker's Panorama">Barker's Panorama</a></li>
+        </ul>
+
+
+        <h2>Further info</h2>
+
         <h3>Housing knowledge: 400 hundred years of collections</h3>
 
         <p>The history of the University's buildings vividly illustrates the importance its museums and collections have had as part of its identity and as an essential tool in teaching and research. In the seventeenth century the University already had a significant collection of portraits, hung in the library, and was starting to accumulate 'curiosities', a habit that has continued. Objects like George Buchanan's skull, Adam Ferguson's coffee pot, or the address to Sophia Jex-Blake from grateful women doctors, shown here with some of the earliest treasures of the library itself, add a special human quality to the whole story.
@@ -48,20 +66,6 @@
         <p>This direction of mathematical thought was also endorsed by the continuing loyalty of Edinburgh mathematicians to Euclid and so to geometry and to mathematics in visible form, rather than to abstract algebraic calculation. Perhaps this was the basis of the success of Scots as engineers. Indeed it has been argued that even James Clerk-Maxwell's advances in physics were in part shaped by this bias towards visible forms.
         </p>
         <p>In the 19th and 20th centuries the extension of mathematics outwards towards astronomy or inwards towards the most elementary structures of the physical world continued to throw up striking examples of visual analysis and record. Crum Brown devised what has become the standard convention for the representation of molecular structures using his wife's knitting needles. It is fitting therefore that photographs of the two monumental figures that Eduardo Paolozzi created for the Swann Building, home of molecular biology, should be included in this section. They embody both the idea of elementary structures, but also the common ground of art and science as we see it here in the visual imagination. There is more than just superficial similarity, but real symmetry between Napier's Bones at the beginning of this story and the early computer circuit.
-        </p>
-        <h2> Further Resources</h2>
-        <h3>Exhibition Panoramas (require QuickTime plugin)</h3>
-        <ul>
-            <li><a href = "http://www.objectlessons.lib.ed.ac.uk/hi_res_panos/bodies.htm" target = "_blank" title = "Bodies, inside and out" alt = "Bodies, inside and out">Bodies, inside and out</a></li>
-            <li><a href = "http://www.objectlessons.lib.ed.ac.uk/hi_res_panos/main.htm" target = "_blank" title = "From bones to boards" alt = "From bones to boards">From bones to boards and housing knowledge</a></li>
-            <li><a href = "http://www.objectlessons.lib.ed.ac.uk/hi_res_panos/face.htm" target = "_blank" title = "The human face" alt = "The human face">The human face</a></li>
-            <li><a href = "http://www.objectlessons.lib.ed.ac.uk/hi_res_panos/sound.htm" target = "_blank" title = "Sound" alt = "Sound">Sound</a></li>
-            <li><a href = "http://www.objectlessons.lib.ed.ac.uk/hi_res_panos/figures1.htm" target = "_blank" title = "Figures in the landscape" alt = "Figures in the landscape">Figures in the landscape (1)</a></li>
-            <li><a href = "http://www.objectlessons.lib.ed.ac.uk/hi_res_panos/figures2.htm" target = "_blank" title = "Figures in the landscape" alt = "Figures in the landscape">Figures in the landscape (2)</a></li>
-            <li><a href = "http://www.objectlessons.lib.ed.ac.uk/hi_res_panos/barker.htm" target = "_blank" title = "Barker's Panorama" alt = "Barker's Panorama">Barker's Panorama</a></li>
-        </ul>
-        <p>
-            <a href = "http://images.is.ed.ac.uk/luna/servlet/UoEhal~2~2" target = "_blank" title = "High res images" alt = "High res images">High resolution images</a> on the LUNA imaging platform.
         </p>
         <p><table><tr class = "indextr"><td class="indextd"><div id="exhib-tile-7" class="art-tile"></div></td><td class="indextd"><div id="exhib-tile-8" class="art-tile"></div></td></tr></table></p>
     </div>
