@@ -97,5 +97,5 @@ $bitstreamLinks = array();
 
     </div>
 
-
+<input type="button" value="Back to Search Results" class="backbtn" onClick="history.go(-1);">
 
