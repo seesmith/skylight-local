@@ -310,3 +310,5 @@ if(isset($solr[$bitstream_field]) && $link_bitstream) {
 
     echo '</div>';
     ?>
+
+    <input type="button" value="Back to Search Results" class="backbtn" onClick="history.go(-1);">

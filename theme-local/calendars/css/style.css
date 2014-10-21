@@ -121,11 +121,18 @@ input[type=text], input[type=password]                                {
     border: 1px solid #bbbbbc; font-size: 13px; height: 28px; padding: 0 10px;
     -webkit-border-radius: 5px; -moz-border-radius: 5px; border-radius: 5px;
 }
-input.btn                                                {
+input.btn                       {
     background: #872379; border: none; height: 28px; color: #fff; text-transform: uppercase; font-size: 14px; margin-left: 8px; font-weight: bold; padding: 0 18px;
     -webkit-border-radius: 5px; -moz-border-radius: 5px; border-radius: 5px; text-shadow: rgba(0,0,0,0.3) 0px -1px 0px;
 }
-input.btn:hover                                        { background: #c78c86; }
+input.btn:hover                 { background: #c78c86; }
+
+input.backbtn	                {
+    background: #872379; border: none; height: 24px; color: #fff; text-transform: uppercase; font-size: 12px; margin-left: 8px; font-weight: bold; padding: 0 10px;
+    margin-top: 10px; margin-bottom: 10px;
+    -webkit-border-radius: 5px; -moz-border-radius: 5px; border-radius: 5px; text-shadow: rgba(0,0,0,0.3) 0px -1px 0px;
+}
+input.backbtn:hover			    { color: #fff; background: #c78c86; }
 
 /* Site Css ///////////////////////////////////////////////////////////////////////////////////////////////////////////// */
 

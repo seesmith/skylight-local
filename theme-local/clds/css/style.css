@@ -132,6 +132,15 @@ input.btn						{
 }
 input.btn:hover					{ color: #fff; background: #005784; }
 
+input.backbtn						{
+    background: #FE2842; border: none; height: 24px; color: #fff; text-transform: uppercase; font-size: 12px; margin-left: 8px; font-weight: bold; padding: 0 10px;
+    margin-top: 10px; margin-bottom: 10px;
+    -webkit-border-radius: 5px; -moz-border-radius: 5px; border-radius: 5px; text-shadow: rgba(0,0,0,0.3) 0px -1px 0px;
+}
+input.backbtn:hover					{ color: #fff; background: #005784; }
+
+
+
 .searchform input.btn, .feedback_form input.btn { margin-bottom: 10px; }
 
 /* Site Css ///////////////////////////////////////////////////////////////////////////////////////////////////////////// */

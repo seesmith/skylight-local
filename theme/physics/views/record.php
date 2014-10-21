@@ -146,4 +146,4 @@ if(isset($solr[$type_field])) {
 <?php
 } ?>
 
-
+<input type="button" value="Back to Search Results" class="backbtn" onClick="history.go(-1);">
