@@ -127,7 +127,12 @@ input.btn						{
 }
 input.btn:hover					{ background: #71c53d; }
 
-
+input.backbtn				    {
+    background: #771301; border: none; height: 24px; color: #fff; text-transform: uppercase; font-size: 12px; margin-left: 8px; font-weight: bold; padding: 0 10px;
+    margin-top: 10px; margin-bottom: 10px;
+    -webkit-border-radius: 5px; -moz-border-radius: 5px; border-radius: 5px; text-shadow: rgba(0,0,0,0.3) 0px -1px 0px;
+}
+input.backbtn:hover				{ color: #fff; background: #71c53d; }
 
 /* Site Css ///////////////////////////////////////////////////////////////////////////////////////////////////////////// */
 

@@ -264,4 +264,6 @@ ksort($bitstream_array);
 
 }
 
-echo '</div>';
+echo '</div>'; ?>
+
+<input type="button" value="Back to Search Results" class="backbtn" onClick="history.go(-1);">

@@ -345,4 +345,10 @@ else if (isset($solr[$external_uri_field][0])) {
     } // end if there are bitstreams
 
     echo '</div>';
+
     ?>
+
+    <input type="button" value="Back to Search Results" class="backbtn" onClick="history.go(-1);">
+
+
+
