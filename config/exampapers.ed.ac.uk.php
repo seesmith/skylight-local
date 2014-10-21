@@ -31,6 +31,7 @@ $config['skylight_homepage_recentitems'] = false;
 // Container ID and the field used in solr index to store this ID. Used for restricting search/browse scope.
 $config['skylight_container_id'] = '10';
 $config['skylight_container_field'] = 'location.comm';
+$config['skylight_sitemap_type'] = 'external';
 
 // This array only appears to be used in Utilities to translate label to value and vice versa. Robin.
 $config['skylight_fields'] = array(

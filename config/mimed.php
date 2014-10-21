@@ -26,6 +26,7 @@ $config['skylight_oaipmhallowed'] = true;
 // Container ID and the field used in solr index to store this ID. Used for restricting search/browse scope.
 $config['skylight_container_id'] = '11';
 $config['skylight_container_field'] = 'location.coll';
+$config['skylight_sitemap_type'] = 'internal';
 
 $config['skylight_fields'] = array(
     'Title' => 'dc.title.en',
@@ -82,7 +83,7 @@ $config['skylight_search_fields'] = array(
     'Accession Number' => 'dc.identifier.en'
 );
 
-$config['skylight_related_fields'] = array('Instrument' => 'dc.type.en', 'Maker' => 'dc.contributor.author.en');
+$config['skylight_related_fields'] = array('Instrument' => 'dc.type.en', 'Maker' => 'dc.contributor.author.en', 'Title' => 'dc.title.en');
 
 //only by title, no date at the moment
 $config['skylight_sort_fields'] = array(
