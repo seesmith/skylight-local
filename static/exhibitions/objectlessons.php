@@ -33,9 +33,9 @@
 
 
         <h2>Resources</h2>
-        <h3> <a href = "http://images.is.ed.ac.uk/luna/servlet/UoEhal~2~2" target = "_blank" title = "High res images" alt = "High res images"><span class="icon media-artwork"></span>High resolution images</a> on the LUNA imaging platform.
+        <h3><a href = "http://images.is.ed.ac.uk/luna/servlet/UoEhal~2~2" target = "_blank" title = "High res images" alt = "High res images"><i class="fa fa-picture-o fa-lg">&nbsp;</i>High resolution images</a> on the LUNA imaging platform.
         </h3>
-        <h3><span class="icon media-web-page"></span>Exhibition Panoramas (require QuickTime plugin)</h3>
+        <h3><i class="fa fa-globe fa-lg">&nbsp;</i>Exhibition Panoramas (require QuickTime plugin)</h3>
         <ul>
             <li><a href = "http://www.objectlessons.lib.ed.ac.uk/hi_res_panos/bodies.htm" target = "_blank" title = "Bodies, inside and out" alt = "Bodies, inside and out">Bodies, inside and out</a></li>
             <li><a href = "http://www.objectlessons.lib.ed.ac.uk/hi_res_panos/main.htm" target = "_blank" title = "From bones to boards" alt = "From bones to boards">From bones to boards and housing knowledge</a></li>
