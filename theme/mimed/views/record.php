@@ -153,30 +153,6 @@ if(isset($solr[$bitstream_field]) && $link_bitstream) {
         <div id="full-metadata">
 
     <?php } ?>
-            <?php
-            $i = 1;
-            if (isset($solr[$link_uri_field])) {
-                foreach($solr[$link_uri_field] as $linkURI) {
-                    $linkURI = str_replace('"', '%22', $linkURI);
-                    $linkURI = str_replace('|', '%7C', $linkURI);
-
-                    if (strpos($linkURI,"images.is.ed.ac.uk") != false)
-                    {
-
-                        if ($i == 1)
-                        {
-                            $image_no = "";
-                        }
-                        else
-                        {
-                            $image_no = "(".$i.") ";
-                        }
-                        echo '<p class="collection-link"><a href="'. $linkURI . '" target="_blank"><span class="icon media-artwork"></span>Hi-Res Image '.$image_no.' (opens in new window)</a></p>';
-                        $i++;
-                    }
-
-                }
-            }?>
 
         <table>
             <tbody>
@@ -210,6 +186,34 @@ if(isset($solr[$bitstream_field]) && $link_bitstream) {
                 }
 
             } ?>
+            <?php
+            $i = 0;
+            $lunalink = false;
+            if (isset($solr[$link_uri_field])) {
+                foreach($solr[$link_uri_field] as $linkURI) {
+                    $linkURI = str_replace('"', '%22', $linkURI);
+                    $linkURI = str_replace('|', '%7C', $linkURI);
+
+                    if (strpos($linkURI,"images.is.ed.ac.uk") != false)
+                    {
+                        $lunalink = true;
+
+                        if($i == 0) {
+                            echo '<tr><th>Zoomable Image(s)</th><td>';
+                        }
+
+                        echo '<a href="'. $linkURI . '" target="_blank"><i class="fa fa-file-image-o fa-lg">&nbsp;</i></a>';
+
+                        $i++;
+                    }
+
+                }
+
+                if($lunalink) {
+                    echo '</td></tr>';
+                }
+            }?>
+
             </tbody>
         </table>
     </div>
