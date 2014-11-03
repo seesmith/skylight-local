@@ -19,29 +19,69 @@ else {
 
 $config['skylight_adminemail'] = 'lddt@mlist.is.ed.ac.uk';
 
-$config['skylight_oaipmhcollection'] = 'hdl_10683_';
+$config['skylight_oaipmhcollection'] = 'hdl_10683_47417';
 
 $config['skylight_oaipmhallowed'] = true;
 
 // Container ID and the field used in solr index to store this ID. Used for restricting search/browse scope.
-$config['skylight_container_id'] = '3';
-$config['skylight_container_field'] = 'location.coll';
+$config['skylight_container_id'] = '17';
+$config['skylight_container_field'] = 'location.comm';
 $config['skylight_sitemap_type'] = 'internal';
 
-$config['skylight_fields'] = array('Title' => 'dc.title.en',
-    'Subject' => 'dc.subject.en',
-    'Type' => 'dc.type.en',
-    'Date' => 'dc.coverage.temporal',
+$config['skylight_fields'] = array('Name' => 'dc.contributor.author.en',
+    'Title' => 'dc.title.en',
     'Bitstream'=> 'dc.format.original.en',
     'Thumbnail'=> 'dc.format.thumbnail.en',
     'Description'=>'dc.description.en',
     'Year'=> 'dc.date.issued',
+    'Birthplace' => 'dc.contributor.authorplace.en',
+    'Previous School Education' => 'dc.description.schoolprev.en',
+    'Matriculation Number' => 'dc.identifier.matric',
+    'Gender' => 'dc.contributor.authorgender.en',
+    'Age' => 'dc.contributor.authorage',
+    'Faculty' => 'dc.description.faculty.en',
+    'Nationality' => 'dc.contributor.authorcountry',
+    'First year of study'=>'dc.coverage.temporal.en',
+    'Collection'=>'dc.relation.ispartof.en',
+    'Date of award'=>'dc.coverage.temporalaward.en',
+    'Award'=>'dc.description.award.en',
+    'Source information'=>'dc.description.source.en',
+    'Notes'=>'dc.description.noqual.en',
+    'Previous medical education'=>'dc.description.medprev.en',
+    'Previous University education'=>'dc.description.univprev.en',
+    'Address'=>'dc.description.address.en',
+    'Thesis'=>'dc.description.thesis.en',
+    'Salutation'=>'dc.contributor.authortitle.en',
+    'Apprentice of Royal College of Surgeons'=>'dc.coverage.temporalarcs.en',
+    'Diplomate of Royal Colleg of Surgeons'=>'dc.coverage.temporaldrcs.en',
+    'Fellow of Royal College of Surgeons'=>'dc.coverage.temporalfrcs.en',
+    'Indian Medical Service'=>'dc.coverage.temporalims.en',
+    'MD (Edin)'=>'dc.coverage.temporalmdedin.en',
+    'British Navy'=>'dc.coverage.temporalnavy.en',
+    'Royal Army Medical Corps'=>'dc.coverage.temporalramc.en',
+    'Royal Medical Society'=>'dc.coverage.temporalrms.en',
+    'Span of study'=>'dc.coverage.temporalstudyspan.en',
+    'Year 2'=>'dc.coverage.temporalyear2.en',
+    'Year 3'=>'dc.coverage.temporalyear3.en',
+    'Year 4'=>'dc.coverage.temporalyear4.en',
+    'Year 5'=>'dc.coverage.temporalyear5.en',
+    'Year 6'=>'dc.coverage.temporalyear6.en',
+    'Year 7'=>'dc.coverage.temporalyear7.en',
+    'Date of enrolment'=>'dc.date.enrolled.en',
+    'Class'=>'dc.description.class.en',
+    'Additional information'=>'dc.description.other.en',
+    'Register no'=>'dc.identifier.register.en',
+    'Annals'=>'dc.relation.ispartofannals.en',
+    'Robb'=>'dc.relation.ispartofrobb.en',
+    'Watt'=>'dc.relation.ispartofwatt.en',
+    'Destination after study'=>'dc.coverage.spatial.en',
+
 );
 
-$config['skylight_related_fields'] = array('Title','Subject');
+$config['skylight_related_fields'] = array('Title');
 
 $config['skylight_date_filters'] = array('Date' => 'dateIssued.year_sort');
-$config['skylight_filters'] = array('Subject' => 'subject_filter');
+$config['skylight_filters'] = array('Collection' => 'collection_filter');
 
 $config['skylight_filter_delimiter'] = ':';
 
@@ -50,7 +90,42 @@ $config['skylight_meta_fields'] = array('Title' => 'dc.title',
     'Type' => 'dc.type',
 );
 
-$config['skylight_recorddisplay'] = array('Title','Date','Subject','Description');
+$config['skylight_recorddisplay'] = array('Title','Date','Subject','Description', 'Birthplace','Previous School Education', 'Matriculation Number', 'Gender', 'Age', 'Faculty',
+    'Nationality',
+    'First year of study',
+    'Collection',
+    'Date of award',
+    'Award',
+    'Source information',
+    'Notes',
+    'Previous medical education',
+    'Previous University education',
+    'Address',
+    'Thesis',
+    'Salutation',
+    'Apprentice of Royal College of Surgeons',
+    'Diplomate of Royal Colleg of Surgeons',
+    'Fellow of Royal College of Surgeons',
+    'Indian Medical Service',
+    'MD (Edin)',
+    'British Navy',
+    'Royal Army Medical Corps',
+    'Royal Medical Society',
+    'Span of study',
+    'Year 2',
+    'Year 3',
+    'Year 4',
+    'Year 5',
+    'Year 6',
+    'Year 7',
+    'Date of enrolment',
+    'Class',
+    'Additional information',
+    'Register no',
+    'Annals',
+    'Robb',
+    'Watt',
+    'Destination after study',);
 
 $config['skylight_searchresult_display'] = array('Title','Subject','Type','Bitstream', 'Thumbnail');
 
@@ -62,8 +137,7 @@ $config['skylight_search_fields'] = array(
 $config['skylight_related_fields'] = array('Subject' => 'dc.subject.en', 'Title' => 'dc.title.en');
 $config['skylight_related_number'] = 10;
 
-$config['skylight_sort_fields'] = array('Title' => 'dc.title_sort',
-    'Subject' => 'dc.subject_sort'
+$config['skylight_sort_fields'] = array('Title' => 'dc.title_sort'
 );
 
 $config['skylight_feed_fields'] = array('Title' => 'Title',
