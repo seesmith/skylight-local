@@ -57,6 +57,7 @@ $config['skylight_fields'] = array(
     'Genus' => 'dc.type.genus',
     'Provenance' => 'dc.provenance.en',
     'Decorations' => 'dc.description.decoration.en',
+    'Link' => 'dc.identifier.uri'
 );
 
 
