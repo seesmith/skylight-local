@@ -1,4 +1,3 @@
-
 <div class="content">
     <div class="content byEditor">
         <a href = 'search/*:*/Exhibition:"edinburgh+300+cradle+of+chemistry%7C%7C%7CEdinburgh+300+Cradle+of+Chemistry"'><h1>Edinburgh 300: Cradle of Chemistry</h1></a>
@@ -13,10 +12,5 @@
         <p>
             Highlights will include Joseph Black's balance (Black was the first to employ the analytical balance in chemical investigations) and Alexander Crum Brown's first model of sodium chloride, made with knitting needles and balls of wool! The exhibition will be opened by a VIP guest, to be announced.
         </p>
-    </div>
-    <div class="digfoot">
-        <a href='http://www.ed.ac.uk/schools-departments/institute-academic-development/about-us/projects/digital-footprint' target='_blank'>
-            <img alt="Digital Footprint" title="Digital Footprint" src="<?php echo base_url(); ?>theme/exhibitions/images/foundafoot.jpg">
-        </a>
     </div>
 </div>

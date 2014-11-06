@@ -4,7 +4,7 @@ $type_field = $this->skylight_utilities->getField("Type");
 $bitstream_field = $this->skylight_utilities->getField("Bitstream");
 $thumbnail_field = $this->skylight_utilities->getField("Thumbnail");
 $subject_field = $this->skylight_utilities->getField("Subject");
-$uri_field = $this->skylight_utilities->getField("Link");
+$link_uri_field = $this->skylight_utilities->getField("Link");
 $filters = array_keys($this->config->item("skylight_filters"));
 
 $type = 'Unknown';
@@ -260,35 +260,37 @@ if(isset($solr[$type_field])) {
             }
 
         }
-
-        if(isset($solr[$uri_field])) {
-
-            foreach($solr[$uri_field] as $uri) {
-                $find   = 'http://hdl.handle.net';
-                $findLuna = 'http://images.is.ed.ac.uk';
-                $pos = strpos($uri, $find);
-
-                if ($pos === false)
-                {
-                    echo '<tr><th>Link</th><td>';
-                    $Lunapos = strpos($uri, $findLuna);
-
-                    if ($Lunapos !== false)
-                    {
-
-                        echo '<a href="'.$uri.'" title="Link to High resolution version of image" target="_blank">High resolution version of photo</a>';
-                    }
-                    else{
-                        echo '<a href="'.$uri.'" title="Link to '.$uri.'" target="_blank">'.$uri.'</a>';
-                    }
-                    if($index < sizeof($solr[$uri_field]) - 1) {
-                        echo '<br />';
-                    }
-                    echo '</td></tr>';
-                }
-            }
-        }
         ?>
+
+        <?php
+        $i = 0;
+        $lunalink = false;
+        if (isset($solr[$link_uri_field])) {
+            foreach($solr[$link_uri_field] as $linkURI) {
+                $linkURI = str_replace('"', '%22', $linkURI);
+                $linkURI = str_replace('|', '%7C', $linkURI);
+
+                if (strpos($linkURI,"images.is.ed.ac.uk") != false)
+                {
+                    $lunalink = true;
+
+                    if($i == 0) {
+                        echo '<tr><th>Zoomable Image</th><td>';
+                    }
+
+                    echo '<a href="'. $linkURI . '" target="_blank"><i class="fa fa-file-image-o fa-lg">&nbsp;</i></a>';
+
+                    $i++;
+                }
+
+            }
+
+            if($lunalink) {
+                echo '</td></tr>';
+            }
+        }?>
+
+
         </tbody>
     </table>
 

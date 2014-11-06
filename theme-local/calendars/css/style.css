@@ -149,7 +149,7 @@ header                          { position: relative; }
 .uoelogo                        { display: block; width: 119px; height: 88px; float: left; background: url(../images/UoELogo.gif) no-repeat 0px 0px;}
 .logo                           { display: block; width: 421px; height: 88px; float: left; background: url(../images/CalendarsLogo.gif) no-repeat 0px 0px;}
 .logo:hover                     { display: block; background: url(../images/CalendarsLogo.gif) no-repeat 0px -88px; }
-.menulogo                       { display: block; width: 240px; height: 104px; position: absolute; top: 49px; right: 0px; background: url(../images/menulogo.gif) no-repeat 0px 0px;}
+.menulogo                       { display: block; width: 240px; height: 104px; position: absolute; top: 34px; right: 0px; background: url(../images/menulogo.gif) no-repeat 0px 0px;}
 .ie7 .menulogo 		            { top: -40px; }
 
 #collection-search              { width: 660px; padding-top: 20px;}
@@ -349,7 +349,7 @@ h1 .icon                                { top: -5px; left: -65px; }
 
 table td,
 table th							{ padding: 8px 17px; text-align: left; color: #872379; }
-table th                            { border-right: 1px dashed #D6D3C4; width: 20%; }
+table th                            { border-right: 1px dashed #D6D3C4; width: 21%; }
 table td                            { width: auto; color: #222222;}
 table tr                            { border-bottom: 1px dashed #D6D3C4; }
 table tr:last-child                 { border: 0; border-bottom: none; }
@@ -362,7 +362,7 @@ table tr:last-child                 { border: 0; border-bottom: none; }
 .laing a:hover          { color: #c78c86; }
 
 .digfoot                { display: block; width: 120px; float: right; }
-.info                   { display: block; width: 320px; float: left; font-size: 14px;}
+.info                   { display: block; width: 442px; float: left; font-size: 14px;}
 .signature              { display: block; float: left; }
 
 
