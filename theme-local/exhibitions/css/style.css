@@ -154,7 +154,7 @@ header				{ position: relative; width: 940px;}
 .uoelogo            { display: block; width: 119px; height: 88px; float: left; background: url(../images/UoELogo.gif) no-repeat 0px 0px;}
 .exlogo             { display: block; width: 421px; height: 88px; float: left; background: url(../images/exhibitionsheader.gif) no-repeat 0px 0px;}
 .exlogo:hover       { display: block; background: url(../images/exhibitionsheader.gif) no-repeat 0px -88px; }
-.menulogo           { display: block; width: 240px; height: 107px; position: absolute; top: 28px; right: 0px; background: url(../images/rashid.jpg) no-repeat 0px 0px;}
+.menulogo           { display: block; width: 240px; height: 107px; position: absolute; top: 28px; right: 0px; background: url(../images/ceramicsmenutop.jpg) no-repeat 0px 0px;}
 .ie7 .menulogo 		{ top: -40px; }
 
 #collection-search  { width: 660px; padding-top: 20px;}
@@ -243,49 +243,41 @@ footer                  { display: block; border-bottom: 1px solid #00325f ; pad
 .social-icons li a.flickr-icon:hover   { display: block; background: url(../images/flickricon2.gif) no-repeat 0px 0px; }
 
 
-.footer-disclaimer      { display: block; width: 95%; margin: auto; }
-.footer-logo            { display: block; float: left; }
-.is-logo                { display: block; float: left; padding-left: 10px; }
-.luclogo                { display: block; width: 64px; height: 64px; background: url(../images/L&UCLogo.gif) no-repeat 0px 0px; }
-.islogo                 { display: block; float: left; width: 50px; height: 64px; background: url(../images/islogo.gif) no-repeat 0px 0px; }
+.footer-disclaimer          { display: block; width: 95%; margin: auto; }
+.footer-logo                { display: block; float: left; }
+.is-logo                    { display: block; float: left; padding-left: 10px; }
+.luclogo                    { display: block; width: 64px; height: 64px; background: url(../images/L&UCLogo.gif) no-repeat 0px 0px; }
+.islogo                     { display: block; float: left; width: 50px; height: 64px; background: url(../images/islogo.gif) no-repeat 0px 0px; }
 
-.footer-policies        { display: block; float: left; padding-left: 10px; }
-.footer-policies p      { font-size: 12px; margin-bottom: 5px; color: #555555}
+.footer-policies            { display: block; float: left; padding-left: 10px; }
+.footer-policies p          { font-size: 12px; margin-bottom: 5px; color: #555555}
 
-.footer-policies a           { text-decoration: none;}
-.footer-policies a:hover     { text-decoration: underline;}
+.footer-policies a          { text-decoration: none;}
+.footer-policies a:hover    { text-decoration: underline;}
 
 
-#tile-block             { width: 660px; height: 500px; margin-bottom: 18px; }
-#past-exhib-block       { width: 660px; height: 240px; margin: auto; }
-#exhib-page-little-block       { width: 660px; height: 100px; margin: auto; }
-#exhib-page-block       { width: 660px; height: 225px; margin: auto; }
+#tile-block                 { width: 660px; height: 500px; margin-bottom: 18px; }
+#past-exhib-block           { width: 660px; height: 240px; margin: auto; }
+#exhib-page-little-block    { width: 660px; height: 100px; margin: auto; }
+#exhib-page-block           { width: 660px; height: 225px; margin: auto; }
 #exhib-page-big-block       { width: 660px; height: 480px; margin: auto; }
-#tile-block a           { padding: 0; margin: 0; }
-.art-tile               { float: left; display: block;}
+#tile-block a               { padding: 0; margin: 0; }
+.art-tile                   { float: left; display: block;}
 
-#tile-1                 { width: 480px; height: 300px; background: url(../images/Rashidblogbanner2.jpg) no-repeat 0px 0px; }
-#tile-2                 { width: 195px; height: 90px; background: url(../images/0003467cbit.jpg) no-repeat 0px 0px; }
-#tile-3                 { width: 90px; height: 195px; background: url(../images/0003503cbit.jpg) no-repeat 0px 0px; }
-#tile-4                 { width: 90px; height: 90px; background: url(../images/0003529cbit.jpg) no-repeat 0px 0px; }
-#tile-5                 { width: 90px; height: 195px; background: url(../images/0003523cbit.jpg) no-repeat 0px 0px; }
-#tile-6                 { width: 90px; height: 195px; background: url(../images/0003524cbit.jpg) no-repeat 0px 0px; }
-#tile-7                 { width: 90px; height: 195px; background: url(../images/0003489cbit.jpg) no-repeat 0px 0px; }
-#tile-8                 { width: 195px; height: 90px; background: url(../images/0003510cbit.jpg) no-repeat 0px 0px; }
-#tile-9                 { width: 195px; height: 90px; background: url(../images/0003512cbit.jpg) no-repeat 0px 0px; }
-#tile-10                { width: 195px; height: 90px; background: url(../images/0003602cbit.jpg) no-repeat 0px 0px; }
-#exhib-tile-1 { width: 660px; height: 110px; background: url(../images/logo_set.jpg) no-repeat 0px 0px; }
-#exhib-tile-2 { width: 160px; height: 110px; padding-bottom: 10px;background: url(../images/50-years-banner-logo-narrow.jpg) no-repeat 0px 0px; margin: auto;}
-#exhib-tile-3 { width: 160px; height: 110px; padding-bottom: 10px;background: url(../images/Collectedtitle.jpg) no-repeat 0px 10px; margin: auto;}
-#exhib-tile-4 { width: 660px; height: 212px; background: url(../images/Rashidblogbanner2-full.jpg) no-repeat 0px 0px; }
-#exhib-tile-5 { width: 660px; height: 480px; background: url(../images/50yearsbanner.jpg) no-repeat 0px 0px;margin: auto; }
-#exhib-tile-6 { width: 660px; height: 201px; background: url(../images/Collectedtitlebig.jpg) no-repeat 0px 0px; }
-#exhib-tile-7 { width: 153px; height: 70px; background: url(../images/sca.gif) no-repeat 0px 0px; }
-#exhib-tile-8 { width: 78px; height: 70px; background: url(../images/talbot.gif) no-repeat 0px 0px; }
-#exhib-tile-9 { width: 160px; height: 110px; background: url(../images/logo_set.gif) no-repeat 20px 10px; margin: auto; }
-#exhib-tile-10 { width: 160px; height: 110px;  background: url(../images/cradle.jpeg) no-repeat 20px 0px; margin: auto; }
-#exhib-tile-11 { width: 660px; height: 190px; background: url(../images/Cradle1.jpg) no-repeat 0px 0px; margin: auto; }
-#exhib-tile-12 { width: 660px; height: 100px; background: url(../images/bg-icons.png) no-repeat 0px 0px; margin: auto; }
+/* for the past exhibitions section on the home page*/
+#exhib-tile-1               { width: 160px; height: 110px; background: url(../images/rashid-sml.jpg) no-repeat 0px 0px; }
+#exhib-tile-2               { width: 160px; height: 110px; padding-bottom: 10px;background: url(../images/50-years-banner-logo-narrow.jpg) no-repeat 0px 0px; margin: auto;}
+#exhib-tile-3               { width: 160px; height: 110px; padding-bottom: 10px;background: url(../images/Collectedtitle.jpg) no-repeat 0px 10px; margin: auto;}
+#exhib-tile-4               { width: 160px; height: 110px;  background: url(../images/cradle.jpg) no-repeat 20px 0px; margin: auto; }
+
+/* for about pages*/
+
+#object-banner              { width: 660px; height: 110px; background: url(../images/logo_set.jpg) no-repeat 0px 0px; }
+#rashid-banner              { width: 660px; height: 212px; background: url(../images/Rashidblogbanner2-full.jpg) no-repeat 0px 0px; }
+#years-banner               { width: 660px; height: 480px; background: url(../images/50yearsbanner.jpg) no-repeat 0px 0px;margin: auto; }
+#collected-banner           { width: 660px; height: 201px; background: url(../images/Collectedtitlebig.jpg) no-repeat 0px 0px; }
+#cradle-banner              { width: 660px; height: 190px; background: url(../images/Cradle1.jpg) no-repeat 0px 0px; margin: auto; }
+
 /* Custom Containers & Subclasses ----------------------------------------------------------------------------------------*/
 
 .listing 							{ list-style-type: none; margin: 0; }

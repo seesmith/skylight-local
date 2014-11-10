@@ -2,7 +2,7 @@
     <div class="content byEditor">
         <a href = 'search/*:*/Exhibition:"edinburgh+300+cradle+of+chemistry%7C%7C%7CEdinburgh+300+Cradle+of+Chemistry"'><h1>Edinburgh 300: Cradle of Chemistry</h1></a>
         <div id="exhib-page-block">
-            <div id="exhib-tile-11" class="art-tile"></div>
+            <div id="cradle-banner" class="art-tile"></div>
         </div>
         <h2>About the Exhibition</h2>
         <h3>Opening: 1st August 2013 | Where: Exhibition Gallery, Main Library, George Square | Closing: 2nd November 2014 | Curated by: Emma Smith</h3>

@@ -2,7 +2,7 @@
     <div class="content byEditor">
         <a href ='search/*:*/Exhibition:"object+lessons%7C%7C%7CObject+Lessons"'><h1>Object Lessons</h1></a>
         <div id="exhib-page-little-block">
-            <div id="exhib-tile-1" class="art-tile"></div>
+            <div id="object-banner" class="art-tile"></div>
         </div>
         <h2>About The Exhibition</h2>
         <h3>Opening: 7th June 2003 | Where: Talbot Rice Gallery | Closing: 19th July 2003 | Curated by: Duncan Macmillan</h3>

@@ -2,7 +2,7 @@
     <div class="content byEditor">
         <a href='search/*:*/Exhibition:"collect.ed%7C%7C%7CCollect.ed"'><h1>Collect.ed</h1></a>
         <div id="exhib-page-block">
-            <div id="exhib-tile-6" class="art-tile"></div>
+            <div id="collected-banner" class="art-tile"></div>
         </div>
         <h2>About the Exhibition</h2>
         <h3>Opening: 6th December 2013 | Where: Exhibition Gallery, Main Library, George Square | Closing: 1st March 2014 | Curated by: Emma Smith</h3>
