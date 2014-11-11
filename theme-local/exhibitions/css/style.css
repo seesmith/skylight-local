@@ -256,13 +256,13 @@ footer                  { display: block; border-bottom: 1px solid #00325f ; pad
 .footer-policies a:hover    { text-decoration: underline;}
 
 
-#tile-block                 { width: 660px; height: 500px; margin-bottom: 18px; }
+#tile-block                 { width: 660px; height: 423px; margin-bottom: 18px; }
 #past-exhib-block           { width: 660px; height: 240px; margin: auto; }
-#exhib-page-little-block    { width: 660px; height: 100px; margin: auto; }
-#exhib-page-block           { width: 660px; height: 225px; margin: auto; }
-#exhib-page-big-block       { width: 660px; height: 480px; margin: auto; }
 #tile-block a               { padding: 0; margin: 0; }
 .art-tile                   { float: left; display: block;}
+
+#current-banner             { width: 660px; height: 423px; background: url(../images/gbrennan.jpg) no-repeat 0px 0px; margin: auto; }
+
 
 /* for the past exhibitions section on the home page*/
 #exhib-tile-1               { width: 160px; height: 110px; background: url(../images/rashid-sml.jpg) no-repeat 0px 0px; }
@@ -277,6 +277,7 @@ footer                  { display: block; border-bottom: 1px solid #00325f ; pad
 #years-banner               { width: 660px; height: 480px; background: url(../images/50yearsbanner.jpg) no-repeat 0px 0px;margin: auto; }
 #collected-banner           { width: 660px; height: 201px; background: url(../images/Collectedtitlebig.jpg) no-repeat 0px 0px; }
 #cradle-banner              { width: 660px; height: 190px; background: url(../images/Cradle1.jpg) no-repeat 0px 0px; margin: auto; }
+#gillies-banner             { width: 660px; height: 342px; background: url(../images/gbrennan-13073.jpg) no-repeat 0px 0px; margin: auto; }
 
 /* Custom Containers & Subclasses ----------------------------------------------------------------------------------------*/
 

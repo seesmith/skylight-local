@@ -2,9 +2,8 @@
 <div class="content">
     <div class="content byEditor">
         <a href = 'search/*:*/Exhibition:"rashid+al-din%7C%7C%7CRashid+al-Din"'><h1>The World History of Rashid al-Din, 1314</h1></a>
-        <div id="exhib-page-block">
-            <div id="rashid-banner" class="art-tile"></div>
-        </div>
+        <div id="rashid-banner" class="art-tile"></div>
+
         <h2>About the Exhibition</h2>
         <h3>Opening: 2nd August 2014 | Where: Exhibition Gallery, Main Library, George Square | Closing: 31st October 2014 | Curated by: Emma Smith</h3>
         <p>
