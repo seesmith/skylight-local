@@ -6,7 +6,7 @@
         <div id="current-banner" class="art-tile"></div>
         </div>
         <div id="past-exhib-block">
-            <h1><a href="./pastexhibitions" alt="Past Exhibitions" title="Past Exhibitions">Past Exhibitions</a>:</h1>
+            <h1><a href="./past" alt="Past Exhibitions" title="Past Exhibitions">Past Exhibitions</a>:</h1>
                 <ul class="ex-list">
                     <li class="past-ex">
                 <h3><a href="./rashid" alt="Rashid al-Din" title="Rashid al-Din Information Page">The World History of Rashid al-Din, 1314</a></h3>

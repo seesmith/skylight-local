@@ -267,10 +267,11 @@ li.past-ex                  { display: inline; float: left; height: 188px; width
 
 
 /* for the past exhibitions section on the home page*/
-#exhib-tile-1               { width: 160px; height: 120px; background: url(../images/rashid-sml.jpg) no-repeat 0px 0px; }
-#exhib-tile-2               { width: 160px; height: 120px; padding-bottom: 10px;background: url(../images/50-years-banner-logo-narrow.jpg) no-repeat 0px 0px; margin: auto;}
-#exhib-tile-3               { width: 160px; height: 120px; padding-bottom: 10px;background: url(../images/Collectedtitle.jpg) no-repeat 0px 0px; margin: auto;}
-#exhib-tile-4               { width: 160px; height: 120px;  background: url(../images/300chem.jpg) no-repeat 0px 0px; margin: auto; }
+#exhib-tile-1               { width: 160px; height: 100px; background: url(../images/rashid-sml.jpg) no-repeat 0px 0px; }
+#exhib-tile-2               { width: 160px; height: 100px;background: url(../images/50-years-banner-logo-narrow.jpg) no-repeat 0px 0px; }
+#exhib-tile-3               { width: 160px; height: 90px; background: url(../images/Collectedtitle.jpg) no-repeat 0px 0px;}
+#exhib-tile-4               { width: 160px; height: 150px; background: url(../images/300chem.jpg) no-repeat 0px 0px; }
+#exhib-tile-5               { width: 160px; height: 90px; background: url(../images/object.gif) no-repeat 0px 0px; }
 
 /* for about pages*/
 
