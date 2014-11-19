@@ -257,22 +257,24 @@ footer                  { display: block; border-bottom: 1px solid #00325f ; pad
 
 
 #tile-block                 { width: 660px; height: 423px; margin-bottom: 18px; }
-#past-exhib-block           { width: 660px; height: 240px; margin: auto; }
+#past-exhib-block           { width: 660px; height: 240px; margin: 0; }
 #tile-block a               { padding: 0; margin: 0; }
 .art-tile                   { float: left; display: block;}
 
+#past-exhib-block ul        { margin: 0;}
+li.past-ex                  { display: inline; float: left; height: 188px; width: 160px; text-align: center; margin-left: 2.5px; margin-right: 2.5px;}
 #current-banner             { width: 660px; height: 423px; background: url(../images/gbrennan.jpg) no-repeat 0px 0px; margin: auto; }
 
 
 /* for the past exhibitions section on the home page*/
-#exhib-tile-1               { width: 160px; height: 110px; background: url(../images/rashid-sml.jpg) no-repeat 0px 0px; }
-#exhib-tile-2               { width: 160px; height: 110px; padding-bottom: 10px;background: url(../images/50-years-banner-logo-narrow.jpg) no-repeat 0px 0px; margin: auto;}
-#exhib-tile-3               { width: 160px; height: 110px; padding-bottom: 10px;background: url(../images/Collectedtitle.jpg) no-repeat 0px 10px; margin: auto;}
-#exhib-tile-4               { width: 160px; height: 110px;  background: url(../images/cradle.jpg) no-repeat 20px 0px; margin: auto; }
+#exhib-tile-1               { width: 160px; height: 120px; background: url(../images/rashid-sml.jpg) no-repeat 0px 0px; }
+#exhib-tile-2               { width: 160px; height: 120px; padding-bottom: 10px;background: url(../images/50-years-banner-logo-narrow.jpg) no-repeat 0px 0px; margin: auto;}
+#exhib-tile-3               { width: 160px; height: 120px; padding-bottom: 10px;background: url(../images/Collectedtitle.jpg) no-repeat 0px 0px; margin: auto;}
+#exhib-tile-4               { width: 160px; height: 120px;  background: url(../images/300chem.jpg) no-repeat 0px 0px; margin: auto; }
 
 /* for about pages*/
 
-#object-banner              { width: 660px; height: 110px; background: url(../images/logo_set.jpg) no-repeat 0px 0px; }
+#object-banner              { width: 660px; height: 110px; background: url(../images/object.jpg) no-repeat 0px 0px; }
 #rashid-banner              { width: 660px; height: 212px; background: url(../images/Rashidblogbanner2-full.jpg) no-repeat 0px 0px; }
 #years-banner               { width: 660px; height: 480px; background: url(../images/50yearsbanner.jpg) no-repeat 0px 0px;margin: auto; }
 #collected-banner           { width: 660px; height: 201px; background: url(../images/Collectedtitlebig.jpg) no-repeat 0px 0px; }
