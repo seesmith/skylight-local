@@ -19,7 +19,7 @@ $config['skylight_theme'] = 'exhibitions';
 
 $config['skylight_fullname'] = 'Library and University Collections Exhibitions';
 
-$config['skylight_adminemail'] = 'example@example.com';
+$config['skylight_adminemail'] = 'lddt@mlist.is.ed.ac.uk';
 
 $config['skylight_oaipmhcollection'] = 'hdl_10683_23132';
 
@@ -30,12 +30,14 @@ $config['skylight_container_id'] = '17';
 $config['skylight_container_field'] = 'location.coll';
 $config['skylight_sitemap_type'] = 'external';
 
+
 $config['skylight_fields'] = array('Title' => 'dc.title.en',
     'Creator' => 'dc.contributor.author.en',
     'Subject' => 'dc.subject.en',
     'Type' => 'dc.type.en',
     'Abstract' => 'dc.description.abstract',
-    'Date' => 'dc.date.issued_dt',
+    'Date Issued' => 'dc.date.issued_dt',
+    'Date' => 'dc.coverage.temporal.en',
     'Bitstream'=> 'dc.format.original.en',
     'Thumbnail'=> 'dc.format.thumbnail.en',
     'Description'=>'dc.description.en',
@@ -57,8 +59,7 @@ $config['skylight_meta_fields'] = array('Title' => 'dc.title.en',
     'Date' => 'dc.date.issued_dt',
     'Type' => 'dc.type.en',
     'Bitstream'=> 'dc.format.original',
-    'Thumbnail'=> 'dc.format.thumbnail'
-);
+    'Thumbnail'=> 'dc.format.thumbnail');
 
 $config['skylight_recorddisplay'] = array('Title','Alternative','Creator','Exhibition','Subject','Type','Description','Date','Collection','Rights');
 

@@ -1,9 +1,8 @@
 <div class="content">
     <div class="content byEditor">
-        <a href ='search/*:*/Exhibition:"object+lessons%7C%7C%7CObject+Lessons"'><h1>Object Lessons</h1></a>
-        <div id="exhib-page-little-block">
-            <div id="exhib-tile-1" class="art-tile"></div>
-        </div>
+        <a href ='./search/*:*/Exhibition:"object+lessons%7C%7C%7CObject+Lessons"'><h1>Object Lessons</h1></a>
+        <div id="object-banner" class="art-tile"></div>
+        <h2><a href='./search/*:*/Exhibition:"rashid+al-din|||Rashid+al-Din'"><i class="fa fa-search fa-lg">&nbsp;</i>View all items</a></h2>
         <h2>About The Exhibition</h2>
         <h3>Opening: 7th June 2003 | Where: Talbot Rice Gallery | Closing: 19th July 2003 | Curated by: Duncan Macmillan</h3>
         <p>How can you link the study of ticks, facial expression, acoustics and veterinary medicine for horses?</p>
