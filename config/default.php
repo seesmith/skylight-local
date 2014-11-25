@@ -1,6 +1,6 @@
 <?php
 
-$config['skylight_appname'] = 'Demo';
+$config['skylight_appname'] = 'Default';
 
 $config['skylight_theme'] = 'default';
 
@@ -12,8 +12,9 @@ $config['skylight_oaipmhcollection'] = 'hdl_123456789_1';
 
 
 // Container ID and the field used in solr index to store this ID. Used for restricting search/browse scope.
-$config['skylight_container_id'] = '*';
-$config['skylight_container_field'] = 'location.coll';
+$config['skylight_container_id'] = '1';
+$config['skylight_container_field'] = 'location.comm';
+
 $config['skylight_sitemap_type'] = 'internal';
 
 $config['skylight_fields'] = array('Title' => 'dc.title.en',
@@ -22,7 +23,8 @@ $config['skylight_fields'] = array('Title' => 'dc.title.en',
     'Type' => 'dc.type.en',
     'Abstract' => 'dc.description.abstract',
     'Date' => 'dc.date.issued',
-    'Accession Date' => 'dc.date.accessioned_dt'
+    'Accession Date' => 'dc.date.accessioned_dt',
+    'Handle' => 'dc.identifier.uri'
 );
 
 $config['skylight_date_filters'] = array('Date' => 'dateIssued.year_sort');
