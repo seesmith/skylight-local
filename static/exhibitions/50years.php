@@ -1,8 +1,9 @@
 <div class="content">
     <div class="content byEditor">
-        <a href ='search/*:*/Exhibition:"50+years+50+books%7C%7C%7C50+Years+50+Books"'><h1>Fifty Years, Fifty Books</h1></a>
+        <a href ='./search/*:*/Exhibition:"50+years+50+books%7C%7C%7C50+Years+50+Books"'><h1>Fifty Years, Fifty Books</h1></a>
         <div id="years-banner" class="art-tile"></div>
 
+        <h2><a href='./search/*:*/Exhibition:"50+years+50+books|||50+Years+50+Books"'><i class="fa fa-search fa-lg">&nbsp;</i>View all items</a></h2>
         <h2>About the Exhibition</h2>
         <h3>Opening: 28th March 2014 | Where: Exhibition Gallery, Main Library, George Square | Closing: 14th June 2014 | Curated by: Emma Smith</h3>
 

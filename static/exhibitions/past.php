@@ -4,9 +4,10 @@
         <h1>Past Exhibitions:</h1>
         <div class="past-list">
           <div>
-                    <h3><a href="./rashid" alt="Rashid al-Din" title="Rashid al-Din Information Page">The World History of Rashid al-Din, 1314</a></h3>
+                    <h2><a href="./rashid" alt="Rashid al-Din" title="Rashid al-Din Information Page">The World History of Rashid al-Din, 1314</a></h2>
                     <p>2 Aug - 31 Oct 2014</p>
                     <a href="./rashid" alt="Rashid al-Din" title="Rashid al-Din"><div id="exhib-tile-1"></div></a>
+              <h3><a href='./search/*:*/Exhibition:"rashid+al-din|||Rashid+al-Din"'><i class="fa fa-search">&nbsp;</i>View all items</a></h3>
               <p>
                   The World History of Rashid al-Din, 1314: A Masterpiece of Islamic Painting, a major exhibition at the Main Library, University of Edinburgh in collaboration with Centre for Research Collections and the Alwaleed Bin Talal Centre for the Study of Islam in the
                   Contemporary World.
@@ -20,9 +21,10 @@
               </p>
             </div>
             <div>
-                    <h3><a href="./50years" alt="50 Years, 50 Books" title="50 Years, 50 Books Information Page">50 Years, 50 Books</a></h3>
+                    <h2><a href="./50years" alt="50 Years, 50 Books" title="50 Years, 50 Books Information Page">50 Years, 50 Books</a></h2>
                     <p>28 Mar - 14 Jun 2014</p>
                     <a href="./50years" alt="50 Years, 50 Books" title="50 Years, 50 Books"><div id="exhib-tile-2"></div></a>
+                <h3><a href='./search/*:*/Exhibition:"50+years+50+books|||50+Years+50+Books"'><i class="fa fa-search">&nbsp;</i>View all items</a></h3>
                 <p>
                     The exhibition featured highlights from fifty years of generous purchases made for the library
                     collections by the Friends, including early editions of English drama and modern Scottish literary
@@ -32,9 +34,10 @@
                 </p>
             </div>
             <div>
-                    <h3><a href="./collected" alt="Collect.ed" title="Collect.ed Information Page">Collect.ed</a></h3>
+                    <h2><a href="./collected" alt="Collect.ed" title="Collect.ed Information Page">Collect.ed</a></h2>
                     <p>6 Dec 2013 - 1 Mar 2014</p>
                     <a href="./collected" alt="Collect.ed" title="Collect.ed"><div id="exhib-tile-3"></div></a>
+                <h3><a href='./search/*:*/Exhibition:"collect.ed|||Collect.ed"'><i class="fa fa-search">&nbsp;</i>View all items</a></h3>
                 <p>
                     For thousands of years the obscure and unfamiliar has remained a source of inquiry. Early collecting
                     focused on the unclassified and unique, aiming to impress and enlighten. This exhibition will bring
@@ -43,9 +46,10 @@
                 </p>
             </div>
             <div>
-                    <h3><a href="./cradle" alt="Cradle of Chemistry" title="Cradle of Chemistry Information Page">Cradle of Chemistry</a></h3>
+                    <h2><a href="./cradle" alt="Cradle of Chemistry" title="Cradle of Chemistry Information Page">Cradle of Chemistry</a></h2>
                     <p>1 Aug 2013 - 2 Nov 2013</p>
                     <a href="./cradle" alt="Cradle of Chemistry" title="Cradle of Chemistry"><div id="exhib-tile-4" ></div></a>
+                <h3><a href='./search/*:*/Exhibition:"edinburgh+300+cradle+of+chemistry|||Edinburgh+300+Cradle+of+Chemistry"'><i class="fa fa-search">&nbsp;</i>View all items</a></h3>
                 <p>
                     The exhibition focused on key themes to illustrate the contribution our University has made to Chemistry:
                     Cradle of Chemistry (how Edinburgh has shaped the world), Chemistry and Economy (how Chemistry has
@@ -58,9 +62,10 @@
                 </p>
             </div>
             <div>
-                    <h3><a href="./objectlessons" alt="Object Lessons" title="Object LessonsInformation Page">Object Lessons</a></h3>
+                    <h2><a href="./objectlessons" alt="Object Lessons" title="Object LessonsInformation Page">Object Lessons</a></h2>
                     <p>2003</p>
                     <a href="./objectlessons" alt="Object Lessons" title="Object Lessons"><div id="exhib-tile-5"></div></a>
+                <h3><a href='/search/*:*/Exhibition:"object+lessons|||Object+Lessons"'><i class="fa fa-search">&nbsp;</i>View all items</a></h3>
                 <p>
                     This exhibition is a selection from the University's large collections. It is just a tiny sample from
                     a long history of collecting. The first University museum was begun before the end of the 17th century,
