@@ -6,6 +6,9 @@ $config['skylight_hostnames'] = array('test.exampapers.ed.ac.uk', 'exampapers.ed
 // Uncomment this if you want to use urls of the form http://.../prefix/...
 $config['skylight_url_prefixes'] = array('mimed', 'art','calendars');
 
+// For inserting prefixes for handle resolver
+$config['skylight_handle_prefixes'] = array(3 => "art", 11 => "mimed");
+
 // The URL of the parent solr server
 $config['skylight_solrbase'] = 'http://collectionsinternal.is.ed.ac.uk:8080/solr/search/';
 
