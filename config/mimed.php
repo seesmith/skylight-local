@@ -84,7 +84,7 @@ $config['skylight_search_fields'] = array(
     'Accession Number' => 'dc.identifier.en'
 );
 
-$config['skylight_related_fields'] = array('Instrument' => 'dc.type.en', 'Maker' => 'dc.contributor.author.en');
+$config['skylight_related_fields'] = array('Instrument' => 'dc.type.genus.en', 'Maker' => 'dc.contributor.author.en');
 
 //only by title, no date at the moment
 $config['skylight_sort_fields'] = array(
