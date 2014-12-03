@@ -54,7 +54,7 @@ $config['skylight_fields'] = array(
     'Inscription' => 'dc.format.inscription.en',
     'Rights Holder' => 'dc.rights.holder.en',
     'Instrument Family' => 'dc.type.family.en',
-    'Genus' => 'dc.type.genus',
+    'Genus' => 'dc.type.genus.en',
     'Provenance' => 'dc.provenance.en',
     'Decorations' => 'dc.description.decoration.en',
     'Link' => 'dc.identifier.uri'
@@ -84,7 +84,7 @@ $config['skylight_search_fields'] = array(
     'Accession Number' => 'dc.identifier.en'
 );
 
-$config['skylight_related_fields'] = array('Instrument' => 'dc.type.genus.en', 'Maker' => 'dc.contributor.author.en');
+$config['skylight_related_fields'] = array('Instrument' => 'dc.type.genus.en', 'Genus' => 'dc.type.genus.en','Maker' => 'dc.contributor.author.en');
 
 //only by title, no date at the moment
 $config['skylight_sort_fields'] = array(
