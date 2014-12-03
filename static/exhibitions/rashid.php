@@ -56,7 +56,7 @@
         </div>
         <h2><a href='./search/*:*/Exhibition:"rashid+al-din|||Rashid+al-Din"'><i class="fa fa-search fa-lg">&nbsp;</i>View all items</a></h2>
         <h2>About the Exhibition</h2>
-        <h3>Opening: 2nd August 2014 | Where: Exhibition Gallery, Main Library, George Square | Closing: 31st October 2014 | Curated by: Emma Smith</h3>
+        <h3>Opening: 2nd August 2014 | Where: Exhibition Gallery, Main Library, George Square | Closing: 31st October 2014 | Curated by: Dr Yuka Kadoi, Postdoctoral Fellow at The Alwaleed Bin Talal Centre for the Study of Islam in the Contemporary World</h3>
         <p>
             This festival exhibition highlights the Jami' al-Tawarikh (World History or Compendium of Chronicles) of Rashid al-Din, one of the masterpieces of medieval Islamic manuscripts. Celebrating the 700th anniversary of its production (1314/2014), the exhibition features approximately 15 folios from Edinburgh University Library’s manuscript (Or.MS.20). Curated and organised in collaboration with the Centre for Research Collections and the Alwaleed Centre for the Study of Islam in the Contemporary World, both at the University of Edinburgh.</p>
         </p>
