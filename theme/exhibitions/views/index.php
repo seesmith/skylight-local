@@ -2,7 +2,7 @@
     <div class="content byEditor">
         <h1>CURRENT EXHIBITION: <a href="./emmagillies" alt="Emma Gillies: Rediscovered"
                                    title="Emma Gillies: Rediscovered Information Page">Emma Gillies: Rediscovered</a>
-        <span id='view-all'><a href='./search/*:*/Exhibition:"emma+gillies|||Emma+Gillies"' alt='View the exhibition online' title='View the exhibition online'><i class="fa fa-search">&nbsp;</i>View all items</a></span></h1>
+        <span id='view-all'><a href='./search/*:*/Exhibition:"emma+gillies%3A+rediscovered|||Emma+Gillies%3A+Rediscovered"' alt='View the exhibition online' title='View the exhibition online'><i class="fa fa-search">&nbsp;</i>View all items</a></span></h1>
         <h2>University of Edinburgh Main Library, 5th December 2014 - 7th March 2015 </h2>
 
         <div id="tile-block">
