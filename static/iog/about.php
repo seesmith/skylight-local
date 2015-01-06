@@ -39,6 +39,10 @@
         <p>
             <span class="bold">Michael Rosie</span>, Director, Institute of Governance, July 2014.
         </p>
+        <h1>A History of the Yearbooks</h1>
+        <p>
+            You can find out more about the Yearbooks, its foundation by Henry Drucker and its development across the 1970s and 1980s in a blog by David McCrone and Lindsay Paterson <a href="http://scottishgovernmentyearbooks.wordpress.com/2014/11/26/17/" target="_blank">here</a>.
+        </p>
         <p>
             The Archive was supported by funds from the University of Edinburgh’s <a href="http://www.sps.ed.ac.uk/" target="_blank">School of Social & Political Science</a>,
             and by the kind assistance of the University’s <a href="http://www.ed.ac.uk/schools-departments/information-services/about/organisation/library-and-collections/library-and-collections" target="_blank">Library and University Collections</a>. Developed by the Library Digital Development Team <a class="email" href="mailto:lddt@mlist.is.ed.ac.uk">lddt@mlist.is.ed.ac.uk</a>

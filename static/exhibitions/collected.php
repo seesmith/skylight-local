@@ -4,7 +4,7 @@
         <div id="collected-banner" class="art-tile"></div>
         <h2><a href='./search/*:*/Exhibition:"collect.ed|||Collect.ed"'><i class="fa fa-search fa-lg">&nbsp;</i>View all items</a></h2>
         <h2>About the Exhibition</h2>
-        <h3>Opening: 6th December 2013 | Where: Exhibition Gallery, Main Library, George Square | Closing: 1st March 2014 | Curated by: Emma Smith</h3>
+        <h3>Opening: 6th December 2013 | Where: Exhibition Gallery, Main Library, George Square | Closing: 1st March 2014 | Curated by: Emma Smith (CRC Exhibitions Officer)</h3>
 
         <p>Shells, quartz crystals, cranium casts, meteorites and fossilised raindrops…</p>
 

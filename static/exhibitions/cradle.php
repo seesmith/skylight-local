@@ -6,7 +6,7 @@
         </div>
         <h2><a href='./search/*:*/Exhibition:"rashid+al-din|||Rashid+al-Din'"><i class="fa fa-search fa-lg">&nbsp;</i>View all items</a></h2>
         <h2>About the Exhibition</h2>
-        <h3>Opening: 1st August 2013 | Where: Exhibition Gallery, Main Library, George Square | Closing: 2nd November 2014 | Curated by: Emma Smith</h3>
+        <h3>Opening: 1st August 2013 | Where: Exhibition Gallery, Main Library, George Square | Closing: 2nd November 2014 | Curated by: Dr Andy Alexander (Senior Lecturer in Chemical Physics at the University of Edinburgh)</h3>
         <p>
             This public exhibition in the Main Library in George Square is timed to coincide with the Edinburgh International Festival and Fringe. The exhibition will focus on key themes to illustrate the contribution our School has made to Chemistry: Cradle of Chemistry (how Edinburgh has shaped the world), Chemistry and Economy (how Chemistry has contributed to economy and policy), Chemistry and Discovery (significant discoveries and achievements).
         </p>
