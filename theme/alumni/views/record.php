@@ -54,7 +54,7 @@ if(isset($solr[$type_field])) {
             $b_filename = $b_segments[1];
             $b_seq = $b_segments[4];
 
-            if((strpos($b_filename, ".jpg") > 0)) {
+            if((strpos($b_filename, ".jpg") > 0) || (strpos($b_filename, ".JPG") > 0)) {
 
                 $bitstream_array[$b_seq] = $bitstream;
 
@@ -75,7 +75,7 @@ if(isset($solr[$type_field])) {
             $b_handle_id = preg_replace('/^.*\//', '',$b_handle);
             $b_uri = './record/'.$b_handle_id.'/'.$b_seq.'/'.$b_filename;
 
-            if (strpos($b_uri, ".jpg") > 0)
+            if ((strpos($b_uri, ".jpg") > 0) or (strpos($b_uri, ".JPG") > 0))
             {
                 // is there a main image
                 if (!$mainImage) {
@@ -124,7 +124,7 @@ if(isset($solr[$type_field])) {
                 }
 
             }
-            else if (strpos($b_uri, ".mp3") > 0) {
+            else if ((strpos($b_uri, ".mp3") > 0) or (strpos($b_uri, ".MP3") > 0)) {
 
                 $audioLink .= '<audio id="audio-' . $b_seq;
                 $audioLink .= '" title="' . $record_title . ": " . $b_filename . '" ';
@@ -135,7 +135,7 @@ if(isset($solr[$type_field])) {
 
             }
 
-            else if (strpos($b_uri, ".mp4") > 0)
+            else if ((strpos($b_uri, ".mp4") > 0) or (strpos($b_uri, ".MP4") > 0))
             {
 
                 // if it's chrome, use webm if it exists
@@ -152,7 +152,7 @@ if(isset($solr[$type_field])) {
 
                 }
             }
-            else if (strpos($b_uri, ".webm") > 0)
+            else if ((strpos($b_uri, ".webm") > 0) or (strpos($b_uri, ".WEBM") > 0))
             {
 
                 // if it's chrome, use webm if it exists

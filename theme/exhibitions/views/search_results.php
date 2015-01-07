@@ -158,7 +158,7 @@
                         $b_filename = $b_segments[1];
                         $b_seq = $b_segments[4];
 
-                        if((strpos($b_filename, ".jpg") > 0)) {
+                        if((strpos($b_filename, ".jpg") > 0) || (strpos($b_filename, ".JPG") > 0)) {
 
                             $bitstream_array[$b_seq] = $bitstream;
 
