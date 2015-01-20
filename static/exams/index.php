@@ -22,8 +22,8 @@
 
     <h4>Exam papers are also available for:</h4>
     <ul>
-        <li><a href="http://www.exampapers.lib.ed.ac.uk/index.shtml">Academic Years 1996-1998</a> <em>Incomplete</em></li>
-        <li><a href="exams.shtml">Academic Years 1998-2004</a> <em>Incomplete</em></li>
+        <li><a href="http://www.exampapers.lib.ed.ac.uk/index.shtml" target="_blank">Academic Years 1996-1998</a> <em>Incomplete</em></li>
+        <li><a href="http://www.exampapers.lib.ed.ac.uk/exams.shtml" target="_blank">Academic Years 1998-2004</a> <em>Incomplete</em></li>
     </ul>
     <br />
 </div>
