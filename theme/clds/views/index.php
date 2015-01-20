@@ -67,33 +67,33 @@
     <div class="tiles-wrapper">
         <ul class="tiles">
             <li class="tile">
-                <a href='<?php echo base_url(); echo $this->config->item('index_page'); ?>/search/*/Type:"museums+%26+galleries%7C%7C%7CMuseums+%26+Galleries"?sort_by=dc.title_sort+asc' class="caption">
-                    <img src="<?php echo base_url(); ?>theme/<?php echo $this->config->item('skylight_theme'); ?>/images/museumstile.jpg" alt="Edinburgh University Museums &amp; Galleries Search" title="Edinburgh University Museums &amp; Galleries Search">
-                    <span onmouseover="this.style.background='#005784';this.style.color='#FFF'" onmouseout="this.style.background='#FFFFFF';this.style.color='#005784'">Museums &amp; </br>Galleries</span>
-                </a>
-            </li>
-            <li class="tile">
-                <a href='<?php echo base_url(); echo $this->config->item('index_page'); ?>/search/*/Type:%22special+collections+%26+archives%7C%7C%7CSpecial+Collections+%26+Archives%22?sort_by=dc.title_sort+asc' class="caption">
-                    <img src="<?php echo base_url(); ?>theme/<?php echo $this->config->item('skylight_theme'); ?>/images/archivestile.jpg" alt="Edinburgh University Special Collections &amp; Archives Search" title="Edinburgh University Special Collections &amp; Archives Search">
-                    <span onmouseover="this.style.background='#005784';this.style.color='#FFF'" onmouseout="this.style.background='#FFFFFF';this.style.color='#005784'">Special Collections &amp; Archives</span>
-                </a>
-            </li>
-            <li class="tile">
                 <a href="http://exhibitions.ed.ac.uk/" target="_blank" class="caption">
-                    <img src="<?php echo base_url(); ?>theme/<?php echo $this->config->item('skylight_theme'); ?>/images/currentexhibitionstile.jpg" alt="Edinburgh University Exhibitions Home" title="Edinburgh University Exhibitions Home">
-                    <span onmouseover="this.style.background='#005784';this.style.color='#FFF'" onmouseout="this.style.background='#FFFFFF';this.style.color='#005784'">Latest <br/>Exhibitions</span>
+                    <img src="<?php echo base_url(); ?>theme/<?php echo $this->config->item('skylight_theme'); ?>/images/chartnationtile.jpg" alt="Edinburgh University Exhibitions Home" title="Edinburgh University Exhibitions Home">
+                    <span onmouseover="this.style.background='#005784';this.style.color='#FFF'" onmouseout="this.style.background='#FFFFFF';this.style.color='#005784'">Exhibitions</span>
                 </a>
             </li>
             <li class="tile">
                 <a href="http://www.ed.ac.uk/schools-departments/information-services/library-museum-gallery/crc/events-exhibitions" target="_blank" class="caption">
-                    <img src="<?php echo base_url(); ?>theme/<?php echo $this->config->item('skylight_theme'); ?>/images/pastexhibitionstile.jpg" alt="Edinburgh University Past Exhibitions Home" title="Edinburgh University Past Exhibitions Home">
-                    <span onmouseover="this.style.background='#005784';this.style.color='#FFF'" onmouseout="this.style.background='#FFFFFF';this.style.color='#005784'">Past <br />Exhibitions</span>
+                    <img src="<?php echo base_url(); ?>theme/<?php echo $this->config->item('skylight_theme'); ?>/images/westmanutile.jpg" alt="Edinburgh University Iconics Home" title="Edinburgh University Iconics Home">
+                    <span onmouseover="this.style.background='#005784';this.style.color='#FFF'" onmouseout="this.style.background='#FFFFFF';this.style.color='#005784'">Iconics</span>
                 </a>
             </li>
             <li class="tile">
                 <a href="http://images.is.ed.ac.uk/" target="_blank" class="caption">
                     <img src="<?php echo base_url(); ?>theme/<?php echo $this->config->item('skylight_theme'); ?>/images/lunatile.jpg" alt="Edinburgh University Image Collections Home" title="Edinburgh University Image Collections Home">
-                    <span onmouseover="this.style.background='#005784';this.style.color='#FFF'" onmouseout="this.style.background='#FFFFFF';this.style.color='#005784'">Image </br>Collections</span>
+                    <span onmouseover="this.style.background='#005784';this.style.color='#FFF'" onmouseout="this.style.background='#FFFFFF';this.style.color='#005784'">Images</span>
+                </a>
+            </li>
+            <li class="tile">
+                <a href='<?php echo base_url(); echo $this->config->item('index_page'); ?>blog' class="caption">
+                    <img src="<?php echo base_url(); ?>theme/<?php echo $this->config->item('skylight_theme'); ?>/images/museumstile.jpg" alt="Edinburgh University Library News" title="Edinburgh University Library News">
+                    <span onmouseover="this.style.background='#005784';this.style.color='#FFF'" onmouseout="this.style.background='#FFFFFF';this.style.color='#005784'">Latest News</span>
+                </a>
+            </li>
+            <li class="tile">
+                <a href='<?php echo base_url(); echo $this->config->item('index_page'); ?>participate' class="caption">
+                    <img src="<?php echo base_url(); ?>theme/<?php echo $this->config->item('skylight_theme'); ?>/images/archivestile.jpg" alt="Edinburgh University Special Collections &amp; Archives Search" title="Edinburgh University Special Collections &amp; Archives Search">
+                    <span onmouseover="this.style.background='#005784';this.style.color='#FFF'" onmouseout="this.style.background='#FFFFFF';this.style.color='#005784'">Participate</span>
                 </a>
             </li>
         </ul>

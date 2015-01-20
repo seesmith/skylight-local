@@ -6,6 +6,8 @@ $config['skylight_theme'] = 'clds';
 
 $config['skylight_fullname'] = 'Edinburgh University Collections';
 
+$config['skylight_tagline'] = 'Explore the University of Edinburgh Collections';
+
 // set ga code
 if (strpos($_SERVER['HTTP_HOST'], "test") !== false) {
     $config['skylight_ga_code'] = 'UA-25737241-6';

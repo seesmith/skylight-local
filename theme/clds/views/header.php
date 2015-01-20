@@ -100,11 +100,10 @@
                         <li><a href="https://www.facebook.com/crc.edinburgh" class="facebook-icon" target="_blank" title="CRC on Facebook"></a></li>
                         <li><a href="https://twitter.com/CRC_EdUni" class="twitter-icon" target="_blank" title="CRC on Twitter"></a></li>
                         <li><a href="https://www.flickr.com/photos/crcedinburgh" class="flickr-icon" target="_blank" title="CRC on Flickr"></a></li>
-                        <li><a href="http://libraryblogs.is.ed.ac.uk" class="wordpress-icon" target="_blank" title="L&UC Blogs"></a></li>
                     </ul>
                     <ul class="menu-links">
                         <li><a href="./feedback/" title="Feedback Link" class="last">Feedback</a></li>
-                        <li><a href="http://www.ed.ac.uk/schools-departments/information-services/library-museum-gallery/crc/projects" title="CRC Research Link" target="_blank">Research</a></li>
+                        <li><a href="http://www.ed.ac.uk/schools-departments/information-services/library-museum-gallery/crc/projects" title="CRC Projects Link" target="_blank">Projects</a></li>
                         <li><a href="http://libraryblogs.is.ed.ac.uk/" title="Library and University Collections Blog" target="_blank">Blog</a></li>
                         <li><a href="http://www.ed.ac.uk/schools-departments/information-services/library-museum-gallery/crc" title="Centre for Research Collections Link" target="_blank">CRC</a></li>
                         <li><a href="./about/" title="About this site">About</a></li>
@@ -119,10 +118,21 @@
                 <div id="collection-search">
                     <form action="./redirect/" method="post">
                         <fieldset class="search">
-                            <input type="text" name="q" value="<?php if (isset($searchbox_query)) echo urldecode($searchbox_query); ?>" id="q" />
+                            <input type="text" name="q" value="<?php if (isset($searchbox_query)) echo urldecode($searchbox_query); ?>" placeholder="search for a collection" id="q" />
                             <input type="submit" name="submit_search" class="btn" value="Search" Title="Find a collection" id="submit_search" />
                         </fieldset>
                     </form>
+                </div>
+                <!--<div id="tag-line"><//?php echo $this->config->item('skylight_tagline');?></div>-->
+                <div id="top-nav">
+                    <ul class="top-nav-links">
+                        <li><a href="./archivessearch/" title="Archives Search">Archives</a></li>
+                        <li><a href="./rarebookssearch/" title="Rare Books Search">Rare Books</a></li>
+                        <li><a href="./mimedsearch/" title="Musical Instruments Search">Musical Instruments</a></li>
+                        <li><a href="./artsearch/" title="Art Search">Art</a></li>
+                        <li><a href="./museumssearch/" title="Museums Search">Museums</a></li>
+                        <li><a href="./search/" title="Search All" class="last">All</a></li>
+                    </ul>
                 </div>
             </header>
 
