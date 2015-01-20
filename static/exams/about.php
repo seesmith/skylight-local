@@ -1,7 +1,7 @@
 <div class="content">
     <div class="content byEditor about">
 
-    <h1>Edinburgh University Exam Papers Online: 2004-05 onwards</h1>
+    <h1>Edinburgh University Exam Papers Online</h1>
     <p>
         Exam Papers Online is a service provided by University of Edinburgh Library and University Collections for students and staff of The University of Edinburgh.
     </p>
