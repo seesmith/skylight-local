@@ -276,9 +276,9 @@ footer                  { display: block; padding-bottom: 20px; width: 100%; bac
 .listing li p 						{ font-size: 12px; margin: 0; }
 
 .tags					            { margin-top: 5px; margin: 0;}
-.tags a 				            { color: #fff; font-size: 13px; background: #00548e; -webkit-border-radius: 5px; -moz-border-radius: 5px; border-radius: 5px; padding: 2px 6px; margin-right: 5px; text-decoration: none; display:inline-block; }
+.tags a 				            { color: #005784; font-size: 13px; background: #cccccc; -webkit-border-radius: 5px; -moz-border-radius: 5px; border-radius: 5px; padding: 2px 6px; margin-right: 5px; text-decoration: none; display:inline-block; }
 .tags a.bold			            { font-weight: bold; }
-.tags a:hover			            { background: #FE2842; color: #fff; text-decoration: none; }
+.tags a:hover			            { background: #cccccc; color: #FE2842; text-decoration: none; }
 .tags a.subject                     { display:inline-block; line-height: 15px; margin-bottom: 5px; }
 
 .listing-filter						{ padding: 0; border: none; border-top: 1px solid #005784; border-bottom: 1px solid #b8baba; line-height: 33px; text-align: right; position: relative; }
@@ -359,7 +359,7 @@ li.tile                             { display: inline; float: left; height: 188p
     top: -166px;
     left: 10px;
     width: 168px;
-    padding: 10px;
+    padding: 5px;
     background: #fff;
     color: #005784;
     text-transform: uppercase;
@@ -443,7 +443,7 @@ table tr:last-child                 { border: 0; border-bottom: none; }
 /* Bootstrap CSS */
 
 .carousel-caption {
-    padding-bottom: 30px;
+    padding-bottom: 20px;
     color: #005784;
     padding-top: 20px;
     text-align: center;
