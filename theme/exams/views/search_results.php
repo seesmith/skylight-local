@@ -137,7 +137,7 @@ else {
                 }
                 else { ?>
 
-                    <div class="record-bitstreams"><a href="./unavailable">Paper unavailable</a></div>
+                    <div class="record-bitstreams"><a href="./unavailable" title="Click here to find out why this paper may be unavaible">Paper unavailable</a></div>
 
                 <?php } ?>
 
