@@ -100,6 +100,7 @@
                 <li><a href=" http://www.era.lib.ed.ac.uk/" title="Edinburgh Research Archive" target="_blank">ERA</a></li>
                 <li><a href="http://www.institute-of-governance.org" title="Institute of Governance Home" target="_blank">IOG</a></li>
                 <li><a href=" http://www.sps.ed.ac.uk/" title="School of Social and Political Science" target="_blank">SPS</a></li>
+                <li><a href="./history/" title="History of the Scottish Government Yearbooks">History</a></li>
                 <li><a href="./about/" title="About this site">About</a></li>
             </ul>
         </nav>
