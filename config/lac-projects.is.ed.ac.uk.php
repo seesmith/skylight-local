@@ -19,14 +19,6 @@ $config['skylight_theme'] = 'projects';
 
 $config['skylight_fullname'] = 'Library Projects';
 
-// set ga code
-if (strpos($_SERVER['HTTP_HOST'], "test") !== false) {
-    $config['skylight_ga_code'] = 'UA-25737241-6';
-}
-else {
-    $config['skylight_ga_code'] = 'UA-25737241-9';
-}
-
 $config['skylight_adminemail'] = 'lddt@mlist.is.ed.ac.uk';
 
 $config['skylight_oaipmhcollection'] = 'hdl_10683_19396';
