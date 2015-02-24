@@ -241,4 +241,16 @@
             <strong><?php echo $startrow ?>-<?php echo $endrow ?></strong> of
             <strong><?php echo $rows ?></strong> results </span>
         <?php echo $pagelinks ?>
+        <script>
+            if (searchTerm != null)
+            {
+                ga('send', 'event', {
+                    'eventCategory': 'Art',
+                    'eventAction': 'Search',
+                    'eventLabel': searchTerm,
+                    'eventValue': <?php echo $rows ?>
+
+                });
+            }
+        </script>
     </div>

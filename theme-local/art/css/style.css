@@ -125,11 +125,11 @@ input[type=text], input[type=password]				{
     border: 1px solid #bbbbbc; font-size: 13px; height: 28px; padding: 0 10px;
     -webkit-border-radius: 5px; -moz-border-radius: 5px; border-radius: 5px;
 }
-input.btn						{
+button						{
     background: #00315F; border: none; height: 28px; color: #fff; text-transform: uppercase; font-size: 14px; margin-left: 8px; font-weight: bold; padding: 0 18px;
     -webkit-border-radius: 5px; -moz-border-radius: 5px; border-radius: 5px; text-shadow: rgba(0,0,0,0.3) 0px -1px 0px;
 }
-input.btn:hover					{ background: #58A09D; }
+button:hover					{ background: #58A09D; }
 
 input.backbtn	                {
     background: #00315F; border: none; height: 24px; color: #fff; text-transform: uppercase; font-size: 12px; margin-left: 8px; font-weight: bold; padding: 0 10px;

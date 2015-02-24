@@ -10,7 +10,7 @@ $config['skylight_theme'] = 'art';
 $config['skylight_fullname'] = 'University of Edinburgh Art Collection';
 
 // set ga code
-if (strpos($_SERVER['HTTP_HOST'], "test") !== false) {
+if (strpos($_SERVER['HTTP_HOST'], "test") !== false || strpos($_SERVER['HTTP_HOST'], "localhost") !== false) {
     $config['skylight_ga_code'] = 'UA-25737241-6';
 }
 else {

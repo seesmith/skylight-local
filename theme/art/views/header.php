@@ -50,15 +50,31 @@
         <script src="http://www.google-analytics.com/analytics.js"></script>
 
         <!-- Google Analytics -->
+
         <script>
             (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
                 (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
                 m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
             })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 
-            ga('create', '<?php echo $ga_code ?>', 'auto');
+            //changed from auto to none for testing
+            //ga('create', '<?php// echo $ga_code ?>', 'auto');
+            ga('create', '<?php echo $ga_code ?>', 'none');
             ga('send', 'pageview');
 
+            /**
+             * Utility to wrap the different behaviors between W3C-compliant browsers
+             * and IE when adding event handlers.
+             *
+             * @param {Object} element Object on which to attach the event listener.
+             * @param {string} type A string representing the event type to listen for
+             *     (e.g. load, click, etc.).
+             * @param {function()} callback The function that receives the notification.
+             */
+            function addListener(element, type, callback) {
+                if (element.addEventListener) element.addEventListener(type, callback);
+                else if (element.attachEvent) element.attachEvent('on' + type, callback);
+            }
         </script>
         <!-- End Google Analytics -->
 
@@ -106,7 +122,7 @@
                 <form action="./redirect/" method="post">
                     <fieldset class="search">
                         <input type="text" name="q" value="<?php if (isset($searchbox_query)) echo urldecode($searchbox_query); ?>" id="q" />
-                        <input type="submit" name="submit_search" class="btn" value="Search" id="submit_search" />
+                        <button type="submit" name="submit_search" class="btn" value="Search" id="submit_search">Search</button>
                         <a href="./advanced" class="advanced">Advanced search</a>
                     </fieldset>
                 </form>
@@ -114,3 +130,18 @@
             </header>
 
             <div id="main" role="main" class="clearfix">
+
+                <script>
+                    var searchLink = document.getElementById('submit_search');
+                    var searchTerm = document.getElementById('q').value;
+                    if (searchLink != null && searchTerm != null)
+                    {
+                        addListener(searchLink, 'click', function() {
+                            ga('send', 'event', {
+                                'eventCategory': 'Art',
+                                'eventAction': 'Search',
+                                'eventLabel': searchTerm
+                            });
+                        });
+                    }
+                </script>
