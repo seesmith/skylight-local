@@ -1,21 +1,23 @@
 <?php
 
+// set the base url and ga code
+if (strpos($_SERVER['HTTP_HOST'], "test") !== false) {
+    $config['base_url'] = 'https://test.lac-projects.is.ed.ac.uk/';
+    $config['skylight_ga_code'] = 'UA-25737241-6';
+}
+else {
+    $config['base_url'] = 'https://lac-projects.is.ed.ac.uk/';
+    $config['skylight_ga_code'] = 'UA-25737241-14';
+}
+
 $config['skylight_appname'] = 'projects';
 
 $config['skylight_theme'] = 'projects';
 
 // Uncomment this if you are using a url of the form http://.../art/...
-$config['skylight_url_prefix'] = 'projects';
+//$config['skylight_url_prefix'] = 'projects';
 
 $config['skylight_fullname'] = 'Library Projects';
-
-// set ga code
-if (strpos($_SERVER['HTTP_HOST'], "test") !== false) {
-    $config['skylight_ga_code'] = 'UA-25737241-6';
-}
-else {
-    $config['skylight_ga_code'] = 'UA-25737241-9';
-}
 
 $config['skylight_adminemail'] = 'lddt@mlist.is.ed.ac.uk';
 

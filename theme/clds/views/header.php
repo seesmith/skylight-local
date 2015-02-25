@@ -118,20 +118,10 @@
                 <div id="collection-search">
                     <form action="./redirect/" method="post">
                         <fieldset class="search">
-                            <input type="text" name="q" value="<?php if (isset($searchbox_query)) echo urldecode($searchbox_query); ?>" placeholder="search for a collection" id="q" />
+                            <input type="text" name="q" value="<?php if (isset($searchbox_query)) echo urldecode($searchbox_query); ?>" id="q" placeholder="search for a collection"/>
                             <input type="submit" name="submit_search" class="btn" value="Search" Title="Find a collection" id="submit_search" />
                         </fieldset>
                     </form>
-                </div>
-                <div id="cld-nav">
-                    <ul class="cld-nav-links">
-                        <li><a href='./search/archives/Type:"special+collections+%26+archives|||Special+Collections+%26+Archives"' title="Archives Search">Archives</a></li>
-                        <li><a href='./search/rarebooks/Type:"special+collections+%26+archives|||Special+Collections+%26+Archives"' title="Rare Books Search">Rare&nbsp;Books</a></li>
-                        <li><a href='./search/mimed/Type:"museums+%26+galleries|||Museums+%26+Galleries"' title="Musical Instruments Search">Musical&nbsp;Instruments</a></li>
-                        <li><a href='./search/art/Type:"museums+%26+galleries|||Museums+%26+Galleries"' title="Art Search">Art</a></li>
-                        <li><a href='./search/museums/Type:"museums+%26+galleries|||Museums+%26+Galleries"' title="Museums Search">Museums</a></li>
-                        <li><a href='./search/all/' title="Search All" class="last">All&nbsp;collections</a></li>
-                    </ul>
                 </div>
             </header>
 
