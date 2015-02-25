@@ -35,6 +35,7 @@ $config['skylight_fields'] = array('Title' => 'dc.title.en',
     'Highlight' => 'dc.subject.highlight',
     'Type' => 'dc.type.en',
     'Date' => 'dc.coverage.temporal.en',
+    'Brief'=> 'dc.abstract.en',
     'Bitstream'=> 'dc.format.original.en',
     'Thumbnail'=> 'dc.format.thumbnail.en',
     'Description'=>'dc.description.en',
@@ -57,7 +58,7 @@ $config['skylight_meta_fields'] = array('Title' => 'dc.title',
 
 $config['skylight_recorddisplay'] = array('Title','Type','Description','Custodian','Custodial History','Origin','Date','Identifier');
 
-$config['skylight_searchresult_display'] = array('Title','Custodian','Custodial History', 'Subject','Type','Origin', 'Bitstream', 'Thumbnail');
+$config['skylight_searchresult_display'] = array('Title','Brief','Custodian','Custodial History', 'Subject','Type','Origin', 'Bitstream', 'Thumbnail');
 
 $config['skylight_search_fields'] = array('Keywords' => 'text',
     'Subject' => 'dc.subject',
@@ -102,5 +103,6 @@ $config['skylight_highlight_fields'] = 'dc.title.en,dc.creator,dc.subject.en,dc.
 
 $config['skylight_homepage_recentitems'] = false;
 $config['skylight_homepage_fullwidth'] = true;
+$config['skylight_search_header'] = true;
 
 ?>

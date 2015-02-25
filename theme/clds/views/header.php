@@ -123,15 +123,14 @@
                         </fieldset>
                     </form>
                 </div>
-                <!--<div id="tag-line"><//?php echo $this->config->item('skylight_tagline');?></div>-->
-                <div id="top-nav">
-                    <ul class="top-nav-links">
-                        <li><a href="./archivessearch/" title="Archives Search">Archives</a></li>
-                        <li><a href="./rarebookssearch/" title="Rare Books Search">Rare Books</a></li>
-                        <li><a href="./mimedsearch/" title="Musical Instruments Search">Musical Instruments</a></li>
-                        <li><a href="./artsearch/" title="Art Search">Art</a></li>
-                        <li><a href="./museumssearch/" title="Museums Search">Museums</a></li>
-                        <li><a href="./search/" title="Search All" class="last">All</a></li>
+                <div id="cld-nav">
+                    <ul class="cld-nav-links">
+                        <li><a href='./search/archives/Type:"special+collections+%26+archives|||Special+Collections+%26+Archives"' title="Archives Search">Archives</a></li>
+                        <li><a href='./search/rarebooks/Type:"special+collections+%26+archives|||Special+Collections+%26+Archives"' title="Rare Books Search">Rare&nbsp;Books</a></li>
+                        <li><a href='./search/mimed/Type:"museums+%26+galleries|||Museums+%26+Galleries"' title="Musical Instruments Search">Musical&nbsp;Instruments</a></li>
+                        <li><a href='./search/art/Type:"museums+%26+galleries|||Museums+%26+Galleries"' title="Art Search">Art</a></li>
+                        <li><a href='./search/museums/Type:"museums+%26+galleries|||Museums+%26+Galleries"' title="Museums Search">Museums</a></li>
+                        <li><a href='./search/all/' title="Search All" class="last">All&nbsp;collections</a></li>
                     </ul>
                 </div>
             </header>
