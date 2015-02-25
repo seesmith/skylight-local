@@ -155,6 +155,13 @@ header				{ position: relative; width: 940px; height: 141px; background-color: #
 .ie7 .col-sidebar	{ padding-bottom: 30px; }
 
 /* Common Containers & Subclasses ----------------------------------------------------------------------------------------*/
+#cld-nav                                { width: 940px; margin: 0 auto; height: 33px; }
+.cld-nav-links li					    { display: inline; height: 33px; padding-left: 0; padding-right: 0; }
+.cld-nav-links li a 			        { font-weight: bold; font-size: 13px; text-transform: uppercase;
+    float: left; text-decoration: none; margin-left: 10px; color: #005784; display: inline-block;
+    height: 33px; line-height: 2.5em; padding: 3px 20px 2px; text-align: center; }
+.cld-nav-links li a:hover		        { color: #FE2842;}
+.cld-nav-links li a.last		        { border: none; }
 
 #menu                               { width: 940px; background-color: #333333; margin: 0 auto; height: 33px; }
 .menu-links li					    { display: inline; float: right; height: 33px; padding-left: 0; padding-right: 0; }
@@ -199,7 +206,7 @@ header				{ position: relative; width: 940px; height: 141px; background-color: #
 
 .thumbnail-strip                { max-width: 660px; display: block; }
 .thumbnail-tile                 { margin-top: 20px; margin-left: 20px; float: left; }
-.thumbnail-strip .first         { margin-left: 0px; }
+.thumbnail-strip .first         { margin-left: 0; }
 .record-thumbnail               { max-width: 150px; max-height: 200px; border: solid 1px #093563; }
 
 .record-bitstreams              { display: block; width: 660px; margin: 5px 0; }
@@ -226,12 +233,12 @@ span[id^="video-"]              { margin: 5px 0; }
 .col-sidebar ul.selected a					{ color: #FE2842; padding: 0; }
 .col-sidebar ul.selected a:hover			{ background: none; }
 .col-sidebar ul.selected a.deselect			{ display: block; width: 13px; height: 13px; background: url(../images/bg-deselect.png) no-repeat 0px 0px; text-indent: -9999px; position: absolute; top: 0; right: 0; }
-.col-sidebar ul.selected a.deselect:hover	{ background-position: 0px -15px; }
+.col-sidebar ul.selected a.deselect:hover	{ background-position: 0 -15px; }
 
 .col-sidebar ul.related li 					{ padding: 0 20px 0 20px; position: relative; margin-bottom: 18px; zoom: 1; }
 .col-sidebar ul.related li a 				{ padding: 0; }
 .col-sidebar ul.related li a:hover			{ background: none; text-decoration: underline; }
-.col-sidebar ul.related .tags				{ margin: 0px 0 0 0; }
+.col-sidebar ul.related .tags				{ margin: 0 0 0 0; }
 .col-sidebar ul.related .tags a 			{ padding: 2px 5px; display: inline-block; background: #ffffff; color: #333333;}
 .col-sidebar ul.related .tags a:hover		{ text-decoration: none; background: #FE2842; color: #fff; }
 
@@ -262,6 +269,16 @@ footer                  { display: block; padding-bottom: 20px; width: 100%; bac
 .is-logo                { display: block; float: left; padding-left: 10px; }
 .islogo                 { display: block; width: 50px; height: 64px; background: url(../images/islogo.gif) no-repeat 0px 0px; }
 
+.results_header         { border-top: 1px solid #333; padding: 5px 10px 5px 10px; }
+.rare_header            { background: url(../images/0024696c-hdr.jpg) no-repeat 0 0; }
+.archives_header        { background: url(../images/0024681c-hdr.jpg) no-repeat 0 0; }
+.mimed_header           { background: url(../images/0023103c-hdr.jpg) no-repeat 0 0; }
+.art_header             { background: url(../images/0016870c-hdr.jpg) no-repeat 0 0; }
+.museums_header         { background: url(../images/0041866c-hdr.jpg) no-repeat 0 0; }
+
+.results_text           {color: #333; font-size: 14px; }
+
+
 /* Custom Containers & Subclasses ----------------------------------------------------------------------------------------*/
 
 .listing 							{ list-style-type: none; margin: 0; }
@@ -278,7 +295,7 @@ footer                  { display: block; padding-bottom: 20px; width: 100%; bac
 .tags					            { margin-top: 5px; margin: 0;}
 .tags a 				            { color: #005784; font-size: 13px; background: #cccccc; -webkit-border-radius: 5px; -moz-border-radius: 5px; border-radius: 5px; padding: 2px 6px; margin-right: 5px; text-decoration: none; display:inline-block; }
 .tags a.bold			            { font-weight: bold; }
-.tags a:hover			            { background: #cccccc; color: #FE2842; text-decoration: none; }
+.tags a:hover			            { background: #FE2842; color: #fff; text-decoration: none; }
 .tags a.subject                     { display:inline-block; line-height: 15px; margin-bottom: 5px; }
 
 .listing-filter						{ padding: 0; border: none; border-top: 1px solid #005784; border-bottom: 1px solid #b8baba; line-height: 33px; text-align: right; position: relative; }
@@ -359,7 +376,7 @@ li.tile                             { display: inline; float: left; height: 188p
     top: -166px;
     left: 10px;
     width: 168px;
-    padding: 5px;
+    padding: 10px;
     background: #fff;
     color: #005784;
     text-transform: uppercase;
@@ -443,7 +460,7 @@ table tr:last-child                 { border: 0; border-bottom: none; }
 /* Bootstrap CSS */
 
 .carousel-caption {
-    padding-bottom: 20px;
+    padding-bottom: 30px;
     color: #005784;
     padding-top: 20px;
     text-align: center;

@@ -8,7 +8,6 @@
         $author_field = $this->skylight_utilities->getField('Author');
         $date_field = $this->skylight_utilities->getField('Date Made');
         $type_field = $this->skylight_utilities->getField('Type');
-        $type_field = $this->skylight_utilities->getField('Type');
         $bitstream_field = $this->skylight_utilities->getField('Bitstream');
         $thumbnail_field = $this->skylight_utilities->getField('Thumbnail');
         $abstract_field = $this->skylight_utilities->getField('Abstract');
