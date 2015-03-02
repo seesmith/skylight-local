@@ -28,7 +28,7 @@ $config['skylight_container_id'] = '31';
 $config['skylight_container_field'] = 'location.coll';
 
 $config['skylight_fields'] = array('Title' => 'dc.title.en',
-    'Author' => 'dc.contributor.author',
+    'Author' => 'dc.contributor.author.en',
     'Subject' => 'dc.subject.en',
     'Type' => 'dc.type.en',
     'Abstract' => 'dc.description.abstract.en',
@@ -52,7 +52,7 @@ $config['skylight_meta_fields'] = array('Title' => 'dc.title.en',
     'Thumbnail'=> 'dc.format.thumbnail'
 );
 
-$config['skylight_recorddisplay'] = array('Title','Author','Subject','Type','Abstract', 'Description');
+$config['skylight_recorddisplay'] = array('Author','Type','Subject');
 
 $config['skylight_searchresult_display'] = array('Title','Author','Subject','Type','Abstract');
 

@@ -112,7 +112,7 @@ h1                              { font-size: 20px; line-height: 24px; margin: 18
 h2                              { font-size: 16px; line-height: 36px; margin: 0 0 0 0; }
 h3                              { color: #333333; font-size: 14px; line-height: 18px; margin: 0 0 9px 0; }
 
-h1.itemtitle 					{ font-size: 20px; line-height: 24px; margin: 20px 0 10px 0px; position: relative; color: #333333; }
+h1.itemtitle 					{ font-size: 20px; line-height: 24px; margin: 0px 0 10px 0px; position: relative; color: #333333; }
 h3.collection-link              { font-size: 16px;  margin-bottom: 15px; }
 h3.collection-link a            { color: #B2D8EC; text-decoration: none; }
 h3.collection-link a:hover      { text-decoration: underline; }
@@ -164,28 +164,26 @@ header				{ position: relative; width: 940px; height: 170px; background-color: #
 
 .social-links li                          { display: block; float: left; height: 33px; padding-left: 0; padding-right: 0; }
 .social-links li a                        { display: block; margin: 0; width: 33px; height: 33px; line-height: 33px; padding: 0;}
-.social-links li a.facebook-icon          { display: block; width: 33px; height: 33px; float: left; background: url(../images/facebookicon.png) no-repeat 0px 0px;}
-.social-links li a.facebook-icon:hover    { display: block; background: url(../images/facebookicon2.png) no-repeat 0px 0px; }
-.social-links li a.twitter-icon           { display: block; width: 33px; height: 33px; float: left; background: url(../images/twittericon.png) no-repeat 0px 0px;}
-.social-links li a.twitter-icon:hover     { display: block; background: url(../images/twittericon2.png) no-repeat 0px 0px; }
-.social-links li a.flickr-icon            { display: block; width: 33px; height: 33px; float: left; background: url(../images/flickricon.png) no-repeat 0px 0px;}
-.social-links li a.flickr-icon:hover      { display: block; background: url(../images/flickricon2.png) no-repeat 0px 0px; }
-.social-links li a.wordpress-icon         { display: block; width: 33px; height: 33px; float: left; background: url(../images/wordpressicon.png) no-repeat 0px 0px;}
-.social-links li a.wordpress-icon:hover   { display: block; background: url(../images/wordpressicon2.png) no-repeat 0px 0px; }
+.social-links li a.facebook-icon          { display: block; width: 33px; height: 33px; float: left; background: url(../images/social/facebookiconfooter.png) no-repeat 0 0;}
+.social-links li a.facebook-icon:hover    { display: block; background: url(../images/social/facebookiconfooter2.png) no-repeat 0 0; }
+.social-links li a.twitter-icon           { display: block; width: 33px; height: 33px; float: left; background: url(../images/social/twittericonfooter.png) no-repeat 0 0;}
+.social-links li a.twitter-icon:hover     { display: block; background: url(../images/social/twittericonfooter2.png) no-repeat 0 0; }
+.social-links li a.flickr-icon            { display: block; width: 33px; height: 33px; float: left; background: url(../images/social/flickricon.gif) no-repeat 0 0;}
+.social-links li a.flickr-icon:hover      { display: block; background: url(../images/social/flickricon2.gif) no-repeat 0 0; }
 
 
 #collection-title	            { display: block; width: 540px; height: 88px; padding: 10px 0; float: left; }
-.uoelogo                        { display: block; width: 119px; height: 88px; float: left; background: url(../images/UoELogo.gif) no-repeat 0px 0px;}
-.collectionslogo                { display: block; width: 421px; height: 88px; float: left; background: url(../images/CollectionsLogo.gif) no-repeat 0px 0px;}
-.collectionslogo:hover          { display: block; background: url(../images/CollectionsLogo.gif) no-repeat 0px -88px; }
+.uoelogo                        { display: block; width: 119px; height: 88px; float: left; background: url(../images/UoELogo.gif) no-repeat 0 0;}
+.iconicslogo                { display: block; width: 421px; height: 88px; float: left; background: url(../images/iconicsLogo2.gif) no-repeat 0 0;}
+.iconicslogo:hover          { display: block; background: url(../images/iconicsLogo2.gif) no-repeat 0 -88px; }
 
 #collection-search              { display: block; width: 400px; padding: 52px 20px 20px; float: left; }
 
 .search							{ width: 380px; }
 .search input[type=text]		{
-    box-shadow: 0px 0px 9px rgba(30,30,60, 0.3); -moz-box-shadow: 0px 0px 9px rgba(30,30,60, 0.75); -webkit-box-shadow: 0px 0px 9px rgba(30,30,60, 0.3);
+    box-shadow: 0px 0px 9px rgba(30,30,60, 0.3); -moz-box-shadow: 0 0 9px rgba(30,30,60, 0.75); -webkit-box-shadow: 0 0 9px rgba(30,30,60, 0.3);
     font-size: 16px; color: #333333; font-weight: bold; padding-left: 33px; width: 272px;
-    background: #fff url(../images/bg-search.png) no-repeat 0px 0px;
+    background: #fff url(../images/bg-search.png) no-repeat 0 0;
 }
 .ie7 .search input[type=text]	{ width: 225px; }
 .search input.btn				{ }
@@ -285,6 +283,8 @@ footer                  { display: block; padding-bottom: 20px; width: 100%; bac
 .random-itemdiv                     { text-align: right; display: block; padding: 10px 0 10px 10px; }
 .random-thumbnail                   { display: block; text-align: left; width: 30%; float: left; }
 
+.full-metadata                      { margin: 10px 0 10px 0; padding: 10px 0 10px 0; border-top: 1px solid #999;  }
+
 
 /* Custom Containers & Subclasses ----------------------------------------------------------------------------------------*/
 
@@ -364,7 +364,7 @@ h1 .icon							{ top: -5px; left: -65px; }
 .browse_results                     { margin-top: 30px; margin-bottom: 20px; }
 .browse_facets                      { margin-top: 20px; }
 
-.content 							{ margin-top: 20px; background-color: #fff; }
+.content 							{ margin-top: 2px; background-color: #fff; }
 .col-main-full .content             { background-color: #fff; color: #fff; margin: 0; }
 .col-main-full .content .byEditor   { background-color: #fff; color: #000; margin: 0px; padding: 0px 10px 0px 10px;}
 .content ul 						{ margin: 0 0 18px 1.2em; }

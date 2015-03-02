@@ -110,7 +110,7 @@
         <div class="clearfix"></div>
         <div id="collection-title">
             <a href="http://www.ed.ac.uk" class="uoelogo" title="The University of Edinburgh Home" target="_blank"></a>
-            <a href="<?php echo base_url(); ?>iconics" class="collectionslogo" title="University of Edinburgh Collections Home"></a>
+            <a href="<?php echo base_url(); ?>iconics" class="iconicslogo" title="University of Edinburgh Collections Home"></a>
         </div>
         <div id="collection-search">
             <form action="./redirect/" method="post">

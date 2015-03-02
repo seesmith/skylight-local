@@ -3,6 +3,8 @@
 $author_field = $this->skylight_utilities->getField("Author");
 $type_field = $this->skylight_utilities->getField("Type");
 $bitstream_field = $this->skylight_utilities->getField("Bitstream");
+$description_field = $this->skylight_utilities->getField("Description");
+$abstract_field = $this->skylight_utilities->getField("Abstract");
 $thumbnail_field = $this->skylight_utilities->getField("Thumbnail");
 $date_field = $this->skylight_utilities->getField("Date");
 $filters = array_keys($this->config->item("skylight_filters"));
@@ -158,22 +160,11 @@ if(isset($solr[$bitstream_field]) && $link_bitstream) {
                 echo " (" . $solr[$date_field][0] . ")";
             } ?>
         </h1>
-        <div class="tags">
+        <div class="tagline">
             <?php
-
-            if (isset($solr[$author_field])) {
-                foreach($solr[$author_field] as $author) {
-
-                    $orig_filter = urlencode($author);
-
-                    $lower_orig_filter = strtolower($author);
-                    $lower_orig_filter = urlencode($lower_orig_filter);
-
-                    echo '<a class="artist" href="./search/*:*/Artist:%22'.$lower_orig_filter.'%7C%7C%7C'.$orig_filter.'%22">'.$author.'</a>';
-                }
-            }
-
-            ?>
+            if (array_key_exists ($abstract_field, $solr)){
+                echo $solr[$abstract_field][0];
+            }?>
         </div>
         <?php if($mainImageTest === true) { ?>
     </div>
@@ -185,11 +176,16 @@ if(isset($solr[$bitstream_field]) && $link_bitstream) {
 <?php } ?>
 
     <?php if($mainImageTest === true) { ?>
+    <div class="maintext">
+        <?php
+        if (array_key_exists ($description_field, $solr)){
+            echo $solr[$description_field][0];
+        }?>
+    </div>
 
     <div class="full-metadata">
         <?php } ?>
-        <table>
-            <tbody>
+
             <?php $excludes = array(""); ?>
             <?php
 
@@ -199,11 +195,11 @@ if(isset($solr[$bitstream_field]) && $link_bitstream) {
 
                 if(isset($solr[$element])) {
                     if(!in_array($key, $excludes)) {
-                        echo '<tr><th>'.$key.'</th><td>';
+                        echo $key.'&nbsp:&nbsp;';
                         foreach($solr[$element] as $index => $metadatavalue) {
                             // if it's a facet search
                             // make it a clickable search link
-                            if(in_array($key, $filters) && $key != "Artist") {
+                            if(in_array($key, $filters) && $key != "Author") {
 
                                 $orig_filter = urlencode($metadatavalue);
                                 $lower_orig_filter = strtolower($metadatavalue);
@@ -219,7 +215,7 @@ if(isset($solr[$bitstream_field]) && $link_bitstream) {
                                 echo '; ';
                             }
                         }
-                        echo '</td></tr>';
+                        echo '<br />';
                     }
                 }
 
@@ -238,7 +234,7 @@ if(isset($solr[$bitstream_field]) && $link_bitstream) {
                         $lunalink = true;
 
                         if($i == 0) {
-                            echo '<tr><th>Zoomable Image(s)</th><td>';
+                            echo 'Zoomable Image(s)';
                         }
 
                         echo '<a href="'. $linkURI . '" target="_blank"><i class="fa fa-file-image-o fa-lg">&nbsp;</i></a>';
@@ -249,11 +245,10 @@ if(isset($solr[$bitstream_field]) && $link_bitstream) {
                 }
 
                 if($lunalink) {
-                    echo '</td></tr>';
+                    echo '<br />';
                 }
             }?>
-            </tbody>
-        </table>
+
         <?php if($mainImageTest === true) { ?>
     </div>
 <?php } ?>
