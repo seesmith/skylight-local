@@ -148,15 +148,15 @@
                                     $t_seq = $t_segments[4];
                                     $t_uri = './record/'.$b_handle_id.'/'.$t_seq.'/'.$t_filename;
 
-                                    $thumbnailLink = '<a title = "' . $doc[$title_field][0] . '" class="fancybox" rel="group' . $j .'" href="' . $b_uri . '"> ';
-                                    $thumbnailLink .= '<img src = "'.$t_uri.'" class="search-thumbnail"" title="'. $doc[$title_field][0] .'" /></a>';
+                                    $thumbnailLink = '<a title="' . $doc[$title_field][0] . '" class="fancybox" rel="group' . $j .'" href="' . $b_uri . '"> ';
+                                    $thumbnailLink .= '<img src="'.$t_uri.'" class="search-thumbnail" title="'. $doc[$title_field][0] .'" /></a>';
                                 }
                             }
                         }
                         // there isn't a thumbnail so display the bitstream itself
                         else {
-                            $thumbnailLink = '<a title = "' . $doc[$title_field][0] . '" class="fancybox" rel="group' . $j .'" href="' . $b_uri . '"> ';
-                            $thumbnailLink .= '<img src = "'.$b_uri.'" class="search-thumbnail" title="'. $doc[$title_field][0] .'" /></a>';
+                            $thumbnailLink = '<a title="' . $doc[$title_field][0] . '" class="fancybox" rel="group' . $j .'" href="' . $b_uri . '"> ';
+                            $thumbnailLink .= '<img src="'.$b_uri.'" class="search-thumbnail" title="'. $doc[$title_field][0] .'" /></a>';
                         }
 
                         echo $thumbnailLink;

@@ -53,100 +53,18 @@
     </div>
 
 
-    <ul class="listing">
+    <ul id="quad">
 
         <?php
 
         $j = 0;
         foreach ($docs as $index => $doc) {
         ?>
-        <?php
-            $type = 'Unknown';
 
-            if(isset($doc[$type_field])) {
-                $type = "media-" . strtolower(str_replace(' ','-',$doc[$type_field][0]));
-            }
-         ?>
 
         <li<?php if($index == 0) { echo ' class="first"'; } elseif($index == sizeof($docs) - 1) { echo ' class="last"'; } ?>>
             <!--span class="icon <?php echo $type?>"></span-->
         <div class="item-div">
-
-            <div class = "iteminfo">
-
-                <?php if(array_key_exists($author_field,$doc)) { ?>
-                    <?php
-
-                    $num_authors = 0;
-                    foreach ($doc[$author_field] as $author) {
-                        // test author linking
-                        // quick hack that only works if the filter key
-
-                        $orig_filter = urlencode($author);
-
-                        $lower_orig_filter = strtolower($author);
-                        $lower_orig_filter = urlencode($lower_orig_filter);
-
-                        echo '<a class="artist" href="./search/*:*/Artist:%22'.$lower_orig_filter.'%7C%7C%7C'.$orig_filter.'%22">'.$author.'</a>';
-                        $num_authors++;
-                        if($num_authors < sizeof($doc[$author_field])) {
-                            echo ' ';
-                        }
-                    }
-
-                    ?>
-                <?php } ?>
-
-
-                <h3><a href="./record/<?php echo $doc['id']?>?highlight=<?php echo $query ?>"><?php echo $doc[$title_field][0]; ?>
-                <?php if(array_key_exists($date_field, $doc)) { ?>
-                <?php
-                echo '(' . $doc[$date_field][0] . ')';
-                }
-                elseif(array_key_exists('dateIssuedyear', $doc)) {
-                    echo '( ' . $doc['dateIssuedyear'][0] . ')';
-                }
-
-                ?></a></h3>
-
-                <div class="tags">
-
-                    <?php
-                    // TODO: Make highlighting configurable
-
-                    if(array_key_exists('highlights',$doc)) {
-                        ?> <p><?php
-                        foreach($doc['highlights'] as $highlight) {
-                            echo "...".$highlight."...".'<br/>';
-                        }
-                        ?></p><?php
-                    }
-                    else {
-                        if(array_key_exists($abstract_field, $doc)) {
-                            echo '<p>';
-                            $abstract =  $doc[$abstract_field][0];
-                            $abstract_words = explode(' ',$abstract);
-                            $shortened = '';
-                            $max = 40;
-                            $suffix = '...';
-                            if($max > sizeof($abstract_words)) {
-                                $max = sizeof($abstract_words);
-                                $suffix = '';
-                            }
-                            for ($i=0 ; $i<$max ; $i++){
-                                $shortened .= $abstract_words[$i] . ' ';
-                            }
-                            echo $shortened.$suffix;
-                            echo '</p>';
-                        }
-                    }
-
-                    ?>
-
-                </div> <!-- close tags div -->
-
-            </div> <!-- close item-info -->
-
             <div class = "thumbnail-image">
                 <?php
 
@@ -194,28 +112,10 @@
                         $b_uri = './record/'.$b_handle_id.'/'.$b_seq.'/'.$b_filename;
                         $thumbnailLink = "";
 
-                        if(isset($doc[$thumbnail_field])) {
-                            foreach ($doc[$thumbnail_field] as $thumbnail) {
 
-                                $t_segments = explode("##", $thumbnail);
-                                $t_filename = $t_segments[1];
-
-                                if ($t_filename === $b_filename . ".jpg") {
-
-                                    $t_handle = $t_segments[3];
-                                    $t_seq = $t_segments[4];
-                                    $t_uri = './record/'.$b_handle_id.'/'.$t_seq.'/'.$t_filename;
-
-                                    $thumbnailLink = '<a title = "' . $doc[$title_field][0] . '" class="fancybox" rel="group' . $j .'" href="' . $b_uri . '"> ';
-                                    $thumbnailLink .= '<img src = "'.$t_uri.'" class="search-thumbnail" title="'. $doc[$title_field][0] .'" /></a>';
-                                }
-                            }
-                        }
-                        // there isn't a thumbnail so display the bitstream itself
-                        else {
-                            $thumbnailLink = '<a title = "' . $doc[$title_field][0] . '" class="fancybox" rel="group' . $j .'" href="' . $b_uri . '"> ';
+                            $thumbnailLink = '<a title = "' . $doc[$title_field][0] . '" class="fancybox" rel="group" href="' . $b_uri . '"> ';
                             $thumbnailLink .= '<img src = "'.$b_uri.'" class="search-thumbnail" title="'. $doc[$title_field][0] .'" /></a>';
-                        }
+
 
                         echo $thumbnailLink;
                     }
@@ -223,6 +123,12 @@
                 } //end if there are bitstreams ?>
 
             </div>
+
+            <div class = "iteminfo">
+                <h3><a href="./record/<?php echo $doc['id']?>?highlight=<?php echo $query ?>"><?php echo $doc[$title_field][0]; ?></a></h3>
+            </div> <!-- close item-info -->
+
+
             <div class="clearfix"></div>
             </div> <!-- close item div -->
         </li>
@@ -234,7 +140,7 @@
 
         ?>
     </ul>
-
+    <div class="clearfix"></div>
 
     <div class="pagination">
         <span class="no-results">
