@@ -135,29 +135,8 @@
                         $b_handle_id = preg_replace('/^.*\//', '',$b_handle);
                         $b_uri = './record/'.$b_handle_id.'/'.$b_seq.'/'.$b_filename;
                         $thumbnailLink = "";
-
-                        if(isset($doc[$thumbnail_field])) {
-                            foreach ($doc[$thumbnail_field] as $thumbnail) {
-
-                                $t_segments = explode("##", $thumbnail);
-                                $t_filename = $t_segments[1];
-
-                                if ($t_filename === $b_filename . ".jpg") {
-
-                                    $t_handle = $t_segments[3];
-                                    $t_seq = $t_segments[4];
-                                    $t_uri = './record/'.$b_handle_id.'/'.$t_seq.'/'.$t_filename;
-
-                                    $thumbnailLink = '<a title="' . $doc[$title_field][0] . '" class="fancybox" rel="group' . $j .'" href="' . $b_uri . '"> ';
-                                    $thumbnailLink .= '<img src="'.$t_uri.'" class="search-thumbnail" title="'. $doc[$title_field][0] .'" /></a>';
-                                }
-                            }
-                        }
-                        // there isn't a thumbnail so display the bitstream itself
-                        else {
-                            $thumbnailLink = '<a title="' . $doc[$title_field][0] . '" class="fancybox" rel="group' . $j .'" href="' . $b_uri . '"> ';
-                            $thumbnailLink .= '<img src="'.$b_uri.'" class="search-thumbnail" title="'. $doc[$title_field][0] .'" /></a>';
-                        }
+                        $thumbnailLink = '<a title="' . $doc[$title_field][0] . '" class="fancybox" rel="group' . $j .'" href="' . $b_uri . '"> ';
+                        $thumbnailLink .= '<img src="'.$b_uri.'" class="random-thumbnailimg" title="'. $doc[$title_field][0] .'" /></a>';
 
                         echo $thumbnailLink;
                     }
