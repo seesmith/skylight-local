@@ -1,9 +1,10 @@
 <?php
 
+$author_field = $this->skylight_utilities->getField("Principal Investigator");
 $type_field = $this->skylight_utilities->getField("Type");
 $bitstream_field = $this->skylight_utilities->getField("Bitstream");
 $thumbnail_field = $this->skylight_utilities->getField("Thumbnail");
-$subject_field = $this->skylight_utilities->getField("Subject");
+$area_field = $this->skylight_utilities->getField("Business Area");
 $link_uri_field = $this->skylight_utilities->getField("Link");
 $filters = array_keys($this->config->item("skylight_filters"));
 
@@ -15,22 +16,21 @@ if(isset($solr[$type_field])) {
     $type = "media-" . strtolower(str_replace(' ','-',$solr[$type_field][0]));
 }
 
-
 ?>
 
 <h1 class="itemtitle"><?php echo $record_title ?></h1>
 <div class="tags">
     <?php
 
-    if (isset($solr[$subject_field])) {
-        foreach($solr[$subject_field] as $subject) {
+    if (isset($solr[$area_field])) {
+        foreach($solr[$area_field] as $area) {
 
-            $orig_filter = urlencode($subject);
+            $orig_filter = urlencode($area);
 
-            $lower_orig_filter = strtolower($subject);
+            $lower_orig_filter = strtolower($area);
             $lower_orig_filter = urlencode($lower_orig_filter);
 
-            echo '<a class="$month" href="./search/*:*/%22Subject'.$lower_orig_filter.'%7C%7C%7C'.$orig_filter.'%22">'.$subject.'</a>';
+            echo '<a class="$month" href="./search/*:*/Business Area:%22'.$lower_orig_filter.'%7C%7C%7C'.$orig_filter.'%22">'.$area.'</a>';
         }
     }
 

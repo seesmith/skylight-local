@@ -112,16 +112,7 @@ else {
                     <div class="tags">
 
                         <?php
-                        // TODO: Make highlighting configurable
 
-                        if(array_key_exists('highlights',$doc)) {
-                            ?> <p><?php
-                            foreach($doc['highlights'] as $highlight) {
-                                echo "...".$highlight."...".'<br/>';
-                            }
-                            ?></p><?php
-                        }
-                        else {
                             if(array_key_exists($abstract_field, $doc)) {
                                 echo '<p>';
                                 $abstract =  $doc[$abstract_field][0];
@@ -139,7 +130,6 @@ else {
                                 echo $shortened.$suffix;
                                 echo '</p>';
                             }
-                        }
 
                         ?>
 

@@ -15,6 +15,9 @@
                 </div>-->
             </div>
             <div class="footer-disclaimer">
+                <div class="footer-logo">
+                    <a href="http://www.ed.ac.uk/schools-departments/information-services/about/organisation/library-and-collections" target="_blank" class="luclogo" title="Library &amp; University Collections Home"></a>
+                </div>
                 <div class="footer-policies">
                     <p>A University of Edinburgh, Library and University Collections site.</p>
                     <p><a href="http://www.ed.ac.uk/about/website/privacy" title="Privacy and Cookies Link"  target="_blank">Privacy &amp; Cookies</a>
