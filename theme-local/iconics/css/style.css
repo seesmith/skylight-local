@@ -269,8 +269,9 @@ footer                  { display: block; padding-bottom: 20px; width: 100%; bac
 .randoms                { width: 940px; }
 .random-first           { width: 540px; float: left; }
 .random-first-image     { width: 480px; border: 1px solid #666;}
-.random-list            { width: 400px; float: left; }
+.random-firstinfo       { display: block; min-height:60px; text-align: left; width: 480px; padding: 0 0 5px 5px; }
 
+.random-list            { width: 400px; float: left; }
 .random-listing 		            { list-style-type: none; margin: 0; }
 .random-listing li                  { position: relative; background: #F4F0EB; margin-bottom: 10px; }
 .random-listing li :hover           { background: #B2D8EC; }
