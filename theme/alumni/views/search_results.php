@@ -96,20 +96,6 @@
                             ?>
                         <?php } ?>
 
-
-                        <?php
-                        // TODO: Make highlighting configurable
-
-                        if(array_key_exists('highlights',$doc)) {
-                            ?> <p><?php
-                            foreach($doc['highlights'] as $highlight) {
-                                echo "...".$highlight."...".'<br/>';
-                            }
-                            ?></p><?php
-                        }
-
-                        ?>
-
                     </div> <!-- close tags div -->
 
                 </div> <!-- close item-info -->

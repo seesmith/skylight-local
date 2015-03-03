@@ -110,33 +110,23 @@
                                 <?php } ?>
 
                             <?php
-                            // TODO: Make highlighting configurable
 
-                            if(array_key_exists('highlights',$doc)) {
-                                ?> <p><?php
-                                foreach($doc['highlights'] as $highlight) {
-                                    echo "...".$highlight."...".'<br/>';
+                            if(array_key_exists($abstract_field, $doc)) {
+                                echo '<p>';
+                                $abstract =  $doc[$abstract_field][0];
+                                $abstract_words = explode(' ',$abstract);
+                                $shortened = '';
+                                $max = 40;
+                                $suffix = '...';
+                                if($max > sizeof($abstract_words)) {
+                                    $max = sizeof($abstract_words);
+                                    $suffix = '';
                                 }
-                                ?></p><?php
-                            }
-                            else {
-                                if(array_key_exists($abstract_field, $doc)) {
-                                    echo '<p>';
-                                    $abstract =  $doc[$abstract_field][0];
-                                    $abstract_words = explode(' ',$abstract);
-                                    $shortened = '';
-                                    $max = 40;
-                                    $suffix = '...';
-                                    if($max > sizeof($abstract_words)) {
-                                        $max = sizeof($abstract_words);
-                                        $suffix = '';
-                                    }
-                                    for ($i=0 ; $i<$max ; $i++){
-                                        $shortened .= $abstract_words[$i] . ' ';
-                                    }
-                                    echo $shortened.$suffix;
-                                    echo '</p>';
+                                for ($i=0 ; $i<$max ; $i++){
+                                    $shortened .= $abstract_words[$i] . ' ';
                                 }
+                                echo $shortened.$suffix;
+                                echo '</p>';
                             }
 
                             ?>
