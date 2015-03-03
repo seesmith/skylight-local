@@ -26,17 +26,18 @@ $config['skylight_oaipmhcollection'] = 'hdl_10683_19396';
 $config['skylight_oaipmhallowed'] = true;
 
 // Container ID and the field used in solr index to store this ID. Used for restricting search/browse scope.
-$config['skylight_container_id'] = '18';
+$config['skylight_container_id'] = '44';
 $config['skylight_container_field'] = 'location.coll';
 $config['skylight_sitemap_type'] = 'internal';
 
 $config['skylight_fields'] = array('Title' => 'dc.title.en',
     'Alternative Title' => 'dc.title.alternative.en',
+    'Principal Investigator' => 'dc.contributor.author.en',
     'Owner' => 'project.owner.en',
     'Reference' => 'dc.identifier.other',
     'Link' => 'dc.identifier.uri',
-    'Subject' => 'dc.subject.en',
-    'Type' => 'dc.type.en',
+    'Business Area' => 'dc.subject.en',
+    'Project Status' => 'dc.type.en',
     'Date' => 'dc.date.issued',
     'Dates' => 'dc.coverage.temporal.en',
     'Bitstream'=> 'dc.format.original.en',
@@ -44,46 +45,42 @@ $config['skylight_fields'] = array('Title' => 'dc.title.en',
     'Description'=>'dc.description.en',
     'Format' => 'dc.format.en',
     'Identifier' => 'dc.identifier.other',
-    'Area' => 'project.area.en',
-    'Objective' => 'project.objective.en',
-    'Status' => 'project.status.en',
+    'Objective' => 'dc.description.abstract.en',
     'Funding Source' => 'project.fund.source.en',
     'Amount' => 'project.fund.amount.en',
     'Cost Centre' => 'project.cost.centre.en',
     'Comments' => 'project.comments.en',
     'Duration' => 'project.duration.en',
     'Partnership' => 'project.partnership.en',
-    'PI' => 'project.pi.en',
     'Staff' => 'project.staff.en',
     'Skills' => 'project.skills.en',
     'Technology' => 'project.tech.en'
 );
 
-$config['skylight_related_fields'] = array('Title','Subject',);
+$config['skylight_related_fields'] = array('Business Area','Principal Investigator',);
 
 $config['skylight_date_filters'] = array('Date' => 'dateIssued.year_sort');
-$config['skylight_filters'] = array('Subject' => 'subject_filter','status' => 'status_filter');
+$config['skylight_filters'] = array('Project Status' => 'type_filter','Business Area' => 'subject_filter','Principal Investigator' => 'author_filter');
 
 $config['skylight_filter_delimiter'] = ':';
 
 $config['skylight_meta_fields'] = array('Title' => 'dc.title',
-    'Subject' => 'dc.subject',
-    'Type' => 'dc.type',
+    'Business Area' => 'dc.subject',
+    'Project Status' => 'dc.type',
 );
 
 $config['skylight_recorddisplay'] = array('Title',
-    'PI',
+    'Principal Investigator',
     'Owner',
     'Date',
     'Objective',
-    'Status',
-    'Subject',
+    'Project Status',
+    'Business Area',
     'Description',
     'Identifier',
-    'Area',
     'Funding Source',
     #'Amount',
-   #'Cost Centre',
+    #'Cost Centre',
     'Comments',
     'Duration',
     'Partnership',
@@ -91,24 +88,24 @@ $config['skylight_recorddisplay'] = array('Title',
     'Skills',
     'Technology');
 
-$config['skylight_searchresult_display'] = array('Title','DateIssued','Owner','PI','Objective','Area','Subject','Description','Identifier','Status','Source','PI', 'Bitstream', 'Thumbnail');
+$config['skylight_searchresult_display'] = array('Title','Date','Owner','Principal Investigator','Objective','Business Area','Description','Identifier','Project Status','Source', 'Bitstream', 'Thumbnail');
 
 $config['skylight_search_fields'] = array(
-    'Subject' => 'dc.subject',
-    'Type' => 'dc.type',
-    'Creator' => 'dc.contributor.author',
+    'Business Area' => 'dc.subject',
+    'Project Status' => 'dc.type',
+    'Principal Investigator' => 'dc.contributor.author',
 );
 
-$config['skylight_related_fields'] = array('Subject' => 'dc.subject.en', 'Creator' => 'dc.contributor.author.en');
+$config['skylight_related_fields'] = array('Business Area' => 'dc.subject.en', 'Principal Investigator' => 'dc.contributor.author.en');
 
 $config['skylight_sort_fields'] = array('Title' => 'dc.title_sort',
-    'Subject' => 'dc.subject_sort'
+    'Date' => 'dateIssued.year_sort'
 );
 
 $config['skylight_feed_fields'] = array('Title' => 'Title',
-    'Subject' => 'Subject',
-    'Origin' => 'Origin',
-    'Identifier' => 'Identifier');
+    'Business Area' => 'Business Area',
+    'Project Status' => 'Project Status',
+    'Principal Investigator' => 'Principal Investigator');
 
 $config['skylight_results_per_page'] = 15;
 $config['skylight_share_buttons'] = false;
