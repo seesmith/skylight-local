@@ -58,11 +58,35 @@
         <?php
 
         $j = 0;
+
         foreach ($docs as $index => $doc) {
-        ?>
-
-
-        <li<?php if($index == 0) { echo ' class="first"'; } elseif($index == sizeof($docs) - 1) { echo ' class="last"'; } ?>>
+            $li_classes = '';
+            if($index == 0 || ($index %4 == 0)) {
+                $li_classes = 'first';
+            }
+            elseif($index == sizeof($docs) - 5) {
+                $li_classes = 'last';
+            }
+            if($index <= 3) {
+                if (empty($li_classes))
+                {
+                    $li_classes = 'top';
+                }
+                else{
+                    $li_classes = $li_classes .'top';
+                }
+            }
+            elseif($index > sizeof($docs) - 4) {
+                if (empty($li_classes))
+                {
+                    $li_classes = 'last';
+                }
+                else{
+                    $li_classes = $li_classes .', last';
+                }
+            }
+       ?>
+        <li class="<?php echo $li_classes; ?>">
         <div class="item-div">
             <div class = "thumbnail-image">
                 <?php

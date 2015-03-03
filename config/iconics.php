@@ -52,6 +52,13 @@ $config['skylight_meta_fields'] = array('Title' => 'dc.title.en',
     'Thumbnail'=> 'dc.format.thumbnail'
 );
 
+$config['skylight_related_fields'] = array(
+    'Subject' => 'dc.subject.en',
+    'Type' => 'dc.type.en',
+    'Author' => 'dc.contributor.author.en'
+
+);
+
 $config['skylight_recorddisplay'] = array('Author','Type','Subject');
 
 $config['skylight_searchresult_display'] = array('Title','Author','Subject','Type','Abstract');
@@ -90,7 +97,7 @@ $config['skylight_lightbox_mimes'] = array('image/jpeg', 'image/gif', 'image/png
 // Language and locale settings
 $config['skylight_language_default'] = 'en';
 $config['skylight_language_options'] = array('en', 'ko', 'jp');
-$config['skylight_highlight_fields'] = 'dc.title.en,dc.contributor.author,dc.subject.en,lido.country.en,dc.description.en,dc.relation.ispartof.en';
+$config['skylight_highlight_fields'] = 'dc.title.en,dc.contributor.author,dc.subject.en,dc.description.en';
 
 $config['skylight_homepage_recentitems'] = false;
 $config['skylight_homepage_randomitems'] = true;
