@@ -4,12 +4,12 @@
 // in $config['skylight_searchresult_display']
 
 $title_field = $this->skylight_utilities->getField('Title');
-$pi_field = $this->skylight_utilities->getField('PI');
+$pi_field = $this->skylight_utilities->getField('Principal Investigator');
 $date_field = $this->skylight_utilities->getField('DateIssued');
-$type_field = $this->skylight_utilities->getField('Type');
+$dates_field = $this->skylight_utilities->getField('Dates');
 $abstract_field = $this->skylight_utilities->getField('Objective');
-$status_field = $this->skylight_utilities->getField('Status');
-$area_field = $this->skylight_utilities->getField('Area');
+$status_field = $this->skylight_utilities->getField('Project Status');
+$area_field = $this->skylight_utilities->getField('Business Area');
 
 $base_parameters = preg_replace("/[?&]sort_by=[_a-zA-Z+%20. ]+/", "", $base_parameters);
 if ($base_parameters == "") {
@@ -58,14 +58,6 @@ if ($base_parameters == "") {
     foreach ($docs as $index => $doc) {
         ?>
 
-        <?php
-        $type = 'Unknown';
-
-        if (isset($doc[$type_field])) {
-            $type = "media-" . strtolower(str_replace(' ', '-', $doc[$type_field][0]));
-        }
-        ?>
-
         <li<?php if ($index == 0) {
             echo ' class="first"';
         } elseif ($index == sizeof($docs) - 1) {
@@ -74,49 +66,18 @@ if ($base_parameters == "") {
             <div class="item-div">
                 <div class="iteminfo">
                     <h3>
-                        <a href="./record/<?php echo $doc['id'] ?>?highlight=<?php echo $query ?>"><?php echo $doc[$title_field][0]; ?></a>
+                        <a href="./record/<?php echo $doc['id'] ?>"><?php echo $doc[$title_field][0]; ?></a>
                     </h3>
 
                     <div class="search-results">
 
-
-                        <?php
-                        // TODO: Make highlighting configurable
-
-                        if (array_key_exists('highlights', $doc)) {
-                            ?> <p><?php
-                            foreach ($doc['highlights'] as $highlight) {
-                                echo "..." . $highlight . "..." . '<br/>';
-                            }
-                            ?></p><?php
-                        } else {
-                            if (array_key_exists($abstract_field, $doc)) {
-                                echo '<p>';
-                                $abstract = $doc[$abstract_field][0];
-                                $abstract_words = explode(' ', $abstract);
-                                $shortened = '';
-                                $max = 40;
-                                $suffix = '...';
-                                if ($max > sizeof($abstract_words)) {
-                                    $max = sizeof($abstract_words);
-                                    $suffix = '';
-                                }
-                                for ($i = 0; $i < $max; $i++) {
-                                    $shortened .= $abstract_words[$i] . ' ';
-                                }
-                                echo $shortened . $suffix;
-                                echo '</p>';
-                            }
-                        }
-
-                        ?>
                         <table>
-                        <?php if (array_key_exists($date_field, $doc)) { ?>
+                        <?php if (array_key_exists($dates_field, $doc)) { ?>
 
                             <?php
-                            echo '<tr><th>Date:</th><td>' . $doc[$date_field][0]  . '</td></tr>';
+                            echo '<tr><th>Dates:</th><td>' . $doc[$dates_field][0]  . '</td></tr>';
                         } elseif (array_key_exists('dateIssued', $doc)) {
-                            echo '<tr><th>Date:</th><td>' . $doc['dateIssued'][0] . '</td></tr>';
+                            echo '<tr><th>Date:</th><td>' . date('jS F Y', strtotime($doc['dateIssued'][0])) . '</td></tr>';
                         }
 
                         ?>
@@ -125,7 +86,7 @@ if ($base_parameters == "") {
                             <?php
 
                             $num_subject = 0;
-                            echo '<tr><th>Area:</th><td>';
+                            echo '<tr><th>Business Area:</th><td>';
 
                             foreach ($doc[$area_field] as $area) {
 
@@ -134,13 +95,13 @@ if ($base_parameters == "") {
                                 $lower_orig_filter = strtolower($area);
                                 $lower_orig_filter = urlencode($lower_orig_filter);
 
-                                echo '<a href="./search/*:*/Area:%22' . $lower_orig_filter . '%7C%7C%7C' . $orig_filter . '%22">' . $area . '</a>' . '<br/>';
+                                echo '<a href="./search/*:*/Business Area:%22' . $lower_orig_filter . '%7C%7C%7C' . $orig_filter . '%22">' . $area . '</a>' . '&nbsp;&nbsp';
                                 $num_subject++;
                                 if ($num_subject < sizeof($doc[$area_field])) {
-                                    echo '</td>';
+                                    //echo '</td>';
                                 }
                             }
-                            echo '</tr>';
+                            echo '</td></tr>';
 
                             ?>
                         <?php } ?>
@@ -150,7 +111,7 @@ if ($base_parameters == "") {
 
                             $num_authors = 0;
 
-                            echo '<tr><th>PI:</th><td>';
+                            echo '<tr><th>Principal Investigator:</th><td>';
                             foreach ($doc[$pi_field] as $pi) {
                                 // test author linking
                                 // quick hack that only works if the filter key
@@ -159,13 +120,13 @@ if ($base_parameters == "") {
 
                                 $lower_orig_filter = strtolower($pi);
                                 $lower_orig_filter = urlencode($lower_orig_filter);
-                                echo $pi . '<br/>';
+                                echo '<a href="./search/*:*/Principal Investigator:%22' . $lower_orig_filter . '%7C%7C%7C' . $orig_filter . '%22">' . $pi . '</a>' . '&nbsp;&nbsp';
                                 $num_authors++;
                                 if ($num_authors < sizeof($doc[$pi_field])) {
-                                    echo '</td>';
+                                    //echo '</td>';
                                 }
                             }
-                            echo '</tr>';
+                            echo '</td></tr>';
 
 
                             ?>
@@ -176,7 +137,7 @@ if ($base_parameters == "") {
                             <?php
 
                             $num_status = 0;
-                            echo '<tr><th>Status:</th><td>';
+                            echo '<tr><th>Project Status:</th><td>';
 
                             foreach ($doc[$status_field] as $status) {
 
@@ -185,7 +146,7 @@ if ($base_parameters == "") {
                                 $lower_orig_filter = strtolower($status);
                                 $lower_orig_filter = urlencode($lower_orig_filter);
 
-                                echo '<a href="./search/*:*/Status:%22' . $lower_orig_filter . '%7C%7C%7C' . $orig_filter . '%22">' . $status . '</a>' . '<br/>';
+                                echo '<a href="./search/*:*/Project Status:%22' . $lower_orig_filter . '%7C%7C%7C' . $orig_filter . '%22">' . $status . '</a>' . '&nbsp;&nbsp';
                                 $num_status++;
                                 if ($num_status < sizeof($doc[$status_field])) {
                                     echo '</td>';
@@ -195,6 +156,39 @@ if ($base_parameters == "") {
 
                             ?>
                         <?php } ?>
+
+
+                        <?php if (array_key_exists($abstract_field, $doc))  { ?>
+                            <?php
+                            echo '<tr><td colspan="2">';
+                                $abstract = $doc[$abstract_field][0];
+                                echo '<p class="abstract">' . $abstract . '<p>';
+                            /*
+                                $abstract_words = explode(' ', $abstract);
+                                $shortened = '';
+                                $max = 200;
+                                $suffix = '...';
+                                if ($max > sizeof($abstract_words)) {
+                                $max = sizeof($abstract_words);
+                                $suffix = '';
+                                }
+                                for ($i = 0; $i < $max; $i++) {
+                                $shortened .= $abstract_words[$i] . ' ';
+                                }
+                                echo $shortened . $suffix;
+                            */
+                            echo '</td></tr>';
+
+                            ?>
+                        <?php } ?>
+
+
+
+
+
+
+
+
                         </table>
 
 
