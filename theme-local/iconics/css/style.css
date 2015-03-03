@@ -190,10 +190,11 @@ header				{ position: relative; width: 940px; height: 140px; background-color: #
 .search .advanced 				{ text-transform: uppercase; font-size: 10px; text-decoration: none; }
 .search .advanced:hover			{ text-decoration: underline; }
 
-.item-div                       { width: 155px; text-align: center; display: block; }
-.iteminfo                       { display: block; min-height:100px; text-align: center; width: 85%; float:left; }
+.item-div                       { padding: 10px 0 10px 10px; width: 155px; text-align: center; display: block; }
+.iteminfo                       { display: block; min-height:100px; max-height:100px;  text-align: center; width: 140px; float:left; }
 .iteminfo h3                    { font-size: 18px; margin-top: 5px; }
 .thumbnail-image                { display: block;  width: 140px;  min-height:135px;}
+
 
 .thumbnail-strip                { max-width: 660px; display: block; }
 .thumbnail-tile                 { margin-top: 20px; margin-left: 20px; float: left; }
@@ -258,10 +259,10 @@ footer                  { display: block; padding-bottom: 20px; width: 100%; bac
 .footer-policies p      { font-size: 12px; color: #555555}
 
 .is-logo                { display: block; float: left; padding-left: 10px; }
-.islogo                 { display: block; width: 50px; height: 64px; background: url(../images/islogo.gif) no-repeat 0px 0px; }
+.islogo                 { display: block; width: 50px; height: 64px; background: url(../images/islogo.gif) no-repeat 0 0; }
 
-.tag-line               { padding: 10px 40px 10px 40px;}
-.tag-line h1            { color: #666;}
+.tag-line               { padding: 1px 50px 15px 50px;background: url(../images/thairtoremain.gif) no-repeat 0 0; text-align: center;}
+.tag-line h1            { color: #444;}
 
 /* random items */
 
@@ -289,11 +290,10 @@ footer                  { display: block; padding-bottom: 20px; width: 100%; bac
 #quad 							    { list-style-type: none; margin: 0; }
 #quad ul                            { width: 660px; overflow: hidden; }
 #quad li                            { margin-left: 3px; margin-bottom: 1.5px; margin-top: 1.5px; width: 24.5%;
-                                    background: #F4F0EB; height: 200px; line-height: 1.5em; float: left; display: inline;
-                                    padding: 10px 0 10px 10px;}
-#quad li .notleft                   { margin-left: 3px;}
+                                    background: #F4F0EB; height: 200px; float: left; }
 #quad li h3 						{ margin-bottom: 8px; font-size: 12px}
 #quad li p 						    { font-size: 12px; margin: 0; }
+
 
 
 .listing 							{ list-style-type: none; margin: 0; }

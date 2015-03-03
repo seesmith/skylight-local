@@ -63,7 +63,6 @@
 
 
         <li<?php if($index == 0) { echo ' class="first"'; } elseif($index == sizeof($docs) - 1) { echo ' class="last"'; } ?>>
-            <!--span class="icon <?php echo $type?>"></span-->
         <div class="item-div">
             <div class = "thumbnail-image">
                 <?php
