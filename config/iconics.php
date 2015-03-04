@@ -21,8 +21,6 @@ else {
     $config['skylight_ga_code'] = 'UA-25737241-9';
 }
 
-
-
 // Container ID and the field used in solr index to store this ID. Used for restricting search/browse scope.
 $config['skylight_container_id'] = '31';
 $config['skylight_container_field'] = 'location.coll';
@@ -39,7 +37,7 @@ $config['skylight_fields'] = array('Title' => 'dc.title.en',
 );
 
 $config['skylight_date_filters'] = array();
-$config['skylight_filters'] = array('Author' => 'author_filter', 'Subject' => 'subject_filter', 'Type' => 'type_filter');
+$config['skylight_filters'] = array('Subject' => 'subject_filter', 'Type' => 'type_filter');
 $config['skylight_filter_delimiter'] = ':';
 
 $config['skylight_meta_fields'] = array('Title' => 'dc.title.en',

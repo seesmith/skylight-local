@@ -73,7 +73,7 @@
                 </a>
             </li>
             <li class="tile">
-                <a href="http://www.ed.ac.uk/schools-departments/information-services/library-museum-gallery/crc/events-exhibitions" target="_blank" class="caption">
+                <a href="<?php echo base_url(); ?>iconics" target="_blank" class="caption">
                     <img src="<?php echo base_url(); ?>theme/<?php echo $this->config->item('skylight_theme'); ?>/images/westmanutile.jpg" alt="Edinburgh University Iconics Home" title="Edinburgh University Iconics Home">
                     <span onmouseover="this.style.background='#005784';this.style.color='#FFF'" onmouseout="this.style.background='#FFFFFF';this.style.color='#005784'">Iconics</span>
                 </a>

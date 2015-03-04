@@ -261,7 +261,7 @@ footer                  { display: block; padding-bottom: 20px; width: 100%; bac
 .is-logo                { display: block; float: left; padding-left: 10px; }
 .islogo                 { display: block; width: 50px; height: 64px; background: url(../images/islogo.gif) no-repeat 0 0; }
 
-.tag-line               { padding: 1px 50px 15px 50px;background: url(../images/thairtoremain.gif) no-repeat 0 0; text-align: center;}
+.tag-line               { padding: 1px 50px 1px 50px; background: url(../images/thairtoremain.gif) no-repeat 0 0; text-align: center; border-bottom: solid 1px #333; margin-bottom: 15px;}
 .tag-line h1            { color: #444;}
 
 /* random items */
@@ -318,16 +318,16 @@ footer                  { display: block; padding-bottom: 20px; width: 100%; bac
 .tags a:hover			            { background: #005784; color: #fff; text-decoration: none; }
 .tags a.subject                     { display:inline-block; line-height: 15px; margin-bottom: 5px; }
 
-.listing-filter						{ padding: 0; border: none; border-top: 1px solid #333; border-bottom: 1px solid #333333; line-height: 33px; text-align: right; position: relative; }
-.listing-filter .no-results			{ position: absolute; top: 0; left: 0; }
+.listing-filter						{ text-align: right; position: relative; color: #fff; line-height: 25px; font-weight: bold; text-transform: uppercase; font-size: 12px; margin-bottom: 0; background: #333333; padding: 0; }
+.listing-filter .no-results			{ position: absolute; top: 0; left: 0; padding-left: 5px;}
 .ie7 .listing-filter .no-results	{ top: -10px; }
-.listing-filter .sort				{ font-size: 10px; text-transform: uppercase; color: #666; padding-right: 10px; }
-.listing-filter .sort a 			{ text-decoration: none; }
-.listing-filter .sort a:hover		{ text-decoration: underline; }
-.listing-filter .sort strong		{ color: #333; }
+.listing-filter .sort				{ font-size: 10px; text-transform: uppercase; color: #fff; padding-right: 10px; }
+.listing-filter .sort a 			{ text-decoration: underline; color: #fff;}
+.listing-filter .sort a:hover		{ text-decoration: underline; color: #FE2842;}
+.listing-filter .sort strong		{ color: #fff; }
 .listing-filter .sort em			{ padding-left: 10px; font-style: normal; }
-.search-thumbnail                   { max-width: 140px; max-height: 130px; }
 
+.search-thumbnail                   { max-width: 140px; max-height: 130px; }
 
 .icon 								{ display: block; width: 54px; height: 32px; background: url(../images/bg-icons.png) no-repeat 0px 0px; position: absolute; top: 0; left: -54px; background-position: -908px 0; }
 h1 .icon							{ top: -5px; left: -65px; }
@@ -353,25 +353,20 @@ h1 .icon							{ top: -5px; left: -65px; }
 .small-icon.media-img				{ background-position: 0px -40px; }
 .small-icon.media-book				{ background-position: 0px -60px; }
 
-.pagination							{ line-height: 33px; text-align: center; position: relative; font-size: 11px; font-weight: bold; margin-bottom: -15px; min-height: 33px; border-radius: 0; display: block; margin: 0; padding-left: 0; }
-.pagination a 						{ color: #666; text-decoration: none; display: inline-block; padding: 0 5px; }
-.pagination a.selected 				{ background: #e8e8e8; color: #333; }
-.pagination a:hover					{ color: #333; text-decoration: underline; }
+.pagination							{ line-height: 26px; text-align: center; position: relative; font-size: 11px; font-weight: bold; min-height: 26px; border-radius: 0; display: block; margin: 0; padding-left: 0; background: #333; color: #fff;}
+.pagination a 						{ color: #fff; text-decoration: none; display: inline-block; padding: 0 5px; }
+.pagination a.selected 				{ color: #FE2842; }
+.pagination a:hover					{ color: #FE2842; text-decoration: underline; }
 .pagination .prev,
-.pagination .next					{ display: block; position: absolute; top: 0; font-size: 11px; background: url(../images/bg-arrows.png) no-repeat 0px 0px; }
+.pagination .next					{ display: block; position: absolute; top: 0; font-size: 11px; background: url(../images/bg-arrows.png) no-repeat 0 0; }
 .pagination .prev					{ left: 0; padding: 0 10px 0 25px; }
-.pagination .next					{ right: 0; padding: 0 25px 0 10px; background-position: 100% -33px !important; }
+.pagination .next					{ right: 0; padding: 0 25px 0 10px; background-position: 100% -26px !important; }
 .pagination .prev:hover,
-.pagination .next:hover 			{ background: #def5fb url(../images/bg-arrows.png) no-repeat; }
+.pagination .next:hover 			{ background: #333 url(../images/bg-arrows.png) no-repeat; text-decoration: none; }
 
-.pagination .no-results {
-    left: 0;
-    position: absolute;
-    font-weight: normal;
-    font-size: 13px;
-}
+.pagination .no-results             { left: 5px; position: absolute; font-weight: normal; font-size: 13px; }
 
-.curpage                            { color: #005784; display: inline-block; padding: 0 5px; text-decoration: underline; }
+.curpage                            { color: #FE2842; display: inline-block; padding: 0 5px; text-decoration: none; }
 
 .browse_pagination                  { display: block; border-bottom: 1px solid #333; }
 .browse_results                     { margin-top: 30px; margin-bottom: 20px; }
