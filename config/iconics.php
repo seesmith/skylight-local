@@ -80,6 +80,9 @@ $config['skylight_share_buttons'] = false;
 
 // $config['skylight_homepage_recentitems'] = false;
 
+// limit of number of terms in each facet
+$config['skylight_facet_limit'] = 20;
+
 // Set to the number of minutes to cache pages for. Set to false for no caching.
 // This overrides the setting in skylight.php so is commented by Demo
 $config['skylight_cache'] = false;

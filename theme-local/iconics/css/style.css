@@ -190,7 +190,8 @@ header				{ position: relative; width: 940px; height: 140px; background-color: #
 .search .advanced 				{ text-transform: uppercase; font-size: 10px; text-decoration: none; }
 .search .advanced:hover			{ text-decoration: underline; }
 
-.item-div                       { padding: 10px 0 10px 10px; width: 155px; text-align: center; display: block; }
+.item-div                       { padding: 10px 0 10px 10px; width: 162px; height: 200px; text-align: center; display: block; }
+.item-div:hover                 { background-color: #B2D8EC; }
 .iteminfo                       { display: block; min-height:100px; max-height:100px;  text-align: center; width: 140px; float:left; }
 .iteminfo h3                    { font-size: 18px; margin-top: 5px; }
 .thumbnail-image                { display: block;  width: 140px;  min-height:135px;}
