@@ -130,7 +130,7 @@ input.btn						{
     background: #005784; border: none; height: 28px; color: #fff; text-transform: uppercase; font-size: 14px; margin-left: 8px; font-weight: bold; padding: 0 10px;
     -webkit-border-radius: 5px; -moz-border-radius: 5px; border-radius: 5px; text-shadow: rgba(0,0,0,0.3) 0px -1px 0px;
 }
-input.btn:hover					{ color: #fff; background: #B2D8EC; }
+input.btn:hover					{ color: #fff; background: #ff2741; }
 
 input.backbtn						{
     background: #005784; border: none; height: 24px; color: #fff; text-transform: uppercase; font-size: 12px; margin-left: 8px; font-weight: bold; padding: 0 10px;
@@ -174,8 +174,8 @@ header				{ position: relative; width: 940px; height: 140px; background-color: #
 
 #collection-title	            { display: block; width: 540px; height: 88px; padding: 10px 0; float: left; }
 .uoelogo                        { display: block; width: 119px; height: 88px; float: left; background: url(../images/UoELogo.gif) no-repeat 0 0;}
-.iconicslogo                { display: block; width: 421px; height: 88px; float: left; background: url(../images/iconicsLogo2.gif) no-repeat 0 0;}
-.iconicslogo:hover          { display: block; background: url(../images/iconicsLogo2.gif) no-repeat 0 -88px; }
+.iconicslogo                    { display: block; width: 421px; height: 88px; float: left; background: url(../images/IconicsLogo.png) no-repeat 0 0;}
+.iconicslogo:hover              { display: block; background: url(../images/IconicsLogo.png) no-repeat 0 -88px; }
 
 #collection-search              { display: block; width: 400px; padding: 52px 20px 20px; float: left; }
 
@@ -215,7 +215,7 @@ span[id^="video-"]              { margin: 5px 0; }
     background: #333333 url(../images/bg-arrows.png) no-repeat 100% -92px;
     display: block; color: #fff; text-decoration: none; width: 241px; padding-left: 17px; position: relative; left: -17px;
 }
-.col-sidebar h4 a:hover         { background: #B2D8EC url(../images/bg-arrows.png) no-repeat 100% -92px; }
+.col-sidebar h4 a:hover         { background: #ff2741 url(../images/bg-arrows.png) no-repeat 100% -92px; }
 .col-sidebar ul 				{ list-style-type: none; margin: 0 0 17px 0; font-size: 12px; }
 .col-sidebar ul li 				{ line-height: 16px; padding: 0 17px; }
 .col-sidebar ul a 				{ text-decoration: none; display: block; }
@@ -233,7 +233,7 @@ span[id^="video-"]              { margin: 5px 0; }
 .col-sidebar ul.related li a:hover			{ background: none; text-decoration: underline; }
 .col-sidebar ul.related .tags				{ margin: 0 0 0 0; }
 .col-sidebar ul.related .tags a 			{ padding: 2px 5px; display: inline-block; background: #ffffff; color: #333333;}
-.col-sidebar ul.related .tags a:hover		{ text-decoration: underline; background: #B2D8EC; color: #fff; }
+.col-sidebar ul.related .tags a:hover		{ text-decoration: none; background: #ff2741; color: #fff; }
 
 .col-sidebar ul.related li a.related-record { font-size: 14px; padding-bottom: 5px;}
 
@@ -254,7 +254,7 @@ footer                  { display: block; padding-bottom: 20px; width: 100%; bac
 .footer-disclaimer      { display: block; width: 625px; margin: auto; height: 70px;}
 
 .footer-logo            { display: block; float: left; }
-.luclogo                { display: block; width: 64px; height: 64px; background: url(../images/CollectionsLUCLogo.png) no-repeat 0px 0px; }
+.luclogo                { display: block; width: 64px; height: 64px; background: url(../images/IconicsLUCLogo.png) no-repeat 0px 0px; }
 
 .footer-policies        { display: block; float: left; width: 500px; padding-left: 10px; }
 .footer-policies p      { font-size: 12px; color: #555555}
