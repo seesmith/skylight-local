@@ -8,7 +8,8 @@
     <meta charset="utf-8">
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 
-    <base href="<?php echo base_url() . index_page(); if (index_page() !== '') { echo '/'; } ?>">
+    <base href="<?php echo base_url() . index_page(); if (index_page() !== '') { echo '/'; } echo $this->config->item('skylight_url_prefix'); echo '/' ?>">
+
 
     <title><?php echo $page_title; ?></title>
 
@@ -18,8 +19,7 @@
     Remove this if you use the .htaccess -->
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 
-    <title>University of Edinburgh Library Projects</title>
-
+    <title>University of Edinburgh Iconics</title>
     <meta name="description" content="">
     <meta name="author" content="">
 
@@ -31,6 +31,7 @@
     <link rel="apple-touch-icon" href="<?php echo base_url(); ?>theme/<?php echo $this->config->item('skylight_theme'); ?>/images/apple-touch-icon.png">
 
     <!-- CSS: implied media="all" -->
+    <link rel="stylesheet" href="<?php echo base_url(); ?>assets/bootstrap/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="<?php echo base_url(); ?>theme/<?php echo $this->config->item('skylight_theme'); ?>/css/style.css?v=2">
     <link rel="stylesheet" href="<?php echo base_url(); ?>assets/fancybox/source/jquery.fancybox.css?v=2.1.4" type="text/css" media="screen" />
     <link rel="stylesheet" href="<?php echo base_url(); ?>assets/fancybox/source/helpers/jquery.fancybox-buttons.css?v=1.0.5" type="text/css" media="screen" />
@@ -55,10 +56,8 @@
             (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
             m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
         })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-
         ga('create', '<?php echo $ga_code ?>', 'auto');
         ga('send', 'pageview');
-
     </script>
     <!-- End Google Analytics -->
 
@@ -75,7 +74,6 @@
         <link rel="schema.DCTERMS" href="http://purl.org/dc/terms/" />
 
         <?php
-
         foreach($metafields as $label => $element) {
             $field = "";
             if(isset($recorddisplay[$label])) {
@@ -88,30 +86,40 @@
                 }
             }
         }
-
     } ?>
 
 </head>
-
 <body>
-
 <div id="container">
+    <header>
+        <nav id="menu">
+            <ul class="social-links">
+                <li><a href="https://www.facebook.com/crc.edinburgh" class="facebook-icon" target="_blank" title="CRC on Facebook"></a></li>
+                <li><a href="https://twitter.com/CRC_EdUni" class="twitter-icon" target="_blank" title="CRC on Twitter"></a></li>
+                <li><a href="https://www.flickr.com/photos/crcedinburgh" class="flickr-icon" target="_blank" title="CRC on Flickr"></a></li>
+            </ul>
+            <ul class="menu-links">
+                <li><a href="./feedback/" title="Feedback Link" class="last">Feedback</a></li>
+                <li><a href="http://www.ed.ac.uk/schools-departments/information-services/library-museum-gallery/crc/projects" title="CRC Projects Link" target="_blank">Projects</a></li>
+                <li><a href="http://libraryblogs.is.ed.ac.uk/" title="Library and University Collections Blog" target="_blank">Blog</a></li>
+                <li><a href="http://www.ed.ac.uk/schools-departments/information-services/library-museum-gallery/crc" title="Centre for Research Collections Link" target="_blank">CRC</a></li>
+                <li><a href="./about/" title="About this site">About</a></li>
+                <li><a href="./" title="University Collections Home">Home</a></li>
+            </ul>
+        </nav>
+        <div class="clearfix"></div>
+        <div id="collection-title">
+            <a href="http://www.ed.ac.uk" class="uoelogo" title="The University of Edinburgh Home" target="_blank"></a>
+            <a href="<?php echo base_url(); ?>iconics" class="iconicslogo" title="University of Edinburgh Collections Home"></a>
+        </div>
+        <div id="collection-search">
+            <form action="./redirect/" method="post">
+                <fieldset class="search">
+                    <input type="text" name="q" value="<?php if (isset($searchbox_query)) echo urldecode($searchbox_query); ?>" id="q" placeholder="search the iconics" />
+                    <input type="submit" name="submit_search" class="btn" value="Search" id="submit_search" />
+                </fieldset>
+            </form>
+        </div>
+    </header>
 
-        <header>
-            <div id="collection-title">
-                <a href="http://www.ed.ac.uk" class="uoelogo" title="The University of Edinburgh Home" target="_blank"></a>
-                <a href="<?php echo base_url(); ?>projects" class="head-text" title="University of Edinburgh Projects Home"><?php echo $this->config->item('skylight_fullname');?> </a>
-            </div>
-            <div id="collection-search">
-                <form action="./redirect/" method="post">
-                    <fieldset class="search">
-                        <input type="text" name="q" value="<?php if (isset($searchbox_query)) echo urldecode($searchbox_query); ?>" id="q" />
-                        <input type="submit" name="submit_search" class="btn" value="Search" id="submit_search" />
-                        <a href="./advanced" class="advanced">Advanced search</a>
-                    </fieldset>
-                </form>
-            </div>
-        </header>
-
-        <div id="main" role="main" class="clearfix">
-
+    <div id="main" role="main" class="clearfix">
