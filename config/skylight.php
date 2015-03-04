@@ -4,13 +4,13 @@
 $config['skylight_hostnames'] = array('test.exampapers.ed.ac.uk', 'exampapers.ed.ac.uk', 'images.ph.ed.ac.uk', 'www.scottishgovernmentyearbooks.ed.ac.uk', 'test.scottishgovernmentyearbooks.ed.ac.uk', 'test.exhibitions.ed.ac.uk', 'exhibitions.ed.ac.uk');
 
 // Uncomment this if you want to use urls of the form http://.../prefix/...
-$config['skylight_url_prefixes'] = array('mimed', 'art','calendars');
+$config['skylight_url_prefixes'] = array('mimed', 'art','calendars','iconics');
 
 // For inserting prefixes for handle resolver
 $config['skylight_handle_prefixes'] = array(3 => "art", 11 => "mimed");
 
 // The URL of the parent solr server
-$config['skylight_solrbase'] = 'http://collectionsinternal.is.ed.ac.uk:8080/solr/search/';
+$config['skylight_solrbase'] = 'http://localhost:8080/isdocs/solr/search/';
 
 //DSpace handle server prefix
 $config['skylight_handle_prefix'] = '10683';
@@ -34,7 +34,7 @@ $config['skylight_adminldap_context'] = "ou=users,dc=example,dc=com";
 $config['skylight_adminldap_allowed'] = array('id1', 'id2');
 
 // The OAI-PMH base for the parent server
-$config['skylight_oaipmhbase'] = 'http://collectionsinternal.is.ed.ac.uk:8080/oai/request?';
+$config['skylight_oaipmhbase'] = 'http://localhost:8080/oai/request?';
 
 // The OAI-PMH identifier to replace in OAI-PMH responses
 $config['skylight_oaipmhid'] = 'oai:collectionsmanager.is.ed.ac.uk:10683/';
@@ -43,7 +43,7 @@ $config['skylight_oaipmhid'] = 'oai:collectionsmanager.is.ed.ac.uk:10683/';
 $config['skylight_oaipmhlink'] = 'http://hdl.handle.net/10683/';
 
 // The URL base for where digital objects can be proxied from
-$config['skylight_objectproxy_url'] = 'http://collectionsinternal.is.ed.ac.uk:8080/bitstream/10683/';
+$config['skylight_objectproxy_url'] = 'http://localhost:8080/isdocs/bitstream/10683/';
 
 // Default OAI not permitted
 $config['skylight_oaipmhallowed'] = false;
@@ -74,10 +74,10 @@ $config['skylight_related_fields'] = array('Title' => 'dc.title.en', 'Subject' =
 $config['skylight_related_number'] = 10;
 
 /**
-* Debug / development options.
-*
-* We recommend that these are disabled (or commented out) for production systems
-*/
+ * Debug / development options.
+ *
+ * We recommend that these are disabled (or commented out) for production systems
+ */
 
 // Set to true to enable debugging / profiling information
 // $config['skylight_debug'] = false;
