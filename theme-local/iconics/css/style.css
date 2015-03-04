@@ -158,7 +158,7 @@ header				{ position: relative; width: 940px; height: 140px; background-color: #
 
 #menu                               { width: 940px; border-bottom: 1px solid #333333; margin: 0 auto; height: 33px; }
 .menu-links li					    { display: inline; float: right; height: 33px; padding-left: 0; padding-right: 0; }
-.menu-links li a 			        { font-weight: bold; font-size: 11px; text-transform: uppercase; float: left; text-decoration: none; margin-left: 10px; color: #333333; display: inline-block; height: 33px; line-height: 2.5em; padding: 3px 20px 2px; text-align: center; }
+.menu-links li a 			        { font-weight: bold; font-size: 11px; text-transform: uppercase; float: left; text-decoration: none; margin-left: 10px; color: #333333; display: inline-block; height: 32px; line-height: 2.5em; padding: 3px 20px 2px; text-align: center; }
 .menu-links li a:hover		        { background-color: #B2D8EC; }
 .menu-links li a.last		        { border: none; }
 

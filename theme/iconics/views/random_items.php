@@ -75,9 +75,13 @@
             <div class = "random-firstinfo">
                 <h4><a href="./record/<?php echo $first_doc['id']?>"><?php echo $first_doc[$title_field][0]; ?></a></h4>
                 <?php
-                if (array_key_exists ($abstract_field, $first_doc)){
-                    echo $first_doc[$abstract_field][0];
-                }?>
+                if (isset($first_doc)) {
+                    if (array_key_exists($abstract_field, $first_doc)){
+                        echo $first_doc[$abstract_field][0];
+                    }
+                }
+
+                ?>
             </div>
         </div>
      <div class="random-list">
