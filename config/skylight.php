@@ -23,9 +23,6 @@ $config['skylight_repository_version'] = '181'; // Demo '171'
 // The local path for theme and configuration overrides (if required)
 $config['skylight_local_path'] = '../skylight-local';
 
-// The main username and password (by Demo admin:admin)
-$config['skylight_adminusername'] = 'admin';
-$config['skylight_adminpassword'] = '21232f297a57a5a743894a0e4a801fc3';
 
 // Whether to use LDAP for admin authentication
 $config['skylight_adminldap'] = False;
@@ -54,9 +51,6 @@ $config['skylight_oaipmhallowed'] = false;
 // This can be overridden in site-specific configuration files.
 $config['skylight_cache'] = false;
 
-// Keys required for the recapthca system
-$config['skylight_recaptcha_key_public'] = '6LfwNvESAAAAAGjRS4uoS8SXEn-OjY3XPqF4bwcz';
-$config['skylight_recaptcha_key_private'] = '6LfwNvESAAAAAFqj8NQPkTZ4wKAoa0h6vEDNfSLi';
 
 // Digital object management
 $config['skylight_bitstream_field'] = 'dc.format.original';
