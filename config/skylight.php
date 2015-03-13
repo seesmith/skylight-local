@@ -10,7 +10,7 @@ $config['skylight_url_prefixes'] = array('mimed', 'art', 'calendars', 'iconics',
 $config['skylight_handle_prefixes'] = array(3 => "art", 11 => "mimed");
 
 // The URL of the parent solr server
-$config['skylight_solrbase'] = 'http://collectionsmanager.is.ed.ac.uk/solr/search/';
+$config['skylight_solrbase'] = 'http://collectionssolr.is.ed.ac.uk/search/';
 
 //DSpace handle server prefix
 $config['skylight_handle_prefix'] = '10683';
@@ -35,8 +35,7 @@ $config['skylight_adminldap_context'] = "ou=users,dc=example,dc=com";
 $config['skylight_adminldap_allowed'] = array('id1', 'id2');
 
 // The OAI-PMH base for the parent server
-
-$config['skylight_oaipmhbase'] = 'http://collectionsmanager.is.ed.ac.uk/oai/request?';
+$config['skylight_oaipmhbase'] = 'http://collectionsinternal.is.ed.ac.uk:8080/oai/request?';
 
 // The OAI-PMH identifier to replace in OAI-PMH responses
 $config['skylight_oaipmhid']= 'oai:collectionsmanager.is.ed.ac.uk:10683/';
@@ -46,7 +45,7 @@ $config['skylight_oaipmhid']= 'oai:collectionsmanager.is.ed.ac.uk:10683/';
 $config['skylight_oaipmhlink'] = 'http://hdl.handle.net/10683/';
 
 // The URL base for where digital objects can be proxied from
-$config['skylight_objectproxy_url'] = 'http://collectionsmanager.is.ed.ac.uk/bitstream/10683/';
+$config['skylight_objectproxy_url'] = 'http://collectionsinternal.is.ed.ac.uk:8080/bitstream/10683/';
 
 // Default OAI not permitted
 $config['skylight_oaipmhallowed'] = false;
@@ -66,9 +65,9 @@ $config['skylight_thumbnail_field'] = 'dc.format.thumbnail';
 $config['skylight_display_thumbnail'] = true;
 $config['skylight_link_bitstream'] = true;
 
-// Other options
+// Default options (required as may not be set in other config files)
 $config['skylight_homepage_recentitems'] = true;
-//$config['skylight_facet_limit'] = 10;
+$config['skylight_facet_limit'] = 10;
 
 // Spellchecking / Spelling suggestions
 // Dictionaries must be set up in your local solr configuration
@@ -86,12 +85,6 @@ $config['skylight_related_number'] = 10;
 
 // Set to true to enable debugging / profiling information
 // $config['skylight_debug'] = false;
-
-// Can configuration files be overwritten by the user ?config={vhostname}
-$config['skylight_config_allowoverride'] = false;
-
-// Can themes be overridden by the user using ?theme={themename}
-$config['skylight_theme_allowoverride'] = false;
 
 // Can configuration files be overwritten by the user ?config={vhostname}
 $config['skylight_config_allowoverride'] = false;
