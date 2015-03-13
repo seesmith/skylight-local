@@ -24,6 +24,10 @@ $config['skylight_repository_version'] = '181'; // Demo '171'
 $config['skylight_local_path'] = '../skylight-local';
 
 
+$config['skylight_adminusername'] = '';
+$config['skylight_adminpassword'] = '';
+
+
 // Whether to use LDAP for admin authentication
 $config['skylight_adminldap'] = False;
 $config['skylight_adminldap_server'] = "ldaps://ldap.example.com:636";
@@ -50,6 +54,10 @@ $config['skylight_oaipmhallowed'] = false;
 // Set to the number of minutes to cache pages for. Set to false for no caching.
 // This can be overridden in site-specific configuration files.
 $config['skylight_cache'] = false;
+
+// Keys required for the recapthca system
+$config['skylight_recaptcha_key_public'] = '';
+$config['skylight_recaptcha_key_private'] = '';
 
 
 // Digital object management
