@@ -1,4 +1,3 @@
-<div class="content">
     <div class="content byEditor about">
         <h1>About the University of Edinburgh L&UC Projects </h1>
         <p></p>
@@ -21,4 +20,3 @@
         </p>
 
     </div>
-</div>

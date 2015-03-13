@@ -145,7 +145,7 @@ input.backbtn:hover				{ color: #fff; background: #3aaa35; }
 header				            { position: relative; width: 940px; background: url(../images/header.png) no-repeat 0 0; }
 #main                           { background-color: #fff; }
 .col-main                       { float: left; margin-right: 20px; width: 660px; padding-left: 20px;}
-.col-sidebar                    { float: left; width: 240px; margin-top: -52px;  background: #e5e3d7; position: relative; z-index: 2; }
+.col-sidebar                    { float: left; width: 240px; margin-top: -2px;  background: #e5e3d7; position: relative; z-index: 2; }
 .ie7 .col-sidebar	            { padding-bottom: 30px; }
 
 /* Uoe specific */
@@ -162,7 +162,7 @@ header				            { position: relative; width: 940px; background: url(../ima
 .head-text:visited              { color: #fff;}
 .head-text:hover                { color: #ff9933; text-decoration: none;}
 
-#collection-search              { display: block; width: 400px; padding: 2px 20px 20px; float: left; }
+#collection-search              { display: block; width: 400px; padding: 2px 20px 0px; float: left; }
 
 /* Common Containers & Subclasses ----------------------------------------------------------------------------------------*/
 .banner                         { width: 600px; height: 88px;padding-top: 20px;}
