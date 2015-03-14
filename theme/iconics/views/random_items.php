@@ -84,15 +84,12 @@
                 ?>
             </div>
         </div>
-     <div class="random-list">
-    <ul class="random-listing">
+     <div class="container-random">
+
     <?php
 
     foreach ($randomitems as $index => $doc) { ?>
-        <li>
-            <div class="random-itemdiv">
-
-                <div class = "random-thumbnail">
+            <div class="thumbnail">
 
                 <?php
 
@@ -139,7 +136,7 @@
                         $b_handle_id = preg_replace('/^.*\//', '',$b_handle);
                         $b_uri = './record/'.$b_handle_id.'/'.$b_seq.'/'.$b_filename;
                         $thumbnailLink = "";
-                        $thumbnailLink = '<a title="' . $doc[$title_field][0] . '" class="fancybox" rel="group' . $j .'" href="' . $b_uri . '"> ';
+                        $thumbnailLink = '<a href="./record/'.$doc['id'].'" title="' . $doc[$title_field][0] . '"> ';
                         $thumbnailLink .= '<img src="'.$b_uri.'" class="random-thumbnailimg" title="'. $doc[$title_field][0] .'" /></a>';
 
                         echo $thumbnailLink;
@@ -147,17 +144,16 @@
 
 
                     } //end if there are bitstreams ?>
-                </div>
-                <div class = "random-iteminfo">
+
                     <h4><a href="./record/<?php echo $doc['id']?>"><?php echo $doc[$title_field][0]; ?></a></h4>
-                </div>
-                <div class="clearfix"></div>
+
+
             </div>
-        </li>
+
 
     <?php } ?>
 
-    </ul>
+
      </div>
 
  </div>

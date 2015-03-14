@@ -21,79 +21,50 @@
             $sort = '&sort_by=';
         }
     ?>
-    <div class="listing-filter">
-        <span class="no-results">
-            <strong><?php echo $startrow ?>-<?php echo $endrow ?></strong> of
-            <strong><?php echo $rows ?></strong> results
-        </span>
+    <nav>
+        <div class="listing-filter">
+            <span class="no-results">
+                <strong><?php echo $startrow ?>-<?php echo $endrow ?></strong> of
+                <strong><?php echo $rows ?></strong> results
+            </span>
 
-        <span class="sort">
-            <strong>Sort by</strong>
-            <?php foreach($sort_options as $label => $field) {
-                if($label == 'Relevancy')
-                {
-                    ?>
-                    <em><a href="<?php echo $base_search.$base_parameters.$sort.$field.'+desc'?>"><?php echo $label ?></a></em>
-                    <?php
-                }
-                else {
-            ?>
+            <span class="sort">
+                <strong>Sort by</strong>
+                <?php foreach($sort_options as $label => $field) {
+                    if($label == 'Relevancy')
+                    {
+                        ?>
+                        <em><a href="<?php echo $base_search.$base_parameters.$sort.$field.'+desc'?>"><?php echo $label ?></a></em>
+                        <?php
+                    }
+                    else {
+                ?>
 
-                <em><?php echo $label ?></em>
-                <?php if($label != "Date") { ?>
-                <a href="<?php echo $base_search.$base_parameters.$sort.$field.'+asc' ?>">A-Z</a> |
-                <a href="<?php echo $base_search.$base_parameters.$sort.$field.'+desc' ?>">Z-A</a>
-            <?php } else { ?>
-                <a href="<?php echo $base_search.$base_parameters.$sort.$field.'+desc' ?>">newest</a> |
-                <a href="<?php echo $base_search.$base_parameters.$sort.$field.'+asc' ?>">oldest</a>
-          <?php } } } ?>
-            
-        </span>
+                    <em><?php echo $label ?></em>
+                    <?php if($label != "Date") { ?>
+                    <a href="<?php echo $base_search.$base_parameters.$sort.$field.'+asc' ?>">A-Z</a> |
+                    <a href="<?php echo $base_search.$base_parameters.$sort.$field.'+desc' ?>">Z-A</a>
+                <?php } else { ?>
+                    <a href="<?php echo $base_search.$base_parameters.$sort.$field.'+desc' ?>">newest</a> |
+                    <a href="<?php echo $base_search.$base_parameters.$sort.$field.'+asc' ?>">oldest</a>
+              <?php } } } ?>
 
-    </div>
+            </span>
 
-
-    <ul id="quad">
-
+        </div>
+    </nav>
+    <div class="container-fluid">
+    <div class="row">
         <?php
-
-        $j = 0;
-
         foreach ($docs as $index => $doc) {
-            $li_classes = '';
-            if($index == 0 || ($index %4 == 0)) {
-                $li_classes = 'first';
-            }
-            elseif($index == sizeof($docs) - 5) {
-                $li_classes = 'last';
-            }
-            if($index <= 3) {
-                if (empty($li_classes))
-                {
-                    $li_classes = 'top';
-                }
-                else{
-                    $li_classes = $li_classes .'top';
-                }
-            }
-            elseif($index > sizeof($docs) - 4) {
-                if (empty($li_classes))
-                {
-                    $li_classes = 'last';
-                }
-                else{
-                    $li_classes = $li_classes .', last';
-                }
-            }
-       ?>
-        <li class="<?php echo $li_classes; ?>">
-        <div class="item-div">
-            <div class = "thumbnail-image">
+            ?>
+            <div class="col-xs-6 col-md-3">
                 <?php
 
                 $bitstream_array = array();
 
                 if(isset($doc[$bitstream_field])) {
+                    echo '<div class="thumbnail">';
 
                     $i = 0;
                     $started = false;
@@ -133,11 +104,9 @@
                         $b_seq = $b_segments[4];
                         $b_handle_id = preg_replace('/^.*\//', '',$b_handle);
                         $b_uri = './record/'.$b_handle_id.'/'.$b_seq.'/'.$b_filename;
-                        $thumbnailLink = "";
 
-
-                            $thumbnailLink = '<a title = "' . $doc[$title_field][0] . '" class="fancybox" rel="group" href="' . $b_uri . '"> ';
-                            $thumbnailLink .= '<img src = "'.$b_uri.'" class="search-thumbnail" title="'. $doc[$title_field][0] .'" /></a>';
+                        $thumbnailLink = '<a href="./record/'. $doc['id'].'" title = "' . $doc[$title_field][0] . '"> ';
+                        $thumbnailLink .= '<img src = "'.$b_uri.'" class="search-thumbnail" title="'. $doc[$title_field][0] .'" /></a>';
 
 
                         echo $thumbnailLink;
@@ -145,29 +114,25 @@
 
                 } //end if there are bitstreams ?>
 
+                 <p>
+                    <a href="./record/<?php echo $doc['id']?>?highlight=<?php echo $query ?>"><?php echo $doc[$title_field][0]; ?></a>
+                 </p>
             </div>
-
-            <div class = "iteminfo">
-                <h3><a href="./record/<?php echo $doc['id']?>?highlight=<?php echo $query ?>"><?php echo $doc[$title_field][0]; ?></a></h3>
-            </div> <!-- close item-info -->
-
-
-            <div class="clearfix"></div>
-            </div> <!-- close item div -->
-        </li>
+            </div>
             <?php
 
-            $j++;
 
         } // end for each search result
 
         ?>
-    </ul>
-    <div class="clearfix"></div>
-
-    <div class="pagination">
-        <span class="no-results">
-            <strong><?php echo $startrow ?>-<?php echo $endrow ?></strong> of
-            <strong><?php echo $rows ?></strong> results </span>
-        <?php echo $pagelinks ?>
+        </div>
     </div>
+
+    <nav>
+        <div class="pagination">
+            <span class="no-results">
+                <strong><?php echo $startrow ?>-<?php echo $endrow ?></strong> of
+                <strong><?php echo $rows ?></strong> results </span>
+            <?php echo $pagelinks ?>
+        </div>
+    </nav>

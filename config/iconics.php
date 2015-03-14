@@ -22,7 +22,7 @@ else {
 }
 
 // Container ID and the field used in solr index to store this ID. Used for restricting search/browse scope.
-$config['skylight_container_id'] = '48';
+$config['skylight_container_id'] = '31';
 $config['skylight_container_field'] = 'location.coll';
 
 $config['skylight_fields'] = array('Title' => 'dc.title.en',
@@ -82,6 +82,9 @@ $config['skylight_share_buttons'] = false;
 
 // limit of number of terms in each facet
 $config['skylight_facet_limit'] = 30;
+
+// limit of number of terms in each related items
+$config['skylight_related_number'] = 5;
 
 // Set to the number of minutes to cache pages for. Set to false for no caching.
 // This overrides the setting in skylight.php so is commented by Demo
