@@ -64,31 +64,29 @@
                     $b_seq = $b_segments[4];
                     $b_handle_id = preg_replace('/^.*\//', '',$b_handle);
                     $b_uri = './record/'.$b_handle_id.'/'.$b_seq.'/'.$b_filename;
+                    ?>
 
-                    $b_Link = '<a title = "' . $first_doc[$title_field][0] . '" class="fancybox" rel="group' . $j .'" href="' . $b_uri . '"> ';
-                    $b_Link .= '<img src = "'.$b_uri.'" class="random-first-image" title="'. $first_doc[$title_field][0] .'" /></a>';
-
-                    echo $b_Link;
-                }
-
+                    <a title = "<?php echo $first_doc[$title_field][0] ?>" href="./record/<?php echo $first_doc['id'] ?>">
+                        <img src = "<?php echo $b_uri ?>" class="random-first-image" title="<?php echo $first_doc[$title_field][0] ?>">
+                        <div class="random-caption" onmouseover="this.style.background='#333';this.style.color='#FFF'" onmouseout="this.style.background='#FFFFFF';this.style.color='#333'"><?php echo $first_doc[$title_field][0]; ?></div>
+                    </a>
+                    <?php
+                 }
             } //end if there are bitstreams ?>
-            <div class = "random-firstinfo">
-                <h4><a href="./record/<?php echo $first_doc['id']?>"><?php echo $first_doc[$title_field][0]; ?></a></h4>
-                <?php
-                if (isset($first_doc)) {
+            <div class="random-firstinfo">
+                <?php if (isset($first_doc)) {
                     if (array_key_exists($abstract_field, $first_doc)){
                         echo $first_doc[$abstract_field][0];
                     }
-                }
-
-                ?>
+                }?>
             </div>
         </div>
+
      <div class="container-random">
 
     <?php
 
-    foreach ($randomitems as $index => $doc) { ?>
+        foreach ($randomitems as $index => $doc) { ?>
             <div class="thumbnail">
 
                 <?php
@@ -143,18 +141,12 @@
                     }
 
 
-                    } //end if there are bitstreams ?>
+                } //end if there are bitstreams ?>
 
-                    <h4><a href="./record/<?php echo $doc['id']?>"><?php echo $doc[$title_field][0]; ?></a></h4>
-
-
+                <div class="random-title"><a href="./record/<?php echo $doc['id']?>"><?php echo $doc[$title_field][0]; ?></a></div>
             </div>
-
-
-    <?php } ?>
-
+        <?php } ?>
 
      </div>
-
  </div>
  <div class="clearfix"></div>

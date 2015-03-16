@@ -192,14 +192,13 @@ header				{ position: relative; width: 940px; height: 140px; background-color: #
 .item-div:hover                 { background-color: #B2D8EC; }
 .iteminfo                       { display: block; min-height:100px; max-height:100px;  text-align: center; width: 140px; float:left; }
 .iteminfo h3                    { font-size: 18px; margin-top: 5px; }
+
 .thumbnail-image                { display: block;  width: 140px;  min-height:135px;}
-
-
 .thumbnail-strip                { max-width: 660px; display: block; }
 .thumbnail-tile                 { margin-top: 20px; margin-left: 20px; float: left; }
 .thumbnail-strip .first         { margin-left: 0; }
-.record-thumbnail               { max-width: 150px; max-height: 200px; border: solid 1px #093563; }
 
+.record-thumbnail               { max-width: 150px; max-height: 200px; border: solid 1px #093563; }
 .record-bitstreams              { display: block; width: 660px; margin: 5px 0; }
 
 .main-image                     { max-width: 700px; display: block; margin-top: 10px;}
@@ -266,13 +265,19 @@ footer                  { display: block; padding-bottom: 20px; width: 100%; bac
 /* random items */
 
 .randoms                { width: 940px; }
-.random-first           { width: 640px; float: left; }
-.random-first-image     { width: 580px; border: 1px solid #666;}
-.random-firstinfo       { display: block; min-height:60px; text-align: left; width: 480px; padding: 0 0 5px 5px; }
+.random-first           { width: 700px; float: left; }
+.random-first-image     { width: 680px; border: 1px solid #666; border-radius: 4px;}
+.random-firstinfo       { min-height:60px; width: 680px; text-align: center; }
+.random-caption         { padding-bottom: 15px; color: #333; padding-top: 10px; text-align: center;
+                            background-color: #FFF; font-size: 16px; font-weight: bold; width: 680px; }
+.random-caption       { text-decoration: none;}
+.random-title           { text-align: center; text-decoration: none;}
 
-.container-random       { width: 300px; float: left; }
+.random-thumbnailimg    { max-height: 200px; min-height: 200px; overflow: auto;}
+.container-random       { width: 220px; float: left; }
 .container-random h4    { text-align: center;}
 
+.related                { text-align: center;}
 
 
 
@@ -306,11 +311,6 @@ footer                  { display: block; padding-bottom: 20px; width: 100%; bac
 .listing-filter .sort em			{ padding-left: 10px; font-style: normal; }
 
 .container-fluid                    { margin-top: 10px;}
-.thumbnail                          { min-height:155px;  max-height: 155px;}
-.thumbnail img                      { min-height:110px;  max-height: 110px;}
-.thumbnail p                        { text-align: center; }
-.thumbnail a                        { text-decoration: none;}
-.thumbnail a:hover                  { text-decoration: underline;}
 
 .panel                              { margin-top: 5px;}
 .panel-body                         { font-size: 13px; color: #333; }
@@ -368,32 +368,7 @@ h1 .icon							{ top: -5px; left: -65px; }
 .col-main-full .content .byEditor   { background-color: #fff; color: #000; margin: 0px; padding: 0px 10px 0px 10px;}
 .content ul 						{ margin: 0 0 18px 1.2em; }
 .content ul.tiles                   { margin: 0; padding: 0; list-style: none outside none; height: 188px; width: 940px; }
-.tiles-wrapper                      { }
 
-li.tile                             { display: inline; float: left; height: 188px; }
-
-.tile a.caption {
-    position: relative
-}
-
-.tile a.caption span {
-    display: block;
-    position: absolute;
-    top: -166px;
-    left: 10px;
-    width: 168px;
-    padding: 10px;
-    background: #fff;
-    color: #005784;
-    text-transform: uppercase;
-    font-weight: bold;
-    font-size: 12px;
-    text-align: center;
-}
-
-.tile a.caption:hover span {
-    display: block;
-}
 
 .record_bitstreams                  { margin-top: 20px; }
 
