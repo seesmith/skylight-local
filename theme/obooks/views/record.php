@@ -107,7 +107,7 @@ if(isset($solr[$type_field])) {
         $bitstreamUri = $this->skylight_utilities->getBitstreamUri($bitstream);
         ?>
 
-        <object class="pdfviewer" width="100%" height= "650" data="<?php echo $bitstreamUri ?>" type="application/pdf">
+        <object class="pdfviewer" width="660" height="928" data="<?php echo $bitstreamUri ?>" type="application/pdf">
             <p><span class="label">
             It appears you do not have a PDF plugin for this browser.</span>
             </p>
