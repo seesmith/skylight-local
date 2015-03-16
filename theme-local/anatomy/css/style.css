@@ -151,8 +151,8 @@ header				{ position: relative; width: 940px;}
 
 #collection-title	{ display: block; width: 540px; height: 88px; padding-top: 20px; }
 .uoelogo            { display: block; width: 119px; height: 88px; float: left; background: url(../images/UoELogo.gif) no-repeat 0px 0px;}
-.artlogo            { display: block; width: 421px; height: 88px; float: left; background: url(../images/AnatomyAttempt.gif) no-repeat 0px 0px;}
-.artlogo:hover      { display: block; background: url(../images/AnatomyAttempt.gif) no-repeat 0px -88px; }
+.anatomylogo        { display: block; width: 421px; height: 88px; float: left; background: url(../images/AnatomyCollectionLogo.png) no-repeat 0px 0px;}
+.anatomylogo:hover  { display: block; background: url(../images/AnatomyCollectionLogo.png) no-repeat 0px -88px; }
 .menulogo           { display: block; width: 240px; height: 104px; position: absolute; top: 28px; right: 0px; background: url(../images/AnatomyLogo.jpg) no-repeat 0px 0px;}
 .ie7 .menulogo 		{ top: -40px; }
 
@@ -224,7 +224,7 @@ footer                  { display: block; border-bottom: 1px solid #58A09D; padd
 
 .footer-links           { margin-top: 15px; margin-bottom: 15px; text-align: left;  border-top: 1px solid #58A09D; border-bottom: 1px solid #58A09D; width: 660px; height: 39px;}
 
-.site-links			    { display: block; padding-top: 10px; padding-bottom: 10px; width: 520px; float: left; height: 19px; }
+.site-links			    { display: block; padding-top: 10px; padding-bottom: 10px; width: 540px; float: left; height: 19px; }
 .site-links a 		    { font-size: 10px; text-transform: uppercase; color: #AAA79E  !important; text-decoration: none; font-weight: bold; border-right: 1px solid #cecece; padding-right: 15px; margin-right: 10px; }
 .site-links a.last	    { border: none; }
 .site-links a:hover	    { text-decoration: underline; color: #58A09D; }
@@ -237,13 +237,11 @@ footer                  { display: block; border-bottom: 1px solid #58A09D; padd
 .social-icons li a.facebook-icon:hover    { display: block; background: url(../images/facebookiconfooter2.png) no-repeat 0px 0px; }
 .social-icons li a.twitter-icon           { display: block; width: 33px; height: 33px; float: left; background: url(../images/twittericonfooter.png) no-repeat 0px 0px;}
 .social-icons li a.twitter-icon:hover     { display: block; background: url(../images/twittericonfooter2.png) no-repeat 0px 0px; }
-.social-icons li a.tumblr-icon            { display: block; width: 33px; height: 33px; float: left; background: url(../images/tumblriconfooter.png) no-repeat 0px 0px;}
-.social-icons li a.tumblr-icon:hover      { display: block; background: url(../images/tumblriconfooter2.png) no-repeat 0px 0px; }
 
 .footer-disclaimer      { display: block; width: 95%; margin: auto; }
 .footer-logo            { display: block; float: left; }
 .is-logo                { display: block; float: left; padding-left: 10px; }
-.luclogo                { display: block; width: 64px; height: 64px; background: url(../images/ArtLUCLogo.png) no-repeat 0px 0px; }
+.luclogo                { display: block; width: 64px; height: 64px; background: url(../images/AnatomyLUCLogo.png) no-repeat 0px 0px; }
 .islogo                 { display: block; float: left; width: 50px; height: 64px; background: url(../images/islogo.gif) no-repeat 0px 0px; }
 
 .footer-policies        { display: block; float: left; padding-left: 10px; }
