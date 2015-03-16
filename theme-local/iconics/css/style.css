@@ -147,7 +147,7 @@ input.backbtn:hover					{ color: #fff; background: #005784; }
 #container 			{ width: 940px; margin: auto auto; }
 header				{ position: relative; width: 940px; height: 140px; background-color: #fff; }
 #main               { background-color: #fff; }
-.col-main			{ float: left; width: 720px; margin-right: 20px; padding-left: 20px; margin-top: 10px; background-color: #fff; }
+.col-main			{ float: left; width: 720px; margin-right: 20px; padding-left: 0; margin-top: 10px; background-color: #fff; }
 .col-main-full      { width: 940px; margin: auto auto; border-top: 1px solid #333; }
 .col-sidebar		{ float: left; width: 200px;  position: relative; z-index: 2; margin-top: 10px; }
 .ie7 .col-sidebar	{ padding-bottom: 30px; }
@@ -209,7 +209,7 @@ span[id^="video-"]              { margin: 5px 0; }
 .col-sidebar h4					{ color: #fff; line-height: 26px; font-weight: bold; text-transform: uppercase; font-size: 12px; margin-bottom: 17px; background: #333333; padding: 0 17px; width: 200px;}
 .col-sidebar h4 a 				{
     background: #333333 url(../images/bg-arrows.png) no-repeat 100% -92px;
-    display: block; color: #fff; text-decoration: none;  padding-left: 17px; position: relative; left: -17px;
+    display: block; color: #fff; text-decoration: none;  padding-left: 17px; position: relative; left: -17px; width: 200px;
 }
 .col-sidebar h4 a:hover         { background: #ff2741 url(../images/bg-arrows.png) no-repeat 100% -92px; width: 200px;}
 .col-sidebar ul 				{ list-style-type: none; margin: 0 0 17px 0; font-size: 12px; }
@@ -265,12 +265,12 @@ footer                  { display: block; padding-bottom: 20px; width: 100%; bac
 
 .randoms                    { width: 940px; }
 .random-first               { width: 700px; float: left; }
-.random-first-image:hover         {border: 1px solid #FE2842; }
+.random-first-image:hover   { border: 1px solid #FE2842; }
 .random-first-image         { width: 680px; border: 1px solid #666; border-radius: 4px;}
 .random-firstinfo           { min-height:60px; width: 680px; text-align: center; }
 .random-caption             { padding-bottom: 15px; color: #333; padding-top: 10px; text-align: center;
                             background-color: #FFF; font-size: 16px; font-weight: bold; width: 680px; }
-.random-first a            { text-decoration: none;}
+.random-first a             { text-decoration: none;}
 .random-title               { text-align: center; text-decoration: none;}
 
 .random-thumbnail:hover     { border: 1px solid #FE2842; }
