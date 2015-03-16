@@ -18,7 +18,7 @@
         Remove this if you use the .htaccess -->
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 
-        <title>University of Edinburgh Art Collection</title>
+        <title>University of Edinburgh Anatomy Collection</title>
 
         <meta name="description" content="">
         <meta name="author" content="">
@@ -99,7 +99,7 @@
             <header>
                <div id="collection-title">
                 <a href="http://www.ed.ac.uk" class="uoelogo" title="The University of Edinburgh Home" target="_blank"></a>
-                <a href="<?php echo base_url(); ?>anatomy" class="artlogo" title="University of Edinburgh Anatomy Collection Home"></a>
+                <a href="<?php echo base_url(); ?>anatomy" class="anatomylogo" title="University of Edinburgh Anatomy Collection Home"></a>
                 <a href="<?php echo base_url(); ?>anatomy" class="menulogo" title="University of Edinburgh Anatomy Collection Home"></a>
                </div>
                <div id="collection-search">
