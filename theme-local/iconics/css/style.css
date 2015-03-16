@@ -114,30 +114,30 @@ h3                              { color: #333333; font-size: 14px; line-height: 
 
 h1.itemtitle 					{ font-size: 20px; line-height: 24px; margin: 0px 0 10px 0px; position: relative; color: #333333; }
 h3.collection-link              { font-size: 16px;  margin-bottom: 15px; }
-h3.collection-link a            { color: #B2D8EC; text-decoration: none; }
+h3.collection-link a            { color: #005784; text-decoration: none; }
 h3.collection-link a:hover      { text-decoration: underline; }
 
 p 								{ font-size: 13px; padding-bottom: 10px; }
 
 a, a:active, a:visited          { color: #333333; text-decoration: underline;}
-a:hover 						{ text-decoration: underline; color: #005784; }
+a:hover 						{ text-decoration: underline; color: #FE2842; }
 
 input[type=text], input[type=password]				{
     border: 1px solid #bbbbbc; font-size: 13px; height: 28px; padding: 0 10px;
     -webkit-border-radius: 5px; -moz-border-radius: 5px; border-radius: 5px;
 }
 input.btn						{
-    background: #005784; border: none; height: 28px; color: #fff; text-transform: uppercase; font-size: 14px; margin-left: 8px; font-weight: bold; padding: 0 10px;
+    background: #FE2842; border: none; height: 28px; color: #fff; text-transform: uppercase; font-size: 14px; margin-left: 8px; font-weight: bold; padding: 0 10px;
     -webkit-border-radius: 5px; -moz-border-radius: 5px; border-radius: 5px; text-shadow: rgba(0,0,0,0.3) 0px -1px 0px;
 }
-input.btn:hover					{ color: #fff; background: #ff2741; }
+input.btn:hover					{ color: #fff; background: #005784; }
 
 input.backbtn						{
-    background: #005784; border: none; height: 24px; color: #fff; text-transform: uppercase; font-size: 12px; margin-left: 8px; font-weight: bold; padding: 0 10px;
+    background: #FE2842; border: none; height: 24px; color: #fff; text-transform: uppercase; font-size: 12px; margin-left: 8px; font-weight: bold; padding: 0 10px;
     margin-top: 10px; margin-bottom: 10px;
     -webkit-border-radius: 5px; -moz-border-radius: 5px; border-radius: 5px; text-shadow: rgba(0,0,0,0.3) 0px -1px 0px;
 }
-input.backbtn:hover					{ color: #fff; background: #B2D8EC; }
+input.backbtn:hover					{ color: #fff; background: #005784; }
 
 .searchform input.btn, .feedback_form input.btn { margin-bottom: 10px; }
 
@@ -172,8 +172,8 @@ header				{ position: relative; width: 940px; height: 140px; background-color: #
 
 #collection-title	            { display: block; width: 540px; height: 88px; padding: 10px 0; float: left; }
 .uoelogo                        { display: block; width: 119px; height: 88px; float: left; background: url(../images/UoELogo.gif) no-repeat 0 0;}
-.iconicslogo                    { display: block; width: 421px; height: 88px; float: left; background: url(../images/IconicsLogo.png) no-repeat 0 0;}
-.iconicslogo:hover              { display: block; background: url(../images/IconicsLogo.png) no-repeat 0 -88px; }
+.iconicslogo                    { display: block; width: 421px; height: 88px; float: left; background: url(../images/IconicsLogo.png) no-repeat 0 -88px;}
+.iconicslogo:hover              { display: block; background: url(../images/IconicsLogo.png) no-repeat 0 0; }
 
 #collection-search              { display: block; width: 400px; padding: 52px 20px 20px; float: left; }
 
@@ -189,7 +189,6 @@ header				{ position: relative; width: 940px; height: 140px; background-color: #
 .search .advanced:hover			{ text-decoration: underline; }
 
 .item-div                       { padding: 10px 0 10px 10px; width: 162px; height: 200px; text-align: center; display: block; }
-.item-div:hover                 { background-color: #B2D8EC; }
 .iteminfo                       { display: block; min-height:100px; max-height:100px;  text-align: center; width: 140px; float:left; }
 .iteminfo h3                    { font-size: 18px; margin-top: 5px; }
 
@@ -264,22 +263,29 @@ footer                  { display: block; padding-bottom: 20px; width: 100%; bac
 
 /* random items */
 
-.randoms                { width: 940px; }
-.random-first           { width: 700px; float: left; }
-.random-first-image     { width: 680px; border: 1px solid #666; border-radius: 4px;}
-.random-firstinfo       { min-height:60px; width: 680px; text-align: center; }
-.random-caption         { padding-bottom: 15px; color: #333; padding-top: 10px; text-align: center;
+.randoms                    { width: 940px; }
+.random-first               { width: 700px; float: left; }
+.random-first-image:hover         {border: 1px solid #FE2842; }
+.random-first-image         { width: 680px; border: 1px solid #666; border-radius: 4px;}
+.random-firstinfo           { min-height:60px; width: 680px; text-align: center; }
+.random-caption             { padding-bottom: 15px; color: #333; padding-top: 10px; text-align: center;
                             background-color: #FFF; font-size: 16px; font-weight: bold; width: 680px; }
-.random-caption       { text-decoration: none;}
-.random-title           { text-align: center; text-decoration: none;}
+.random-first a            { text-decoration: none;}
+.random-title               { text-align: center; text-decoration: none;}
 
-.random-thumbnailimg    { max-height: 200px; min-height: 200px; overflow: auto;}
-.container-random       { width: 220px; float: left; }
-.container-random h4    { text-align: center;}
+.random-thumbnail:hover     { border: 1px solid #FE2842; }
+.random-thumbnailimg        { max-height: 200px; min-height: 200px; overflow: auto;}
+.container-random           { width: 220px; float: left; }
+.container-random h4        { text-align: center;}
 
-.related                { text-align: center;}
+.related                    { text-align: center;}
 
-
+.results-thumbnail          { min-height:155px;  max-height: 155px;}
+.results-thumbnail  img     { min-height:110px;  max-height: 110px;}
+.results-thumbnail  p       { text-align: center; }
+.results-thumbnail  a       { text-decoration: none;}
+.results-thumbnail  a:hover { text-decoration: underline;}
+.results-thumbnail:hover    { border: 1px solid #FE2842; }
 
 /* Custom Containers & Subclasses ----------------------------------------------------------------------------------------*/
 

@@ -11,7 +11,7 @@
 
             foreach ($related_items as $index => $doc) {?>
 
-            <div class="thumbnail">
+            <div class="thumbnail results-thumbnail">
                 <?php $bitstream_array = array();
 
                 if(isset($doc[$bitstream_field])) {

@@ -87,7 +87,7 @@
     <?php
 
         foreach ($randomitems as $index => $doc) { ?>
-            <div class="thumbnail">
+            <div class="thumbnail random-thumbnail">
 
                 <?php
 

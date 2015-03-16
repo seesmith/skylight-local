@@ -64,7 +64,7 @@
                 $bitstream_array = array();
 
                 if(isset($doc[$bitstream_field])) {
-                    echo '<div class="thumbnail">';
+                    echo '<div class="thumbnail results-thumbnail">';
 
                     $i = 0;
                     $started = false;
