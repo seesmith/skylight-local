@@ -1,4 +1,4 @@
-<div class="record">
+<div class="content">
     <p>
         The Cockburn Museum at King's Buildings holds a very extensive collection of geological specimens and historical objects which reflect Edinburgh's prominent position in geological sciences since the time of James Hutton (1726-1797) and its continuing activity today. The stored collections reflect the whole spectrum of Earth Science materials - minerals, rocks, fossils - as well as maps and photographs and archives of activity by famous Earth scientists dating back as far as the late eighteenth century.
     </p><p>

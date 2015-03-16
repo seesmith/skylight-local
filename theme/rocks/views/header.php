@@ -32,7 +32,6 @@
         <link rel="apple-touch-icon" href="<?php echo base_url(); ?>theme/<?php echo $this->config->item('skylight_theme'); ?>/images/apple-touch-icon.png">
 
         <!-- CSS: implied media="all" -->
-        <link rel="stylesheet" href="<?php echo base_url(); ?>assets/bootstrap/dist/css/bootstrap.min.css">
         <link rel="stylesheet" href="<?php echo base_url(); ?>theme/<?php echo $this->config->item('skylight_theme'); ?>/css/style.css?v=2">
         <link rel="stylesheet" href="<?php echo base_url(); ?>assets/fancybox/source/jquery.fancybox.css?v=2.1.4" type="text/css" media="screen" />
         <link rel="stylesheet" href="<?php echo base_url(); ?>assets/fancybox/source/helpers/jquery.fancybox-buttons.css?v=1.0.5" type="text/css" media="screen" />
@@ -100,8 +99,8 @@
         <header>
             <div id="collection-title">
                 <a href="http://www.ed.ac.uk" class="uoelogo" title="The University of Edinburgh Home" target="_blank"></a>
-                <a href="<?php echo base_url(); ?>" class="geologylogo" title="Cockburn Geological Collection Home"></a>
-                <a href="<?php echo base_url(); ?>" class="menulogo" title="Cockburn Geological Collection Home"></a>
+                <a href="<?php echo base_url(); ?>cockburn" class="geologylogo" title="Cockburn Geological Collection Home"></a>
+                <a href="<?php echo base_url(); ?>cockburn" class="menulogo" title="Cockburn Geological Collection Home"></a>
             </div>
             <div id="collection-search">
                 <form action="./redirect/" method="post">
