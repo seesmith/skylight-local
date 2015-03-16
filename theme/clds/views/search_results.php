@@ -136,7 +136,7 @@
                 </div> <!-- close item-info -->
 
 
-                <div class = "thumbnail-image">
+                <div class ="thumbnail-image">
                     <?php
 
                     $bitstream_array = array();

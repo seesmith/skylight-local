@@ -172,22 +172,22 @@ if(isset($solr[$bitstream_field]) && $link_bitstream) {
     <div class="full-image">
         <?php echo $bitstreamLink; ?>
     </div>
-<?php } ?>
-<?php } ?>
+<?php } } ?>
 
     <?php if($mainImageTest === true) { ?>
-    <div class="maintext">
-        <?php
-        if (array_key_exists ($description_field, $solr)){
-            echo $solr[$description_field][0];
-        }?>
-    </div>
 
-    <div class="full-metadata">
-        <?php } ?>
+    <div class="panel panel-default">
+        <div class="panel-body">
+            <div class="maintext">
+                <?php
+                if (array_key_exists ($description_field, $solr)){
+                    echo $solr[$description_field][0];
+                }?>
+            </div>
 
-            <?php $excludes = array(""); ?>
-            <?php
+            <?php } ?>
+
+            <?php $excludes = array("");
 
             foreach($recorddisplay as $key) {
 
@@ -195,7 +195,7 @@ if(isset($solr[$bitstream_field]) && $link_bitstream) {
 
                 if(isset($solr[$element])) {
                     if(!in_array($key, $excludes)) {
-                        echo $key.'&nbsp:&nbsp;';
+                        echo '<div class="metadatarow"><div class="metadatakey">'.$key.'</div><div class="metadatavalue">';
                         foreach($solr[$element] as $index => $metadatavalue) {
                             // if it's a facet search
                             // make it a clickable search link
@@ -215,7 +215,7 @@ if(isset($solr[$bitstream_field]) && $link_bitstream) {
                                 echo '; ';
                             }
                         }
-                        echo '<br />';
+                        echo '</div></div>';
                     }
                 }
 
@@ -250,6 +250,7 @@ if(isset($solr[$bitstream_field]) && $link_bitstream) {
             }?>
 
         <?php if($mainImageTest === true) { ?>
+    </div>
     </div>
 <?php } ?>
     <div class="clearfix"></div>
