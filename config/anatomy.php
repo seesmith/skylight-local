@@ -1,13 +1,13 @@
 <?php
 
-$config['skylight_appname'] = 'art';
+$config['skylight_appname'] = 'anatomy';
 
 // Uncomment this if you are using a url of the form http://.../art/...
 $config['skylight_url_prefix'] = 'anatomy';
 
 $config['skylight_theme'] = 'anatomy';
 
-$config['skylight_fullname'] = 'University of Edinburgh Anatomy Collection';
+$config['skylight_fullname'] = 'University of Edinburgh Anatomical Collection';
 
 // set ga code
 if (strpos($_SERVER['HTTP_HOST'], "test") !== false) {
@@ -19,12 +19,12 @@ else {
 
 $config['skylight_adminemail'] = 'lddt@mlist.is.ed.ac.uk';
 
-$config['skylight_oaipmhcollection'] = 'hdl_123456789_21776';
+$config['skylight_oaipmhcollection'] = 'hdl_10683_117442';
 
 $config['skylight_oaipmhallowed'] = true;
 
 // Container ID and the field used in solr index to store this ID. Used for restricting search/browse scope.
-$config['skylight_container_id'] = '14';
+$config['skylight_container_id'] = '50';
 $config['skylight_container_field'] = 'location.coll';
 $config['skylight_sitemap_type'] = 'internal';
 
@@ -39,7 +39,7 @@ $config['skylight_fields'] = array(
 );
 
 $config['skylight_date_filters'] = array();
-$config['skylight_filters'] = array('Artist' => 'author_filter', 'Classification' => 'classification_filter', 'Collection'=> 'collection_filter', 'Period' => 'period_filter' );
+$config['skylight_filters'] = array('Author' => 'author_filter');
 
 $config['skylight_filter_delimiter'] = ':';
 

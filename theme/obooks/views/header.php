@@ -92,7 +92,7 @@
 <div id="container">
     <header>
         <div id="collection-title">
-            <a href="<?php echo base_url(); ?>" class="logo" title="<?php echo $this->config->item('skylight_fullname');?> Home">
+            <a href="<?php echo base_url(); ?>obooks" class="logo" title="<?php echo $this->config->item('skylight_fullname');?> Home">
                 <span onmouseover="this.style.background='#761400';this.style.color='#FFF'" onmouseout="this.style.background='#FFFFFF';this.style.color='#444f51'"><?php echo $site_title; ?></span>
             </a>
         </div>
