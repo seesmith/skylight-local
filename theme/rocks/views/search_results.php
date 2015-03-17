@@ -98,16 +98,7 @@ else {
                     <?php } ?>
 
 
-                    <h3><a href="./record/<?php echo $doc['id']?>?highlight=<?php echo $query ?>"><?php echo $doc[$title_field][0]; ?>
-                            <?php if(array_key_exists($date_field, $doc)) { ?>
-                                <?php
-                                echo '(' . $doc[$date_field][0] . ')';
-                            }
-                            elseif(array_key_exists('dateIssuedyear', $doc)) {
-                                echo '( ' . $doc['dateIssuedyear'][0] . ')';
-                            }
-
-                            ?></a></h3>
+                    <h3><a href="./record/<?php echo $doc['id']?>?highlight=<?php echo $query ?>"><?php echo $doc[$title_field][0]; ?></a></h3>
 
                     <div class="tags">
 
