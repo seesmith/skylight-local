@@ -70,23 +70,28 @@ $config['skylight_meta_fields'] = array('Title' => 'dc.title',
 );
 
 $config['skylight_recorddisplay'] = array('Title',
+    'Alternative Title',
     'Principal Investigator',
     'Owner',
-    'Date',
+    'Reference',
+    'Link',
+    'Project Status',
+    'Dates',
     'Objective',
     'Project Status',
     'Business Area',
     'Description',
-    'Identifier',
     'Funding Source',
-    #'Amount',
-    #'Cost Centre',
+    'Amount',
+    'Cost Centre',
     'Comments',
     'Duration',
     'Partnership',
     'Staff',
     'Skills',
-    'Technology');
+    'Technology',
+    'Bitstream',
+    'Thumbnail');
 
 $config['skylight_searchresult_display'] = array('Title','Date','Owner','Principal Investigator','Objective','Business Area','Description','Identifier','Project Status','Source', 'Bitstream', 'Thumbnail');
 
