@@ -11,7 +11,7 @@ $config['skylight_fullname'] = 'Library and University Collections - Iconics';
 
 $config['skylight_adminemail'] = 'lddt@mlist.is.ed.ac.uk';
 
-$config['skylight_oaipmhcollection'] = 'hdl_10683_4';
+$config['skylight_oaipmhcollection'] = 'hdl_10683_117182';
 
 // set ga code
 if (strpos($_SERVER['HTTP_HOST'], "test") !== false) {
@@ -22,7 +22,7 @@ else {
 }
 
 // Container ID and the field used in solr index to store this ID. Used for restricting search/browse scope.
-$config['skylight_container_id'] = '31';
+$config['skylight_container_id'] = '48';
 $config['skylight_container_field'] = 'location.coll';
 
 $config['skylight_fields'] = array('Title' => 'dc.title.en',
