@@ -130,7 +130,7 @@ input.btn						{
     background: #0e0498; color: #ffffff; border: none; height: 28px; text-transform: uppercase; font-size: 14px; margin-left: 8px; font-weight: bold; padding: 0 18px;
     -webkit-border-radius: 5px; -moz-border-radius: 5px; border-radius: 5px; text-shadow: rgba(0,0,0,0.3) 0 -1px 0;
 }
-input.btn:hover					{ background: #ffffff; color: #0e0498}
+input.btn:hover					{ background: #5c94c3; color: #ffffff; }
 
 input.backbtn						{
     background: #0e0498;  border: none; height: 24px; color: #fff; text-transform: uppercase; font-size: 12px; margin-left: 8px; font-weight: bold; padding: 0 10px;
@@ -145,16 +145,16 @@ input.backbtn:hover					{ color: #0e0498; background: #ffffff; }
 #container 			{ width: 940px; margin: auto auto; }
 header				{ position: relative; width: 940px;}
 .col-main			{ float: left; margin-right: 40px; width: 660px; }
-.col-sidebar		{ float: left; width: 240px; margin-top: -4px; background: #dcdbd9; position: relative; z-index: 2;}
+.col-sidebar		{ float: left; width: 240px; margin-top: -2px; background: #dcdbd9; position: relative; z-index: 2;}
 .ie7 .col-sidebar	{ padding-bottom: 30px; }
 
 /* Common Containers & Subclasses ----------------------------------------------------------------------------------------*/
 
 #collection-title	{ display: block; width: 540px; height: 88px; padding-top: 20px; }
 .uoelogo            { display: block; width: 119px; height: 88px; float: left; background: url(../images/UoELogo.gif) no-repeat 0 0;}
-.exlogo             { display: block; width: 421px; height: 88px; float: left; background: url(../images/exhibitionsheader.gif) no-repeat 0 0;}
-.exlogo:hover       { display: block; background: url(../images/exhibitionsheader.gif) no-repeat 0 -88px; }
-.menulogo           { display: block; width: 240px; height: 156px; position: absolute; top: 28px; right: 0; background: url(../images/bluetterfly.jpg) no-repeat 0 0;}
+.exlogo             { display: block; width: 421px; height: 88px; float: left; background: url(../images/exhibitionsheader.png) no-repeat 0 0;}
+.exlogo:hover       { display: block; background: url(../images/exhibitionsheader.png) no-repeat 0 -88px; }
+.menulogo           { display: block; width: 240px; height: 156px; position: absolute; top: 24px; right: 0; background: url(../images/bluetterfly.png) no-repeat 0 0;}
 .ie7 .menulogo 		{ top: -40px; }
 #view-all           { float: right;}
 
@@ -247,7 +247,7 @@ footer                  { display: block; border-bottom: 1px solid #0e0498 ; pad
 .footer-disclaimer          { display: block; width: 95%; margin: auto; }
 .footer-logo                { display: block; float: left; }
 .is-logo                    { display: block; float: left; padding-left: 10px; }
-.luclogo                    { display: block; width: 64px; height: 64px; background: url(../images/L&UCLogo.gif) no-repeat 0 0; }
+.luclogo                    { display: block; width: 64px; height: 64px; background: url(../images/L&UCLogo.png) no-repeat 0 0; }
 .islogo                     { display: block; float: left; width: 50px; height: 64px; background: url(../images/islogo.gif) no-repeat 0 0; }
 
 .footer-policies            { display: block; float: left; padding-left: 10px; }
@@ -312,10 +312,10 @@ li.past-ex                  { display: inline; float: left; height: 188px; width
 .listing li p 						{ font-size: 12px; margin: 0; }
 
 .tags					            { margin: 0;  margin-top: 5px; }
-.tags a 				            { color: #0e0498; font-size: 13px; background: #ffffff ; -webkit-border-radius: 5px; -moz-border-radius: 5px; border-radius: 5px; padding: 2px 6px; line-height: 20px; margin-right: 8px; margin-bottom: 2px;text-decoration: none; display:inline-block; }
+.tags a 				            { color: #ffffff; font-size: 13px; background: #5c94c3; -webkit-border-radius: 5px; -moz-border-radius: 5px; border-radius: 5px; padding: 2px 6px; line-height: 20px; margin-right: 8px; margin-bottom: 2px;text-decoration: none; display:inline-block; }
 .tags a.bold			            { font-weight: bold; }
 .tags a:hover			            { background: #0e0498; color: #ffffff; text-decoration: underline;  }
-.tags a.reverse:hover               { background: #ffffff; color: #0e0498; }
+.tags a.reverse:hover               { background: #5c94c3; color: #ffffff; }
 .tags a.reverse                     { background: #0e0498; color: #ffffff; }
 
 .listing-filter						{ padding: 0; border: none; border-bottom: 1px solid #b8baba; line-height: 33px; text-align: right; position: relative; }
