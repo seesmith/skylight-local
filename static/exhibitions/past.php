@@ -3,6 +3,24 @@
 
         <h1>Past Exhibitions:</h1>
         <div class="past-list">
+            <div>
+                <h2><a href="./emmagillies" alt="Emma Gillies" title="Emma Gillies Information Page">Emma Gillies Rediscovered</a></h2>
+                <p>5 Dec 2014 - 7 Mar 2015</p>
+                <a href="./emmagillies" alt="Emma Gillies" title="Emma Gillies">
+                    <div id="exhib-tile-6"></div>
+                </a>
+                <h3><a href='./search/*:*/Exhibition:"emma+gillies%3A+rediscovered|||Emma+Gillies%3A+Rediscovered"'><i class="fa fa-search">&nbsp;</i>View all items</a></h3>
+                <p>
+                    Over the last two years, significant research has been carried out into the Edinburgh College of Art Collection.
+                    The project has resulted in the discovery of a number of highly significant works that add further colour to
+                    the history of Scottish art. One of the many extraordinary finds has been a collection of ceramics stored in
+                    a cupboard near to the Head of Painting's office at ECA. It became apparent early on that this collection was
+                    linked to Sir William Gillies in some way, as pieces from the collection appear in many of Gillies' still life
+                    paintings - some of which will be featured in the exhibition. Furthermore, this was an active ceramics collection
+                    - it was used for its original purpose as well as for the inspiration for art and, most importantly, they are
+                    fine works on their own merit.
+                </p>
+            </div>
           <div>
                     <h2><a href="./rashid" alt="Rashid al-Din" title="Rashid al-Din Information Page">The World History of Rashid al-Din, 1314</a></h2>
                     <p>2 Aug - 31 Oct 2014</p>
