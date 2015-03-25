@@ -1,9 +1,9 @@
 <div class="record">
     <div class="content byEditor">
-        <h1>CURRENT EXHIBITION: <a href="./emmagillies" alt="Emma Gillies: Rediscovered"
-                                   title="Emma Gillies: Rediscovered Information Page">Emma Gillies: Rediscovered</a>
+        <h1>CURRENT EXHIBITION: <a href="./somethingblue" alt="...Something Blue"
+                                   title="...Something Blue information page">...Something Blue.</a>
         <span id='view-all'><a href='./search/*:*/Exhibition:"emma+gillies%3A+rediscovered|||Emma+Gillies%3A+Rediscovered"' alt='View the exhibition online' title='View the exhibition online'><i class="fa fa-search">&nbsp;</i>View all items</a></span></h1>
-        <h2>University of Edinburgh Main Library, 5th December 2014 - 7th March 2015 </h2>
+        <h2>University of Edinburgh Main Library, 2nd April 2015 - 27th June 2015 </h2>
 
         <div id="tile-block">
             <div id="current-banner" class="art-tile"></div>
@@ -11,6 +11,14 @@
         <div id="past-exhib-block">
             <h1><a href="./past" alt="Past Exhibitions" title="Past Exhibitions">Past Exhibitions</a>:</h1>
             <ul class="ex-list">
+                <li class="past-ex">
+                    <h3><a href="./emmagillies" alt="Emma Gillies" title="Emma Gillies Information Page">Emma Gillies Rediscovered</a></h3>
+                    <h3><a href='./search/*:*/Exhibition:"emma+gillies%3A+rediscovered|||Emma+Gillies%3A+Rediscovered"'><i class="fa fa-search">&nbsp;</i>View all items</a></h3>
+                    <p>5 Dec 2014 - 7 Mar 2015</p>
+                    <a href="./emmagillies" alt="Emma Gillies" title="Emma Gillies">
+                        <div id="exhib-tile-6"></div>
+                    </a>
+                </li>
                 <li class="past-ex">
                     <h3><a href="./rashid" alt="Rashid al-Din" title="Rashid al-Din Information Page">The World History
                             of Rashid al-Din, 1314</a></h3>
@@ -35,16 +43,6 @@
                     <p>6 Dec 2013 - 1 Mar 2014</p>
                     <a href="./collected" alt="Collect.ed" title="Collect.ed">
                         <div id="exhib-tile-3"></div>
-                    </a>
-                </li>
-                <li class="past-ex">
-                    <h3><a href="./cradle" alt="Cradle of Chemistry" title="Cradle of Chemistry Information Page">Cradle
-                            of Chemistry</a></h3>
-
-                    <h3><a href='./search/*:*/Exhibition:"edinburgh+300+cradle+of+chemistry|||Edinburgh+300+Cradle+of+Chemistry"'><i class="fa fa-search">&nbsp;</i>View all items</a></h3>
-                    <p>1 Aug 2013 - 2 Nov 2013</p>
-                    <a href="./cradle" alt="Cradle of Chemistry" title="Cradle of Chemistry">
-                        <div id="exhib-tile-4"></div>
                     </a>
                 </li>
             </ul>

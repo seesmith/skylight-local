@@ -4,7 +4,7 @@
         <div id="gillies-banner" class="art-tile"></div>
         <h2><a href='./search/*:*/Exhibition:"emma+gillies%3A+rediscovered|||Emma+Gillies%3A+Rediscovered"'><i class="fa fa-search fa-lg">&nbsp;</i>View all items</a></h2>
         <h2>About the Exhibition</h2>
-        <h3>Opening: 5th December 2014 | Where: Exhibition Gallery, Main Library, George Square | Closing: 7th March 20154 |
+        <h3>Opening: 5th December 2014 | Where: Exhibition Gallery, Main Library, George Square | Closing: 7th March 2015 |
             Curated by: Gordon Brennan (Edinburgh College of Art, Director of Undergraduate Studies)</h3>
         <p>
             Over the last two years, significant research has been carried out into the Edinburgh College of Art Collection.
