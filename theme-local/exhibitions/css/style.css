@@ -358,7 +358,7 @@ h1 .icon							{ top: -5px; left: -65px; }
 .pagination							{ line-height: 33px; text-align: center; position: relative; font-size: 11px; font-weight: bold; margin-bottom: -15px; min-height: 33px; }
 .pagination a 						{ color: #666; text-decoration: none; display: inline-block; padding: 0 5px; }
 .pagination a.selected 				{ background: #e8e8e8; color: #333; }
-.pagination a:hover					{ color: #333; text-decoration: underline; }
+.pagination a:hover					{ color: #5c94c3; text-decoration: underline; }
 .pagination .prev,
 .pagination .next					{ display: block; position: absolute; top: 0; font-size: 11px; background: url(../images/bg-arrows.png) no-repeat 0 0; }
 .pagination .prev					{ left: 0; padding: 0 10px 0 25px; }
@@ -373,7 +373,7 @@ h1 .icon							{ top: -5px; left: -65px; }
     font-size: 13px;
 }
 
-.curpage                            { color: #ffffff ; display: inline-block; padding: 0 5px; }
+.curpage                            { color: #0e0498; display: inline-block; padding: 0 5px; }
 
 .browse_pagination                  { display: block; border-bottom: 1px solid #ffffff ; }
 .browse_results                     { margin-top: 30px; }
