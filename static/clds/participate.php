@@ -6,5 +6,7 @@
           <a href="http://www.ed.ac.uk/schools-departments/information-services/library-museum-gallery/crc/volunteers-interns" target="_blank">volunteers and interns</a> for more information.
 
       </p>
+      <br />
+      <br />
     </div>
 </div>
