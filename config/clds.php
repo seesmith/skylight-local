@@ -68,7 +68,7 @@ $config['skylight_search_fields'] = array('Keywords' => 'text',
     'Thumbnail'=> 'dc.format.thumbnail.en'
 );
 
-$config['skylight_related_fields'] = array('Parent Collection' => 'dc.relation.ispartof.en', 'Subject' => 'dc.subject.en');
+$config['skylight_related_fields'] = array('Type' => 'dc.type.en', 'Subject' => 'dc.subject.en');
 
 $config['skylight_sort_fields'] = array('Title' => 'dc.title_sort',
     'Subject' => 'dc.subject_sort'
