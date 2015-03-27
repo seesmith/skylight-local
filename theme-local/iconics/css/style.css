@@ -264,18 +264,24 @@ footer                  { display: block; padding-bottom: 20px; width: 100%; bac
 /* random items */
 
 .randoms                    { width: 940px; }
-.random-first               { width: 700px; float: left; }
+.random-first               { width: 940px; float: left; }
 .random-first-image:hover   { border: 1px solid #FE2842; }
-.random-first-image         { width: 680px; border: 1px solid #666; border-radius: 4px;}
-.random-firstinfo           { min-height:60px; width: 680px; text-align: center; }
-.random-caption             { padding-bottom: 15px; color: #333; padding-top: 10px; text-align: center;
-                            background-color: #FFF; font-size: 16px; font-weight: bold; width: 680px; }
+.random-first-image         { width: 940px; border: 1px solid #666; border-radius: 4px;}
+.random-first-caption       { position: absolute; top: 567px; left: 511px; color: #ffffff;}
+.random-caption             { padding: 10px; text-align: center; font-size: 16px; font-weight: bold; width: 900px; }
 .random-first a             { text-decoration: none;}
-.random-title               { text-align: center; text-decoration: none;}
+.random-title               { position: relative; width: 217px; display: none; }
+.random-title a             { position: absolute; text-align: center; background-color: #333; width: 100%;
+                              padding: 10px; color: #ffffff; text-decoration: none; font-weight: bold; }
+.random-caption-title       { color: #ffffff;}
+.random-caption-abstract    { font-weight: normal; font-size: 80%; color: #ffffff;}
 
+.random-thumbnail           { width: 227px; margin-left: 10.5px; float: left; }
 .random-thumbnail:hover     { border: 1px solid #FE2842; }
-.random-thumbnailimg        { max-height: 200px; min-height: 200px; overflow: auto;}
-.container-random           { width: 220px; float: left; }
+.random-thumbnail:hover .random-title { display: block; }
+.thumbnail-first            { margin-left: 0; }
+.random-thumbnailimg        { max-height: 227px; min-height: 227px; overflow: auto;}
+.container-random           { width: 940px; }
 .container-random h4        { text-align: center;}
 
 .related                    { text-align: center;}
