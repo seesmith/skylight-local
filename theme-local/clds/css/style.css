@@ -486,7 +486,7 @@ table tr:last-child                 { border: 0; border-bottom: none; }
     border-top: 1px solid #333;
 }
 
-.flowplayer {
+.results_header .flowplayer {
     width: 300px !important;
     float: right;
 }
