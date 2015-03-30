@@ -121,11 +121,11 @@
         </div>
         <div id="cld-nav">
             <ul class="cld-nav-links">
-                <li><a href='./search/*/Type:%22special+collections+%26+archives%7C%7C%7CSpecial+Collections+%26+Archives%22/Header:%22archives%22' title="Archives Search">Archives</a></li>
-                <li><a href='./search/*/Type:%22special+collections+%26+archives%7C%7C%7CSpecial+Collections+%26+Archives%22/Header:%22rarebooks%22' title="Rare Books Search">Rare&nbsp;Books</a></li>
-                <li><a href='./search/*/Type:%22museums+%26+galleries%7C%7C%7CMuseums+%26+Galleries%22/Header:%22mimed%22' title="Musical Instruments Search">Musical&nbsp;Instruments</a></li>
-                <li><a href='./search/*/Type:%22museums+%26+galleries%7C%7C%7CMuseums+%26+Galleries%22/Header:%22art%22' title="Art Search">Art</a></li>
-                <li><a href='./search/*/Type:%22museums+%26+galleries%7C%7C%7CMuseums+%26+Galleries%22/Header:%22museums%22' title="Museums Search">Museums</a></li>
+                <li><a href='./search/*/Type:%22special+collections+%26+archives%7C%7C%7CSpecial+Collections+%26+Archives%22/Header:%22archives%22?sort_by=cld.weighting_sort+desc,dc.title_sort+asc' title="Archives Search">Archives</a></li>
+                <li><a href='./search/*/Type:%22special+collections+%26+archives%7C%7C%7CSpecial+Collections+%26+Archives%22/Header:%22rarebooks%22?sort_by=cld.weighting_sort+desc,dc.title_sort+asc' title="Rare Books Search">Rare&nbsp;Books</a></li>
+                <li><a href='./search/*/Type:%22museums+%26+galleries%7C%7C%7CMuseums+%26+Galleries%22/Header:%22mimed%22?sort_by=cld.weighting_sort+desc,dc.title_sort+asc' title="Musical Instruments Search">Musical&nbsp;Instruments</a></li>
+                <li><a href='./search/*/Type:%22museums+%26+galleries%7C%7C%7CMuseums+%26+Galleries%22/Header:%22art%22?sort_by=cld.weighting_sort+desc,dc.title_sort+asc' title="Art Search">Art</a></li>
+                <li><a href='./search/*/Type:%22museums+%26+galleries%7C%7C%7CMuseums+%26+Galleries%22/Header:%22museums%22?sort_by=cld.weighting_sort+desc,dc.title_sort+asc' title="Museums Search">Museums</a></li>
                 <li><a href='./search/*/' title="Search All" class="last">All&nbsp;collections</a></li>
             </ul>
         </div>
