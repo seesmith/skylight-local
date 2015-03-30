@@ -1,5 +1,5 @@
     <div class="content byEditor about">
-        <h1>About the University of Edinburgh L&UC Projects</h1>
+        <h1>About the University of Edinburgh L&amp;UC Projects</h1>
         <p></p>
 
         </p>
