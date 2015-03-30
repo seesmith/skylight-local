@@ -171,14 +171,71 @@ else if (isset($solr[$external_uri_field][0])) {
         {
             $b_segments = explode("##", $bitstream);
             $b_filename = $b_segments[1];
+            $b_handle = $b_segments[3];
             $b_seq = $b_segments[4];
+            $b_handle_id = preg_replace('/^.*\//', '',$b_handle);
+            $b_uri = './record/'.$b_handle_id.'/'.$b_seq.'/'.$b_filename;
 
             if((strpos($b_filename, ".jpg") > 0) || (strpos($b_filename, ".JPG") > 0)) {
 
                 $bitstream_array[$b_seq] = $bitstream;
 
             }
+            else if ((strpos($b_uri, ".mp3") > 0) or (strpos($b_uri, ".MP3") > 0)) {
+
+                $audioLink .= '<audio id="audio-' . $b_seq;
+                $audioLink .= '" title="' . $record_title . ": " . $b_filename . '" ';
+                $audioLink .= 'controls preload="true" width="600">';
+                $audioLink .= '<source src="' . $b_uri . '" type="audio/mpeg" />Audio loading...';
+                $audioLink .= '</audio>';
+                $audioFile = true;
+
+            }
+            else if ((strpos($b_uri, ".mp4") > 0) or (strpos($b_uri, ".MP4") > 0))
+            {
+
+                // if it's chrome, use webm if it exists
+                if (strpos($_SERVER['HTTP_USER_AGENT'], 'Chrome') == false) {
+
+                    $videoLink .= '<div class="flowplayer" data-analytics="' . $ga_code . '" title="' . $record_title . ": " . $b_filename . '">';
+                    $videoLink .= '<video id="video-' . $b_seq. '" title="' . $record_title . ": " . $b_filename . '" ';
+                    $videoLink .= 'controls preload="true" width="600">';
+                    $videoLink .= '<source src="' . $b_uri . '" type="video/mp4" />Video loading...';
+                    $videoLink .= '</video>';
+                    $videoLink .= '</div>';
+
+                    $videoFile = true;
+
+                }
+            }
+            else if ((strpos($b_uri, ".webm") > 0) or (strpos($b_uri, ".WEBM") > 0))
+            {
+
+                // if it's chrome, use webm if it exists
+                if (strpos($_SERVER['HTTP_USER_AGENT'], 'Chrome') == true) {
+
+                    $videoLink .= '<div class="flowplayer" data-analytics="' . $ga_code . '" title="' . $record_title . ": " . $b_filename . '">';
+                    $videoLink .= '<video id="video-' . $b_seq. '" title="' . $record_title . ": " . $b_filename . '" ';
+                    $videoLink .= 'controls preload="none" width="600">';
+                    $videoLink .= '<source src="' . $b_uri . '" type="video/webm" />Video loading...';
+                    $videoLink .= '</video>';
+                    $videoLink .= '</div>';
+
+                    $videoFile = true;
+
+                }
+            }
+            else if((strpos($b_uri, ".pdf") > 0) or (strpos($b_uri, ".PDF") > 0)) {
+
+                $pdfLink .= '<object class="pdfviewer" width="100%" height= "650" data="' . $bitstreamUri . '" type="application/pdf">';
+                $pdfLink .= '<p><span class="label">It appears you do not have a PDF plugin for this browser.</span></p></object>';
+                $pdfLink .= 'Click ' . $bitstreamLink  . 'to download. (<span class="bitstream_size">' . getBitstreamSize($bitstream) . '</span>)';
+            }
+
+
         }
+
+    }
 
         // sorting array so main image is first
         ksort($bitstream_array);
@@ -241,59 +298,6 @@ else if (isset($solr[$external_uri_field][0])) {
                     }
 
                 }
-
-            }
-            else if ((strpos($b_uri, ".mp3") > 0) or (strpos($b_uri, ".MP3") > 0)) {
-
-                $audioLink .= '<audio id="audio-' . $b_seq;
-                $audioLink .= '" title="' . $record_title . ": " . $b_filename . '" ';
-                $audioLink .= 'controls preload="true" width="600">';
-                $audioLink .= '<source src="' . $b_uri . '" type="audio/mpeg" />Audio loading...';
-                $audioLink .= '</audio>';
-                $audioFile = true;
-
-            }
-
-            else if ((strpos($b_uri, ".mp4") > 0) or (strpos($b_uri, ".MP4") > 0))
-            {
-
-                // if it's chrome, use webm if it exists
-                if (strpos($_SERVER['HTTP_USER_AGENT'], 'Chrome') == false) {
-
-                    $videoLink .= '<div class="flowplayer" data-analytics="' . $ga_code . '" title="' . $record_title . ": " . $b_filename . '">';
-                    $videoLink .= '<video id="video-' . $b_seq. '" title="' . $record_title . ": " . $b_filename . '" ';
-                    $videoLink .= 'controls preload="true" width="600">';
-                    $videoLink .= '<source src="' . $b_uri . '" type="video/mp4" />Video loading...';
-                    $videoLink .= '</video>';
-                    $videoLink .= '</div>';
-
-                    $videoFile = true;
-
-                }
-            }
-            else if ((strpos($b_uri, ".webm") > 0) or (strpos($b_uri, ".WEBM") > 0))
-            {
-
-                // if it's chrome, use webm if it exists
-                if (strpos($_SERVER['HTTP_USER_AGENT'], 'Chrome') == true) {
-
-                    $videoLink .= '<div class="flowplayer" data-analytics="' . $ga_code . '" title="' . $record_title . ": " . $b_filename . '">';
-                    $videoLink .= '<video id="video-' . $b_seq. '" title="' . $record_title . ": " . $b_filename . '" ';
-                    $videoLink .= 'controls preload="none" width="600">';
-                    $videoLink .= '<source src="' . $b_uri . '" type="video/webm" />Video loading...';
-                    $videoLink .= '</video>';
-                    $videoLink .= '</div>';
-
-                    $videoFile = true;
-
-                }
-            }
-            else if((strpos($b_uri, ".pdf") > 0) or (strpos($b_uri, ".PDF") > 0)) {
-
-                    $pdfLink .= '<object class="pdfviewer" width="100%" height= "650" data="' . $bitstreamUri . '" type="application/pdf">';
-                    $pdfLink .= '<p><span class="label">It appears you do not have a PDF plugin for this browser.</span></p></object>';
-                    $pdfLink .= 'Click ' . $bitstreamLink  . 'to download. (<span class="bitstream_size">' . getBitstreamSize($bitstream) . '</span>)';    
-            }
 
             ?>
         <?php
