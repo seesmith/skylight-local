@@ -1,7 +1,7 @@
 <div class="record">
     <div class="content byEditor">
 
-        <h1>Welcome to the University of Edinburgh L&UC Projects Index</h1>
+        <h1>Welcome to the University of Edinburgh L&amp;UC Projects Index</h1>
 
         <p>Please search for a project using the search box above or the search facets to the right.</p>
 
