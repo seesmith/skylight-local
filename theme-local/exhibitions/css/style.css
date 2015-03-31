@@ -257,14 +257,14 @@ footer                  { display: block; border-bottom: 1px solid #0e0498 ; pad
 .footer-policies a:hover    { text-decoration: underline;}
 
 
-#tile-block                 { width: 660px; height: 423px; margin-bottom: 18px; }
+#tile-block                 { width: 380px; height: 229px; margin-bottom: 18px; margin: auto; }
 #past-exhib-block           { width: 660px; height: 240px; margin: 0; }
 #tile-block a               { padding: 0; margin: 0; }
-.art-tile                   { float: left; display: block;}
+.art-tile                   { float: left; display: block; }
 
 #past-exhib-block ul        { margin: 0;}
 li.past-ex                  { display: inline; float: left; height: 188px; width: 160px; text-align: center; margin-left: 2.5px; margin-right: 2.5px;}
-#current-banner             { width: 660px; height: 423px; background: url(../images/bluelogo.jpg) no-repeat 0 0; margin: auto; }
+#current-banner             { width: 380px; height: 229px; background: url(../images/bluelogomed.jpg) no-repeat 0 0; margin: auto; }
 
 
 /* for the past exhibitions section on the home page*/
@@ -283,8 +283,8 @@ li.past-ex                  { display: inline; float: left; height: 188px; width
 #collected-banner           { width: 660px; height: 201px; background: url(../images/Collectedtitlebig.jpg) no-repeat 0 0; }
 #cradle-banner              { width: 660px; height: 190px; background: url(../images/Cradle1.jpg) no-repeat 0 0; margin: auto; }
 #gillies-banner             { width: 660px; height: 342px; background: url(../images/gbrennan-13073.jpg) no-repeat 0 0; margin: auto; }
-#somethingblue-banner       { width: 660px; height: 398px; background: url(../images/bluelogo.jpg) no-repeat 0 0; margin: auto; }
-
+#smallbanner-blue           { float: left; display: inline; width: 220px; height: 133px; background: url(../images/bluelogotiny.jpg) no-repeat 0 0;}
+#head-info	                { display: inline; width: 200px; height: 133px; padding-top: 20px; }
 /* Rashid tiles */
 #rashid-block               { width: 660px; height: 480px; margin-bottom: 18px; }
 #rashid-1                   { float: left; display: block; width: 480px; height: 300px; background: url(../images/rashid/Rashidblogbanner2.jpg) no-repeat 0 0; }
