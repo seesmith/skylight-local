@@ -141,6 +141,19 @@
                     $b_handle_id = preg_replace('/^.*\//', '', $b_handle);
                     $b_uri = './record/' . $b_handle_id . '/' . $b_seq . '/' . $b_filename;
                     ?>
+                    <div class="random-first-caption">
+                        <?php if (isset($first_doc)) { ?>
+                        <a title="<?php echo $first_doc[$title_field][0] ?>" href="./record/<?php echo $first_doc['id'] ?>">
+
+                            <div class="random-caption"><div class="random-caption-title"><?php echo $first_doc[$title_field][0]; ?></div><br/>
+                            <?php if (array_key_exists($abstract_field, $first_doc)) {
+                                echo '<div class="random-caption-abstract">' . $first_doc[$abstract_field][0] . '</div>';
+                                ?>
+                                </div>
+                                </a>
+                            <?php }
+                        } ?>
+                    </div>
 
                     <a title="<?php echo $first_doc[$title_field][0] ?>" href="./record/<?php echo $first_doc['id'] ?>">
                         <img src="<?php echo $b_uri ?>" class="random-first-image"
@@ -148,19 +161,7 @@
                     </a>
 
 
-                    <span class="random-first-caption" onmouseout="this.style.background='#333';" onmouseover="this.style.background='#666';" style="background: none repeat scroll 0% 0% rgb(51, 51, 51); color: rgb(0, 0, 0);">
-                        <?php if (isset($first_doc)) { ?>
-                            <a title="<?php echo $first_doc[$title_field][0] ?>" href="./record/<?php echo $first_doc['id'] ?>">
 
-                                <div class="random-caption"><div class="random-caption-title"><?php echo $first_doc[$title_field][0]; ?></div><br/>
-                                <?php if (array_key_exists($abstract_field, $first_doc)) {
-                                        echo '<div class="random-caption-abstract">' . $first_doc[$abstract_field][0] . '</div>';
-                                    ?>
-                                </div>
-                            </a>
-                            <?php }
-                        } ?>
-                    </span>
                 <?php }
 
             } //end if there are bitstreams ?>
