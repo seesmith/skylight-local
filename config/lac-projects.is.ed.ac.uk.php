@@ -57,7 +57,6 @@ $config['skylight_fields'] = array('Title' => 'dc.title.en',
     'Technology' => 'project.tech.en'
 );
 
-$config['skylight_related_fields'] = array('Business Area','Principal Investigator',);
 
 $config['skylight_date_filters'] = array('Date' => 'dateIssued.year_sort');
 $config['skylight_filters'] = array('Project Status' => 'type_filter','Business Area' => 'subject_filter','Principal Investigator' => 'author_filter');

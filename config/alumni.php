@@ -78,8 +78,6 @@ $config['skylight_fields'] = array('Name' => 'dc.contributor.author.en',
 
 );
 
-$config['skylight_related_fields'] = array('Title');
-
 $config['skylight_date_filters'] = array('Date' => 'dateIssued.year_sort');
 $config['skylight_filters'] = array('Collection' => 'collection_filter');
 

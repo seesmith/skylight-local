@@ -74,7 +74,7 @@ $config['skylight_sort_fields'] = array('Author' => 'dc.contributor.authorza_sor
     'Date' => 'dc.date.issued_dt'
 );
 
-$config['skylight_related_fields'] = array('Title' => 'dc.title.en', 'Subject' => 'dc.subject.en', 'Author' => 'dc.contributor.author.en');
+$config['skylight_related_fields'] = array('Type' => 'dc.type.en', 'Author' => 'dc.contributor.author.en', 'Subject' => 'dc.subject.en', 'Title' => 'dc.title.en', );
 
 $config['skylight_feed_fields'] = array('Title' => 'Title',
     'Author' => 'Author',

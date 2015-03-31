@@ -44,8 +44,6 @@ $config['skylight_fields'] = array('Title' => 'dc.title.en',
     'Shelf Mark' => 'dc.identifier.other'
 );
 
-$config['skylight_related_fields'] = array('Title','Subject','Format','Creator');
-
 $config['skylight_date_filters'] = array('Date' => 'dateIssued.year_sort');
 $config['skylight_filters'] = array('Subject' => 'subject_filter');
 
@@ -66,7 +64,7 @@ $config['skylight_search_fields'] = array(
     'Creator' => 'dc.contributor.author',
 );
 
-$config['skylight_related_fields'] = array('Subject' => 'dc.subject.en', 'Creator' => 'dc.contributor.author.en');
+$config['skylight_related_fields'] = array('Subject' => 'dc.subject.en');
 
 $config['skylight_sort_fields'] = array('Title' => 'dc.title_sort',
     'Subject' => 'dc.subject_sort'
