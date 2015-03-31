@@ -126,7 +126,7 @@
                 <li><a href='./search/*/Type:%22mimed%7C%7C%7CMIMEd%22/Header:%22mimed%22?sort_by=cld.weighting_sort+desc,dc.title_sort+asc' title="Musical Instruments Search">Musical&nbsp;Instruments</a></li>
                 <li><a href='./search/*/Type:%22art%7C%7C%7CArt%22/Header:%22art%22?sort_by=cld.weighting_sort+desc,dc.title_sort+asc' title="Art Search">Art</a></li>
                 <li><a href='./search/*/Type:%22museums%7C%7C%7CMuseums%22/Header:%22museums%22?sort_by=cld.weighting_sort+desc,dc.title_sort+asc' title="Museums Search">Museums</a></li>
-                <li><a href='./search/*/' title="Search All" class="last">All&nbsp;collections</a></li>
+                <li><a href='./search/*?sort_by=dc.title_sort+asc' title="Search All" class="last">All&nbsp;collections</a></li>
             </ul>
         </div>
     </header>

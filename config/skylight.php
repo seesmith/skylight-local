@@ -4,7 +4,7 @@
 $config['skylight_hostnames'] = array('test.exampapers.ed.ac.uk', 'exampapers.ed.ac.uk', 'images.ph.ed.ac.uk', 'www.scottishgovernmentyearbooks.ed.ac.uk', 'test.scottishgovernmentyearbooks.ed.ac.uk', 'test.exhibitions.ed.ac.uk', 'exhibitions.ed.ac.uk');
 
 // Uncomment this if you want to use urls of the form http://.../prefix/...
-$config['skylight_url_prefixes'] = array('mimed', 'art', 'calendars', 'iconics', 'obooks', 'anatomy', 'cockburn');
+$config['skylight_url_prefixes'] = array('mimed', 'art', 'calendars', 'iconics', 'openbooks', 'anatomy', 'cockburn');
 
 // For inserting prefixes for handle resolver
 $config['skylight_handle_prefixes'] = array(3 => "art", 11 => "mimed");

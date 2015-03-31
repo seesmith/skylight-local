@@ -1,15 +1,13 @@
 <?php
 
-$config['skylight_appname'] = 'obooks';
+$config['skylight_appname'] = 'openbooks';
 
 // Uncomment this if you are using a url of the form http://.../art/...
-//$config['skylight_url_prefix'] = 'iog';
+$config['skylight_url_prefix'] = 'openbooks';
 
-$config['skylight_url_prefix'] = 'obooks';
+$config['skylight_theme'] = 'openbooks';
 
-$config['skylight_theme'] = 'obooks';
-
-$config['skylight_fullname'] = 'OPEN BOOKS';
+$config['skylight_fullname'] = 'Open Books';
 
 $config['skylight_adminemail'] = 'lddt@mlist.is.ed.ac.uk';
 
@@ -76,7 +74,7 @@ $config['skylight_sort_fields'] = array('Author' => 'dc.contributor.authorza_sor
     'Date' => 'dc.date.issued_dt'
 );
 
-$config['skylight_related_fields'] = array('Title' => 'dc.title.en', 'Subject' => 'dc.subject.en', 'Author' => 'dc.contributor.author.en');
+$config['skylight_related_fields'] = array('Type' => 'dc.type.en', 'Author' => 'dc.contributor.author.en', 'Subject' => 'dc.subject.en', 'Title' => 'dc.title.en', );
 
 $config['skylight_feed_fields'] = array('Title' => 'Title',
     'Author' => 'Author',
