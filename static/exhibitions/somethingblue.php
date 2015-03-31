@@ -1,12 +1,45 @@
 <div class="content">
     <div class="content byEditor">
-        <a href ='./search/*:*/Exhibition:"something+blue|||Something+Blue"'><h1>...Something Blue</h1></a>
-        <div id="somethingblue-banner" class="art-tile"></div>
+        <a href ='./search/*:*/Exhibition:"something+blue|||Something+Blue"' id = "smallbanner-blue"</a>
 
-        <h2><a href='../search/*:*/Exhibition:"something+blue|||Something+Blue"'><i class="fa fa-search fa-lg">&nbsp;</i>View all items</a></h2>
-        <h2>About the Exhibition</h2>
-        <h3>Opening: 2nd April 2015 | Where: Exhibition Gallery, Main Library, George Square | Closing: 27th June 2015 | Curated by: Emma Smith</h3>
+        <div id="head-info">
+            <h2><a href='../search/*:*/Exhibition:"something+blue|||Something+Blue"'><i class="fa fa-search fa-lg">&nbsp;</i>View all items</a></h2>
+            <h2>About the Exhibition</h2>
+            <h3>Opening: 2nd April 2015 | Where: Exhibition Gallery, Main Library, George Square | Closing: 27th June 2015 | Curated by: Emma Smith</h3>
+        </div>
 
+
+
+<?php
+        $record_title = 'Something Blue Introduction';
+        $b_filename = base_url().'videos/0051014v-001.';
+        $b_seq = 0;
+        $videoLink = "";
+
+        if (strpos($_SERVER['HTTP_USER_AGENT'], 'Chrome') == false) {
+            $videoLink = '<div class="flowplayer"  title="' . $record_title . '">';
+            $videoLink .= '<video id="video-' . $b_seq. '" title="' . $record_title . '" ';
+            $videoLink .= 'controls preload="true" width="600">';
+            $videoLink .= '<source src="' . $b_filename . 'mp4" type="video/mp4" />Video loading...';
+            $videoLink .= '</video>';
+            $videoLink .= '</div>';
+           echo $videoLink;
+
+        }
+        else
+        {
+            $videoLink = '<div class="flowplayer"  title="' . $record_title . '">';
+            $videoLink .= '<video id="video-' . $b_seq. '" title="' . $record_title . '" ';
+            $videoLink .= 'controls preload="true" width="600">';
+            $videoLink .= '<source src="' . $b_filename . 'webm" type="video/webm" />Video loading...';
+            $videoLink .= '</video>';
+            $videoLink .= '</div>';
+           echo $videoLink;
+        }
+
+
+?>
+        <div class = "content">
         <p>
         Blue has delighted and captivated humanity for thousands of years. It is used to describe immeasurable concepts, such as the depth of the sea or the colour of the sky. Despite this, it only occurs in nature very rarely and is the most difficult natural pigment to obtain.
 </p>
@@ -19,5 +52,7 @@
         <p>
         <i>John Ruskin (1819 - 1900)</i>
         </p>
+        </div>
+
     </div>
 </div>
