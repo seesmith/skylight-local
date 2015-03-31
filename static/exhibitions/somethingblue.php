@@ -12,10 +12,9 @@
 
 <?php
         $record_title = 'Something Blue Introduction';
-        $b_filename = base_url().'/theme/exhibitions/images/0051014v-001.';
+        $b_filename = base_url().'videos/0051014v-001.';
         $b_seq = 0;
         $videoLink = "";
-
 
         if (strpos($_SERVER['HTTP_USER_AGENT'], 'Chrome') == false) {
             $videoLink = '<div class="flowplayer"  title="' . $record_title . '">';
