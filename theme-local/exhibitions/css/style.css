@@ -109,7 +109,6 @@ h1, h2, h3, h4, h5, h6          { text-rendering: optimizeLegibility; color: #00
 h1 								{ font-size: 18px; line-height: 24px; margin: 18px 0 17px 0; position: relative; color: #0e0498;}
 h2 								{ font-size: 16px; line-height: 36px; margin: 0 0 0 0; }
 h3 								{ color: #0e0498; font-size: 14px; line-height: 18px; margin: 0 0 9px 0; }
-a:hover i                       { color: #ffffff;}
 
 h1.itemtitle 					{ font-size: 18px; line-height: 24px; margin: 15px 0 10px 0; position: relative; color: #0e0498; }
 .left-title h1.itemtitle, .full-title h1.itemtitle { margin-top: 0; }

@@ -19,7 +19,7 @@
         if (strpos($_SERVER['HTTP_USER_AGENT'], 'Chrome') == false) {
             $videoLink = '<div class="flowplayer"  title="' . $record_title . '">';
             $videoLink .= '<video id="video-' . $b_seq. '" title="' . $record_title . '" ';
-            $videoLink .= 'controls preload="true" width="600">';
+            $videoLink .= 'controls preload="true" width="660">';
             $videoLink .= '<source src="' . $b_filename . 'mp4" type="video/mp4" />Video loading...';
             $videoLink .= '</video>';
             $videoLink .= '</div>';
@@ -30,7 +30,7 @@
         {
             $videoLink = '<div class="flowplayer"  title="' . $record_title . '">';
             $videoLink .= '<video id="video-' . $b_seq. '" title="' . $record_title . '" ';
-            $videoLink .= 'controls preload="true" width="600">';
+            $videoLink .= 'controls preload="true" width="660">';
             $videoLink .= '<source src="' . $b_filename . 'webm" type="video/webm" />Video loading...';
             $videoLink .= '</video>';
             $videoLink .= '</div>';
