@@ -264,9 +264,10 @@ footer                  { display: block; padding-bottom: 20px; width: 100%; bac
 /* random items */
 
 .randoms                    { width: 940px; }
-.random-first               { position: relative; width: 940px; float: left; }
-.random-first-image:hover   { border: 1px solid #FE2842; }
-.random-first-image         { width: 940px; border: 1px solid #666; border-radius: 4px;}
+.random-first               { position: relative; width: 940px; float: left; border: 1px solid #666; border-radius: 4px; padding: 4px;}
+.random-first:hover         { border: 1px solid #FE2842; }
+.random-first-image         { width: 930px; }
+.random-first-image-holder  { padding: 0px; margin: 0px; width: 930px; }
 .random-first-caption       { background-color: #333; color: #ffffff;}
 
 .random-caption             { padding: 10px; text-align: center; font-size: 16px; font-weight: bold; width: 900px; }

@@ -97,6 +97,7 @@
 
 
         <div class="random-first">
+            <a title="<?php echo $first_doc[$title_field][0] ?>" href="./record/<?php echo $first_doc['id'] ?>">
             <?php
 
             $bitstream_array = array();
@@ -143,31 +144,25 @@
                     ?>
                     <div class="random-first-caption">
                         <?php if (isset($first_doc)) { ?>
-                        <a title="<?php echo $first_doc[$title_field][0] ?>" href="./record/<?php echo $first_doc['id'] ?>">
 
                             <div class="random-caption"><div class="random-caption-title"><?php echo $first_doc[$title_field][0]; ?></div><br/>
                             <?php if (array_key_exists($abstract_field, $first_doc)) {
                                 echo '<div class="random-caption-abstract">' . $first_doc[$abstract_field][0] . '</div>';
                                 ?>
-                                </div>
-                                </a>
+                            </div>
                             <?php }
                         } ?>
                     </div>
-
-                    <a title="<?php echo $first_doc[$title_field][0] ?>" href="./record/<?php echo $first_doc['id'] ?>">
-                        <img src="<?php echo $b_uri ?>" class="random-first-image"
-                             title="<?php echo $first_doc[$title_field][0] ?>">
-                    </a>
-
-
+                    <div class="random-first-image-holder">
+                        <img src="<?php echo $b_uri ?>" class="random-first-image" title="<?php echo $first_doc[$title_field][0] ?>">
+                    </div>
 
                 <?php }
 
             } //end if there are bitstreams ?>
-
+            </a>
         </div>
-
 
  </div>
  <div class="clearfix"></div>
+ <br />
