@@ -156,7 +156,7 @@ header				{ position: relative; width: 940px; height: 140px; background-color: #
 
 #menu                               { width: 940px; margin: 0 auto; height: 33px; background: #333;}
 .menu-links li					    { display: inline; float: right; height: 33px; padding-left: 0; padding-right: 0; }
-.menu-links li a 			        { font-weight: bold; font-size: 11px; text-transform: uppercase; float: left; text-decoration: none; margin-left: 10px; color: #fff; display: inline-block; height: 32px; line-height: 2.5em; padding: 3px 20px 2px; text-align: center; }
+.menu-links li a 			        { font-weight: bold; font-size: 11px; text-transform: uppercase; float: left; text-decoration: none; margin-left: 10px; color: #fff; display: inline-block; height: 33px; line-height: 2.5em; padding: 3px 20px 2px; text-align: center; }
 .menu-links li a:hover		        { background-color: #ff2741; }
 .menu-links li a.last		        { border: none; }
 
@@ -266,24 +266,24 @@ footer                  { display: block; padding-bottom: 20px; width: 100%; bac
 .randoms                    { width: 940px; }
 .random-first               { position: relative; width: 940px; float: left; border: 1px solid #666; border-radius: 4px; padding: 4px;}
 .random-first:hover         { border: 1px solid #FE2842; }
-.random-first-image         { width: 930px; }
+.random-first-image         { width: 930px; margin: 0px; padding: 0px; }
 .random-first-image-holder  { padding: 0px; margin: 0px; width: 930px; }
 .random-first-caption       { background-color: #333; color: #ffffff;}
 
 .random-caption             { padding: 10px; text-align: center; font-size: 16px; font-weight: bold; width: 900px; }
 .random-first a             { text-decoration: none;}
-.random-title               { position: relative; width: 217px; display: none; }
+.random-title               { position: relative; width: 217px; display: none; z-index: 100; }
 .random-title a             { position: absolute; text-align: center; background-color: #333; width: 100%;
-                              padding: 10px; color: #ffffff; text-decoration: none; font-weight: bold; }
-.random-caption-title       {  color: #ffffff;}
+    padding: 10px; color: #ffffff; text-decoration: none; font-weight: bold; }
+.random-caption-title       { color: #ffffff;}
 .random-caption-abstract    { font-weight: normal; font-size: 80%; color: #ffffff;}
+.random-image               { vertical-align: middle; text-align: center; width: 217px; height: 227px; line-height: 227px; position: relative; }
 
-.random-thumbnail           { width: 227px; margin-left: 10.5px; float: left; }
+.random-thumbnail           { width: 227px; height: 237px; margin-left: 10.5px; float: left; }
 .random-thumbnail:hover     { border: 1px solid #FE2842; }
 .random-thumbnail:hover .random-title { display: block; }
 .thumbnail-first            { margin-left: 0; }
-.random-thumbnailimg        { max-height: 227px; min-height: 227px; overflow: auto;}
-.container-random           { width: 940px; }
+.random-thumbnailimg        { max-height: 100%; max-width: 100% !important; width: auto; height: auto; margin: auto; position: absolute; top: 0; left: 0; right: 0; bottom: 0; }
 .container-random h4        { text-align: center;}
 
 .related                    { text-align: center;}

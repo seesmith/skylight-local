@@ -155,7 +155,7 @@ else if (isset($solr[$external_uri_field][0])) {
     <?php
     if(isset($solr[$bitstream_field]) && $link_bitstream) { ?>
 
-        <div class="record_bitstreams"><?php
+    <div class="record_bitstreams"><?php
 
         $numThumbnails = 0;
         $mainImage = false;
@@ -167,21 +167,19 @@ else if (isset($solr[$external_uri_field][0])) {
         $pdfLink = "";
         $bitstream_array = array();
 
-        foreach ($solr[$bitstream_field] as $bitstream)
-        {
+        foreach ($solr[$bitstream_field] as $bitstream) {
             $b_segments = explode("##", $bitstream);
             $b_filename = $b_segments[1];
             $b_handle = $b_segments[3];
             $b_seq = $b_segments[4];
-            $b_handle_id = preg_replace('/^.*\//', '',$b_handle);
-            $b_uri = './record/'.$b_handle_id.'/'.$b_seq.'/'.$b_filename;
+            $b_handle_id = preg_replace('/^.*\//', '', $b_handle);
+            $b_uri = './record/' . $b_handle_id . '/' . $b_seq . '/' . $b_filename;
 
-            if((strpos($b_filename, ".jpg") > 0) || (strpos($b_filename, ".JPG") > 0)) {
+            if ((strpos($b_filename, ".jpg") > 0) || (strpos($b_filename, ".JPG") > 0)) {
 
                 $bitstream_array[$b_seq] = $bitstream;
 
-            }
-            else if ((strpos($b_uri, ".mp3") > 0) or (strpos($b_uri, ".MP3") > 0)) {
+            } else if ((strpos($b_uri, ".mp3") > 0) or (strpos($b_uri, ".MP3") > 0)) {
 
                 $audioLink .= '<audio id="audio-' . $b_seq;
                 $audioLink .= '" title="' . $record_title . ": " . $b_filename . '" ';
@@ -190,15 +188,13 @@ else if (isset($solr[$external_uri_field][0])) {
                 $audioLink .= '</audio>';
                 $audioFile = true;
 
-            }
-            else if ((strpos($b_uri, ".mp4") > 0) or (strpos($b_uri, ".MP4") > 0))
-            {
+            } else if ((strpos($b_uri, ".mp4") > 0) or (strpos($b_uri, ".MP4") > 0)) {
 
                 // if it's chrome, use webm if it exists
                 if (strpos($_SERVER['HTTP_USER_AGENT'], 'Chrome') == false) {
 
                     $videoLink .= '<div class="flowplayer" data-analytics="' . $ga_code . '" title="' . $record_title . ": " . $b_filename . '">';
-                    $videoLink .= '<video id="video-' . $b_seq. '" title="' . $record_title . ": " . $b_filename . '" ';
+                    $videoLink .= '<video id="video-' . $b_seq . '" title="' . $record_title . ": " . $b_filename . '" ';
                     $videoLink .= 'controls preload="true" width="600">';
                     $videoLink .= '<source src="' . $b_uri . '" type="video/mp4" />Video loading...';
                     $videoLink .= '</video>';
@@ -207,15 +203,13 @@ else if (isset($solr[$external_uri_field][0])) {
                     $videoFile = true;
 
                 }
-            }
-            else if ((strpos($b_uri, ".webm") > 0) or (strpos($b_uri, ".WEBM") > 0))
-            {
+            } else if ((strpos($b_uri, ".webm") > 0) or (strpos($b_uri, ".WEBM") > 0)) {
 
                 // if it's chrome, use webm if it exists
                 if (strpos($_SERVER['HTTP_USER_AGENT'], 'Chrome') == true) {
 
                     $videoLink .= '<div class="flowplayer" data-analytics="' . $ga_code . '" title="' . $record_title . ": " . $b_filename . '">';
-                    $videoLink .= '<video id="video-' . $b_seq. '" title="' . $record_title . ": " . $b_filename . '" ';
+                    $videoLink .= '<video id="video-' . $b_seq . '" title="' . $record_title . ": " . $b_filename . '" ';
                     $videoLink .= 'controls preload="none" width="600">';
                     $videoLink .= '<source src="' . $b_uri . '" type="video/webm" />Video loading...';
                     $videoLink .= '</video>';
@@ -224,21 +218,20 @@ else if (isset($solr[$external_uri_field][0])) {
                     $videoFile = true;
 
                 }
-            }
-            else if((strpos($b_uri, ".pdf") > 0) or (strpos($b_uri, ".PDF") > 0)) {
+            } else if ((strpos($b_uri, ".pdf") > 0) or (strpos($b_uri, ".PDF") > 0)) {
 
                 $pdfLink .= '<object class="pdfviewer" width="100%" height= "650" data="' . $bitstreamUri . '" type="application/pdf">';
                 $pdfLink .= '<p><span class="label">It appears you do not have a PDF plugin for this browser.</span></p></object>';
-                $pdfLink .= 'Click ' . $bitstreamLink  . 'to download. (<span class="bitstream_size">' . getBitstreamSize($bitstream) . '</span>)';
+                $pdfLink .= 'Click ' . $bitstreamLink . 'to download. (<span class="bitstream_size">' . getBitstreamSize($bitstream) . '</span>)';
             }
 
 
         }
 
-    }
-
-        // sorting array so main image is first
-        ksort($bitstream_array);
+        if(count($bitstream_array) > 0) {
+            // sorting array so main image is first
+            ksort($bitstream_array);
+        }
 
         $b_seq =  "";
 
@@ -248,62 +241,55 @@ else if (isset($solr[$external_uri_field][0])) {
             $b_filename = $b_segments[1];
             $b_handle = $b_segments[3];
             $b_seq = $b_segments[4];
-            $b_handle_id = preg_replace('/^.*\//', '',$b_handle);
-            $b_uri = './record/'.$b_handle_id.'/'.$b_seq.'/'.$b_filename;
+            $b_handle_id = preg_replace('/^.*\//', '', $b_handle);
+            $b_uri = './record/' . $b_handle_id . '/' . $b_seq . '/' . $b_filename;
 
-            if ((strpos($b_uri, ".jpg") > 0) or (strpos($b_uri, ".JPG") > 0))
-            {
-                // is there a main image
-                if (!$mainImage) {
+            // is there a main image
+            if (!$mainImage) {
 
-                    $bitstreamLink = '<div class="main-image">';
+                $bitstreamLink = '<div class="main-image">';
 
-                    $bitstreamLink .= '<a title = "' . $record_title . ' ' .$b_filename.'" class="fancybox" rel="group" href="' . $b_uri . '"> ';
-                    $bitstreamLink .= '<img class="record-main-image" src = "'. $b_uri .'">';
-                    $bitstreamLink .= '</a>';
+                $bitstreamLink .= '<a title = "' . $record_title . ' ' . $b_filename . '" class="fancybox" rel="group" href="' . $b_uri . '"> ';
+                $bitstreamLink .= '<img class="record-main-image" src = "' . $b_uri . '">';
+                $bitstreamLink .= '</a>';
 
-                    $bitstreamLink .= '</div>';
+                $bitstreamLink .= '</div>';
 
-                    $mainImage = true;
+                $mainImage = true;
 
-                }
-                // we need to display a thumbnail
-                else {
+            } // we need to display a thumbnail
+            else {
 
-                    // if there are thumbnails
-                    if(isset($solr[$thumbnail_field])) {
-                        foreach ($solr[$thumbnail_field] as $thumbnail) {
+                // if there are thumbnails
+                if (isset($solr[$thumbnail_field])) {
+                    foreach ($solr[$thumbnail_field] as $thumbnail) {
 
-                            $t_segments = explode("##", $thumbnail);
-                            $t_filename = $t_segments[1];
+                        $t_segments = explode("##", $thumbnail);
+                        $t_filename = $t_segments[1];
 
-                            if ($t_filename === $b_filename . ".jpg") {
+                        if ($t_filename === $b_filename . ".jpg") {
 
-                                $t_handle = $t_segments[3];
-                                $t_seq = $t_segments[4];
-                                $t_uri = './record/'.$b_handle_id.'/'.$t_seq.'/'.$t_filename;
+                            $t_handle = $t_segments[3];
+                            $t_seq = $t_segments[4];
+                            $t_uri = './record/' . $b_handle_id . '/' . $t_seq . '/' . $t_filename;
 
-                                $thumbnailLink[$numThumbnails] = '<div class="thumbnail-tile';
+                            $thumbnailLink[$numThumbnails] = '<div class="thumbnail-tile';
 
-                                if($numThumbnails % 4 === 0) {
-                                    $thumbnailLink[$numThumbnails] .= ' first';
-                                }
+                            $thumbnailLink[$numThumbnails] .= '"><a title = "' . $record_title . '" class="fancybox" rel="group" href="' . $b_uri . '"> ';
+                            $thumbnailLink[$numThumbnails] .= '<img src = "' . $t_uri . '" class="record-thumbnail" title="' . $record_title . ' ' . $t_filename . '" /></a></div>';
 
-                                $thumbnailLink[$numThumbnails] .= '"><a title = "' . $record_title . '" class="fancybox" rel="group" href="' . $b_uri . '"> ';
-                                $thumbnailLink[$numThumbnails] .= '<img src = "'.$t_uri.'" class="record-thumbnail" title="'. $record_title .' '.$t_filename.'" /></a></div>';
-
-                                $numThumbnails++;
-                            }
+                            $numThumbnails++;
                         }
                     }
-
                 }
+
+            }
 
             ?>
         <?php
         } // end for each bitstream
 
-        if($mainImage) {
+        if ($mainImage) {
 
             echo $bitstreamLink;
             echo '<div class="clearfix"></div>';
@@ -311,61 +297,47 @@ else if (isset($solr[$external_uri_field][0])) {
 
         $i = 0;
         $newStrip = false;
-        if($numThumbnails > 0) {
+        if ($numThumbnails > 0) {
 
             echo '<div class="thumbnail-strip">';
 
-            foreach($thumbnailLink as $thumb) {
+            foreach ($thumbnailLink as $thumb) {
 
-                if($newStrip)
-                {
-
-                    echo '</div><div class="clearfix"></div>';
-                    echo '<div class="thumbnail-strip">';
-                    echo $thumb;
-                    $newStrip = false;
-                }
-                else {
-
-                    echo $thumb;
-                }
-
-                $i++;
-
-                // if we're starting a new thumbnail strip
-                if($i % 4 === 0) {
-                    $newStrip = true;
-                }
+                echo $thumb;
             }
 
             echo '</div><div class="clearfix"></div>';
+
         }
 
-        if($audioFile) {
 
 
-            echo '<br>.<br>'.$audioLink;
+        if ($audioFile) {
+
+
+            echo '<br>.<br>' . $audioLink;
         }
 
-        if($videoFile) {
+        if ($videoFile) {
 
-            echo '<br>.<br>'.$videoLink;
+            echo '<br>.<br>' . $videoLink;
         }
 
-        if($pdfFile) {
+        if ($pdfFile) {
 
-            echo '<br>.<br>'.$pdfLink;
+            echo '<br>.<br>' . $pdfLink;
         }
 
         echo '</div><div class="clearfix"></div>';
 
-    } // end if there are bitstreams
 
-    echo '</div>';
+        } // end if there are bitstreams
 
-    ?>
+        echo '</div>';
 
-    <input type="button" value="Back to Search Results" class="backbtn" onClick="history.go(-1);">
+        ?>
+
+        <input type="button" value="Back to Search Results" class="backbtn" onClick="history.go(-1);">
 
 
 

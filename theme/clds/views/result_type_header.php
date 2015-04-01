@@ -115,7 +115,7 @@ if (strpos($search_url, 'Header:%22archives%22') > 0)
         </div>
     </div>
     <div class="results_link">
-          <h3 class="collection-link"><a href="<?php echo base_url(); ?>mimed" target="_blank">View the items in the Musical Instrument Museums Edinburgh <i class="fa fa-external-link">&nbsp;</i> </a></h3>
+          <h3 class="collection-link"><a href="<?php echo base_url(); ?>mimed" target="_blank">View the items in the Musical Instrument Museums Edinburgh Collection <i class="fa fa-external-link">&nbsp;</i> </a></h3>
     </div>
 <?php }
 }
