@@ -44,7 +44,6 @@ $config['skylight_meta_fields'] = array('Title' => 'dc.title.en',
     'Author' => 'dc.contributor.author.en',
     'Abstract' => 'dc.description.abstract.en',
     'Subject' => 'dc.subject.en',
-    'Date' => 'dc.coverage.temporal.en',
     'Type' => 'dc.type.en',
     'Bitstream'=> 'dc.format.original',
     'Thumbnail'=> 'dc.format.thumbnail'
