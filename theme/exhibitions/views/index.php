@@ -2,7 +2,6 @@
     <div class="content byEditor">
         <h1>CURRENT EXHIBITION: <a href="./somethingblue" alt="...Something Blue"
                                    title="...Something Blue information page">...Something Blue.</a>
-        <span id='view-all'><a href='./search/*:*/Exhibition:"emma+gillies%3A+rediscovered|||Emma+Gillies%3A+Rediscovered"' alt='View the exhibition online' title='View the exhibition online'><i class="fa fa-search">&nbsp;</i>View all items</a></span></h1>
         <h2>University of Edinburgh Main Library, 2nd April 2015 - 27th June 2015 </h2>
 
         <div id="tile-block">

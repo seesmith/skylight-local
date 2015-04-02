@@ -13,7 +13,7 @@
 
     //pop the first item from the list
 
-    $first_doc = array_shift($randomitems);
+    // $first_doc = array_shift($randomitems);
 
 
     ?>
@@ -25,7 +25,7 @@
         $k = 0;
         foreach ($randomitems as $index => $doc) {
 
-            $extraclass = ($k == 0) ? "thumbnail-first" : ""; ?>
+            $extraclass = ($k % 4 == 0) ? "thumbnail-first" : ""; ?>
 
             <div class="thumbnail random-thumbnail <?php echo $extraclass; ?>">
                 <div class="random-title"><a href="./record/<?php echo $doc['id']?>"><?php echo $doc[$title_field][0]; ?></a></div>
@@ -95,7 +95,7 @@
 
 
 
-
+<?php /*
     <div class="random-first">
         <a title="<?php echo $first_doc[$title_field][0] ?>" href="./record/<?php echo $first_doc['id'] ?>">
             <?php
@@ -164,5 +164,7 @@
     </div>
 
 </div>
+
+ */ ?>
 <div class="clearfix"></div>
 <br />

@@ -2,7 +2,8 @@
             <div class="footer-links">
                 <div class="site-links">
                     <a href="./">Exhibitions Home</a>
-                    <a href="./about">About this Collection</a>
+                    <a href="./about">About Exhibitions</a>
+                    <a href="http://collections.ed.ac.uk/">Library &amp; University Collections Home</a>
                     <a href="./feedback" class="last">Feedback</a>
                 </div>
                 <div class="social-links">

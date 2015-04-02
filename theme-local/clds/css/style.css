@@ -274,9 +274,9 @@ footer                  { display: block; padding-bottom: 20px; width: 100%; bac
 .mimed_header           { background: url(../images/0035642d-hdr.jpg) no-repeat 0 0; }
 .art_header             { background: url(../images/0016215c-hdr.jpg) no-repeat 0 0; }
 .museums_header         { background: url(../images/0031301d-hdr.jpg) no-repeat 0 0; }
-.results_link h3          { padding-top: 10px;}
+.results_link h3        { padding-top: 10px;}
 
-.results_text           { color: #333; font-size: 14px; width: 330px; float:left; text-align: center; margin-top: 26px;}
+.results_text           { color: #333; font-size: 14px; width: 330px; float:left; text-align: center; margin-top: 15px; font-weight: bold; }
 
 
 /* Custom Containers & Subclasses ----------------------------------------------------------------------------------------*/

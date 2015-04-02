@@ -258,13 +258,13 @@ footer                  { display: block; padding-bottom: 20px; width: 100%; bac
 .is-logo                { display: block; float: left; padding-left: 10px; }
 .islogo                 { display: block; width: 50px; height: 64px; background: url(../images/islogo.gif) no-repeat 0 0; }
 
-.tag-line               { padding: 1px 50px 1px 50px; background: url(../images/thairtoremain.gif) no-repeat 0 0; text-align: center; border-bottom: solid 1px #333; margin-bottom: 15px;}
+.tag-line               { padding: 1px 50px 1px 50px; background: url(../images/thairtoremain.gif) no-repeat 0 0; text-align: center; border-bottom: solid 1px #333; margin-bottom: 15px; height: 130px;}
 .tag-line h1            { color: #444;}
 
 /* random items */
 
 .randoms                    { width: 940px; }
-.random-first               { width: 100%; float: left; border: 1px solid #666; border-radius: 4px; padding: 4px; background-color: #333;}
+.random-first               { width: 100%; float: left; border: 1px solid #666; border-radius: 4px; padding: 4px; }
 .random-first:hover         { border: 1px solid #FE2842; }
 .random-first-image-holder  { padding: 0; width: 930px;}
 .random-first-image         { max-height: 100%; max-width: 100%; margin: auto !important; text-align: center; display: block;}
@@ -279,7 +279,8 @@ footer                  { display: block; padding-bottom: 20px; width: 100%; bac
 .random-caption-abstract    { font-weight: normal; font-size: 80%; color: #ffffff;}
 .random-image               { vertical-align: middle; text-align: center; width: 217px; height: 227px; line-height: 227px; position: relative; }
 
-.random-thumbnail           { width: 227px; height: 237px; margin-left: 10.5px; float: left; background-color: #333; }
+.random-thumbnail           { width: 227px; height: 237px; margin-left: 10.5px; float: left; background-color: #d3d3d2; border: 1px solid #333;}
+.random-thumbnail .first    { margin-left: 0; }
 .random-thumbnail:hover     { border: 1px solid #FE2842; }
 .random-thumbnail:hover .random-title { display: block; }
 .thumbnail-first            { margin-left: 0; }
