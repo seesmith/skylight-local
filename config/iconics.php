@@ -51,9 +51,7 @@ $config['skylight_meta_fields'] = array('Title' => 'dc.title.en',
 
 $config['skylight_related_fields'] = array(
     'Subject' => 'dc.subject.en',
-    'Type' => 'dc.type.en',
-    'Author' => 'dc.contributor.author.en'
-
+    'Type' => 'dc.type.en'
 );
 
 $config['skylight_recorddisplay'] = array('Author','Type','Subject', 'Date');
