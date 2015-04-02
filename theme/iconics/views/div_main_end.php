@@ -1,8 +1,9 @@
         <footer>
             <div class="footer-links">
                 <div class="site-links">
-                    <a href="./"><?php echo $site_title; ?></a>
-                    <a href="./about">About this Collection</a>
+                    <a href="./">Iconics Collection Home</a>
+                    <a href="./about">About the Iconics Collection</a>
+                    <a href="./">Library &amp; University Collections Home</a>
                     <a href="./feedback" class="last">Feedback</a>
                 </div>
             </div>
