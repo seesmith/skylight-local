@@ -22,7 +22,7 @@ else {
 }
 
 // Container ID and the field used in solr index to store this ID. Used for restricting search/browse scope.
-$config['skylight_container_id'] = '51';
+$config['skylight_container_id'] = '30';
 $config['skylight_container_field'] = 'location.coll';
 
 $config['skylight_fields'] = array('Title' => 'dc.title.en',
@@ -30,7 +30,7 @@ $config['skylight_fields'] = array('Title' => 'dc.title.en',
     'Subject' => 'dc.subject.en',
     'Type' => 'dc.type.en',
     'Abstract' => 'dc.description.abstract.en',
-    'Date' => 'dc.date.issued_dt',
+    'Date' => 'dc.coverage.temporal.en',
     'Bitstream'=> 'dc.format.original.en',
     'Thumbnail'=> 'dc.format.thumbnail.en',
     'Description'=>'dc.description.en'
@@ -44,7 +44,7 @@ $config['skylight_meta_fields'] = array('Title' => 'dc.title.en',
     'Author' => 'dc.contributor.author.en',
     'Abstract' => 'dc.description.abstract.en',
     'Subject' => 'dc.subject.en',
-    'Date' => 'dc.date.issued_dt',
+    'Date' => 'dc.coverage.temporal.en',
     'Type' => 'dc.type.en',
     'Bitstream'=> 'dc.format.original',
     'Thumbnail'=> 'dc.format.thumbnail'
@@ -57,7 +57,7 @@ $config['skylight_related_fields'] = array(
 
 );
 
-$config['skylight_recorddisplay'] = array('Author','Type','Subject');
+$config['skylight_recorddisplay'] = array('Author','Type','Subject', 'Date');
 
 $config['skylight_searchresult_display'] = array('Title','Author','Subject','Type','Abstract');
 
