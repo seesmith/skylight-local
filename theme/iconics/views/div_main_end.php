@@ -3,7 +3,7 @@
                 <div class="site-links">
                     <a href="./">Iconics Collection Home</a>
                     <a href="./about">About the Iconics Collection</a>
-                    <a href="http://www.collections.ed.ac.uk">Library &amp; University Collections Home</a>
+                    <a href="http://collections.ed.ac.uk">Library &amp; University Collections Home</a>
                     <a href="./feedback" class="last">Feedback</a>
                 </div>
             </div>
