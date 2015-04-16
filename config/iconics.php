@@ -28,6 +28,7 @@ $config['skylight_container_field'] = 'location.coll';
 $config['skylight_fields'] = array('Title' => 'dc.title.en',
     'Author' => 'dc.contributor.author.en',
     'Subject' => 'dc.subject.en',
+    'Tags' => 'dc.subject.crowdsourced.en',
     'Type' => 'dc.type.en',
     'Abstract' => 'dc.description.abstract.en',
     'Date' => 'dc.coverage.temporal.en',
@@ -37,7 +38,7 @@ $config['skylight_fields'] = array('Title' => 'dc.title.en',
 );
 
 $config['skylight_date_filters'] = array();
-$config['skylight_filters'] = array('Subject' => 'subject_filter', 'Type' => 'type_filter');
+$config['skylight_filters'] = array('Subject' => 'subject_filter', 'Type' => 'type_filter',  'Tags' => 'tags_filter' );
 $config['skylight_filter_delimiter'] = ':';
 
 $config['skylight_meta_fields'] = array('Title' => 'dc.title.en',
@@ -61,7 +62,8 @@ $config['skylight_searchresult_display'] = array('Title','Author','Subject','Typ
 $config['skylight_search_fields'] = array('Keywords' => 'text',
     'Subject' => 'dc.subject.en',
     'Type' => 'dc.type.en',
-    'Author' => 'dc.contributor.author'
+    'Author' => 'dc.contributor.author',
+    'Tags' => 'dc.subject.crowdsourced.en'
 );
 
 $config['skylight_sort_fields'] = array( 'Title' => 'dc.title_sort');
