@@ -56,7 +56,7 @@ $config['skylight_fields'] = array(
 );
 
 $config['skylight_date_filters'] = array();
-$config['skylight_filters'] = array('Artist' => 'author_filter', 'Classification' => 'classification_filter', 'Collection'=> 'collection_filter', 'Period' => 'period_filter', 'Tags' => 'tags_filter' );
+$config['skylight_filters'] = array('Artist' => 'author_filter', 'Classification' => 'classification_filter', 'Collection'=> 'collection_filter', 'Period' => 'period_filter', 'Tags' => 'tags_filter');
 
 $config['skylight_filter_delimiter'] = ':';
 
