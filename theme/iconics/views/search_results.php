@@ -59,12 +59,12 @@
         foreach ($docs as $index => $doc) {
             ?>
             <div class="col-xs-6 col-md-3">
+            <div class="thumbnail results-thumbnail">
                 <?php
 
                 $bitstream_array = array();
 
                 if(isset($doc[$bitstream_field])) {
-                    echo '<div class="thumbnail results-thumbnail">';
 
                     $i = 0;
                     $started = false;
@@ -104,15 +104,45 @@
                         $b_seq = $b_segments[4];
                         $b_handle_id = preg_replace('/^.*\//', '',$b_handle);
                         $b_uri = './record/'.$b_handle_id.'/'.$b_seq.'/'.$b_filename;
+                        $thumbnailLink = "";
 
-                        $thumbnailLink = '<a href="./record/'. $doc['id'].'" title = "' . $doc[$title_field][0] . '"> ';
-                        $thumbnailLink .= '<img src = "'.$b_uri.'" class="search-thumbnail" title="'. $doc[$title_field][0] .'" /></a>';
+                        if(isset($doc[$thumbnail_field])) {
+                            foreach ($doc[$thumbnail_field] as $thumbnail) {
 
+                                $t_segments = explode("##", $thumbnail);
+                                $t_filename = $t_segments[1];
+
+                                if ($t_filename === $b_filename . ".jpg") {
+
+                                    $t_handle = $t_segments[3];
+                                    $t_seq = $t_segments[4];
+                                    $t_uri = './record/'.$b_handle_id.'/'.$t_seq.'/'.$t_filename;
+
+                                    $thumbnailLink = '<a href="./record/'. $doc['id'].'" title = "' . $doc[$title_field][0] . '"> ';
+                                    $thumbnailLink .= '<img src = "'.$t_uri.'" class="search-thumbnail" title="'. $doc[$title_field][0] .'" /></a>';
+
+                                }
+                            }
+                        }
+                        // there isn't a thumbnail so display the bitstream itself
+                        else {
+
+                            $thumbnailLink = '<a href="./record/'. $doc['id'].'" title = "' . $doc[$title_field][0] . '"> ';
+                            $thumbnailLink .= '<img src = "'.$b_uri.'" class="search-thumbnail" title="'. $doc[$title_field][0] .'" /></a>';
+
+                        }
 
                         echo $thumbnailLink;
                     }
 
-                } //end if there are bitstreams ?>
+
+                }
+                else
+                {
+                    $thumbnailLink = '<a href="./record/'. $doc['id'].'" title = "' . $doc[$title_field][0] . '"> ';
+                    $thumbnailLink .= '<img src ="../theme/iconics/images/comingsoon.gif" class="search-thumbnail" title="'. $doc[$title_field][0] .'" /></a>';
+                    echo $thumbnailLink;
+                }?>
 
                  <p>
                     <a href="./record/<?php echo $doc['id']?>?highlight=<?php echo $query ?>"><?php echo $doc[$title_field][0]; ?></a>

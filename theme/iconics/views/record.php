@@ -156,16 +156,18 @@ if(isset($solr[$bitstream_field]) && $link_bitstream) {
     <?php if($mainImageTest === true) { ?>
     <div class="full-title">
         <?php } ?>
-        <h1 class="itemtitle"><?php echo $record_title ?>
+        <h1 class="item-title"><?php echo $record_title ?>
             <?php if(isset($solr[$date_field])) {
                 echo " (" . $solr[$date_field][0] . ")";
             } ?>
         </h1>
-        <div class="tagline">
+        <div class="item-abstract">
+
             <?php
             if (array_key_exists ($abstract_field, $solr)){
                 echo $solr[$abstract_field][0];
             }?>
+
         </div>
         <?php if($mainImageTest === true) { ?>
     </div>
