@@ -10,6 +10,9 @@ $date_field = $this->skylight_utilities->getField("Date");
 $filters = array_keys($this->config->item("skylight_filters"));
 $link_uri_field = $this->skylight_utilities->getField("Link");
 $tags_field = $this->skylight_utilities->getField("Tags");
+$container = $this->config->item('skylight_container_field');
+$container_id = $this->config->item('skylight_container_id');
+$navigation = $this->solr_client->getNavigation($id, $container."%3A%28".$container_id."%29", $container);
 
 $type = 'Unknown';
 $mainImageTest = false;
@@ -156,13 +159,25 @@ if(isset($solr[$bitstream_field]) && $link_bitstream) {
     <?php if($mainImageTest === true) { ?>
     <div class="full-title">
         <?php } ?>
-        <h1 class="item-title"><?php echo $record_title ?>
-            <?php if(isset($solr[$date_field])) {
-                echo " (" . $solr[$date_field][0] . ")";
-            } ?>
-        </h1>
-        <div class="item-abstract">
+        <div class="title-header">
 
+            <h1 class="itemprev">
+                <a href="./record/<?php echo $navigation['prev']; ?>" title="View Previous Item"><i class="fa fa-arrow-left">&nbsp;&nbsp;</i></a>
+            </h1>
+            <h1 class="itemtitle">
+                <?php echo $record_title ?>
+                <?php if(isset($solr[$date_field])) {
+                    echo " (" . $solr[$date_field][0] . ")";
+                } ?>
+
+            </h1>
+            <h1 class="itemnext">
+                <a href="./record/<?php echo $navigation['next']; ?>" title="View Next Item"><i class="fa fa-arrow-right"></i></a>
+            </h1>
+
+        </div>
+        <div class="clearfix"></div>
+        <div class="tagline">
             <?php
             if (array_key_exists ($abstract_field, $solr)){
                 echo $solr[$abstract_field][0];
