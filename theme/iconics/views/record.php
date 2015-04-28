@@ -156,16 +156,18 @@ if(isset($solr[$bitstream_field]) && $link_bitstream) {
     <?php if($mainImageTest === true) { ?>
     <div class="full-title">
         <?php } ?>
-        <h1 class="itemtitle"><?php echo $record_title ?>
+        <h1 class="item-title"><?php echo $record_title ?>
             <?php if(isset($solr[$date_field])) {
                 echo " (" . $solr[$date_field][0] . ")";
             } ?>
         </h1>
-        <div class="tagline">
+        <div class="item-abstract">
+
             <?php
             if (array_key_exists ($abstract_field, $solr)){
                 echo $solr[$abstract_field][0];
             }?>
+
         </div>
         <?php if($mainImageTest === true) { ?>
     </div>
@@ -259,7 +261,7 @@ if(isset($solr[$bitstream_field]) && $link_bitstream) {
     <?php
 
     if(isset($solr[$tags_field])) {?>
-        <div class="crowd-tags"><span class="crowd-title"><i class="fa fa-users fa-lg" title="User generated tags created through crowd sourcing games">&nbsp;</i>Tags:</span>
+        <div class="crowd-tags"><span class="crowd-title" title="User generated tags created through crowd sourcing games"><i class="fa fa-users fa-lg" >&nbsp;</i>Tags:</span>
             <?php foreach($solr[$tags_field] as $tag) {
 
                 $orig_filter = urlencode($tag);

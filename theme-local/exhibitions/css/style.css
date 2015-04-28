@@ -216,7 +216,7 @@ span[id^="video-"]              { margin: 5px 0; }
 .col-sidebar ul.related li a:hover			{ background: none; text-decoration: underline; }
 .col-sidebar ul.related .tags				{ margin: 0 0 0 0; }
 .col-sidebar ul.related .tags a 			{ padding: 2px 5px; display: inline-block; background: #ffffff; color: #0e0498;}
-.col-sidebar ul.related .tags a:hover		{ text-decoration: underline; background: #5c94c3 ; color: #0e0498; }
+.col-sidebar ul.related .tags a:hover		{ text-decoration: underline; background: #0e0498 ; color: #fff; }
 
 .col-sidebar ul.related li a.related-record { font-size: 14px; padding-bottom: 5px;}
 
@@ -318,6 +318,13 @@ li.past-ex                  { display: inline; float: left; height: 188px; width
 .tags a:hover			            { background: #0e0498; color: #ffffff; text-decoration: underline;  }
 .tags a.reverse:hover               { background: #5c94c3; color: #ffffff; }
 .tags a.reverse                     { background: #0e0498; color: #ffffff; }
+
+.crowd-tag					        { margin-top: 5px;   }
+.crowd-tag	 a 				        { color: #333; font-size: 13px; background: #dcdbd9; -webkit-border-radius: 5px; -moz-border-radius: 5px; border-radius: 5px; padding: 2px 6px; line-height: 20px; margin-right: 8px; margin-top: 5px; text-decoration: none; display:inline-block; }
+.crowd-tag	 a.bold			        { font-weight: bold; }
+.crowd-tag	 a:hover		        { background: #0e0498; color: #fff; text-decoration: underline; }
+.crowd-title                        { color: #0e0498; font-weight: bold;}
+.crowd-info                         { color: #00315F;}
 
 .listing-filter						{ padding: 0; border: none; border-bottom: 1px solid #b8baba; line-height: 33px; text-align: right; position: relative; }
 .listing-filter .no-results			{ position: absolute; top: 0; left: 0; }

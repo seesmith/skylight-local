@@ -7,6 +7,7 @@ $thumbnail_field = $this->skylight_utilities->getField("Thumbnail");
 $date_field = $this->skylight_utilities->getField("Date");
 $uri_field = $this->skylight_utilities->getField("Link");
 $filters = array_keys($this->config->item("skylight_filters"));
+$tags_field = $this->skylight_utilities->getField("Tags");
 
 $type = 'Unknown';
 $mainImageTest = false;
@@ -271,6 +272,21 @@ if(isset($solr[$bitstream_field]) && $link_bitstream) {
     </div>
     <?php } ?>
     <div class="clearfix"></div>
+    <!-- print out crowdsourced tags -->
+    <?php
+    if(isset($solr[$tags_field])) {?>
+    <div class="crowd-tags"><span class="crowd-title" title="User generated tags created through crowd sourcing games"><i class="fa fa-users fa-lg" >&nbsp;</i>Tags:</span>
+        <?php foreach($solr[$tags_field] as $tag) {
+
+            $orig_filter = urlencode($tag);
+            $lower_orig_filter = strtolower($tag);
+            $lower_orig_filter = urlencode($lower_orig_filter);
+            echo '<span class="crowd-tag">' . '<a href="./search/*:*/Tags:%22'.$lower_orig_filter.'%7C%7C%7C'.$orig_filter.'%22"><i class="fa fa-tags fa-lg">&nbsp;</i>'.$tag.'</a>' . '</span>';
+        } ?>
+        <div class="crowd-info">Add more tags at <a href="http://librarylabs.ed.ac.uk/games/" target="_blank" title="University of Edinburgh, Library Labs Metadata Games Home">Library Labs Games</a> </div>
+    </div>
+
+    <?php } ?>
 
     <?php
 

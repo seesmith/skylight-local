@@ -32,11 +32,9 @@
 
                 <?php
 
-                $bitstream_array = array();
                 if(isset($doc[$bitstream_field])) {
 
                     $i = 0;
-                    $j = 0;
                     $started = false;
                     // loop through to get min sequence
                     foreach ($doc[$bitstream_field] as $bitstream)
@@ -59,9 +57,7 @@
                                 $started = true;
                             }
                         }
-
                         $i++;
-
                     }
 
                     // if there is a thumbnail and a bitstream
@@ -74,13 +70,36 @@
                         $b_seq = $b_segments[4];
                         $b_handle_id = preg_replace('/^.*\//', '',$b_handle);
                         $b_uri = './record/'.$b_handle_id.'/'.$b_seq.'/'.$b_filename;
-                        $thumbnailLink = '<div class="random-image">';
-                        $thumbnailLink .= '<a class="random-image-link" href="./record/'.$doc['id'].'" title="' . $doc[$title_field][0] . '"> ';
-                        $thumbnailLink .= '<img src="'.$b_uri.'" class="random-thumbnailimg" title="'. $doc[$title_field][0] .'" /></a></div>';
+                        $thumbnailLink = "";
+
+                        if(isset($doc[$thumbnail_field])) {
+                            foreach ($doc[$thumbnail_field] as $thumbnail) {
+
+                                $t_segments = explode("##", $thumbnail);
+                                $t_filename = $t_segments[1];
+
+                                if ($t_filename === $b_filename . ".jpg") {
+
+                                    $t_handle = $t_segments[3];
+                                    $t_seq = $t_segments[4];
+                                    $t_uri = './record/'.$b_handle_id.'/'.$t_seq.'/'.$t_filename;
+
+                                    $thumbnailLink = '<div class="random-image">';
+                                    $thumbnailLink .= '<a class="random-image-link" href="./record/'.$doc['id'].'" title="' . $doc[$title_field][0] . '"> ';
+                                    $thumbnailLink .= '<img src="'.$t_uri.'" class="random-thumbnailimg" title="'. $doc[$title_field][0] .'" /></a></div>';
+                                }
+                            }
+                        }
+                        // there isn't a thumbnail so display the bitstream itself
+                        else {
+
+                            $thumbnailLink = '<div class="random-image">';
+                            $thumbnailLink .= '<a class="random-image-link" href="./record/'.$doc['id'].'" title="' . $doc[$title_field][0] . '"> ';
+                            $thumbnailLink .= '<img src="'.$b_uri.'" class="random-thumbnailimg" title="'. $doc[$title_field][0] .'" /></a></div>';
+                        }
 
                         echo $thumbnailLink;
                     }
-
 
                 } //end if there are bitstreams ?>
 
@@ -93,78 +112,4 @@
 
     </div>
 
-
-
-<?php /*
-    <div class="random-first">
-        <a title="<?php echo $first_doc[$title_field][0] ?>" href="./record/<?php echo $first_doc['id'] ?>">
-            <?php
-
-            $bitstream_array = array();
-
-            if(isset($first_doc[$bitstream_field])) {
-
-                $i = 0;
-                $j = 0;
-                $started = false;
-                // loop through to get min sequence
-                foreach ($first_doc[$bitstream_field] as $bitstream) {
-                    $b_segments = explode("##", $bitstream);
-                    $b_filename = $b_segments[1];
-                    $b_seq = $b_segments[4];
-
-                    if ((strpos($b_filename, ".jpg") > 0) || (strpos($b_filename, ".JPG") > 0)) {
-
-                        $bitstream_array[$b_seq] = $bitstream;
-
-                        if ($started) {
-                            if ($b_seq < $min_seq) {
-                                $min_seq = $b_seq;
-                            }
-                        } else {
-                            $min_seq = $b_seq;
-                            $started = true;
-                        }
-                    }
-
-                    $i++;
-
-                }
-
-                // if there is a thumbnail and a bitstream
-                if (isset($min_seq) && count($bitstream_array) > 0) {
-
-                    // get all the information
-                    $b_segments = explode("##", $bitstream_array[$min_seq]);
-                    $b_filename = $b_segments[1];
-                    $b_handle = $b_segments[3];
-                    $b_seq = $b_segments[4];
-                    $b_handle_id = preg_replace('/^.*\//', '', $b_handle);
-                    $b_uri = './record/' . $b_handle_id . '/' . $b_seq . '/' . $b_filename;
-                    ?>
-                    <div class="random-first-caption">
-                        <?php if (isset($first_doc)) { ?>
-
-                            <div class="random-caption"><div class="random-caption-title"><?php echo $first_doc[$title_field][0]; ?></div><br/>
-                            <?php if (array_key_exists($abstract_field, $first_doc)) {
-                                echo '<div class="random-caption-abstract">' . $first_doc[$abstract_field][0] . '</div>';
-                                ?>
-                                </div>
-                            <?php }
-                        } ?>
-                    </div>
-                    <div class="random-first-image-holder">
-                        <img src="<?php echo $b_uri ?>" class="random-first-image" title="<?php echo $first_doc[$title_field][0] ?>">
-                    </div>
-
-                <?php }
-
-            } //end if there are bitstreams ?>
-        </a>
-    </div>
-
-</div>
-
- */ ?>
 <div class="clearfix"></div>
-<br />
