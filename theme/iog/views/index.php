@@ -71,6 +71,14 @@
         <p><h6>This archive was constructed by the Unit's successor, the <a href="http://www.institute-of-governance.org/" target="_blank">Institute of Governance</a>. Please feel
             free to browse using the links above, or by using the search function.</h6>
         </p>
+        <p>
+            <h6>
+            The Scottish Government Yearbook was succeeded in 1992 by the quarterly journal <a href="http://www.euppublishing.com/loi/scot" target="_blank" title="Scottish Affairs">Scottish Affairs</a>.
+            It has continued the same editorial principles as the Yearbook, and maintained the same commitment to providing
+            a forum for well-informed public discussion. Further information on the development of the Yearbook and Scottish Affairs
+            is available <a href="./history">here</a>.
+            </h6>
+        </p>
     </div>
 
 </div>
