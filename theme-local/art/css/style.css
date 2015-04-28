@@ -286,7 +286,7 @@ footer                  { display: block; border-bottom: 1px solid #58A09D; padd
 .crowd-tag	 a.bold			        { font-weight: bold; }
 .crowd-tag	 a:hover		        { background: #00315F; color: #fff; text-decoration: none; }
 .crowd-title                        { color: #58A09D; font-weight: bold;}
-.crowd-info                         {color: #00315F;}
+.crowd-info                         { color: #00315F;}
 
 .listing-filter						{ padding: 0; border: none; border-bottom: 1px solid #b8baba; line-height: 33px; text-align: right; position: relative; }
 .listing-filter .no-results			{ position: absolute; top: 0; left: 0; }

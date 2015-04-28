@@ -46,11 +46,12 @@ $config['skylight_fields'] = array('Title' => 'dc.title.en',
     'Link' => 'dc.identifier.uri.en',
     'Alternative' => 'dc.title.alternative.en',
     'Identifier' => 'dc.identifier',
+    'Tags' => 'dc.subject.crowdsourced.en',
     'Exhibition' => 'dc.relation.ispartofexhibition.en'
 );
 
 $config['skylight_date_filters'] = array();
-$config['skylight_filters'] = array('Exhibition' => 'exhibition_filter','Creator' => 'author_filter', 'Subject' => 'subject_filter', 'Type' => 'type_filter');
+$config['skylight_filters'] = array('Exhibition' => 'exhibition_filter','Creator' => 'author_filter', 'Subject' => 'subject_filter', 'Type' => 'type_filter',  'Tags' => 'tags_filter' );
 $config['skylight_filter_delimiter'] = ':';
 
 $config['skylight_meta_fields'] = array('Title' => 'dc.title.en',
