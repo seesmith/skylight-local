@@ -34,7 +34,9 @@ $config['skylight_fields'] = array('Title' => 'dc.title.en',
     'Date' => 'dc.coverage.temporal.en',
     'Bitstream'=> 'dc.format.original.en',
     'Thumbnail'=> 'dc.format.thumbnail.en',
-    'Description'=>'dc.description.en'
+    'Description'=>'dc.description.en',
+    'Identifier'=>'dc.identifier.other',
+    'Shelfmark'=>'dc.identifier'
 );
 
 $config['skylight_date_filters'] = array();
@@ -55,7 +57,7 @@ $config['skylight_related_fields'] = array(
     'Type' => 'dc.type.en'
 );
 
-$config['skylight_recorddisplay'] = array('Author','Type','Subject', 'Date');
+$config['skylight_recorddisplay'] = array('Author','Date','Type','Subject','Shelfmark','Identifier');
 
 $config['skylight_searchresult_display'] = array('Title','Author','Subject','Type','Abstract');
 
