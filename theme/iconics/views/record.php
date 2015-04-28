@@ -164,7 +164,7 @@ if(isset($solr[$bitstream_field]) && $link_bitstream) {
             <h1 class="itemprev">
                 <a href="./record/<?php echo $navigation['prev']; ?>" title="View Previous Item"><i class="fa fa-arrow-left">&nbsp;&nbsp;</i></a>
             </h1>
-            <h1 class="itemtitle">
+            <h1 class="item-title">
                 <?php echo $record_title ?>
                 <?php if(isset($solr[$date_field])) {
                     echo " (" . $solr[$date_field][0] . ")";
@@ -177,7 +177,7 @@ if(isset($solr[$bitstream_field]) && $link_bitstream) {
 
         </div>
         <div class="clearfix"></div>
-        <div class="tagline">
+        <div class="item-abstract">
             <?php
             if (array_key_exists ($abstract_field, $solr)){
                 echo $solr[$abstract_field][0];
