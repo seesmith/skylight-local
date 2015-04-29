@@ -253,12 +253,8 @@ if(isset($solr[$bitstream_field]) && $link_bitstream) {
                     {
                         $lunalink = true;?>
 
-                        <div class="metadatarow">
-                            <div class="metadatakey"></div>
-                            <div class="metadatavalue">
-                                <a href="<?php echo $linkURI; ?>" target="_blank">View full-size image</a>
-                            </div>
-                        </div>
+                        <br />
+                        <a href="<?php echo $linkURI; ?>" target="_blank">View full-size image</a>
 
                     <?php
                     }
