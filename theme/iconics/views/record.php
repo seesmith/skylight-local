@@ -240,7 +240,7 @@ if(isset($solr[$bitstream_field]) && $link_bitstream) {
             } ?>
 
             <?php
-            $i = 0;
+
             $lunalink = false;
             if (isset($solr[$link_uri_field])) {
                 foreach($solr[$link_uri_field] as $linkURI) {
@@ -249,15 +249,16 @@ if(isset($solr[$bitstream_field]) && $link_bitstream) {
 
                     if (strpos($linkURI,"images.is.ed.ac.uk") != false)
                     {
-                        $lunalink = true;
+                        $lunalink = true;?>
 
-                        if($i == 0) {
-                            echo 'Zoomable Image(s)';
-                        }
+                        <div class="metadatarow">
+                            <div class="metadatakey"></div>
+                            <div class="metadatavalue">
+                                <a href="<?php echo $linkURI; ?>" target="_blank">View full-size image</a>
+                            </div>
+                        </div>
 
-                        echo '<a href="'. $linkURI . '" target="_blank"><i class="fa fa-file-image-o fa-lg">&nbsp;</i></a>';
-
-                        $i++;
+                    <?php
                     }
 
                 }
