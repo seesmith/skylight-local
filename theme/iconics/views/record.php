@@ -284,8 +284,9 @@ if(isset($solr[$bitstream_field]) && $link_bitstream) {
                 echo '<span class="crowd-tag">' . '<a href="./search/*:*/Tags:%22'.$lower_orig_filter.'%7C%7C%7C'.$orig_filter.'%22"><i class="fa fa-tags fa-lg">&nbsp;</i>'.$tag.'</a>' . '</span>';
             } ?>
             <div class="crowd-info">
-                <form id="libraylabs" method="post" action="http://librarylabs.ed.ac.uk/games/gameCrowdSourcing.php" target="_blank">
+                <form id="libraylabs" method="get" action="http://librarylabs.ed.ac.uk/games/gameCrowdSourcing.php" target="_blank">
                     <input type="hidden" name="image_id" value="<?php echo $image_id ?>">
+                    <input type="hidden" name="theme" value="classic">
                     Add more tags at <a href="#" onclick="document.forms[1].submit();return false;" title="University of Edinburgh, Library Labs Metadata Games">Library Labs Games</a>
                 </form>
             </div>
