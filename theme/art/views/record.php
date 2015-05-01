@@ -13,6 +13,7 @@ $type = 'Unknown';
 $mainImageTest = false;
 $numThumbnails = 0;
 $bitstreamLinks = array();
+$image_id = "";
 
 if(isset($solr[$type_field])) {
     $type = "media-" . strtolower(str_replace(' ','-',$solr[$type_field][0]));
@@ -40,6 +41,9 @@ if(isset($solr[$bitstream_field]) && $link_bitstream) {
 
         $b_segments = explode("##", $bitstream);
         $b_filename = $b_segments[1];
+        if($image_id == "") {
+            $image_id = substr($b_filename,0,7);
+        }
         $b_handle = $b_segments[3];
         $b_seq = $b_segments[4];
         $b_handle_id = preg_replace('/^.*\//', '',$b_handle);
@@ -271,7 +275,13 @@ if(isset($solr[$bitstream_field]) && $link_bitstream) {
              $lower_orig_filter = urlencode($lower_orig_filter);
             echo '<span class="crowd-tag">' . '<a href="./search/*:*/Tags:%22'.$lower_orig_filter.'%7C%7C%7C'.$orig_filter.'%22"><i class="fa fa-tags fa-lg">&nbsp;</i>'.$tag.'</a>' . '</span>';
          } ?>
-            <div class="crowd-info">Add more tags at <a href="http://librarylabs.ed.ac.uk/games/" target="_blank" title="University of Edinburgh, Library Labs Metadata Games Home">Library Labs Games</a> </div>
+            <div class="crowd-info">
+                <form id="libraylabs" method="get" action="http://librarylabs.ed.ac.uk/games/gameCrowdSourcing.php" target="_blank">
+                    <input type="hidden" name="image_id" value="<?php echo $image_id ?>">
+                    <input type="hidden" name="theme" value="classic">
+                    Add more tags at <a href="#" onclick="document.forms[1].submit();return false;" title="University of Edinburgh, Library Labs Metadata Games">Library Labs Games</a>
+                </form>
+            </div>
         </div>
 
     <?php } ?>
