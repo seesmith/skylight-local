@@ -145,6 +145,13 @@ if(isset($solr[$bitstream_field]) && $link_bitstream) {
 
             }
         }
+        else if ((strpos($b_uri, ".pdf") > 0) or (strpos($b_uri, ".PDF") > 0)) {
+
+            $bitstreamLink = $this->skylight_utilities->getBitstreamLink($bitstream);
+            $bitstreamUri = $this->skylight_utilities->getBitstreamUri($bitstream);
+
+            $pdfLink .= 'Click ' . $bitstreamLink . 'to download. (<span class="bitstream_size">' . getBitstreamSize($bitstream) . '</span>)';
+        }
 
         ?>
     <?php
