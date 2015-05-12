@@ -36,8 +36,8 @@ $config['skylight_fields'] = array('Title' => 'dc.title.en',
     'Bitstream'=> 'dc.format.original.en',
     'Thumbnail'=> 'dc.format.thumbnail.en',
     'Description'=>'dc.description.en',
-    'Identifier'=>'dc.identifier.other',
-    'Shelfmark'=>'dc.identifier'
+    'Identifier'=>'dc.identifier.other.en',
+    'Shelfmark'=>'dc.identifier.en'
 );
 
 $config['skylight_date_filters'] = array();

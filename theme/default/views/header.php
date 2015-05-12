@@ -42,7 +42,6 @@
 
     <header>
         <p class="collection-title"><?php echo $site_title ?></p>
-        <a href="http://skylightui.org/" class="logo">Skylight</a>
         <form action="./redirect/" method="post">
             <fieldset class="search">
                 <input type="text" name="q" value="<?php if (isset($searchbox_query)) echo urldecode($searchbox_query); ?>" id="q" />
