@@ -97,8 +97,8 @@ $config['skylight_homepage_recentitems'] = false;
 $config['skylight_cache'] = false;
 
 // Digital object management
-$config['skylight_bitstream_field'] = 'dc.format.original';
-$config['skylight_thumbnail_field'] = 'dc.format.thumbnail';
+$config['skylight_bitstream_field'] = 'dc.format.original.en';
+$config['skylight_thumbnail_field'] = 'dc.format.thumbnail.en';
 $config['skylight_display_thumbnail'] = true;
 $config['skylight_link_bitstream'] = true;
 
