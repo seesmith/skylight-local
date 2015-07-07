@@ -9,7 +9,7 @@
         $type_field = $this->skylight_utilities->getField('Type');
         $bitstream_field = $this->skylight_utilities->getField('Bitstream');
         $thumbnail_field = $this->skylight_utilities->getField('Thumbnail');
-        $date_field = $this->skylight_utilities->getField('Date Scanned');
+        $date_field = $this->skylight_utilities->getField('Document Date');
         $shelfmark_field = $this->skylight_utilities->getField('Shelfmark');
 
 
@@ -109,9 +109,9 @@
                 <?php
                 echo '(' . $doc[$date_field][0] . ')';
           }
-                    elseif(array_key_exists('dateIssuedyear', $doc)) {
-                        echo '( ' . $doc['dateIssuedyear'][0] . ')';
-                    }
+                    //elseif(array_key_exists('dateIssuedyear', $doc)) {
+                   //     echo '( ' . $doc['dateIssuedyear'][0] . ')';
+                   // }
 
                 ?>
                 </span>
@@ -144,7 +144,7 @@
             <p><?php
 
 
-                echo $doc[$shelfmark_field][0]; ?></p>
+                echo 'Shelfmark: '.$doc[$shelfmark_field][0]; ?></p>
 
             <div class = "thumbnail-image">
                 <?php

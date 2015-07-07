@@ -97,11 +97,12 @@ if(isset($solr[$type_field])) {
 <?php if(isset($solr[$bitstream_field]) && $link_bitstream) { ?>
     <div class="record_bitstreams">
         <h3>Digital Objects</h3>
-        <?php if ($isAuthorised != '1') { ?>
-            <p>High quality versions of images are available on request by <a href="./feedback">email</a>.</p>
-        <?php } else { ?>
-            <p>Click on a thumbnail to see the high resolution image.</p>
-        <?php } ?>
+        <?php //if ($isAuthorised != '1') { ?>
+            <p>For performance and security reasons, where the source file is large, a thumbnail only will show.
+                To see the high-resolution image, please contact <a href="./feedback">email</a>.</p>
+        <?php// } else { ?>
+            <!--<p>Click on a thumbnail to see the high resolution image.</p>-->
+        <?php// } ?>
 
     <?php
     foreach($solr[$bitstream_field] as $bitstream) {
@@ -111,28 +112,46 @@ if(isset($solr[$type_field])) {
 
         $segments = explode("##", $bitstream);
         $filename = $segments[1];
+        $filesize = $segments[2];
+        //echo 'FILESIZE'.$filesize;
         $handle = $segments[3];
         $seq = $segments[4];
         $handle_id = preg_replace('/^.*\//', '',$handle);
         $uri = './record/'.$handle_id.'/'.$seq.'/'.$filename;
 
+        if ($filesize > 1500000 or strpos($filename, ".tif") > 0)
+        {
+            $isAuthorised = '0';
+        }
+        else
+        {
+            $isAuthorised = '1';
+        }
+
+       // echo $isAuthorised;
+        //echo $solr[$thumbnail_field];
+        //echo $uri;
+
         if(isset($solr[$thumbnail_field])) {
 
             foreach ($solr[$thumbnail_field] as $thumbnail) {
                 $t_segments = explode("##", $thumbnail);
+
                 $t_filename = $t_segments[1];
                 $t_handle = $t_segments[3];
                 $t_seq = $t_segments[4];
                 $handle_id = preg_replace('/^.*\//', '',$t_handle);
                 $t_uri = './record/'.$handle_id.'/'.$t_seq.'/'.$t_filename;
+               // echo $t_uri;
 
                 if ($t_filename == $filename.'.jpg') {
                     if ($isAuthorised != '1') {
-                        $thumbnailLink = '<a title = "' . $solr[$title_field][0] . '" class="fancybox"' . ' href="' . $t_uri . '"> ';
+                        //echo 'using thumbnal';
+                        $thumbnailLink = '<img src = "'.$t_uri.'" title="'. $solr[$title_field][0] .'" />';
                     } else {
-                        $thumbnailLink = '<a title = "' . $solr[$title_field][0] . '" class="fancybox"' . ' href="' . $uri . '"> ';
+                       // echo 'using bitstream';
+                        $thumbnailLink = '<a title = "' . $solr[$title_field][0] . '" class="fancybox"' . ' href="' . $uri . '"><img src = "'.$t_uri.'" title="'. $solr[$title_field][0] .'" /></a> ';
                     }
-                    $thumbnailLink .= '<img src = "'.$t_uri.'" title="'. $solr[$title_field][0] .'" /></a>';
                     echo $thumbnailLink;
                 }
             }

@@ -131,19 +131,21 @@
                         $t_seq = $t_segments[4];
                         $handle_id = preg_replace('/^.*\//', '',$t_handle);
                         $t_uri = './record/'.$handle_id.'/'.$t_seq.'/'.$t_filename;
-
-                        if ($t_filename == $b_filename.'.jpg') {
+                        $thumbnailLink = '<img src = "'.$t_uri.'" class="search-thumbnail" title="'. $doc[$title_field][0] .'" />';
+                        echo $thumbnailLink;
+                        break 2;
+                       /* if ($t_filename == $b_filename.'.jpg') {
                             if ($isAuthorised != '1') {
                                 $thumbnailLink = '<a title = "' . $doc[$title_field][0] . '" class="fancybox"' . ' href="' . $t_uri . '"> ';
                             } else {
                                 $thumbnailLink = '<a title = "' . $doc[$title_field][0] . '" class="fancybox"' . ' href="' . $b_uri . '"> ';
                             }
                             $thumbnailLink .= '<img src = "'.$t_uri.'" class="search-thumbnail" title="'. $doc[$title_field][0] .'" /></a>';
-                            echo $thumbnailLink;
+                            echo $thumbnailLink;*/
 
                             // Ugly way of quitting the two foreach loops. Needs improved if someone has the time.
-                            break 2;
-                        }
+                           // break 2;
+                        //}
                     }
                 }
             } // end for each
