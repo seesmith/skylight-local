@@ -1,11 +1,13 @@
 <div class="content">
     <div class="content byEditor">
         <a href ='./search/*:*/Exhibition:"something+blue|||Something+Blue"' id = "smallbanner-blue"></a>
-        <div class="clearfix"></div>
         <div id="head-info">
 
             <h2>About the Exhibition</h2>
-            <h3>Opening: 2nd April 2015 | Where: Exhibition Gallery, Main Library, George Square | Closing: 27th June 2015 | Curated by: Emma Smith</h3>
+            <h3>Dates: 2nd April - 27th June 2015<br />
+                Where: Exhibition Gallery, Main Library, George Square<br />
+                Curated by: Emma Smith<br />
+                <a href ='./search/*:*/Exhibition:"something+blue|||Something+Blue"'><i class="fa fa-search">&nbsp;</i>View Items</a></h3>
         </div>
 
 
