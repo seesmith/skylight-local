@@ -8,4 +8,4 @@ Customisations for University of Edinburgh websites, including the public websit
 - http://collections.ed.ac.uk/art
 - http://collections.ed.ac.uk/mimed
 - http://collections.ed.ac.uk/calendars
-- http://collections.ed.ac.uk/iconics 
+- http://collections.ed.ac.uk/iconics
