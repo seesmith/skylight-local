@@ -5,7 +5,7 @@
         // in $config['skylight_searchresult_display']
 
         $title_field = $this->skylight_utilities->getField('Title');
-        $author_field = $this->skylight_utilities->getField('Document Author');
+        $author_field = $this->skylight_utilities->getField('Author Sortable');
         $type_field = $this->skylight_utilities->getField('Type');
         $bitstream_field = $this->skylight_utilities->getField('Bitstream');
         $thumbnail_field = $this->skylight_utilities->getField('Thumbnail');
@@ -83,7 +83,10 @@
             <?php
 
             $num_authors = 0;
+
+
             foreach ($doc[$author_field] as $author) {
+
                // test author linking
                // quick hack that only works if the filter key
                // and recorddisplay key match and the delimiter is :
@@ -120,35 +123,60 @@
 
         <?php
 
-            if(array_key_exists($type_field, $doc)) {
-                echo '<p>';
-                $type =  $doc[$type_field][0];
-                $type_words = explode(' ',$type);
-                $shortened = '';
-                $max = 40;
-                $suffix = '...';
-                if($max > sizeof($type_words)) {
-                    $max = sizeof($type_words);
-                    $suffix = '';
-                }
-                for ($i=0 ; $i<$max ; $i++){
-                    $shortened .= $type_words[$i] . ' ';
-                }
-                echo $shortened.$suffix;
-                echo '</p>';
-            }
+            //if(array_key_exists($type_field, $doc)) {
+             //   echo '<p>';
+            //    $type =  $doc[$type_field][0];
+              //  $type_words = explode(' ',$type);
+              //  $shortened = '';
+             //   $max = 40;
+             //   $suffix = '...';
+             //   if($max > sizeof($type_words)) {
+             //       $max = sizeof($type_words);
+              //      $suffix = '';
+            //    }
+             //   for ($i=0 ; $i<$max ; $i++){
+             //       $shortened .= $type_words[$i] . ' ';
+         //       }
+            //    echo $shortened.$suffix;
+//       '</p>';
+          //  }
 
         ?>
 
         </div> <!-- close tags div -->
+            <?php if(isset($doc[$bitstream_field])) //&& $link_bitstream)
+            {
+
+                ?>
+
+                <div class="record-bitstreams">
+
+                    <?php
+                    foreach($doc[$bitstream_field] as $bitstream) {
+
+                        $bitstreamLink = $this->skylight_utilities->getBitstreamURI($bitstream);
+
+                        echo '<a href="'.$bitstreamLink.'" class="downloadButton">Download PDF</a>';
+                    }
+                    ?>
+
+                </div>
+
+            <?php
+            }
+            else { ?>
+
+                <div class="record-bitstreams"><a href="./unavailable" title="Click here to find out why this paper may be unavailable">Paper unavailable</a></div>
+
+            <?php } ?>
             <p><?php
 
 
                 echo 'Shelfmark: '.$doc[$shelfmark_field][0]; ?></p>
 
             <div class = "thumbnail-image">
-                <?php
-                if(isset($doc[$bitstream_field])) {
+             <?php
+              /*  if(isset($doc[$bitstream_field])) {
                     $bitstream_array = array();
 
                     foreach ($doc[$bitstream_field] as $bitstream_for_array)
@@ -186,7 +214,7 @@
 
                     } // end for each
 
-                } //end if bitstream ?>
+                } //end if bitstream */?>
 
             </div>
         </div>

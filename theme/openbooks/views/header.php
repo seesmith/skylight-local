@@ -92,9 +92,10 @@
 <div id="container">
     <header>
         <div id="collection-title">
-            <a href="<?php echo base_url(); ?><?php echo $this->config->item('skylight_url_prefix');?>" class="logo" title="<?php echo $this->config->item('skylight_fullname');?> Home">
+            <a href="<?php echo base_url(); ?>" class="oblogo" title="University of Edinburgh Open Books Collection Home">
                 <span onmouseover="this.style.background='#761400';this.style.color='#FFF'" onmouseout="this.style.background='#FFFFFF';this.style.color='#444f51'"><?php echo $site_title; ?></span>
             </a>
+            <a href="http://www.ed.ac.uk" class="uoelogo" title="The University of Edinburgh Home" target="_blank"></a>
         </div>
         <div id="collection-search">
             <form action="./redirect/" method="post">
