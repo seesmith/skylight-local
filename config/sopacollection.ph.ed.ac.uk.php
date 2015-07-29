@@ -9,7 +9,7 @@ if (strpos($_SERVER['HTTP_HOST'], "test") !== false) {
 }
 else {
     $config['base_url'] = 'https://sopacollection.ph.ed.ac.uk/';
-    $config['skylight_ga_code'] = 'UA-25737241-9';
+    $config['skylight_ga_code'] = 'UA-25737241-10';
 }
 
 $config['skylight_theme'] = 'physics';
