@@ -9,7 +9,7 @@ if (strpos($_SERVER['HTTP_HOST'], "test") !== false) {
 }
 else {
     $config['base_url'] = 'https://openbooks.is.ed.ac.uk/';
-    $config['skylight_ga_code'] = 'UA-25737241-9';
+    $config['skylight_ga_code'] = 'UA-25737241-18';
 }
 
 $config['skylight_theme'] = 'openbooks';
@@ -18,20 +18,20 @@ $config['skylight_fullname'] = 'Open Books';
 
 $config['skylight_adminemail'] = 'lddt@mlist.is.ed.ac.uk';
 
-$config['skylight_oaipmhcollection'] = 'hdl_10683_117127';
+$config['skylight_oaipmhcollection'] = 'hdl_10683_52783';
 
 $config['skylight_oaipmhallowed'] = true;
 
 // Container ID and the field used in solr index to store this ID. Used for restricting search/browse scope.
-$config['skylight_container_id'] = '47';
+$config['skylight_container_id'] = '33';
 $config['skylight_container_field'] = 'location.coll';
 $config['skylight_sitemap_type'] = 'external';
 
 $config['skylight_fields'] = array('Title' => 'dc.title.en',
-    'Document Author' => 'dc.contributor.authorza.en',
+    'Author' => 'dc.contributor.authorza.en',
     'Pamphlet Author' => 'dc.creator.en',
     'Subject' => 'dc.subject.en',
-    'Document Author Sortable' => 'dc.contributor.authorza.en',
+    'Doc Author' => 'dc.contributor.author.en',
     'Type' => 'dc.type.en',
     'Number of Pages' => 'dc.extent.noOfPages.en',
     'Page Numbers' => 'dc.extent.pageNumbers.en',
@@ -41,11 +41,12 @@ $config['skylight_fields'] = array('Title' => 'dc.title.en',
     'Pamphlet No' => 'dc.identifier.other.en',
     'Pamphlet Title' => 'dc.title.alternative.en',
     'Collection' => 'dc.relation.ispartof.en',
+    'Bitstream' => 'dc.format.original.en'
 
 );
 
-$config['skylight_date_filters'] = array('Date' => 'dateIssued.year_sort');
-$config['skylight_filters'] = array('Author' => 'author_filter', 'Subject' => 'subject_filter', 'Collection' => 'collection_filter');
+$config['skylight_date_filters'] = array();
+$config['skylight_filters'] = array('Author' => 'authorza_filter', 'Subject' => 'subject_filter', 'Collection' => 'collection_filter','Date' => 'datetemporal_filter');
 $config['skylight_filter_delimiter'] = ':';
 
 $config['skylight_meta_fields'] = array('Title' => 'dc.title.en',
@@ -55,7 +56,7 @@ $config['skylight_meta_fields'] = array('Title' => 'dc.title.en',
     'Type' => 'dc.type');
 
 $config['skylight_recorddisplay'] = array('Title',
-    'Document Author' ,
+    'Author' ,
     'Pamphlet Author',
     'Subject',
     'Type',
@@ -69,14 +70,14 @@ $config['skylight_recorddisplay'] = array('Title',
     'Collection');
 
 $config['skylight_searchresult_display'] = array('Title',
-    'Document Author' ,    'Subject',
+    'Author' ,    'Subject',
     'Type');
 
 $config['skylight_search_fields'] = array(
     'Subject' => 'dc.subject',
     'Type' => 'dc.type',
-    'Author' => 'dc.contributor.author',
-    'Series' => 'dc.relation.ispartofseries'
+    'Author' => 'dc.contributor.authorza.en',
+    'Collection' => 'dc.relation.ispartof.en',
 );
 
 $config['skylight_sort_fields'] = array('Author' => 'dc.contributor.authorza_sort ',
@@ -84,7 +85,7 @@ $config['skylight_sort_fields'] = array('Author' => 'dc.contributor.authorza_sor
     'Date' => 'dc.date.issued_dt'
 );
 
-$config['skylight_related_fields'] = array('Type' => 'dc.type.en', 'Author' => 'dc.contributor.author.en', 'Subject' => 'dc.subject.en', 'Title' => 'dc.title.en', );
+$config['skylight_related_fields'] = array('Type' => 'dc.type.en', 'Author' => 'dc.contributor.authorza.en', 'Subject' => 'dc.subject.en', 'Title' => 'dc.title.en', );
 
 $config['skylight_feed_fields'] = array('Title' => 'Title',
     'Author' => 'Author',
