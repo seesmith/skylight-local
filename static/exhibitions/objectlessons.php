@@ -1,6 +1,6 @@
 <div class="content">
     <div class="content byEditor">
-        <a href ='./search/*:*/Exhibition:"object+lessons%7C%7C%7CObject+Lessons"'><h1>Object Lessons</h1></a>
+        <h1><a href ='./search/*:*/Exhibition:"object+lessons%7C%7C%7CObject+Lessons"'>Object Lessons</a></h1>
         <div id="object-banner" class="art-tile"></div>
         <h2><a href='./search/*:*/Exhibition:"rashid+al-din|||Rashid+al-Din'"><i class="fa fa-search fa-lg">&nbsp;</i>View all items</a></h2>
         <h2>About The Exhibition</h2>
@@ -66,6 +66,5 @@
         </p>
         <p>In the 19th and 20th centuries the extension of mathematics outwards towards astronomy or inwards towards the most elementary structures of the physical world continued to throw up striking examples of visual analysis and record. Crum Brown devised what has become the standard convention for the representation of molecular structures using his wife's knitting needles. It is fitting therefore that photographs of the two monumental figures that Eduardo Paolozzi created for the Swann Building, home of molecular biology, should be included in this section. They embody both the idea of elementary structures, but also the common ground of art and science as we see it here in the visual imagination. There is more than just superficial similarity, but real symmetry between Napier's Bones at the beginning of this story and the early computer circuit.
         </p>
-        <p><table><tr class = "indextr"><td class="indextd"><div id="exhib-tile-7" class="art-tile"></div></td><td class="indextd"><div id="exhib-tile-8" class="art-tile"></div></td></tr></table></p>
     </div>
 </div>
