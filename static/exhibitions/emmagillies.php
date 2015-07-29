@@ -1,6 +1,6 @@
 <div class="content">
     <div class="content byEditor">
-        <a href = 'search/*:*/Exhibition:"emma+gillies%3A+rediscovered|||Emma+Gillies%3A+Rediscovered"'><h1>Emma Gillies: Rediscovered</h1></a>
+        <h1><a href = 'search/*:*/Exhibition:"emma+gillies%3A+rediscovered|||Emma+Gillies%3A+Rediscovered"'>Emma Gillies: Rediscovered</a></h1>
         <div id="gillies-banner" class="art-tile"></div>
         <h2><a href='./search/*:*/Exhibition:"emma+gillies%3A+rediscovered|||Emma+Gillies%3A+Rediscovered"'><i class="fa fa-search fa-lg">&nbsp;</i>View all items</a></h2>
         <h2>About the Exhibition</h2>

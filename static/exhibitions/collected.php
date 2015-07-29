@@ -1,6 +1,6 @@
 <div class="content">
     <div class="content byEditor">
-        <a href='./search/*:*/Exhibition:"collect.ed%7C%7C%7CCollect.ed"'><h1>Collect.ed</h1></a>
+        <h1><a href='./search/*:*/Exhibition:"collect.ed%7C%7C%7CCollect.ed"'>Collect.ed</a></h1>
         <div id="collected-banner" class="art-tile"></div>
         <h2><a href='./search/*:*/Exhibition:"collect.ed|||Collect.ed"'><i class="fa fa-search fa-lg">&nbsp;</i>View all items</a></h2>
         <h2>About the Exhibition</h2>

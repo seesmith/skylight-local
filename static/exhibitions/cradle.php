@@ -1,6 +1,6 @@
 <div class="content">
     <div class="content byEditor">
-        <a href = './search/*:*/Exhibition:"edinburgh+300+cradle+of+chemistry%7C%7C%7CEdinburgh+300+Cradle+of+Chemistry"'><h1>Edinburgh 300: Cradle of Chemistry</h1></a>
+        <h1><a href = './search/*:*/Exhibition:"edinburgh+300+cradle+of+chemistry%7C%7C%7CEdinburgh+300+Cradle+of+Chemistry"'>Edinburgh 300: Cradle of Chemistry</a></h1>
         <div id="exhib-page-block">
             <div id="cradle-banner" class="art-tile"></div>
         </div>
