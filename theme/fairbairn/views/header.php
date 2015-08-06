@@ -98,15 +98,14 @@
         <div id="container">
             <header>
                <div id="collection-title">
-                <a href="<?php echo base_url(); ?>fairbairn"  title="Fairbairn  Home"><?php echo $this->config->item('skylight_fullname');?></a>
+                <a href="<?php echo base_url(); ?>fairbairn"  title="Fairbairn Home"><?php echo $this->config->item('skylight_fullname');?></a>
                </div>
                <div id="collection-search">
                 <form action="./redirect/" method="post">
                     <fieldset class="search">
                         <input type="text" name="q" value="<?php if (isset($searchbox_query)) echo urldecode($searchbox_query); ?>" id="q" />
                         <input type="submit" name="submit_search" class="btn" value="Search" id="submit_search" />
-                        <a href="./advanced" class="advanced">Advanced search</a>
-                    </fieldset>
+                     </fieldset>
                 </form>
                </div>
             </header>

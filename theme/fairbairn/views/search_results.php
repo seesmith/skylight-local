@@ -45,7 +45,6 @@
                 <a href="<?php echo $base_search.$base_parameters.$sort.$field.'+desc' ?>">newest</a> |
                 <a href="<?php echo $base_search.$base_parameters.$sort.$field.'+asc' ?>">oldest</a>
           <?php } } } ?>
-            
         </span>
 
     </div>
@@ -54,7 +53,6 @@
     <ul class="listing">
 
         <?php
-
         $j = 0;
         foreach ($docs as $index => $doc) {
         ?>
@@ -71,21 +69,14 @@
 
                     $num_authors = 0;
                     foreach ($doc[$author_field] as $author) {
-                        // test author linking
-                        // quick hack that only works if the filter key
-
                         $orig_filter = urlencode($author);
 
-                        $lower_orig_filter = strtolower($author);
-                        $lower_orig_filter = urlencode($lower_orig_filter);
-
-                        echo '<a class="artist" href="./search/*:*/Creator:%22'.$lower_orig_filter.'%7C%7C%7C'.$orig_filter.'%22">'.$author.'</a>';
+                        echo '<a class="artist" href="./search/*:*/Creator:%22'.$lower_orig_filter.'%22">'.$author.'</a>';
                         $num_authors++;
                         if($num_authors < sizeof($doc[$author_field])) {
                             echo ' ';
                         }
                     }
-
                     ?>
                 <?php } ?>
 
@@ -94,15 +85,9 @@
 
                     $num_subject = 0;
                     foreach ($doc[$subject_field] as $subject) {
-                        // test author linking
-                        // quick hack that only works if the filter key
 
                         $orig_filter = urlencode($subject);
-
-                        $lower_orig_filter = strtolower($subject);
-                        $lower_orig_filter = urlencode($lower_orig_filter);
-
-                        echo '<a class="subject" href="./search/*:*/Creator:%22'.$lower_orig_filter.'%7C%7C%7C'.$orig_filter.'%22">'.$subject.'</a>';
+                        echo '<a class="subject" href="./search/*:*/Subject:%22'.$orig_filter.'%22">'.$subject.'</a>';
                         $num_subject++;
                         if($num_subject < sizeof($doc[$subject_field])) {
                             echo ' ';

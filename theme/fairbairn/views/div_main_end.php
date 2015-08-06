@@ -6,7 +6,7 @@
                     <a href="./feedback" class="last">Feedback</a>
                 </div>
             </div>
-            <div class="footer-disclaimer">
+            <div class="footer-logos">
                 <div class="footer-logo">
                     <a href="http://www.ed.ac.uk" target="_blank" class="uoelogo" title="University of Edinburgh Home"></a>
                 </div>
