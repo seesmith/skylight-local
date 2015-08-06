@@ -6,15 +6,7 @@
                     <a href="./feedback" class="last">Feedback</a>
                 </div>
             </div>
-            <div class="footer-logos">
-                <div class="footer-logo">
-                    <a href="http://www.ed.ac.uk" target="_blank" class="uoelogo" title="University of Edinburgh Home"></a>
-                </div>
 
-                <div class="nls-logo">
-                    <a href="http://www.nls.uk" target="_blank" class="nlslogo" title="National Library of Scotland"></a>
-                </div>
-            </div>
             <div class="footer-disclaimer">
                 <div class="footer-policies">
                     <p><a href="http://www.ed.ac.uk/about/website/privacy" title="Privacy and Cookies Link"  target="_blank">Privacy &amp; Cookies</a>
@@ -23,6 +15,11 @@
                         &nbsp;&nbsp;<a href="http://www.ed.ac.uk/about/website/accessibility" title="Website Accessibility Link" target="_blank">Accessibility</a></p>
                     <p>Unless explicitly stated otherwise, all material is copyright &copy; <?php echo date("Y"); ?> <a href="http://www.ed.ac.uk" title="University of Edinburgh Home" target="_blank">University of Edinburgh</a>.</p>
                 </div>
+            </div>
+            <div class="footer-logos">
+                <a href="http://www.ed.ac.uk" target="_blank"><div class="uoe-logo"></div></a>
+                <a href="http://www.wellcome.ac.uk/" target="_blank"><div class="wellcome-logo"></div></a>
+                <a href="http://www.nls.uk/" target="_blank"><div class="nls-logo"></div></a>
             </div>
         </footer>
     </div>

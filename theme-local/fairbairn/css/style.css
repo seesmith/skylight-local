@@ -217,7 +217,7 @@ span[id^="video-"]              { margin: 5px 0; }
 
 .col-sidebar ul.related li a.related-record { font-size: 16px; padding-bottom: 5px;}
 
-footer                  { display: block; border-bottom: 1px solid #A0A0A0; padding-bottom: 10px; margin-bottom: 15px; width: 100%;}
+footer                  { display: block; padding-bottom: 10px; margin-bottom: 15px; width: 100%;}
 
 .footer-links           { margin-top: 15px; margin-bottom: 15px; text-align: left;  border-top: 1px solid #A0A0A0; border-bottom: 1px solid #A0A0A0; width: 660px; height: 39px;}
 
@@ -226,12 +226,36 @@ footer                  { display: block; border-bottom: 1px solid #A0A0A0; padd
 .site-links a.last	    { border: none; }
 .site-links a:hover	    { text-decoration: underline; color: #A0A0A0; }
 
-.footer-disclaimer      { display: block; width: 95%; margin: auto; height: 100px;}
-.footer-logos            { display: block; float: left; height: 110px;}
-.footer-logo            { display: block; float: left; height: 110px;}
-.nls-logo               { display: block; float: left; padding-left: 10px; }
-.uoelogo                { display: block; width: 88px; height: 88px; background: url(../images/UoELogo.gif) no-repeat 0px 0px; }
-.nlslogo                { display: block; float: left; width: 206px; height: 107px; background: url(../images/nls-logo.gif) no-repeat 0px 0px; }
+.footer-disclaimer      { display: block; width: 95%; margin: auto;}
+.footer-logos           { display: block; float: left; height: 200px;  width: 100%; background: #ffffff; padding: 0; margin-bottom: 10px;}
+
+.uoe-logo {
+    display: block;
+    width: 119px;
+    height: 88px;
+    float: left;
+    background: url(../images/UoELogo.gif) no-repeat 0 0;
+    margin-right: 30px;
+    margin-top: 5px;
+}
+
+.nls-logo {
+    display: block;
+    width: 173px;
+    height: 100px;
+    float: left;
+    background: url(../images/nls-logo.jpg) no-repeat 0 0;
+}
+
+.wellcome-logo {
+    display: block;
+    width: 280px;
+    height: 75px;
+    float: left;
+    background: url(../images/wt_logo.jpg) no-repeat 0 0;
+    margin-top: 10px;
+    margin-right: 30px;
+}
 
 .footer-policies        { display: block; padding-left: 10px; }
 .footer-policies p      { font-size: 14px; margin-bottom: 5px; color: #555555}
