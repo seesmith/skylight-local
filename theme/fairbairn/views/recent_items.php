@@ -13,7 +13,7 @@
 
         <li<?php if($index == 0) { echo ' class="first"'; } elseif($index == sizeof($recentitems) - 1) { echo ' class="last"'; } ?>>
 
-            <h3><a href="./record/<?php echo $doc['id']?>"><?php echo $doc[$title_field]; ?></a></h3>
+            <h3><a href="./record/<?php echo $doc['id']?>/<?php echo $doc['types'][0]?>"><?php echo $doc[$title_field]; ?></a></h3>
 
             <div class="tags">
                 <?php if(array_key_exists($author_field,$doc)) { ?>

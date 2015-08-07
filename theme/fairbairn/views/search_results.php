@@ -60,7 +60,8 @@
         <li<?php if($index == 0) { echo ' class="first"'; } elseif($index == sizeof($docs) - 1) { echo ' class="last"'; } ?>>
         <div class="item-div">
 
-            <h3><a href="./record/<?php echo $doc['id']?>?highlight=<?php echo $query ?>"><?php echo $doc[$title_field]; ?></a></h3>
+
+            <h3><a href="./record/<?php echo $doc['id']?>/<?php echo $doc['types'][0]?>"><?php echo $doc[$title_field]; ?></a></h3>
 
             <div class = "iteminfo">
 
@@ -71,7 +72,7 @@
                     foreach ($doc[$author_field] as $author) {
                         $orig_filter = urlencode($author);
 
-                        echo '<a class="artist" href="./search/*:*/Creator:%22'.$lower_orig_filter.'%22">'.$author.'</a>';
+                        echo '<a class="creator" href="./search/*:*/Creator:%22'.$orig_filter.'%22">'.$author.'</a>';
                         $num_authors++;
                         if($num_authors < sizeof($doc[$author_field])) {
                             echo ' ';

@@ -18,7 +18,7 @@ $config['skylight_solrbase'] = 'http://localhost:8090/';
 
 $config['skylight_theme'] = 'fairbairn';
 
-$config['skylight_handle_prefix'] = '/repositories/6/archival_objects/';
+$config['skylight_handle_prefix'] = '/repositories/6/';
 
 $config['skylight_fullname'] = 'W. Ronald D. Fairbairn';
 
@@ -32,8 +32,8 @@ $config['skylight_oaipmhallowed'] = true;
 //$config['skylight_container_id'] = '"/repositories/6"';
 //$config['skylight_container_field'] = 'repository';
 
-$config['skylight_container_id'] = '"/repositories/6/resources/85278"';
-$config['skylight_container_field'] = 'resource';
+$config['skylight_container_id'] = '"/repositories/6"';
+$config['skylight_container_field'] = 'repository';
 $config['skylight_sitemap_type'] = 'external';
 
 $config['skylight_fields'] = array('Title' => 'title',
@@ -48,7 +48,7 @@ $config['skylight_fields'] = array('Title' => 'title',
 );
 
 $config['skylight_date_filters'] = array();
-$config['skylight_filters'] = array('Subject' => 'subjects', 'Agent' => 'agents');
+$config['skylight_filters'] = array('Subject' => 'subjects', 'Agent' => 'agents', 'Type' => 'types');
 $config['skylight_filter_delimiter'] = ':';
 
 $config['skylight_meta_fields'] = array('Title' => 'title',
