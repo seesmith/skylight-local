@@ -2,7 +2,8 @@
             <div class="footer-links">
                 <div class="site-links">
                     <a href="./"><?php echo $site_title; ?></a>
-                    <a href="./about">About this Collection</a>
+                    <a href="./about">About this Project</a>
+                    <a href="http://libraryblogs.is.ed.ac.uk/fairbairn/" target="_blank">Link to Blog</a>
                     <a href="./feedback" class="last">Feedback</a>
                 </div>
             </div>

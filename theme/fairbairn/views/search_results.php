@@ -81,6 +81,7 @@
                 <?php } ?>
 
                 <?php if(array_key_exists($subject_field,$doc)) { ?>
+                    <div class="tags">
                     <?php
 
                     $num_subject = 0;
@@ -95,6 +96,7 @@
                     }
 
                     ?>
+                    </div>
                 <?php } ?>
 
 

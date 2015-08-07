@@ -28,7 +28,6 @@ $bitstreamLinks = array();
             <?php $excludes = array("");
 
             foreach($recorddisplay as $key) {
-
                 $element = $this->skylight_utilities->getField($key);
 
                 if(isset($solr[$element])) {
@@ -54,10 +53,7 @@ $bitstreamLinks = array();
                         echo '</td></tr>';
                     }
                 }
-
             } ?>
-
-
             </tbody>
         </table>
     </div>
