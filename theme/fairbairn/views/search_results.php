@@ -72,7 +72,7 @@
                     foreach ($doc[$author_field] as $author) {
                         $orig_filter = urlencode($author);
 
-                        echo '<a class="creator" href="./search/*:*/Creator:%22'.$orig_filter.'%22">'.$author.'</a>';
+                        echo '<a class="agent" href="./search/*:*/Agent:%22'.$orig_filter.'%22">'.$author.'</a>';
                         $num_authors++;
                         if($num_authors < sizeof($doc[$author_field])) {
                             echo ' ';
