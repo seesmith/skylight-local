@@ -3,6 +3,7 @@
 $author_field = $this->skylight_utilities->getField("Creator");
 $type_field = $this->skylight_utilities->getField("Type");
 $date_field = $this->skylight_utilities->getField("Date");
+$json_field = $this->skylight_utilities->getField("JSON");
 $filters = array_keys($this->config->item("skylight_filters"));
 $link_uri_field = $this->skylight_utilities->getField("Link");
 
@@ -14,11 +15,7 @@ $bitstreamLinks = array();
 <div class="content">
 
     <div class="full-title">
-        <h1 class="itemtitle"><?php echo $record_title ?>
-            <?php if(isset($solr[$date_field])) {
-                echo " (" . $solr[$date_field][0] . ")";
-            } ?>
-        </h1>
+        <h1 class="itemtitle"><?php echo $record_title ?></h1>
     </div>
 
 
@@ -53,7 +50,10 @@ $bitstreamLinks = array();
                         echo '</td></tr>';
                     }
                 }
-            } ?>
+            }
+            ?>
+
+
             </tbody>
         </table>
     </div>
