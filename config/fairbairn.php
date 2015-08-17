@@ -57,6 +57,8 @@ $config['skylight_fields'] = array('Title' => 'title',
     'Extent Type' => 'extent_type',
     'Identifier' =>'component_id',
     'Parent' => 'parent',
+    'Parent_Id' => 'parent_id',
+    'Parent_Type' => 'parent_type',
     'Bibliography' => 'note_bibliography'
 );
 
@@ -74,7 +76,7 @@ $config['skylight_meta_fields'] = array('Title' => 'title',
 
 
 $config['skylight_recorddisplay'] = array('Title','Creator','Subject','Agent','Level','Publish','Notes','Dates','Rights',
-    'Identifier','Parent','Language','Scope','Related','Physical','Access','Extent','Extent Type','Bibliography' );
+    'Identifier','Language','Scope','Related','Physical','Access','Extent','Extent Type','Bibliography' );
 
 $config['skylight_searchresult_display'] = array('Title','Creator','Subject','Agent');
 

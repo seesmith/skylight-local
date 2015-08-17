@@ -3,7 +3,8 @@
 $author_field = $this->skylight_utilities->getField("Creator");
 $type_field = $this->skylight_utilities->getField("Type");
 $date_field = $this->skylight_utilities->getField("Date");
-$json_field = $this->skylight_utilities->getField("JSON");
+$parent_id_field = $this->skylight_utilities->getField("Parent_Id");
+$parent_type_field = $this->skylight_utilities->getField("Parent_Type");
 $filters = array_keys($this->config->item("skylight_filters"));
 $link_uri_field = $this->skylight_utilities->getField("Link");
 
@@ -17,6 +18,11 @@ $bitstreamLinks = array();
     <div class="full-title">
         <h1 class="itemtitle"><?php echo $record_title ?></h1>
     </div>
+    <?php
+    if(isset($solr[$parent_id_field])) {
+       echo '<a href ="./record/' . $solr[$parent_id_field][0] .'/'. $solr[$parent_type_field][0] . '" > Parent Record </a>';
+    }
+    ?>
 
 
     <div class="full-metadata">
