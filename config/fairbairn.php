@@ -54,7 +54,6 @@ $config['skylight_fields'] = array('Title' => 'title',
     'Rights' => 'rights_statements',
     'Dates' =>'dates',
     'Extent' => 'extents',
-    'Extent Type' => 'extent_type',
     'Identifier' =>'component_id',
     'Parent' => 'parent',
     'Parent_Id' => 'parent_id',
@@ -86,7 +85,7 @@ $config['skylight_search_fields'] = array('Title' => 'title',
     'Creator' => 'creators'
 );
 
-$config['skylight_sort_fields'] = array('Title' => 'title');
+$config['skylight_sort_fields'] = array('Title' => 'title_sort');
 
 $config['skylight_related_fields'] = array('Subject' => 'subjects', 'Agent' => 'agents');
 
@@ -98,7 +97,8 @@ $config['skylight_feed_fields'] = array('Title' => 'title',
 $config['skylight_results_per_page'] = 10;
 $config['skylight_share_buttons'] = false;
 
-$config['skylight_homepage_recentitems'] = true;
+$config['skylight_homepage_recentitems'] = false;
+$config['skylight_homepage_randomitems'] = true;
 
 // Set to the number of minutes to cache pages for. Set to false for no caching.
 // This overrides the setting in skylight.php so is commented by Demo
