@@ -225,8 +225,11 @@ footer                  { display: block; padding-bottom: 10px; margin-bottom: 1
 .site-links a.last	    { border: none; }
 .site-links a:hover	    { text-decoration: underline; color: #A0A0A0; }
 
-.footer-disclaimer      { display: block; width: 95%; margin: auto;}
+.footer-disclaimer      { display: block; width: 100%; margin: auto;}
 .footer-logos           { display: block; float: left; height: 200px;  width: 100%; background: #ffffff; padding: 0; }
+
+.footer-policies        { display: block; padding-left: 0; font-size: 14px; margin-bottom: 5px; color: #555555}
+.footer-copyright       { font-size: 11px;}
 
 .uoe-logo {
     display: block;
@@ -256,8 +259,6 @@ footer                  { display: block; padding-bottom: 10px; margin-bottom: 1
     margin-right: 30px;
 }
 
-.footer-policies        { display: block; padding-left: 10px; }
-.footer-policies p      { font-size: 14px; margin-bottom: 5px; color: #555555}
 
 /* Custom Containers & Subclasses ----------------------------------------------------------------------------------------*/
 

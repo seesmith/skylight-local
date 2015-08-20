@@ -14,7 +14,7 @@
                         &nbsp;&nbsp;<a href="./takedown" title="Takedown Policy Link">Takedown Policy</a>
                         &nbsp;&nbsp;<a href="./licensing" title="Licensing and Copyright Link">Licensing &amp; Copyright</a>
                         &nbsp;&nbsp;<a href="http://www.ed.ac.uk/about/website/accessibility" title="Website Accessibility Link" target="_blank">Accessibility</a></p>
-                    <p>Unless explicitly stated otherwise, all material is copyright &copy; <?php echo date("Y"); ?> <a href="http://www.ed.ac.uk" title="University of Edinburgh Home" target="_blank">University of Edinburgh</a>.</p>
+                    <p class="footer-copyright">Unless explicitly stated otherwise, all material is copyright &copy; <?php echo date("Y"); ?> <a href="http://www.ed.ac.uk" title="University of Edinburgh Home" target="_blank">University of Edinburgh</a> or <a href="http://www.nls.ac" title="National Library of Scotland Home" target="_blank">National Library of Scotland.</p>
                 </div>
             </div>
             <div class="footer-logos">
