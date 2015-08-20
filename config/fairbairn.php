@@ -18,7 +18,7 @@ $config['skylight_solrbase'] = 'http://localhost:8090/';
 
 $config['skylight_theme'] = 'fairbairn';
 
-$config['skylight_handle_prefix'] = '/repositories/6/archival_objects/';
+$config['skylight_handle_prefix'] = '/repositories/5/';
 
 $config['skylight_fullname'] = 'W. Ronald D. Fairbairn';
 
@@ -32,8 +32,8 @@ $config['skylight_oaipmhallowed'] = true;
 //$config['skylight_container_id'] = '"/repositories/6"';
 //$config['skylight_container_field'] = 'repository';
 
-$config['skylight_container_id'] = '"/repositories/6/resources/85278"';
-$config['skylight_container_field'] = 'resource';
+$config['skylight_container_id'] = '"/repositories/5"';
+$config['skylight_container_field'] = 'repository';
 $config['skylight_sitemap_type'] = 'external';
 
 $config['skylight_fields'] = array('Title' => 'title',
@@ -45,6 +45,20 @@ $config['skylight_fields'] = array('Title' => 'title',
     'JSON' => 'json',
     'Agent' => 'agents',
     'Publish' => 'publish',
+    'Notes' => 'notes',
+    'Language' => 'langmaterial',
+    'Scope' => 'scopecontent',
+    'Related' => 'relatedmaterial',
+    'Physical' => 'phystech',
+    'Access' => 'accessrestrict',
+    'Rights' => 'rights_statements',
+    'Dates' =>'dates',
+    'Extent' => 'extents',
+    'Identifier' =>'component_id',
+    'Parent' => 'parent',
+    'Parent_Id' => 'parent_id',
+    'Parent_Type' => 'parent_type',
+    'Bibliography' => 'note_bibliography'
 );
 
 $config['skylight_date_filters'] = array();
@@ -52,25 +66,25 @@ $config['skylight_filters'] = array('Subject' => 'subjects', 'Agent' => 'agents'
 $config['skylight_filter_delimiter'] = ':';
 
 $config['skylight_meta_fields'] = array('Title' => 'title',
-    'Creator' => 'creators',
+    'Agent' => 'agents',
     'Subject' => 'subjects',
     'Type' => 'primary_type',
     'Level' => 'level',);
 
-$config['skylight_recorddisplay'] = array('Title','Creator','Subject','Type','Agent','Level');
+$config['skylight_recorddisplay'] = array('Title','Creator','Subject','Agent','Level','Publish','Notes','Dates','Rights',
+    'Identifier','Language','Scope','Related','Physical','Access','Extent','Extent Type','Bibliography' );
 
-$config['skylight_searchresult_display'] = array('Title','Creator','Subject','Type','Agent');
+$config['skylight_searchresult_display'] = array('Title','Creator','Subject','Agent');
 
 $config['skylight_search_fields'] = array('Title' => 'title',
     'Subject' => 'subjects',
-    'Type' => 'types',
-    'Creator' => 'creators',
-    'Level' => 'level'
+    'Agent' => 'agents',
+    'Creator' => 'creators'
 );
 
-$config['skylight_sort_fields'] = array('Title' => 'title');
+$config['skylight_sort_fields'] = array('Title' => 'title_sort');
 
-$config['skylight_related_fields'] = array('Subject' => 'subjects', 'Agent' => 'agents');
+$config['skylight_related_fields'] = array('Parent' => 'parent');
 
 $config['skylight_feed_fields'] = array('Title' => 'title',
     'Creator' => 'creator',
@@ -80,7 +94,8 @@ $config['skylight_feed_fields'] = array('Title' => 'title',
 $config['skylight_results_per_page'] = 10;
 $config['skylight_share_buttons'] = false;
 
-$config['skylight_homepage_recentitems'] = true;
+$config['skylight_homepage_recentitems'] = false;
+$config['skylight_homepage_randomitems'] = true;
 
 // Set to the number of minutes to cache pages for. Set to false for no caching.
 // This overrides the setting in skylight.php so is commented by Demo
@@ -99,7 +114,7 @@ $config['skylight_lightbox_mimes'] = array('image/jpeg', 'image/gif', 'image/png
 
 // Language and locale settings
 $config['skylight_language_default'] = 'en';
-$config['skylight_language_options'] = array('en', 'ko', 'jp');
+$config['skylight_language_options'] = array('en');
 
 
 ?>

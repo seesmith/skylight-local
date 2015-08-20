@@ -8,28 +8,12 @@
     $type_field = $this->skylight_utilities->getField('Type');
     $subject_field = $this->skylight_utilities->getField('Subject');
 
-    foreach ($recentitems as $index => $doc) { ?>
+    foreach ($randomitems as $index => $doc) { ?>
 
-        <li<?php if($index == 0) { echo ' class="first"'; } elseif($index == sizeof($recentitems) - 1) { echo ' class="last"'; } ?>>
+        <li<?php if($index == 0) { echo ' class="first"'; } elseif($index == sizeof($randomitems) - 1) { echo ' class="last"'; } ?>>
 
             <h3><a href="./record/<?php echo $doc['id']?>/<?php echo $doc['types'][0]?>"><?php echo $doc[$title_field]; ?></a></h3>
             <div class = "iteminfo">
-
-                <?php if(array_key_exists($author_field,$doc)) { ?>
-                    <?php
-
-                    $num_authors = 0;
-                    foreach ($doc[$author_field] as $author) {
-                        $orig_filter = urlencode($author);
-
-                        echo '<a class="agent" href="./search/*:*/Agent:%22'.$orig_filter.'%22">'.$author.'</a>';
-                        $num_authors++;
-                        if($num_authors < sizeof($doc[$author_field])) {
-                            echo ' ';
-                        }
-                    }
-                    ?>
-                <?php } ?>
 
                 <?php if(array_key_exists($subject_field,$doc)) { ?>
                     <div class="tags">

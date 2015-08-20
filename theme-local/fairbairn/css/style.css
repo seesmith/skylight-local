@@ -168,7 +168,7 @@ header				{ position: relative; width: 940px; height: 195px; background: url(../
 .search .advanced:hover			{ text-decoration: underline; }
 
 .item-div                       { width: 660px; text-align: left; display: block; }
-.iteminfo                       { display: block; min-height:40px; text-align: left; width: 75%; float:left; }
+.iteminfo                       { display: block; min-height:40px; text-align: left; width: 100%; float:left; }
 .iteminfo h3                    { font-size: 20px; margin-top: 5px; }
 .iteminfo .artist               { font-size: 16px; color: #A0A0A0; font-weight: bold; }
 
@@ -225,8 +225,11 @@ footer                  { display: block; padding-bottom: 10px; margin-bottom: 1
 .site-links a.last	    { border: none; }
 .site-links a:hover	    { text-decoration: underline; color: #A0A0A0; }
 
-.footer-disclaimer      { display: block; width: 95%; margin: auto;}
+.footer-disclaimer      { display: block; width: 100%; margin: auto;}
 .footer-logos           { display: block; float: left; height: 200px;  width: 100%; background: #ffffff; padding: 0; }
+
+.footer-policies        { display: block; padding-left: 0; font-size: 14px; margin-bottom: 5px; color: #555555}
+.footer-copyright       { font-size: 11px;}
 
 .uoe-logo {
     display: block;
@@ -256,8 +259,6 @@ footer                  { display: block; padding-bottom: 10px; margin-bottom: 1
     margin-right: 30px;
 }
 
-.footer-policies        { display: block; padding-left: 10px; }
-.footer-policies p      { font-size: 14px; margin-bottom: 5px; color: #555555}
 
 /* Custom Containers & Subclasses ----------------------------------------------------------------------------------------*/
 
@@ -272,7 +273,7 @@ footer                  { display: block; padding-bottom: 10px; margin-bottom: 1
 .listing li p 						{ font-size: 14px; margin: 0; }
 
 .tags					            { margin-top: 5px; margin: 0; }
-.tags a 				            { color: #fff; font-size: 15px; background: #A0A0A0; -webkit-border-radius: 5px; -moz-border-radius: 5px; border-radius: 5px; padding: 2px 6px; line-height: 20px; margin-right: 8px; text-decoration: none; display:inline-block; }
+.tags a 				            { color: #fff; font-size: 15px; background: #A0A0A0; -webkit-border-radius: 5px; -moz-border-radius: 5px; border-radius: 5px; padding: 2px 6px; line-height: 20px; margin-right: 8px; margin-top: 6px; text-decoration: none; display:inline-block; }
 .tags a.bold			            { font-weight: bold; }
 .tags a:hover			            { background: #A87227; color: #fff; text-decoration: none; }
 .tags a.artist                      { display:inline-block; line-height: 15px; margin-bottom: 5px; }
