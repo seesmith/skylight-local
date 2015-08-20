@@ -168,7 +168,7 @@ header				{ position: relative; width: 940px; height: 195px; background: url(../
 .search .advanced:hover			{ text-decoration: underline; }
 
 .item-div                       { width: 660px; text-align: left; display: block; }
-.iteminfo                       { display: block; min-height:40px; text-align: left; width: 75%; float:left; }
+.iteminfo                       { display: block; min-height:40px; text-align: left; width: 100%; float:left; }
 .iteminfo h3                    { font-size: 20px; margin-top: 5px; }
 .iteminfo .artist               { font-size: 16px; color: #A0A0A0; font-weight: bold; }
 
