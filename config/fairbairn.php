@@ -47,7 +47,7 @@ $config['skylight_fields'] = array('Title' => 'title',
     'Publish' => 'publish',
     'Notes' => 'notes',
     'Language' => 'langmaterial',
-    'Scope' => 'scopecontent',
+    'Scope and Contents' => 'scopecontent',
     'Related' => 'relatedmaterial',
     'Physical' => 'phystech',
     'Access' => 'accessrestrict',
@@ -59,7 +59,10 @@ $config['skylight_fields'] = array('Title' => 'title',
     'Parent_Id' => 'parent_id',
     'Parent_Type' => 'parent_type',
     'Bibliography' => 'note_bibliography',
-    'Id' => 'id'
+    'Id' => 'id',
+    'Alternative Format' => 'altformavail',
+    'Physcial Description' => 'physdesc'
+
 );
 
 $config['skylight_date_filters'] = array();
@@ -72,8 +75,9 @@ $config['skylight_meta_fields'] = array('Title' => 'title',
     'Type' => 'primary_type',
     'Level' => 'level',);
 
-$config['skylight_recorddisplay'] = array('Title','Creator','Subject','Agent','Level','Publish','Notes','Dates','Rights',
-    'Identifier','Language','Scope','Related','Physical','Access','Extent','Extent Type','Bibliography' );
+$config['skylight_recorddisplay'] = array('Identifier','Creator','Dates','Extent','Extent Type','Agent','Subject',
+    'Notes','Rights','Language','Scope and Contents','Related','Bibliography','Physical','Physcial Description',
+    'Access','Alternative Format' );
 
 $config['skylight_searchresult_display'] = array('Title','Creator','Subject','Agent');
 
