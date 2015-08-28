@@ -32,7 +32,7 @@
                         <li class="past-ex">
                             <h3><a href="./rashid" alt="Rashid al-Din" title="Rashid al-Din Information Page">The World History
                                     of Rashid al-Din, 1314</a></h3>
-                            <h3><a href='./search/*:*/Exhibition:"rashid+al-din|||Rashid+al-Din"'><i class="fa fa-search">&nbsp;</i>View Items</a></h3>
+                            <h3><a href='./search/*:*/Exhibition:"rashid+al-din%26%2339%3Bs+world+history|||Rashid+al-Din%26%2339%3Bs+World+History"'><i class="fa fa-search">&nbsp;</i>View Items</a></h3>
                             <p>2 Aug - 31 Oct 2014</p>
                             <a href="./rashid" alt="Rashid al-Din" title="Rashid al-Din">
                                 <div id="exhib-tile-1"></div>
