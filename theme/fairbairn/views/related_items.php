@@ -9,6 +9,7 @@
         if(count($related_items) > 0) {
 
             $type_field = $this->skylight_utilities->getField('Type');
+            $id_field = $this->skylight_utilities->getField('Identifier');
 
             foreach ($related_items as $index => $doc) {
 
@@ -21,7 +22,10 @@
                 ?>
 
                 <li<?php if($index == 0) { echo ' class="first"'; } elseif($index == sizeof($related_items) - 1) { echo ' class="last"'; } ?>>
-                    <a class="related-record" href="./record/<?php echo $doc['id']?>/<?php echo $doc['types'][0]?>"><?php echo $doc[$title_field][0]; ?>s
+                    <a class="related-record" href="./record/<?php echo $doc['id']?>/<?php echo $doc['types'][0]?>">
+                        <?php echo $doc[$title_field][0]; ?></a>
+                    <?php echo $doc["component_id"]; ?><br />
+                    <?php echo $doc["dates"]; ?>
                 </li>
             <?php }
 

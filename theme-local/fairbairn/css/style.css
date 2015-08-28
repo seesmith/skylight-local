@@ -214,7 +214,8 @@ span[id^="video-"]              { margin: 5px 0; }
 .col-sidebar ul.related .tags a 			{ padding: 2px 5px; display: inline-block; background: #ffffff; color: #A87227;}
 .col-sidebar ul.related .tags a:hover		{ text-decoration: none; background: #A0A0A0; color: #fff; }
 
-.col-sidebar ul.related li a.related-record { font-size: 16px; padding-bottom: 5px;}
+.col-sidebar ul.related li a.related-record { font-size: 14px; padding-bottom: 5px; text-overflow: ellipsis; overflow: hidden; white-space: nowrap;}
+
 
 footer                  { display: block; padding-bottom: 10px; margin-bottom: 15px; width: 100%;}
 

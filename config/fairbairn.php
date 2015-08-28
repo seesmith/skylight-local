@@ -101,7 +101,7 @@ $config['skylight_share_buttons'] = false;
 
 $config['skylight_homepage_recentitems'] = false;
 $config['skylight_homepage_randomitems'] = true;
-$config['skylight_related_number'] = 10;
+$config['skylight_related_number'] = 20;
 
 // Set to the number of minutes to cache pages for. Set to false for no caching.
 // This overrides the setting in skylight.php so is commented by Demo
