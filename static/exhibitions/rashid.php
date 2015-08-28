@@ -1,7 +1,7 @@
 
 <div class="content">
     <div class="content byEditor">
-        <h1><a href = 'search/*:*/Exhibition:"rashid+al-din%7C%7C%7CRashid+al-Din"'>The World History of Rashid al-Din, 1314</a></h1>
+        <h1><a href = 'search/*:*/Exhibition:"rashid+al-din%26%2339%3Bs+world+history%7C%7C%7CRashid+al-Din%26%2339%3Bs+World+History"'>The World History of Rashid al-Din, 1314</a></h1>
         <div id="rashid-block">
             <table>
                 <tr class="indextr">
