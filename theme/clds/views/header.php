@@ -99,7 +99,6 @@
             </ul>
             <ul class="menu-links">
                 <li><a href="./feedback/" title="Feedback Link" class="last">Feedback</a></li>
-                <li><a href="http://www.ed.ac.uk/schools-departments/information-services/library-museum-gallery/crc/projects" title="CRC Projects Link" target="_blank">Projects</a></li>
                 <li><a href="http://libraryblogs.is.ed.ac.uk/" title="Library and University Collections Blog" target="_blank">Blog</a></li>
                 <li><a href="http://www.ed.ac.uk/schools-departments/information-services/library-museum-gallery/crc" title="Centre for Research Collections Link" target="_blank">CRC</a></li>
                 <li><a href="./about/" title="About this site">About</a></li>
