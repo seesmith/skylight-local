@@ -24,6 +24,9 @@ if (strpos($search_url, 'Header:%22archives%22') > 0)
             </video>
         </div>
     </div>
+    <div class="results_link">
+        <h3 class="collection-link"><a href="http://archives.collections.ed.ac.uk" target="_blank">Search the Archives Collection <i class="fa fa-external-link">&nbsp;</i> </a></h3>
+    </div>
 
 <?php } elseif (strpos($search_url, 'Header:%22museums%22') > 0) { ?>
 
