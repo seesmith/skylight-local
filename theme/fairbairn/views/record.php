@@ -5,6 +5,7 @@ $type_field = $this->skylight_utilities->getField("Type");
 $date_field = $this->skylight_utilities->getField("Date");
 $parent_id_field = $this->skylight_utilities->getField("Parent_Id");
 $parent_type_field = $this->skylight_utilities->getField("Parent_Type");
+$id_field = $this->skylight_utilities->getField("Identifier");
 $filters = array_keys($this->config->item("skylight_filters"));
 $link_uri_field = $this->skylight_utilities->getField("Link");
 
@@ -59,7 +60,18 @@ $bitstreamLinks = array();
             }
             ?>
 
-
+            <tr><th>Arrange consultation at</th><td>
+                    <?php
+                    if (0 === strpos($solr[$id_field][0], 'MS'))
+                    {
+                        echo 'National Library of Scotland';
+                    }
+                    else
+                    {
+                        echo 'University of Edinburgh, Centre for Research Collections';
+                    }
+                    ?>
+                </td></tr>
             </tbody>
         </table>
     </div>
