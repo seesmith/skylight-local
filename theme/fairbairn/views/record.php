@@ -62,7 +62,7 @@ $bitstreamLinks = array();
 
             <tr><th>Arrange consultation at</th><td>
                     <?php
-                    if (0 === strpos($solr[$id_field][0], 'MS'))
+                    if (isset($solr[$id_field]) && 0 === strpos($solr[$id_field][0], 'MS'))
                     {
                         echo 'National Library of Scotland';
                     }

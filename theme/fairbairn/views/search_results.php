@@ -62,7 +62,9 @@
 
 
             <h3><a href="./record/<?php echo $doc['id']?>/<?php echo $doc['types'][0]?>"><?php echo $doc[$title_field]; ?></a></h3>
-            <div class="component_id"><?php echo $doc["component_id"]; ?></div>
+            <?php if (isset($doc["component_id"])) {
+                echo'<div class="component_id">' . $doc["component_id"]. '</div>';
+            } ?>
             <div class = "iteminfo">
 
                 <?php if(array_key_exists($author_field,$doc)) { ?>
