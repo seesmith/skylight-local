@@ -22,7 +22,7 @@ $config['skylight_handle_prefix'] = '/repositories/5/';
 
 $config['skylight_fullname'] = 'W. Ronald D. Fairbairn';
 
-$config['skylight_adminemail'] = 'lddt@mlist.is.ed.ac.uk';
+$config['skylight_adminemail'] = 'is-crc@ed.ac.uk';
 
 $config['skylight_oaipmhcollection'] = '';
 

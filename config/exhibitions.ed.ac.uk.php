@@ -19,7 +19,7 @@ $config['skylight_theme'] = 'exhibitions';
 
 $config['skylight_fullname'] = 'Library and University Collections Exhibitions';
 
-$config['skylight_adminemail'] = 'lddt@mlist.is.ed.ac.uk';
+$config['skylight_adminemail'] = 'is-crc@ed.ac.uk';
 
 $config['skylight_oaipmhcollection'] = 'hdl_10683_23132';
 
