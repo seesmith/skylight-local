@@ -62,7 +62,8 @@
 
 
             <h3><a href="./record/<?php echo $doc['id']?>/<?php echo $doc['types'][0]?>"><?php echo $doc[$title_field]; ?></a></h3>
-            <?php if (isset($doc["component_id"])) {
+            <?php
+            if (isset($doc["component_id"])) {
                 echo'<div class="component_id">' . $doc["component_id"]. '</div>';
             } ?>
             <div class = "iteminfo">
