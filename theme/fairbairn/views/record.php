@@ -47,19 +47,8 @@ $bitstreamLinks = array();
                                 echo '<a href="./search/*:*/' . $key . ':%22'.$orig_filter.'%22">'.$metadatavalue.'</a>';
                             }
                             else {
-                                if ($element == 'component_id')
-                                {
-                                        $component_id = $metadatavalue;
-                                        if (0 === strpos($component_id , 'StEdU'))
-                                        {
-                                            $component_id = str_replace('StEdU : ', '', $component_id);
-                                        }
-                                        echo $component_id;
+                                echo '<pre>' . $metadatavalue . '</pre>';
 
-                                }
-                                else{
-                                    echo $metadatavalue;
-                                }
                             }
 
                             if($index < sizeof($solr[$element]) - 1) {
@@ -72,7 +61,7 @@ $bitstreamLinks = array();
             }
             ?>
 
-            <tr><th>Arrange consultation at</th><td>
+            <tr><th>Consult at</th><td>
                     <?php
                     if (isset($solr[$id_field]) && 0 === strpos($solr[$id_field][0], 'MS'))
                     {
