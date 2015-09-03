@@ -47,7 +47,19 @@ $bitstreamLinks = array();
                                 echo '<a href="./search/*:*/' . $key . ':%22'.$orig_filter.'%22">'.$metadatavalue.'</a>';
                             }
                             else {
-                                echo $metadatavalue;
+                                if ($element == 'component_id')
+                                {
+                                        $component_id = $metadatavalue;
+                                        if (0 === strpos($component_id , 'StEdU'))
+                                        {
+                                            $component_id = str_replace('StEdU : ', '', $component_id);
+                                        }
+                                        echo $component_id;
+
+                                }
+                                else{
+                                    echo $metadatavalue;
+                                }
                             }
 
                             if($index < sizeof($solr[$element]) - 1) {
@@ -62,13 +74,14 @@ $bitstreamLinks = array();
 
             <tr><th>Arrange consultation at</th><td>
                     <?php
-                    if (0 === strpos($solr[$id_field][0], 'MS'))
+                    if (isset($solr[$id_field]) && 0 === strpos($solr[$id_field][0], 'MS'))
                     {
-                        echo 'National Library of Scotland';
+                        echo '<a href="http://www.nls.uk/" target="_blank" title="National Library of Scotland">National Library of Scotland</a>';
                     }
                     else
                     {
-                        echo 'University of Edinburgh, Centre for Research Collections';
+                        echo '<a href="http://www.ed.ac.uk/information-services/library-museum-gallery/crc" target="_blank"
+                        title="University of Edinburgh, Centre for Research Collections">University of Edinburgh, Centre for Research Collections</a>';
                     }
                     ?>
                 </td></tr>

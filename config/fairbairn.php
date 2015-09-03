@@ -22,7 +22,7 @@ $config['skylight_handle_prefix'] = '/repositories/5/';
 
 $config['skylight_fullname'] = 'W. Ronald D. Fairbairn';
 
-$config['skylight_adminemail'] = 'lddt@mlist.is.ed.ac.uk';
+$config['skylight_adminemail'] = 'is-crc@ed.ac.uk';
 
 $config['skylight_oaipmhcollection'] = '';
 
@@ -61,7 +61,7 @@ $config['skylight_fields'] = array('Title' => 'title',
     'Bibliography' => 'note_bibliography',
     'Id' => 'id',
     'Alternative Format' => 'altformavail',
-    'Physcial Description' => 'physdesc'
+    'Physical Description' => 'physdesc'
 
 );
 
@@ -76,7 +76,7 @@ $config['skylight_meta_fields'] = array('Title' => 'title',
     'Level' => 'level',);
 
 $config['skylight_recorddisplay'] = array('Identifier','Creator','Dates','Extent','Extent Type','Agent','Subject',
-    'Notes','Rights','Language','Scope and Contents','Related','Bibliography','Physical','Physcial Description',
+    'Notes','Rights','Language','Scope and Contents','Related','Bibliography','Physical','Physical Description',
     'Access','Alternative Format' );
 
 $config['skylight_searchresult_display'] = array('Title','Creator','Subject','Agent');
@@ -100,7 +100,7 @@ $config['skylight_results_per_page'] = 10;
 $config['skylight_share_buttons'] = false;
 
 $config['skylight_homepage_recentitems'] = false;
-$config['skylight_homepage_randomitems'] = true;
+$config['skylight_homepage_randomitems'] = false;
 $config['skylight_related_number'] = 20;
 
 // Set to the number of minutes to cache pages for. Set to false for no caching.
