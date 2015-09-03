@@ -47,19 +47,8 @@ $bitstreamLinks = array();
                                 echo '<a href="./search/*:*/' . $key . ':%22'.$orig_filter.'%22">'.$metadatavalue.'</a>';
                             }
                             else {
-                                if ($element == 'component_id')
-                                {
-                                        $component_id = $metadatavalue;
-                                        if (0 === strpos($component_id , 'StEdU'))
-                                        {
-                                            $component_id = str_replace('StEdU : ', '', $component_id);
-                                        }
-                                        echo $component_id;
+                                echo '<pre>' . $metadatavalue . '</pre>';
 
-                                }
-                                else{
-                                    echo $metadatavalue;
-                                }
                             }
 
                             if($index < sizeof($solr[$element]) - 1) {

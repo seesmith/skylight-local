@@ -149,7 +149,7 @@ header				{ position: relative; width: 940px; height: 195px; background: url(../
 
 /* Common Containers & Subclasses ----------------------------------------------------------------------------------------*/
 
-#collection-title	{ display: block; width: 540px; height: 85px; padding-top: 50px; font-size: 50px; font-family: lusitana,serif; font-weight: 400; padding-left: 120px;}
+#collection-title	{ display: block; width: 540px; height: 85px; padding-top: 50px; font-size: 50px; font-weight: 400; padding-left: 120px;}
 #collection-title a { text-decoration: none; color: #373B41;}
 #collection-title a:hover { text-decoration: none; color: #A87227;}
 
@@ -408,5 +408,11 @@ table tr:last-child                 { border: 0; border-bottom: none; }
     @page { margin: 0.5cm; }
     p, h2, h3 { orphans: 3; widows: 3; }
     h2, h3{ page-break-after: avoid; }
+}
+
+pre {
+    font-family: "Trebuchet MS", serif;
+    word-wrap: break-word;
+    padding: 0;
 }
 

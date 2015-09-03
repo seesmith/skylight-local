@@ -7,7 +7,8 @@
         suffering from trauma in the early 20th century. His personal library including works by Freud and Jung is held
         by Edinburgh University Library. His papers, diaries and correspondence are in the National Library of Scotland.
         This project, funded by the Wellcome Trust, has seen these collections fully catalogued and conserved.</p>
-        <div id="fairbairn-image"></div>
+        <div id="fairbairn-image"></div><br/>
+        <p><a href="./record/21803/archival_object" title="Photographic prints of W. Ronald D. Fairbairn">Photographic prints of W. Ronald D. Fairbairn.</a></p>
     </div>
 
 </div>
