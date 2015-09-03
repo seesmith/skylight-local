@@ -61,7 +61,7 @@ $bitstreamLinks = array();
             }
             ?>
 
-            <tr><th>Arrange consultation at</th><td>
+            <tr><th>Consult at</th><td>
                     <?php
                     if (isset($solr[$id_field]) && 0 === strpos($solr[$id_field][0], 'MS'))
                     {
