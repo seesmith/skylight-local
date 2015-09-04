@@ -13,19 +13,11 @@
         <!-- Wrapper for slides -->
         <div class="carousel-inner">
             <div class="item active">
-                <a href="<?php echo base_url(); ?>iconics">
-                    <img src="<?php echo base_url(); ?>theme/<?php echo $this->config->item('skylight_theme'); ?>/images/iconicsslide.png" title="University of Edinburgh Iconics Collection" alt="University of Edinburgh Iconics">
-                    <div class="carousel-caption caption-iconic" onmouseover="this.style.background='#005784';this.style.color='#FFF'" onmouseout="this.style.background='#FFFFFF';this.style.color='#005784'">
-                        University of Edinburgh Iconics
+                <a href='<?php echo base_url(); ?>search/*/Type:"rare+books|||Rare+Books"/Header:"rarebooks"?sort_by=cld.weighting_sort+desc,dc.title_sort+asc'>
+                    <img src="<?php echo base_url(); ?>theme/<?php echo $this->config->item('skylight_theme'); ?>/images/rarebooksslide.png" title="University of Edinburgh Rare Books" alt="University of Edinburgh Rare Books">
+                    <div class="carousel-caption caption-rarebooks" onmouseover="this.style.background='#005784';this.style.color='#FFF'" onmouseout="this.style.background='#FFFFFF';this.style.color='#005784'">
+                        University of Edinburgh Rare Books
                     </div>
-                </a>
-            </div>
-            <div class="item">
-                <a href="<?php echo base_url(); ?>art">
-                <img src="<?php echo base_url(); ?>theme/<?php echo $this->config->item('skylight_theme'); ?>/images/artslide.png" title="University of Edinburgh Art Collection" alt="University of Edinburgh Art Collection">
-                <div class="carousel-caption caption-art" onmouseover="this.style.background='#005784';this.style.color='#FFF'" onmouseout="this.style.background='#FFFFFF';this.style.color='#005784'">
-                    University of Edinburgh Art Collection
-                </div>
                 </a>
             </div>
             <div class="item">
@@ -36,20 +28,11 @@
                 </div>
                 </a>
             </div>
-
             <div class="item">
-                <a href="https://exhibitions.ed.ac.uk">
-                    <img src="<?php echo base_url(); ?>theme/<?php echo $this->config->item('skylight_theme'); ?>/images/exhibitionsslide.png" title="University of Edinburgh Exhibitions" alt="University of Edinburgh Exhibitions">
-                    <div class="carousel-caption caption-exhibitions" onmouseover="this.style.background='#005784';this.style.color='#FFF'" onmouseout="this.style.background='#FFFFFF';this.style.color='#005784'">
-                        University of Edinburgh Exhibitions
-                    </div>
-                </a>
-            </div>
-            <div class="item">
-                <a href="<?php echo base_url(); ?>calendars">
-                    <img src="<?php echo base_url(); ?>theme/<?php echo $this->config->item('skylight_theme'); ?>/images/calendarslide.png" title="University of Edinburgh Calendars" alt="University of Edinburgh Calendars">
-                    <div class="carousel-caption caption-calendars" onmouseover="this.style.background='#005784';this.style.color='#FFF'" onmouseout="this.style.background='#FFFFFF';this.style.color='#005784'">
-                        University of Edinburgh Calendars
+                <a href="<?php echo base_url(); ?>art">
+                    <img src="<?php echo base_url(); ?>theme/<?php echo $this->config->item('skylight_theme'); ?>/images/artslide.png" title="University of Edinburgh Art Collection" alt="University of Edinburgh Art Collection">
+                    <div class="carousel-caption caption-art" onmouseover="this.style.background='#005784';this.style.color='#FFF'" onmouseout="this.style.background='#FFFFFF';this.style.color='#005784'">
+                        University of Edinburgh Art Collection
                     </div>
                 </a>
             </div>
