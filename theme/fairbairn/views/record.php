@@ -47,12 +47,12 @@ $bitstreamLinks = array();
                                 echo '<a href="./search/*:*/' . $key . ':%22'.$orig_filter.'%22">'.$metadatavalue.'</a>';
                             }
                             else {
-                                echo '<pre>' . $metadatavalue . '</pre>';
+                                echo $metadatavalue;
 
                             }
 
                             if($index < sizeof($solr[$element]) - 1) {
-                                echo '<br/> ';
+                                echo '<br/>';
                             }
                         }
                         echo '</td></tr>';
@@ -61,19 +61,19 @@ $bitstreamLinks = array();
             }
             ?>
 
-            <tr><th>Consult at</th><td>
+            <tr><th>Consult at</th>
                     <?php
                     if (isset($solr[$id_field]) && 0 === strpos($solr[$id_field][0], 'MS'))
                     {
-                        echo '<a href="http://www.nls.uk/" target="_blank" title="National Library of Scotland">National Library of Scotland</a>';
+                        echo '<td><a href="http://www.nls.uk/" target="_blank" title="National Library of Scotland">National Library of Scotland</a></td>';
                     }
                     else
                     {
-                        echo '<a href="http://www.ed.ac.uk/information-services/library-museum-gallery/crc" target="_blank"
-                        title="University of Edinburgh, Centre for Research Collections">University of Edinburgh, Centre for Research Collections</a>';
+                        echo '<td><a href="http://www.ed.ac.uk/information-services/library-museum-gallery/crc" target="_blank"
+                        title="University of Edinburgh, Centre for Research Collections">University of Edinburgh, Centre for Research Collections</a></td>';
                     }
                     ?>
-                </td></tr>
+                </tr>
             </tbody>
         </table>
     </div>
