@@ -395,7 +395,7 @@ table								{ width: 100%; margin-bottom: 20px;}
 table caption						{ text-align: left; background: #333333; color: #fff; font-size: 12px; text-transform: uppercase; font-weight: bold; padding: 0px 17px; border-bottom: 1px solid #fff; line-height: 26px; }
 
 table td,
-table th							{ padding: 8px 17px; text-align: left; color: #005784; white-space: pre-wrap; word-wrap: break-word;}
+table th							{ padding: 8px 17px; text-align: left; color: #005784; white-space: pre-line;}
 table th                            { border-right: 1px dashed #D6D3C4; width: 20%; }
 table td                            { width: auto; color: #333333;}
 table tr                            { border-bottom: 1px dashed #D6D3C4; }

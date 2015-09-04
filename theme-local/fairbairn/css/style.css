@@ -351,7 +351,7 @@ table caption						{ text-align: left; background: #A87227; color: #fff; font-si
 table td,
 table th							{ padding: 8px 0px; text-align: left; color: #A87227; }
 table th                            { width: 30%; }
-table td                            { color: #373B41;  white-space: pre-wrap; word-wrap: break-word;}
+table td                            { color: #373B41;  white-space: pre-line;}
 table tr                            { border-bottom: 1px solid #EEEDE8; }
 table tr:last-child                 { border: 0; border-bottom: none; }
 .content a                          { color: #373B41;}
