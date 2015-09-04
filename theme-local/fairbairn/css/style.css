@@ -351,10 +351,10 @@ table caption						{ text-align: left; background: #A87227; color: #fff; font-si
 table td,
 table th							{ padding: 8px 0px; text-align: left; color: #A87227; }
 table th                            { width: 30%; }
-table td                            { width: auto; color: #373B41;}
+table td                            { color: #373B41;  white-space: pre-line;}
 table tr                            { border-bottom: 1px solid #EEEDE8; }
 table tr:last-child                 { border: 0; border-bottom: none; }
-.content a                    { color: #373B41;}
+.content a                          { color: #373B41;}
 
 .feedback_form                      { padding: 0 20px;}
 .feedback_form label                { display: block; width: 100px;}
@@ -410,9 +410,4 @@ table tr:last-child                 { border: 0; border-bottom: none; }
     h2, h3{ page-break-after: avoid; }
 }
 
-pre {
-    font-family: "Trebuchet MS", serif;
-    word-wrap: break-word;
-    padding: 0;
-}
 

@@ -351,7 +351,7 @@ table                           { width: 100%; }
 table caption                   { text-align: left; background: #677077; color: #fff; font-size: 12px; text-transform: uppercase; font-weight: bold; padding: 8px 17px; border-bottom: 1px solid #fff; }
 table tr                        { border-bottom: 1px dashed #D6D3C4;}
 table tr:last-child             { border: 0; border-bottom: none; }
-table td, table th              { padding: 10px 0; }
+table td, table th              { padding: 10px 0; white-space: pre-line;}
 table td.first                  { padding-top : 0; }
 table td h4                     { color: #EB0955; font-size: 105%; font-weight: normal;}
 
@@ -466,3 +466,4 @@ table td h4                     { color: #EB0955; font-size: 105%; font-weight: 
 .jcarousel-control-next {
     right: -11px;
 }
+
