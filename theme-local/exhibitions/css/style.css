@@ -276,7 +276,7 @@ ul.ex-list a:active         { color: #333; }
 ul.ex-list a:hover          { color: #e73034; }
 li.past-ex                  { display: inline; float: left; width: 160px; text-align: center; margin-right: 5px;}
 #current-banner             { width: 491px; height: 279px; background: url(../images/towardsdollyhome.jpg) no-repeat 0 0; margin: auto; }
-
+#past-exhib-block br        { line-height: 20px; }
 
 /* for the past exhibitions section on the home page*/
 #exhib-tile-1               { width: 160px; height: 120px; margin-bottom: 10px; background: url(../images/carousel-rashid.gif) no-repeat 0 0; }
@@ -445,7 +445,7 @@ table tr:last-child                 { border: 0; border-bottom: none; }
 .jcarousel-control-prev,
 .jcarousel-control-next {
     position: absolute;
-    top: 47%;
+    top: 49%;
     margin-top: -15px;
     text-align: center;
     color: #28a762;
