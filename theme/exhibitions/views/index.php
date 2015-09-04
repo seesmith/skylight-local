@@ -2,8 +2,7 @@
     <div class="content byEditor">
         <h1>CURRENT EXHIBITION: <a href="./towardsdolly" alt="Towards Dolly"
                                    title="Towards Dolly">Towards Dolly: A Century of Animal Genetics in Edinburgh</a>
-        <center><h2>University of Edinburgh Main Library, 31st July 2015 - 31st October 2015 </h2></center>
-
+        <center><h2>University of Edinburgh Main Library, 31st July 2015 - 31st October 2015<br /> Monday - Saturday, 10:00 - 17:00</h2></center>
         <div id="tile-block">
             <div id="current-banner" class="art-tile"></div>
         </div>
