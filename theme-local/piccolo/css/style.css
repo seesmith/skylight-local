@@ -5774,3 +5774,7 @@ button.close {
     {
     list-style-type: none;
 }
+
+.results-item {
+    margin-bottom: 25px;
+}
