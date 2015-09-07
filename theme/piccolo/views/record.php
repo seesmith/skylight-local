@@ -9,48 +9,20 @@ $filters = array_keys($this->config->item("skylight_filters"));
 $link_uri_field = $this->skylight_utilities->getField("Link");
 ?>
 
-    <div class="page-header">
-        <h1 class="itemtitle"><?php echo $record_title ?></h1>
-    </div>
-    <div class="tags">
-        <?php
 
-        if (isset($solr[$author_field])) {
-            foreach($solr[$author_field] as $author) {
-
-                $orig_filter = urlencode($author);
-
-                $lower_orig_filter = strtolower($author);
-                $lower_orig_filter = urlencode($lower_orig_filter);
-
-                echo '<a class="maker" href="./search/*:*/Maker:%22'.$lower_orig_filter.'%7C%7C%7C'.$orig_filter.'%22">'.$author.'</a>';
-            }
-        }
-
-        ?>
-    </div>
-
-    <div class="record-content">
-        <?php
-        if($numBitstreams > 0) { ?>
-
-        <div id="left-metadata">
-
-            <?php } else { ?>
-
-            <div id="full-metadata">
-
-                <?php } ?>
-
-                <table>
-                    <tbody>
+    <div class="panel panel-default">
+        <?php ?>
+        <div class="panel-title">
+            <h1 class="itemtitle"><?php echo $record_title ?></h1>
+        </div>
+            <div class="panel-body">
+                <dl>
                     <?php foreach($recorddisplay as $key) {
 
                         $element = $this->skylight_utilities->getField($key);
                         if(isset($solr[$element])) {
-                            echo '<tr><td>';
 
-                            echo '<h4>' . $key . '</h4>';
+                            echo '<dt>' . $key . '</dt><dd></dd>';
                             foreach($solr[$element] as $index => $metadatavalue) {
                                 // if it's a facet search
                                 // make it a clickable search link
@@ -70,14 +42,16 @@ $link_uri_field = $this->skylight_utilities->getField("Link");
                                     echo '; ';
                                 }
                             }
-                            echo '</td></tr>';
+                            echo '</dd>';
                         }
 
                     } ?>
+                </dl>
+            </div>
+            <div class="panel-footer">
+                <input type="button" value="Back to Search Results" class="backbtn" onClick="history.go(-1);">
+            </div>
+        </div>
 
 
 
-            <div class="clearfix"></div>
-
-
-            <input type="button" value="Back to Search Results" class="backbtn" onClick="history.go(-1);">

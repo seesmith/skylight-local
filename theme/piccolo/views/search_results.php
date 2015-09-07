@@ -130,7 +130,13 @@
 
     <nav>
         <ul class="pagination pagination-sm">
-            <?php echo $pagelinks ?>
+            <?php
+            foreach ($paginationlinks as $pagelink)
+            {
+                echo $pagelink;
+
+            }
+             ?>
         </ul>
     </nav>
     <span><strong><?php echo $rows ?></strong> results </span>
