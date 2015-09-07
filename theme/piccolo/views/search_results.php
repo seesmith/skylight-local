@@ -22,13 +22,20 @@
         }
     ?>
 
+
     <div class="container-fluid">
+        <!--//todo add sort-->
         <div class="row">
+            <div class="col-md-12">
+                <?php echo $rows ?></strong> results </span>
+            </div>
+            <hr>
+        </div>
             <?php
             foreach ($docs as $index => $doc) {
                 ?>
-                <div class="col-xs-6 col-md-3">
-                    <div class="thumbnail results-thumbnail">
+                    <div class="row">
+                    <div class="col-md-4 col-lg-4 col-sm-4  result-img">
                         <?php
 
                         $bitstream_array = array();
@@ -58,9 +65,7 @@
                                         $started = true;
                                     }
                                 }
-
                                 $i++;
-
                             }
 
                             // if there is a thumbnail and a bitstream
@@ -88,8 +93,7 @@
                                             $t_uri = './record/'.$b_handle_id.'/'.$t_seq.'/'.$t_filename;
 
                                             $thumbnailLink = '<a href="./record/'. $doc['id'].'" title = "' . $doc[$title_field][0] . '"> ';
-                                            $thumbnailLink .= '<img src = "'.$t_uri.'" class="search-thumbnail" title="'. $doc[$title_field][0] .'" /></a>';
-
+                                            $thumbnailLink .= '<img class="img-responsive" src = "'.$t_uri.'" title="'. $doc[$title_field][0] .'" /></a>';
                                         }
                                     }
                                 }
@@ -97,34 +101,54 @@
                                 else {
 
                                     $thumbnailLink = '<a href="./record/'. $doc['id'].'" title = "' . $doc[$title_field][0] . '"> ';
-                                    $thumbnailLink .= '<img src = "'.$b_uri.'" class="search-thumbnail" title="'. $doc[$title_field][0] .'" /></a>';
-
+                                    $thumbnailLink .= '<img class="img-responsive" src = "'.$b_uri.'" title="'. $doc[$title_field][0] .'" /></a>';
                                 }
-
                                 echo $thumbnailLink;
                             }
-
-
                         }
                         else
                         {
                             $thumbnailLink = '<a href="./record/'. $doc['id'].'" title = "' . $doc[$title_field][0] . '"> ';
-                            $thumbnailLink .= '<img src ="../theme/iconics/images/comingsoon.gif" class="search-thumbnail" title="'. $doc[$title_field][0] .'" /></a>';
+                            $thumbnailLink .= '<img class="img-responsive" src ="../theme/iconics/images/comingsoon.gif" title="'. $doc[$title_field][0] .'" /></a>';
                             echo $thumbnailLink;
                         }?>
-
-                        <p>
-                            <a href="./record/<?php echo $doc['id']?>?highlight=<?php echo $query ?>"><?php echo $doc[$title_field][0]; ?></a>
-                        </p>
                     </div>
-                </div>
+                    <div class="col-md-8 col-lg-8 col-sm-8 result-info">
+                        <h3>
+                            <a href="./record/<?php echo $doc['id']?>?highlight=<?php echo $query ?>"><?php echo $doc[$title_field][0]; ?></a>
+
+                        <small>
+                            <?php if(isset($doc[$date_field][0])) { echo $doc[$date_field][0];} else { echo 'Unknown';}?>
+                        </small>
+                        </h3>
+                        <h4>
+                            <?php if(array_key_exists($author_field,$doc)) { ?>
+                                <?php
+                                foreach ($doc[$author_field] as $author) {
+                                    $orig_filter = urlencode($author);
+                                    $lower_orig_filter = strtolower($author);
+                                    $lower_orig_filter = urlencode($lower_orig_filter);
+
+                                    echo '<a href="./search/*:*/Maker:%22'.$lower_orig_filter.'%7C%7C%7C'.$orig_filter.'%22">'.$author.'</a>';
+                                }
+                                ?>
+                            <?php } ?>
+                        </h4>
+                        <p class="results_text">
+                            Piccolo text???
+                        </p>
+                        <ul class="nav nav-pills">
+                            <li><a href="./gallery" title="Image Gallery link"><i class="fa fa-image fa-2x">&nbsp;</i></a></li>
+                            <li><a href="./videos" title="Videos link"><i class="fa fa-video-camera fa-2x">&nbsp;</i></a></li>
+                            <li><a href="./audio" title="Audio link "><i class="fa fa-music fa-2x">&nbsp;</i></a></li>
+                        </ul>
+                    </div>
+                    </div>
+                <hr>
                 <?php
-
-
             } // end for each search result
-
             ?>
-        </div>
+
     </div>
 
 
@@ -139,4 +163,3 @@
              ?>
         </ul>
     </nav>
-    <span><strong><?php echo $rows ?></strong> results </span>
