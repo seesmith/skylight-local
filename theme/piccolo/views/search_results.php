@@ -94,7 +94,6 @@
 
                                             $thumbnailLink = '<a href="./record/'. $doc['id'].'" title = "' . $doc[$title_field][0] . '"> ';
                                             $thumbnailLink .= '<img class="img-responsive" src = "'.$t_uri.'" title="'. $doc[$title_field][0] .'" /></a>';
-
                                         }
                                     }
                                 }
@@ -103,12 +102,9 @@
 
                                     $thumbnailLink = '<a href="./record/'. $doc['id'].'" title = "' . $doc[$title_field][0] . '"> ';
                                     $thumbnailLink .= '<img class="img-responsive" src = "'.$b_uri.'" title="'. $doc[$title_field][0] .'" /></a>';
-
                                 }
-
                                 echo $thumbnailLink;
                             }
-
                         }
                         else
                         {
@@ -141,7 +137,11 @@
                         <p class="results_text">
                             Piccolo text???
                         </p>
-                        links
+                        <ul class="nav nav-pills">
+                            <li><a href="./gallery" title="Image Gallery link"><i class="fa fa-image fa-2x">&nbsp;</i></a></li>
+                            <li><a href="./videos" title="Videos link"><i class="fa fa-video-camera fa-2x">&nbsp;</i></a></li>
+                            <li><a href="./audio" title="Audio link "><i class="fa fa-music fa-2x">&nbsp;</i></a></li>
+                        </ul>
                     </div>
                     </div>
                 <hr>
