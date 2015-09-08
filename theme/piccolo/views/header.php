@@ -97,9 +97,9 @@
     <nav class="navbar navbar-default">
         <div class="container-fluid">
             <div class="navbar-header">
-                <a class="navbar-brand" href="http://www.ed.ac.uk" title="The University of Edinburgh Homepage Link" target="_blank">&nbsp;</a><span class="hidden-xs uoe-name">University of Edinburgh</span>
-                <a class="navbar-brand" href="<?php echo base_url(); ?>piccolo">&nbsp;</a>
-                <a class="navbar-brand" href="http://www.stcecilias.ed.ac.uk/" title="St Cecilia's Hall Link" target="_blank">&nbsp;</a><span class="hidden-xs sch-name">St Cecilia's Hall</span>
+                <a class="navbar-brand" href="http://www.ed.ac.uk" title="The University of Edinburgh Homepage Link" target="_blank"><i class="uoelogo">&nbsp;</i><span class="hidden-xs uoe-name">The University of Edinburgh</span></a>
+                <a class="navbar-brand" href="http://www.stcecilias.ed.ac.uk/" title="St Cecilia's Hall Link" target="_blank">&nbsp;<i class="fa fa-university fa-lg">&nbsp;</i><span class="hidden-xs sch-name">St Cecilia's Hall</span></a>
+                <a class="navbar-brand" href="<?php echo base_url(); ?>piccolo"><i class="fa fa-home fa-lg">&nbsp;</i><span class="collection-name">Stuart Exhibition</span></a>
             </div>
             <form action="./redirect/" method="post" class="navbar-form navbar-left">
                 <div class="input-group">
