@@ -159,14 +159,19 @@
                 <?php
             } // end for each search result
             ?>
+        <div class="row">
+            <div class="centered text-center">
+                <nav>
+                    <ul class="pagination pagination-sm pagination-xs">
+                        <?php
+                        foreach ($paginationlinks as $pagelink)
+                        {
+                            echo $pagelink;
+                        }
+                        ?>
+                    </ul>
+                </nav>
+            </div>
+        </div>
     </div>
-    <nav>
-        <ul class="pagination pagination-sm pagination-xs">
-            <?php
-            foreach ($paginationlinks as $pagelink)
-            {
-                echo $pagelink;
-            }
-             ?>
-        </ul>
-    </nav>
+
