@@ -88,30 +88,28 @@
                 }
             }
         }
-
     } ?>
-
 </head>
 
 <body>
 
 <div id="container">
-
     <nav class="navbar navbar-default">
         <div class="container-fluid">
             <div class="navbar-header">
-                <a class="navbar-brand" href="http://www.ed.ac.uk" title="The University of Edinburgh Homepage Link" target="_blank">University of Edinburgh</a>
-                <a class="navbar-brand" href="<?php echo base_url(); ?>piccolo">Stuart Exhibition</a>
-                <a class="navbar-brand" href="http://www.stcecilias.ed.ac.uk/" title="St Cecilia's Hall Link" target="_blank">St Cecilia's Hall Link</a>
+                <a class="navbar-brand" href="http://www.ed.ac.uk" title="The University of Edinburgh Homepage Link" target="_blank">&nbsp;</a><span class="hidden-xs uoe-name">University of Edinburgh</span>
+                <a class="navbar-brand" href="<?php echo base_url(); ?>piccolo">&nbsp;</a>
+                <a class="navbar-brand" href="http://www.stcecilias.ed.ac.uk/" title="St Cecilia's Hall Link" target="_blank">&nbsp;</a><span class="hidden-xs sch-name">St Cecilia's Hall</span>
             </div>
             <form action="./redirect/" method="post" class="navbar-form navbar-left">
-                <div class="form-group">
-                    <input type="text" class="form-control" placeholder="Search" name="q" value="<?php if (isset($searchbox_query)) echo urldecode($searchbox_query); ?>" id="q" />
+                <div class="input-group">
+                    <input type="text" class="form-control" placeholder="Search the collection" name="q" value="<?php if (isset($searchbox_query)) echo urldecode($searchbox_query); ?>" id="q" />
+                    <span class="input-group-btn">
+                        <button type="submit" class="btn btn-primary" name="submit_search" value="Search" id="submit_search"><span class=" glyphicon glyphicon-search"></span></button>
+                    </span>
                 </div>
-                <button type="submit" class="btn btn-default" name="submit_search" value="Search" id="submit_search">Submit</button>
             </form>
         </div>
-
     </nav>
 </div>
 
