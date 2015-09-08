@@ -32,15 +32,11 @@
             <hr>
         </div>
             <?php
-            foreach ($docs as $index => $doc) {
-                ?>
-                    <div class="row">
-                    <div class="col-md-4 col-lg-4 col-sm-4  result-img">
-                        <?php
+                foreach ($docs as $index => $doc) {
+                    $bitstream_array = array();
+                    $thumbnailLink = "";
 
-                        $bitstream_array = array();
-
-                        if(isset($doc[$bitstream_field])) {
+                    if(isset($doc[$bitstream_field])) {
 
                             $i = 0;
                             $started = false;
@@ -103,63 +99,79 @@
                                     $thumbnailLink = '<a href="./record/'. $doc['id'].'" title = "' . $doc[$title_field][0] . '"> ';
                                     $thumbnailLink .= '<img class="img-responsive" src = "'.$b_uri.'" title="'. $doc[$title_field][0] .'" /></a>';
                                 }
-                                echo $thumbnailLink;
                             }
                         }
                         else
                         {
                             $thumbnailLink = '<a href="./record/'. $doc['id'].'" title = "' . $doc[$title_field][0] . '"> ';
                             $thumbnailLink .= '<img class="img-responsive" src ="../theme/iconics/images/comingsoon.gif" title="'. $doc[$title_field][0] .'" /></a>';
-                            echo $thumbnailLink;
+
                         }?>
-                    </div>
-                    <div class="col-md-8 col-lg-8 col-sm-8 result-info">
-                        <h3>
-                            <a href="./record/<?php echo $doc['id']?>?highlight=<?php echo $query ?>"><?php echo $doc[$title_field][0]; ?></a>
+                        <div class="row">
+                            <div class="col-md-4 col-lg-4 col-sm-4 col-xs-4 result-img">
+                           <?php echo $thumbnailLink; ?>
+                        </div>
+                            <div class="col-sm-8 col-md-8 col-lg-8 hidden-xs result-info">
+                            <h4>
+                                <a href="./record/<?php echo $doc['id']?>?highlight=<?php echo $query ?>"><?php echo $doc[$title_field][0]; ?></a>
 
-                        <small>
-                            <?php if(isset($doc[$date_field][0])) { echo $doc[$date_field][0];} else { echo 'Unknown';}?>
-                        </small>
-                        </h3>
-                        <h4>
-                            <?php if(array_key_exists($author_field,$doc)) { ?>
-                                <?php
-                                foreach ($doc[$author_field] as $author) {
-                                    $orig_filter = urlencode($author);
-                                    $lower_orig_filter = strtolower($author);
-                                    $lower_orig_filter = urlencode($lower_orig_filter);
+                            <small>
+                                <?php if(isset($doc[$date_field][0])) { echo $doc[$date_field][0];} else { echo 'Unknown';}?>
+                            </small>
+                            </h4>
+                            <h5>
+                                <?php if(array_key_exists($author_field,$doc)) { ?>
+                                    <?php
+                                    foreach ($doc[$author_field] as $author) {
+                                        $orig_filter = urlencode($author);
+                                        $lower_orig_filter = strtolower($author);
+                                        $lower_orig_filter = urlencode($lower_orig_filter);
 
-                                    echo '<a href="./search/*:*/Maker:%22'.$lower_orig_filter.'%7C%7C%7C'.$orig_filter.'%22">'.$author.'</a>';
-                                }
-                                ?>
-                            <?php } ?>
-                        </h4>
-                        <p class="results_text">
-                            Piccolo text???
-                        </p>
-                        <ul class="nav nav-pills">
-                            <li><a href="./gallery" title="Image Gallery link"><i class="fa fa-image fa-2x">&nbsp;</i></a></li>
-                            <li><a href="./videos" title="Videos link"><i class="fa fa-video-camera fa-2x">&nbsp;</i></a></li>
-                            <li><a href="./audio" title="Audio link "><i class="fa fa-music fa-2x">&nbsp;</i></a></li>
-                        </ul>
-                    </div>
+                                        echo '<a href="./search/*:*/Maker:%22'.$lower_orig_filter.'%7C%7C%7C'.$orig_filter.'%22">'.$author.'</a>';
+                                    }
+                                    ?>
+                                <?php } ?>
+                            </h5>
+                            <p class="results_text">
+                                Piccolo text???
+                            </p>
+                            <ul class="nav nav-pills">
+                                <li><a href="./gallery/<?php echo $doc['id']?>" title="Image Gallery link"><i class="fa fa-image fa-lg">&nbsp;</i></a></li>
+                                <li><a href="./videos/<?php echo $doc['id']?>" title="Videos link"><i class="fa fa-video-camera fa-lg">&nbsp;</i></a></li>
+                                <li><a href="./audio/<?php echo $doc['id']?>" title="Audio link "><i class="fa fa-music fa-lg">&nbsp;</i></a></li>
+                            </ul>
+                        </div>
+                        <div class="col-xs-8 hidden-sm hidden-md hidden-lg result-info">
+                            <h5>
+                                <a href="./record/<?php echo $doc['id']?>?highlight=<?php echo $query ?>"><?php echo $doc[$title_field][0]; ?></a>
+                                <small>
+                                    <?php if(isset($doc[$date_field][0])) { echo $doc[$date_field][0];} else { echo 'Unknown';}?>
+                                </small>
+                            </h5>
+                            <ul class="nav nav-pills">
+                                <li><a href="./gallery/<?php echo $doc['id']?>" title="Image Gallery link"><i class="fa fa-image fa-lg">&nbsp;</i></a></li>
+                                <li><a href="./videos/<?php echo $doc['id']?>" title="Videos link"><i class="fa fa-video-camera fa-lg">&nbsp;</i></a></li>
+                                <li><a href="./audio/<?php echo $doc['id']?>" title="Audio link "><i class="fa fa-music fa-lg">&nbsp;</i></a></li>
+                            </ul>
+                        </div>
                     </div>
                 <hr>
                 <?php
             } // end for each search result
             ?>
-
+        <div class="row">
+            <div class="centered text-center">
+                <nav>
+                    <ul class="pagination pagination-sm pagination-xs">
+                        <?php
+                        foreach ($paginationlinks as $pagelink)
+                        {
+                            echo $pagelink;
+                        }
+                        ?>
+                    </ul>
+                </nav>
+            </div>
+        </div>
     </div>
 
-
-    <nav>
-        <ul class="pagination pagination-sm">
-            <?php
-            foreach ($paginationlinks as $pagelink)
-            {
-                echo $pagelink;
-
-            }
-             ?>
-        </ul>
-    </nav>
