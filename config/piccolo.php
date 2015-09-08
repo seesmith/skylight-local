@@ -7,24 +7,16 @@ $config['skylight_url_prefix'] = 'piccolo';
 
 $config['skylight_theme'] = 'piccolo';
 
-$config['skylight_fullname'] = 'Piccolo';
+$config['skylight_fullname'] = 'Stuart Exhibition';
 
-// set ga code
-if (strpos($_SERVER['HTTP_HOST'], "test") !== false) {
-    $config['skylight_ga_code'] = 'UA-25737241-6';
-}
-else {
-    $config['skylight_ga_code'] = 'UA-25737241-9';
-}
+$config['skylight_adminemail'] = 'lddt@mlist.is.ed.ac.uk';
 
-$config['skylight_adminemail'] = 'schgals@ed.ac.uk';
-
-$config['skylight_oaipmhcollection'] = 'hdl_10683_14558';
+$config['skylight_oaipmhcollection'] = 'hdl_10683_22746';
 
 $config['skylight_oaipmhallowed'] = true;
 
 // Container ID and the field used in solr index to store this ID. Used for restricting search/browse scope.
-$config['skylight_container_id'] = '11';
+$config['skylight_container_id'] = '52';
 $config['skylight_container_field'] = 'location.coll';
 $config['skylight_sitemap_type'] = 'internal';
 
@@ -57,7 +49,16 @@ $config['skylight_fields'] = array(
     'Genus' => 'dc.type.genus.en',
     'Provenance' => 'dc.provenance.en',
     'Decorations' => 'dc.description.decoration.en',
-    'Link' => 'dc.identifier.uri'
+    'Link' => 'dc.identifier.uri.en',
+    'Author Biography' => 'dc.contributor.authorbio.en',
+    'Associated Musician Full' => 'dc.contributor.assocfull.en',
+    'Associated Musician' => 'dc.contributor.assoc.en',
+    'Piccolo Description' => 'dc.description.piccolo.en',
+    'Level 2 Description' => 'dc.description.level2.en',
+    'Associated Musician Biography' => 'dc.contributor.assocbio.en',
+    'Instrument Type Info' => 'dc.type.desc.en',
+    'Instrument Type History' => 'dc.type.history.en'
+
 );
 
 
@@ -71,7 +72,32 @@ $config['skylight_meta_fields'] = array('Title' => 'dc.title',
     'Subject' => 'dc.subject',
     'Type' => 'dc.type');
 
-$config['skylight_recorddisplay'] = array('Alternative Title','Instrument','Instrument Family','Maker','Subject','Abstract','Place Made','Date Made','Description','Other Information','Notes','Decorations','Measurements','Provenance','Inscription','Signature','Collection','Rights Holder','Accession Number');
+$config['skylight_recorddisplay'] = array('Alternative Title',
+    'Instrument',
+    'Instrument Family',
+    'Maker','Subject',
+    'Abstract',
+    'Place Made',
+    'Date Made',
+    'Description',
+    'Other Information',
+    'Notes',
+    'Decorations',
+    'Measurements',
+    'Provenance',
+    'Inscription',
+    'Signature',
+    'Collection',
+    'Rights Holder',
+    'Accession Number',
+    'Author Biography',
+    'Associated Musician Full',
+    'Associated Musician',
+    'Piccolo Description',
+    'Level 2 Description',
+    'Associated Musician Biography',
+    'Instrument Type Info',
+    'Instrument Type History');
 
 $config['skylight_searchresult_display'] = array('Title','Instrument','Maker','Subject','Abstract', 'Bitstream', 'Thumbnail');
 
