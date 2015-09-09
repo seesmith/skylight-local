@@ -98,7 +98,7 @@
         <div id="container">
             <header>
                <div id="collection-title">
-                <a href="<?php echo base_url(); ?>fairbairn"  title="Fairbairn Home"><?php echo $this->config->item('skylight_fullname');?></a>
+                <a href="<?php echo base_url(); ?>"  title="Fairbairn Home"><?php echo $this->config->item('skylight_fullname');?></a>
                </div>
                <div id="collection-search">
                 <form action="./redirect/" method="post">
