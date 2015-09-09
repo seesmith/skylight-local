@@ -95,13 +95,14 @@
 <body>
 
 <div id="container">
-    <nav class="navbar navbar-default">
-        <div class="container-fluid">
-            <div class="navbar-header">
-                <a class="navbar-brand" href="http://www.ed.ac.uk" title="The University of Edinburgh Homepage Link" target="_blank"><i class="uoelogo">&nbsp;</i><span class="hidden-xs uoe-name">The University of Edinburgh</span></a>
-                <a class="navbar-brand" href="http://www.stcecilias.ed.ac.uk/" title="St Cecilia's Hall Link" target="_blank">&nbsp;<i class="fa fa-university fa-lg">&nbsp;</i><span class="hidden-xs sch-name">St Cecilia's Hall</span></a>
-                <a class="navbar-brand" href="<?php echo base_url(); ?>piccolo"><i class="fa fa-home fa-lg">&nbsp;</i><span class="collection-name">Stuart Exhibition</span></a>
-            </div>
+    <div class="row">
+        <a class="navbar-brand" href="http://www.ed.ac.uk" title="The University of Edinburgh Homepage Link" target="_blank"><i class="uoelogo">&nbsp;</i><i class="uoename">&nbsp;</i></a>
+    </div>
+    <div class="row">
+        <nav class="navbar navbar-default">
+        <div class="header brand">
+             <a class="navbar-brand" href="http://www.stcecilias.ed.ac.uk/" title="St Cecilia's Hall Link" target="_blank">&nbsp;<i class="fa fa-university fa-lg">&nbsp;</i><span class="hidden-xs sch-name">St Cecilia's Hall</span></a>
+            <a class="navbar-brand" href="<?php echo base_url(); ?>piccolo"><i class="fa fa-home fa-lg">&nbsp;</i><span class="collection-name">Stuart Exhibition</span></a>
             <form action="./redirect/" method="post" class="navbar-form navbar-left">
                 <div class="input-group">
                     <input type="text" class="form-control" placeholder="Search the collection" name="q" value="<?php if (isset($searchbox_query)) echo urldecode($searchbox_query); ?>" id="q" />
@@ -110,8 +111,9 @@
                     </span>
                 </div>
             </form>
-        </div>
-    </nav>
+
+        </nav>
+    </div>
 </div>
 
 
