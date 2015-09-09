@@ -7,11 +7,9 @@
         $title_field = $this->skylight_utilities->getField('Title');
         $author_field = $this->skylight_utilities->getField('Author');
         $date_field = $this->skylight_utilities->getField('Date Made');
-        $type_field = $this->skylight_utilities->getField('Type');
         $bitstream_field = $this->skylight_utilities->getField('Bitstream');
         $thumbnail_field = $this->skylight_utilities->getField('Thumbnail');
-        $abstract_field = $this->skylight_utilities->getField('Abstract');
-
+        $piccolo_field = $this->skylight_utilities->getField('Piccolo Description');
 
         $base_parameters = preg_replace("/[?&]sort_by=[_a-zA-Z+%20. ]+/","",$base_parameters);
         if($base_parameters == "") {
@@ -132,7 +130,7 @@
                                 <?php } ?>
                             </h5>
                             <p class="results_text">
-                                Piccolo text???
+                                <?php if(isset($doc[$piccolo_field][0])) { echo $doc[$piccolo_field][0];} ?>
                             </p>
                             <ul class="nav nav-pills">
                                 <li><a href="./gallery/<?php echo $doc['id']?>" title="Image Gallery link"><i class="fa fa-image fa-lg">&nbsp;</i></a></li>
