@@ -16,7 +16,7 @@ $config['skylight_oaipmhcollection'] = 'hdl_10683_22746';
 $config['skylight_oaipmhallowed'] = true;
 
 // Container ID and the field used in solr index to store this ID. Used for restricting search/browse scope.
-$config['skylight_container_id'] = '52';
+$config['skylight_container_id'] = '30';
 $config['skylight_container_field'] = 'location.coll';
 $config['skylight_sitemap_type'] = 'internal';
 
@@ -63,7 +63,7 @@ $config['skylight_fields'] = array(
 
 
 $config['skylight_date_filters'] = array();
-$config['skylight_filters'] = array('Instrument' => 'type_filter', 'Maker' => 'author_filter', 'Place Made' => 'place_filter', 'Period' => 'period_filter', 'Collection'=> 'collection_filter' );
+$config['skylight_filters'] = array('Instrument' => 'type_filter', 'Maker' => 'author_filter', 'Place Made' => 'place_filter');
 $config['skylight_filter_delimiter'] = ':';
 
 $config['skylight_meta_fields'] = array('Title' => 'dc.title',
@@ -130,8 +130,6 @@ $config['skylight_results_per_page'] = 20;
 $config['skylight_show_facets'] = false;
 $config['skylight_share_buttons'] = false;
 
-$config['skylight_homepage_recentitems'] = false;
-
 // Set to the number of minutes to cache pages for. Set to false for no caching.
 // This overrides the setting in skylight.php so is commented by Demo
 $config['skylight_cache'] = false;
@@ -151,6 +149,7 @@ $config['skylight_language_options'] = array('en', 'ko', 'jp');
 $config['skylight_highlight_fields'] = 'dc.title.en,dc.contributor.author,dc.subject.en,lido.country.en,dc.description.en,dc.relation.ispartof.en';
 
 $config['skylight_homepage_recentitems'] = false;
+$config['skylight_homepage_randomitems'] = false;
 $config['skylight_homepage_fullwidth'] = true;
 
 ?>
