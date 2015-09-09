@@ -5779,7 +5779,20 @@ button.close {
     margin-bottom: 25px;
 }
 
-.uoelogo  { display: block; width: 40px; height: 38px; float: left; background: url(../images/UoETransparent.png) no-repeat 0px 0px;}
+.uoelogo  { display: block;
+    width: 40px;
+    height: 38px;
+    float: left;
+    background: url(../images/UoETransparent.png) no-repeat 0 0;
+    margin-left: 10px;
+    margin-top: -5px;}
+
+.uoename  { display: block;
+    width: 253px;
+    height: 25px;
+    float: left;
+    background: url(../images/uoenamesml.png) no-repeat 0 0;
+    margin-left: 5px;}
 
 .navbar {
     min-height: 65px;
