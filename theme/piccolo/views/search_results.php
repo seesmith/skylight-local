@@ -27,9 +27,8 @@
         <!--//todo add sort-->
         <div class="row">
             <div class="col-md-12">
-                <?php echo $rows ?></strong> results </span>
+                <h4 class="text-muted"><?php echo $rows ?> results </h4>
             </div>
-            <hr>
         </div>
             <?php
                 foreach ($docs as $index => $doc) {
