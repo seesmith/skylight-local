@@ -2,7 +2,19 @@
 /** added for UoE */
 .footer ul
     {
+    margin-top: 10px;
     list-style-type: none;
+}
+
+.footer a{
+    color: #ffffff;
+}
+
+.footer .nav { display: inline-block; }
+
+.footer .nav a:hover{
+    color: #337AB7;
+    background-color: #ffffff;
 }
 
 .results-item {
@@ -26,6 +38,7 @@
 .list-group-item.active a, .list-group-item.active:focus a, .list-group-item.active:hover a {
     color: #FFF;
 }
+
 
 .carousel-inner .active.left  { left: -33%;             }
 .carousel-inner .active.right { left: 33%;              }
