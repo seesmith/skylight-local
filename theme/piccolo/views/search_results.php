@@ -20,11 +20,10 @@
         }
     ?>
 
-
     <div class="container-fluid">
         <!--//todo add sort-->
         <div class="row">
-            <div class="col-md-12">
+            <div class="col-md-9">
                 <h4 class="text-muted"><?php echo $rows ?> results </h4>
             </div>
         </div>
@@ -105,10 +104,10 @@
 
                         }?>
                         <div class="row">
-                            <div class="col-md-4 col-lg-4 col-sm-4 col-xs-4 result-img">
+                            <div class="col-md-3 col-lg-3 col-sm-3 col-xs-4 result-img">
                            <?php echo $thumbnailLink; ?>
                         </div>
-                            <div class="col-sm-8 col-md-8 col-lg-8 hidden-xs result-info">
+                            <div class="col-sm-6 col-md-6 col-lg-6 hidden-xs result-info">
                             <h4>
                                 <a href="./record/<?php echo $doc['id']?>?highlight=<?php echo $query ?>"><?php echo $doc[$title_field][0]; ?></a>
 
@@ -138,7 +137,7 @@
                                 <li><a href="./audio/<?php echo $doc['id']?>" title="Audio link "><i class="fa fa-music fa-lg">&nbsp;</i></a></li>
                             </ul>
                         </div>
-                        <div class="col-xs-8 hidden-sm hidden-md hidden-lg result-info">
+                        <div class="col-xs-6 hidden-sm hidden-md hidden-lg result-info">
                             <h5>
                                 <a href="./record/<?php echo $doc['id']?>?highlight=<?php echo $query ?>"><?php echo $doc[$title_field][0]; ?></a>
                                 <small>
