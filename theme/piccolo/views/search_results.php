@@ -20,11 +20,13 @@
         }
     ?>
 
-    <div class="container-fluid">
         <!--//todo add sort-->
+    <div class="row">
+    <div class="col-md-9 col-lg-9 col-sm-9 col-xs-12">
+    <div class="col-main">
         <div class="row">
             <div class="col-md-9">
-                <h4 class="text-muted"><?php echo $rows ?> results </h4>
+                <h4 class="text-muted">Showing <?php echo $rows ?> results </h4>
             </div>
         </div>
             <?php
@@ -107,7 +109,7 @@
                             <div class="col-md-3 col-lg-3 col-sm-3 col-xs-4 result-img">
                            <?php echo $thumbnailLink; ?>
                         </div>
-                            <div class="col-sm-6 col-md-6 col-lg-6 hidden-xs result-info">
+                            <div class="col-sm-9 col-md-9 col-lg-9 hidden-xs result-info">
                             <h4>
                                 <a href="./record/<?php echo $doc['id']?>?highlight=<?php echo $query ?>"><?php echo $doc[$title_field][0]; ?></a>
 
@@ -137,7 +139,7 @@
                                 <li><a href="./audio/<?php echo $doc['id']?>" title="Audio link "><i class="fa fa-music fa-lg">&nbsp;</i></a></li>
                             </ul>
                         </div>
-                        <div class="col-xs-6 hidden-sm hidden-md hidden-lg result-info">
+                        <div class="col-xs-9 hidden-sm hidden-md hidden-lg result-info">
                             <h5>
                                 <a href="./record/<?php echo $doc['id']?>?highlight=<?php echo $query ?>"><?php echo $doc[$title_field][0]; ?></a>
                                 <small>
@@ -169,5 +171,6 @@
                 </nav>
             </div>
         </div>
+    </div>
     </div>
 
