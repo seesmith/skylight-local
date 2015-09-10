@@ -1,61 +1,142 @@
-    <h4>Related Items</h4>
+<div class="col-md-12" >
 
-    <ul class="related">
 
         <?php
-
         // if there are related items
-        if(count($related_items) > 0) {
-
+        if(count($related_items) > 0) { ?>
+    <div id="myCarousel" class="carousel slide" data-ride="carousel">
+        <div class="carousel-inner" role="listbox">
+            <?php
             $type_field = $this->skylight_utilities->getField('Type');
-
+            $i = 0;
             foreach ($related_items as $index => $doc) {
-
                 $type = 'Unknown';
-
                 if(isset($doc[$type_field])) {
                     $type = "media-" . strtolower(str_replace(' ','-',$doc[$type_field][0]));
                 }
-
                 ?>
+                    <div class="item <?php if ($i == 0) { echo 'active';}?>">
+                        <div class="col-xs-4">
 
-                <li<?php if($index == 0) { echo ' class="first"'; } elseif($index == sizeof($related_items) - 1) { echo ' class="last"'; } ?>>
-                    <a class="related-record" href="./record/<?php echo $doc['id']?>"><?php echo $doc[$title_field][0]; ?></a>
+                            <div class="thumbnail results-thumbnail">
+                                <?php $bitstream_array = array();
 
-                    <div class="tags">
-                        <?php if(array_key_exists($author_field,$doc)) { ?>
+                                if(isset($doc[$bitstream_field])) {
 
-                            <?php
-                            $num_authors = 0;
-                            foreach ($doc[$author_field] as $author) {
-                                // test author linking
-                                // quick hack that only works if the filter key
-                                // and recorddisplay key match and the delimiter is :
 
-                                $orig_filter = ucwords(urlencode($author));
+                                    $started = false;
+                                    // loop through to get min sequence
+                                    foreach ($doc[$bitstream_field] as $bitstream)
+                                    {
+                                        $b_segments = explode("##", $bitstream);
+                                        $b_filename = $b_segments[1];
+                                        $b_seq = $b_segments[4];
 
-                                $lower_orig_filter = strtolower($author);
-                                $lower_orig_filter = urlencode($lower_orig_filter);
+                                        if((strpos($b_filename, ".jpg") > 0) || (strpos($b_filename, ".JPG") > 0)) {
 
-                                echo '<a href="./search/*:*/Maker:%22'.$lower_orig_filter.'%7C%7C%7C'.$orig_filter.'%22">'.$author.'</a>';
-                                $num_authors++;
-                                if($num_authors < sizeof($doc[$author_field])) {
-                                    echo ' ';
-                                }
-                            }
-                            ?>
+                                            $bitstream_array[$b_seq] = $bitstream;
 
-                        <?php } ?>
+                                            if ($started) {
+                                                if ($b_seq < $min_seq) {
+                                                    $min_seq = $b_seq;
+                                                }
+                                            }
+                                            else {
+                                                $min_seq = $b_seq;
+                                                $started = true;
+                                            }
+                                        }
 
-                    </div>
-                </li>
-            <?php }
+                                    }
 
+                                    // if there is a thumbnail and a bitstream
+                                    if(isset($min_seq) && count($bitstream_array) > 0) {
+
+                                        // get all the information
+                                        $b_segments = explode("##", $bitstream_array[$min_seq]);
+                                        $b_filename = $b_segments[1];
+                                        $b_handle = $b_segments[3];
+                                        $b_seq = $b_segments[4];
+                                        $b_handle_id = preg_replace('/^.*\//', '',$b_handle);
+                                        $b_uri = './record/'.$b_handle_id.'/'.$b_seq.'/'.$b_filename;
+                                        $thumbnailLink = "";
+
+                                        if(isset($doc[$thumbnail_field])) {
+                                            foreach ($doc[$thumbnail_field] as $thumbnail) {
+
+                                                $t_segments = explode("##", $thumbnail);
+                                                $t_filename = $t_segments[1];
+
+                                                if ($t_filename === $b_filename . ".jpg") {
+
+                                                    $t_handle = $t_segments[3];
+                                                    $t_seq = $t_segments[4];
+                                                    $t_uri = './record/'.$b_handle_id.'/'.$t_seq.'/'.$t_filename;
+
+                                                    $thumbnailLink = '<a href="./record/'.$doc['id'] .'" title = "' . $doc[$title_field][0] . '" > ';
+                                                    $thumbnailLink .= '<img src = "'.$t_uri.'" class="search-thumbnail" title="'. $doc[$title_field][0] .'" /></a>';
+                                                }
+                                            }
+                                        }
+                                        // there isn't a thumbnail so display the bitstream itself
+                                        else {
+                                            $thumbnailLink = '<a href="./record/'.$doc['id'] .'" title = "' . $doc[$title_field][0] . '"> ';
+                                            $thumbnailLink .= '<img src = "'.$b_uri.'" class="search-thumbnail" title="'. $doc[$title_field][0] .'" /></a>';
+                                        }
+
+                                        echo $thumbnailLink;
+                                    }
+                                } //end if there are bitstreams ?>
+                                <p class="text-center hidden-xs">
+                                    <a href="./record/<?php echo $doc['id']?>"><?php echo $doc[$title_field][0]; ?></a>
+                                </p>
+                                <p class="text-center hidden-md hidden-sm hidden-lg">
+                                    <small><a href="./record/<?php echo $doc['id']?>"><?php echo $doc[$title_field][0]; ?></a></small>
+                                </p>
+                            </div>
+                        </div>
+                </div>
+            <?php
+                $i++;
+            }?>
+            <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+                <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+            </a>
+            <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+                <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+            </a>
+            </div>
+            </div>
+        <?php
         }
         // else there aren't any related items
         else { ?>
 
-            <li>None.</li>
+            None.
 
         <?php }?>
-    </ul>
+
+    <script type='text/javascript'>
+
+        $('#myCarousel').carousel({
+            interval: 10000
+        })
+
+        $('.carousel .item').each(function(){
+            var next = $(this).next();
+            if (!next.length) {
+                next = $(this).siblings(':first');
+            }
+            next.children(':first-child').clone().appendTo($(this));
+
+            if (next.next().length>0) {
+                next.next().children(':first-child').clone().appendTo($(this));
+            }
+            else {
+                $(this).siblings(':first').children(':first-child').clone().appendTo($(this));
+            }
+        });
+    </script>
+
