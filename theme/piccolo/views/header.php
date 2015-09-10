@@ -94,11 +94,14 @@
 
 <body>
 
-<div class="branding-container container">
+<div class="container">
     <div class="row">
+        <div class="col-sm-12">
         <a class="navbar-brand" href="http://www.ed.ac.uk" title="The University of Edinburgh Homepage Link" target="_blank"><i class="uoelogo">&nbsp;</i><i class="uoename">&nbsp;</i></a>
+        </div>
     </div>
     <div class="row">
+        <div class="col-sm-12">
         <nav class="navbar navbar-default">
             <div class="header brand">
                 <a class="navbar-brand" href="<?php echo base_url(); ?>piccolo"><i class="fa fa-home fa-lg">&nbsp;</i><span class="hidden-xs  collection-name">The Stuart Sound</span></a>
@@ -113,6 +116,7 @@
                 </form>
             </div>
         </nav>
+        </div>
     </div>
 </div>
 
