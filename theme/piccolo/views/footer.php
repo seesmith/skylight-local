@@ -1,18 +1,18 @@
 
 </div> <!--END of ROW -- move into col sidebar -->
 </div><!--END of container -- move into col sidebar -->
-        <footer class="footer">
+        <footer class="footer bg-primary">
                 <div class="row">
-                    <div class="centered text-center">
-                        <nav>
-                            <ul class="list-inline">
-                                <li><a href="./" title="<?php echo $site_title; ?> Home"><i class="fa fa-home fa-lg">&nbsp;</i></a></li>
-                                <li><a href="./about" title="<?php echo $site_title; ?> Home"><i class="fa fa-info fa-lg">&nbsp;</i></a></li>
-                                <li><a href="https://www.facebook.com/pages/Edinburgh-University-Collection-of-Historic-Musical-Instruments-EUCHMI/144892895544842" target="_blank" title="MIMEd on Facebook"><i class="fa fa-facebook fa-lg">&nbsp;</i></a></li>
-                                <li><a href="https://twitter.com/MIMEdinburgh" target="_blank" title="MIMEd on Twitter"><i class="fa fa-twitter fa-lg">&nbsp;</i></a></li>
-                                <li><a href="./feedback" title="Provide feedback"><i class="fa fa-envelope fa-lg">&nbsp;</i></a></li>
-                            </ul>
-                        </nav>
+                    <div class="col-md-12 col-sm-12 col-xs-12">
+                        <div class="centered text-center">
+                        <ul class="nav nav-pills">
+                            <li><a href="./" title="<?php echo $site_title; ?> Home"><i class="fa fa-home fa-lg">&nbsp;</i></a></li>
+                            <li><a href="./about" title="<?php echo $site_title; ?> Home"><i class="fa fa-info fa-lg">&nbsp;</i></a></li>
+                            <li><a href="https://www.facebook.com/pages/Edinburgh-University-Collection-of-Historic-Musical-Instruments-EUCHMI/144892895544842" target="_blank" title="MIMEd on Facebook"><i class="fa fa-facebook fa-lg">&nbsp;</i></a></li>
+                            <li><a href="https://twitter.com/MIMEdinburgh" target="_blank" title="MIMEd on Twitter"><i class="fa fa-twitter fa-lg">&nbsp;</i></a></li>
+                            <li><a href="./feedback" title="Provide feedback"><i class="fa fa-envelope fa-lg">&nbsp;</i></a></li>
+                        </ul>
+                        </div>
                     </div>
                 </div>
                 <div class="row">
