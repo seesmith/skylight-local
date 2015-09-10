@@ -1,8 +1,10 @@
+<div class="col-md-3 col-sm-3 hidden-xs" >
 <?php if (isset($facets)) {?>
-<div id="sidebar-wrapper">
-    <div class="col-md-3 col-sm-3 hidden-xs" >
 
-    <?php foreach ($facets as $facet) {
+        <div class="sidebar-nav">
+
+
+        <?php foreach ($facets as $facet) {
 
         $inactive_terms = array();
         $active_terms = array();
@@ -83,5 +85,7 @@
             </ul>
         <?php } ?>
         </div>
-    </div>
+
 <?php } ?>
+</div>
+
