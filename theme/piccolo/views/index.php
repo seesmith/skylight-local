@@ -1,4 +1,4 @@
-
+<div class="container content">
 <div class="container">
     <div class="jumbotron">
             <p>The Stuart period, from the reign of King James V of Scotland (1513–42) to that of Queen Anne of Great
