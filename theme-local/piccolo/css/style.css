@@ -35,11 +35,11 @@
     margin-top: -5px;}
 
 .uoename  { display: block;
-    width: 253px;
-    height: 25px;
+    width: 235px;
+    height: 24px;
     float: left;
     background: url(../images/uoenamesml.png) no-repeat 0 0;
-    margin-left: 5px;}
+    margin-left: 3px;}
 
 .list-group-item.active a, .list-group-item.active:focus a, .list-group-item.active:hover a {
     color: #FFF;
@@ -82,9 +82,16 @@ div.related {
     color: #337AB7;
     background-color: #eeeeee;
 }
+
 .content{
     margin-top: 10px;
 }
+
+.jumbotron_sml p{
+    font-size: 14px;
+    font-weight: normal;
+}
+
 
 
 

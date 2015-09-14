@@ -93,7 +93,9 @@
 
     <div class="header">
         <div class="container">
+            <div class="navbar-static-top header">
             <a class="navbar-brand" href="http://www.ed.ac.uk" title="The University of Edinburgh Homepage Link" target="_blank"><i class="uoelogo">&nbsp;</i><i class="uoename">&nbsp;</i></a>
+        </div>
         </div>
         <div class="wide bg-primary">
             <div class="container">
