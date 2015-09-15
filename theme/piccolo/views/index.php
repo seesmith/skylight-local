@@ -1,4 +1,5 @@
 <div class="container content">
+    <!-- todo replace two with sass or less -->
 <div class="container">
     <div class="jumbotron hidden-xs hidden-sm">
             <p>The Stuart period, from the reign of King James V of Scotland (1513–42) to that of Queen Anne of Great
