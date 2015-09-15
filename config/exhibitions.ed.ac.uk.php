@@ -45,7 +45,7 @@ $config['skylight_fields'] = array('Title' => 'dc.title.en',
     'Rights' => 'dc.rights.en',
     'Link' => 'dc.identifier.uri.en',
     'Alternative' => 'dc.title.alternative.en',
-    'Identifier' => 'dc.identifier',
+    'Identifier' => 'dc.identifier.en',
     'Tags' => 'dc.subject.crowdsourced.en',
     'Exhibition' => 'dc.relation.ispartofexhibition.en'
 );
