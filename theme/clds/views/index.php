@@ -14,6 +14,14 @@
         <div class="carousel-inner">
             <div class="item">
                 <a href='<?php echo base_url(); ?>search/*/Type:"rare+books|||Rare+Books"/Header:"rarebooks"?sort_by=cld.weighting_sort+desc,dc.title_sort+asc'>
+                    <img src="<?php echo base_url(); ?>theme/<?php echo $this->config->item('skylight_theme'); ?>/images/archivesslide.png" title="University of Edinburgh Archive Collections" alt="University of Edinburgh Archive Collections">
+                    <div class="carousel-caption caption-archives" onmouseover="this.style.background='#005784';this.style.color='#FFF'" onmouseout="this.style.background='#FFFFFF';this.style.color='#005784'">
+                        Archives
+                    </div>
+                </a>
+            </div>
+            <div class="item">
+                <a href='<?php echo base_url(); ?>search/*/Type:"rare+books|||Rare+Books"/Header:"rarebooks"?sort_by=cld.weighting_sort+desc,dc.title_sort+asc'>
                     <img src="<?php echo base_url(); ?>theme/<?php echo $this->config->item('skylight_theme'); ?>/images/rarebooksslide.png" title="University of Edinburgh Rare Books" alt="University of Edinburgh Rare Books">
                     <div class="carousel-caption caption-rarebooks" onmouseover="this.style.background='#005784';this.style.color='#FFF'" onmouseout="this.style.background='#FFFFFF';this.style.color='#005784'">
                         Rare Books
