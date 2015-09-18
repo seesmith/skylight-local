@@ -476,12 +476,11 @@ table tr:last-child                 { border: 0; border-bottom: none; }
     /* filter: alpha(opacity=80); /* IE transparency */
 }
 
-.caption-art                { top: 6%; right: 59%; bottom: 81%; left: 2%;}
-.caption-iconic             { top: 6%; right: 59%; bottom: 81%; left: 2%;}
-.caption-mimed              { top: 6%; right: 59%; bottom: 81%; left: 2%;}
-.caption-russell            { top: 6%; right: 59%; bottom: 81%; left: 2%;}
-.caption-calendars          { top: 6%; right: 63%; bottom: 81%; left: 2%;}
-.caption-exhibitions        { top: 6%; right: 63%; bottom: 81%; left: 2%;}
+.caption-art                { top: 6%; right: 75%; bottom: 81%; left: 2%;}
+.caption-rarebooks          { top: 6%; right: 75%; bottom: 81%; left: 2%;}
+.caption-mimed              { top: 6%; right: 75%; bottom: 81%; left: 2%;}
+.caption-archives           { top: 6%; right: 75%; bottom: 81%; left: 2%;}
+.caption-museums            { top: 6%; right: 75%; bottom: 81%; left: 2%;}
 
 .pagenotfound {
     border-top: 1px solid #333;
