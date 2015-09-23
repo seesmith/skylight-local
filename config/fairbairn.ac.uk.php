@@ -7,16 +7,17 @@ $config['skylight_appname'] = 'fairbairn';
 
 // set the base url and ga code
 if (strpos($_SERVER['HTTP_HOST'], "test") !== false) {
-    $config['base_url'] = 'http://www.fairbairn.ac.uk/';
+    $config['base_url'] = 'http://test.fairbairn.ac.uk/';
     $config['skylight_ga_code'] = '';
 }
 else {
-    $config['base_url'] = 'http://test.fairbairn.ac.uk/';
+    $config['base_url'] = 'http://www.fairbairn.ac.uk/';
     $config['skylight_ga_code'] = 'UA-25737241-19';
 }
+
 $config['skylight_repository_type'] = 'archivesspace'; // Demo 'dspace'
 $config['skylight_repository_version'] = '1';
-$config['skylight_solrbase'] = 'http://localhost:8090/';
+$config['skylight_solrbase'] = 'http://lac-repo-test14.is.ed.ac.uk:8090/';
 
 $config['skylight_theme'] = 'fairbairn';
 
