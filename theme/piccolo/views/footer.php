@@ -1,4 +1,3 @@
-
 </div> <!--END of ROW -- move into col sidebar -->
 </div><!--END of container -- move into col sidebar -->
         <footer class="footer bg-primary">
@@ -67,6 +66,7 @@
                        </span>
                     </div>
                 </div>
+                <div class="spacer"></div>
         </footer>
 
         <!-- Add mousewheel plugin (this is optional) -->

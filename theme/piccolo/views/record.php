@@ -158,7 +158,7 @@ if(isset($solr[$bitstream_field]) && $link_bitstream) {
 }
 ?>
 
-<div class="container">
+<div class="row container">
     <div class="content">
 
     <div class="page-header">
@@ -283,4 +283,4 @@ if(isset($solr[$bitstream_field]) && $link_bitstream) {
     </div>
     <a href="#" title="Back to Search Results" class="btn btn-default" onClick="history.go(-1);"><i class="fa fa-arrow-left">&nbsp;</i>Back to Search Results</a>
 
-<!--</div> <!-- container -->
+</div> <!-- row container-->

@@ -23,6 +23,10 @@
     background-color: #eeeeee;
 }
 
+.footer {
+    padding: 0 15px;
+}
+
 .results-item {
     margin-bottom: 25px;
 }
@@ -32,14 +36,33 @@
     height: 38px;
     float: left;
     background: url(../images/UoETransparent.png) no-repeat 0 0;
-    margin-top: -5px;}
+    margin-top: -5px;
+}
 
 .uoename  { display: block;
     width: 235px;
     height: 24px;
     float: left;
     background: url(../images/uoenamesml.png) no-repeat 0 0;
-    margin-left: 3px;}
+    margin-left: 3px;
+}
+
+.header-xs {
+    padding-right: 0;
+}
+.header-xs a.navbar-brand {
+    padding: 15px 0;
+}
+
+.col-xs-8 .record-title {
+    font-size: 15px;
+}
+
+.items-link {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 20px;
+}
 
 .list-group-item.active a, .list-group-item.active:focus a, .list-group-item.active:hover a {
     color: #FFF;
@@ -63,12 +86,22 @@
 .carousel-inner .item         { background: white;      }
 
 .main-image {
-    max-width: 100%;
-    max-height: 100%;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+}
+
+div.resized-image {
+    text-align: center;
+    width: 100%;
+}
+
+img.record-main-image {
+    max-height: 700px;
 }
 
 div.resized-image img.record-main-image {
-    width: 100%;
+  max-height: 400px;
 }
 
 div.related {
@@ -99,6 +132,12 @@ div.related {
     background: url(../images/0023123c-bkg-1140v2.png) no-repeat 0 0;
     background-color: #556D80;
     color: #ffffff;
+    margin-top: 20px;
+}
+
+.jumbotron_sml {
+    margin: -10px 0;
+    padding: 0 15px;
 }
 
 .jumbotron_sml p{
@@ -158,7 +197,60 @@ a {
     margin-bottom: 10px;
 }
 
+.feedback_form h1 {
+    font-size: 18px;
+    color: #556d80;
+}
 
+.feedback_form label {
+    display: block;
+    width: 100px;
+}
+label, input[type="button"], input[type="submit"], input[type="image"], button {
+    cursor: pointer;
+}
 
+/*
+input[type="text"], input[type="password"] {
+    border: 1px solid #bbbbbc;
+    border-radius: 5px;
+    font-size: 13px;
+    height: 28px;
+    padding: 0 10px;
+}
+input:valid, textarea:valid {
+}
+select, input, textarea {
+    color: #555;
+    line-height: 18px;
+}
+button, input, select, textarea {
+    margin: 0;
+}
+*/
+input.btn {
+    background: #556D80 none repeat scroll 0 0;
+    border: medium none;
+    border-radius: 5px;
+    color: #fff;
+    font-size: 14px;
+    font-weight: bold;
+    height: 28px;
+    margin-left: 8px;
+    padding: 0 18px;
+    text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.3);
+    text-transform: uppercase;
+}
 
+div.spacer {
+    height: 20px;
+}
 
+.related-image {
+    width: 100%;
+    text-align: center;
+}
+
+.related-xs {
+    width: 100%;
+}

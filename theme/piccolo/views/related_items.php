@@ -1,7 +1,6 @@
 
-<div class="row related inactive">
+<div class="row related inactive container">
     <h4>Related Items</h4>
-    <div class="col-md-12" >
         <?php
         $numrel = count($related_items);
         // if there are related items
@@ -124,14 +123,13 @@
                             $type = "media-" . strtolower(str_replace(' ','-',$doc[$type_field][0]));
                         }
                         ?>
-                        <div class="item <?php if ($i == 0) { echo 'active';}?>">
-                            <div class="col-xs-3">
+                        <div class="item<?php if ($i == 0) { echo ' active';}?>">
+                            <div class="col-lg-3 col-xs-<?php echo (12/$numrel)?>">
 
-                                <div class="">
+                                <div class="related-image">
                                     <?php $bitstream_array = array();
 
                                     if(isset($doc[$bitstream_field])) {
-
 
                                         $started = false;
                                         // loop through to get min sequence
@@ -183,14 +181,16 @@
                                                         $t_uri = './record/'.$b_handle_id.'/'.$t_seq.'/'.$t_filename;
 
                                                         $thumbnailLink = '<a href="./record/'.$doc['id'] .'" title = "' . $doc[$title_field][0] . '" > ';
-                                                        $thumbnailLink .= '<img src = "'.$t_uri.'" class="search-thumbnail" title="'. $doc[$title_field][0] .'" /></a>';
+                                                        $thumbnailLink .= '<img src = "'.$t_uri.'" class="related-thumbnail hidden-xs" title="'. $doc[$title_field][0] .'" /></a>';
+                                                        $thumbnailLink .= '<img src = "'.$t_uri.'" class="related-thumbnail related-xs hidden-lg hidden-md hidden-sm" title="'. $doc[$title_field][0] .'" /></a>';
                                                     }
                                                 }
                                             }
                                             // there isn't a thumbnail so display the bitstream itself
                                             else {
                                                 $thumbnailLink = '<a href="./record/'.$doc['id'] .'" title = "' . $doc[$title_field][0] . '"> ';
-                                                $thumbnailLink .= '<img src = "'.$b_uri.'" class="search-thumbnail" title="'. $doc[$title_field][0] .'" /></a>';
+                                                $thumbnailLink .= '<img src = "'.$b_uri.'" class="related-thumbnail hidden-xs" title="'. $doc[$title_field][0] .'" /></a>';
+                                                $thumbnailLink .= '<img src = "'.$b_uri.'" class="related-thumbnail related-xs hidden-lg hidden-md hidden-sm" title="'. $doc[$title_field][0] .'" /></a>';
                                             }
 
                                             echo $thumbnailLink;
@@ -204,20 +204,26 @@
                                     </p>
                                 </div>
                             </div>
+
+
+
+
+
                         </div>
                         <?php
                         $i++;
                     }?>
-                </div>
-
             </div>
 
+</div>
         <?php }
         // else there aren't any related items
         else { ?>
 
             None.
+            <div class="spacer"></div>
 
+</div>
         <?php }?>
 
         <script type='text/javascript'>
@@ -243,5 +249,4 @@
                 }
             });;
         </script>
-
-    </div>
+</div>
