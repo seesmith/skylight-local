@@ -109,8 +109,9 @@
                             <div class="col-md-3 col-lg-3 col-sm-3 col-xs-4 result-img">
                            <?php echo $thumbnailLink; ?>
                         </div>
-                            <div class="col-sm-9 col-md-9 col-lg-9 hidden-xs result-info">
-                            <h4>
+                            <!--div class="col-sm-9 col-md-9 col-lg-9 hidden-xs result-info"-->
+                            <div class="col-xs-8 col-sm-9 col-md-9 col-lg-9 result-info">
+                            <h4 class="record-title">
                                 <a href="./record/<?php echo $doc['id']?>?highlight=<?php echo $query ?>"><?php echo $doc[$title_field][0]; ?></a>
 
                             <small>
@@ -122,7 +123,7 @@
                             </p>
 
                                     <?php if(array_key_exists($author_field,$doc)) { ?>
-                                <h5>
+                                <h5 class="hidden-xs">
                                         <?php
                                         foreach ($doc[$author_field] as $author) {
                                             $orig_filter = urlencode($author);
@@ -136,12 +137,12 @@
                                     <?php } ?>
 
                             <ul class="nav nav-pills">
-                                <li><a href="./gallery/<?php echo $doc['id']?>" title="Image Gallery link"><i class="fa fa-image fa-lg">&nbsp;</i></a></li>
-                                <li><a href="./videos/<?php echo $doc['id']?>" title="Videos link"><i class="fa fa-video-camera fa-lg">&nbsp;</i></a></li>
-                                <li><a href="./audio/<?php echo $doc['id']?>" title="Audio link "><i class="fa fa-music fa-lg">&nbsp;</i></a></li>
+                                <li><a href="./record/<?php echo $doc['id']?>/#gallery" title="Image Gallery link"><i class="fa fa-image fa-lg">&nbsp;</i></a></li>
+                                <li><a href="./record/<?php echo $doc['id']?>/#video" title="Videos link"><i class="fa fa-video-camera fa-lg">&nbsp;</i></a></li>
+                                <li><a href="./record/<?php echo $doc['id']?>/#audio" title="Audio link "><i class="fa fa-music fa-lg">&nbsp;</i></a></li>
                             </ul>
                         </div>
-                        <div class="col-xs-9 hidden-sm hidden-md hidden-lg result-info">
+                        <!--div class="col-xs-9 hidden-sm hidden-md hidden-lg result-info">
                             <h5>
                                 <a href="./record/<?php echo $doc['id']?>?highlight=<?php echo $query ?>"><?php echo $doc[$title_field][0]; ?></a>
                                 <small>
@@ -153,7 +154,7 @@
                                 <li><a href="./videos/<?php echo $doc['id']?>" title="Videos link"><i class="fa fa-video-camera fa-lg">&nbsp;</i></a></li>
                                 <li><a href="./audio/<?php echo $doc['id']?>" title="Audio link "><i class="fa fa-music fa-lg">&nbsp;</i></a></li>
                             </ul>
-                        </div>
+                        </div-->
                     </div>
                 <hr>
                 <?php
