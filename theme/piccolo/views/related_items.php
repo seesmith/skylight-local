@@ -124,7 +124,7 @@
                         }
                         ?>
                         <div class="item<?php if ($i == 0) { echo ' active';}?>">
-                            <div class="col-xs-<?php echo (12/$numrel)?>">
+                            <div class="col-lg-3 col-xs-<?php echo (12/$numrel)?>">
 
                                 <div class="related-image">
                                     <?php $bitstream_array = array();
@@ -181,14 +181,16 @@
                                                         $t_uri = './record/'.$b_handle_id.'/'.$t_seq.'/'.$t_filename;
 
                                                         $thumbnailLink = '<a href="./record/'.$doc['id'] .'" title = "' . $doc[$title_field][0] . '" > ';
-                                                        $thumbnailLink .= '<img src = "'.$t_uri.'" class="related-thumbnail" title="'. $doc[$title_field][0] .'" /></a>';
+                                                        $thumbnailLink .= '<img src = "'.$t_uri.'" class="related-thumbnail hidden-xs" title="'. $doc[$title_field][0] .'" /></a>';
+                                                        $thumbnailLink .= '<img src = "'.$t_uri.'" class="related-thumbnail related-xs hidden-lg hidden-md hidden-sm" title="'. $doc[$title_field][0] .'" /></a>';
                                                     }
                                                 }
                                             }
                                             // there isn't a thumbnail so display the bitstream itself
                                             else {
                                                 $thumbnailLink = '<a href="./record/'.$doc['id'] .'" title = "' . $doc[$title_field][0] . '"> ';
-                                                $thumbnailLink .= '<img src = "'.$b_uri.'" class="related-thumbnail" title="'. $doc[$title_field][0] .'" /></a>';
+                                                $thumbnailLink .= '<img src = "'.$b_uri.'" class="related-thumbnail hidden-xs" title="'. $doc[$title_field][0] .'" /></a>';
+                                                $thumbnailLink .= '<img src = "'.$b_uri.'" class="related-thumbnail related-xs hidden-lg hidden-md hidden-sm" title="'. $doc[$title_field][0] .'" /></a>';
                                             }
 
                                             echo $thumbnailLink;
@@ -202,6 +204,11 @@
                                     </p>
                                 </div>
                             </div>
+
+
+
+
+
                         </div>
                         <?php
                         $i++;

@@ -248,8 +248,9 @@ div.spacer {
 
 .related-image {
     width: 100%;
+    text-align: center;
 }
 
-.related-thumbnail {
+.related-xs {
     width: 100%;
 }
