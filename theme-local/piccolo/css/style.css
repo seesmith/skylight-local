@@ -24,7 +24,11 @@
 }
 
 .footer {
-    padding: 0 15px;
+    padding: 0 15px 15px 15px;
+}
+
+.footer-margin {
+    height: 10px;
 }
 
 .results-item {
@@ -98,10 +102,12 @@ div.resized-image {
 
 img.record-main-image {
     max-height: 700px;
+    max-width: 100%;
 }
 
 div.resized-image img.record-main-image {
-  max-height: 400px;
+    max-height: 400px;
+    max-width: 100%;
 }
 
 div.related {
@@ -133,6 +139,7 @@ div.related {
     background-color: #556D80;
     color: #ffffff;
     margin-top: 20px;
+    font-weight: 100;
 }
 
 .jumbotron_sml {
@@ -140,7 +147,7 @@ div.related {
     padding: 0 15px;
 }
 
-.jumbotron_sml p{
+.jumbotron_sml p {
     font-size: 14px;
     font-weight: normal;
 }
@@ -158,6 +165,10 @@ div.related {
     background-color: #eeeeee;
     color: #556D80;
     border-color: #eeeeee;
+}
+
+.list-group-item a {
+    word-wrap: break-word;
 }
 
 .list-group-item.active {
@@ -197,6 +208,10 @@ a {
     margin-bottom: 10px;
 }
 
+.feedback_form {
+    margin-bottom: -50px;
+}
+
 .feedback_form h1 {
     font-size: 18px;
     color: #556d80;
@@ -210,24 +225,25 @@ label, input[type="button"], input[type="submit"], input[type="image"], button {
     cursor: pointer;
 }
 
-/*
-input[type="text"], input[type="password"] {
+.feedback_form input[type="text"] {
     border: 1px solid #bbbbbc;
     border-radius: 5px;
     font-size: 13px;
     height: 28px;
     padding: 0 10px;
+    width: 100%;
+    max-width: 500px;
 }
-input:valid, textarea:valid {
+
+#feedback {
+    border: 1px solid #bbbbbc;
+    border-radius: 5px;
+    font-size: 13px;
+    padding: 0 10px;
+    width: 100%;
+    max-width: 500px;
 }
-select, input, textarea {
-    color: #555;
-    line-height: 18px;
-}
-button, input, select, textarea {
-    margin: 0;
-}
-*/
+
 input.btn {
     background: #556D80 none repeat scroll 0 0;
     border: medium none;
@@ -252,5 +268,19 @@ div.spacer {
 }
 
 .related-xs {
-    width: 100%;
+    max-width: 100%;
+}
+
+.tab-content dl {
+    padding-top: 5px;
+}
+
+.tab-content dl dd {
+    padding: 5px 0;
+    border-bottom: 1px solid #ddd;
+}
+
+.tab-content dd:last-child {
+    padding-bottom: 0;
+    border: none;
 }
