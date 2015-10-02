@@ -11,6 +11,10 @@
         $thumbnail_field = $this->skylight_utilities->getField('Thumbnail');
         $piccolo_field = $this->skylight_utilities->getField('Piccolo Description');
 
+        // booleans for video/audio
+        $videotab = false;
+        $audiotab = false;
+
         $base_parameters = preg_replace("/[?&]sort_by=[_a-zA-Z+%20. ]+/","",$base_parameters);
         if($base_parameters == "") {
             $sort = '?sort_by=';
@@ -38,6 +42,7 @@
 
                             $i = 0;
                             $started = false;
+
                             // loop through to get min sequence
                             foreach ($doc[$bitstream_field] as $bitstream)
                             {
@@ -58,6 +63,12 @@
                                         $min_seq = $b_seq;
                                         $started = true;
                                     }
+                                }
+                                else if (((strpos($b_filename, ".mp4") > 0) or (strpos($b_filename, ".MP4") > 0) or (strpos($b_filename, ".webm") > 0) or (strpos($b_filename, ".WEBM") > 0))) {
+                                    $videotab = true;
+                                }
+                                else if ((strpos($b_filename, ".mp3") > 0) or (strpos($b_filename, ".MP3") > 0)) {
+                                    $audiotab = true;
                                 }
                                 $i++;
                             }
@@ -137,9 +148,19 @@
                                     <?php } ?>
 
                             <ul class="nav nav-pills">
+                                <li><a href="./record/<?php echo $doc['id']?>/#description" title="Description Link"><i class="fa fa-file-text fa-lg">&nbsp;</i></a></li>
+                                <li><a href="./record/<?php echo $doc['id']?>/#maker" title="Maker Link"><i class="fa fa-industry fa-lg">&nbsp;</i></a></li>
                                 <li><a href="./record/<?php echo $doc['id']?>/#gallery" title="Image Gallery link"><i class="fa fa-image fa-lg">&nbsp;</i></a></li>
-                                <li><a href="./record/<?php echo $doc['id']?>/#video" title="Videos link"><i class="fa fa-video-camera fa-lg">&nbsp;</i></a></li>
-                                <li><a href="./record/<?php echo $doc['id']?>/#audio" title="Audio link "><i class="fa fa-music fa-lg">&nbsp;</i></a></li>
+                                <?php if($videotab) { ?>
+                                    <li><a href="./record/<?php echo $doc['id']?>/#video" title="Videos link"><i class="fa fa-video-camera fa-lg">&nbsp;</i></a></li>
+                                <?php } else { ?>
+                                    <li><i class="fa fa-video-camera fa-lg fa-inactive">&nbsp;</i></li>
+                                <?php } ?>
+                                <?php if($audiotab) { ?>
+                                    <li><a href="./record/<?php echo $doc['id']?>/#audio" title="Audio link "><i class="fa fa-music fa-lg">&nbsp;</i></a></li>
+                                <?php } else { ?>
+                                    <li><i class="fa fa-music fa-lg fa-inactive">&nbsp;</i></li>
+                                <?php } ?>
                             </ul>
                         </div>
                         <!--div class="col-xs-9 hidden-sm hidden-md hidden-lg result-info">
