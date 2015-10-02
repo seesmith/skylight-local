@@ -51,6 +51,10 @@
     margin-left: 3px;
 }
 
+.navbar-brand {
+    font-weight: 200;
+}
+
 .header-xs {
     padding-right: 0;
 }
@@ -139,6 +143,10 @@ div.related {
     background-color: #556D80;
     color: #ffffff;
     margin-top: 20px;
+    font-weight: 100;
+}
+
+.jumbotron p {
     font-weight: 100;
 }
 
@@ -283,4 +291,11 @@ div.spacer {
 .tab-content dd:last-child {
     padding-bottom: 0;
     border: none;
+}
+
+.nav > li > i.fa-inactive {
+    display: block;
+    padding: 15px 15px;
+    position: relative;
+    color: #bbb;
 }
