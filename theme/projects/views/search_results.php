@@ -105,6 +105,29 @@ if ($base_parameters == "") {
 
                             ?>
                         <?php } ?>
+                        <?php if (array_key_exists($owner_field, $doc)) { ?>
+                            <?php
+
+                            $num_owner = 0;
+                            echo '<tr><th>Owner:</th><td>';
+
+                            foreach ($doc[$area_field] as $owner) {
+
+                                $orig_filter = urlencode($owner);
+
+                                $lower_orig_filter = strtolower($owner);
+                                $lower_orig_filter = urlencode($lower_orig_filter);
+
+                                echo '<a href="./search/*:*/Owner:%22' . $lower_orig_filter . '%7C%7C%7C' . $orig_filter . '%22">' . $area . '</a>' . '&nbsp;&nbsp';
+                                $num_owner++;
+                                if ($num_owner < sizeof($doc[$owner_field])) {
+                                    //echo '</td>';
+                                }
+                            }
+                            echo '</td></tr>';
+
+                            ?>
+                        <?php } ?>
                         <?php if (array_key_exists($pi_field, $doc)) { ?>
 
                             <?php

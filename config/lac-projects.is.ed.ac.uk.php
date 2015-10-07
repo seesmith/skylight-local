@@ -54,7 +54,13 @@ $config['skylight_fields'] = array('Title' => 'dc.title.en',
     'Partnership' => 'project.partnership.en',
     'Staff' => 'project.staff.en',
     'Skills' => 'project.skills.en',
-    'Technology' => 'project.tech.en'
+    'Technology' => 'project.tech.en',
+    'Time Critical' => 'project.timecritical.en',
+    'Dependencies' => 'project.dependencies.en',
+    'SMT Approved' => 'project.managementapproval.en',
+    'Funding Type' => 'project.fund.type.en',
+    'Potential Funders' => 'project.potentialfunders.en',
+    'Library Theme' => 'project.theme.en'
 );
 
 
@@ -87,6 +93,12 @@ $config['skylight_recorddisplay'] = array('Title',
     'Staff',
     'Skills',
     'Technology',
+    'Time Critical',
+    'Dependencies',
+    'SMT Approved',
+    'Funding Type',
+    'Potential Funders',
+    'Library Theme',
     'Bitstream',
     'Thumbnail');
 

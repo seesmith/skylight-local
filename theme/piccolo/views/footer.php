@@ -1,6 +1,7 @@
+        <div class="footer-margin"></div>
 </div> <!--END of ROW -- move into col sidebar -->
 </div><!--END of container -- move into col sidebar -->
-        <footer class="footer bg-primary">
+        <footer class="footer footer-piccolo bg-primary">
                 <div class="row">
                     <div class="col-md-12 col-sm-12 col-xs-12">
                         <div class="centered text-center">

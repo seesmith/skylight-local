@@ -8,6 +8,7 @@ $thumbnail_field = $this->skylight_utilities->getField("Thumbnail");
 $filters = array_keys($this->config->item("skylight_filters"));
 $link_uri_field = $this->skylight_utilities->getField("Link");
 $piccolo_field = $this->skylight_utilities->getField("Piccolo Description");
+$short_field = $this->skylight_utilities->getField("Short Description");
 $date_field = $this->skylight_utilities->getField("Date");
 
 $type = 'Unknown';
@@ -179,6 +180,9 @@ if(isset($solr[$bitstream_field]) && $link_bitstream) {
             </div>
     <?php } ?>
         <div class="col-sm-4 hidden-xs hidden-sm metadata">
+            <?php if(isset($solr[$short_field][0])) {
+                echo '<p>' . $solr[$short_field][0] . '</p>';
+            } ?>
             <dl class="dl-horizontal">
                 <?php foreach($recorddisplay as $key) {
 
@@ -214,6 +218,9 @@ if(isset($solr[$bitstream_field]) && $link_bitstream) {
             </dl>
         </div> <!-- metadata -->
     <div class="col-xs-9 hidden-lg hidden-md  metadata">
+        <?php if(isset($solr[$short_field][0])) {
+            echo '<p>' . $solr[$short_field][0] . '</p>';
+        } ?>
         <dl class="dl-horizontal">
             <?php foreach($recorddisplay as $key) {
 
@@ -281,6 +288,6 @@ if(isset($solr[$bitstream_field]) && $link_bitstream) {
             </div>
         </div>
     </div>
-    <a href="#" title="Back to Search Results" class="btn btn-default" onClick="history.go(-1);"><i class="fa fa-arrow-left">&nbsp;</i>Back to Search Results</a>
+    <a title="Back to Search Results" class="btn btn-default" onClick="history.go(-1);"><i class="fa fa-arrow-left">&nbsp;</i>Back to Search Results</a>
 
 </div> <!-- row container-->
