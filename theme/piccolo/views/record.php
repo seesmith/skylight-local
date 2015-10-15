@@ -175,7 +175,7 @@ if(isset($solr[$bitstream_field]) && $link_bitstream) {
                 <?php echo $bitstreamLink; ?>
             </div>
             <div class="col-sm-8 hidden-lg hidden-md resized-image">
-                <?php echo $bitstreamLink; ?>
+                <?php echo str_replace("group", "group-small", $bitstreamLink); ?>
             </div>
     <?php } ?>
         <div class="col-sm-4 hidden-xs hidden-sm metadata">
