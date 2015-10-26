@@ -1,9 +1,19 @@
 <?php
 
+// set the base url and ga code
+if (strpos($_SERVER['HTTP_HOST'], "test") !== false) {
+    $config['base_url'] = 'http://test.stuartsound.is.ed.ac.uk/';
+    $config['skylight_ga_code'] = 'UA-25737241-6';
+}
+else {
+    $config['base_url'] = 'http://www.stuartsound.is.ed.ac.uk/';
+    $config['skylight_ga_code'] = 'UA-25737241-6';
+}
+
 $config['skylight_appname'] = 'piccolo';
 
 // Uncomment this if you are using a url of the form http://.../art/...
-$config['skylight_url_prefix'] = 'piccolo';
+// $config['skylight_url_prefix'] = 'piccolo';
 
 $config['skylight_theme'] = 'piccolo';
 
