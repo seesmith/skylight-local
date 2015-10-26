@@ -6,10 +6,10 @@
             echo '<div class="thumbnail">' . $thumb .'</div>';
             echo '</div>';
             echo '<div class="col-sm-6 hidden-xs hidden-md hidden-lg">';
-            echo '<div class="thumbnail">' . $thumb .'</div>';
+            echo '<div class="thumbnail">' . str_replace("group", "group-small", $thumb) .'</div>';
             echo '</div>';
             echo '<div class="col-xs-12 hidden-sm hidden-md hidden-lg">';
-            echo '<div class="thumbnail">' . $thumb .'</div>';
+            echo '<div class="thumbnail">' . str_replace("group", "group-extra-small", $thumb) .'</div>';
             echo '</div>';
 
         }
