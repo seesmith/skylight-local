@@ -10,6 +10,7 @@ $dates_field = $this->skylight_utilities->getField('Dates');
 $abstract_field = $this->skylight_utilities->getField('Objective');
 $status_field = $this->skylight_utilities->getField('Project Status');
 $area_field = $this->skylight_utilities->getField('Business Area');
+$owner_field = $this->skylight_utilities->getField('Owner');
 
 $base_parameters = preg_replace("/[?&]sort_by=[_a-zA-Z+%20. ]+/", "", $base_parameters);
 if ($base_parameters == "") {
@@ -111,14 +112,14 @@ if ($base_parameters == "") {
                             $num_owner = 0;
                             echo '<tr><th>Owner:</th><td>';
 
-                            foreach ($doc[$area_field] as $owner) {
+                            foreach ($doc[$owner_field] as $owner) {
 
                                 $orig_filter = urlencode($owner);
 
                                 $lower_orig_filter = strtolower($owner);
                                 $lower_orig_filter = urlencode($lower_orig_filter);
 
-                                echo '<a href="./search/*:*/Owner:%22' . $lower_orig_filter . '%7C%7C%7C' . $orig_filter . '%22">' . $area . '</a>' . '&nbsp;&nbsp';
+                                echo '<a href="./search/*:*/Owner:%22' . $lower_orig_filter . '%7C%7C%7C' . $orig_filter . '%22">' . $owner . '</a>' . '&nbsp;&nbsp';
                                 $num_owner++;
                                 if ($num_owner < sizeof($doc[$owner_field])) {
                                     //echo '</td>';
