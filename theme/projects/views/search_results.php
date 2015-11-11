@@ -2,14 +2,9 @@
 
 // Set up some variables to easily refer to particular fields you've configured
 // in $config['skylight_searchresult_display']
-
+$fielddisplay = $this->config->item('skylight_searchresult_display');
+$filters = array_keys($this->config->item("skylight_filters"));
 $title_field = $this->skylight_utilities->getField('Title');
-$pi_field = $this->skylight_utilities->getField('Principal Investigator');
-$date_field = $this->skylight_utilities->getField('DateIssued');
-$dates_field = $this->skylight_utilities->getField('Dates');
-$abstract_field = $this->skylight_utilities->getField('Objective');
-$status_field = $this->skylight_utilities->getField('Project Status');
-$area_field = $this->skylight_utilities->getField('Business Area');
 
 $base_parameters = preg_replace("/[?&]sort_by=[_a-zA-Z+%20. ]+/", "", $base_parameters);
 if ($base_parameters == "") {
@@ -44,11 +39,14 @@ if ($base_parameters == "") {
                     <?php }
                 }
             } ?>
-            
-        </span>
+
+            <strong>No. Results</strong>
+                <a href="<?php echo $base_search . $base_parameters . '?num_results=15' ?>">15</a> |
+                <a href="<?php echo $base_search . $base_parameters . '?num_results=50' ?>">50</a>
+            </span>
+            <a href="<?php echo $base_search . $base_parameters . '.csv?num_results=1000' ?>">Export to Excel</a>
 
 </div>
-
 
 <ul class="listing">
 
@@ -72,158 +70,44 @@ if ($base_parameters == "") {
                     <div class="search-results">
 
                         <table>
-                        <?php if (array_key_exists($dates_field, $doc)) { ?>
 
-                            <?php
-                            echo '<tr><th>Dates:</th><td>' . $doc[$dates_field][0]  . '</td></tr>';
-                        } elseif (array_key_exists('dateIssued', $doc)) {
-                            echo '<tr><th>Date:</th><td>' . date('jS F Y', strtotime($doc['dateIssued'][0])) . '</td></tr>';
+                        <?php foreach($fielddisplay as $key) {
+                            //echo var_dump($searchdisplay);
+                            $element = $this->skylight_utilities->getField($key);
+                            //echo var_dump($element);
+                            if(isset($doc[$element])) {
+                                echo '<tr><th>'. $key . '</th><td>';
+                                foreach($doc[$element] as $index => $metadatavalue) {
+                                    // if it's a facet search
+                                    // make it a clickable search link
+                                    if(in_array($key, $filters)) {
+
+                                        $orig_filter = urlencode($metadatavalue);
+                                        $lower_orig_filter = strtolower($metadatavalue);
+                                        $lower_orig_filter = urlencode($lower_orig_filter);
+
+                                        echo '<a href="./search/*:*/' . $key . ':%22'.$lower_orig_filter.'%7C%7C%7C'.$orig_filter.'%22">'.$metadatavalue.'</a>';
+                                    }
+                                    else {
+                                        echo $metadatavalue;
+                                    }
+                                    if($index < sizeof($doc[$element]) - 1) {
+                                        echo '; ';
+                                    }
+                                }
+                                echo '</td></tr>';
+                            }
                         }
-
                         ?>
+                      <!-- close table div -->
 
-                        <?php if (array_key_exists($area_field, $doc)) { ?>
-                            <?php
-
-                            $num_subject = 0;
-                            echo '<tr><th>Business Area:</th><td>';
-
-                            foreach ($doc[$area_field] as $area) {
-
-                                $orig_filter = urlencode($area);
-
-                                $lower_orig_filter = strtolower($area);
-                                $lower_orig_filter = urlencode($lower_orig_filter);
-
-                                echo '<a href="./search/*:*/Business Area:%22' . $lower_orig_filter . '%7C%7C%7C' . $orig_filter . '%22">' . $area . '</a>' . '&nbsp;&nbsp';
-                                $num_subject++;
-                                if ($num_subject < sizeof($doc[$area_field])) {
-                                    //echo '</td>';
-                                }
-                            }
-                            echo '</td></tr>';
-
-                            ?>
-                        <?php } ?>
-                        <?php if (array_key_exists($owner_field, $doc)) { ?>
-                            <?php
-
-                            $num_owner = 0;
-                            echo '<tr><th>Owner:</th><td>';
-
-                            foreach ($doc[$area_field] as $owner) {
-
-                                $orig_filter = urlencode($owner);
-
-                                $lower_orig_filter = strtolower($owner);
-                                $lower_orig_filter = urlencode($lower_orig_filter);
-
-                                echo '<a href="./search/*:*/Owner:%22' . $lower_orig_filter . '%7C%7C%7C' . $orig_filter . '%22">' . $area . '</a>' . '&nbsp;&nbsp';
-                                $num_owner++;
-                                if ($num_owner < sizeof($doc[$owner_field])) {
-                                    //echo '</td>';
-                                }
-                            }
-                            echo '</td></tr>';
-
-                            ?>
-                        <?php } ?>
-                        <?php if (array_key_exists($pi_field, $doc)) { ?>
-
-                            <?php
-
-                            $num_authors = 0;
-
-                            echo '<tr><th>Principal Investigator:</th><td>';
-                            foreach ($doc[$pi_field] as $pi) {
-                                // test author linking
-                                // quick hack that only works if the filter key
-                                // and recorddisplay key match and the delimiter is :
-                                $orig_filter = ucwords(urlencode($pi));
-
-                                $lower_orig_filter = strtolower($pi);
-                                $lower_orig_filter = urlencode($lower_orig_filter);
-                                echo '<a href="./search/*:*/Principal Investigator:%22' . $lower_orig_filter . '%7C%7C%7C' . $orig_filter . '%22">' . $pi . '</a>' . '&nbsp;&nbsp';
-                                $num_authors++;
-                                if ($num_authors < sizeof($doc[$pi_field])) {
-                                    //echo '</td>';
-                                }
-                            }
-                            echo '</td></tr>';
-
-
-                            ?>
-
-                        <?php } ?>
-
-                        <?php if (array_key_exists($status_field, $doc)) { ?>
-                            <?php
-
-                            $num_status = 0;
-                            echo '<tr><th>Project Status:</th><td>';
-
-                            foreach ($doc[$status_field] as $status) {
-
-                                $orig_filter = urlencode($status);
-
-                                $lower_orig_filter = strtolower($status);
-                                $lower_orig_filter = urlencode($lower_orig_filter);
-
-                                echo '<a href="./search/*:*/Project Status:%22' . $lower_orig_filter . '%7C%7C%7C' . $orig_filter . '%22">' . $status . '</a>' . '&nbsp;&nbsp';
-                                $num_status++;
-                                if ($num_status < sizeof($doc[$status_field])) {
-                                    echo '</td>';
-                                }
-                            }
-                            echo '</tr>';
-
-                            ?>
-                        <?php } ?>
-
-
-                        <?php if (array_key_exists($abstract_field, $doc))  { ?>
-                            <?php
-                            echo '<tr><td colspan="2">';
-                                $abstract = $doc[$abstract_field][0];
-                                echo '<p class="abstract">' . $abstract . '<p>';
-                            /*
-                                $abstract_words = explode(' ', $abstract);
-                                $shortened = '';
-                                $max = 200;
-                                $suffix = '...';
-                                if ($max > sizeof($abstract_words)) {
-                                $max = sizeof($abstract_words);
-                                $suffix = '';
-                                }
-                                for ($i = 0; $i < $max; $i++) {
-                                $shortened .= $abstract_words[$i] . ' ';
-                                }
-                                echo $shortened . $suffix;
-                            */
-                            echo '</td></tr>';
-
-                            ?>
-                        <?php } ?>
-
-
-
-
-
-
-
-
-                        </table>
-
-
-
+                         </table>
                     </div>
-                    <!-- close tags div -->
-
                 </div>
                 <!-- close item-info -->
                 <div class="clearfix"></div>
-            </div>
             <!-- close item div -->
+            </div>
         </li>
     <?php } ?>
 </ul>

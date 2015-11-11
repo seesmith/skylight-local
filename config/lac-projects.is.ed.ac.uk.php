@@ -17,7 +17,7 @@ $config['skylight_theme'] = 'projects';
 // Uncomment this if you are using a url of the form http://.../art/...
 //$config['skylight_url_prefix'] = 'projects';
 
-$config['skylight_fullname'] = 'Library Projects';
+$config['skylight_fullname'] = 'Library &amp; University Collection Projects';
 
 $config['skylight_adminemail'] = 'lddt@mlist.is.ed.ac.uk';
 
@@ -29,6 +29,8 @@ $config['skylight_oaipmhallowed'] = true;
 $config['skylight_container_id'] = '32';
 $config['skylight_container_field'] = 'location.coll';
 $config['skylight_sitemap_type'] = 'internal';
+
+$config['skylight_admin_link'] = 'https://collectionsmanager.is.ed.ac.uk/handle/';
 
 $config['skylight_fields'] = array('Title' => 'dc.title.en',
     'Alternative Title' => 'dc.title.alternative.en',
@@ -47,7 +49,7 @@ $config['skylight_fields'] = array('Title' => 'dc.title.en',
     'Identifier' => 'dc.identifier.other',
     'Objective' => 'dc.description.abstract.en',
     'Funding Source' => 'project.fund.source.en',
-    'Amount' => 'project.fund.amount.en',
+    'Costs' => 'project.fund.amount.en',
     'Cost Centre' => 'project.cost.centre.en',
     'Comments' => 'project.comments.en',
     'Duration' => 'project.duration.en',
@@ -85,7 +87,7 @@ $config['skylight_recorddisplay'] = array('Title',
     'Business Area',
     'Description',
     'Funding Source',
-    'Amount',
+    'Costs',
     'Cost Centre',
     'Comments',
     'Duration',
@@ -102,7 +104,19 @@ $config['skylight_recorddisplay'] = array('Title',
     'Bitstream',
     'Thumbnail');
 
-$config['skylight_searchresult_display'] = array('Title','Date','Owner','Principal Investigator','Objective','Business Area','Description','Identifier','Project Status','Source', 'Bitstream', 'Thumbnail');
+$config['skylight_searchresult_display'] = array('Title',
+    'Objective',
+    'Description',
+    'Potential Funders',
+    //'Funding Status',
+    'Costs',
+    'Owner',
+    //'Link',
+    'Project Status',
+    'Date',
+    'Business Area',
+    'SMT Approved',
+    'Library Theme');
 
 $config['skylight_search_fields'] = array(
     'Business Area' => 'dc.subject',

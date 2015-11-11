@@ -154,7 +154,7 @@ header				            { position: relative; width: 940px; background: url(../ima
 .uoelogo                        { display: block; width: 89px; height: 86px; float: left; background: url(../images/UoETransparentWhite.png) no-repeat 0 0; padding: 0 0 0 10px;}
 .head-text                      { display: block; width: 740px; height: 88px; float: left; padding-top: 30px;
                                 font-weight: bold;
-                                font-size: 54px;
+                                font-size: 34px;
                                 text-decoration: none;
                                 font-variant: small-caps;
                                 color: #fff;}
