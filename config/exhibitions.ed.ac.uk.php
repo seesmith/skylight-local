@@ -38,6 +38,7 @@ $config['skylight_fields'] = array('Title' => 'dc.title.en',
     'Abstract' => 'dc.description.abstract',
     'Date Issued' => 'dc.date.issued_dt',
     'Date' => 'dc.coverage.temporal.en',
+    'Location' => 'dc.coverage.spatial.en',
     'Bitstream'=> 'dc.format.original.en',
     'Thumbnail'=> 'dc.format.thumbnail.en',
     'Description'=>'dc.description.en',
@@ -46,6 +47,7 @@ $config['skylight_fields'] = array('Title' => 'dc.title.en',
     'Link' => 'dc.identifier.uri.en',
     'Alternative' => 'dc.title.alternative.en',
     'Identifier' => 'dc.identifier.en',
+    'Shelfmark' => 'dc.identifier.other.en',
     'Tags' => 'dc.subject.crowdsourced.en',
     'Exhibition' => 'dc.relation.ispartofexhibition.en'
 );
@@ -62,7 +64,7 @@ $config['skylight_meta_fields'] = array('Title' => 'dc.title.en',
     'Bitstream'=> 'dc.format.original',
     'Thumbnail'=> 'dc.format.thumbnail');
 
-$config['skylight_recorddisplay'] = array('Title','Alternative','Creator','Exhibition','Subject','Type','Description','Date','Collection','Rights', 'Identifier');
+$config['skylight_recorddisplay'] = array('Title','Alternative','Date','Creator','Exhibition','Subject','Type','Description','Location','Collection','Rights','Shelfmark','Identifier');
 
 $config['skylight_searchresult_display'] = array('Title','Creator','Subject','Type','Exhibition');
 

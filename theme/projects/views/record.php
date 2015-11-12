@@ -7,14 +7,11 @@ $thumbnail_field = $this->skylight_utilities->getField("Thumbnail");
 $area_field = $this->skylight_utilities->getField("Business Area");
 $link_uri_field = $this->skylight_utilities->getField("Link");
 $filters = array_keys($this->config->item("skylight_filters"));
+$admin_link = $this->config->item("skylight_admin_link");
 
 $type = 'Unknown';
 $numThumbnails = 0;
 $bitstreamLinks = array();
-
-if(isset($solr[$type_field])) {
-    $type = "media-" . strtolower(str_replace(' ','-',$solr[$type_field][0]));
-}
 
 ?>
 
@@ -38,6 +35,41 @@ if(isset($solr[$type_field])) {
 </div>
 
 <div class="content">
+    <table>
+        <tbody>
+        <?php foreach($recorddisplay as $key) {
+
+            $element = $this->skylight_utilities->getField($key);
+            if(isset($solr[$element])) {
+                echo '<tr><th>'.$key.'</th><td>';
+                foreach($solr[$element] as $index => $metadatavalue) {
+                    // if it's a facet search
+                    // make it a clickable search link
+                    if(in_array($key, $filters)) {
+
+                        $orig_filter = urlencode($metadatavalue);
+                        $lower_orig_filter = strtolower($metadatavalue);
+                        $lower_orig_filter = urlencode($lower_orig_filter);
+
+                        echo '<a href="./search/*:*/' . $key . ':%22'.$lower_orig_filter.'%7C%7C%7C'.$orig_filter.'%22">'.$metadatavalue.'</a>';
+                    }
+                    else {
+                        echo $metadatavalue;
+                    }
+                    if($index < sizeof($solr[$element]) - 1) {
+                        echo '; ';
+                    }
+                }
+                echo '</td></tr>';
+            }
+
+        }
+        ?>
+        </tbody>
+    </table>
+
+   <a href="./search/*:*/' . $key . ':%22'.$lower_orig_filter.'%7C%7C%7C'.$orig_filter.'%22">'.$metadatavalue.'</a>
+
     <?php if(isset($solr[$bitstream_field]) && $link_bitstream) { ?>
 
         <div class="record_bitstreams"><?php
@@ -231,68 +263,7 @@ if(isset($solr[$type_field])) {
         ?>
 
 
-    <table>
-        <tbody>
-        <?php foreach($recorddisplay as $key) {
 
-            $element = $this->skylight_utilities->getField($key);
-            if(isset($solr[$element])) {
-                echo '<tr><th>'.$key.'</th><td>';
-                foreach($solr[$element] as $index => $metadatavalue) {
-                    // if it's a facet search
-                    // make it a clickable search link
-                    if(in_array($key, $filters)) {
-
-                        $orig_filter = urlencode($metadatavalue);
-                        $lower_orig_filter = strtolower($metadatavalue);
-                        $lower_orig_filter = urlencode($lower_orig_filter);
-
-                        echo '<a href="./search/*:*/' . $key . ':%22'.$lower_orig_filter.'%7C%7C%7C'.$orig_filter.'%22">'.$metadatavalue.'</a>';
-                    }
-                    else {
-                        echo $metadatavalue;
-                    }
-                    if($index < sizeof($solr[$element]) - 1) {
-                        echo '; ';
-                    }
-                }
-                echo '</td></tr>';
-            }
-
-        }
-        ?>
-
-        <?php
-        $i = 0;
-        $lunalink = false;
-        if (isset($solr[$link_uri_field])) {
-            foreach($solr[$link_uri_field] as $linkURI) {
-                $linkURI = str_replace('"', '%22', $linkURI);
-                $linkURI = str_replace('|', '%7C', $linkURI);
-
-                if (strpos($linkURI,"images.is.ed.ac.uk") != false)
-                {
-                    $lunalink = true;
-
-                    if($i == 0) {
-                        echo '<tr><th>Zoomable Image</th><td>';
-                    }
-
-                    echo '<a href="'. $linkURI . '" target="_blank"><i class="fa fa-file-image-o fa-lg">&nbsp;</i></a>';
-
-                    $i++;
-                }
-
-            }
-
-            if($lunalink) {
-                echo '</td></tr>';
-            }
-        }?>
-
-
-        </tbody>
-    </table>
 
 <input type="button" value="Back to Search Results" class="backbtn" onClick="history.go(-1);">
 
