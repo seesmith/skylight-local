@@ -9,7 +9,6 @@
         $date_field = $this->skylight_utilities->getField('Date Made');
         $bitstream_field = $this->skylight_utilities->getField('Bitstream');
         $thumbnail_field = $this->skylight_utilities->getField('Thumbnail');
-        $piccolo_field = $this->skylight_utilities->getField('Piccolo Description');
 
         // booleans for video/audio
         $videotab = false;
@@ -129,10 +128,6 @@
                                 <?php if(isset($doc[$date_field][0])) { echo $doc[$date_field][0];} else { echo 'Unknown';}?>
                             </small>
                             </h4>
-                            <p class="results_text">
-                                <?php if(isset($doc[$piccolo_field][0])) { echo $doc[$piccolo_field][0];} ?>
-                            </p>
-
                                     <?php if(array_key_exists($author_field,$doc)) { ?>
                                 <h5 class="hidden-xs">
                                         <?php

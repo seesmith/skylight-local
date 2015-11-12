@@ -7,7 +7,6 @@ $bitstream_field = $this->skylight_utilities->getField("Bitstream");
 $thumbnail_field = $this->skylight_utilities->getField("Thumbnail");
 $filters = array_keys($this->config->item("skylight_filters"));
 $link_uri_field = $this->skylight_utilities->getField("Link");
-$piccolo_field = $this->skylight_utilities->getField("Piccolo Description");
 $short_field = $this->skylight_utilities->getField("Short Description");
 $date_field = $this->skylight_utilities->getField("Date");
 
@@ -165,9 +164,6 @@ if(isset($solr[$bitstream_field]) && $link_bitstream) {
     <div class="page-header">
         <h1 class="itemtitle hidden-sm hidden-xs"><?php echo $record_title; ?></h1>
         <h4 class="itemtitle hidden-lg hidden-md"><?php echo $record_title; ?></h4>
-        <div class="piccolo"><?php if(isset($solr[$piccolo_field][0])) {
-                echo $solr[$piccolo_field][0];
-            } ?></div>
     </div>
 
     <?php if($mainImageTest === true) { ?>

@@ -63,7 +63,6 @@ $config['skylight_fields'] = array(
     'Author Biography' => 'dc.contributor.authorbio.en',
     'Associated Musician Full' => 'dc.contributor.assocfull.en',
     'Associated Musician' => 'dc.contributor.assoc.en',
-    'Piccolo Description' => 'dc.description.piccolo.en',
     'Short Description' => 'dc.description.level1.en',
     'Description' => 'dc.description.level2.en',
     'Associated Musician Biography' => 'dc.contributor.assocbio.en',
