@@ -43,7 +43,8 @@ if ($base_parameters == "") {
                 <a href="<?php echo $base_search . $base_parameters . '?num_results=15' ?>">15</a> |
                 <a href="<?php echo $base_search . $base_parameters . '?num_results=50' ?>">50</a>
             </span>
-            <a href="<?php echo $base_search . $base_parameters . '.csv?num_results=1000' ?>">Export to Excel</a>
+
+            <a href="<?php echo $base_search . $base_parameters . '/?num_results=1000&format=.csv' ?>">Export to Excel</a>
 
 </div>
 
