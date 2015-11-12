@@ -8,7 +8,7 @@
     <meta charset="utf-8">
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 
-    <base href="<?php echo base_url() . index_page(); if (index_page() !== '') { echo '/'; } echo $this->config->item('skylight_url_prefix'); echo '/' ?>">
+    <base href="<?php echo base_url() . index_page(); if (index_page() !== '') { echo '/'; } if ($this->config->item('skylight_url_prefix') != "") { echo $this->config->item('skylight_url_prefix'); echo '/'; } ?>">
 
     <title><?php echo $page_title; ?></title>
 
@@ -106,7 +106,7 @@
         <div class="wide bg-primary">
             <div class="container">
                 <div class="navbar-static-top header">
-                    <a class="navbar-brand" href="<?php echo base_url(); ?>piccolo"><i class="fa fa-home fa-lg">&nbsp;</i><span class="hidden-xs  collection-name">The Stuart Sound</span></a>
+                    <a class="navbar-brand" href="<?php echo base_url(); ?>"><i class="fa fa-home fa-lg">&nbsp;</i><span class="hidden-xs  collection-name">The Stuart Sound</span></a>
                     <a class="navbar-brand" href="http://www.stcecilias.ed.ac.uk/" title="St Cecilia's Hall Link" target="_blank">&nbsp;<i class="fa fa-university fa-lg">&nbsp;</i><span class="hidden-xs sch-name">St Cecilia's Hall</span></a>
                     <form action="./redirect/" method="post" class="navbar-form navbar-left">
                         <div class="input-group">
