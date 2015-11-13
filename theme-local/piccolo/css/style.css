@@ -299,3 +299,19 @@ div.spacer {
     position: relative;
     color: #bbb;
 }
+
+
+.tags > li.active > a,
+.tags > li.active > a:focus,
+.tags> li.active > a:hover{
+    position: relative;
+    display: block;
+    padding: 5px 5px;
+    background: #ddd;
+    color: #556D80;
+}
+
+.tags > li.active > a:hover {
+    background: #556D80;
+    color: #ffffff;
+}
