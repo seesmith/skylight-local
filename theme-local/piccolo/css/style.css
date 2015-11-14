@@ -285,7 +285,7 @@ div.spacer {
 
 .tab-content dl dd {
     padding: 5px 0;
-    border-bottom: 1px solid #ddd;
+    border-bottom: 1px solid #eeeeee;
 }
 
 .tab-content dd:last-child {
@@ -297,7 +297,7 @@ div.spacer {
     display: block;
     padding: 15px 15px;
     position: relative;
-    color: #bbb;
+    color: #eeeeee;
 }
 
 
@@ -307,7 +307,7 @@ div.spacer {
     position: relative;
     display: block;
     padding: 5px 5px;
-    background: #ddd;
+    background: #eeeeee;
     color: #556D80;
 }
 
