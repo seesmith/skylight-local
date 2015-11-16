@@ -129,17 +129,17 @@
                             </small>
                             </h4>
                                     <?php if(array_key_exists($author_field,$doc)) { ?>
-                                <h5 class="hidden-xs">
+                                <ul class="hidden-xs nav nav-pills tags">
                                         <?php
                                         foreach ($doc[$author_field] as $author) {
                                             $orig_filter = urlencode($author);
                                             $lower_orig_filter = strtolower($author);
                                             $lower_orig_filter = urlencode($lower_orig_filter);
 
-                                            echo '<a href="./search/*:*/Maker:%22'.$lower_orig_filter.'%7C%7C%7C'.$orig_filter.'%22">'.$author.'</a>';
+                                            echo '<li class="active"><a href="./search/*:*/Maker:%22'.$lower_orig_filter.'%7C%7C%7C'.$orig_filter.'%22">'.$author.'</a></li>';
                                         }
                                         ?>
-                                </h5>
+                                </ul>
                                     <?php } ?>
 
                             <ul class="nav nav-pills">
