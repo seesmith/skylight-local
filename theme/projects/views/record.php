@@ -68,7 +68,7 @@ $bitstreamLinks = array();
         </tbody>
     </table>
 
-   <a href="./search/*:*/' . $key . ':%22'.$lower_orig_filter.'%7C%7C%7C'.$orig_filter.'%22">'.$metadatavalue.'</a>
+    <a href="https://collectionsmanager.is.ed.ac.uk/tools/edit-item?item_id=<?php echo($solr['searchresourceid'][0]) ?>&submit=Edit..." target="_blank">Link to Admin</a>
 
     <?php if(isset($solr[$bitstream_field]) && $link_bitstream) { ?>
 

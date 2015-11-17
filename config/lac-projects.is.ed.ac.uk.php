@@ -62,7 +62,8 @@ $config['skylight_fields'] = array('Title' => 'dc.title.en',
     'SMT Approved' => 'project.managementapproval.en',
     'Funding Type' => 'project.fund.type.en',
     'Potential Funders' => 'project.potentialfunders.en',
-    'Library Theme' => 'project.theme.en'
+    'Library Theme' => 'project.theme.en',
+    'Resourceid' => 'search.resourceid'
 );
 
 
