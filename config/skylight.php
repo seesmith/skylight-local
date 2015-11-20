@@ -23,6 +23,7 @@ $config['skylight_repository_version'] = '181'; // Demo '171'
 // The local path for theme and configuration overrides (if required)
 $config['skylight_local_path'] = '../skylight-local';
 
+// The main username and password (by Demo admin:admin)
 
 $config['skylight_adminusername'] = '';
 $config['skylight_adminpassword'] = '';
