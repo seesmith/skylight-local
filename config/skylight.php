@@ -4,7 +4,7 @@
 $config['skylight_hostnames'] = array('www.fairbairn.ac.uk', 'test.fairbairn.ac.uk','test.exampapers.ed.ac.uk', 'exampapers.ed.ac.uk', 'test.scottishgovernmentyearbooks.ed.ac.uk', 'www.scottishgovernmentyearbooks.ed.ac.uk','test.openbooks.is.ed.ac.uk','openbooks.is.ed.ac.uk','test.sopacollection.ph.ed.ac.uk','sopacollection.ph.ed.ac.uk', 'test.exhibitions.ed.ac.uk', 'exhibitions.ed.ac.uk', 'test.lac-projects.is.ed.ac.uk', 'lac-projects.is.ed.ac.uk', 'test.stuartsound.is.ed.acuk', 'www.stuartsound.is.ed.ac.uk');
 
 // Uncomment this if you want to use urls of the form http://.../prefix/...
-$config['skylight_url_prefixes'] = array('anatomy', 'art', 'calendars', 'cockburn', 'iconics', 'mimed');
+$config['skylight_url_prefixes'] = array('anatomy', 'art', 'calendars', 'cockburn', 'iconics', 'mimed', 'piccolo');
 
 // For inserting prefixes for handle resolver
 $config['skylight_handle_prefixes'] = array(3 => "art", 11 => "mimed");
@@ -24,6 +24,7 @@ $config['skylight_repository_version'] = '181'; // Demo '171'
 $config['skylight_local_path'] = '../skylight-local';
 
 // The main username and password (by Demo admin:admin)
+
 $config['skylight_adminusername'] = '';
 $config['skylight_adminpassword'] = '';
 
