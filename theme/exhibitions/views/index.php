@@ -1,17 +1,26 @@
 <div class="record">
     <div class="content byEditor">
-        <h1>CURRENT EXHIBITION: <a href="./towardsdolly" alt="Towards Dolly"
-                                   title="Towards Dolly">Towards Dolly: A Century of Animal Genetics in Edinburgh</a>
-        <center><h2>University of Edinburgh Main Library, 31st July 2015 - 31st October 2015<br /> Monday - Saturday, 10:00 - 17:00</h2></center>
+        <h1>CURRENT EXHIBITION: <a href="./visualdissection" alt="Virtual Dissection"
+                                   title="Towards Dolly">Visual Dissection: The Art of Anatomy</a>
+        <center><h2>University of Edinburgh Main Library, 4th December 2015 - 5th March 2016<br /> Monday - Saturday, 10:00 - 17:00</h2></center>
         <div id="tile-block">
-            <div id="current-banner" class="art-tile"></div>
+            <div id="current-banner" class="main-tile"></div>
         </div>
+            <div class="clearfix"></div>
         <div id="past-exhib-block">
             <h1><a href="./past" alt="Past Exhibitions" title="Past Exhibitions">Past Exhibitions</a>:</h1>
             <div class="jcarousel-wrapper">
                 <div class="jcarousel" data-jcarousel="true">
 
                     <ul class="ex-list">
+                        <li class="past-ex">
+                            <h3><a href="./towardsdolly" alt="Towards Dolly" title="Towards Dolly Information Page">Towards Dolly</a></h3><br />
+                            <h3><a href='./search/*:*/Exhibition:"towards+dolly|||Towards+Dolly"'><i class="fa fa-search">&nbsp;</i>View Items</a></h3>
+                            <p>31 Jul - 31 Oct 2015</p>
+                            <a href="./towardsdolly" alt="Towards Dolly" title="Towards Dolly">
+                                <div id="exhib-tile-8"></div>
+                            </a>
+                        </li>
                         <li class="past-ex">
                             <h3><a href="./somethingblue" alt="...Something Blue" title="Something Blue Information Page">...Something Blue</a></h3><br />
                             <h3><a href='./search/*:*/Exhibition:"something+blue|||Something+Blue"'><i class="fa fa-search">&nbsp;</i>View Items</a></h3>
@@ -60,14 +69,6 @@
                             <p>1 Aug 2013 - 2 Nov 2014</p>
                             <a href="./cradle" alt="Cradle of Chemistry" title="Cradle of Chemistry">
                                 <div id="exhib-tile-4"></div>
-                            </a>
-                        </li>
-                        <li class="past-ex">
-                            <h3><a href="./objectlessons" alt="Object Lessons" title="Object Lessons Information Page">Object Lessons</a></h3><br />
-                            <h3><a href='./search/*:*/Exhibition:"object+lessons|||Object+Lessons"'><i class="fa fa-search">&nbsp;</i>View Items</a></h3>
-                            <p>1 Jun - 19 Jul 2003</p>
-                            <a href="./objectlessons" alt="Object Lessons" title="Object Lessons">
-                                <div id="exhib-tile-5"></div>
                             </a>
                         </li>
                     </ul>
