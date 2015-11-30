@@ -34,8 +34,8 @@ $config['skylight_admin_link'] = 'https://collectionsmanager.is.ed.ac.uk/handle/
 
 $config['skylight_fields'] = array('Title' => 'dc.title.en',
     'Alternative Title' => 'dc.title.alternative.en',
-    'Principal Investigator' => 'dc.contributor.author.en',
-    'Owner' => 'project.owner.en',
+    'Principal Investigator' => 'project.investigator.en',
+    'Owner' => 'dc.contributor.author.en',
     'Reference' => 'dc.identifier.other',
     'Link' => 'dc.identifier.uri',
     'Business Area' => 'dc.subject.en',
@@ -59,16 +59,18 @@ $config['skylight_fields'] = array('Title' => 'dc.title.en',
     'Technology' => 'project.tech.en',
     'Time Critical' => 'project.timecritical.en',
     'Dependencies' => 'project.dependencies.en',
-    'SMT Approved' => 'project.managementapproval.en',
+    'SMT Approved' => 'project.smtapproval.en',
     'Funding Type' => 'project.fund.type.en',
-    'Potential Funders' => 'project.potentialfunders.en',
+    'Potential Funders' => 'project.potentialfunder.en',
+    'Cost Estimate' => 'project.costestimate',
     'Library Theme' => 'project.theme.en',
-    'Resourceid' => 'search.resourceid'
+    'Resourceid' => 'search.resourceid',
+    'Project Links' => 'project.links'
 );
 
 
 $config['skylight_date_filters'] = array('Date' => 'dateIssued.year_sort');
-$config['skylight_filters'] = array('Project Status' => 'type_filter','Business Area' => 'subject_filter','Principal Investigator' => 'author_filter');
+$config['skylight_filters'] = array('Project Status' => 'type_filter','Business Area' => 'subject_filter','Owner' => 'author_filter');
 
 $config['skylight_filter_delimiter'] = ':';
 
@@ -101,6 +103,7 @@ $config['skylight_recorddisplay'] = array('Title',
     'SMT Approved',
     'Funding Type',
     'Potential Funders',
+    'Cost Estimates',
     'Library Theme',
     'Bitstream',
     'Thumbnail');
@@ -122,10 +125,10 @@ $config['skylight_searchresult_display'] = array('Title',
 $config['skylight_search_fields'] = array(
     'Business Area' => 'dc.subject',
     'Project Status' => 'dc.type',
-    'Principal Investigator' => 'dc.contributor.author',
+    'Owner' => 'dc.contributor.author',
 );
 
-$config['skylight_related_fields'] = array('Business Area' => 'dc.subject.en', 'Principal Investigator' => 'dc.contributor.author.en');
+$config['skylight_related_fields'] = array('Business Area' => 'dc.subject.en', 'Owner' => 'dc.contributor.author.en');
 
 $config['skylight_sort_fields'] = array('Title' => 'dc.title_sort',
     'Date' => 'dateIssued.year_sort'
@@ -134,7 +137,7 @@ $config['skylight_sort_fields'] = array('Title' => 'dc.title_sort',
 $config['skylight_feed_fields'] = array('Title' => 'Title',
     'Business Area' => 'Business Area',
     'Project Status' => 'Project Status',
-    'Principal Investigator' => 'Principal Investigator');
+    'Owner' => 'Owner');
 
 $config['skylight_results_per_page'] = 15;
 $config['skylight_share_buttons'] = false;
