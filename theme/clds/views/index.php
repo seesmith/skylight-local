@@ -72,7 +72,7 @@
         <ul class="tiles">
             <li class="tile">
                 <a href="http://exhibitions.ed.ac.uk/" target="_blank" class="caption" title="Edinburgh University Exhibitions">
-                    <img src="<?php echo base_url(); ?>theme/<?php echo $this->config->item('skylight_theme'); ?>/images/towardsdolly.jpg" alt="Edinburgh University Exhibitions Home" title="Edinburgh University Exhibitions Home">
+                    <img src="<?php echo base_url(); ?>theme/<?php echo $this->config->item('skylight_theme'); ?>/images/anatomy_sq.jpg" alt="Edinburgh University Exhibitions Home" title="Edinburgh University Exhibitions Home">
                     <span onmouseover="this.style.background='#005784';this.style.color='#FFF'" onmouseout="this.style.background='#FFFFFF';this.style.color='#005784'">Exhibitions</span>
                 </a>
             </li>

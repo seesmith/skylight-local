@@ -4,6 +4,23 @@
         <h1>Past Exhibitions:</h1>
         <div class="past-list">
             <div>
+                <h2><a href="./towardsdolly" alt="Towards Dolly" title="Towards Dolly: A Century of Animal Genetics in Edinburgh Page">Towards Dolly</a></h2>
+                <p>31st July 2015 - 31st October 2015</p>
+                <a href="./towardsdolly" alt="Towards Dolly" title="Towards Dolly">
+                    <div id="exhib-tile-8"></div>
+                </a>
+                <h3><a href='./search/*:*/Exhibition:"towards+dolly|||Towards+Dolly"'><i class="fa fa-search">&nbsp;</i>View all items</a></h3>
+                <p>
+                    Edinburgh has played a vital role in the science which tells us who we are – genetics.
+                </p>
+                <p>
+                    Dolly the sheep is a scientific icon and a household name. However, she is also a single chapter in a wider story which spans a century. Pioneers at Edinburgh and Roslin have embedded concepts like genetic engineering and stem cell research in the public consciousness, stimulating debate and revolutionising science and medicine.
+                </p>
+                <p>
+                    This exhibition celebrates the individuals and institutions who made, and continue to make, extraordinary advances in animal and human health. It will take you on a journey ‘Towards Dolly’ and beyond.
+                </p>
+            </div>
+            <div>
                 <h2><a href="./emmagillies" alt="Emma Gillies" title="Emma Gillies Information Page">Emma Gillies Rediscovered</a></h2>
                 <p>5 Dec 2014 - 7 Mar 2015</p>
                 <a href="./emmagillies" alt="Emma Gillies" title="Emma Gillies">
