@@ -115,12 +115,12 @@ if(isset($solr[$bitstream_field]) && $link_bitstream) {
             // if it's chrome, use webm if it exists
             if (strpos($_SERVER['HTTP_USER_AGENT'], 'Chrome') == false) {
 
-                $videoLink .= '<div class="flowplayer" data-analytics="' . $ga_code . '" title="' . $record_title . ": " . $b_filename . '">';
+                //$videoLink .= '<div class="flowplayer" data-analytics="' . $ga_code . '" title="' . $record_title . ": " . $b_filename . '">';
                 $videoLink .= '<video id="video-' . $b_seq. '" title="' . $record_title . ": " . $b_filename . '" ';
                 $videoLink .= 'controls preload="true" width="600">';
                 $videoLink .= '<source src="' . $b_uri . '" type="video/mp4" />Video loading...';
                 $videoLink .= '</video>';
-                $videoLink .= '</div>';
+                //$videoLink .= '</div>';
 
                 $videoFile = true;
 
