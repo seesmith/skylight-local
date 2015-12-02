@@ -151,9 +151,7 @@ if(isset($solr[$type_field])) {
             }
             else if ((strpos($b_uri, ".mp3") > 0) or (strpos($b_uri, ".MP3") > 0)) {
 
-                $audioLink .= '<audio id="audio-' . $b_seq;
-                $audioLink .= '" title="' . $record_title . ": " . $b_filename . '" ';
-                $audioLink .= 'controls preload="true" width="600">';
+                $audioLink .= '<audio controls>';
                 $audioLink .= '<source src="' . $b_uri . '" type="audio/mpeg" />Audio loading...';
                 $audioLink .= '</audio>';
                 $audioFile = true;
@@ -167,8 +165,7 @@ if(isset($solr[$type_field])) {
                 if (strpos($_SERVER['HTTP_USER_AGENT'], 'Chrome') == false) {
 
                     $videoLink .= '<div class="flowplayer" data-analytics="' . $ga_code . '" title="' . $record_title . ": " . $b_filename . '">';
-                    $videoLink .= '<video id="video-' . $b_seq. '" title="' . $record_title . ": " . $b_filename . '" ';
-                    $videoLink .= 'controls preload="true" width="600">';
+                    $videoLink .= '<video controls>';
                     $videoLink .= '<source src="' . $b_uri . '" type="video/mp4" />Video loading...';
                     $videoLink .= '</video>';
                     $videoLink .= '</div>';
@@ -184,8 +181,7 @@ if(isset($solr[$type_field])) {
                 if (strpos($_SERVER['HTTP_USER_AGENT'], 'Chrome') == true) {
 
                     $videoLink .= '<div class="flowplayer" data-analytics="' . $ga_code . '" title="' . $record_title . ": " . $b_filename . '">';
-                    $videoLink .= '<video id="video-' . $b_seq. '" title="' . $record_title . ": " . $b_filename . '" ';
-                    $videoLink .= 'controls preload="none" width="600">';
+                    $videoLink .= '<video controls>';
                     $videoLink .= '<source src="' . $b_uri . '" type="video/webm" />Video loading...';
                     $videoLink .= '</video>';
                     $videoLink .= '</div>';

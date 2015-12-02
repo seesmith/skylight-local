@@ -32,7 +32,7 @@
         <link rel="stylesheet" href="<?php echo base_url(); ?>assets/fancybox/source/jquery.fancybox.css?v=2.1.4" type="text/css" media="screen" />
         <link rel="stylesheet" href="<?php echo base_url(); ?>assets/fancybox/source/helpers/jquery.fancybox-buttons.css?v=1.0.5" type="text/css" media="screen" />
         <link rel="stylesheet" href="<?php echo base_url(); ?>assets/fancybox/source/helpers/jquery.fancybox-thumbs.css?v=1.0.7" type="text/css" media="screen" />
-        <link rel="stylesheet" href="http://releases.flowplayer.org/5.4.6/skin/minimalist.css">
+        <link rel="stylesheet" href="http://releases.flowplayer.org/6.0.4/skin/minimalist.css">
         <link rel="stylesheet" href="<?php echo base_url()?>assets/font-awesome/css/font-awesome.min.css">
 
         <!-- All JavaScript at the bottom, except for Modernizr which enables HTML5 elements & feature detects -->
@@ -56,7 +56,7 @@
         </script>
         <!-- End Google Analytics -->
 
-        <script src="http://releases.flowplayer.org/5.4.6/flowplayer.min.js"></script>
+        <script src="http://releases.flowplayer.org/6.0.4/flowplayer.min.js"></script>
 
         <!-- global options -->
         <script>

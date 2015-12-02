@@ -28,22 +28,6 @@ if(isset($solr[$type_field])) {
         }
     }
 
-    // Commented out date since we list it in the metadata. Robin.
-    //$date_field = $this->skylight_utilities->getField("Date");
-    //if (isset($solr[$date_field])) {
-    //    foreach($solr[$date_field] as $date) {
-    //        echo '<span>('.$date.')</span>';
-    //    }
-    //}
-    //else {
-    //    $date_field = $this->skylight_utilities->getField("Year");
-    //    if (isset($solr[$date_field])) {
-     //       foreach($solr[$date_field] as $date) {
-     //           echo '<span>('.$date.')</span>';
-     //       }
-     //   }
-    //}
-
     ?>
 </div>
 

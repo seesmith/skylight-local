@@ -10,14 +10,14 @@
   //  $config['skylight_ga_code'] = 'UA-25737241-6';
 //}
 
-$config['skylight_appname'] = 'mkf';
+$config['skylight_appname'] = 'audio';
 
 // Uncomment this if you are using a url of the form http://.../art/...
-$config['skylight_url_prefix'] = 'mkf';
+$config['skylight_url_prefix'] = 'audio';
 
-$config['skylight_theme'] = 'mkf';
+$config['skylight_theme'] = 'audio';
 
-$config['skylight_fullname'] = 'Marjorie Kennedy Fraser Recordings';
+$config['skylight_fullname'] = 'Audio Recordings';
 
 $config['skylight_adminemail'] = 'lddt@mlist.is.ed.ac.uk';
 

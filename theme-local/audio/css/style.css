@@ -139,7 +139,7 @@ div.related {
 }
 
 .jumbotron {
-    background: url(../images/0023123c-bkg-1140v2.png) no-repeat 0 0;
+    /**background: url(../images/0023123c-bkg-1140v2.png) no-repeat 0 0;*/
     background-color: #B27B80;
     color: #ffffff;
     margin-top: 20px;
