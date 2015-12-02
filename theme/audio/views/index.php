@@ -2,11 +2,11 @@
     <!-- todo replace two with sass or less -->
 <div class="container">
     <div class="jumbotron hidden-xs hidden-sm">
-            <p>MFK info</p>
+            <p>Audio Recordings</p>
     </div>
     <div class="jumbotron hidden-md hidden-lg">
         <div class="jumbotron_sml">
-        <p>MFK info </p>
+        <p>Audio Recordings </p>
         </div>
     </div>
     <div class="items-link">

@@ -106,7 +106,7 @@
         <div class="wide bg-primary">
             <div class="container">
                 <div class="navbar-static-top header">
-                    <a class="navbar-brand" href="<?php echo base_url(); ?>"><i class="fa fa-home fa-lg">&nbsp;</i><span class="hidden-xs  collection-name">Marjorie Kennedy Fraser</span></a>
+                    <a class="navbar-brand" href="<?php echo base_url(); ?>"><i class="fa fa-home fa-lg">&nbsp;</i><span class="hidden-xs  collection-name">Audio Recordings</span></a>
                     <a class="navbar-brand" href="http://collections.ed.ac.uk" title="Collections Online" target="_blank">&nbsp;<i class="fa fa-university fa-lg">&nbsp;</i><span class="hidden-xs sch-name">Collections Online</span></a>
                     <form action="./redirect/" method="post" class="navbar-form navbar-left">
                         <div class="input-group">
