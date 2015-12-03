@@ -4,6 +4,7 @@
 // in $config['skylight_searchresult_display']
 $fielddisplay = $this->config->item('skylight_searchresult_display');
 $filters = array_keys($this->config->item("skylight_filters"));
+$title_field = $this->skylight_utilities->getField('Title');
 
 $base_parameters = preg_replace("/[?&]sort_by=[_a-zA-Z+%20. ]+/", "", $base_parameters);
 if ($base_parameters == "") {

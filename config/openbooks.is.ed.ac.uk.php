@@ -6,10 +6,12 @@ $config['skylight_appname'] = 'openbooks';
 if (strpos($_SERVER['HTTP_HOST'], "test") !== false) {
     $config['base_url'] = 'https://test.openbooks.is.ed.ac.uk/';
     $config['skylight_ga_code'] = 'UA-25737241-6';
+    $config['skylight_container_id'] = '33';
 }
 else {
     $config['base_url'] = 'https://openbooks.is.ed.ac.uk/';
     $config['skylight_ga_code'] = 'UA-25737241-18';
+    $config['skylight_container_id'] = '47';
 }
 
 $config['skylight_theme'] = 'openbooks';
@@ -23,7 +25,6 @@ $config['skylight_oaipmhcollection'] = 'hdl_10683_52783';
 $config['skylight_oaipmhallowed'] = true;
 
 // Container ID and the field used in solr index to store this ID. Used for restricting search/browse scope.
-$config['skylight_container_id'] = '33';
 $config['skylight_container_field'] = 'location.coll';
 $config['skylight_sitemap_type'] = 'external';
 
