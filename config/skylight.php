@@ -4,7 +4,7 @@
 $config['skylight_hostnames'] = array('www.fairbairn.ac.uk', 'test.fairbairn.ac.uk','test.exampapers.ed.ac.uk', 'exampapers.ed.ac.uk', 'test.scottishgovernmentyearbooks.ed.ac.uk', 'www.scottishgovernmentyearbooks.ed.ac.uk','test.openbooks.is.ed.ac.uk','openbooks.is.ed.ac.uk','test.sopacollection.ph.ed.ac.uk','sopacollection.ph.ed.ac.uk', 'test.exhibitions.ed.ac.uk', 'exhibitions.ed.ac.uk', 'test.lac-projects.is.ed.ac.uk', 'lac-projects.is.ed.ac.uk', 'test.stuartsound.is.ed.acuk', 'www.stuartsound.is.ed.ac.uk');
 
 // Uncomment this if you want to use urls of the form http://.../prefix/...
-$config['skylight_url_prefixes'] = array('anatomy', 'art', 'calendars', 'cockburn', 'iconics', 'mimed', 'piccolo');
+$config['skylight_url_prefixes'] = array('art', 'calendars', 'iconics', 'mimed');
 
 // For inserting prefixes for handle resolver
 $config['skylight_handle_prefixes'] = array(3 => "art", 11 => "mimed");
@@ -24,10 +24,8 @@ $config['skylight_repository_version'] = '181'; // Demo '171'
 $config['skylight_local_path'] = '../skylight-local';
 
 // The main username and password (by Demo admin:admin)
-
 $config['skylight_adminusername'] = '';
 $config['skylight_adminpassword'] = '';
-
 
 // Whether to use LDAP for admin authentication
 $config['skylight_adminldap'] = False;
@@ -40,7 +38,6 @@ $config['skylight_oaipmhbase'] = 'http://collectionsinternal.is.ed.ac.uk:8080/oa
 
 // The OAI-PMH identifier to replace in OAI-PMH responses
 $config['skylight_oaipmhid']= 'oai:collectionsmanager.is.ed.ac.uk:10683/';
-
 
 // The link in OAI-PMH responses to replace with the skylight record URL
 $config['skylight_oaipmhlink'] = 'http://hdl.handle.net/10683/';
@@ -58,7 +55,6 @@ $config['skylight_cache'] = false;
 // Keys required for the recapthca system
 $config['skylight_recaptcha_key_public'] = '';
 $config['skylight_recaptcha_key_private'] = '';
-
 
 // Digital object management
 $config['skylight_bitstream_field'] = 'dc.format.original';

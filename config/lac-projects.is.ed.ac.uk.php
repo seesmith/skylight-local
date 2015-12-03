@@ -4,10 +4,12 @@
 if (strpos($_SERVER['HTTP_HOST'], "test") !== false) {
     $config['base_url'] = 'https://test.lac-projects.is.ed.ac.uk/';
     $config['skylight_ga_code'] = 'UA-25737241-6';
+    $config['skylight_container_id'] = '55';
 }
 else {
     $config['base_url'] = 'https://lac-projects.is.ed.ac.uk/';
     $config['skylight_ga_code'] = 'UA-25737241-14';
+    $config['skylight_container_id'] = '32';
 }
 
 $config['skylight_appname'] = 'projects';
@@ -26,7 +28,6 @@ $config['skylight_oaipmhcollection'] = 'hdl_10683_19396';
 $config['skylight_oaipmhallowed'] = true;
 
 // Container ID and the field used in solr index to store this ID. Used for restricting search/browse scope.
-$config['skylight_container_id'] = '32';
 $config['skylight_container_field'] = 'location.coll';
 $config['skylight_sitemap_type'] = 'internal';
 
