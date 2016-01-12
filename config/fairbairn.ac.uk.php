@@ -37,6 +37,8 @@ $config['skylight_container_id'] = '"/repositories/5"';
 $config['skylight_container_field'] = 'repository';
 $config['skylight_sitemap_type'] = 'external';
 
+$config['skylight_query_restriction'] = array();
+
 $config['skylight_fields'] = array('Title' => 'title',
     'Creator' => 'creators',
     'Subject' => 'subjects',

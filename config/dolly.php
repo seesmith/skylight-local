@@ -20,7 +20,8 @@ $config['skylight_repository_version'] = '1';
 
 $config['skylight_theme'] = 'dolly';
 
-$config['skylight_handle_prefix'] = '/repositories/2/resources/85257/';
+//$config['skylight_handle_prefix'] = '/repositories/2/resources/85257/';
+$config['skylight_handle_prefix'] = '/repositories/2/';
 
 $config['skylight_fullname'] = 'Towards Dolly';
 
@@ -36,6 +37,8 @@ $config['skylight_container_id'] = array('"/repositories/2/resources/85257"', '"
     '"/repositories/2/resources/84761"', '"/repositories/2/resources/85237"','"/repositories/2/resources/435"', );
 $config['skylight_container_field'] = 'resource';
 $config['skylight_sitemap_type'] = 'external';
+
+$config['skylight_query_restriction'] = array('publish' => 'true');
 
 $config['skylight_fields'] = array('Title' => 'title',
     'Creator' => 'creators',
