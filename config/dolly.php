@@ -1,30 +1,29 @@
 <?php
 
-$config['skylight_appname'] = 'fairbairn';
+$config['skylight_appname'] = 'dolly';
 
 // Uncomment this if you are using a url of the form http://.../art/...
-//$config['skylight_url_prefix'] = 'fairbairn';
+$config['skylight_url_prefix'] = 'dolly';
 
 // set the base url and ga code
 if (strpos($_SERVER['HTTP_HOST'], "test") !== false) {
-    $config['base_url'] = 'http://test.fairbairn.ac.uk/';
     $config['skylight_ga_code'] = '';
-    $config['skylight_solrbase'] = 'http://lac-repo-test14.is.ed.ac.uk:8090/';
+    $config['skylight_solrbase'] = 'http://localhost:8090/';
 }
 else {
-    $config['base_url'] = 'http://www.fairbairn.ac.uk/';
     $config['skylight_ga_code'] = 'UA-25737241-19';
-    $config['skylight_solrbase'] = 'http://lac-repo-live14.is.ed.ac.uk:8090/';
+    $config['skylight_solrbase'] = 'http://localhost:8090/';
 }
 
 $config['skylight_repository_type'] = 'archivesspace'; // Demo 'dspace'
 $config['skylight_repository_version'] = '1';
 
-$config['skylight_theme'] = 'fairbairn';
+$config['skylight_theme'] = 'dolly';
 
-$config['skylight_handle_prefix'] = '/repositories/5/';
+//$config['skylight_handle_prefix'] = '/repositories/2/resources/85257/';
+$config['skylight_handle_prefix'] = '/repositories/2/';
 
-$config['skylight_fullname'] = 'W. Ronald D. Fairbairn';
+$config['skylight_fullname'] = 'Towards Dolly';
 
 $config['skylight_adminemail'] = 'lac-fairbairn@mlist.is.ed.ac.uk';
 
@@ -33,11 +32,13 @@ $config['skylight_oaipmhcollection'] = '';
 $config['skylight_oaipmhallowed'] = true;
 
 // Container ID and the field used in solr index to store this ID. Used for restricting search/browse scope.
-$config['skylight_container_id'] = array('"/repositories/5"');
-$config['skylight_container_field'] = 'repository';
+$config['skylight_container_id'] = array('"/repositories/2/resources/85257"', '"/repositories/2/resources/85256"',
+    '"/repositories/2/resources/543"', '"/repositories/2/resources/85258"','"/repositories/2/resources/40"',
+    '"/repositories/2/resources/84761"', '"/repositories/2/resources/85237"','"/repositories/2/resources/435"', );
+$config['skylight_container_field'] = 'resource';
 $config['skylight_sitemap_type'] = 'external';
 
-$config['skylight_query_restriction'] = array();
+$config['skylight_query_restriction'] = array('publish' => 'true');
 
 $config['skylight_fields'] = array('Title' => 'title',
     'Creator' => 'creators',
