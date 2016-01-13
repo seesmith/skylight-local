@@ -22,7 +22,7 @@ $config['skylight_repository_version'] = '1';
 
 $config['skylight_theme'] = 'fairbairn';
 
-$config['skylight_handle_prefix'] = '/repositories/5/';
+$config['skylight_handle_prefix'] = '/repositories/6/';
 
 $config['skylight_fullname'] = 'W. Ronald D. Fairbairn';
 
@@ -33,7 +33,7 @@ $config['skylight_oaipmhcollection'] = '';
 $config['skylight_oaipmhallowed'] = true;
 
 // Container ID and the field used in solr index to store this ID. Used for restricting search/browse scope.
-$config['skylight_container_id'] = array('"/repositories/5"');
+$config['skylight_container_id'] = array('"/repositories/6"');
 $config['skylight_container_field'] = 'repository';
 $config['skylight_sitemap_type'] = 'external';
 
