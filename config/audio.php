@@ -104,7 +104,7 @@ $config['skylight_search_fields'] = array(
     'Author' => 'dc.contributor.author'
 );
 
-$config['skylight_related_fields'] = array('Type' => 'dc.type.en');
+$config['skylight_related_fields'] = array('Title' => 'dc.relation.boxpartof.en');
 
 //only by title, no date at the moment
 $config['skylight_sort_fields'] = array(

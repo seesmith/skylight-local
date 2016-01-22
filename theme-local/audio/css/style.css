@@ -19,7 +19,7 @@
 .footer .nav { display: inline-block; }
 
 .footer .nav a:hover{
-    color: #B27B80;
+    color: #008AAB;
     background-color: #eeeeee;
 }
 
@@ -130,7 +130,7 @@ div.related {
 }
 
 .wide a:hover{
-    color: #B27B80;
+    color: #008AAB;
     background-color: #eeeeee;
 }
 
@@ -139,8 +139,8 @@ div.related {
 }
 
 .jumbotron {
-    /**background: url(../images/0023123c-bkg-1140v2.png) no-repeat 0 0;*/
-    background-color: #B27B80;
+    background: url(../images/audio-jumbo-back.png) no-repeat 0 0;
+    background-color: #008AAB;
     color: #ffffff;
     margin-top: 20px;
     font-weight: 100;
@@ -161,17 +161,17 @@ div.related {
 }
 
 .bg-primary {
-    background-color: #B27B80;
+    background-color: #008AAB;
 }
 
 .btn-primary {
-    background-color: #B27B80;
+    background-color: #008AAB;
     border-color: #eeeeee;
 }
 
 .btn-primary:hover {
     background-color: #eeeeee;
-    color: #B27B80;
+    color: #008AAB;
     border-color: #eeeeee;
 }
 
@@ -180,26 +180,26 @@ div.related {
 }
 
 .list-group-item.active {
-    background-color: #B27B80;
-    border-color: #B27B80;
+    background-color: #008AAB;
+    border-color: #008AAB;
 }
 
 .list-group-item.active:hover {
     background-color: #eeeeee;
-    color: #B27B80;
-    border-color: #B27B80;
+    color: #008AAB;
+    border-color: #008AAB;
 }
 
 .list-group-item.active:hover a{
-    color: #B27B80;
+    color: #008AAB;
 }
 
 .text-primary {
-    color: #B27B80;
+    color: #008AAB;
 }
 
 a {
-    color: #B27B80;
+    color: #008AAB;
 }
 
 a:hover {
@@ -209,24 +209,24 @@ a:hover {
 
 .pagination > .active > span,
 .pagination > .active > a {
-    background-color: #B27B80;
+    background-color: #008AAB;
     color: #D1D6E7;
-    border-color: #B27B80;
+    border-color: #008AAB;
 }
 
 .pagination > li > a {
-    color: #B27B80;
+    color: #008AAB;
 }
 
 .pagination > li > a:hover {
-    color: #B27B80;
+    color: #008AAB;
 }
 
 .pagination > .active > span:hover,
 .pagination > .active > a:hover{
     background-color: #D1D6E7;
-    color: #B27B80;
-    border-color: #B27B80;
+    color: #008AAB;
+    border-color: #008AAB;
 }
 
 .record-tabs {
@@ -240,7 +240,7 @@ a:hover {
 
 .feedback_form h1 {
     font-size: 18px;
-    color: #B27B80;
+    color: #008AAB;
 }
 
 .feedback_form label {
@@ -271,7 +271,7 @@ label, input[type="button"], input[type="submit"], input[type="image"], button {
 }
 
 input.btn {
-    background: #B27B80 none repeat scroll 0 0;
+    background: #008AAB none repeat scroll 0 0;
     border: medium none;
     border-radius: 5px;
     color: #fff;
@@ -326,10 +326,10 @@ div.spacer {
     display: block;
     padding: 5px 5px;
     background: #eeeeee;
-    color: #B27B80;
+    color: #008AAB;
 }
 
 .tags > li.active > a:hover {
-    background: #B27B80;
+    background: #008AAB;
     color: #ffffff;
 }
