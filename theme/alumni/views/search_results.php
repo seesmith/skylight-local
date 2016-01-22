@@ -6,11 +6,12 @@
 
         $title_field = $this->skylight_utilities->getField('Title');
         $author_field = $this->skylight_utilities->getField('Author');
-        $date_field = $this->skylight_utilities->getField('Date Made');
+        $date_field = $this->skylight_utilities->getField('Anchor Date');
         $type_field = $this->skylight_utilities->getField('Type');
         $bitstream_field = $this->skylight_utilities->getField('Bitstream');
         $thumbnail_field = $this->skylight_utilities->getField('Thumbnail');
         $subject_field = $this->skylight_utilities->getField('Subject');
+        $collection_field = $this->skylight_utilities->getField('Collection');
 
         $base_parameters = preg_replace("/[?&]sort_by=[_a-zA-Z+%20. ]+/","",$base_parameters);
         if($base_parameters == "") {
@@ -75,20 +76,41 @@
                     <div class="tags">
 
 
-                        <?php if(array_key_exists($subject_field,$doc)) { ?>
+                        <?php if(array_key_exists($collection_field,$doc)) { ?>
                             <?php
 
-                            $num_subject = 0;
-                            foreach ($doc[$subject_field] as $subject) {
+                            $num_collection = 0;
+                            foreach ($doc[$collection_field] as $collection) {
 
-                                $orig_filter = urlencode($subject);
+                                $orig_filter = urlencode($collection);
 
-                                $lower_orig_filter = strtolower($subject);
+                                $lower_orig_filter = strtolower($collection);
                                 $lower_orig_filter = urlencode($lower_orig_filter);
 
-                                echo '<a href="./search/*:*/Subject:%22'.$lower_orig_filter.'%7C%7C%7C'.$orig_filter.'%22">'.$subject.'</a>';
-                                $num_subject++;
-                                if($num_subject < sizeof($doc[$subject_field])) {
+                                echo '<a href="./search/*:*/Subject:%22'.$lower_orig_filter.'%7C%7C%7C'.$orig_filter.'%22">'.$collection.'</a>';
+                                $num_collection++;
+                                if($num_collection < sizeof($doc[$collection_field])) {
+                                    echo ' ';
+                                }
+                            }
+
+                            ?>
+                        <?php } ?>
+
+                        <?php if(array_key_exists($date_field,$doc)) { ?>
+                            <?php
+
+                            $num_date = 0;
+                            foreach ($doc[$date_field] as $date) {
+
+                                $orig_filter = urlencode($date);
+
+                                $lower_orig_filter = strtolower($date);
+                                $lower_orig_filter = urlencode($lower_orig_filter);
+
+                                echo '<a href="./search/*:*/Anchor Date:%22'.$lower_orig_filter.'%7C%7C%7C'.$orig_filter.'%22">'.$date.'</a>';
+                                $num_date++;
+                                if($num_date < sizeof($doc[$date_field])) {
                                     echo ' ';
                                 }
                             }

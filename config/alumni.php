@@ -40,8 +40,8 @@ $config['skylight_fields'] = array('Name' => 'dc.contributor.author.en',
     'Gender' => 'dc.contributor.authorgender.en',
     'Age' => 'dc.contributor.authorage',
     'Faculty' => 'dc.description.faculty.en',
-    'Nationality' => 'dc.contributor.authorcountry',
-    'First year of study'=>'dc.coverage.temporal.en',
+    'Nationality' => 'dc.contributor.authorcountry.en',
+    'Anchor Date'=>'dc.coverage.temporal.en',
     'Collection'=>'dc.relation.ispartof.en',
     'Date of award'=>'dc.coverage.temporalaward.en',
     'Award'=>'dc.description.award.en',
@@ -61,6 +61,7 @@ $config['skylight_fields'] = array('Name' => 'dc.contributor.author.en',
     'Royal Army Medical Corps'=>'dc.coverage.temporalramc.en',
     'Royal Medical Society'=>'dc.coverage.temporalrms.en',
     'Span of study'=>'dc.coverage.temporalstudyspan.en',
+    'First year of study'=>'dc.coverage.temporalyear1.en',
     'Year 2'=>'dc.coverage.temporalyear2.en',
     'Year 3'=>'dc.coverage.temporalyear3.en',
     'Year 4'=>'dc.coverage.temporalyear4.en',
@@ -75,11 +76,22 @@ $config['skylight_fields'] = array('Name' => 'dc.contributor.author.en',
     'Robb'=>'dc.relation.ispartofrobb.en',
     'Watt'=>'dc.relation.ispartofwatt.en',
     'Destination after study'=>'dc.coverage.spatial.en',
-
 );
 
-$config['skylight_date_filters'] = array('Date' => 'dateIssued.year_sort');
-$config['skylight_filters'] = array('Collection' => 'collection_filter');
+// Static pages for collections
+$config['skylight_static_pages'] = array('Students of Medicine, 1762-1826'=>'rosner',
+    'First Matriculations, 1890-1899'=>'firstmat',
+    'Students at New College, 1843-1943'=>'newcoll',
+    'Extra Academical students, 1887-1922'=>'extraac',
+    'Graduates in Veterinary Medicine, 1911-1955'=>'vetgrad',
+    'Students of Medicine (sample of 205), 1833-1846'=>'medsample',
+    'Awards to Women students, 1876-1894'=>'women',
+    'Early Veterinary Graduates, 1825-1865'=>'earlyvet')
+;
+
+$config['skylight_date_filters'] = array('CatDate' => 'dateIssued.year_sort');
+//$config['skylight_date_filters'] = array('Date' => 'datetemporal_filter');
+$config['skylight_filters'] = array('Collection' => 'collection_filter', 'Date' => 'datetemporal_filter');
 
 $config['skylight_filter_delimiter'] = ':';
 
@@ -88,7 +100,16 @@ $config['skylight_meta_fields'] = array('Title' => 'dc.title',
     'Type' => 'dc.type',
 );
 
-$config['skylight_recorddisplay'] = array('Title','Date','Subject','Description', 'Birthplace','Previous School Education', 'Matriculation Number', 'Gender', 'Age', 'Faculty',
+$config['skylight_recorddisplay'] = array('Title',
+    'Date',
+    'Subject',
+    'Description',
+    'Birthplace',
+    'Previous School Education',
+    'Matriculation Number',
+    'Gender',
+    'Age',
+    'Faculty',
     'Nationality',
     'First year of study',
     'Collection',
@@ -135,7 +156,7 @@ $config['skylight_search_fields'] = array(
 $config['skylight_related_fields'] = array('Subject' => 'dc.subject.en', 'Title' => 'dc.title.en');
 $config['skylight_related_number'] = 10;
 
-$config['skylight_sort_fields'] = array('Title' => 'dc.title_sort'
+$config['skylight_sort_fields'] = array('Surname' => 'dc.title_sort'
 );
 
 $config['skylight_feed_fields'] = array('Title' => 'Title',
