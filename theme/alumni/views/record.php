@@ -6,6 +6,8 @@ $thumbnail_field = $this->skylight_utilities->getField("Thumbnail");
 $subject_field = $this->skylight_utilities->getField("Subject");
 $uri_field = $this->skylight_utilities->getField("Link");
 $filters = array_keys($this->config->item("skylight_filters"));
+$static_page = $this->config->item("skylight_static_pages");
+
 
 $type = 'Unknown';
 $numThumbnails = 0;
@@ -243,7 +245,20 @@ if(isset($solr[$type_field])) {
                         $lower_orig_filter = strtolower($metadatavalue);
                         $lower_orig_filter = urlencode($lower_orig_filter);
 
-                        echo '<a href="./search/*:*/' . $key . ':%22'.$lower_orig_filter.'%7C%7C%7C'.$orig_filter.'%22">'.$metadatavalue.'</a>';
+
+                        if($key = 'Collection')
+                        {
+                            foreach ($static_page as $key => $value) {
+                                if ($key == $metadatavalue)
+                                {
+                                    echo $metadatavalue.': <a href="./search/*:*/' . $key . ':%22'.$lower_orig_filter.'%7C%7C%7C'.$orig_filter.'%22"><i class="fa fa-search fa-lg">&nbsp;</i>See All Records</a> | <a href="./'.$value.'"><i class="fa fa-info-circle fa-lg">&nbsp;</i>More Info</a>';
+
+                                }
+                            }
+                        }
+                        else{
+                            echo '<a href="./search/*:*/' . $key . ':%22'.$lower_orig_filter.'%7C%7C%7C'.$orig_filter.'%22">'.$metadatavalue.'</a>';
+                        }
                     }
                     else {
                         echo $metadatavalue;
