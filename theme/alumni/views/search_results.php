@@ -108,7 +108,7 @@
                                 $lower_orig_filter = strtolower($date);
                                 $lower_orig_filter = urlencode($lower_orig_filter);
 
-                                echo '<a href="./search/*:*/Anchor Date:%22'.$lower_orig_filter.'%7C%7C%7C'.$orig_filter.'%22">'.$date.'</a>';
+                                echo '<a href="./search/*:*/Date:%22'.$lower_orig_filter.'%7C%7C%7C'.$orig_filter.'%22">'.$date.'</a>';
                                 $num_date++;
                                 if($num_date < sizeof($doc[$date_field])) {
                                     echo ' ';
