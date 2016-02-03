@@ -7,6 +7,7 @@ $bitstream_field = $this->skylight_utilities->getField("Bitstream");
 $thumbnail_field = $this->skylight_utilities->getField("Thumbnail");
 $filters = array_keys($this->config->item("skylight_filters"));
 $link_uri_field = $this->skylight_utilities->getField("Link");
+$media_uri = $this->config->item("skylight_media_url_prefix");
 
 $type = 'Unknown';
 $mainImageTest = false;
@@ -43,10 +44,11 @@ if(isset($solr[$bitstream_field]) && $link_bitstream) {
         $b_handle = $b_segments[3];
         $b_seq = $b_segments[4];
         $b_handle_id = preg_replace('/^.*\//', '',$b_handle);
-        $b_uri = './record/'.$b_handle_id.'/'.$b_seq.'/'.$b_filename;
 
-        if ((strpos($b_uri, ".jpg") > 0) or (strpos($b_uri, ".JPG") > 0))
+
+        if ((strpos($b_filename, ".jpg") > 0) or (strpos($b_filename, ".JPG") > 0))
         {
+            $b_uri = './record/'.$b_handle_id.'/'.$b_seq.'/'.$b_filename;
 
             $bitstreamLinks[$numBitstreams] = '<div class="bitstream-image">';
 
@@ -68,8 +70,9 @@ if(isset($solr[$bitstream_field]) && $link_bitstream) {
             $numBitstreams++;
 
         }
-        else if ((strpos($b_uri, ".mp3") > 0) or (strpos($b_uri, ".MP3") > 0)) {
+        else if ((strpos($b_filename, ".mp3") > 0) or (strpos($b_filename, ".MP3") > 0)) {
 
+            $b_uri = './record/'.$b_handle_id.'/'.$b_seq.'/'.$b_filename;
             $audioLink .= '<audio controls>';
             $audioLink .= '<source src="' . $b_uri . '" type="audio/mpeg" />Audio loading...';
             $audioLink .= '</audio>';
@@ -77,30 +80,31 @@ if(isset($solr[$bitstream_field]) && $link_bitstream) {
 
         }
 
-        else if ((strpos($b_uri, ".mp4") > 0) or (strpos($b_uri, ".MP4") > 0))
+        else if ((strpos($b_filename, ".mp4") > 0) or (strpos($b_filename, ".MP4") > 0))
         {
-
+            $b_uri = $media_uri.$b_handle_id.'/'.$b_seq.'/'.$b_filename;
             // if it's chrome, use webm if it exists
             if (strpos($_SERVER['HTTP_USER_AGENT'], 'Chrome') == false) {
 
-                $videoLink .= '<div class="flowplayer" data-analytics="' . $ga_code . '" title="' . $record_title . ": " . $b_filename . '">';
-                $videoLink .= '<video controls>';
-                $videoLink .= '<source type="video/mp4" src="' . $b_uri . '" />Video loading...';
+
+                $videoLink .= '<div class="flowplayer" data-analytics="' . $ga_code . '" title="' . $b_filename . '">';
+                $videoLink .= '<video preload=auto autoplay loop width="100%" height="auto" controls>';
+                $videoLink .= '<source src="' . $b_uri . '" type="video/mp4" />Video loading...';
                 $videoLink .= '</video>';
                 $videoLink .= '</div>';
-
                 $videoFile = true;
 
             }
         }
-        else if ((strpos($b_uri, ".webm") > 0) or (strpos($b_uri, ".WEBM") > 0))
+        else if ((strpos($b_filename, ".webm") > 0) or (strpos($b_filename, ".WEBM") > 0))
         {
 
+            $b_uri = $media_uri.$b_handle_id.'/'.$b_seq.'/'.$b_filename;
             // if it's chrome, use webm if it exists
             if (strpos($_SERVER['HTTP_USER_AGENT'], 'Chrome') == true) {
 
                 $videoLink .= '<div class="flowplayer" data-analytics="' . $ga_code . '" title="' . $record_title . ": " . $b_filename . '">';
-                $videoLink .= '<video controls>';
+                $videoLink .= '<video preload=auto autoplay loop width="100%" height="auto">';
                 $videoLink .= '<source src="' . $b_uri . '" type="video/webm" />Video loading...';
                 $videoLink .= '</video>';
                 $videoLink .= '</div>';

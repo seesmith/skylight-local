@@ -8,6 +8,9 @@ $parent_type_field = $this->skylight_utilities->getField("Parent_Type");
 $id_field = $this->skylight_utilities->getField("Identifier");
 $filters = array_keys($this->config->item("skylight_filters"));
 $link_uri_field = $this->skylight_utilities->getField("Link");
+$id = $this->skylight_utilities->getField("Id");
+
+$media_uri = $this->config->item("skylight_link_url");
 
 $mainImageTest = false;
 $numThumbnails = 0;
@@ -19,13 +22,7 @@ $bitstreamLinks = array();
     <div class="full-title">
         <h1 class="itemtitle"><?php echo $record_title ?></h1>
     </div>
-    <?php
-    if(isset($solr[$parent_id_field])) {
-       echo '<a href ="./record/' . $solr[$parent_id_field][0] .'/'. $solr[$parent_type_field][0] . '" > Parent Record </a>';
-    }
-    ?>
-
-
+    <a href ="http://localhost:8081<?php echo $solr[$id][0] ?>" title="Full record at archive collections online " target="_blank">View full record in University of Edinburgh archive collections </a>
     <div class="full-metadata">
         <table>
             <tbody>

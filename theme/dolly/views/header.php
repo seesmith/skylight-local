@@ -98,11 +98,22 @@
 
         <div id="container">
             <header>
-                <a href="<?php echo base_url(); ?>"  title="<?php echo $this->config->item('skylight_fullname');?> Home">
-               <div id="collection-title">
 
-               </div>
-                </a>
+                    <a href="<?php echo base_url(); ?>"  title="<?php echo $this->config->item('skylight_fullname');?> Home">
+                        <div id="collection-logo">
+                        </div>
+                    </a>
+                    <a href="<?php echo base_url(); ?>"  title="<?php echo $this->config->item('skylight_fullname');?> Home">
+                        <div id="collection-title">
+                        </div>
+                    </a>
+                    <a href="http://www.ed.ac.uk" title="University of Edinburgh Home" target="_blank">
+                        <div id="uoe-logo-header">
+                        </div>
+                    </a>
+
+                <div class="clearfix"></div>
+
                <div id="collection-search">
                 <form action="./redirect/" method="post">
                     <fieldset class="search">

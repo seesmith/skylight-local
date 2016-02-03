@@ -142,18 +142,26 @@ input.backbtn:hover			    { color: #fff; background: #A0A0A0; }
 
 /* Structure -------------------------------------------------------------------------------------------------------------*/
 #container 			{ width: 940px; margin: auto auto;  background: #ffffff; }
-header				{ position: relative; width: 940px; height: 195px; background: url(../images/dolly3.jpg) no-repeat 0 0;}
+header				{ position: relative; width: 940px; height: 183px; }
 .col-main			{ float: left; margin-left: 10px; margin-right: 40px; width: 650px; }
 .col-sidebar		{ float: left; width: 228px; margin-top: -42px; background: #ffffff;  border: solid 1px #1E61B8}
 .ie7 .col-sidebar	{ padding-bottom: 30px; }
 
 /* Common Containers & Subclasses ----------------------------------------------------------------------------------------*/
+#collection-logo	{ display: block; float: left; width: 177px; height: 120px; margin-left:10px; margin-top:3px;
+    background: url(../images/dolly-logo.jpg) no-repeat 0 0;}
+#collection-logo a { text-decoration: none; color: #373B41;}
+#collection-logo a:hover { text-decoration: none; color: #1E61B8;}
 
-#collection-title	{ display: block; width: 540px; height: 85px; padding-top: 50px; font-size: 50px; font-weight: 400; padding-left: 120px;}
+#collection-title	{ display: block; float: left; width: 600px; height: 76px; margin-left:10px; margin-top: 40px;
+    background: url(../images/dolly-text.jpg) no-repeat 0 0;}
 #collection-title a { text-decoration: none; color: #373B41;}
 #collection-title a:hover { text-decoration: none; color: #1E61B8;}
 
-#collection-search  { width: 660px; padding-top: 20px; padding-left: 10px;}
+#uoe-logo-header	{ display: block; float: right; width: 119px; height: 88px;
+    background: url(../images/UoELogo.gif) no-repeat 0 0; margin-top: 10px;}
+
+#collection-search  { width: 660px; padding-top: 17px; padding-left: 10px;}
 
 
 .search							{ padding-bottom: 22px; width: 660px; }
