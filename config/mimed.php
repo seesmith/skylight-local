@@ -12,11 +12,9 @@ $config['skylight_fullname'] = 'MUSICAL INSTRUMENT MUSEUMS EDINBURGH';
 // set ga code
 if (strpos($_SERVER['HTTP_HOST'], "test") !== false) {
     $config['skylight_ga_code'] = 'UA-25737241-6';
-    $config['skylight_media_url_prefix'] = 'http://localhost:8080/media/';
 }
 else {
     $config['skylight_ga_code'] = 'UA-25737241-9';
-    $config['skylight_media_url_prefix'] = 'http://localhost:8080/media/';
 }
 
 $config['skylight_adminemail'] = 'schgals@ed.ac.uk';

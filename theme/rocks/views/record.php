@@ -6,6 +6,8 @@ $bitstream_field = $this->skylight_utilities->getField("Bitstream");
 $thumbnail_field = $this->skylight_utilities->getField("Thumbnail");
 $filters = array_keys($this->config->item("skylight_filters"));
 
+$media_uri = $this->config->item("skylight_media_url_prefix");
+
 $type = 'Unknown';
 
 if(isset($solr[$type_field])) {
@@ -158,30 +160,31 @@ if(isset($solr[$type_field])) {
 
             }
 
-            else if ((strpos($b_uri, ".mp4") > 0) or (strpos($b_uri, ".MP4") > 0))
+            else if ((strpos($b_filename, ".mp4") > 0) or (strpos($b_filename, ".MP4") > 0))
             {
-
+                $b_uri = $media_uri.$b_handle_id.'/'.$b_seq.'/'.$b_filename;
                 // if it's chrome, use webm if it exists
                 if (strpos($_SERVER['HTTP_USER_AGENT'], 'Chrome') == false) {
 
-                    $videoLink .= '<div class="flowplayer" data-analytics="' . $ga_code . '" title="' . $record_title . ": " . $b_filename . '">';
-                    $videoLink .= '<video controls>';
+
+                    $videoLink .= '<div class="flowplayer" data-analytics="' . $ga_code . '" title="' . $b_filename . '">';
+                    $videoLink .= '<video preload=auto autoplay loop width="100%" height="auto" controls>';
                     $videoLink .= '<source src="' . $b_uri . '" type="video/mp4" />Video loading...';
                     $videoLink .= '</video>';
                     $videoLink .= '</div>';
-
                     $videoFile = true;
 
                 }
             }
-            else if ((strpos($b_uri, ".webm") > 0) or (strpos($b_uri, ".WEBM") > 0))
+            else if ((strpos($b_filename, ".webm") > 0) or (strpos($b_filename, ".WEBM") > 0))
             {
 
+                $b_uri = $media_uri.$b_handle_id.'/'.$b_seq.'/'.$b_filename;
                 // if it's chrome, use webm if it exists
                 if (strpos($_SERVER['HTTP_USER_AGENT'], 'Chrome') == true) {
 
                     $videoLink .= '<div class="flowplayer" data-analytics="' . $ga_code . '" title="' . $record_title . ": " . $b_filename . '">';
-                    $videoLink .= '<video controls>';
+                    $videoLink .= '<video preload=auto autoplay loop width="100%" height="auto">';
                     $videoLink .= '<source src="' . $b_uri . '" type="video/webm" />Video loading...';
                     $videoLink .= '</video>';
                     $videoLink .= '</div>';
