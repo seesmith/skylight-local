@@ -41,7 +41,7 @@ $config['skylight_fields'] = array('Name' => 'dc.contributor.author.en',
     'Age' => 'dc.contributor.authorage',
     'Faculty' => 'dc.description.faculty.en',
     'Nationality' => 'dc.contributor.authorcountry.en',
-    'Anchor Date'=>'dc.coverage.temporal.en',
+    'Date'=>'dc.coverage.temporal.en',
     'Collection'=>'dc.relation.ispartof.en',
     'Date of award'=>'dc.coverage.temporalaward.en',
     'Award'=>'dc.description.award.en',
@@ -76,6 +76,7 @@ $config['skylight_fields'] = array('Name' => 'dc.contributor.author.en',
     'Robb'=>'dc.relation.ispartofrobb.en',
     'Watt'=>'dc.relation.ispartofwatt.en',
     'Destination after study'=>'dc.coverage.spatial.en',
+    'Subject'=>'dc.subject.en'
 );
 
 // Static pages for collections
@@ -86,10 +87,12 @@ $config['skylight_static_pages'] = array('Students of Medicine, 1762-1826'=>'ros
     'Graduates in Veterinary Medicine, 1911-1955'=>'vetgrad',
     'Students of Medicine (sample of 205), 1833-1846'=>'medsample',
     'Awards to Women students, 1876-1894'=>'women',
-    'Early Veterinary Graduates, 1825-1865'=>'earlyvet')
+    'Early Veterinary Graduates, 1825-1865'=>'earlyvet',
+    'Female Medical Graduates 1896-1900'=>'femgrad'
+    )
 ;
 
-$config['skylight_date_filters'] = array('CatDate' => 'dateIssued.year_sort');
+$config['skylight_date_filters'] = array();
 //$config['skylight_date_filters'] = array('Date' => 'datetemporal_filter');
 $config['skylight_filters'] = array('Collection' => 'collection_filter', 'Date' => 'datetemporal_filter');
 
@@ -149,8 +152,8 @@ $config['skylight_recorddisplay'] = array('Title',
 $config['skylight_searchresult_display'] = array('Title','Subject','Type','Bitstream', 'Thumbnail');
 
 $config['skylight_search_fields'] = array(
-    'Subject' => 'dc.subject',
-    'Type' => 'dc.type'
+    'Collection' => 'dc.collection.en',
+    'Date' => 'dc.coverage.temporal.en'
 );
 
 $config['skylight_related_fields'] = array('Subject' => 'dc.subject.en', 'Title' => 'dc.title.en');
