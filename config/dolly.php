@@ -9,10 +9,12 @@ $config['skylight_url_prefix'] = 'dolly';
 if (strpos($_SERVER['HTTP_HOST'], "test") !== false) {
     $config['skylight_ga_code'] = '';
     $config['skylight_solrbase'] = 'http://localhost:8090/';
+    $config['skylight_link_url'] = 'http://localhost:8081';
 }
 else {
     $config['skylight_ga_code'] = 'UA-25737241-19';
     $config['skylight_solrbase'] = 'http://localhost:8090/';
+    $config['skylight_link_url'] = 'http://archives.collections.ed.ac.uk';
 }
 
 $config['skylight_repository_type'] = 'archivesspace'; // Demo 'dspace'
@@ -25,7 +27,7 @@ $config['skylight_handle_prefix'] = '/repositories/2/';
 
 $config['skylight_fullname'] = 'Towards Dolly';
 
-$config['skylight_adminemail'] = 'lac-fairbairn@mlist.is.ed.ac.uk';
+$config['skylight_adminemail'] = 'lddt@mlist.is.ed.ac.uk';
 
 $config['skylight_oaipmhcollection'] = '';
 
@@ -45,6 +47,7 @@ $config['skylight_fields'] = array('Title' => 'title',
     'Subject' => 'subjects',
     'Type' => 'primary_type',
     'Level' => 'level',
+    'Resource_Id' => 'resource',
     'Date' => 'create_time',
     'JSON' => 'json',
     'Agent' => 'agents',
