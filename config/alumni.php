@@ -41,7 +41,7 @@ $config['skylight_fields'] = array('Name' => 'dc.contributor.author.en',
     'Age' => 'dc.contributor.authorage',
     'Faculty' => 'dc.description.faculty.en',
     'Nationality' => 'dc.contributor.authorcountry.en',
-    'Date'=>'dc.coverage.temporal.en',
+    'Year'=>'dc.coverage.temporal.en',
     'Collection'=>'dc.relation.ispartof.en',
     'Date of award'=>'dc.coverage.temporalaward.en',
     'Award'=>'dc.description.award.en',
@@ -94,7 +94,7 @@ $config['skylight_static_pages'] = array('Students of Medicine, 1762-1826'=>'ros
 
 $config['skylight_date_filters'] = array();
 //$config['skylight_date_filters'] = array('Date' => 'datetemporal_filter');
-$config['skylight_filters'] = array('Collection' => 'collection_filter', 'Date' => 'datetemporal_filter');
+$config['skylight_filters'] = array('Collection' => 'collection_filter', 'Year' => 'datetemporal_filter');
 
 $config['skylight_filter_delimiter'] = ':';
 
@@ -104,7 +104,7 @@ $config['skylight_meta_fields'] = array('Title' => 'dc.title',
 );
 
 $config['skylight_recorddisplay'] = array('Title',
-    'Date',
+    'Year',
     'Subject',
     'Description',
     'Birthplace',
@@ -149,11 +149,11 @@ $config['skylight_recorddisplay'] = array('Title',
     'Watt',
     'Destination after study',);
 
-$config['skylight_searchresult_display'] = array('Title','Subject','Type','Bitstream', 'Thumbnail');
+$config['skylight_searchresult_display'] = array('Title','Subject','Type','Bitstream', 'Thumbnail', 'Year', 'Collection');
 
 $config['skylight_search_fields'] = array(
     'Collection' => 'dc.collection.en',
-    'Date' => 'dc.coverage.temporal.en'
+    'Year' => 'dc.coverage.temporal.en'
 );
 
 $config['skylight_related_fields'] = array('Subject' => 'dc.subject.en', 'Title' => 'dc.title.en');
@@ -190,5 +190,4 @@ $config['skylight_highlight_fields'] = 'dc.title.en,dc.subject.en,dc.description
 
 $config['skylight_homepage_recentitems'] = false;
 $config['skylight_homepage_fullwidth'] = false;
-
 ?>

@@ -6,7 +6,7 @@
 
         $title_field = $this->skylight_utilities->getField('Title');
         $author_field = $this->skylight_utilities->getField('Author');
-        $date_field = $this->skylight_utilities->getField('Anchor Date');
+        $date_field = $this->skylight_utilities->getField('Year');
         $type_field = $this->skylight_utilities->getField('Type');
         $bitstream_field = $this->skylight_utilities->getField('Bitstream');
         $thumbnail_field = $this->skylight_utilities->getField('Thumbnail');
@@ -40,7 +40,7 @@
             ?>
 
                 <em><?php echo $label ?></em>
-                <?php if($label != "Date") { ?>
+                <?php if($label != "Year") { ?>
                 <a href="<?php echo $base_search.$base_parameters.$sort.$field.'+asc' ?>">A-Z</a> |
                 <a href="<?php echo $base_search.$base_parameters.$sort.$field.'+desc' ?>">Z-A</a>
             <?php } else { ?>
@@ -108,7 +108,7 @@
                                 $lower_orig_filter = strtolower($date);
                                 $lower_orig_filter = urlencode($lower_orig_filter);
 
-                                echo '<a href="./search/*:*/Date:%22'.$lower_orig_filter.'%7C%7C%7C'.$orig_filter.'%22">'.$date.'</a>';
+                                echo '<a href="./search/*:*/Year:%22'.$lower_orig_filter.'%7C%7C%7C'.$orig_filter.'%22">'.$date.'</a>';
                                 $num_date++;
                                 if($num_date < sizeof($doc[$date_field])) {
                                     echo ' ';
