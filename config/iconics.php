@@ -71,6 +71,8 @@ $config['skylight_search_fields'] = array('Keywords' => 'text',
 
 $config['skylight_sort_fields'] = array( 'Title' => 'dc.title_sort');
 
+$config['skylight_default_sort'] = 'dc.title_sort+asc';
+
 $config['skylight_feed_fields'] = array('Title' => 'Title',
     'Author' => 'Author',
     'Subject' => 'Subject',

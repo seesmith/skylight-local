@@ -89,6 +89,8 @@ $config['skylight_sort_fields'] = array(
     'Artist' => 'dc.contributor.author_sort ', 'Title' => 'dc.title_sort'
 );
 
+$config['skylight_default_sort'] = 'dc.contributor.author_sort+asc';
+
 $config['skylight_feed_fields'] = array('Title' => 'Title',
     'Artist' => 'Artist',
     'Classification' => 'Classification',

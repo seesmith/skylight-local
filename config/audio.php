@@ -110,6 +110,7 @@ $config['skylight_related_fields'] = array('Title' => 'dc.relation.boxpartof.en'
 $config['skylight_sort_fields'] = array(
     'Author' => 'dc.contributor.author_sort ', 'Title' => 'dc.title_sort'
 );
+$config['skylight_default_sort'] = 'dc.title_sort+asc';
 
 
 $config['skylight_feed_fields'] = array('Title' => 'Title',
