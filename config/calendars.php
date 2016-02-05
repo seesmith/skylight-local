@@ -69,6 +69,7 @@ $config['skylight_related_fields'] = array('Subject' => 'dc.subject.en');
 $config['skylight_sort_fields'] = array('Title' => 'dc.title_sort',
     'Subject' => 'dc.subject_sort'
 );
+$config['skylight_default_sort'] = 'dc.title_sort+asc';
 
 $config['skylight_feed_fields'] = array('Title' => 'Title',
     'Subject' => 'Subject',
