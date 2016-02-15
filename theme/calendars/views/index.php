@@ -1,112 +1,107 @@
 <div class="record">
     <div class="content byEditor">
-        <h1 class="laing">University Calendar 2015: Images from the <a href='./laing'>David Laing Collection</a></h1>
+        <h1 class="laing">University Calendar 2016: Images from the Georg Braun&#39;s <i>Cities Of The World</i></h1>
 
         <div class="jcarousel-wrapper">
             <div class="jcarousel" data-jcarousel="true">
                 <ul style="left: 0; top: 0;">
-                    <li><a href='./record/23116'>
-                            <img alt="Petition to the Pope" title="Petition to the Pope" src="<?php echo base_url(); ?>theme/calendars/images/carousel/oct14.jpg">
+                    <li><a href='./record/52833'>
+                            <img alt="Civitates Orbis Terrarum Spice Route" title="Civitates Orbis Terrarum Spice Route" src="<?php echo base_url(); ?>theme/calendars/images/carousel/0057313c.jpg">
+                            <div class="carousel-caption caption-iog" onmouseover="this.style.background='#c78c86';this.style.color='#ffffff'" onmouseout="this.style.background='#872379';this.style.color='#FFFFFF'">
+                                October 15: Spice Route
+                            </div>
+                        </a></li>
+                    <li><a href='./record/52834'>
+                            <img alt="Civitates Orbis Terrarum Augsburg" title="Civitates Orbis Terrarum Augsburg" src="<?php echo base_url(); ?>theme/calendars/images/carousel/0057317c.jpg">
                             <div class="carousel-caption caption-iog" onmouseover="this.style.background='#c78c86';this.style.color='#ffffff'" onmouseout="this.style.background='#872379';this.style.color='#ffffff'">
-                                Petition to the Pope
+                                November 15: Augsburg
                             </div>
                         </a></li>
-                    <li><a href='./record/23117'>
-                            <img alt="Foreign Knight in Armour" title="Foreign Knight in Armour" src="<?php echo base_url(); ?>theme/calendars/images/carousel/nov14.jpg">
-                            <div class="carousel-caption caption-iog" onmouseover="this.style.background='#c78c86';this.style.color='#ffffff'" onmouseout="this.style.background='#872379';this.style.color='#FFFFFF'">
-                                Foreign Knight in Armour
-                            </div>
-                        </a></li>
-                    <li><a href='./record/23118'>
-                            <img alt="Agony in the Garden" title="Agony in the Garden" src="<?php echo base_url(); ?>theme/calendars/images/carousel/dec14.jpg">
+                    <li><a href='./record/52835'>
+                            <img alt="Civitates Orbis Terrarum Antwerp" title="Civitates Orbis Terrarum Antwerp" src="<?php echo base_url(); ?>theme/calendars/images/carousel/0057322c.jpg">
                             <div class="carousel-caption caption-iog" onmouseover="this.style.background='#c78c86';this.style.color='#ffffff'" onmouseout="this.style.background='#872379';this.style.color='#ffffff'">
-                                Agony in the Garden
+                                December 15: Antwerp
                             </div>
                         </a></li>
-                    <li><a href='./record/23119'>
-                            <img alt="Seal of Robert Burns" title="Seal of Robert Burns" src="<?php echo base_url(); ?>theme/calendars/images/carousel/jan15.jpg">
+                    <li><a href='./record/52836'>
+                            <img alt="Civitates Orbis Terrarum Rhodes" title="Civitates Orbis Terrarum Rhodes" src="<?php echo base_url(); ?>theme/calendars/images/carousel/0057331c.jpg">
                             <div class="carousel-caption caption-iog" onmouseover="this.style.background='#c78c86';this.style.color='#ffffff'" onmouseout="this.style.background='#872379';this.style.color='#FFFFFF'">
-                                Seal of Robert Burns
+                                January: Rhodes
                             </div>
                         </a></li>
-                    <li><a href='./record/23120'>
-                            <img alt="Commission from the Doge of Venice" title="Commission from the Doge of Venice" src="<?php echo base_url(); ?>theme/calendars/images/carousel/feb15.jpg">
+                    <li><a href='./record/52837'>
+                            <img alt="Civitates Orbis Terrarum Cairo" title="Civitates Orbis Terrarum Cairo" src="<?php echo base_url(); ?>theme/calendars/images/carousel/0057312c.jpg">
                             <div class="carousel-caption caption-iog" onmouseover="this.style.background='#c78c86';this.style.color='#ffffff'" onmouseout="this.style.background='#872379';this.style.color='#FFFFFF'">
-                                Commission from the Doge of Venice
+                                February: Cairo
                             </div>
                         </a></li>
-                    <li><a href='./record/23121'>
-                            <img alt="Wind propelled Wagon" title="Wind propelled Wagon" src="<?php echo base_url(); ?>theme/calendars/images/carousel/mar15.jpg">
-                            <div class="carousel-caption caption-iog" onmouseover="this.style.background='#c78c86';this.style.color='#ffffff'" onmouseout="this.style.background='#872379';this.style.color='#FFFFFF'">
-                                Wind propelled Wagon
-                            </div>
-                        </a></li>
-                    <li><a href='./record/23122'>
-                            <img alt="Seal of Kelso Abbey" title="Seal of Kelso Abbey" src="<?php echo base_url(); ?>theme/calendars/images/carousel/apr15.jpg">
-                            <div class="carousel-caption caption-iog" onmouseover="this.style.background='#c78c86';this.style.color='#ffffff'" onmouseout="this.style.background='#872379';this.style.color='#FFFFFF'">
-                                Seal of Kelso Abbey
-                            </div>
-                        </a></li>
-                    <li><a href='./record/23123'>
-                            <img alt="House of Lords" title="House of Lords" src="<?php echo base_url(); ?>theme/calendars/images/carousel/may15.jpg">
-                            <div class="carousel-caption caption-iog" onmouseover="this.style.background='#c78c86';this.style.color='#ffffff'" onmouseout="this.style.background='#872379';this.style.color='#FFFFFF'">
-                                House of Lords
-                            </div>
-                        </a></li>
-                    <li><a href='./record/23124'>
-                            <img alt="Harbour Scene" title="Harbour Scene" src="<?php echo base_url(); ?>theme/calendars/images/carousel/jun15.jpg">
-                            <div class="carousel-caption caption-iog" onmouseover="this.style.background='#c78c86';this.style.color='#ffffff'" onmouseout="this.style.background='#872379';this.style.color='#FFFFFF'">
-                                Harbour Scene
-                            </div>
-                        </a></li>
-                    <li><a href='./record/23125'>
-                            <img alt="Lady Grange Letters" title="Lady Grange Letters" src="<?php echo base_url(); ?>theme/calendars/images/carousel/jul15.jpg">
-                            <div class="carousel-caption caption-iog" onmouseover="this.style.background='#c78c86';this.style.color='#ffffff'" onmouseout="this.style.background='#872379';this.style.color='#FFFFFF'">
-                                Lady Grange Letters
-                            </div>
-                        </a></li>
-                    <li><a href='./record/23126'>
-                            <img alt="Falconry" title="Falconry" src="<?php echo base_url(); ?>theme/calendars/images/carousel/aug15.jpg">
-                            <div class="carousel-caption caption-iog" onmouseover="this.style.background='#c78c86';this.style.color='#ffffff'" onmouseout="this.style.background='#872379';this.style.color='#FFFFFF'">
-                                Falconry
-                            </div>
-                        </a></li>
-                    <li><a href='./record/23127'>
-                            <img alt="Solemn League and Covenant for Reformation" title="Solemn League and Covenant for Reformation" src="<?php echo base_url(); ?>theme/calendars/images/carousel/sep15.jpg">
-                            <div class="carousel-caption caption-iog" onmouseover="this.style.background='#c78c86';this.style.color='#ffffff'" onmouseout="this.style.background='#872379';this.style.color='#FFFFFF'">
-                                Covenant for Reformation
-                            </div>
-                        </a></li>
-                    <li><a href='./record/23128'>
-                            <img alt="Burgess Ticket" title="Burgess Ticket" src="<?php echo base_url(); ?>theme/calendars/images/carousel/oct15.jpg">
-                            <div class="carousel-caption caption-iog" onmouseover="this.style.background='#c78c86';this.style.color='#ffffff'" onmouseout="this.style.background='#872379';this.style.color='#FFFFFF'">
-                                Burgess Ticket
-                            </div>
-                        </a></li>
-                    <li><a href='./record/23129'>
-                            <img alt="Four Gospels" title="Four Gospels" src="<?php echo base_url(); ?>theme/calendars/images/carousel/nov15.jpg">
+                    <li><a href='./record/52838'>
+                            <img alt="Civitates Orbis Terrarum London" title="Civitates Orbis Terrarum London" src="<?php echo base_url(); ?>theme/calendars/images/carousel/0057325c.jpg">
                             <div class="carousel-caption caption-iog" onmouseover="this.style.background='#c78c86';this.style.color='#ffffff'" onmouseout="this.style.background='#872379';this.style.color='#ffffff'">
-                            Four Gospels
+                                March: London
                             </div>
                         </a></li>
-                    <li><a href='./record/23130'>
-                            <img alt="Manuscript Fragment" title="Manuscript Fragment"" src="<?php echo base_url(); ?>theme/calendars/images/carousel/dec15.jpg">
+                    <li><a href='./record/52839'>
+                            <img alt="Civitates Orbis Terrarum Parma" title="Civitates Orbis Terrarum Parma" src="<?php echo base_url(); ?>theme/calendars/images/carousel/0057332c.jpg">
                             <div class="carousel-caption caption-iog" onmouseover="this.style.background='#c78c86';this.style.color='#ffffff'" onmouseout="this.style.background='#872379';this.style.color='#FFFFFF'">
-                                Manuscript Fragment
+                                April: Parma
                             </div>
                         </a></li>
-                    <li><a href='./record/23131'>
-                            <img alt="Astronomical Instrument" title="Astronomical Instrument" src="<?php echo base_url(); ?>theme/calendars/images/carousel/cover.jpg">
+                    <li><a href='./record/52840'>
+                            <img alt="Civitates Orbis Terrarum Malta" title="Civitates Orbis Terrarum Malta" src="<?php echo base_url(); ?>theme/calendars/images/carousel/0057334c.jpg">
                             <div class="carousel-caption caption-iog" onmouseover="this.style.background='#c78c86';this.style.color='#ffffff'" onmouseout="this.style.background='#872379';this.style.color='#FFFFFF'">
-                                Astronomical Instrument
+                                May: Malta
                             </div>
                         </a></li>
-                    <li><a href='./laing'>
-                            <img alt="David Laing" title="David Laing" src="<?php echo base_url(); ?>theme/calendars/images/carousel/0002766c_edited.jpg">
+                    <li><a href='./record/52841'>
+                            <img alt="Civitates Orbis Terrarum Liege" title="Civitates Orbis Terrarum Liege" src="<?php echo base_url(); ?>theme/calendars/images/carousel/0057323c.jpg">
+                            <div class="carousel-caption caption-iog" onmouseover="this.style.background='#c78c86';this.style.color='#ffffff'" onmouseout="this.style.background='#872379';this.style.color='#FFFFFF'">
+                                June: Liege
+                            </div>
+                        </a></li>
+                    <li><a href='./record/52842'>
+                            <img alt="Civitates Orbis Terrarum Cologne" title="Civitates Orbis Terrarum Cologne" src="<?php echo base_url(); ?>theme/calendars/images/carousel/0057318c.jpg">
+                            <div class="carousel-caption caption-iog" onmouseover="this.style.background='#c78c86';this.style.color='#ffffff'" onmouseout="this.style.background='#872379';this.style.color='#FFFFFF'">
+                                July: Cologne
+                            </div>
+                        </a></li>
+                    <li><a href='./record/52843'>
+                            <img alt="Civitates Orbis Terrarum Strasbourg" title="Civitates Orbis Terrarum Strasbourg" src="<?php echo base_url(); ?>theme/calendars/images/carousel/0057320c.jpg">
+                            <div class="carousel-caption caption-iog" onmouseover="this.style.background='#c78c86';this.style.color='#ffffff'" onmouseout="this.style.background='#872379';this.style.color='#FFFFFF'">
+                                August: Strasbourg
+                            </div>
+                        </a></li>
+                    <li><a href='./record/52844'>
+                            <img alt="Civitates Orbis Terrarum Mexico" title="Civitates Orbis Terrarum Mexico" src="<?php echo base_url(); ?>theme/calendars/images/carousel/0057329c.jpg">
+                            <div class="carousel-caption caption-iog" onmouseover="this.style.background='#c78c86';this.style.color='#ffffff'" onmouseout="this.style.background='#872379';this.style.color='#FFFFFF'">
+                                September: Mexico City
+                            </div>
+                        </a></li>
+                    <li><a href='./record/52845'>
+                            <img alt="Civitates Orbis Terrarum Frankfurt" title="Civitates Orbis Terrarum Frankfurt" src="<?php echo base_url(); ?>theme/calendars/images/carousel/0057319c.jpg">
+                            <div class="carousel-caption caption-iog" onmouseover="this.style.background='#c78c86';this.style.color='#ffffff'" onmouseout="this.style.background='#872379';this.style.color='#FFFFFF'">
+                                October 16: Frankfurt
+                            </div>
+                        </a></li>
+
+                    <li><a href='./record/52846'>
+                            <img alt="Civitates Orbis Terrarum Milan" title="Civitates Orbis Terrarum Milan" src="<?php echo base_url(); ?>theme/calendars/images/carousel/0057316c.jpg">
+                            <div class="carousel-caption caption-iog" onmouseover="this.style.background='#c78c86';this.style.color='#ffffff'" onmouseout="this.style.background='#872379';this.style.color='#FFFFFF'">
+                                November 16: Milan
+                            </div>
+                        </a></li>
+                    <li><a href='./record/52847'>
+                            <img alt="Civitates Orbis Terrarum Famagusta" title="Civitates Orbis Terrarum Famagusta" src="<?php echo base_url(); ?>theme/calendars/images/carousel/0057335c.jpg">
+                            <div class="carousel-caption caption-iog" onmouseover="this.style.background='#c78c86';this.style.color='#ffffff'" onmouseout="this.style.background='#872379';this.style.color='#FFFFFF'">
+                                December 16: Famagusta
+                            </div>
+                        </a></li>
+                   <!-- <li><a href='./laing'>
+                            <img alt="David Laing" title="David Laing" src="<?php //echo base_url(); ?>theme/calendars/images/carousel/0002766c_edited.jpg">
                             <div class="carousel-caption caption-iog" onmouseover="this.style.background='#c78c86';this.style.color='#ffffff'" onmouseout="this.style.background='#872379';this.style.color='#FFFFFF'">
                                 David Laing
                             </div>
-                        </a></li>
+                        </a></li>-->
                 </ul>
             </div>
 
@@ -116,17 +111,24 @@
 
         </div>
 
+
         <div class="info">
-            Still largely unexplored, the David Laing collection is one of the most rich and complex collections of its kind.
-            David Laing was the son of an Edinburgh bookseller and one of the greatest collectors of the culture and history
-            of Scotland and the world. On his death in 1878, his extensive collection of manuscripts was bequeathed to the
-            University of Edinburgh. Buy online at the University <a href="http://www.giftshop.ed.ac.uk/2015-Calendar.html" target="_blank" title="Gift Shop Link" >gift shop</a>.</div>
-        <div class="signature">
-            <a href='./laing'>
-                <img alt="David Laing Signature" title="David Laing Signature" src="<?php echo base_url(); ?>theme/calendars/images/DavidLaingSignature.jpg">
-            </a>
+            <p>The images displayed in this calendar are taken from the Civitates Orbis Terrarum (Shelfmark: *P.15.33), a city atlas edited by the geographer Georg Braun and engraved by the
+                painter Franz Hogenberg between 1572 and 1617. This fantastic work contains 546 prospects, bird’s-eye views and maps of cities from all over the world. Aside from their topographical value,
+                the images are also a great record of domestic life during the period: figures in local dress were added to the maps, along with heraldic coats of arms, rural and urban scenes, public buildings and
+                pictures of land and water transport. These depictions were accompanied by Braun’s printed account of the city’s history, situation and commerce.</p>
+            <p>
+                Buy online at the University
+            <a href="http://www.giftshop.ed.ac.uk/2016-library-university-collections-calendar.html" target="_blank" title="Gift Shop Link" >gift shop</a>.</p></div>
+        <div class="spacer">
+            &nbsp; &nbsp;&nbsp; &nbsp;
 
         </div>
+        <div class="signature">
+            <img alt="Calendar 2016" title="Calendar 2016" src="<?php echo base_url(); ?>theme/calendars/images/Calendar2016-front.jpg">
+
+        </div>
+
         <div class="clearfix"></div>
 
     </div>
