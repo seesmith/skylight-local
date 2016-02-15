@@ -155,6 +155,7 @@ $config['skylight_search_fields'] = array(
     'Collection' => 'dc.collection.en',
     'Year' => 'dc.coverage.temporal.en'
 );
+$config['skylight_default_sort'] = 'dc.title_sort+asc';
 
 $config['skylight_related_fields'] = array('Subject' => 'dc.subject.en', 'Title' => 'dc.title.en');
 $config['skylight_related_number'] = 10;
