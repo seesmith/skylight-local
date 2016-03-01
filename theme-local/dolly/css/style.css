@@ -103,7 +103,7 @@ button 				{  width: auto; overflow: visible; } /* Make buttons play nice in IE:
 
 html 							{ -webkit-font-smoothing: antialiased; }
 body 							{ background: #EEEDE8; }
-body, select, input, textarea 	{ color: #555; line-height: 18px; font-family: "Trebuchet MS", serif }
+body, select, input, textarea 	{ color: #555; line-height: 18px; font-family: "Metrophobic", sans-serif, serif }
 
 h1, h2, h3, h4, h5, h6          { text-rendering: optimizeLegibility; color: #000000; font-weight: bold; }
 h1 								{ font-size: 20px; line-height: 24px; margin: 18px 0 17px 0px; position: relative; color: #373B41;}
@@ -229,8 +229,8 @@ footer                  { display: block; padding-bottom: 10px; margin-bottom: 1
 
 .footer-links           { margin-top: 15px; margin-bottom: 15px; text-align: left;  border-top: 1px solid #A0A0A0; border-bottom: 1px solid #A0A0A0; width: 660px; height: 39px;}
 
-.site-links			    { display: block; padding-top: 10px; padding-bottom: 10px; width: 520px; float: left; height: 19px; }
-.site-links a 		    { font-size: 12px; text-transform: uppercase; color: #AAA79E  !important; text-decoration: none; font-weight: bold; border-right: 1px solid #cecece; padding-right: 15px; margin-right: 10px; }
+.site-links			    { display: block; padding-top: 10px; padding-bottom: 10px; width: 660px; float: left; height: 19px; }
+.site-links a 		    { font-size: 11px; text-transform: uppercase; color: #AAA79E  !important; text-decoration: none; font-weight: bold; border-right: 1px solid #cecece; padding-right: 15px; margin-right: 10px; }
 .site-links a.last	    { border: none; }
 .site-links a:hover	    { text-decoration: underline; color: #A0A0A0; }
 
@@ -340,7 +340,7 @@ h1 .icon							{ top: -5px; left: -65px; }
 .browse_results                     { margin-top: 30px; }
 .browse_facets                      { margin-top: 20px; }
 
-.content 							{ margin-top: 10px; font-family: "Trebuchet MS", serif}
+.content 							{ margin-top: 10px; }
 .content ul 						{ margin: 0 0 18px 1.2em; }
 
 table								{ width: 100%; }
@@ -353,6 +353,26 @@ table td                            { color: #373B41;  white-space: pre-line;}
 table tr                            { border-bottom: 1px solid #EEEDE8; }
 table tr:last-child                 { border: 0; border-bottom: none; }
 .content a                          { color: #373B41;}
+
+#tile-block             { width: 660px; height: 753px; margin-bottom: 18px; }
+#tile-block a           { padding: 0; margin: 0; }
+.people-tile            { float: left; display: block; padding: 4px;}
+
+#tile-1                 { width: 150px; height: 150px; background: url(../images/people/Auerbach.jpg) no-repeat 0px 0px; }
+#tile-2                 { width: 150px; height: 150px; background: url(../images/people/Beale.jpg) no-repeat 0px 0px; }
+#tile-3                 { width: 150px; height: 150px; background: url(../images/people/Beatty.jpg) no-repeat 0px 0px; }
+#tile-4                 { width: 150px; height: 150px; background: url(../images/people/Bulfield.jpg) no-repeat 0px 0px; }
+#tile-5                 { width: 150px; height: 150px; background: url(../images/people/Crew.jpg) no-repeat 0px 0px; }
+#tile-6                 { width: 150px; height: 150px; background: url(../images/people/Ewart.jpg) no-repeat 0px 0px; }
+#tile-7                 { width: 150px; height: 150px; background: url(../images/people/Falconer.jpg) no-repeat 0px 0px; }
+#tile-8                 { width: 150px; height: 150px; background: url(../images/people/Greenwood.jpg) no-repeat 0px 0px; }
+#tile-9                 { width: 150px; height: 150px; background: url(../images/people/Lucey.jpg) no-repeat 0px 0px; }
+#tile-10                { width: 150px; height: 150px; background: url(../images/people/Mason.jpg) no-repeat 0px 0px; }
+#tile-11                { width: 150px; height: 150px; background: url(../images/people/Ryder.jpg) no-repeat 0px 0px; }
+#tile-12                { width: 150px; height: 150px; background: url(../images/people/Sang.jpg) no-repeat 0px 0px; }
+#tile-13                { width: 150px; height: 150px; background: url(../images/people/Weiner.jpg) no-repeat 0px 0px; }
+#tile-14                { width: 150px; height: 150px; background: url(../images/people/Waddington.jpg) no-repeat 0px 0px; }
+#tile-15                { width: 150px; height: 150px; background: url(../images/people/Wilmut.jpg) no-repeat 0px 0px; }
 
 .feedback_form                      { padding: 0 20px;}
 .feedback_form label                { display: block; width: 100px;}

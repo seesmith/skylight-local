@@ -1,5 +1,37 @@
 <div class="content">
     <div class="content byEditor">
+        <p>Since 2012, the Wellcome Trust has funded a number of projects relating to animal genetics collections held
+            at the University of Edinburgh's Centre for Research Collections. ‘Towards Dolly: Edinburgh, Roslin and the
+            Birth of Modern Genetics’ and ‘The Making of Dolly: Science, Politics and Ethics’ have catalogued, preserved
+            and made available archival, printed and visual collections relating to animal genetics in Edinburgh, from
+            nineteenth century zoology to the birth of Dolly the sheep in 1996, and beyond to present day cutting-edge
+            research. Working on the project were Rare Book Cataloguer Kristy Davies and Project Archivist Clare Button.
+        </p>
+        <p>In all, 22 collections have been catalogued and preserved, with key items receiving conservation treatment.
+            These collections include rare books, scientific papers, the archives of institutions such as Roslin
+            Institute and the papers of pioneering scientists including Charlotte Auerbach, C.H. Waddington and Sir
+            Ian Wilmut. Nine oral history recordings were also carried out with leading contemporary geneticists.
+        </p>
+        <p>Between October 2014 and May 2015, the project ‘Science on a Plate: the natural sciences through glass slides,
+            1870-1930’ digitised nearly 3,500 historic glass slides which were catalogued as part of ‘Towards Dolly’.
+            Depicting different animal breeds and scenes and people from around the world, this rich visual resource
+            is now available to  <a href="http://images.is.ed.ac.uk/luna/servlet/UoEgal~6~6" title="Roslin Glass Slide online" target="_blank">view online</a>.
+        </p>
+
+        <p>These projects were generously funded by the Wellcome Trust's
+            <a href="http://www.wellcome.ac.uk/Funding/Humanities-and-social-science/Funding-schemes/Research-resources-awards/index.htm" title="Wellcome Trust Research Resources" target="_blank">Research Resources scheme</a>.
+            Watch the Project Archivist, Clare Button, talking about the collections in the Wellcome Trust's film about the scheme.
+
+        [embed video – see in folder]
+        </p>
+
+        <p>From July to October 2015, the University of Edinburgh Main Library Exhibition Gallery hosted the
+            <a href="https://exhibitions.ed.ac.uk/towardsdolly" title="Toward's Dolly Exhibition online" target="_blank">exhibition</a>
+            ‘Towards Dolly: a century of animal genetics in Edinburgh.’ This was curated by Project Archivist Clare Button
+            and featured an array of archival, printed and visual collections, as well as Dolly the sheep herself, on
+            loan courtesy of National Museums Scotland.
+        </p>
+
         <h1>Contact Details</h1>
         <p>
             For further information  please contact:
