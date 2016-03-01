@@ -73,7 +73,7 @@ $config['skylight_fields'] = array('Title' => 'title',
 );
 
 $config['skylight_date_filters'] = array();
-$config['skylight_filters'] = array('Subject' => 'subjects', 'Agent' => 'agents');
+$config['skylight_filters'] = array('Subject' => 'subjects', 'Person' => 'agents');
 $config['skylight_filter_delimiter'] = ':';
 
 $config['skylight_meta_fields'] = array('Title' => 'title',

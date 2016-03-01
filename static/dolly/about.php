@@ -22,7 +22,17 @@
             <a href="http://www.wellcome.ac.uk/Funding/Humanities-and-social-science/Funding-schemes/Research-resources-awards/index.htm" title="Wellcome Trust Research Resources" target="_blank">Research Resources scheme</a>.
             Watch the Project Archivist, Clare Button, talking about the collections in the Wellcome Trust's film about the scheme.
 
-        [embed video – see in folder]
+        <div class="flowplayer" data-analytics="<?php echo $ga_code ?>"
+             title="Introduction to Towards Dolly by Clare Button, Project Archivist">
+            <video id="video-archives" title="Introduction to Towards Dolly by Clare Button, Project Archivist" controls preload="true">
+                <?php if (strpos($_SERVER['HTTP_USER_AGENT'], 'Chrome') == false) { ?>
+                    <source src="<?php echo base_url(); ?>videos/0051011v-006.mp4" type="video/mp4"/>
+                <?php } else { ?>
+                    <source src="<?php echo base_url(); ?>videos/0051011v-006.webm" type="video/webm"/>
+                <?php } ?>
+                Video loading...'
+            </video>
+        </div>
         </p>
 
         <p>From July to October 2015, the University of Edinburgh Main Library Exhibition Gallery hosted the

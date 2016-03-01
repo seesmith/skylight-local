@@ -352,7 +352,7 @@ table th                            { width: 30%; }
 table td                            { color: #373B41;  white-space: pre-line;}
 table tr                            { border-bottom: 1px solid #EEEDE8; }
 table tr:last-child                 { border: 0; border-bottom: none; }
-.content a                          { color: #373B41;}
+.content a                          { color: #1E61B8;}
 
 #tile-block             { width: 660px; height: 753px; margin-bottom: 18px; }
 #tile-block a           { padding: 0; margin: 0; }
@@ -373,6 +373,35 @@ table tr:last-child                 { border: 0; border-bottom: none; }
 #tile-13                { width: 150px; height: 150px; background: url(../images/people/Weiner.jpg) no-repeat 0px 0px; }
 #tile-14                { width: 150px; height: 150px; background: url(../images/people/Waddington.jpg) no-repeat 0px 0px; }
 #tile-15                { width: 150px; height: 150px; background: url(../images/people/Wilmut.jpg) no-repeat 0px 0px; }
+
+#outer-image {
+    width: 100%;
+    position: relative;
+}
+#index-image             { width: 293px; height: 151px; background: url(../images/dolly-front.jpg) no-repeat 0 0;
+    margin-left: 155px;
+}
+
+.quote
+{
+    margin-left: 50px;
+    margin-right: 50px;
+}
+q {
+    quotes: "“" "”" "‘" "’";
+    display: block;
+    font-weight: bold;
+
+}
+q:before {
+    content: open-quote;
+}
+q:after {
+    content: close-quote;
+}
+.float-right{
+    float: right;
+}
 
 .feedback_form                      { padding: 0 20px;}
 .feedback_form label                { display: block; width: 100px;}

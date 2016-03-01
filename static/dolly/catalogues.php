@@ -7,9 +7,9 @@
 
         <p><a href="http://archives.collections.ed.ac.uk/repositories/2/resources/85712" title="Charlotte Auerbach link" target="_blank">Material relating to Charlotte Auerbach</a></p>
 
-        <p><a href="http://archives.collections.ed.ac.uk/repositories/2/resources/85246" title="Papers of Geoffrey Beale link"  target="_blank">Papers of Geoffrey Beale</a></p>
+        <p><a href="http://archives.collections.ed.ac.uk/repositories/2/resources/85246" title="Papers of Geoffrey Beale link" target="_blank">Papers of Geoffrey Beale</a></p>
 
-        <p><a href="http://archives.collections.ed.ac.uk/repositories/2/resources/85258" title="Papers of Richard Alan Beatty link">Papers of Richard Alan Beatty</a></p>
+        <p><a href="http://archives.collections.ed.ac.uk/repositories/2/resources/85258" title="Papers of Richard Alan Beatty link"  target="_blank">Papers of Richard Alan Beatty</a></p>
 
         <p><a href="http://archives.collections.ed.ac.uk/repositories/2/resources/85804" title="Papers of Grahame Bulfield" target="_blank">Papers of Grahame Bulfield</a></p>
 
