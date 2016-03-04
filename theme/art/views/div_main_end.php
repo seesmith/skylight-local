@@ -5,14 +5,17 @@
                     <a href="./about">About this Collection</a>
                     <a href="./feedback" class="last">Feedback</a>
                 </div>
+
                 <div class="social-links">
                     <ul class="social-icons">
-                        <li><a href="https://www.facebook.com/UniversityOfEdinburghFineArtCollection" class="facebook-icon" target="_blank" title="Art Collection on Facebook"></a></li>
-                        <li><a href="https://twitter.com/UoEArtArchives" class="twitter-icon" target="_blank" title="Art Collection on Twitter"></a></li>
-                        <li><a href="http://uoeartandarchives.tumblr.com/" class="tumblr-icon" target="_blank" title="Art Collection on Tumblr"></a></li>
+                        <li><a href="https://itunes.apple.com/gb/podcast/2-the-art-of-hiding/id1086099131?i=363892837&mt=2" class="itunes-icon" target="_blank" title="Art Collection on iTunes"><i class="fa fa-music fa-2x fa-fw"></i></a></li>
+                        <li><a href="https://www.facebook.com/UniversityOfEdinburghFineArtCollection" target="_blank" title="Art Collection on Facebook"><i class="fa fa-facebook fa-2x fa-fw"></i></a></li>
+                        <li><a href="https://twitter.com/UoEArtColl" target="_blank" title="Art Collection on Twitter"><i class="fa fa-twitter fa-2x fa-fw"></i></a></li>
+                        <li><a href="http://uoeartandarchives.tumblr.com/" target="_blank" title="Art Collection on Tumblr"><i class="fa fa-tumblr fa-2x fa-fw"></i></a></li>
                     </ul>
                 </div>
             </div>
+            <div id="main" role="main" class="clearfix">
             <div class="footer-disclaimer">
                 <div class="footer-logo">
                     <a href="http://www.ed.ac.uk/schools-departments/information-services/about/organisation/library-and-collections" target="_blank" class="luclogo" title="Library &amp; University Collections Home"></a>
