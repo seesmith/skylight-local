@@ -1,6 +1,6 @@
 <div class="content">
     <div class="content byEditor">
-<p>The collections catalogued as part of the ‘Towards Dolly’ and ‘Making of Dolly’ projects relate to a long history of
+        <p>The collections catalogued as part of the ‘Towards Dolly’ and ‘Making of Dolly’ projects relate to a long history of
         animal breeding and genetics research in and around Edinburgh. Many different organisations and individuals
         have played their part; this is a brief history of just some of them.</p>
 
@@ -8,6 +8,11 @@
         of natural history at the University of Edinburgh between 1882-1927. As well as his pioneering cross-breeding
         experiments, Ewart also helped establish a lectureship in genetics at the University in 1911 (the first of its
         kind in Britain), to which Arthur Darbishire was appointed.</p>
+
+        <div title="Notebook of A.D. Darbishire, c.1902-1910, EUA IN1/ACU/A1/5/1" id="notebook-image"></div>
+        <p class="image-lrg-label">Notebook of A.D. Darbishire, c.1902-1910, EUA IN1/ACU/A1/5/1</p>
+        <div class="clearfix"></div>
+
 
         <p>Government plans to fund a national centre for animal breeding research in Edinburgh stalled during the First World War,
         but were resumed afterwards. In 1920, the Animal Breeding Research Station was established with the aim to apply
@@ -28,6 +33,10 @@
         occupied the Institute of Animal Genetics building, while the rest of ABRO was occupied with breeding experiments
         on a variety of farms.</p>
 
+        <div title="Visitors and staff at the Institute of Animal Genetics, c.1924, EUA IN1/ACU/A1/8/2" id="visitors-image"></div>
+        <p class="image-lrg-label">Visitors and staff at the Institute of Animal Genetics, c.1924, EUA IN1/ACU/A1/8/2</p>
+        <div class="clearfix"></div>
+
         <p>By 1951, the genetics section formally separated from ABRO to become its own unit within the Institute of Animal Genetics,
         with Waddington as de facto director of the whole Institute (Crew had resigned in 1944), as well as Buchanan
         Professor of Animal Genetics.</p>
@@ -47,12 +56,17 @@
         Ian Wilmut, Keith Campbell and colleagues created Dolly the sheep, the first animal to be cloned from an adult
         body cell.</p>
 
+        <div title="Dolly the sheep photograph courtesy of the Roslin Institute and R(D)SVS, University of Edinburgh" id="dollylrg-image"></div>
+        <p class="image-lrg-label">Dolly the sheep, photograph courtesy of the 'Roslin Institute and R(D)SVS, University of Edinburgh'</p>
+        <div class="clearfix"></div>
+
         <p>The Institute of Animal Genetics was formally shut down in 1990, as part of a widespread reorganisation which gave rise
         to the University of Edinburgh’s Division (later School) of Biological Sciences. The Department of Genetics
         became part of the Institute of Cell, Animal and Population Biology, which split in 2004 to form the Institute
         of Evolutionary Biology and the Institute of Immunology & Infection Research.</p>
 
-        <p>In 2008, Roslin Institute became incorporated with the Royal (Dick) School of Veterinary Studies within the College of
+        <p>In 2008, <a href="http://www.roslin.ed.ac.uk" title="Roslin Institute Link" target="_blank"> Roslin Institute</a>
+        became incorporated with the Royal (Dick) School of Veterinary Studies within the College of
         Medicine and Veterinary Medicine of the University of Edinburgh, under the director David Hume. It moved into
         new premises on the University’s Easter Bush site in 2011, where it continues to conduct research into the
         health and welfare of animals, and applications of basic animal sciences in human and veterinary medicine, the
