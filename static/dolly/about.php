@@ -26,9 +26,9 @@
              title="Introduction to Towards Dolly by Clare Button, Project Archivist">
             <video id="video-archives" title="Introduction to Towards Dolly by Clare Button, Project Archivist" controls preload="true">
                 <?php if (strpos($_SERVER['HTTP_USER_AGENT'], 'Chrome') == false) { ?>
-                    <source src="<?php echo base_url(); ?>videos/0051011v-006.mp4" type="video/mp4"/>
+                    <source src="<?php echo base_url(); ?>videos/Towards_Dolly_Wellcome_Trust_showreel.mp4" type="video/mp4"/>
                 <?php } else { ?>
-                    <source src="<?php echo base_url(); ?>videos/0051011v-006.webm" type="video/webm"/>
+                    <source src="<?php echo base_url(); ?>videos/Towards_Dolly_Wellcome_Trust_showreel.webm" type="video/webm"/>
                 <?php } ?>
                 Video loading...'
             </video>
@@ -39,8 +39,22 @@
             <a href="https://exhibitions.ed.ac.uk/towardsdolly" title="Toward's Dolly Exhibition online" target="_blank">exhibition</a>
             ‘Towards Dolly: a century of animal genetics in Edinburgh.’ This was curated by Project Archivist Clare Button
             and featured an array of archival, printed and visual collections, as well as Dolly the sheep herself, on
-            loan courtesy of National Museums Scotland.
+            loan courtesy of National Museums Scotland. Watch the Library and University Collections Digital Imaging
+            Unit’s timelapse video of Dolly being installed in the exhibition gallery here:
         </p>
+        <div class="flowplayer" data-analytics="<?php echo $ga_code ?>"
+             title="Towards Dolly Exhibition being installed, Video by Univeristy of Edinburgh Digital Imaging Unit"">
+            <video id="video-archives" title="Towards Dolly Exhibition being installed, Video by Univeristy of Edinburgh Digital Imaging Unit" controls preload="true">
+
+                <?php if (strpos($_SERVER['HTTP_USER_AGENT'], 'Chrome') == false) { ?>
+                    <source src="<?php echo base_url(); ?>videos/0051011v-006.mp4" type="video/mp4"/>
+                <?php } else { ?>
+                    <source src="<?php echo base_url(); ?>videos/0051011v-006.webm" type="video/webm"/>
+                <?php } ?>
+                Video loading...'
+            </video>
+        </div>
+
 
         <h1>Contact Details</h1>
         <p>
