@@ -164,6 +164,14 @@ div.resized-image img.record-main-image {
 
 div.related {
     margin-top: 20px;
+
+}
+
+.related-title
+{
+    background-color: #333333;
+    color: #ffffff;
+    padding: 2px;
 }
 
 .page-header {
@@ -362,6 +370,40 @@ div.spacer {
         border-radius: 4px 4px 0 0 !important;
         margin-bottom: 0 !important;
     }
+}
+
+.record_bitstreams
+{
+    padding-top: 2px;
+}
+
+/* ---- grid for related items---- */
+
+.grid {
+    background: #ffffff;
+}
+
+/* clear fix */
+.grid:after {
+    content: '';
+    display: block;
+    clear: both;
+}
+
+/* ---- .grid-item ---- */
+
+.grid-sizer,
+.grid-item {
+    width: 150px;
+}
+
+.grid-item {
+    float: left;
+}
+
+.grid-item img {
+    display: block;
+    max-width: 100%;
 }
 
 

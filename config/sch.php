@@ -59,7 +59,7 @@ $config['skylight_fields'] = array(
     'Provenance' => 'dc.provenance.en',
     'Decorations' => 'dc.description.decoration.en',
     'Link' => 'dc.identifier.uri.en',
-    'Author Biography' => 'dc.contributor.authorbio.en',
+    'Maker Biography' => 'dc.contributor.authorbio.en',
     'Associated Musician Full' => 'dc.contributor.assocfull.en',
     'Associated Musician' => 'dc.contributor.assoc.en',
     'Short Description' => 'dc.description.level1.en',
@@ -102,7 +102,7 @@ $config['skylight_descriptiondisplay'] = array(
 
 $config['skylight_creatordisplay'] = array(
     'Maker',
-    'Author Biography',
+    'Maker Biography',
     'Associated Musician Full',
     'Associated Musician',
     'Associated Musician Biography',);
@@ -126,7 +126,7 @@ $config['skylight_fullrecorddisplay'] = array(
     'Collection',
     'Rights Holder',
     'Accession Number',
-    'Author Biography',
+    'Maker Biography',
     'Associated Musician Full',
     'Associated Musician',
     'Piccolo Description',

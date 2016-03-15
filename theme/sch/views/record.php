@@ -61,19 +61,15 @@ if(isset($solr[$bitstream_field]) && $link_bitstream) {
                 $mainImageTest = true;
 
                 $bitstreamLink = '<div class="main-image">';
-
                 $bitstreamLink .= '<a title = "' . $record_title . '" class="fancybox" rel="group" href="' . $b_uri . '"> ';
                 $bitstreamLink .= '<img class="record-main-image" src = "'. $b_uri .'">';
                 $bitstreamLink .= '</a>';
-
                 $bitstreamLink .= '</div>';
 
                 $mainImage = true;
-
             }
             // we need to display a thumbnail
             else {
-
                 // if there are thumbnails
                 if(isset($solr[$thumbnail_field])) {
                     foreach ($solr[$thumbnail_field] as $thumbnail) {
@@ -87,22 +83,14 @@ if(isset($solr[$bitstream_field]) && $link_bitstream) {
                             $t_seq = $t_segments[4];
                             $t_uri = './record/'.$b_handle_id.'/'.$t_seq.'/'.$t_filename;
 
-                            $thumbnailLink[$numThumbnails] = '<div class="thumbnail-tile';
-
-                            if($numThumbnails % 4 === 0) {
-                                $thumbnailLink[$numThumbnails] .= ' first';
-                            }
-
-                            $thumbnailLink[$numThumbnails] .= '"><a title = "' . $record_title . '" class="fancybox" rel="group" href="' . $b_uri . '"> ';
-                            $thumbnailLink[$numThumbnails] .= '<img src = "'.$t_uri.'" class="record-thumbnail" title="'. $record_title .'" /></a></div>';
+                            $thumbnailLink[$numThumbnails] = '<a title = "' . $record_title . '" class="fancybox" rel="group" href="' . $b_uri . '"> ';
+                            $thumbnailLink[$numThumbnails] .= '<img src = "'.$t_uri.'" title="'. $record_title .'" /></a>';
 
                             $numThumbnails++;
                         }
                     }
                 }
-
             }
-
         }
         else if ((strpos($b_uri, ".mp3") > 0) or (strpos($b_uri, ".MP3") > 0)) {
 
@@ -110,18 +98,15 @@ if(isset($solr[$bitstream_field]) && $link_bitstream) {
             $audioLink .= '<source src="' . $b_uri . '" type="audio/mpeg" />Audio loading...';
             $audioLink .= '</audio>';
             $audioFile = true;
-
         }
-
         else if ((strpos($b_filename, ".mp4") > 0) or (strpos($b_filename, ".MP4") > 0))
         {
             $b_uri = $media_uri.$b_handle_id.'/'.$b_seq.'/'.$b_filename;
             // if it's chrome, use webm if it exists
             if (strpos($_SERVER['HTTP_USER_AGENT'], 'Chrome') == false) {
 
-
                 $videoLink .= '<div class="flowplayer" data-analytics="' . $ga_code . '" title="' . $b_filename . '">';
-                $videoLink .= '<video preload=auto autoplay loop width="100%" height="auto" controls>';
+                $videoLink .= '<video preload=auto width="100%" height="auto" controls>';
                 $videoLink .= '<source src="' . $b_uri . '" type="video/mp4" />Video loading...';
                 $videoLink .= '</video>';
                 $videoLink .= '</div>';
@@ -137,27 +122,20 @@ if(isset($solr[$bitstream_field]) && $link_bitstream) {
             if (strpos($_SERVER['HTTP_USER_AGENT'], 'Chrome') == true) {
 
                 $videoLink .= '<div class="flowplayer" data-analytics="' . $ga_code . '" title="' . $record_title . ": " . $b_filename . '">';
-                $videoLink .= '<video preload=auto autoplay loop width="100%" height="auto">';
+                $videoLink .= '<video preload=auto  width="100%" height="auto">';
                 $videoLink .= '<source src="' . $b_uri . '" type="video/webm" />Video loading...';
                 $videoLink .= '</video>';
                 $videoLink .= '</div>';
-
                 $videoFile = true;
-
             }
         }
         else if ((strpos($b_uri, ".pdf") > 0) or (strpos($b_uri, ".PDF") > 0)) {
 
             $bitstreamLink = $this->skylight_utilities->getBitstreamLink($bitstream);
             $bitstreamUri = $this->skylight_utilities->getBitstreamUri($bitstream);
-
             $pdfLink .= 'Click ' . $bitstreamLink . 'to download. (<span class="bitstream_size">' . getBitstreamSize($bitstream) . '</span>)';
         }
-
-        ?>
-        <?php
     }
-
 }
 ?>
 
@@ -171,39 +149,39 @@ if(isset($solr[$bitstream_field]) && $link_bitstream) {
 
         <?php if($mainImageTest === true) { ?>
 
-                <div class="col-md-7 hidden-sm hidden-xs full-image ">
+                <div class="col-md-6 hidden-sm hidden-xs full-image ">
                     <?php echo $bitstreamLink; ?>
                     <br />
                     <a title="Back to Search Results" class="btn btn-default" onClick="history.go(-1);"><i class="fa fa-arrow-left">&nbsp;</i>Back to Search Results</a>
 
                 </div>
-                <div class="col-sm-7 hidden-lg hidden-md resized-image">
+                <div class="col-sm-6 hidden-lg hidden-md resized-image">
                     <?php echo str_replace("group", "group-small", $bitstreamLink); ?>
                     <br />
                     <a title="Back to Search Results" class="btn btn-default" onClick="history.go(-1);"><i class="fa fa-arrow-left">&nbsp;</i>Back to Search Results</a>
 
                 </div>
         <?php } ?>
-        <div class="col-sm-5 metadata">
+        <div class="col-sm-6 col-xs-12 metadata">
             <?php if(isset($solr[$short_field][0])) {
                 echo '<p>' . $solr[$short_field][0] . '</p>';
             } ?>
             <div class="record-tabs ">
                 <ul id="tabs" class="hidden-xs nav nav-tabs  nav-justified" data-tabs="tabs">
-                    <li class="active"><a data-toggle="tab" href="#about"><i class="fa fa-info-circle fa-lg">&nbsp;</i>About</a></li>
-                    <li><a data-toggle="tab" href="#gallery"><i class="fa fa-image fa-lg">&nbsp;</i>Gallery</a></li>
-                    <li><a data-toggle="tab" href="#video"><i class="fa fa-video-camera  fa-lg">&nbsp;</i>Video</a></li>
-                    <li><a data-toggle="tab" href="#audio" title="Audio link "><i class="fa fa-music fa-fw fa-lg">&nbsp;</i>Audio</a></li>
-                    <li><a data-toggle="tab" href="#maker"><i class="fa fa-industry fa-lg">&nbsp;</i>Maker</a></li>
-                    <li><a data-toggle="tab" href="#description"><i class="fa fa-file-text fa-lg">&nbsp;</i>Description</a></li>
+                    <li><a data-toggle="tab" href="#about"><i class="fa fa-list fa-1x"></i></span><br/>About</a></li>
+                    <li><a data-toggle="tab" href="#gallery"><i class="fa fa-image fa-1x"></i><br/>Gallery</a></li>
+                    <li><a data-toggle="tab" href="#video"><i class="fa fa-video-camera  fa-1x"></i><br/>Video</a></li>
+                    <li><a data-toggle="tab" href="#audio" title="Audio link "><i class="fa fa-music fa-fw fa-1x"></i><br/>Audio</a></li>
+                    <li><a data-toggle="tab" href="#maker"><i class="fa fa-industry fa-1x"></i><br/>Maker</a></li>
+                    <li><a data-toggle="tab" href="#description"><i class="fa fa-file-text fa-1x">&nbsp;</i><br/>Description</a></li>
                 </ul>
                 <ul id="tabs" class="hidden-sm hidden-md hidden-lg nav nav-tabs  nav-justified" data-tabs="tabs">
-                    <li class="active"><a data-toggle="tab" href="#about"><i class="fa fa-info-circle fa-lg">&nbsp;</i></a></li>
-                    <li><a data-toggle="tab" href="#gallery"><i class="fa fa-image fa-lg">&nbsp;</i></a></li>
-                    <li><a data-toggle="tab" href="#video"><i class="fa fa-video-camera  fa-lg">&nbsp;</i></a></li>
-                    <li><a data-toggle="tab" href="#audio" title="Audio link "><i class="fa fa-music fa-fw fa-lg">&nbsp;</i></a></li>
-                    <li><a data-toggle="tab" href="#maker"><i class="fa fa-industry fa-lg">&nbsp;</i></a></li>
-                    <li><a data-toggle="tab" href="#description"><i class="fa fa-file-text fa-lg">&nbsp;</i></a></li>
+                    <li class="active"><a data-toggle="tab" href="#about"><i class="fa fa-list fa-lg"></i></a></li>
+                    <li><a data-toggle="tab" href="#gallery"><i class="fa fa-image fa-lg"></i></a></li>
+                    <li><a data-toggle="tab" href="#video"><i class="fa fa-video-camera  fa-lg"></i></a></li>
+                    <li><a data-toggle="tab" href="#audio" title="Audio link "><i class="fa fa-music fa-fw fa-lg"></i></a></li>
+                    <li><a data-toggle="tab" href="#maker"><i class="fa fa-industry fa-lg"></i></a></li>
+                    <li><a data-toggle="tab" href="#description"><i class="fa fa-file-text fa-lg"></i></a></li>
                 </ul>
 
                 <div class="tab-content">
@@ -228,9 +206,5 @@ if(isset($solr[$bitstream_field]) && $link_bitstream) {
                 </div>
             </div>
         </div>
-
-
-
     </div><!-- content-->
-
 </div> <!-- row container-->
