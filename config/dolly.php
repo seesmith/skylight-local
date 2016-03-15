@@ -34,9 +34,14 @@ $config['skylight_oaipmhcollection'] = '';
 $config['skylight_oaipmhallowed'] = true;
 
 // Container ID and the field used in solr index to store this ID. Used for restricting search/browse scope.
-$config['skylight_container_id'] = array('"/repositories/2/resources/85257"', '"/repositories/2/resources/85256"',
-    '"/repositories/2/resources/543"', '"/repositories/2/resources/85258"','"/repositories/2/resources/40"',
-    '"/repositories/2/resources/84761"', '"/repositories/2/resources/85237"','"/repositories/2/resources/435"', );
+$config['skylight_container_id'] = array(
+    '"/repositories/2/resources/85257"', '"/repositories/2/resources/85256"','"/repositories/2/resources/85711"',
+    '"/repositories/2/resources/85712"', '"/repositories/2/resources/85258"','"/repositories/2/resources/40"',
+    '"/repositories/2/resources/84761"', '"/repositories/2/resources/85246"','"/repositories/2/resources/85804"',
+    '"/repositories/2/resources/85271"', '"/repositories/2/resources/85713"','"/repositories/2/resources/85760"',
+    '"/repositories/2/resources/83825"', '"/repositories/2/resources/85754"','"/repositories/2/resources/85829"',
+    '"/repositories/2/archival_objects/17088"' //todo not displaying
+    );
 $config['skylight_container_field'] = 'resource';
 $config['skylight_sitemap_type'] = 'external';
 
@@ -73,7 +78,7 @@ $config['skylight_fields'] = array('Title' => 'title',
 );
 
 $config['skylight_date_filters'] = array();
-$config['skylight_filters'] = array('Subject' => 'subjects', 'Agent' => 'agents');
+$config['skylight_filters'] = array('Subject' => 'subjects', 'Person' => 'agents');
 $config['skylight_filter_delimiter'] = ':';
 
 $config['skylight_meta_fields'] = array('Title' => 'title',

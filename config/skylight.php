@@ -48,6 +48,8 @@ $config['skylight_objectproxy_url'] = 'http://collectionsinternal.is.ed.ac.uk:80
 // Default OAI not permitted
 $config['skylight_oaipmhallowed'] = false;
 
+$config['skylight_media_url_prefix'] = 'http://collectionsmedia.is.ed.ac.uk/';
+
 // Set to the number of minutes to cache pages for. Set to false for no caching.
 // This can be overridden in site-specific configuration files.
 $config['skylight_cache'] = false;
