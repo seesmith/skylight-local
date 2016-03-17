@@ -69,12 +69,12 @@ if(isset($solr[$bitstream_field]) && $link_bitstream) {
             if (!$mainImage) {
 
                 ?>
-                    <div id="openseadragon1" style="width: 708px; height: 600px;"></div>
+                   <div id="openseadragon1" style="width: 708px; height: 600px;"></div>
                    <script type="text/javascript">
                         var viewer = OpenSeadragon({
                         id: "openseadragon1",
                         prefixUrl: "<?php echo base_url()?>assets/openseadragon/images/",
-                        tileSources: "<?php echo base_url()?>theme/<?php echo $this->config->item('skylight_theme'); ?>/images/dzc_output_images/<?php echo $folder_no; ?>.xml"
+                        tileSources: "<?php echo base_url()?>deepzoom/<?php echo $folder_no; ?>.xml"
 
                     });
                 </script>
