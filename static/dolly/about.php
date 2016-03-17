@@ -5,7 +5,7 @@
             Birth of Modern Genetics’ and ‘The Making of Dolly: Science, Politics and Ethics’ have catalogued, preserved
             and made available archival, printed and visual collections relating to animal genetics in Edinburgh, from
             nineteenth century zoology to the birth of Dolly the sheep in 1996, and beyond to present day cutting-edge
-            research. Working on the project were Rare Book Cataloguer Kristy Davies and Project Archivist Clare Button.
+            research. Working on the project were Rare Book Cataloguer Kristy Davis and Project Archivist Clare Button.
         </p>
         <p>In all, 22 collections have been catalogued and preserved, with key items receiving conservation treatment.
             These collections include rare books, scientific papers, the archives of institutions such as Roslin
