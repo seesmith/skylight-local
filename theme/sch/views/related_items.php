@@ -23,7 +23,6 @@
                                 if ((strpos($b_filename, ".jpg") > 0) || (strpos($b_filename, ".JPG") > 0)) {
 
                                     $bitstream_array[$b_seq] = $bitstream;
-
                                     if ($started) {
                                         if ($b_seq < $min_seq) {
                                             $min_seq = $b_seq;

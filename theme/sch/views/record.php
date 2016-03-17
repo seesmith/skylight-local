@@ -165,23 +165,42 @@ if(isset($solr[$bitstream_field]) && $link_bitstream) {
         <div class="col-sm-6 col-xs-12 metadata">
             <?php if(isset($solr[$short_field][0])) {
                 echo '<p>' . $solr[$short_field][0] . '</p>';
-            } ?>
+            }
+            echo $videoFile;
+            ?>
+
             <div class="record-tabs ">
                 <ul id="tabs" class="hidden-xs nav nav-tabs  nav-justified" data-tabs="tabs">
-                    <li><a data-toggle="tab" href="#about"><i class="fa fa-list fa-1x"></i></span><br/>About</a></li>
-                    <li><a data-toggle="tab" href="#gallery"><i class="fa fa-image fa-1x"></i><br/>Gallery</a></li>
-                    <li><a data-toggle="tab" href="#video"><i class="fa fa-video-camera  fa-1x"></i><br/>Video</a></li>
-                    <li><a data-toggle="tab" href="#audio" title="Audio link "><i class="fa fa-music fa-fw fa-1x"></i><br/>Audio</a></li>
-                    <li><a data-toggle="tab" href="#maker"><i class="fa fa-industry fa-1x"></i><br/>Maker</a></li>
-                    <li><a data-toggle="tab" href="#description"><i class="fa fa-file-text fa-1x">&nbsp;</i><br/>Description</a></li>
+                    <li class="active"><a data-toggle="tab" href="#about"><i class="fa fa-list fa-1x"></i></span><br/>About</a></li>
+                    <li><a data-toggle="tab" href="#gallery" title="Gallery"><i class="fa fa-image fa-1x"></i><br/>Gallery</a></li>
+                    <?php if($videoFile > 0) { ?>
+                        <li><a data-toggle="tab" href="#video" title="Videos"><i class="fa fa-video-camera fa-1x"></i><br/>Video</a></li>
+                    <?php } else { ?>
+                        <li><a data-toggle="tab" href="#video" title="Videos" class="inactive"><i class="fa fa-video-camera fa-inactive fa-1x"></i><br/>Video</a></li>
+                    <?php } ?>
+                    <?php if($audioFile) { ?>
+                        <li><a data-toggle="tab" href="#audio" title="Audio"><i class="fa fa-music fa-1x"></i><br/>Audio</a></li>
+                    <?php } else { ?>
+                        <li><a data-toggle="tab" href="#audio" title="Audio" class="inactive"><i class="fa fa-music fa-inactive fa-1x"></i><br/>Audio</a></li>
+                    <?php } ?>
+                    <li><a data-toggle="tab" href="#maker" title="Marker Information"><i class="fa fa-industry fa-1x"></i><br/>Maker</a></li>
+                    <li><a data-toggle="tab" href="#description" title="Description"><i class="fa fa-file-text fa-1x">&nbsp;</i><br/>Description</a></li>
                 </ul>
                 <ul id="tabs" class="hidden-sm hidden-md hidden-lg nav nav-tabs  nav-justified" data-tabs="tabs">
-                    <li class="active"><a data-toggle="tab" href="#about"><i class="fa fa-list fa-lg"></i></a></li>
-                    <li><a data-toggle="tab" href="#gallery"><i class="fa fa-image fa-lg"></i></a></li>
-                    <li><a data-toggle="tab" href="#video"><i class="fa fa-video-camera  fa-lg"></i></a></li>
-                    <li><a data-toggle="tab" href="#audio" title="Audio link "><i class="fa fa-music fa-fw fa-lg"></i></a></li>
-                    <li><a data-toggle="tab" href="#maker"><i class="fa fa-industry fa-lg"></i></a></li>
-                    <li><a data-toggle="tab" href="#description"><i class="fa fa-file-text fa-lg"></i></a></li>
+                    <li class="active"><a data-toggle="tab" href="#about"><i class="fa fa-list  fa-lg"></i></a></li>
+                    <li><a data-toggle="tab" href="#gallery" title="Gallery"><i class="fa fa-image  fa-lg"></i></a></li>
+                    <?php if($videoFile > 0) { ?>
+                        <li><a data-toggle="tab" href="#video" title="Videos"><i class="fa fa-video-camera fa-1x"></i></a></li>
+                    <?php } else { ?>
+                        <li><a data-toggle="tab" href="#video" title="Videos" class="inactive"><i class="fa fa-video-camera fa-inactive fa-1x"></i></a></li>
+                    <?php } ?>
+                    <?php if($audioFile) { ?>
+                        <li><a data-toggle="tab" href="#audio" title="Audio"><i class="fa fa-music fa-1x"></i></a></li>
+                    <?php } else { ?>
+                        <li><a data-toggle="tab" href="#audio" title="Audio" class="inactive"><i class="fa fa-music fa-inactive fa-1x"></i></a></li>
+                    <?php } ?>
+                    <li><a data-toggle="tab" href="#maker"  title="Marker Information"><i class="fa fa-industry  fa-lg"></i></a></li>
+                    <li><a data-toggle="tab" href="#description"  title="Description"><i class="fa fa-file-text  fa-lg"></i></a></li>
                 </ul>
 
                 <div class="tab-content">

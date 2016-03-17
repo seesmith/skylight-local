@@ -341,13 +341,20 @@ div.spacer {
     display: block;
     padding: 15px 15px;
     position: relative;
-    color: #eeeeee;
+    color: #dddddd;
+}
+
+.record-tabs > ul > li > a > i.fa-inactive {
+    color: #dddddd;
+}
+.record-tabs > ul > li > a.inactive {
+    color: #dddddd;
 }
 
 
 .tags > li.active > a,
 .tags > li.active > a:focus,
-.tags> li.active > a:hover{
+.tags > li.active > a:hover{
     position: relative;
     display: block;
     padding: 5px 5px;
@@ -406,5 +413,8 @@ div.spacer {
     max-width: 100%;
 }
 
+.thumbnail {
+    border:0;
+}
 
 
