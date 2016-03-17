@@ -47,9 +47,9 @@
             <video id="video-archives" title="Towards Dolly Exhibition being installed, Video by Univeristy of Edinburgh Digital Imaging Unit" controls preload="true">
 
                 <?php if (strpos($_SERVER['HTTP_USER_AGENT'], 'Chrome') == false) { ?>
-                    <source src="<?php echo base_url(); ?>videos/0051011v-006.mp4" type="video/mp4"/>
+                    <source src="<?php echo base_url(); ?>videos/0051021v-001.mp4" type="video/mp4"/>
                 <?php } else { ?>
-                    <source src="<?php echo base_url(); ?>videos/0051011v-006.webm" type="video/webm"/>
+                    <source src="<?php echo base_url(); ?>videos/0051021v-001.webm" type="video/webm"/>
                 <?php } ?>
                 Video loading...'
             </video>
