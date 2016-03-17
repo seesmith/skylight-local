@@ -152,13 +152,10 @@ else if (isset($solr[$external_uri_field][0])) {
         }
 
         ?>
-        </tbody>
-    </table>
+
 
     <?php
-    if(isset($solr[$bitstream_field]) && $link_bitstream) { ?>
-
-    <div class="record_bitstreams"><?php
+    if(isset($solr[$bitstream_field]) && $link_bitstream) {
 
         $numThumbnails = 0;
         $mainImage = false;
@@ -221,13 +218,19 @@ else if (isset($solr[$external_uri_field][0])) {
                     }
                 } else if ((strpos($b_uri, ".pdf") > 0) or (strpos($b_uri, ".PDF") > 0)) {
 
+
+
                     $bitstreamLink = $this->skylight_utilities->getBitstreamLink($bitstream);
                     $bitstreamUri = $this->skylight_utilities->getBitstreamUri($bitstream);
 
-                    $pdfLink .= '<object class="pdfviewer" width="100%" height= "650" data="' . $bitstreamUri . '" type="application/pdf">';
-                    $pdfLink .= '<p><span class="label">It appears you do not have a PDF plugin for this browser.</span></p></object>';
-                    $pdfLink .= 'Click ' . $bitstreamLink . 'to download. (<span class="bitstream_size">' . getBitstreamSize($bitstream) . '</span>)';
+                   // $pdfLink .= '<object class="pdfviewer" width="100%" height= "650" data="' . $bitstreamUri . '" type="application/pdf">';
+                    //$pdfLink .= '<p><span class="label">It appears you do not have a PDF plugin for this browser.</span></p></object>';
+                    $pdfLink .= 'Click ' . $bitstreamLink . ' to download. (<span class="bitstream_size">' . getBitstreamSize($bitstream) . '</span>)';
+                    $pdfFile = true;
                 }
+
+
+
 
 
             }
@@ -293,6 +296,16 @@ else if (isset($solr[$external_uri_field][0])) {
                 <?php
             } // end for each bitstream
 
+        if ($pdfFile) {
+            //echo '<h3>Supporting Documentation</h3>';
+            //echo '<div class="content"><table><tbody><tr><th></th><td></td></tr><tr><th>Document: </th><td>'.$pdfLink.'</td></tr></tbody></table></div>';
+            echo '<tr><th>Supporting Document: </th><td>'.$pdfLink.'</td></tr>';
+        }
+        ?>
+        </tbody>
+    </table>
+    <div class="record_bitstreams">
+    <?php
             if ($mainImage) {
 
                 echo $bitstreamLink;
@@ -326,10 +339,7 @@ else if (isset($solr[$external_uri_field][0])) {
                 echo '<br>.<br>' . $videoLink;
             }
 
-            if ($pdfFile) {
 
-                echo '<br>.<br>' . $pdfLink;
-            }
 
             echo '</div><div class="clearfix"></div>';
 
