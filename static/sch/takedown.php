@@ -41,7 +41,6 @@
             <li>Make an initial assessment of its validity</li>
             <li>For all but spurious complaints, temporarily remove access to the item that is subject to complaint</li>
             <li>Acknowledge receipt of the complaint by email</li>
-            <li>Contact the journal responsible for the publication of the content in question to invite a response</li>
             <li>Seek to verify your identity and authority as complainant</li>
             <li>Refer the complaint to the University's Legal Advisor for comment and advice</li>
         </ol></p>
