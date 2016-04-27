@@ -97,46 +97,33 @@ if(isset($solr[$type_field])) {
         $segments = explode("##", $bitstream);
         $filename = $segments[1];
         $filesize = $segments[2];
-        //echo 'FILESIZE'.$filesize;
         $handle = $segments[3];
         $seq = $segments[4];
+
         $handle_id = preg_replace('/^.*\//', '',$handle);
         $uri = './record/'.$handle_id.'/'.$seq.'/'.$filename;
 
-        if ($filesize > 1500000 or strpos($filename, ".tif") > 0)
-        {
-            $isAuthorised = '0';
-        }
-        else
-        {
-            $isAuthorised = '1';
-        }
 
-       // echo $isAuthorised;
-        //echo $solr[$thumbnail_field];
-        //echo $uri;
 
         if(isset($solr[$thumbnail_field])) {
-
             foreach ($solr[$thumbnail_field] as $thumbnail) {
                 $t_segments = explode("##", $thumbnail);
-
                 $t_filename = $t_segments[1];
                 $t_handle = $t_segments[3];
                 $t_seq = $t_segments[4];
                 $handle_id = preg_replace('/^.*\//', '',$t_handle);
                 $t_uri = './record/'.$handle_id.'/'.$t_seq.'/'.$t_filename;
-               // echo $t_uri;
-
+                $filenameplus = $filename.'.jpg';
                 if ($t_filename == $filename.'.jpg') {
-                    if ($isAuthorised != '1') {
-                        //echo 'using thumbnal';
-                        $thumbnailLink = '<img src = "'.$t_uri.'" title="'. $solr[$title_field][0] .'" />';
-                    } else {
-                       // echo 'using bitstream';
-                        $thumbnailLink = '<a title = "' . $solr[$title_field][0] . '" class="fancybox"' . ' href="' . $uri . '"><img src = "'.$t_uri.'" title="'. $solr[$title_field][0] .'" /></a> ';
+                    $jpeg_thumb = strpos($t_filename, '.jpg.jpg');
+                    if ($jpeg_thumb === false)
+                    {
+                        $jpeg_thumb = strpos($t_filename, '.JPG.jpg');
                     }
-                    echo $thumbnailLink;
+                    if($jpeg_thumb !== false) {
+                        $thumbnailLink = '<a title = "' . $solr[$title_field][0] . '" class="fancybox"' . ' href="' . $uri . '"><img src = "' . $t_uri . '" title="' . $solr[$title_field][0] . '" /></a> ';
+                        echo $thumbnailLink;
+                    }
                 }
             }
         }

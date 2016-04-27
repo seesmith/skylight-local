@@ -51,10 +51,10 @@
         <h3>Coming Soon</h3>
         <ul>
             <li>
-                <a href="./roll1">University of Edinburgh: Roll of Honour, WW1</a>
+                University of Edinburgh: Roll of Honour, WW1
             </li>
             <li>
-                <a href="./roll2">University of Edinburgh: Roll of Honour, WW2</a>
+               University of Edinburgh: Roll of Honour, WW2
             </li>
         </ul>
 
