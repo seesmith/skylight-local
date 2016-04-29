@@ -42,7 +42,8 @@ $config['skylight_fields'] = array('Title' => 'dc.title.en',
     'Pamphlet No' => 'dc.identifier.other.en',
     'Pamphlet Title' => 'dc.title.alternative.en',
     'Collection' => 'dc.relation.ispartof.en',
-    'Bitstream' => 'dc.format.original.en'
+    'Bitstream' => 'dc.format.original.en',
+    'Link' => 'dc.identifier.uri.en'
 
 );
 

@@ -72,18 +72,18 @@ if(isset($solr[$type_field])) {
 
         foreach($solr[$uri_field] as $uri) {
             $find   = 'http://hdl.handle.net';
-            $findLuna = 'http://images.is.ed.ac.uk';
+            $findPrimo = 'http://discovered.ed.ac.uk';
             $pos = strpos($uri, $find);
 
             if ($pos === false)
             {
                 echo '<tr><th>Link</th><td>';
-                $Lunapos = strpos($uri, $findLuna);
+                $primopos = strpos($uri, $findPrimo);
 
-                if ($Lunapos !== false)
+                if ($primopos !== false)
                 {
 
-                    echo '<a href="'.$uri.'" title="Link to High resolution version of image" target="_blank">High resolution version of photo</a>';
+                    echo '<a href="'.$uri.'" title="Link to Library catalogue entry" target="_blank">Library Catalogue Entry</a>';
                 }
                 else{
                     echo '<a href="'.$uri.'" title="Link to '.$uri.'" target="_blank">'.$uri.'</a>';
