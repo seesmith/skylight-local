@@ -1,9 +1,9 @@
 <?php
 
-$config['skylight_appname'] = 'dolly';
+$config['skylight_appname'] = 'towardsdolly';
 
 // Uncomment this if you are using a url of the form http://.../art/...
-$config['skylight_url_prefix'] = 'dolly';
+$config['skylight_url_prefix'] = 'towardsdolly';
 
 // set the base url and ga code
 if (strpos($_SERVER['HTTP_HOST'], "test") !== false) {
