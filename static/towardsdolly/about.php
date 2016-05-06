@@ -7,7 +7,7 @@
             nineteenth century zoology to the birth of Dolly the sheep in 1996, and beyond to present day cutting-edge
             research. Working on the project were Rare Book Cataloguer Kristy Davis and Project Archivist Clare Button.
         </p>
-        <p>In all, 22 collections have been catalogued and preserved, with key items receiving conservation treatment.
+        <p>In all, 23 collections have been catalogued and preserved, with key items receiving conservation treatment.
             These collections include rare books, scientific papers, the archives of institutions such as Roslin
             Institute and the papers of pioneering scientists including Charlotte Auerbach, C.H. Waddington and Sir
             Ian Wilmut. Nine oral history recordings were also carried out with leading contemporary geneticists.
