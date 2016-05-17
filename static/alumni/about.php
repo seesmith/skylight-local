@@ -64,6 +64,8 @@
         <p>There are no surviviving records of these students other than the aforementioned list, printed within, Dick, William and Pringle, R. O., <u>Occasional papers on veterinary subjects</u> (Edinburgh, Blackwood, 1869). </p><hr /><h2>Extra Academical students, 1887-1922</h2><p>The data on these students comes from our Register of Extra-Academical Students.  These students attended classes outwith the managed degree programmes.  This was one way by which women, prior to being allowed to matricluate and graduate, gained access to University-level education.  It also allowed individuals to take classes for their of interest without signing up to a complete programme of study.</p>
 
         <p>The handwriting in the volume has been quite challenging to describe and some names have not been fully deciphered.  We hope to digitise this volume in due course to allow you to see the actual records.</p>
+        <hr/><h2>Female Medical Graduates, 1896-1900</h2>
 
+        <p>Taken from the University Calendar, this database contains the details of the first 51 female graduates in Medicine.</p>
     </div>
 </div>

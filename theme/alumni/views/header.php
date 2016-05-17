@@ -108,7 +108,7 @@
                     <fieldset class="search">
                         <input type="text" name="q" value="<?php if (isset($searchbox_query)) echo urldecode($searchbox_query); ?>" id="q" />
                         <input type="submit" name="submit_search" class="btn" value="Search" id="submit_search" />
-                        <a href="./advanced" class="advanced">Advanced search</a>
+                       <!-- <a href="./advanced" class="advanced">Advanced search</a>-->
                     </fieldset>
                 </form>
             </div>

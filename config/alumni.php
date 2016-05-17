@@ -17,7 +17,7 @@ else {
     $config['skylight_ga_code'] = 'UA-25737241-9';
 }
 
-$config['skylight_adminemail'] = 'lddt@mlist.is.ed.ac.uk';
+$config['skylight_adminemail'] = 'is-crc@ed.ac.uk';
 
 $config['skylight_oaipmhcollection'] = 'hdl_10683_47417';
 
@@ -103,8 +103,7 @@ $config['skylight_meta_fields'] = array('Title' => 'dc.title',
     'Type' => 'dc.type',
 );
 
-$config['skylight_recorddisplay'] = array('Title',
-    'Year',
+$config['skylight_recorddisplay'] = array(
     'Subject',
     'Description',
     'Birthplace',
