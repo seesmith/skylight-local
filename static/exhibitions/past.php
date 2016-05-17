@@ -4,6 +4,19 @@
         <h1>Past Exhibitions:</h1>
         <div class="past-list">
             <div>
+                <h2><a href="./visualdissection" alt="Visual Dissection" title="Visual Dissection Information Page">Visual Dissection</a></h2>
+                <p>31st July 2015 - 31st October 2015</p>
+                <a href="./visualdissection" alt="Visual Dissection" title="Visual Dissection">
+                    <div id="exhib-tile-9"></div>
+                </a>
+                <h3><a href='./search/*:*/Exhibition:"visual+dissection|||Visual+Dissection"'><i class="fa fa-search">&nbsp;</i>View all items</a></h3>
+                <p>
+                    Art and Anatomy are often treated as distinct subjects, yet there is a long history of collaboration
+                    between the disciplines. This exhibition gives visitors the opportunity to explore examples of this
+                    rich exchange of expertise. Through illustrations, models and virtual technologies, the close
+                    relationship between visual art and the science of anatomy will be revealed.  </p>
+            </div>
+            <div>
                 <h2><a href="./towardsdolly" alt="Towards Dolly" title="Towards Dolly: A Century of Animal Genetics in Edinburgh Page">Towards Dolly</a></h2>
                 <p>31st July 2015 - 31st October 2015</p>
                 <a href="./towardsdolly" alt="Towards Dolly" title="Towards Dolly">

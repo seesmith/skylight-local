@@ -10,7 +10,8 @@ $filters = array_keys($this->config->item("skylight_filters"));
 $link_uri_field = $this->skylight_utilities->getField("Link");
 $id = $this->skylight_utilities->getField("Id");
 
-$media_uri = $this->config->item("skylight_link_url");
+$link_uri_prefix  = $this->config->item("skylight_link_url");
+
 
 $mainImageTest = false;
 $numThumbnails = 0;
@@ -22,7 +23,10 @@ $bitstreamLinks = array();
     <div class="full-title">
         <h1 class="itemtitle"><?php echo $record_title ?></h1>
     </div>
-    <a href ="http://localhost:8081<?php echo $solr[$id][0] ?>" title="Full record at archive collections online " target="_blank">View full record in University of Edinburgh archive collections </a>
+
+
+
+    <a href ="<?php echo $link_uri_prefix ?><?php echo $solr[$id][0] ?>" title="Full record at archive collections online " target="_blank">View full record in University of Edinburgh archives catalogue</a>
     <div class="full-metadata">
         <table>
             <tbody>
@@ -60,15 +64,9 @@ $bitstreamLinks = array();
 
             <tr><th>Consult at</th>
                     <?php
-                    if (isset($solr[$id_field]) && 0 === strpos($solr[$id_field][0], 'MS'))
-                    {
-                        echo '<td><a href="http://www.nls.uk/" target="_blank" title="National Library of Scotland">National Library of Scotland</a></td>';
-                    }
-                    else
-                    {
-                        echo '<td><a href="http://www.ed.ac.uk/information-services/library-museum-gallery/crc" target="_blank"
+
+                        echo '<td><a href="http://www.ed.ac.uk/information-services/library-museum-gallery/crc/visitor-information/opening-times-location" target="_blank"
                         title="University of Edinburgh, Centre for Research Collections">University of Edinburgh, Centre for Research Collections</a></td>';
-                    }
                     ?>
                 </tr>
             </tbody>

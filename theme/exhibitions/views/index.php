@@ -1,8 +1,8 @@
 <div class="record">
     <div class="content byEditor">
-        <h1>CURRENT EXHIBITION: <a href="./visualdissection" alt="Virtual Dissection"
-                                   title="Towards Dolly">Visual Dissection: The Art of Anatomy</a>
-        <center><h2>University of Edinburgh Main Library, 4th December 2015 - 5th March 2016<br /> Monday - Saturday, 10:00 - 17:00</h2></center>
+        <h1>CURRENT EXHIBITION: <a href="./revel" alt="Revealing the Revel"
+                                   title="Revealing the Revel">Brown Paper and Imagination: Revealing the Revel</a>
+        <h3>University of Edinburgh Main Library, 1st April - 2nd July 2016, Monday - Saturday, 10:00 - 17:00</h3>
         <div id="tile-block">
             <div id="current-banner" class="main-tile"></div>
         </div>
@@ -13,6 +13,14 @@
                 <div class="jcarousel" data-jcarousel="true">
 
                     <ul class="ex-list">
+                        <li class="past-ex">
+                            <h3><a href="./visualdissection" alt="Visual Dissection" title="Visual Dissection Information Page">Visual Dissection</a></h3><br />
+                            <h3><a href='./search/*:*/Exhibition:"visual+dissection|||Visual+Dissection"'><i class="fa fa-search">&nbsp;</i>View Items</a></h3>
+                            <p>4 Dec 2015 - 5 Mar 2016</p>
+                            <a href="./visualdissection" alt="Visual Dissection" title="Visual Dissection">
+                                <div id="exhib-tile-9"></div>
+                            </a>
+                        </li>
                         <li class="past-ex">
                             <h3><a href="./towardsdolly" alt="Towards Dolly" title="Towards Dolly Information Page">Towards Dolly</a></h3><br />
                             <h3><a href='./search/*:*/Exhibition:"towards+dolly|||Towards+Dolly"'><i class="fa fa-search">&nbsp;</i>View Items</a></h3>
