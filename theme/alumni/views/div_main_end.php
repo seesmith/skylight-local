@@ -2,8 +2,8 @@
             <div class="footer-links">
                 <div class="site-links">
                     <a href="./"><?php echo $site_title; ?></a>
-                    <a href="./about">About this Collection</a>
-                    <a href="./feedback" class="last">Feedback</a>
+                    <a href="./about">About</a>
+                    <a href="./feedback" class="last">Contact Us</a>
                 </div>
                 <div class="social-links">
                     <ul class="social-icons">

@@ -4,7 +4,7 @@
         <h2><a href='./search/*:*/Collection:"students+of+medicine%2C+1762-1826%7C%7C%7CStudents+of+Medicine%2C+1762-1826"'><i class="fa fa-search fa-lg">&nbsp;</i>View all items</a></h2>
         <p>The foundation of this database lies in an earlier database compiled by Dr. Lisa M. Rosner, It was was compiled from the following:</p>
         <ul>
-            <li>University of Edinburgh: Matriculation Albums: 1762-1786, 1786-1805, 1804-1816 (3 vols.). [Edinburgh University Library Special Collections: <a href="http://www.archives.lib.ed.ac.uk/catalogue/cs/viewcat.pl?id=GB-237-EUA-IN1-ADS-STA-2&view=basic">EUA IN1/ADS/STA/2</a>]</li>
+            <li>University of Edinburgh: Matriculation Albums: 1762-1786, 1786-1805, 1804-1816 (3 vols.). [Edinburgh University Library Special Collections: EUA IN1/ADS/STA/2]</li>
             <li>Comrie, J.D. and Gardner, J.J, Biographical Index of Edinburgh Medical Graduates, 1705-1866 [Edinburgh University Library Special Collections]</li>
             <li><u>List of the Graduates in Medicine in the University of Edinburgh from MDCCV to MDCCCLXVI</u> (Edinburgh, Neil &amp; Co., 1867)</li>
             <li><u>List of the Members, Laws, and Library-Catalogue of the Medical Society of Edinburgh, instituted 1737; incorporated by Royal Charter Dec. 14, 1778</u> (Edinburgh, Printed for the Society by William Aitken, 1820)</li>
