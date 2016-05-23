@@ -81,13 +81,11 @@ if(isset($solr[$type_field])) {
 <?php if(isset($solr[$bitstream_field]) && $link_bitstream) { ?>
     <div class="record_bitstreams">
         <h3>Digital Objects</h3>
-        <?php //if ($isAuthorised != '1') { ?>
+
             <p>Click on the thumbnail to see the image in greater detail.</p>
 
-            <p>Please note: for performance and security reasons, we only show low resolution jpgs on this site. If you wish to access the high resolution original, please send the School of Physics and Astronomy an <a href="./feedback">email</a>.</p>
-        <?php// } else { ?>
-            <!--<p>Click on a thumbnail to see the high resolution image.</p>-->
-        <?php// } ?>
+
+
 
     <?php
     foreach($solr[$bitstream_field] as $bitstream) {
@@ -133,6 +131,8 @@ if(isset($solr[$type_field])) {
 
 
     ?>
+        <p>Please note: for performance and security reasons, we only show low resolution jpgs on this site. If you need access to the high resolution original, please send the School of Physics and Astronomy an <a href="./feedback">email</a>.</p>
+
     </div>
 <?php
 } ?>
