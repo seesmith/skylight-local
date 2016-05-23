@@ -82,8 +82,9 @@ if(isset($solr[$type_field])) {
     <div class="record_bitstreams">
         <h3>Digital Objects</h3>
         <?php //if ($isAuthorised != '1') { ?>
-            <p>For performance and security reasons, where the source file is large, a thumbnail only will show.
-                To see the high-resolution image, please contact <a href="./feedback">email</a>.</p>
+            <p>Click on the thumbnail to see the image in greater detail.</p>
+
+            <p>Please note: for performance and security reasons, we only show low resolution jpgs on this site. If you wish to access the high resolution original, please send the School of Physics and Astronomy an <a href="./feedback">email</a>.</p>
         <?php// } else { ?>
             <!--<p>Click on a thumbnail to see the high resolution image.</p>-->
         <?php// } ?>
