@@ -10,9 +10,7 @@
         $bitstream_field = $this->skylight_utilities->getField('Bitstream');
         $thumbnail_field = $this->skylight_utilities->getField('Thumbnail');
 
-        // booleans for video/audio
-        $videotab = false;
-        $audiotab = false;
+
 
         $base_parameters = preg_replace("/[?&]sort_by=[_a-zA-Z+%20. ]+/","",$base_parameters);
         if($base_parameters == "") {
@@ -34,6 +32,11 @@
         </div>
             <?php
                 foreach ($docs as $index => $doc) {
+
+                    // booleans for video/audio
+                    $videotab = false;
+                    $audiotab = false;
+
                     $bitstream_array = array();
                     $thumbnailLink = "";
 

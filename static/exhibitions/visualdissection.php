@@ -8,7 +8,7 @@
                 Curated by: Douglas Stevens (Employ.ed on Campus Exhibitions Intern)</h3>
         </div>
         <div id="tile-block">
-            <div id="current-banner" class="main-tile"></div>
+            <div id="anatomy-banner" class="main-tile"></div>
         </div>
         <div class="clearfix"></div>
 <div class = "content">

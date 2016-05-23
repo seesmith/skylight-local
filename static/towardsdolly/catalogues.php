@@ -21,13 +21,15 @@
 
         <p><a href="http://archives.collections.ed.ac.uk/repositories/2/resources/85760" title="Alan Greenwood" target="_blank">Papers of Alan Greenwood</a></p>
 
-        <p>Offprints and lectures of Alan William Greenwood [not yet published] </p>
+        <p><a href="http://archives.collections.ed.ac.uk/repositories/2/resources/85824" title="Offprints and lectures of Alan William Greenwood" target="_blank">Offprints and lectures of Alan William Greenwood</a></p>
 
         <p><a href="http://archives.collections.ed.ac.uk/repositories/2/archival_objects/17088" title="Records of the Institute of Animal Genetics" target="_blank">Records of the Institute of Animal Genetics</a></p>
 
         <p><a href="http://archives.collections.ed.ac.uk/repositories/2/resources/83825" title="Papers of Eric Lucey" target="_blank">Papers of Eric Lucey</a></p>
 
         <p>Papers of Ian Mason [not yet published] </p>
+
+        <p><a href="http://archives.collections.ed.ac.uk/repositories/2/resources/85862" title="Papers of Alan Robertson" target="_blank">Papers of Alan Robertson</a></p>
 
         <p>Records of the Roslin Institute and predecessor institutions [not yet published] </p>
 

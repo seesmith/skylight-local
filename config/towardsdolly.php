@@ -1,9 +1,9 @@
 <?php
 
-$config['skylight_appname'] = 'dolly';
+$config['skylight_appname'] = 'towardsdolly';
 
 // Uncomment this if you are using a url of the form http://.../art/...
-$config['skylight_url_prefix'] = 'dolly';
+$config['skylight_url_prefix'] = 'towardsdolly';
 
 // set the base url and ga code
 if (strpos($_SERVER['HTTP_HOST'], "test") !== false) {
@@ -32,6 +32,7 @@ $config['skylight_adminemail'] = 'lddt@mlist.is.ed.ac.uk';
 $config['skylight_oaipmhcollection'] = '';
 
 $config['skylight_oaipmhallowed'] = true;
+
 
 // Container ID and the field used in solr index to store this ID. Used for restricting search/browse scope.
 $config['skylight_container_id'] = array(

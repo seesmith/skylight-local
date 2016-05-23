@@ -166,7 +166,6 @@ if(isset($solr[$bitstream_field]) && $link_bitstream) {
             <?php if(isset($solr[$short_field][0])) {
                 echo '<p>' . $solr[$short_field][0] . '</p>';
             }
-            echo $videoFile;
             ?>
 
             <div class="record-tabs ">
