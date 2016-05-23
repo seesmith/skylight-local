@@ -131,7 +131,7 @@ if(isset($solr[$type_field])) {
 
 
     ?>
-        <p>Please note: for performance and security reasons, we only show low resolution jpegs on this site. If you need access to the high resolution original, please send the School of Physics and Astronomy an <a href="./feedback">email</a>.</p>
+        <p>Please note: for performance and security reasons, we only show low resolution jpgs on this site. If you need access to the high resolution original, please send the School of Physics and Astronomy an <a href="./feedback">email</a>.</p>
 
     </div>
 <?php
