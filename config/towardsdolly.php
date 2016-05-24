@@ -20,7 +20,7 @@ else {
 $config['skylight_repository_type'] = 'archivesspace'; // Demo 'dspace'
 $config['skylight_repository_version'] = '1';
 
-$config['skylight_theme'] = 'dolly';
+$config['skylight_theme'] = 'towardsdolly';
 
 //$config['skylight_handle_prefix'] = '/repositories/2/resources/85257/';
 $config['skylight_handle_prefix'] = '/repositories/2/';

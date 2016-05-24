@@ -230,7 +230,7 @@ footer                  { display: block; padding-bottom: 10px; margin-bottom: 1
 .footer-links           { margin-top: 15px; margin-bottom: 15px; text-align: left;  border-top: 1px solid #A0A0A0; border-bottom: 1px solid #A0A0A0; width: 660px; height: 39px;}
 
 .site-links			    { display: block; padding-top: 10px; padding-bottom: 10px; width: 660px; float: left; height: 19px; }
-.site-links a 		    { font-size: 11px; text-transform: uppercase; color: #AAA79E  !important; text-decoration: none; font-weight: bold; border-right: 1px solid #cecece; padding-right: 15px; margin-right: 10px; }
+.site-links a 		    { font-size: 11px; text-transform: uppercase; color: #1E61B8  !important; text-decoration: none; font-weight: bold; border-right: 1px solid #cecece; padding-right: 15px; margin-right: 10px; }
 .site-links a.last	    { border: none; }
 .site-links a:hover	    { text-decoration: underline; color: #A0A0A0; }
 
@@ -238,6 +238,9 @@ footer                  { display: block; padding-bottom: 10px; margin-bottom: 1
 .footer-logos           { display: block; float: left; height: 200px;  width: 100%; background: #ffffff; padding: 0; }
 
 .footer-policies        { display: block; padding-left: 0; font-size: 14px; margin-bottom: 5px; color: #555555}
+
+.footer-policies a, a:active, a:visited         { color: #1E61B8; text-decoration: none;}
+.footer-policies a:hover 						{ text-decoration: underline; color: #A0A0A0; }
 .footer-copyright       { font-size: 11px;}
 
 .uoe-logo {

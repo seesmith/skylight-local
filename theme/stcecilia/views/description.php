@@ -1,5 +1,5 @@
     <div class="col-description">
-        <dl class="dl-horizontal">
+        <dl>
             <?php foreach($descriptiondisplay as $key) {
 
                 $element = $this->skylight_utilities->getField($key);
