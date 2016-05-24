@@ -8,7 +8,7 @@
     <meta charset="utf-8">
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 
-    <base href="<?php echo base_url() . index_page(); if (index_page() !== '') { echo '/'; } echo $this->config->item('skylight_url_prefix'); echo '/' ?>">
+    <base href="<?php echo base_url() . index_page(); if (index_page() !== '') { echo '/'; } if ($this->config->item('skylight_url_prefix') != "") { echo $this->config->item('skylight_url_prefix'); echo '/'; } ?>">
 
     <title><?php echo $page_title; ?></title>
 
@@ -18,7 +18,7 @@
     Remove this if you use the .htaccess -->
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 
-    <title>Stuart Sounds</title>
+    <title>St Cecilia's Hall - Collections</title>
 
     <meta name="description" content="">
     <meta name="author" content="">
@@ -45,6 +45,7 @@
     <script src="<?php echo base_url()?>assets/jquery-ui-1.10.4/ui/minified/jquery-ui.min.js"></script>
     <script src="<?php echo base_url()?>assets/jquery-1.11.0/jcarousel/jquery.jcarousel.min.js"></script>
     <script src="<?php echo base_url()?>assets/bootstrap/js/bootstrap.min.js"></script>
+    <script src="<?php echo base_url()?>assets/masonry/masonry.pkgd.min.js"></script>
 
     <script src="http://www.google-analytics.com/analytics.js"></script>
 
@@ -92,34 +93,24 @@
 
 <body>
 
-    <div class="header">
-        <div class="container header-normal hidden-xs">
-            <div class="navbar-static-top header">
-                <a class="navbar-brand" href="http://www.ed.ac.uk" title="The University of Edinburgh Homepage Link" target="_blank"><i class="uoelogo">&nbsp;</i><i class="uoename">&nbsp;</i></a>
+    <nav class="navbar navbar-default">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a class="navbar-brand navbar-left" href="http://www.ed.ac.uk" title="The University of Edinburgh Homepage Link" target="_blank"><img src="<?php echo base_url(); ?>theme/stcecilia/images/logo.png" class="img-responsive uoe_logo" alt="University of Edinburgh link" /></a>
+                <a class="navbar-brand navbar-left" href="http://www.ed.ac.uk" title="The St Cecilia's Hall Homepage Link" target="_blank">St Cecilia's Hall home page link</a>
             </div>
-        </div>
-        <div class="container header-xs hidden-sm hidden-md hidden-lg">
-            <div class="navbar-static-top header">
-                <a class="navbar-brand" href="http://www.ed.ac.uk" title="The University of Edinburgh Homepage Link" target="_blank"><i class="uoelogo">&nbsp;</i><i class="uoename">&nbsp;</i></a>
-            </div>
-        </div>
-        <div class="wide bg-primary">
-            <div class="container">
-                <div class="navbar-static-top header">
-                    <a class="navbar-brand" href="<?php echo base_url(); ?>piccolo"><i class="fa fa-home fa-lg">&nbsp;</i><span class="hidden-xs  collection-name">The Stuart Sound</span></a>
-                    <a class="navbar-brand" href="http://www.stcecilias.ed.ac.uk/" title="St Cecilia's Hall Link" target="_blank">&nbsp;<i class="fa fa-university fa-lg">&nbsp;</i><span class="hidden-xs sch-name">St Cecilia's Hall</span></a>
-                    <form action="./redirect/" method="post" class="navbar-form navbar-left">
-                        <div class="input-group">
-                            <input type="text" class="form-control" placeholder="Search the collection" name="q" value="<?php if (isset($searchbox_query)) echo urldecode($searchbox_query); ?>" id="q" />
-                            <span class="input-group-btn">
-                                <button type="submit" class="btn btn-primary" name="submit_search" value="Search" id="submit_search"><span class=" glyphicon glyphicon-search"></span></button>
-                            </span>
+            <div class="collapse navbar-collapse">
+                <!-- Collect the nav links, forms, and other content for toggling -->
+                    <form class="navbar-form navbar-right" role="search" action="./redirect/" method="post">
+                        <div class="form-group">
+                            <input id="uoe-search" type="text" class="form-control" placeholder="Search the collections" name="q" value="<?php if (isset($searchbox_query)) echo urldecode($searchbox_query); ?>" id="q" />
                         </div>
+                        <button class="btn" type="submit">
+                            <i class="glyphicon glyphicon-search"></i>
+                     </button>
                     </form>
-                </div>
-            </div>
-        </div>
-    </div>
+           </div>
+    </nav><!-- end of header container -->
 
 
 

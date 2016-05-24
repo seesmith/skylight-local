@@ -9,11 +9,8 @@
         $date_field = $this->skylight_utilities->getField('Date Made');
         $bitstream_field = $this->skylight_utilities->getField('Bitstream');
         $thumbnail_field = $this->skylight_utilities->getField('Thumbnail');
-        $piccolo_field = $this->skylight_utilities->getField('Piccolo Description');
 
-        // booleans for video/audio
-        $videotab = false;
-        $audiotab = false;
+
 
         $base_parameters = preg_replace("/[?&]sort_by=[_a-zA-Z+%20. ]+/","",$base_parameters);
         if($base_parameters == "") {
@@ -35,6 +32,11 @@
         </div>
             <?php
                 foreach ($docs as $index => $doc) {
+
+                    // booleans for video/audio
+                    $videotab = false;
+                    $audiotab = false;
+
                     $bitstream_array = array();
                     $thumbnailLink = "";
 
@@ -129,53 +131,34 @@
                                 <?php if(isset($doc[$date_field][0])) { echo $doc[$date_field][0];} else { echo 'Unknown';}?>
                             </small>
                             </h4>
-                            <p class="results_text">
-                                <?php if(isset($doc[$piccolo_field][0])) { echo $doc[$piccolo_field][0];} ?>
-                            </p>
-
                                     <?php if(array_key_exists($author_field,$doc)) { ?>
-                                <h5 class="hidden-xs">
+                                <ul class="hidden-xs nav nav-pills tags">
                                         <?php
                                         foreach ($doc[$author_field] as $author) {
                                             $orig_filter = urlencode($author);
                                             $lower_orig_filter = strtolower($author);
                                             $lower_orig_filter = urlencode($lower_orig_filter);
 
-                                            echo '<a href="./search/*:*/Maker:%22'.$lower_orig_filter.'%7C%7C%7C'.$orig_filter.'%22">'.$author.'</a>';
+                                            echo '<li class="active"><a href="./search/*:*/Maker:%22'.$lower_orig_filter.'%7C%7C%7C'.$orig_filter.'%22">'.$author.'</a></li>';
                                         }
                                         ?>
-                                </h5>
+                                </ul>
                                     <?php } ?>
 
                             <ul class="nav nav-pills">
-                                <li><a href="./record/<?php echo $doc['id']?>/#description" title="Description Link"><i class="fa fa-file-text fa-lg">&nbsp;</i></a></li>
-                                <li><a href="./record/<?php echo $doc['id']?>/#maker" title="Maker Link"><i class="fa fa-industry fa-lg">&nbsp;</i></a></li>
-                                <li><a href="./record/<?php echo $doc['id']?>/#gallery" title="Image Gallery link"><i class="fa fa-image fa-lg">&nbsp;</i></a></li>
+                                <li><a href="./record/<?php echo $doc['id']?>/#gallery" title="Image Gallery link"><i class="fa fa-image fa-fw fa-2x">&nbsp;</i></a></li>
                                 <?php if($videotab) { ?>
-                                    <li><a href="./record/<?php echo $doc['id']?>/#video" title="Videos link"><i class="fa fa-video-camera fa-lg">&nbsp;</i></a></li>
+                                    <li><a href="./record/<?php echo $doc['id']?>/#video" title="Videos link"><i class="fa fa-video-camera fa-fw fa-2x">&nbsp;</i></a></li>
                                 <?php } else { ?>
-                                    <li><i class="fa fa-video-camera fa-lg fa-inactive">&nbsp;</i></li>
+                                    <li><span><i class="fa fa-video-camera fa-2x fa-inactive">&nbsp;</i></span></li>
                                 <?php } ?>
                                 <?php if($audiotab) { ?>
-                                    <li><a href="./record/<?php echo $doc['id']?>/#audio" title="Audio link "><i class="fa fa-music fa-lg">&nbsp;</i></a></li>
+                                    <li><a href="./record/<?php echo $doc['id']?>/#audio" title="Audio link "><i class="fa fa-music fa-fw fa-2x">&nbsp;</i></a></li>
                                 <?php } else { ?>
-                                    <li><i class="fa fa-music fa-lg fa-inactive">&nbsp;</i></li>
+                                    <li><span><i class="fa fa-music fa-2x fa-inactive">&nbsp;</i></span></li>
                                 <?php } ?>
                             </ul>
                         </div>
-                        <!--div class="col-xs-9 hidden-sm hidden-md hidden-lg result-info">
-                            <h5>
-                                <a href="./record/<?php echo $doc['id']?>?highlight=<?php echo $query ?>"><?php echo $doc[$title_field][0]; ?></a>
-                                <small>
-                                    <?php if(isset($doc[$date_field][0])) { echo $doc[$date_field][0];} else { echo 'Unknown';}?>
-                                </small>
-                            </h5>
-                            <ul class="nav nav-pills">
-                                <li><a href="./gallery/<?php echo $doc['id']?>" title="Image Gallery link"><i class="fa fa-image fa-lg">&nbsp;</i></a></li>
-                                <li><a href="./videos/<?php echo $doc['id']?>" title="Videos link"><i class="fa fa-video-camera fa-lg">&nbsp;</i></a></li>
-                                <li><a href="./audio/<?php echo $doc['id']?>" title="Audio link "><i class="fa fa-music fa-lg">&nbsp;</i></a></li>
-                            </ul>
-                        </div-->
                     </div>
                 <hr>
                 <?php

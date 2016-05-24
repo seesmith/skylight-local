@@ -19,7 +19,7 @@
 .footer .nav { display: inline-block; }
 
 .footer .nav a:hover{
-    color: #556D80;
+    color: #313131;
     background-color: #eeeeee;
 }
 
@@ -35,32 +35,25 @@
     margin-bottom: 25px;
 }
 
-.uoelogo  { display: block;
-    width: 40px;
-    height: 38px;
-    float: left;
-    background: url(../images/UoETransparent.png) no-repeat 0 0;
-    margin-top: -5px;
+.result-info > .nav > li > span > i {
+    margin-top: 2px;
+    padding: 2px;
+    color: #dddddd;
 }
 
-.uoename  { display: block;
-    width: 235px;
-    height: 24px;
-    float: left;
-    background: url(../images/uoenamesml.png) no-repeat 0 0;
-    margin-left: 3px;
+.result-info > .nav > li > a{
+    margin-top: 2px;
+    padding: 2px;
+    text-align: center;
 }
 
-.navbar-brand {
-    font-weight: 200;
+
+.result-info > .nav > li > a:hover {
+    background-color: #9FAB97;
+    color: #eeeeee;
+    text-decoration: none;
 }
 
-.header-xs {
-    padding-right: 0;
-}
-.header-xs a.navbar-brand {
-    padding: 15px 0;
-}
 
 .col-xs-8 .record-title {
     font-size: 15px;
@@ -74,6 +67,35 @@
 
 .list-group-item.active a, .list-group-item.active:focus a, .list-group-item.active:hover a {
     color: #FFF;
+}
+
+.list-group-item a {
+    word-wrap: break-word;
+}
+
+.list-group-item.active {
+    background-color: #9FAB97;
+    border-color: #9FAB97;
+}
+
+.list-group-item.active:hover {
+    background-color: #98767E;
+    color: #eeeeee;
+    border-color: #9FAB97;
+}
+
+.list-group-item.active:hover a{
+    color: #eeeeee;
+}
+
+.list-group-item.hover a{
+    color: #98767E;
+}
+
+
+a:focus, a:hover {
+    color: #98767E;
+    text-decoration: underline;
 }
 
 .carousel-inner .active.left  { left: -33%;             }
@@ -116,6 +138,14 @@ div.resized-image img.record-main-image {
 
 div.related {
     margin-top: 20px;
+
+}
+
+.related-title
+{
+    background-color: #333333;
+    color: #ffffff;
+    padding: 2px;
 }
 
 .page-header {
@@ -130,7 +160,7 @@ div.related {
 }
 
 .wide a:hover{
-    color: #70889B;
+    color: #9FAB97;
     background-color: #eeeeee;
 }
 
@@ -139,8 +169,8 @@ div.related {
 }
 
 .jumbotron {
-    background: url(../images/0023123c-bkg-1140v2.png) no-repeat 0 0;
-    background-color: #556D80;
+    background: url(../images/guitar.png) no-repeat 0 0;
+    background-color: #9FAB97;
     color: #ffffff;
     margin-top: 20px;
     font-weight: 100;
@@ -161,54 +191,42 @@ div.related {
 }
 
 .bg-primary {
-    background-color: #556D80;
+    background-color: #9FAB97;
 }
 
 .btn-primary {
-    background-color: #556D80;
+    background-color: #9FAB97;
     border-color: #eeeeee;
 }
 
 .btn-primary:hover {
     background-color: #eeeeee;
-    color: #556D80;
+    color: #9FAB97;
     border-color: #eeeeee;
 }
-
-.list-group-item a {
-    word-wrap: break-word;
-}
-
-.list-group-item.active {
-    background-color: #556D80;
-    border-color: #556D80;
-}
-
-.list-group-item.active:hover {
-    background-color: #eeeeee;
-    color: #556D80;
-    border-color: #556D80;
-}
-
-.list-group-item.active:hover a{
-    color: #556D80;
-}
-
 .text-primary {
-    color: #556D80;
+    color: #9FAB97;
 }
 
 a {
-    color: #556D80;
+    color: #9FAB97;
 }
 
 .pagination > .active > span {
-    background-color: #556D80;
+    background-color: #9FAB97;
     color: #ffffff;
+    border-color: #ffffff;
+}
+
+
+.pagination > .active > span.hover {
+    background-color: #98767E;
+    color: #ffffff;
+    border-color: #ffffff;
 }
 
 .pagination > li > a {
-    color: #556D80;
+    color: #9FAB97;
 }
 
 .record-tabs {
@@ -222,13 +240,14 @@ a {
 
 .feedback_form h1 {
     font-size: 18px;
-    color: #556d80;
+    color: #9FAB97;
 }
 
 .feedback_form label {
     display: block;
     width: 100px;
 }
+
 label, input[type="button"], input[type="submit"], input[type="image"], button {
     cursor: pointer;
 }
@@ -252,8 +271,14 @@ label, input[type="button"], input[type="submit"], input[type="image"], button {
     max-width: 500px;
 }
 
+.form-inline .input-group {
+    display: inline-table;
+    vertical-align: middle;
+}
+
+
 input.btn {
-    background: #556D80 none repeat scroll 0 0;
+    background: #9FAB97 none repeat scroll 0 0;
     border: medium none;
     border-radius: 5px;
     color: #fff;
@@ -285,7 +310,7 @@ div.spacer {
 
 .tab-content dl dd {
     padding: 5px 0;
-    border-bottom: 1px solid #ddd;
+    border-bottom: 1px solid #eeeeee;
 }
 
 .tab-content dd:last-child {
@@ -297,5 +322,100 @@ div.spacer {
     display: block;
     padding: 15px 15px;
     position: relative;
-    color: #bbb;
+    color: #dddddd;
 }
+
+.record-tabs > ul > li > a > i.fa-inactive {
+    color: #dddddd;
+}
+.record-tabs > ul > li > a.inactive {
+    color: #dddddd;
+}
+
+
+.tags > li.active > a,
+.tags > li.active > a:focus,
+.tags > li.active > a:hover{
+    position: relative;
+    display: block;
+    padding: 5px 5px;
+    background: #eeeeee;
+    color: #9FAB97;
+}
+
+.tags > li.active > a:hover {
+    background: #9FAB97;
+    color: #ffffff;
+}
+
+@media (max-width: 768px) {
+    .nav-justified > li {
+        display: table-cell;
+        width: 1%;
+    }
+    .nav-justified > li > a  {
+        border-bottom: 1px solid #ddd !important;
+        border-radius: 4px 4px 0 0 !important;
+        margin-bottom: 0 !important;
+    }
+}
+
+.record_bitstreams
+{
+    padding-top: 2px;
+}
+
+/* ---- grid for related items---- */
+
+.grid {
+    background: #ffffff;
+}
+
+/* clear fix */
+.grid:after {
+    content: '';
+    display: block;
+    clear: both;
+}
+
+/* ---- .grid-item ---- */
+
+.grid-sizer,
+.grid-item {
+    width: 150px;
+}
+
+.grid-item {
+    float: left;
+}
+
+.grid-item img {
+    display: block;
+    max-width: 100%;
+}
+
+.thumbnail {
+    border:0;
+}
+
+.navbar {
+    height: 80px;
+}
+
+.navbar-header {
+    height: 80px;
+}
+
+
+.navbar-brand {
+    font-weight: 200;
+    max-height: 100px;
+}
+
+.uoe_logo
+{
+    width: 208px;
+    height: 50px;
+}
+
+
