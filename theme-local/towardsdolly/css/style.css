@@ -67,7 +67,7 @@ html 				{ overflow-y: scroll; } /* Always force a scrollbar in non-IE */
 a:hover, a:active 	{ outline: none; } /* Accessible focus treatment: people.opera.com/patrickl/experiments/keyboard/test */
 ul, ol 				{ margin-left: 2em; }
 ol 					{ list-style-type: decimal; }
-nav ul, nav li 		{ margin: 0; list-style: none; list-style-image: none; } /* Remove margins for navigation lists */
+nav ul, nav li       { margin: 0; list-style: none; list-style-image: none; } /* Remove margins for navigation lists */
 small 				{ font-size: 85%; }
 strong, th 			{ font-weight: bold; }
 td 					{ vertical-align: top; }
@@ -142,7 +142,7 @@ input.backbtn:hover			    { color: #fff; background: #A0A0A0; }
 
 /* Structure -------------------------------------------------------------------------------------------------------------*/
 #container 			{ width: 940px; margin: auto auto;  background: #ffffff; }
-header				{ position: relative; width: 940px; height: 183px; }
+header				{ position: relative; width: 940px; height: 214px; }
 .col-main			{ float: left; margin-left: 10px; margin-right: 40px; width: 650px; }
 .col-sidebar		{ float: left; width: 228px; margin-top: -42px; background: #ffffff;  border: solid 1px #1E61B8}
 .ie7 .col-sidebar	{ padding-bottom: 30px; }
@@ -162,6 +162,14 @@ header				{ position: relative; width: 940px; height: 183px; }
     background: url(../images/UoELogo.gif) no-repeat 0 0; margin-top: 10px;}
 
 #collection-search  { width: 660px; padding-top: 17px; padding-left: 10px;}
+
+#menu                           { width: 940px; background-color: #1E61B8; margin: 0 auto; height: 33px; }
+.menu-links li					{ display: inline; float: right; height: 33px; padding-left: 0; padding-right: 0; }
+.menu-links li a 			    { font-weight: bold; font-size: 11px; text-transform: uppercase; float: left;
+                                text-decoration: none; margin-left: 10px; color: #FFFFFF; display: inline-block;
+                                height: 33px; line-height: 2.5em; padding-left: 20px; padding-right: 20px;text-align: center; }
+.menu-links li a:hover		    { background-color: #A0A0A0; }
+
 
 
 .search							{ padding-bottom: 22px; width: 660px; }

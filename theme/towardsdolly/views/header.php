@@ -77,7 +77,6 @@
             <link rel="schema.DCTERMS" href="http://purl.org/dc/terms/" />
 
             <?php
-
             foreach($metafields as $label => $element) {
                 $field = "";
                 if(isset($recorddisplay[$label])) {
@@ -90,15 +89,24 @@
                     }
                 }
             }
-
         } ?>
-
     </head>
 
     <body>
-
         <div id="container">
             <header>
+                <nav id="menu">
+                    <ul class="menu-links">
+                        <li><a href="./feedback" class="last">Feedback</a></li>
+                        <li><a href="http://libraryblogs.is.ed.ac.uk/towardsdolly/" target="_blank">Project Blog</a></li>
+                        <li><a href="./audio">Oral Histories</a></li>
+                        <li><a href="./people">People</a></li>
+                        <li><a href="./catalogues">Catalogues</a></li>
+                        <li><a href="./history">History</a></li>
+                        <li><a href="./about">About</a></li>
+                        <li><a href="./" title="Towards Dolly Home Link">Towards Dolly</a></li>
+                    </ul>
+                </nav>
 
                     <a href="<?php echo base_url(); ?>"  title="<?php echo $this->config->item('skylight_fullname');?> Home">
                         <div id="collection-logo">
