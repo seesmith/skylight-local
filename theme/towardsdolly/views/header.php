@@ -97,13 +97,13 @@
             <header>
                 <nav id="menu">
                     <ul class="menu-links">
-                        <li><a href="./feedback" class="last">Feedback</a></li>
-                        <li><a href="http://libraryblogs.is.ed.ac.uk/towardsdolly/" target="_blank">Project Blog</a></li>
-                        <li><a href="./audio">Oral Histories</a></li>
-                        <li><a href="./people">People</a></li>
-                        <li><a href="./catalogues">Catalogues</a></li>
-                        <li><a href="./history">History</a></li>
-                        <li><a href="./about">About</a></li>
+                        <li><a href="./feedback" title="Feedback Form">Feedback</a></li>
+                        <li><a href="http://libraryblogs.is.ed.ac.uk/towardsdolly/" title="Towards Dolly Blog Link" target="_blank">Project Blog</a></li>
+                        <li><a href="./audio" title="Oral Histories Link">Oral Histories</a></li>
+                        <li><a href="./people" title="People Link">People</a></li>
+                        <li><a href="./catalogues" title="Catalogues Link">Catalogues</a></li>
+                        <li><a href="./history" title="History Link">History</a></li>
+                        <li><a href="./about" title="About Link">About</a></li>
                         <li><a href="./" title="Towards Dolly Home Link">Towards Dolly</a></li>
                     </ul>
                 </nav>
