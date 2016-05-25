@@ -142,7 +142,7 @@ input.backbtn:hover			    { color: #fff; background: #A0A0A0; }
 
 /* Structure -------------------------------------------------------------------------------------------------------------*/
 #container 			{ width: 940px; margin: auto auto;  background: #ffffff; }
-header				{ position: relative; width: 940px; height: 214px; }
+header				{ position: relative; width: 940px; height: 216px; }
 .col-main			{ float: left; margin-left: 10px; margin-right: 40px; width: 650px; }
 .col-sidebar		{ float: left; width: 228px; margin-top: -42px; background: #ffffff;  border: solid 1px #1E61B8}
 .ie7 .col-sidebar	{ padding-bottom: 30px; }
