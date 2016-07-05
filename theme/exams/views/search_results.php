@@ -1,5 +1,6 @@
 <?php
 
+
 // Set up some variables to easily refer to particular fields you've configured
 // in $config['skylight_searchresult_display']
 
@@ -16,6 +17,7 @@ if($base_parameters == "") {
 else {
     $sort = '&sort_by=';
 }
+
 ?>
 
 <div class="listing-filter">
@@ -23,6 +25,14 @@ else {
         <strong><?php echo $startrow ?>-<?php echo $endrow ?></strong> of
             <strong><?php echo $rows ?></strong> results
         </span>
+
+        <span class="sort">
+        <strong>No. Results</strong>
+                <a href="<?php echo $base_search . $base_parameters . '?num_results=20' ?>">20</a> |
+                <a href="<?php echo $base_search . $base_parameters . '?num_results=50' ?>">50</a> |
+                <a href="<?php echo $base_search . $base_parameters . '?num_results=100' ?>">100</a>
+        </span>
+
 
         <span class="sort">
             <strong>Sort by</strong>
@@ -38,11 +48,11 @@ else {
 
                     <em><?php echo $label ?></em>
                 <?php if($label != "Date") { ?>
-                        <a href="<?php echo $base_search.$base_parameters.$sort.$field.'+asc' ?>">A-Z</a> |
-                <a href="<?php echo $base_search.$base_parameters.$sort.$field.'+desc' ?>">Z-A</a>
+                        <a href="<?php echo $base_search.$base_parameters.$sort.$field.'+asc'.'&num_results='.$num_results ?>">A-Z</a> |
+                <a href="<?php echo $base_search.$base_parameters.$sort.$field.'+desc'.'&num_results='.$num_results ?>">Z-A</a>
                     <?php } else { ?>
-                        <a href="<?php echo $base_search.$base_parameters.$sort.$field.'+desc' ?>">newest</a> |
-                <a href="<?php echo $base_search.$base_parameters.$sort.$field.'+asc' ?>">oldest</a>
+                        <a href="<?php echo $base_search.$base_parameters.$sort.$field.'+desc'.'&num_results='.$num_results ?>">newest</a> |
+                <a href="<?php echo $base_search.$base_parameters.$sort.$field.'+asc'.'&num_results='.$num_results ?>">oldest</a>
                     <?php } } } ?>
 
         </span>
