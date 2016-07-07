@@ -1,7 +1,7 @@
 <div class="content">
     <div class="content byEditor">
         <div id="head-info">
-            <h1>Visual Dissection: The Art of Anatomy</h1>
+            <h1><a href='./search/*:*/Exhibition:"visual+dissection%7C%7C%7CVisual+Dissection"'>Visual Dissection: The Art of Anatomy</a></h1>
             <h2>About the Exhibition</h2>
             <h3>Dates: 4th December 2015 - 5th March 2016<br />
                 Where: Exhibition Gallery, Main Library, George Square<br />
