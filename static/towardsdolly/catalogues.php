@@ -13,7 +13,7 @@
 
         <p><a href="http://archives.collections.ed.ac.uk/repositories/2/resources/85804" title="Papers of Grahame Bulfield" target="_blank">Papers of Grahame Bulfield</a></p>
 
-        <p>Offprints of F.A.E. Crew [not yet published]</p>
+        <p>Offprints of F.A.E. Crew [Coming soon]</p>
 
         <p><a href="http://archives.collections.ed.ac.uk/repositories/2/resources/85271" title="Papers of James Cossar Ewart" target="_blank">Papers of James Cossar Ewart</a></p>
 
@@ -27,15 +27,15 @@
 
         <p><a href="http://archives.collections.ed.ac.uk/repositories/2/resources/83825" title="Papers of Eric Lucey" target="_blank">Papers of Eric Lucey</a></p>
 
-        <p>Papers of Ian Mason [not yet published] </p>
+        <p>Papers of Ian Mason [Coming soon] </p>
 
         <p><a href="http://archives.collections.ed.ac.uk/repositories/2/resources/85862" title="Papers of Alan Robertson" target="_blank">Papers of Alan Robertson</a></p>
 
-        <p>Records of the Roslin Institute and predecessor institutions [not yet published] </p>
+        <p>Records of the Roslin Institute and predecessor institutions [Coming soon] </p>
 
         <p><a href="http://archives.collections.ed.ac.uk/repositories/2/resources/85754" title="Offprint collection from the Roslin Institute" target="_blank">Offprint collection from the Roslin Institute and predecessor institutions</a></p>
 
-        <p><a href="" title="Charlotte Auerbach" target="_blank">Roslin rare book collection [need to work on linking to library catalogue] </a></p>
+        <p>Roslin rare book collection [Coming soon]</p>
 
         <p><a href="http://images.is.ed.ac.uk/luna/servlet/UoEgal~6~6" title="Roslin glass slide collection" target="_blank">Roslin glass slide collection</a></p>
 
