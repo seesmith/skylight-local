@@ -1,11 +1,10 @@
 <div class="record">
     <div class="content byEditor">
-        <h1>CURRENT EXHIBITION: <a href="./revel" alt="Revealing the Revel"
-                                   title="Revealing the Revel">Brown Paper and Imagination: Revealing the Revel</a>
-        <h3>University of Edinburgh Main Library, 1st April - 2nd July 2016, Monday - Saturday, 10:00 - 17:00</h3>
-        <div id="tile-block">
-            <div id="current-banner" class="main-tile"></div>
-        </div>
+        <h1>CURRENT EXHIBITION: <a href="./godfreythomson" alt="Godfrey H Thomson"
+                                   title="Godfrey H Thomson">Godfrey H Thomson: The man who tested Scotland's IQ</a>
+        <h3>University of Edinburgh, Main Library, George Square<br/>
+            29th July - 20th October 2016, Monday - Saturday, 10:00 - 17:00</h3>
+            <div id="current-banner"></div>
             <div class="clearfix"></div>
         <div id="past-exhib-block">
             <h1><a href="./past" alt="Past Exhibitions" title="Past Exhibitions">Past Exhibitions</a>:</h1>
@@ -13,6 +12,14 @@
                 <div class="jcarousel" data-jcarousel="true">
 
                     <ul class="ex-list">
+                        <li class="past-ex">
+                            <h3><a href="./revel" alt="Visual Dissection" title="Visual Dissection Information Page">Brown Paper and Imagination</a></h3>
+                            <h3><a href='./search/*:*/Exhibition:"visual+dissection|||Visual+Dissection"'><i class="fa fa-search">&nbsp;</i>View Items</a></h3>
+                            <p>1 Apr 2016 - 2 Jul 2016</p>
+                            <a href="./revel" alt="Brown Paper and Imagination" title="Brown Paper and Imaginationn">
+                                <div id="exhib-tile-10"></div>
+                            </a>
+                        </li>
                         <li class="past-ex">
                             <h3><a href="./visualdissection" alt="Visual Dissection" title="Visual Dissection Information Page">Visual Dissection</a></h3><br />
                             <h3><a href='./search/*:*/Exhibition:"visual+dissection|||Visual+Dissection"'><i class="fa fa-search">&nbsp;</i>View Items</a></h3>
