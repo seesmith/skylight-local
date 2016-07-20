@@ -4,6 +4,29 @@
         <h1>Past Exhibitions:</h1>
         <div class="past-list">
             <div>
+                <h2><a href="./visualdissection" alt="Visual Dissection" title="Brown Paper and Imagination Information Page">Brown Paper and Imagination: Revealing the Revel</a></h2>
+                <p>31st July 2015 - 31st October 2015</p>
+                <a href="./visualdissection" alt="Visual Dissection" title="Brown Paper and Imagination">
+                    <div id="exhib-tile-10"></div>
+                </a>
+                <h3><a href='./search/*:*/Exhibition:"visual+dissection|||Visual+Dissection"'><i class="fa fa-search">&nbsp;</i>View all items</a></h3>
+                <p>
+                    Edinburgh College of Art’s yearly Revel, which dates back to 1909, brings together staff and
+                    students for a themed party with costumes, scenery, performances and dancing.
+                </p>
+                <p>
+                    This exhibition in the University of Edinburgh’s Main Library, includes a number of unique
+                    photographs of students at the Revel from the 1910s to the 1970s, a range of colourful ticket
+                    and programme designs, and a costume thought to have been part of the 1951 Revel - which had a
+                    Knights of the Round Table theme.
+                </p>
+                <p>
+                    Former student and celebrated artist John Bellany is known to have designed the set for the
+                    1963 Revel. Former College Principal and painter William Gillies also features in a silent film
+                    showing students creating props and enjoying the event.
+                </p>
+            </div>
+            <div>
                 <h2><a href="./visualdissection" alt="Visual Dissection" title="Visual Dissection Information Page">Visual Dissection</a></h2>
                 <p>31st July 2015 - 31st October 2015</p>
                 <a href="./visualdissection" alt="Visual Dissection" title="Visual Dissection">
@@ -27,10 +50,14 @@
                     Edinburgh has played a vital role in the science which tells us who we are – genetics.
                 </p>
                 <p>
-                    Dolly the sheep is a scientific icon and a household name. However, she is also a single chapter in a wider story which spans a century. Pioneers at Edinburgh and Roslin have embedded concepts like genetic engineering and stem cell research in the public consciousness, stimulating debate and revolutionising science and medicine.
+                    Dolly the sheep is a scientific icon and a household name. However, she is also a single chapter
+                    in a wider story which spans a century. Pioneers at Edinburgh and Roslin have embedded concepts
+                    like genetic engineering and stem cell research in the public consciousness, stimulating debate
+                    and revolutionising science and medicine.
                 </p>
                 <p>
-                    This exhibition celebrates the individuals and institutions who made, and continue to make, extraordinary advances in animal and human health. It will take you on a journey ‘Towards Dolly’ and beyond.
+                    This exhibition celebrates the individuals and institutions who made, and continue to make,
+                    extraordinary advances in animal and human health. It will take you on a journey ‘Towards Dolly’ and beyond.
                 </p>
             </div>
             <div>
@@ -57,7 +84,9 @@
                     <a href="./rashid" alt="Rashid al-Din" title="Rashid al-Din"><div id="exhib-tile-1"></div></a>
               <h3><a href='./search/*:*/Exhibition:"rashid+al-din|||Rashid+al-Din"'><i class="fa fa-search">&nbsp;</i>View all items</a></h3>
               <p>
-                  The World History of Rashid al-Din, 1314: A Masterpiece of Islamic Painting, a major exhibition at the Main Library, University of Edinburgh in collaboration with Centre for Research Collections and the Alwaleed Bin Talal Centre for the Study of Islam in the
+                  The World History of Rashid al-Din, 1314: A Masterpiece of Islamic Painting, a major exhibition at
+                  the Main Library, University of Edinburgh in collaboration with Centre for Research Collections and
+                  the Alwaleed Bin Talal Centre for the Study of Islam in the
                   Contemporary World.
               </p>
               <p>

@@ -1,6 +1,6 @@
 <div class="content">
     <div class="content byEditor">
-        <h1><a href='./search/*:*/Exhibition:"towards+dolly%7C%7C%7CTowards+Dolly"'-->Towards Dolly: A Century of Animal Genetics in Edinburgh</a></h1>
+        <h1><a href='./search/*:*/Exhibition:"towards+dolly%7C%7C%7CTowards+Dolly"'>Towards Dolly: A Century of Animal Genetics in Edinburgh</a></h1>
         <div id="head-info">
             <h2>About the Exhibition</h2>
             <h3>Opening: 31st July 2015 | Where: Exhibition Gallery, Main Library, George Square | Closing: 31st October 2015 | Opening Times: Monday - Saturday, 10:00 - 17:00 | Curated by: Clare Button (Project Archivist)</h3>
