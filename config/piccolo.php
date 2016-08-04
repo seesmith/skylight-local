@@ -1,30 +1,34 @@
 <?php
 
-$config['skylight_appname'] = 'stcecilia';
-
-// Uncomment this if you are using a url of the form http://.../art/...
-$config['skylight_url_prefix'] = 'stcecilia';
-
-$config['skylight_theme'] = 'stcecilia';
-
-$config['skylight_fullname'] = 'St Cecilia\'s Hall';
-
-// set ga code
+// set the base url and ga code
 if (strpos($_SERVER['HTTP_HOST'], "test") !== false) {
-    $config['skylight_ga_code'] = '';
+    //$config['base_url'] = 'http://test.stuartsound.is.ed.ac.uk/';
+    $config['skylight_ga_code'] = 'UA-25737241-6';
+    $config['skylight_container_id'] = '52';
 }
 else {
-    //$config['skylight_ga_code'] = 'UA-25737241-9';
+    //$config['base_url'] = 'http://www.stuartsound.is.ed.ac.uk/';
+    $config['skylight_ga_code'] = 'UA-25737241-6';
+    $config['skylight_container_id'] = '35';
 }
+
+$config['skylight_appname'] = 'piccolo';
+
+// Uncomment this if you are using a url of the form http://.../art/...
+$config['skylight_url_prefix'] = 'piccolo';
+
+$config['skylight_theme'] = 'piccolo';
+
+$config['skylight_fullname'] = 'Stuart Exhibition';
 
 $config['skylight_adminemail'] = 'lddt@mlist.is.ed.ac.uk';
 
-$config['skylight_oaipmhcollection'] = 'hdl_10683_14558';
+$config['skylight_oaipmhcollection'] = 'hdl_10683_53855';
 
 $config['skylight_oaipmhallowed'] = true;
 
 // Container ID and the field used in solr index to store this ID. Used for restricting search/browse scope.
-$config['skylight_container_id'] = '11';
+
 $config['skylight_container_field'] = 'location.coll';
 $config['skylight_sitemap_type'] = 'internal';
 
@@ -58,14 +62,13 @@ $config['skylight_fields'] = array(
     'Provenance' => 'dc.provenance.en',
     'Decorations' => 'dc.description.decoration.en',
     'Link' => 'dc.identifier.uri.en',
-    'Maker Biography' => 'dc.contributor.authorbio.en',
+    'Author Biography' => 'dc.contributor.authorbio.en',
     'Associated Musician Full' => 'dc.contributor.assocfull.en',
     'Associated Musician' => 'dc.contributor.assoc.en',
-    'Piccolo Description' => 'dc.description.piccolo.en',
     'Short Description' => 'dc.description.level1.en',
     'Description' => 'dc.description.level2.en',
     'Associated Musician Biography' => 'dc.contributor.assocbio.en',
-    'Instrument Type' => 'dc.type.desc.en',
+    'Instrument Type Info' => 'dc.type.desc.en',
     'Instrument Type History' => 'dc.type.history.en'
 
 );
@@ -82,7 +85,6 @@ $config['skylight_meta_fields'] = array('Title' => 'dc.title',
     'Type' => 'dc.type');
 
 $config['skylight_recorddisplay'] = array('Alternative Title',
-    'Short Description',
     'Instrument',
     'Instrument Family',
     'Maker',
@@ -90,13 +92,7 @@ $config['skylight_recorddisplay'] = array('Alternative Title',
     'Place Made',
     'Date Made',
     'Measurements',
-    'Inscription');
-
-$config['skylight_descriptiondisplay'] = array(
-    'Abstract',
-    'Decorations',
-    'Instrument Type',
-    'Instrument Type History',
+    'Inscription',
     'Signature',
     'Rights Holder',
     'Accession Number');
@@ -115,7 +111,7 @@ $config['skylight_descriptiondisplay'] = array(
 
 $config['skylight_creatordisplay'] = array(
     'Maker',
-    'Maker Biography',
+    'Author Biography',
     'Associated Musician Full',
     'Associated Musician',
     'Associated Musician Biography',);
@@ -139,16 +135,17 @@ $config['skylight_fullrecorddisplay'] = array(
     'Collection',
     'Rights Holder',
     'Accession Number',
-    'Maker Biography',
+    'Author Biography',
     'Associated Musician Full',
     'Associated Musician',
     'Piccolo Description',
     'Technical Description',
     'Associated Musician Biography',
-    'Instrument Type',
+    'Instrument Type Info',
     'Instrument Type History');
 
-$config['skylight_searchresult_display'] = array('Title','Instrument','Maker','Subject','Abstract','Bitstream','Thumbnail');
+$config['skylight_searchresult_display'] = array('Title','Instrument','Maker','Subject','Abstract', 'Bitstream', 'Thumbnail');
+
 
 $config['skylight_search_fields'] = array(
     'Title' => 'dc.title',
@@ -158,7 +155,7 @@ $config['skylight_search_fields'] = array(
     'Accession Number' => 'dc.identifier.en'
 );
 
-$config['skylight_related_fields'] = array('Instrument' => 'dc.type.family.en');
+$config['skylight_related_fields'] = array('Instrument' => 'dc.type.en', 'Genus' => 'dc.type.genus.en');
 
 //only by title, no date at the moment
 $config['skylight_sort_fields'] = array(
@@ -193,7 +190,7 @@ $config['skylight_lightbox_mimes'] = array('image/jpeg', 'image/gif', 'image/png
 
 // Language and locale settings
 $config['skylight_language_default'] = 'en';
-$config['skylight_language_options'] = array('en');
+$config['skylight_language_options'] = array('en', 'ko', 'jp');
 
 $config['skylight_highlight_fields'] = 'dc.title.en,dc.contributor.author,dc.subject.en,lido.country.en,dc.description.en,dc.relation.ispartof.en';
 
