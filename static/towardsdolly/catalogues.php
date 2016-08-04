@@ -31,7 +31,7 @@
 
         <p><a href="http://archives.collections.ed.ac.uk/repositories/2/resources/85862" title="Papers of Alan Robertson" target="_blank">Papers of Alan Robertson</a></p>
 
-        <p>Records of the Roslin Institute and predecessor institutions [Coming soon] </p>
+        <p><a href="http://archives.collections.ed.ac.uk/repositories/2/resources/85710" title="Records of the Roslin Institute and predecessor institutions" target="_blank">Records of the Roslin Institute and predecessor institutions</a></p>
 
         <p><a href="http://archives.collections.ed.ac.uk/repositories/2/resources/85754" title="Offprint collection from the Roslin Institute" target="_blank">Offprint collection from the Roslin Institute and predecessor institutions</a></p>
 
