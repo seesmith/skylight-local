@@ -3,7 +3,9 @@
         <h1>Brown Paper and Imagination: Revealing the Revel</h1>
         <div id="head-info">
             <h2>About the Exhibition</h2>
-            <h3>Opening: 1st April 2016 | Where: Exhibition Gallery, Main Library, George Square | Closing: 2nd July 2016 | Opening Times: Monday - Saturday, 10:00 - 17:00 | Curated by: Rachel Hosker, University of Edinburgh Archives Manager</h3>
+            <h3>Opening: 1st April 2016 | Where: Exhibition Gallery, Main Library, George Square |
+                Closing: 2nd July 2016 | Opening Times: Monday - Saturday, 10:00 - 17:00 |
+                Curated by: Rachel Hosker, University of Edinburgh Archives Manager</h3>
         </div>
 
 

@@ -14,7 +14,7 @@
                     <ul class="ex-list">
                         <li class="past-ex">
                             <h3><a href="./revel" alt="Visual Dissection" title="Visual Dissection Information Page">Brown Paper and Imagination</a></h3>
-                            <h3><a href='./search/*:*/Exhibition:"visual+dissection|||Visual+Dissection"'><i class="fa fa-search">&nbsp;</i>View Items</a></h3>
+                            <h3><i class="fa fa-search">&nbsp;</i> Coming Soon</h3>
                             <p>1 Apr 2016 - 2 Jul 2016</p>
                             <a href="./revel" alt="Brown Paper and Imagination" title="Brown Paper and Imaginationn">
                                 <div id="exhib-tile-10"></div>
