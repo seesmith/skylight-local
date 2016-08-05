@@ -220,9 +220,9 @@ span[id^="video-"]              { margin: 5px 0; }
 
 .col-sidebar ul.related li a.related-record { font-size: 14px; padding-bottom: 5px;}
 
-footer                  { display: block; border-bottom: 1px solid #58A09D; padding-bottom: 10px; margin-bottom: 15px; width: 100%; height: 130px;}
+footer                  { display: block; border-bottom: 1px solid #58A09D;padding-bottom: 10px; margin-bottom: 15px; width: 100%; height: 250px;}
 
-.footer-links           { margin-top: 15px; margin-bottom: 15px; text-align: left;  border-top: 1px solid #58A09D; border-bottom: 1px solid #58A09D; width: 660px; height: 39px;}
+.footer-links           { margin-top: 15px; margin-bottom: 3px; text-align: left;  border-top: 1px solid #58A09D; border-bottom: 1px solid #58A09D; width: 660px; height: 39px;}
 
 .site-links			    { display: block; padding-top: 10px; padding-bottom: 10px; width: 500px; float: left; height: 19px; }
 .site-links a 		    { font-size: 10px; text-transform: uppercase; color: #AAA79E  !important; text-decoration: none; font-weight: bold; border-right: 1px solid #cecece; padding-right: 15px; margin-right: 10px; }
@@ -234,14 +234,20 @@ footer                  { display: block; border-bottom: 1px solid #58A09D; padd
 .social-icons li a      { display: block; margin: 0; width: 30px; height: 33px; line-height: 33px; padding: 0; color: #AAA79E  !important; }
 .social-icons i:hover   { color: #58A09D;}
 
-.footer-disclaimer      { display: block; width: 95%; margin: auto; }
-.footer-logo            { display: block; float: left; }
-.is-logo                { display: block; float: left; padding-left: 10px; }
-.luclogo                { display: block; width: 64px; height: 64px; background: url(../images/ArtLUCLogo.png) no-repeat 0px 0px; }
-.islogo                 { display: block; float: left; width: 50px; height: 64px; background: url(../images/islogo.gif) no-repeat 0px 0px; }
+.footer-disclaimer      { display: block; width: 95%; margin: auto;padding-top:10px; }
+.footer-logo            { display: block; float: left; padding-top:10px; }
+.is-logo                { display: block; float: left; padding-left: 10px; padding-top:10px; }
+.luclogo                { display: block; width: 64px; padding-top:10px;height: 64px; background: url(../images/ArtLUCLogo.png) no-repeat 0px 0px; }
+.islogo                 { display: block; float: left; padding-top:10px;width: 50px; height: 64px; background: url(../images/islogo.gif) no-repeat 0px 0px; }
 
-.footer-policies        { display: block; float: left; padding-left: 10px; }
+.footer-policies        { display: block; float: left; padding-left: 10px; padding-top:10px;}
 .footer-policies p      { font-size: 12px; margin-bottom: 5px; color: #555555}
+
+.artuk-links            { display: block; float: right; padding-top: 1px; text-align: center;  border-bottom: 1px solid #58A09D;}
+.artukgreen             { display: block; width: 100px; height: 110px; background: url(../images/ArtUKGreen.png) no-repeat 0px 0px; }
+.artukred               { display: block; width: 100px; height: 110px; background: url(../images/ArtUKRed.png) no-repeat 0px 0px; }
+.artuk-text             { display: block; float: left; padding-top: 3px; margin:8px;text-align: left; text-align: justify;text-justify: inter-word; width: 444px;}
+
 
 #tile-block             { width: 660px; height: 753px; margin-bottom: 18px; }
 #tile-block a           { padding: 0; margin: 0; }
