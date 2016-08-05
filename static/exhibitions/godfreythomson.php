@@ -5,7 +5,7 @@
             <h2>About the Exhibition</h2>
             <h3>Dates: 29th July 2016 - 20th October 2016<br />
                 Where: Exhibition Gallery, Main Library, George Square<br />
-                Curated by: </h3>
+                Curated by: Professor Ian Deary </h3>
         </div>
             <div id="thomson-banner"></div>
         <br/>

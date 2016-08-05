@@ -47,29 +47,31 @@
     <script src="<?php echo base_url()?>assets/bootstrap/js/bootstrap.min.js"></script>
     <script src="<?php echo base_url()?>assets/masonry/masonry.pkgd.min.js"></script>
 
-    <script src="http://www.google-analytics.com/analytics.js"></script>
+    <?php if ($ga_code != '') {?>
+        <script src="http://www.google-analytics.com/analytics.js"></script>
 
-    <!-- Google Analytics -->
-    <script>
-        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+        <!-- Google Analytics -->
+        <script>
+            (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+                (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+                m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+            })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 
-        ga('create', '<?php echo $ga_code ?>', 'auto');
-        ga('send', 'pageview');
+            ga('create', '<?php echo $ga_code ?>', 'auto');
+            ga('send', 'pageview');
 
-    </script>
-    <!-- End Google Analytics -->
+        </script>
+        <!-- End Google Analytics -->
 
-    <script src="http://releases.flowplayer.org/6.0.4/flowplayer.min.js"></script>
+        <script src="http://releases.flowplayer.org/6.0.4/flowplayer.min.js"></script>
 
-    <!-- global options -->
-    <script>
-        flowplayer.conf = {
-            analytics: "<?php echo $ga_code ?>"
-        };
-    </script>
+        <!-- global options -->
+        <script>
+            flowplayer.conf = {
+                analytics: "<?php echo $ga_code ?>"
+            };
+        </script>
+    <?php } ?>
 
     <?php if (isset($solr)) { ?><link rel="schema.DC" href="http://purl.org/dc/elements/1.1/" />
         <link rel="schema.DCTERMS" href="http://purl.org/dc/terms/" />
@@ -94,7 +96,7 @@
 <body>
 
     <nav class="navbar navbar-default">
-        <div class="container-fluid">
+        <div class="col-xs-12">
             <div class="navbar-header">
                 <a class="navbar-brand navbar-left" href="http://www.ed.ac.uk" title="The University of Edinburgh Homepage Link" target="_blank"><img src="<?php echo base_url(); ?>theme/stcecilia/images/logo.png" class="img-responsive uoe_logo" alt="University of Edinburgh link" /></a>
                 <a class="navbar-brand navbar-left" href="http://www.ed.ac.uk" title="The St Cecilia's Hall Homepage Link" target="_blank">St Cecilia's Hall home page link</a>
@@ -107,9 +109,10 @@
                         </div>
                         <button class="btn" type="submit">
                             <i class="glyphicon glyphicon-search"></i>
-                     </button>
+                        </button>
                     </form>
            </div>
+        </div>
     </nav><!-- end of header container -->
 
 
