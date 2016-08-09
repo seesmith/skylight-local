@@ -16,20 +16,7 @@
                 </div>
             </div>
 
-
-                <div class="artuk-links">
-                    <div class = "footer-logo">
-                        <a href="http://artuk.org/visit/venues/university-of-edinburgh-5095" class = "artukgreen" target="_blank" title="University of Edinburgh Art Collection on Art UK"></a>
-                    </div>
-                    <p class = "artuk-text">Art UK, previously called the Public Catalogue Foundation, is a small charity. They work in partnership with 3,000 public collections, the BBC and other organisations to showcase the art the UK owns.
-                    The University of Edinburgh has two discrete areas on Art UK, one for the University's Art Collection (left link), and one for Edinburgh College of Art (right).</p>
-                    <div class = "footer-logo">
-                        <a href="http://artuk.org/visit/venues/edinburgh-college-of-art-university-of-edinburgh-7553" class = "artukred" target="_blank" title="Edinburgh College of Art on Art UK"></a>
-                    </div>
-                </div>
-
             <div id="main" role="main" class="clearfix">
-            <!--<div id="main" role="main" class="clearfix">-->
             <div class="footer-disclaimer">
                 <div class="footer-logo">
                     <a href="http://www.ed.ac.uk/schools-departments/information-services/about/organisation/library-and-collections" target="_blank" class="luclogo" title="Library &amp; University Collections Home"></a>
