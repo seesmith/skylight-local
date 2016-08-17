@@ -251,7 +251,7 @@ if(isset($solr[$type_field])) {
                             foreach ($static_page as $key => $value) {
                                 if ($key == $metadatavalue)
                                 {
-                                    echo $metadatavalue.': <a href="./search/*:*/' . $key . ':%22'.$lower_orig_filter.'%7C%7C%7C'.$orig_filter.'%22"><i class="fa fa-search fa-lg">&nbsp;</i>See All Records</a> | <a href="./'.$value.'"><i class="fa fa-info-circle fa-lg">&nbsp;</i>More Info</a>';
+                                    echo $metadatavalue.': <a href="./search/*:*/' . $key . ':%22'.$lower_orig_filter.'%7C%7C%7C'.$orig_filter.'%22/Collection:%22'.$lower_orig_filter.'%7C%7C%7C'.$orig_filter.'%22"><i class="fa fa-search fa-lg">&nbsp;</i>See All Records</a> | <a href="./'.$value.'"><i class="fa fa-info-circle fa-lg">&nbsp;</i>More Info</a>';
 
                                 }
                             }
