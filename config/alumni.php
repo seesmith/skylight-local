@@ -94,7 +94,7 @@ $config['skylight_static_pages'] = array('Students of Medicine, 1762-1826'=>'ros
     'Students of Medicine (sample of 205), 1833-1846'=>'medsample',
     'Awards to Women students, 1876-1894'=>'women',
     'Early Veterinary Graduates, 1825-1865'=>'earlyvet',
-    'Female Medical Graduates 1896-1900'=>'femgrad'
+    'Female Medical Graduates 1896-1900'=>'femalegrad'
     )
 ;
 
