@@ -88,7 +88,7 @@ if(isset($solr[$bitstream_field]) && $link_bitstream) {
 
 
                 $videoLink .= '<div class="flowplayer" data-analytics="' . $ga_code . '" title="' . $b_filename . '">';
-                $videoLink .= '<video preload=auto loop width="100%" height="auto" controls>';
+                $videoLink .= '<video preload=auto loop width="100%" height="auto" controls preload="true" width="660">';
                 $videoLink .= '<source src="' . $b_uri . '" type="video/mp4" />Video loading...';
                 $videoLink .= '</video>';
                 $videoLink .= '</div>';
@@ -104,7 +104,7 @@ if(isset($solr[$bitstream_field]) && $link_bitstream) {
             if (strpos($_SERVER['HTTP_USER_AGENT'], 'Chrome') == true) {
 
                 $videoLink .= '<div class="flowplayer" data-analytics="' . $ga_code . '" title="' . $record_title . ": " . $b_filename . '">';
-                $videoLink .= '<video preload=auto loop width="100%" height="auto">';
+                $videoLink .= '<video preload=auto loop width="100%" height="auto" controls preload="true" width="660">';
                 $videoLink .= '<source src="' . $b_uri . '" type="video/webm" />Video loading...';
                 $videoLink .= '</video>';
                 $videoLink .= '</div>';
