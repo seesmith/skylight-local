@@ -48,14 +48,24 @@
             </li>
         </ul>
 
-        <h3>Coming Soon</h3>
+        <h3>Other</h3>
         <ul>
             <li>
-                University of Edinburgh: Roll of Honour, WW1
+                <a href="./ww1roll">University of Edinburgh: Roll of Honour, WW1</a>
             </li>
+        </ul>
+        <h3>Coming Soon</h3>
+        <ul>
+
             <li>
                University of Edinburgh: Roll of Honour, WW2
             </li>
+        </ul>
+
+        <h3>Data held elsewhere</h3>
+
+        <ul>
+            <li><a href=http://www.scripts.sasg.ed.ac.uk/registry/Graduations/Honorary_Graduates.cfm” target=”_blank”>Honorary Graduates</a></li>
         </ul>
 
         <div class="clearfix"></div>
