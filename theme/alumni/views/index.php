@@ -3,9 +3,9 @@
         <h1>University of Edinburgh: Historical Alumni Collection</h1>
         <p>Our records of students date back to the very first class which graduated in 1587.  However they do not cover every student who ever attended the University.  Because formal matriculation and graduation did not become mandatory until the nineteenth century, many do not appear in the records.</p>
 
-        <p>This resource is drawn from earlier databases of students and is not yet a comprehensive list of all students in our records.  For details of coverage and sources from which this has been drawwn, please use the link below.</p>
+        <p>This resource is drawn from earlier databases of students and is not yet a comprehensive list of all students in our records.  For details of coverage and sources from which this has been drawn, please use the link below.</p>
 
-        <h2>Specific datasets' information</h2>
+        <h2>Specific datasets</h2>
         <h3>University of Edinburgh</h3>
         <ul>
             <li>
