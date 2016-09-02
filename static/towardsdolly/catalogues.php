@@ -13,7 +13,7 @@
 
         <p><a href="http://archives.collections.ed.ac.uk/repositories/2/resources/85804" title="Papers of Grahame Bulfield" target="_blank">Papers of Grahame Bulfield</a></p>
 
-        <p>Offprints of F.A.E. Crew [Coming soon]</p>
+        <p><a href="http://archives.collections.ed.ac.uk/repositories/2/resources/85835" title="Offprints of F.A.E. Crew" target="_blank">Offprints of F.A.E. Crew</a></p>
 
         <p><a href="http://archives.collections.ed.ac.uk/repositories/2/resources/85271" title="Papers of James Cossar Ewart" target="_blank">Papers of James Cossar Ewart</a></p>
 

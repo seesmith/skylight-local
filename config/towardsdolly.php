@@ -42,7 +42,7 @@ $config['skylight_container_id'] = array(
     '"/repositories/2/resources/85271"', '"/repositories/2/resources/85713"','"/repositories/2/resources/85760"',
     '"/repositories/2/resources/83825"', '"/repositories/2/resources/85754"','"/repositories/2/resources/85829"',
     '"/repositories/2/resources/85710"', '"/repositories/2/resources/85824"','"/repositories/2/resources/85862"',
-    '"/repositories/2/archival_objects/17088"');
+    '"/repositories/2/resources/85835"','"/repositories/2/archival_objects/17088"');
 $config['skylight_container_field'] = 'resource';
 $config['skylight_sitemap_type'] = 'external';
 

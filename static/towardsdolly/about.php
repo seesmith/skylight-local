@@ -55,6 +55,9 @@
             </video>
         </div>
 
+        <h1>Project report</h1>
+        <p>Download the full project report <a href ="<?php echo base_url(); ?>videos/Towards Dolly complete final report.pdf" target="_blank">here</a> (9.3mb)</p>
+
 
         <h1>Contact Details</h1>
         <p>
