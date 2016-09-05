@@ -65,7 +65,7 @@
         <h3>Data held elsewhere</h3>
 
         <ul>
-            <li><a href=http://www.scripts.sasg.ed.ac.uk/registry/Graduations/Honorary_Graduates.cfm” target=”_blank”>Honorary Graduates</a></li>
+            <li><a href="http://www.scripts.sasg.ed.ac.uk/registry/Graduations/Honorary_Graduates.cfm" target="_blank">Honorary Graduates</a></li>
         </ul>
 
         <div class="clearfix"></div>
