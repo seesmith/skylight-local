@@ -88,15 +88,16 @@ if(isset($solr[$type_field])) {
     $seq = "";
 
     foreach ($solr[$bitstream_field] as $bitstream) {
+        $mp4ok = false;
         $bitstreamLink = $this->skylight_utilities->getBitstreamLink($bitstream);
         $bitstreamLinkedImage = $this->skylight_utilities->getBitstreamLinkedImage($bitstream);
-        $segments = explode("##", $bitstream);
-        $filename = $segments[1];
-        $filesize = $segments[2];
-        $handle = $segments[3];
-        $seq = $segments[4];
-        $handle_id = preg_replace('/^.*\//', '', $handle);
-        $uri = './record/' . $handle_id . '/' . $seq . '/' . $filename;
+        $b_segments = explode("##", $bitstream);
+        $b_filename = $b_segments[1];
+        $b_filesize = $b_segments[2];
+        $b_handle = $b_segments[3];
+        $b_seq = $b_segments[4];
+        $b_handle_id = preg_replace('/^.*\//', '', $b_handle);
+        $uri = './record/' . $b_handle_id . '/' . $b_seq . '/' . $b_filename;
         if (isset($solr[$thumbnail_field])) {
             foreach ($solr[$thumbnail_field] as $thumbnail) {
                 $t_segments = explode("##", $thumbnail);
@@ -105,56 +106,75 @@ if(isset($solr[$type_field])) {
                 $t_seq = $t_segments[4];
                 $handle_id = preg_replace('/^.*\//', '', $t_handle);
                 $t_uri = './record/' . $handle_id . '/' . $t_seq . '/' . $t_filename;
-                $filenameplus = $filename . '.jpg';
-                if ($t_filename == $filename . '.jpg') {
+
+                if ($t_filename == $t_filename . '.jpg') {
                     $jpeg_thumb = strpos($t_filename, '.jpg.jpg');
                     if ($jpeg_thumb === false) {
                         $jpeg_thumb = strpos($t_filename, '.JPG.jpg');
                     }
                     if ($jpeg_thumb !== false) {
-                        $thumbnailLink = '<a title = "' . $solr[$title_field][0] . '" class="fancybox"' . ' href="' . $uri . '"><img src = "' . $t_uri . '" title="' . $solr[$title_field][0] . '" /></a> ';
+                        $thumbnailLink = '<a title = "' . $solr[$title_field][0] . '" class="fancybox"' . ' href="' . $b_uri . '"><img src = "' . $t_uri . '" title="' . $solr[$title_field][0] . '" /></a> ';
                         echo $thumbnailLink;
                     }
                 }
             }
         }
 
-        if ((strpos($filename, ".mp3") > 0) or (strpos($filename, ".MP3") > 0)) {
+        if ((strpos($b_filename, ".mp3") > 0) or (strpos($b_filename, ".MP3") > 0))
+        {
 
-            $b_uri = './record/' . $handle_id . '/' . $seq . '/' . $filename;
+            $b_uri = './record/' . $b_handle_id . '/' . $b_seq . '/' . $b_filename;
             $audioLink .= '<audio controls>';
             $audioLink .= '<source src="' . $b_uri . '" type="audio/mpeg" />Audio loading...';
             $audioLink .= '</audio>';
             $audioFile = true;
 
-        } else if ((strpos($filename, ".mp4") > 0) or (strpos($filename, ".MP4") > 0)) {
-            $b_uri = $media_uri . $handle_id . '/' . $seq . '/' . $filename;
-            // if it's chrome, use webm if it exists
-            if (strpos($_SERVER['HTTP_USER_AGENT'], 'Chrome') == false) {
-                $videoLink .= '<div class="flowplayer" data-analytics="' . $ga_code . '" title="' . $filename . '">';
+        }
+
+        else if ((strpos($b_filename, ".mp4") > 0) or (strpos($b_filename, ".MP4") > 0))
+        {
+            $b_uri = $media_uri.$b_handle_id.'/'.$b_seq.'/'.$b_filename;
+            // Use MP4 for all browsers other than Chrome
+            if (strpos($_SERVER['HTTP_USER_AGENT'], 'Chrome') == false)
+            {
+                $mp4ok = true;
+            }
+            //Microsoft Edge is calling itself Chrome, Mozilla and Safari, as well as Edge, so we need to deal with that.
+            else if (strpos($_SERVER['HTTP_USER_AGENT'], 'Edge') == true)
+            {
+                $mp4ok = true;
+            }
+
+            if ($mp4ok == true)
+            {
+                $videoLink .= '<div class="flowplayer" data-analytics="' . $ga_code . '" title="' . $record_title . ": " . $b_filename . '">';
                 $videoLink .= '<video preload=auto loop width="100%" height="auto" controls preload="true" width="660">';
                 $videoLink .= '<source src="' . $b_uri . '" type="video/mp4" />Video loading...';
                 $videoLink .= '</video>';
                 $videoLink .= '</div>';
                 $videoFile = true;
-
-            }
-        } else if ((strpos($filename, ".webm") > 0) or (strpos($filename, ".WEBM") > 0)) {
-
-            $b_uri = $media_uri . $handle_id . '/' . $seq . '/' . $filename;
-            // if it's chrome, use webm if it exists
-            if (strpos($_SERVER['HTTP_USER_AGENT'], 'Chrome') == true) {
-                $videoLink .= '<div class="flowplayer" data-analytics="' . $ga_code . '" title="' . $record_title . ": " . $filename . '">';
-                $videoLink .= '<video preload=auto loop width="100%" height="auto" controls preload="true" width="660">';
-                $videoLink .= '<source src="' . $b_uri . '" type="video/webm" />Video loading...';
-                $videoLink .= '</video>';
-                $videoLink .= '</div>';
-
-                $videoFile = true;
-
             }
         }
-    }
+
+        else if ((strpos($b_filename, ".webm") > 0) or (strpos($b_filename, ".WEBM") > 0))
+        {
+            //Microsoft Edge needs to be dealt with. Chrome calls itself Safari too, but that doesn't matter.
+            if (strpos($_SERVER['HTTP_USER_AGENT'], 'Edge') == false)
+            {
+                if (strpos($_SERVER['HTTP_USER_AGENT'], 'Chrome') == true)
+                {
+                    $b_uri = $media_uri . $b_handle_id . '/' . $b_seq . '/' . $b_filename;
+                    // if it's chrome, use webm if it exists
+                    $videoLink .= '<div class="flowplayer" data-analytics="' . $ga_code . '" title="' . $record_title . ": " . $b_filename . '">';
+                    $videoLink .= '<video preload=auto loop width="100%" height="auto" controls preload="true" width="660">';
+                    $videoLink .= '<source src="' . $b_uri . '" type="video/webm" />Video loading...';
+                    $videoLink .= '</video>';
+                    $videoLink .= '</div>';
+                    $videoFile = true;
+                }
+            }
+        }
+      }
     }
         ?>
         <p>Please note: for performance and security reasons, we only show low resolution media on this site. If you need access to the high resolution original, please send the School of Physics and Astronomy an <a href="./feedback">email</a>.</p>

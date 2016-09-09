@@ -11,14 +11,31 @@
         </div>
 
 
+        <?php
 
-<?php
+        $mp4ok = false;
+        // Use MP4 for all browsers other than Chrome
+        if (strpos($_SERVER['HTTP_USER_AGENT'], 'Chrome') == false)
+        {
+            $mp4ok = true;
+        }
+        //Microsoft Edge is calling itself Chrome, Mozilla and Safari, as well as Edge, so we need to deal with that.
+        else if (strpos($_SERVER['HTTP_USER_AGENT'], 'Edge') == true)
+        {
+            $mp4ok = true;
+        }
+        else if (strpos($_SERVER['HTTP_USER_AGENT'], 'Edge') == false) {
+            if (strpos($_SERVER['HTTP_USER_AGENT'], 'Chrome') == true) {
+                $mp4ok = false;
+            }
+        }
+
         $record_title = 'Something Blue Introduction';
         $b_filename = base_url().'videos/0051014v-001.';
         $b_seq = 0;
         $videoLink = "";
 
-        if (strpos($_SERVER['HTTP_USER_AGENT'], 'Chrome') == false) {
+        if ($mp4ok == true) {
             $videoLink = '<div class="flowplayer"  title="' . $record_title . '">';
             $videoLink .= '<video id="video-' . $b_seq. '" title="' . $record_title . '" ';
             $videoLink .= 'controls preload="true" width="660">';

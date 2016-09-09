@@ -1,5 +1,21 @@
 <?php
-        //echo $search_url;
+    $mp4ok = false;
+    // Use MP4 for all browsers other than Chrome
+    if (strpos($_SERVER['HTTP_USER_AGENT'], 'Chrome') == false)
+    {
+        $mp4ok = true;
+    }
+    //Microsoft Edge is calling itself Chrome, Mozilla and Safari, as well as Edge, so we need to deal with that.
+    else if (strpos($_SERVER['HTTP_USER_AGENT'], 'Edge') == true)
+    {
+        $mp4ok = true;
+    }
+    else if (strpos($_SERVER['HTTP_USER_AGENT'], 'Edge') == false) {
+        if (strpos($_SERVER['HTTP_USER_AGENT'], 'Chrome') == true) {
+            $mp4ok = false;
+        }
+    }
+//echo $search_url;
         if (!empty($search_url))
 {
 
@@ -15,7 +31,7 @@ if (strpos($search_url, 'Header:%22archives%22') > 0)
         <div class="flowplayer" data-analytics="<?php echo $ga_code ?>"
              title="Introduction to Archives by Archives Manager, Rachel Hosker">
             <video id="video-archives" title="Introduction to Archives by Archives Manager, Rachel Hosker" controls preload="true">
-                <?php if (strpos($_SERVER['HTTP_USER_AGENT'], 'Chrome') == false) { ?>
+                <?php if ($mp4ok == true) { ?>
                     <source src="<?php echo base_url(); ?>videos/0051011v-006.mp4" type="video/mp4"/>
                 <?php } else { ?>
                     <source src="<?php echo base_url(); ?>videos/0051011v-006.webm" type="video/webm"/>
@@ -40,7 +56,7 @@ if (strpos($search_url, 'Header:%22archives%22') > 0)
         <div class="flowplayer" data-analytics="<?php echo $ga_code ?>"
              title="Introduction to Museums by Head of Museums, Jacky MacBeath">
             <video id="video-museums" title="Introduction to Museums by Head of Museums, Jacky MacBeath" controls preload="true">
-                <?php if (strpos($_SERVER['HTTP_USER_AGENT'], 'Chrome') == false) { ?>
+                <?php if ($mp4ok == true)  { ?>
                     <source src="<?php echo base_url(); ?>videos/0051011v-004.mp4" type="video/mp4"/>
                 <?php } else { ?>
                     <source src="<?php echo base_url(); ?>videos/0051011v-004.webm" type="video/webm"/>
@@ -62,11 +78,12 @@ if (strpos($search_url, 'Header:%22archives%22') > 0)
         <div class="flowplayer" data-analytics="<?php echo $ga_code ?>"
              title="Introduction to Rare Books by Head of Special Collections, Joseph Marshall">
             <video id="video-rarebooks" title="Introduction to Rare Books by Head of Special Collections, Joseph Marshall" controls preload="true">
-                <?php if (strpos($_SERVER['HTTP_USER_AGENT'], 'Chrome') == false) { ?>
+                <?php if ($mp4ok == true) { ?>
                     <source src="<?php echo base_url(); ?>videos/0051011v-005.mp4" type="video/mp4"/>
                 <?php } else { ?>
                     <source src="<?php echo base_url(); ?>videos/0051011v-005.webm" type="video/webm"/>
-                <?php } ?>
+                <?php }?>
+
                 Video loading...'
             </video>
         </div>
@@ -84,7 +101,7 @@ if (strpos($search_url, 'Header:%22archives%22') > 0)
         <div class="flowplayer" data-analytics="<?php echo $ga_code ?>"
              title="Introduction to the Art Collections by Curator Neil Lebeter">
             <video id="video-art" title="Introduction to the Art Collections by Curator Neil Lebeter" controls preload="true">
-                <?php if (strpos($_SERVER['HTTP_USER_AGENT'], 'Chrome') == false) { ?>
+                <?php if ($mp4ok == true) { ?>
                     <source src="<?php echo base_url(); ?>videos/0051011v-001.mp4" type="video/mp4"/>
                 <?php } else { ?>
                     <source src="<?php echo base_url(); ?>videos/0051011v-001.webm" type="video/webm"/>
@@ -108,7 +125,7 @@ if (strpos($search_url, 'Header:%22archives%22') > 0)
         <div class="flowplayer" data-analytics="<?php echo $ga_code ?>"
              title="Introduction to MIMEd by MIMEd Pricipal Curator, Darryl Martin">
             <video id="video-mimed" title="Introduction to MIMEd by MIMEd Pricipal Curator, Darryl Martin" controls preload="true">
-                <?php if (strpos($_SERVER['HTTP_USER_AGENT'], 'Chrome') == false) { ?>
+                <?php if ($mp4ok == true) { ?>
                     <source src="<?php echo base_url(); ?>videos/0051011v-002.mp4" type="video/mp4"/>
                 <?php } else { ?>
                     <source src="<?php echo base_url(); ?>videos/0051011v-002.webm" type="video/webm"/>
