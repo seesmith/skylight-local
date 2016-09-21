@@ -58,14 +58,43 @@ if(isset($solr[$bitstream_field]) && $link_bitstream) {
                 $mainImageTest = true;
 
                 $bitstreamLink = '<div class="main-image">';
+                /*OLD CODE
+                                $bitstreamLink .= '<a title = "' . $record_title . '" class="fancybox" rel="group" href="' . $b_uri . '"> ';
+                                $bitstreamLink .= '<img class="record-main-image" src = "'. $b_uri .'">';
+                                $bitstreamLink .= '</a>';
 
-                $bitstreamLink .= '<a title = "' . $record_title . '" class="fancybox" rel="group" href="' . $b_uri . '"> ';
-                $bitstreamLink .= '<img class="record-main-image" src = "'. $b_uri .'">';
-                $bitstreamLink .= '</a>';
+                                $bitstreamLink .= '</div>';
+                        */
+                if (isset($solr[$link_uri_field]))
+                {
+                    foreach($solr[$link_uri_field] as $linkURI) {
+                        if (strpos($linkURI, 'luna') > 0) {
+                            //just for test, this line!
+                            $tileSource = str_replace('images.is.ed.ac.uk', 'images-test.is.ed.ac.uk:8181', $linkURI);
+                            $tileSource = str_replace('detail', 'iiif', $tileSource) . '/info.json';
+                        }
+                    }
+                }
 
-                $bitstreamLink .= '</div>';
+                echo' <div id="openseadragon1" style="width: 500px; height: 500px;"><script type="text/javascript">
+                OpenSeadragon({
+                    id:                 "openseadragon1",
+                    prefixUrl:          "assets/openseadragon/images/",
+                    preserveViewport:   true,
+                    visibilityRatio:    1,
+                    minZoomLevel:       1,
+                    defaultZoomLevel:   1,
+                    sequenceMode:       true,
+                    tileSources:        "'.$tileSource.'"
 
-                $mainImage = true;
+                });
+                </script></div>';
+
+                                $mainImage = true;
+
+
+
+
 
             }
             // we need to display a thumbnail
