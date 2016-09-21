@@ -1,5 +1,20 @@
 
 /** added for UoE */
+.carousel-container {
+    padding-right: 0;
+    padding-left: 0;
+    margin-right: -15px;
+    margin-left: -15px;
+    margin-top: -20px;
+    margin-bottom: -20px;
+}
+
+.footer {
+    padding: 0 15px 15px 15px;
+    background-color: #313131;
+    color: #ffffff;
+}
+
 .footer ul
     {
     margin-top: 10px;
@@ -19,12 +34,8 @@
 .footer .nav { display: inline-block; }
 
 .footer .nav a:hover{
-    color: #313131;
+    color: #ffffff;
     background-color: #eeeeee;
-}
-
-.footer {
-    padding: 0 15px 15px 15px;
 }
 
 .footer-margin {
@@ -216,7 +227,6 @@ label, input[type="button"], input[type="submit"], input[type="image"], button {
     height: 28px;
     padding: 0 10px;
     width: 100%;
-   width: 500px;
 }
 
 #feedback {
@@ -225,7 +235,6 @@ label, input[type="button"], input[type="submit"], input[type="image"], button {
     font-size: 13px;
     padding: 0 10px;
     width: 100%;
-   width: 500px;
 }
 
 .form-inline .input-group {
@@ -276,10 +285,35 @@ div.spacer {
 
 .nav > li > i.fa-inactive {
     display: block;
-    padding: 15px 15px;
+    padding: 5px 5px;
     position: relative;
     color: #dddddd;
 }
+
+.navbar-form > button {
+    background-color: #666666;
+    color: #dddddd;
+}
+
+.navbar-right {
+    margin-top: 10px;
+}
+
+.sch-link a {
+    color: #660000;
+    font-family: "Baskerville, Baskerville Old Face, Hoefler Text, Garamond, Times New Roman, serif";
+    font-size: 24px;
+    font-style: normal;
+    font-variant: normal;
+    padding-top: 30px;
+    text-decoration: none;
+}
+
+.sch-link a:hover {
+    color: #666666;
+}
+
+#uoe-search {width:430px !important;}
 
 .record-tabs > ul > li > a > i.fa-inactive {
     color: #dddddd;
@@ -354,44 +388,10 @@ div.spacer {
     border:0;
 }
 
-.navbar {
-    height: 80px;
-}
-
-.navbar-header {
-    height: 80px;
-}
-
-
-.navbar-brand {
-    font-weight: 200;
-   height: 100px;
-}
-
 .uoe_logo
 {
-    width: 208px;
-    height: 50px;
+    width: 89px;
+    height: 86px;
 }
-
-/**index page **/
-
-.gallery-link
-{
-    border: 1px solid #cdcdcd;
-    margin: 10px;
-    padding: 10px;
-}
-
-.gallery-title
-{
-    font-size: 18px;
-}
-
-#gallery-tile1 { background: url(../images/March.jpg) no-repeat 0 0; width: 300px;height: 250px; display: block; }
-#gallery-tile2 { background: url(../images/March.jpg) no-repeat 0 0; width: 300px;height: 250px; display: block; }
-#gallery-tile3 { background: url(../images/March.jpg) no-repeat 0 0; width: 300px;height: 250px; display: block; }
-#gallery-tile4 { background: url(../images/March.jpg) no-repeat 0 0; width: 300px;height: 250px; display: block; }
-
 
 
