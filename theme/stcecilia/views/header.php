@@ -97,10 +97,7 @@
 
     <nav class="navbar navbar-default">
         <div class="col-xs-12">
-            <div class="navbar-header">
-                <a class="navbar-brand navbar-left" href="http://www.ed.ac.uk" title="The University of Edinburgh Homepage Link" target="_blank"><img src="<?php echo base_url(); ?>theme/stcecilia/images/logo.png" class="img-responsive uoe_logo" alt="University of Edinburgh link" /></a>
-                <a class="navbar-brand navbar-left" href="http://www.ed.ac.uk" title="The St Cecilia's Hall Homepage Link" target="_blank">St Cecilia's Hall home page link</a>
-            </div>
+
             <div class="collapse navbar-collapse">
                 <!-- Collect the nav links, forms, and other content for toggling -->
                     <form class="navbar-form navbar-right" role="search" action="./redirect/" method="post">
