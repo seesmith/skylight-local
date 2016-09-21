@@ -94,21 +94,23 @@
 </head>
 
 <body>
-
     <nav class="navbar navbar-default">
         <div class="col-xs-12">
-
             <div class="collapse navbar-collapse">
                 <!-- Collect the nav links, forms, and other content for toggling -->
-                    <form class="navbar-form navbar-right" role="search" action="./redirect/" method="post">
-                        <div class="form-group">
-                            <input id="uoe-search" type="text" class="form-control" placeholder="Search the collections" name="q" value="<?php if (isset($searchbox_query)) echo urldecode($searchbox_query); ?>" id="q" />
-                        </div>
-                        <button class="btn" type="submit">
-                            <i class="glyphicon glyphicon-search"></i>
-                        </button>
-                    </form>
-           </div>
+                <form class="navbar-form navbar-left" role="search" action="./redirect/" method="post">
+                    <div class="form-group">
+                        <input id="uoe-search" type="text" class="form-control" placeholder="Search the museum collections" name="q" value="<?php if (isset($searchbox_query)) echo urldecode($searchbox_query); ?>" id="q" />
+                    </div>
+                    <button class="btn" type="submit">
+                        <i class="glyphicon glyphicon-search"></i>
+                    </button>
+                </form>
+                <div class="navbar-right sch-link">
+                    <a href="http://stcecilias.ed.ac.uk" title="Visit the Museum">Visit the Museum</a>
+                </div>
+            </div>
+
         </div>
     </nav><!-- end of header container -->
 
