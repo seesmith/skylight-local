@@ -10,6 +10,7 @@ $link_uri_field = $this->skylight_utilities->getField("Link");
 $short_field = $this->skylight_utilities->getField("Short Description");
 $date_field = $this->skylight_utilities->getField("Date");
 $media_uri = $this->config->item("skylight_media_url_prefix");
+$theme = $this->config->item("skylight_theme");
 
 $type = 'Unknown';
 $mainImageTest = false;
@@ -62,7 +63,30 @@ if(isset($solr[$bitstream_field]) && $link_bitstream) {
 
                 $bitstreamLink = '<div class="main-image">';
                 $bitstreamLink .= '<a title = "' . $record_title . '" class="fancybox" rel="group" href="' . $b_uri . '"> ';
-                $bitstreamLink .= '<img class="record-main-image" src = "'. $b_uri .'">';
+                $fullurl = base_url().$theme.'/'.$b_uri;
+
+                list($width, $height) = getImageSize($fullurl);
+	        if (isset($solr[$link_uri_field]))
+                {
+                    foreach($solr[$link_uri_field] as $linkURI) {
+
+                      if (strpos($linkURI, 'luna') > 0) {
+
+                          $iiif_uri = str_replace("images.is.ed.ac.uk", "lac-luna-test2.is.ed.ac.uk:8181",$linkURI);
+                          $iiif_uri =  str_replace("detail", "iiif", $iiif_uri);
+                          $iiif_uri =  $iiif_uri.'/full/!200,200/0/default.jpg';
+			
+			}
+		     }
+		}
+                if ($width > $height)
+                {
+		   $bitstreamLink .= '<img class="record-main-image-landscape" src = "'. $iiif_uri .'">';
+                }
+                else
+                {
+                    $bitstreamLink .= '<img class="record-main-image-portrait" src = "'. $iiif_uri .'">';
+                }
                 $bitstreamLink .= '</a>';
                 $bitstreamLink .= '</div>';
 
@@ -155,87 +179,174 @@ if(isset($solr[$bitstream_field]) && $link_bitstream) {
 <div class="row container">
     <div class="content">
 
-        <div class="page-header">
-            <h1 class="itemtitle hidden-sm hidden-xs"><?php echo $record_title; ?></h1>
-            <h4 class="itemtitle hidden-lg hidden-md"><?php echo $record_title; ?></h4>
-        </div>
 
-        <?php if($mainImageTest === true) { ?>
+        <?php if($mainImageTest === true) {
+            if (isset($solr[$link_uri_field]))
+            {
+                foreach($solr[$link_uri_field] as $linkURI) {
 
-                <div class="col-md-6 hidden-sm hidden-xs full-image ">
-                    <?php echo $bitstreamLink; ?>
-                    <br />
-                    <a title="Back to Search Results" class="btn btn-default" onClick="history.go(-1);"><i class="fa fa-arrow-left">&nbsp;</i>Back to Search Results</a>
+                    if (strpos($linkURI, 'luna') > 0) {
+                        //just for test, this line!
+                        $tileSource = str_replace('images.is.ed.ac.uk', 'lac-luna-test2.is.ed.ac.uk:8181', $linkURI);
+                        $tileSource = str_replace('detail', 'iiif', $tileSource) . '/info.json';
+                    }
+                }
+            }
+?>
+                    <div class="col-md-6 hidden-sm hidden-xs full-image ">
 
-                </div>
-                <div class="col-sm-6 hidden-lg hidden-md resized-image">
-                    <?php echo str_replace("group", "group-small", $bitstreamLink); ?>
-                    <br />
-                    <a title="Back to Search Results" class="btn btn-default" onClick="history.go(-1);"><i class="fa fa-arrow-left">&nbsp;</i>Back to Search Results</a>
+                         <div id="openseadragon1" style="width: 1110px; height: 600px;"><script type="text/javascript">
+                                OpenSeadragon({
+                                    id:                 "openseadragon1",
+                                    prefixUrl:          "assets/openseadragon/images/",
+                                    preserveViewport:   true,
+                                    visibilityRatio:    1,
+                                    minZoomLevel:       1,
+                                    defaultZoomLevel:   1,
+                                    sequenceMode:       true,
+                                    tileSources:        "<?php echo $tileSource;?>"
 
-                </div>
+                                });
+                            </script>
+                         </div>
+
+                        <br />
+                        <a title="Back to Search Results" class="btn btn-default" onClick="history.go(-1);"><i class="fa fa-arrow-left">&nbsp;</i>Back to Search Results</a>
+
+                    </div>
+
+                    <div class="col-sm-6 hidden-lg hidden-md resized-image">
+                        <?php echo str_replace("group", "group-small", $bitstreamLink); ?>
+                        <br />
+                        <a title="Back to Search Results" class="btn btn-default" onClick="history.go(-1);"><i class="fa fa-arrow-left">&nbsp;</i>Back to Search Results</a>
+
+                    </div>
+            </div>
+    </div>
+
         <?php } ?>
-        <div class="col-sm-6 col-xs-12 metadata">
+        <div class="col-sm-6 col-xs-12 col-md-8 col-lg-12 metadata">
             <?php if(isset($solr[$short_field][0])) {
                 echo '<p>' . $solr[$short_field][0] . '</p>';
             }
             ?>
 
-            <div class="record-tabs ">
-                <ul id="tabs" class="hidden-xs nav nav-tabs  nav-justified" data-tabs="tabs">
-                    <li class="active"><a data-toggle="tab" href="#about"><i class="fa fa-list fa-1x"></i></span><br/>About</a></li>
-                    <li><a data-toggle="tab" href="#gallery" title="Gallery"><i class="fa fa-image fa-1x"></i><br/>Gallery</a></li>
-                    <?php if($videoFile > 0) { ?>
-                        <li><a data-toggle="tab" href="#video" title="Videos"><i class="fa fa-video-camera fa-1x"></i><br/>Video</a></li>
-                    <?php } else { ?>
-                        <li><a data-toggle="tab" href="#video" title="Videos" class="inactive"><i class="fa fa-video-camera fa-inactive fa-1x"></i><br/>Video</a></li>
-                    <?php } ?>
-                    <?php if($audioFile) { ?>
-                        <li><a data-toggle="tab" href="#audio" title="Audio"><i class="fa fa-music fa-1x"></i><br/>Audio</a></li>
-                    <?php } else { ?>
-                        <li><a data-toggle="tab" href="#audio" title="Audio" class="inactive"><i class="fa fa-music fa-inactive fa-1x"></i><br/>Audio</a></li>
-                    <?php } ?>
-                    <li><a data-toggle="tab" href="#maker" title="Marker Information"><i class="fa fa-industry fa-1x"></i><br/>Maker</a></li>
-                    <li><a data-toggle="tab" href="#description" title="Description"><i class="fa fa-file-text fa-1x">&nbsp;</i><br/>Description</a></li>
-                </ul>
-                <ul id="tabs" class="hidden-sm hidden-md hidden-lg nav nav-tabs  nav-justified" data-tabs="tabs">
-                    <li class="active"><a data-toggle="tab" href="#about"><i class="fa fa-list  fa-lg"></i></a></li>
-                    <li><a data-toggle="tab" href="#gallery" title="Gallery"><i class="fa fa-image  fa-lg"></i></a></li>
-                    <?php if($videoFile > 0) { ?>
-                        <li><a data-toggle="tab" href="#video" title="Videos"><i class="fa fa-video-camera fa-1x"></i></a></li>
-                    <?php } else { ?>
-                        <li><a data-toggle="tab" href="#video" title="Videos" class="inactive"><i class="fa fa-video-camera fa-inactive fa-1x"></i></a></li>
-                    <?php } ?>
-                    <?php if($audioFile) { ?>
-                        <li><a data-toggle="tab" href="#audio" title="Audio"><i class="fa fa-music fa-1x"></i></a></li>
-                    <?php } else { ?>
-                        <li><a data-toggle="tab" href="#audio" title="Audio" class="inactive"><i class="fa fa-music fa-inactive fa-1x"></i></a></li>
-                    <?php } ?>
-                    <li><a data-toggle="tab" href="#maker"  title="Marker Information"><i class="fa fa-industry  fa-lg"></i></a></li>
-                    <li><a data-toggle="tab" href="#description"  title="Description"><i class="fa fa-file-text  fa-lg"></i></a></li>
-                </ul>
+            <!--<dl>-->
+                <?php
+                $maker = '';
+                $date = '';
+                $title = '';
 
-                <div class="tab-content">
-                    <div id="about" class="tab-pane fade in active">
-                        <?php include('record_about.php');?>
-                    </div>
-                    <div id="gallery" class="tab-pane fade ">
-                        <?php include('gallery.php');?>
-                    </div>
-                    <div id="audio" class="tab-pane fade">
-                        <?php include('audio.php');?>
-                    </div>
-                    <div id="video" class="tab-pane fade">
-                        <?php include('video.php');?>
-                    </div>
-                    <div id="maker" class="tab-pane fade">
-                        <?php include('creator.php');?>
-                    </div>
-                    <div id="description" class="tab-pane fade">
-                        <?php include('description.php');?>
-                    </div>
+                foreach($recorddisplay as $key) {
+
+                    $element = $this->skylight_utilities->getField($key);
+
+                    if(isset($solr[$element])) {
+
+
+                       //echo '<dd>';
+                        foreach($solr[$element] as $index => $metadatavalue) {
+                            // if it's a facet search
+                            // make it a clickable search link
+
+                            if($key == 'Date Made') {
+                                $date = $metadatavalue;
+                            }
+
+                            if($key == 'Maker') {
+                                $maker = $metadatavalue;
+                            }
+                        }
+                        //echo '</dd>';
+                    }
+                }
+
+                $title_len = strlen($record_title);
+                $dotpos = strpos($record_title, ".");
+                $dotpos++;
+                if ($title_len == $dotpos)
+                {
+                    $title = substr($record_title,0,$dotpos-1);
+                }
+                else{
+                    $title = $record_title;
+                }
+
+                ?>
+                <div class="page-header">
+                    <h2 class="itemtitle hidden-sm hidden-xs"><?php echo $title .' / '. $maker. ' / '.$date;?></h2>
+                    <h4 class="itemtitle hidden-lg hidden-md"><?php echo $title .' / '. $maker. ' / '.$date;?></h4>
+                    <br>
+                    <h2 class="itemtitle hidden-sm hidden-xs">Tags</h2>
                 </div>
-            </div>
+               <!-- <div class = "alltags">-->
+
+
+                <?php
+                foreach($recorddisplay as $key) {
+
+                    $element = $this->skylight_utilities->getField($key);
+
+                    if(isset($solr[$element])) {
+
+                       // echo '<dt>' . $key . '</dt>';
+
+                        //echo '<dd>';
+                        foreach($solr[$element] as $index => $metadatavalue) {
+                            echo '<div class="tags">';
+
+                            // if it's a facet search
+                            // make it a clickable search link
+                            if(in_array($key, $filters)) {
+                                if (!strpos($metadatavalue, "/")> 0)
+                                {
+                                    $orig_filter = urlencode($metadatavalue);
+                                    $lower_orig_filter = strtolower($metadatavalue);
+                                    $lower_orig_filter = urlencode($lower_orig_filter);
+
+                                    echo '<a href="./search/*:*/' . $key . ':%22' . $lower_orig_filter . '%7C%7C%7C' . $orig_filter . '%22">' . $metadatavalue . '</a>';
+                                }
+                            }
+                            echo '</div>';
+
+                            //else {
+                            //    echo $metadatavalue;
+                          //  }
+                           /*
+                            if($index < sizeof($solr[$element]) - 1) {
+
+                                echo '; ';
+                            }*/
+                        }
+                       // echo '</dd>';
+                    }
+                }?>
+               <!--</div>-->
+            </dl>
+
         </div>
+
+		<p class="trigger"><a href="#">More data</a></p>
+
+		
+<div class="toggle_container">
+   <div class="block">
+<?php 
+$json =  file_get_contents($tileSource);
+
+	$jobj = json_decode($json, true);
+	$error = json_last_error();
+
+	foreach($jobj['metadata'] as $item)
+	{
+		echo '<p>'.$item['label'].': <strong>'.$item['value'].'</strong></p>';
+		
+	}
+
+	
+
+?>
+    </div>
+	</div>
     </div><!-- content-->
 </div> <!-- row container-->
