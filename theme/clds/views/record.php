@@ -64,6 +64,7 @@ else if (isset($solr[$external_uri_field][0])) {
 
         <?php
         foreach($recorddisplay as $key) {
+
             $element = $this->skylight_utilities->getField($key);
             if(isset($solr[$element])) {
 
@@ -152,7 +153,8 @@ else if (isset($solr[$external_uri_field][0])) {
         }
 
         ?>
-
+        </tbody>
+    </table>
 
     <?php
     if(isset($solr[$bitstream_field]) && $link_bitstream) {
@@ -168,6 +170,7 @@ else if (isset($solr[$external_uri_field][0])) {
         $bitstream_array = array();
 
         foreach ($solr[$bitstream_field] as $bitstream) {
+            $mp4ok = false;
             $b_segments = explode("##", $bitstream);
             $b_filename = $b_segments[1];
             $b_handle = $b_segments[3];
@@ -186,53 +189,58 @@ else if (isset($solr[$external_uri_field][0])) {
                 $audioLink .= '</audio>';
                 $audioFile = true;
             }
-            else
-                if ((strpos($b_filename, ".mp4") > 0) or (strpos($b_filename, ".MP4") > 0)) {
-                    $b_uri = $media_uri . $b_handle_id . '/' . $b_seq . '/' . $b_filename;
-                    // if it's chrome, use webm if it exists
-                    if (strpos($_SERVER['HTTP_USER_AGENT'], 'Chrome') == false) {
 
+            else if ((strpos($b_filename, ".mp4") > 0) or (strpos($b_filename, ".MP4") > 0))
+            {
+                $b_uri = $media_uri.$b_handle_id.'/'.$b_seq.'/'.$b_filename;
+                // Use MP4 for all browsers other than Chrome
+                if (strpos($_SERVER['HTTP_USER_AGENT'], 'Chrome') == false)
+                {
+                    $mp4ok = true;
+                }
+                //Microsoft Edge is calling itself Chrome, Mozilla and Safari, as well as Edge, so we need to deal with that.
+                else if (strpos($_SERVER['HTTP_USER_AGENT'], 'Edge') == true)
+                {
+                    $mp4ok = true;
+                }
 
-                        $videoLink .= '<div class="flowplayer" data-analytics="' . $ga_code . '" title="' . $b_filename . '">';
-                        $videoLink .= '<video preload=auto loop width="100%" height="auto" controls>';
-                        $videoLink .= '<source src="' . $b_uri . '" type="video/mp4" />Video loading...';
-                        $videoLink .= '</video>';
-                        $videoLink .= '</div>';
-                        $videoFile = true;
+                if ($mp4ok == true)
+                {
+                    $videoLink .= '<div class="flowplayer" data-analytics="' . $ga_code . '" title="' . $record_title . ": " . $b_filename . '">';
+                    $videoLink .= '<video preload=auto loop width="100%" height="auto" controls preload="true" width="660">';
+                    $videoLink .= '<source src="' . $b_uri . '" type="video/mp4" />Video loading...';
+                    $videoLink .= '</video>';
+                    $videoLink .= '</div>';
+                    $videoFile = true;
+                }
+            }
 
-                    }
-                } else if ((strpos($b_filename, ".webm") > 0) or (strpos($b_filename, ".WEBM") > 0)) {
-
-                    $b_uri = $media_uri . $b_handle_id . '/' . $b_seq . '/' . $b_filename;
-                    // if it's chrome, use webm if it exists
-                    if (strpos($_SERVER['HTTP_USER_AGENT'], 'Chrome') == true) {
-
+            else if ((strpos($b_filename, ".webm") > 0) or (strpos($b_filename, ".WEBM") > 0))
+            {
+                //Microsoft Edge needs to be dealt with. Chrome calls itself Safari too, but that doesn't matter.
+                if (strpos($_SERVER['HTTP_USER_AGENT'], 'Edge') == false)
+                {
+                    if (strpos($_SERVER['HTTP_USER_AGENT'], 'Chrome') == true)
+                    {
+                        $b_uri = $media_uri . $b_handle_id . '/' . $b_seq . '/' . $b_filename;
+                        // if it's chrome, use webm if it exists
                         $videoLink .= '<div class="flowplayer" data-analytics="' . $ga_code . '" title="' . $record_title . ": " . $b_filename . '">';
-                        $videoLink .= '<video preload=auto loop width="100%" height="auto">';
+                        $videoLink .= '<video preload=auto loop width="100%" height="auto" controls preload="true" width="660">';
                         $videoLink .= '<source src="' . $b_uri . '" type="video/webm" />Video loading...';
                         $videoLink .= '</video>';
                         $videoLink .= '</div>';
-
                         $videoFile = true;
-
                     }
-                } else if ((strpos($b_uri, ".pdf") > 0) or (strpos($b_uri, ".PDF") > 0)) {
+                }
+            }
 
-
-
+                else if ((strpos($b_uri, ".pdf") > 0) or (strpos($b_uri, ".PDF") > 0))
+                {
                     $bitstreamLink = $this->skylight_utilities->getBitstreamLink($bitstream);
                     $bitstreamUri = $this->skylight_utilities->getBitstreamUri($bitstream);
-
-                   // $pdfLink .= '<object class="pdfviewer" width="100%" height= "650" data="' . $bitstreamUri . '" type="application/pdf">';
-                    //$pdfLink .= '<p><span class="label">It appears you do not have a PDF plugin for this browser.</span></p></object>';
                     $pdfLink .= 'Click ' . $bitstreamLink . ' to download. (<span class="bitstream_size">' . getBitstreamSize($bitstream) . '</span>)';
                     $pdfFile = true;
                 }
-
-
-
-
-
             }
 
             if (count($bitstream_array) > 0) {
@@ -302,8 +310,7 @@ else if (isset($solr[$external_uri_field][0])) {
             echo '<tr><th>Supporting Document: </th><td>'.$pdfLink.'</td></tr>';
         }
         ?>
-        </tbody>
-    </table>
+
     <div class="record_bitstreams">
     <?php
             if ($mainImage) {

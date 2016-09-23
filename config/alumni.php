@@ -24,7 +24,13 @@ $config['skylight_oaipmhcollection'] = 'hdl_10683_47417';
 $config['skylight_oaipmhallowed'] = true;
 
 // Container ID and the field used in solr index to store this ID. Used for restricting search/browse scope.
-$config['skylight_container_id'] = '17';
+if (strpos($_SERVER['HTTP_HOST'], "test") !== false) {
+    $config['skylight_container_id'] = '17';
+}
+else {
+    $config['skylight_container_id'] = '13';
+}
+
 $config['skylight_container_field'] = 'location.comm';
 $config['skylight_sitemap_type'] = 'internal';
 
@@ -76,7 +82,9 @@ $config['skylight_fields'] = array('Name' => 'dc.contributor.author.en',
     'Robb'=>'dc.relation.ispartofrobb.en',
     'Watt'=>'dc.relation.ispartofwatt.en',
     'Destination after study'=>'dc.coverage.spatial.en',
-    'Subject'=>'dc.subject.en'
+    'Subject'=>'dc.subject.en',
+    'Date of birth'=>'dc.coverage.temporalbirth.en',
+    'Date of death'=>'dc.coverage.temporaldeath.en'
 );
 
 // Static pages for collections
@@ -88,7 +96,8 @@ $config['skylight_static_pages'] = array('Students of Medicine, 1762-1826'=>'ros
     'Students of Medicine (sample of 205), 1833-1846'=>'medsample',
     'Awards to Women students, 1876-1894'=>'women',
     'Early Veterinary Graduates, 1825-1865'=>'earlyvet',
-    'Female Medical Graduates 1896-1900'=>'femgrad'
+    'Female Medical Graduates 1896-1900'=>'femalegrad',
+    'University of Edinburgh: Roll of Honour, WW1'=>'ww1roll'
     )
 ;
 
@@ -146,7 +155,9 @@ $config['skylight_recorddisplay'] = array(
     'Annals',
     'Robb',
     'Watt',
-    'Destination after study',);
+    'Destination after study',
+    'Date of birth',
+    'Date of death');
 
 $config['skylight_searchresult_display'] = array('Title','Subject','Type','Bitstream', 'Thumbnail', 'Year', 'Collection');
 

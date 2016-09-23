@@ -1,3 +1,21 @@
+<?php
+    $mp4ok = false;
+    // Use MP4 for all browsers other than Chrome
+    if (strpos($_SERVER['HTTP_USER_AGENT'], 'Chrome') == false)
+    {
+        $mp4ok = true;
+    }
+    //Microsoft Edge is calling itself Chrome, Mozilla and Safari, as well as Edge, so we need to deal with that.
+    else if (strpos($_SERVER['HTTP_USER_AGENT'], 'Edge') == true)
+    {
+        $mp4ok = true;
+    }
+    else if (strpos($_SERVER['HTTP_USER_AGENT'], 'Edge') == false) {
+        if (strpos($_SERVER['HTTP_USER_AGENT'], 'Chrome') == true) {
+            $mp4ok = false;
+        }
+    }
+?>
 <div class="content">
     <div class="content byEditor">
         <p>Since 2012, the Wellcome Trust has funded a number of projects relating to animal genetics collections held
@@ -25,7 +43,7 @@
         <div class="flowplayer" data-analytics="<?php echo $ga_code ?>"
              title="Introduction to Towards Dolly by Clare Button, Project Archivist">
             <video id="video-archives" title="Introduction to Towards Dolly by Clare Button, Project Archivist" controls preload="true">
-                <?php if (strpos($_SERVER['HTTP_USER_AGENT'], 'Chrome') == false) { ?>
+                <?php if ($mp4ok = true) {?>
                     <source src="<?php echo base_url(); ?>videos/Towards_Dolly_Wellcome_Trust_showreel.mp4" type="video/mp4"/>
                 <?php } else { ?>
                     <source src="<?php echo base_url(); ?>videos/Towards_Dolly_Wellcome_Trust_showreel.webm" type="video/webm"/>
@@ -45,8 +63,7 @@
         <div class="flowplayer" data-analytics="<?php echo $ga_code ?>"
              title="Towards Dolly Exhibition being installed, Video by Univeristy of Edinburgh Digital Imaging Unit"">
             <video id="video-archives" title="Towards Dolly Exhibition being installed, Video by Univeristy of Edinburgh Digital Imaging Unit" controls preload="true">
-
-                <?php if (strpos($_SERVER['HTTP_USER_AGENT'], 'Chrome') == false) { ?>
+                <?php if ($mp4ok = true) {?>
                     <source src="<?php echo base_url(); ?>videos/0051021v-001.mp4" type="video/mp4"/>
                 <?php } else { ?>
                     <source src="<?php echo base_url(); ?>videos/0051021v-001.webm" type="video/webm"/>
@@ -54,6 +71,9 @@
                 Video loading...'
             </video>
         </div>
+
+        <h1>Project report</h1>
+        <p>Download the full project report <a href ="<?php echo base_url(); ?>videos/Towards Dolly complete final report.pdf" target="_blank">here</a> (9.3mb)</p>
 
 
         <h1>Contact Details</h1>
