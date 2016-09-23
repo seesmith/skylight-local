@@ -4,10 +4,11 @@
         <footer class="footer footer-piccolo">
 
                 <div class="row">
-                    <div class="col-md-3 col-sm-3 col-xs-3">
+                    <div class="col-md-3 hidden-sm hidden-xs">
                         <a class="navbar-brand navbar-left" href="http://www.ed.ac.uk" title="The University of Edinburgh Homepage Link" target="_blank"><img src="<?php echo base_url(); ?>theme/stcecilia/images/UoETransparentWhite.png" class="img-responsive uoe_logo" alt="University of Edinburgh link" /></a>
                     </div>
-                    <div class="col-md-6 col-sm-6 col-xs-6">
+
+                    <div class="col-md-6 col-sm-12 col-xs-12">
 
                         <div class="centered text-center">
                         <ul class="nav nav-pills">
@@ -19,7 +20,7 @@
                         </ul>
                         </div>
                     </div>
-                    <div class="col-md-3 col-sm-3 col-xs-3">
+                    <div class="col-md-3 hidden-sm hidden-xs">
                     </div>
                 </div>
                 <div class="row">

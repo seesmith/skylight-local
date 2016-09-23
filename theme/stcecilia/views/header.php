@@ -95,22 +95,41 @@
 
 <body>
     <nav class="navbar navbar-default">
-        <div class="col-xs-12">
-            <div class="collapse navbar-collapse">
-                <!-- Collect the nav links, forms, and other content for toggling -->
-                <form class="navbar-form navbar-left" role="search" action="./redirect/" method="post">
-                    <div class="form-group">
-                        <input id="uoe-search" type="text" class="form-control" placeholder="Search the museum collections" name="q" value="<?php if (isset($searchbox_query)) echo urldecode($searchbox_query); ?>" id="q" />
-                    </div>
-                    <button class="btn" type="submit">
-                        <i class="glyphicon glyphicon-search"></i>
-                    </button>
-                </form>
-                <div class="navbar-right sch-link">
-                    <a href="http://stcecilias.ed.ac.uk" title="Visit the Museum">Visit the Museum</a>
+        <div class="hidden-lg hidden-md col-sm-8 col-xs-8">
+        <!-- Collect the nav links, forms, and other content for toggling -->
+            <form class="navbar-form navbar-left" role="search" action="./redirect/" method="post">
+                <div class="input-group search-box">
+                    <input id="uoe-search-sm" type="text" class="form-control" placeholder="Search" name="q" value="<?php if (isset($searchbox_query)) echo urldecode($searchbox_query); ?>" id="q" />
+                    <span class="input-group-btn">
+                        <button type="submit" class="btn btn-default" name="submit_search" value="Search" id="submit_search">
+                            <i class="glyphicon glyphicon-search"></i>
+                        </button>
+                    </span>
                 </div>
+            </form>
+        </div>
+        <div class="col-lg-8 col-md-8 hidden-sm hidden-xs">
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <form class="navbar-form navbar-left" role="search" action="./redirect/" method="post">
+                <div class="input-group">
+                    <input id="uoe-search" type="text" class="form-control" placeholder="Search the museum collections" name="q" value="<?php if (isset($searchbox_query)) echo urldecode($searchbox_query); ?>" id="q" />
+                    <span class="input-group-btn">
+                        <button type="submit" class="btn btn-default" name="submit_search" value="Search" id="submit_search">
+                            <i class="glyphicon glyphicon-search"></i>&nbsp;Search
+                        </button>
+                    </span>
+                </div>
+            </form>
+        </div>
+        <div class="hidden-lg hidden-md col-sm-4 col-xs-4">
+            <div class="navbar-right sch-link sch-link-sm">
+                <a href="http://stcecilias.ed.ac.uk" title="Visit St Cecilia's Hall">St Cecilia's Hall</a>
             </div>
-
+        </div>
+        <div class="col-lg-4 col-md-4 hidden-sm hidden-xs">
+            <div class="navbar-right sch-link">
+                <a href="http://stcecilias.ed.ac.uk" title="Visit St Cecilia's Hall">Visit St Cecilia's Hall</a>
+            </div>
         </div>
     </nav><!-- end of header container -->
 
