@@ -1,9 +1,7 @@
-
 /** added for UoE */
 body
 {
     font-family: Frutiger, ‘Frutiger Linotype’, Univers, Calibri, ‘Gill Sans’, ‘Gill Sans MT’, ‘Myriad Pro’, Myriad, ‘DejaVu Sans Condensed’, ‘Liberation Sans’, ‘Nimbus Sans L’, Tahoma, Geneva, ‘Helvetica Neue’, Helvetica, Arial, sans-serif;
-
 }
 
 .carousel-control.left, .carousel-control.right {
@@ -92,7 +90,6 @@ body
     color: #ffffff;
 }
 
-body, select, input, textarea   { color: #555; line-height: 18px; font-family: Baskerville, "Times New Roman", Times, serif; }
 .footer ul
     {
     margin-top: 10px;
@@ -213,7 +210,7 @@ img.record-main-image-portrait {
 }
 
 img.record-main-image-landscape {
-    width: 100%px;
+    width: 100px;
 }
 
 div.resized-image img.record-main-image {
@@ -470,10 +467,15 @@ div.spacer {
     padding-top: 2px;
 }
 
-/* ---- grid for related items---- */
+/* ---- grid for related items from isotope---- */
+
+/*.grid-item { width: 25%;}
+.grid-item--width2 { width: 50%; }*/
+/* ---- grid ---- */
 
 .grid {
-    background: #ffffff;
+    border: 1px solid #333;
+    max-width: 1200px;
 }
 
 /* clear fix */
@@ -483,20 +485,53 @@ div.spacer {
     clear: both;
 }
 
-/* ---- .grid-item ---- */
+/* ---- .element-item ---- */
 
-.grid-sizer,
-.grid-item {
-    width: 150px;
-}
-
-.grid-item {
+.element-item {
+    position: relative;
     float: left;
+    width: 25%;
+    /*margin: 5px;
+    padding: 10px;*/
+    background: #888;
+    color: #262524;
 }
 
-.grid-item img {
-    display: block;
-   width: 100%;
+.element-item > * {
+    margin: 0;
+    padding: 0;
+}
+
+.element-item .name {
+    position: absolute;
+    left: 10px;
+    top: 60px;
+    text-transform: none;
+    letter-spacing: 0;
+    font-size: 12px;
+    font-weight: normal;
+}
+
+.element-item .symbol {
+    position: absolute;
+    left: 10px;
+    top: 0px;
+    font-size: 42px;
+    font-weight: bold;
+    color: white;
+}
+
+.element-item .number {
+    position: absolute;
+    right: 8px;
+    top: 5px;
+}
+
+.element-item .weight {
+    position: absolute;
+    left: 10px;
+    top: 76px;
+    font-size: 12px;
 }
 
 .thumbnail {
@@ -508,43 +543,3 @@ div.spacer {
     width: 89px;
     height: 86px;
 }
-
-/**index page **/
-
-.gallery-link
-{
-    border: 1px solid #cdcdcd;
-    margin: 10px;
-    padding: 10px;
-}
-
-.gallery-title
-{
-    font-size: 18px;
-}
-
-p.trigger{
-    margin-bottom:7px;
-    margin-top:-5px;
-}
-
-.toggle_container{
-    margin-bottom:10px;
-}
-
-.toggle_container p{
-    margin:0px;
-}
-
-.toggle_container{
-    clear: both;
-    font-size:100%;
-}
-
-#gallery-tile1 { background: url(../images/March.jpg) no-repeat 0 0; width: 300px;height: 250px; display: block; }
-#gallery-tile2 { background: url(../images/March.jpg) no-repeat 0 0; width: 300px;height: 250px; display: block; }
-#gallery-tile3 { background: url(../images/March.jpg) no-repeat 0 0; width: 300px;height: 250px; display: block; }
-#gallery-tile4 { background: url(../images/March.jpg) no-repeat 0 0; width: 300px;height: 250px; display: block; }
-
-
-

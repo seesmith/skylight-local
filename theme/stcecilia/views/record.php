@@ -66,22 +66,22 @@ if(isset($solr[$bitstream_field]) && $link_bitstream) {
                 $fullurl = base_url().$theme.'/'.$b_uri;
 
                 list($width, $height) = getImageSize($fullurl);
-	        if (isset($solr[$link_uri_field]))
+	            if (isset($solr[$link_uri_field]))
                 {
                     foreach($solr[$link_uri_field] as $linkURI) {
 
                       if (strpos($linkURI, 'luna') > 0) {
 
                           $iiif_uri = str_replace("images.is.ed.ac.uk", "lac-luna-test2.is.ed.ac.uk:8181",$linkURI);
-                          $iiif_uri =  str_replace("detail", "iiif", $iiif_uri);
-                          $iiif_uri =  $iiif_uri.'/full/!200,200/0/default.jpg';
+                          $iiif_uri = str_replace("detail", "iiif", $iiif_uri);
+                          $iiif_uri = $iiif_uri.'/full/!200,200/0/default.jpg';
 			
-			}
-		     }
-		}
+			            }
+		            }
+		        }
                 if ($width > $height)
                 {
-		   $bitstreamLink .= '<img class="record-main-image-landscape" src = "'. $iiif_uri .'">';
+		            $bitstreamLink .= '<img class="record-main-image-landscape" src = "'. $iiif_uri .'">';
                 }
                 else
                 {
@@ -238,13 +238,9 @@ if(isset($solr[$bitstream_field]) && $link_bitstream) {
                 $title = '';
 
                 foreach($recorddisplay as $key) {
-
                     $element = $this->skylight_utilities->getField($key);
-
                     if(isset($solr[$element])) {
-
-
-                       //echo '<dd>';
+                        //echo '<dd>';
                         foreach($solr[$element] as $index => $metadatavalue) {
                             // if it's a facet search
                             // make it a clickable search link
@@ -252,7 +248,6 @@ if(isset($solr[$bitstream_field]) && $link_bitstream) {
                             if($key == 'Date Made') {
                                 $date = $metadatavalue;
                             }
-
                             if($key == 'Maker') {
                                 $maker = $metadatavalue;
                             }
@@ -279,9 +274,6 @@ if(isset($solr[$bitstream_field]) && $link_bitstream) {
                     <br>
                     <h2 class="itemtitle hidden-sm hidden-xs">Tags</h2>
                 </div>
-               <!-- <div class = "alltags">-->
-
-
                 <?php
                 foreach($recorddisplay as $key) {
 
