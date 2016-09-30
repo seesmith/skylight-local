@@ -46,7 +46,15 @@
     <script src="<?php echo base_url()?>assets/jquery-1.11.0/jcarousel/jquery.jcarousel.min.js"></script>
     <script src="<?php echo base_url()?>assets/bootstrap/js/bootstrap.min.js"></script>
     <script src="<?php echo base_url()?>assets/masonry/masonry.pkgd.min.js"></script>
-
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.7/leaflet.js"></script>
+    <script src="https://cdn.rawgit.com/mejackreed/Leaflet-IIIF/master/leaflet-iiif.js"></script>
+    <script src="<?php echo base_url()?>assets/openseadragon/openseadragon.min.js"></script>
+		<script>
+		$(".toggle_container").hide();
+    
+    $("p.trigger").click(function(){
+        $(this).toggleClass("active").next().slideToggle("normal");
+    });</script>
     <?php if ($ga_code != '') {?>
         <script src="http://www.google-analytics.com/analytics.js"></script>
 
@@ -71,6 +79,8 @@
                 analytics: "<?php echo $ga_code ?>"
             };
         </script>
+		
+
     <?php } ?>
 
     <?php if (isset($solr)) { ?><link rel="schema.DC" href="http://purl.org/dc/elements/1.1/" />

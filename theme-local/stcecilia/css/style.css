@@ -92,6 +92,7 @@ body
     color: #ffffff;
 }
 
+body, select, input, textarea   { color: #555; line-height: 18px; font-family: Baskerville, "Times New Roman", Times, serif; }
 .footer ul
     {
     margin-top: 10px;
@@ -115,6 +116,10 @@ body
     background-color: #eeeeee;
 }
 
+.footer {
+    padding: 0 15px 15px 15px;
+}
+
 .footer-margin {
     height: 10px;
 }
@@ -122,6 +127,15 @@ body
 .results-item {
     margin-bottom: 25px;
 }
+
+.alltags{
+    width:100%;
+}
+.tags                   { margin-top: 5px; margin: 0;}
+.tags a                 { font-size: 13px; color: #fff;background: #EB0955; -webkit-border-radius: 5px; -moz-border-radius: 5px; border-radius: 5px; padding: 2px 6px; line-height: 20px; margin-right: 8px; text-decoration: none;  }
+.tags a.bold            { font-weight: bold; }
+.tags a:hover           { background: #093563; color: #ffffff; }
+.tags a.maker           { display:inline-block; line-height: 15px; margin-bottom: 5px; }
 
 .result-info > .nav > li > span > i {
     margin-top: 2px;
@@ -194,14 +208,27 @@ div.resized-image {
     width: 100%;
 }
 
-img.record-main-image {
-   height: 700px;
-   width: 100%;
+img.record-main-image-portrait {
+    max-height:450px;
+}
+
+img.record-main-image-landscape {
+    width: 100%px;
 }
 
 div.resized-image img.record-main-image {
    height: 400px;
    width: 100%;
+}
+
+div.image-canvas{
+    height:500px;
+    width:768px;
+}
+
+div.resized-image-canvas{
+    height:339px;
+    width:339px;
 }
 
 div.related {
@@ -481,5 +508,43 @@ div.spacer {
     width: 89px;
     height: 86px;
 }
+
+/**index page **/
+
+.gallery-link
+{
+    border: 1px solid #cdcdcd;
+    margin: 10px;
+    padding: 10px;
+}
+
+.gallery-title
+{
+    font-size: 18px;
+}
+
+p.trigger{
+    margin-bottom:7px;
+    margin-top:-5px;
+}
+
+.toggle_container{
+    margin-bottom:10px;
+}
+
+.toggle_container p{
+    margin:0px;
+}
+
+.toggle_container{
+    clear: both;
+    font-size:100%;
+}
+
+#gallery-tile1 { background: url(../images/March.jpg) no-repeat 0 0; width: 300px;height: 250px; display: block; }
+#gallery-tile2 { background: url(../images/March.jpg) no-repeat 0 0; width: 300px;height: 250px; display: block; }
+#gallery-tile3 { background: url(../images/March.jpg) no-repeat 0 0; width: 300px;height: 250px; display: block; }
+#gallery-tile4 { background: url(../images/March.jpg) no-repeat 0 0; width: 300px;height: 250px; display: block; }
+
 
 
