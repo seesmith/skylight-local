@@ -39,6 +39,8 @@
         <link rel="stylesheet" href="http://releases.flowplayer.org/6.0.4/skin/minimalist.css">
         <link rel="stylesheet" href="<?php echo base_url()?>assets/font-awesome/css/font-awesome.min.css">
         <link rel="stylesheet" href="<?php echo base_url(); ?>theme/<?php echo $this->config->item('skylight_theme'); ?>/css/style.css?v=2">
+        <link href="https://fonts.googleapis.com/css?family=Crimson+Text" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Indie+Flower" rel="stylesheet">
 
         <!-- All JavaScript at the bottom, except for Modernizr which enables HTML5 elements & feature detects -->
         <script src="<?php echo base_url()?>assets/modernizr/modernizr-1.7.min.js"></script>
@@ -91,45 +93,38 @@
     </head>
 
     <body>
-        <div id="container">
-            <header>
-                <nav id="menu">
-                    <ul class="menu-links">
-                        <li><a href="./feedback" title="Feedback Form">Feedback</a></li>
-                        <li><a href="http://libraryblogs.is.ed.ac.uk/towardsdolly/" title="Towards Dolly Blog Link" target="_blank">Blog</a></li>
-                        <li><a href="./people" title="People Link">People</a></li>
-                        <li><a href="./catalogues" title="Catalogues Link">Catalogues</a></li>
-                        <li><a href="./history" title="History Link">History</a></li>
-                        <li><a href="./about" title="About Link">About</a></li>
-                        <li><a href="./" title="Towards Dolly Home Link">Home</a></li>
-                    </ul>
-                </nav>
+        <nav id="menu">
+            <ul class="menu-links">
+                <li><a href="./feedback" title="Feedback Form">Feedback</a></li>
+                <li><a href="http://libraryblogs.is.ed.ac.uk/towardsdolly/" title="LHSA Blog Link" target="_blank">Blog</a></li>
+                <li><a href="./people" title="People Link">People</a></li>
+                <li><a href="./catalogues" title="Catalogues Link">Catalogues</a></li>
+                <li><a href="./history" title="History Link">History</a></li>
+                <li><a href="./about" title="About Link">About</a></li>
+                <li><a href="./" title="Norman Dott Home Link">Home</a></li>
+            </ul>
+        </nav>
+        <header>
 
-                    <a href="<?php echo base_url(); ?>"  title="<?php echo $this->config->item('skylight_fullname');?> Home">
-                        <div id="collection-logo">
-                        </div>
-                    </a>
-                    <a href="<?php echo base_url(); ?>"  title="<?php echo $this->config->item('skylight_fullname');?> Home">
-                        <div id="collection-title">
-                        </div>
-                    </a>
-                    <a href="http://www.ed.ac.uk" title="University of Edinburgh Home" target="_blank">
-                        <div id="uoe-logo-header">
-                        </div>
-                    </a>
-
-                <div class="clearfix"></div>
-
+            <div class="container header-normal">
+                <!-- <a href="http://www.ed.ac.uk" title="University of Edinburgh Home" target="_blank">
+                     <div id="uoe-logo-header">
+                     </div>
+                 </a>-->
+                <div id="collection-title">Medical Records Revived:
+                    <div id="collection-sub-title">Case Note Catalogues at <br />Lothian Health Services Archive</div>
+                </div>
+                <!--<div class="clearfix"></div>-->
                 <div id="collection-search">
-                <form action="./redirect/" method="post" class="navbar-form">
-                    <div class="input-group search-box">
-                        <input type="text" class="form-control" placeholder="Search" name="q" value="<?php if (isset($searchbox_query)) echo urldecode($searchbox_query); ?>" id="q" />
+                    <form action="./redirect/" method="post" class="navbar-form">
+                        <div class="input-group search-box">
+                            <input type="text" class="form-control" placeholder="Search" name="q" value="<?php if (isset($searchbox_query)) echo urldecode($searchbox_query); ?>" id="q" />
                         <span class="input-group-btn">
                             <button type="submit" class="btn btn-default" name="submit_search" value="Search" id="submit_search"><i class="glyphicon glyphicon-search"></i></button>
                         </span>
-                    </div>
-                </form>
+                        </div>
+                    </form>
                 </div>
-            </header>
-
-            <div id="main" role="main" class="clearfix">
+            </div>
+        </header>
+            <div class="container content">

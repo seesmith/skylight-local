@@ -19,7 +19,7 @@
             $sort = '&sort_by=';
         }
     ?>
-    <div class="col-md-9 col-sm-9 col-xs-9">
+    <div class="col-md-9 col-sm-9 col-xs-12">
         <div class="row">
             <div class="col-xs-6">
                 <h5 class="text-muted">Showing <?php echo $rows ?> results </h5>
@@ -50,17 +50,13 @@
             </div>
 
         </div>
-        <div class="row">
-        <ul class="listing">
 
+
+        <hr>
         <?php
-        $j = 0;
         foreach ($docs as $index => $doc) {
         ?>
-
-        <li<?php if($index == 0) { echo ' class="first"'; } elseif($index == sizeof($docs) - 1) { echo ' class="last"'; } ?>>
-        <div class="item-div">
-
+            <div class="row">
 
             <h3><a href="./record/<?php echo $doc['id']?>/<?php echo $doc['types'][0]?>"><?php echo $doc[$title_field]; ?></a></h3>
             <?php
@@ -68,7 +64,6 @@
                 $component_id = $doc["component_id"];
                 echo'<div class="component_id">' . $component_id . '</div>';
             } ?>
-            <div class = "iteminfo">
 
                 <?php if(array_key_exists($author_field,$doc)) { ?>
                     <?php
@@ -104,23 +99,14 @@
                     ?>
                     </div>
                 <?php } ?>
+            </div> <!-- close row-->
+            <hr>
 
-
-            </div> <!-- close item-info -->
-
-            <div class="clearfix"></div>
-            </div> <!-- close item div -->
-        </li>
             <?php
-
-            $j++;
 
         } // end for each search result
 
         ?>
-    </ul>
-     </div> <!-- close row-->
-
             <div class="row">
                 <div class="centered text-center">
                     <nav>
