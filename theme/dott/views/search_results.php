@@ -19,15 +19,29 @@
             $sort = '&sort_by=';
         }
     ?>
+
     <div class="col-md-9 col-sm-9 col-xs-12">
         <div class="row">
-            <div class="col-xs-6">
+            <div class="centered text-center">
+                <nav>
+                    <ul class="pagination pagination-sm pagination-xs">
+                        <?php
+                        foreach ($paginationlinks as $pagelink)
+                        {
+                            echo $pagelink;
+                        }
+                        ?>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
                 <h5 class="text-muted">Showing <?php echo $rows ?> results </h5>
             </div>
 
-            <div class="col-xs-3">
-                <span class="sort">
-                    <strong>Sort by</strong>
+            <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 sort">
+                    <h5 class="text-muted">Sort By:
                     <?php foreach($sort_options as $label => $field) {
                         if($label == 'Relevancy')
                         {
@@ -46,10 +60,11 @@
                         <a href="<?php echo $base_search.$base_parameters.$sort.$field.'+desc' ?>">newest</a> |
                         <a href="<?php echo $base_search.$base_parameters.$sort.$field.'+asc' ?>">oldest</a>
                   <?php } } } ?>
-                </span>
+                </h5>
             </div>
 
         </div>
+
 
 
         <hr>

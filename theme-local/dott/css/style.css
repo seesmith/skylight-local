@@ -100,7 +100,7 @@ button 				{  width: auto; overflow: visible; } /* Make buttons play nice in IE:
 /* Default Styles --------------------------------------------------------------------------------------------------------*/
 
 html 							{ -webkit-font-smoothing: antialiased; }
-body 							{ background: #EEEDE8; }
+body 							{ background: #EEEEEE; }
 body, select, input, textarea 	{ color: #555; font-family: "Frutiger Regular", sans-serif, serif }
 
 h1, h2, h3, h4, h5, h6          { text-rendering: optimizeLegibility; color: #000000; font-weight: bold; }
@@ -126,8 +126,15 @@ a:hover 						{ text-decoration: underline; color: #BBBEC3; }
 
 /* Structure -------------------------------------------------------------------------------------------------------------*/
 .container 			{ background: #ffffff;}
-.header-normal		{ width: 1170px; height: 135px; background: url(../images/dott-header.gif) no-repeat 0 0;}
+header .container   { padding: 0;}
+.header-normal		{ max-width: 1170px; height: 135px; background: url(../images/dott-header.gif) no-repeat 0 0;}
 .col-main			{ float: left; margin-right: 0; }
+
+.navbar             { margin-bottom: 0;}
+
+.navbar-default .navbar-nav > li > a:focus, .navbar-default .navbar-nav > li > a:hover { background-color: #4A7787; color: #FFFFFF;  }
+
+.navbar-default     { background-color: #EEEEEE; border: 0;  }
 
 
 /* Common Containers & Subclasses ----------------------------------------------------------------------------------------*/
@@ -172,6 +179,7 @@ a:hover 						{ text-decoration: underline; color: #BBBEC3; }
 .item-div                       { width: 660px; text-align: left; display: block; }
 .iteminfo                       { display: block; min-height:40px; text-align: left; width: 100%; float:left; }
 .iteminfo h3                    { font-size: 20px; margin-top: 5px; }
+.sort                           { float: right;}
 
 /** side panel */
 .list-group-item.active         { background-color: #4A7787; color: #FFFFFF;}

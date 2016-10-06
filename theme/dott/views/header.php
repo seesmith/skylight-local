@@ -93,38 +93,48 @@
     </head>
 
     <body>
-        <nav id="menu">
-            <ul class="menu-links">
-                <li><a href="./feedback" title="Feedback Form">Feedback</a></li>
-                <li><a href="http://libraryblogs.is.ed.ac.uk/towardsdolly/" title="LHSA Blog Link" target="_blank">Blog</a></li>
-                <li><a href="./people" title="People Link">People</a></li>
-                <li><a href="./catalogues" title="Catalogues Link">Catalogues</a></li>
-                <li><a href="./history" title="History Link">History</a></li>
-                <li><a href="./about" title="About Link">About</a></li>
-                <li><a href="./" title="Norman Dott Home Link">Home</a></li>
-            </ul>
+        <nav class="navbar navbar-default">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                </div>
+                <div class="collapse navbar-collapse" id="myNavbar">
+                    <ul class="nav navbar-nav">
+                        <li><a href="./" title="Medical Case Notes Home Link">Home</a></li>
+                        <li><a href="./about" title="About Link">About</a></li>
+                        <li><a href="./history" title="History Link">History</a></li><li><a href="./catalogues" title="Catalogues Link">Catalogues</a></li>
+                        <li><a href="./people" title="People Link">People</a></li>
+                        <li><a href="http://libraryblogs.is.ed.ac.uk/towardsdolly/" title="LHSA Blog Link" target="_blank">Blog</a></li>
+                        <li><a href="./feedback" title="Feedback Form">Feedback</a></li>
+                    </ul>
+                </div><!--/.nav-collapse -->
+            </div>
         </nav>
         <header>
+            <div class="container">
 
-            <div class="container header-normal">
-                <!-- <a href="http://www.ed.ac.uk" title="University of Edinburgh Home" target="_blank">
-                     <div id="uoe-logo-header">
-                     </div>
-                 </a>-->
-                <div id="collection-title">Medical Records Revived:
-                    <div id="collection-sub-title">Case Note Catalogues at <br />Lothian Health Services Archive</div>
-                </div>
-                <!--<div class="clearfix"></div>-->
-                <div id="collection-search">
-                    <form action="./redirect/" method="post" class="navbar-form">
-                        <div class="input-group search-box">
-                            <input type="text" class="form-control" placeholder="Search" name="q" value="<?php if (isset($searchbox_query)) echo urldecode($searchbox_query); ?>" id="q" />
-                        <span class="input-group-btn">
-                            <button type="submit" class="btn btn-default" name="submit_search" value="Search" id="submit_search"><i class="glyphicon glyphicon-search"></i></button>
-                        </span>
+                    <div class="header-normal">
+                        <div id="collection-title">Medical Records Revived:
+                            <div id="collection-sub-title">Case Note Catalogues at <br />Lothian Health Services Archive</div>
                         </div>
-                    </form>
-                </div>
+
+                        <div id="collection-search">
+                        <form action="./redirect/" method="post" class="navbar-form">
+                            <div class="input-group search-box">
+                                <input type="text" class="form-control" placeholder="Search" name="q" value="<?php if (isset($searchbox_query)) echo urldecode($searchbox_query); ?>" id="q" />
+                                            <span class="input-group-btn">
+                                                <button type="submit" class="btn btn-default" name="submit_search" value="Search" id="submit_search"><i class="glyphicon glyphicon-search"></i></button>
+                                            </span>
+                            </div>
+                        </form>
+                        </div>
+                    </div>
+
             </div>
         </header>
+
             <div class="container content">
