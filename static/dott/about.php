@@ -1,6 +1,6 @@
-<div class="content">
+<div class="col-md-9 col-sm-9 col-xs-12">
     <div class="content byEditor">
-        <h3>Case note cataloguing at LHSA</h3>
+        <h1 class="itemtitle">Case note cataloguing at LHSA</h1>
 
         <p> Modern archival case records are rich resources for medical humanities’ researchers, clinicians and genealogists
             alike, giving context to ground-breaking procedures and telling fascinating stories about the development of

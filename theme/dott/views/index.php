@@ -1,6 +1,6 @@
 
-        <div class="col-md-9 col-sm-9 col-xs-9">
-            <h1>Medical records revived: case note catalogues at Lothian Health Services Archive</h1>
+        <div class="col-md-9 col-sm-9 col-xs-12">
+            <h1 class="itemtitle">Medical records revived: <small>case note catalogues at Lothian Health Services Archive</small></h1>
 
             <p>
                 Lothian Health Services Archive (LHSA) has developed a methodology for cataloguing archival case notes that

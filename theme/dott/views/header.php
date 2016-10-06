@@ -108,7 +108,7 @@
                         <li><a href="./about" title="About Link">About</a></li>
                         <li><a href="./history" title="History Link">History</a></li><li><a href="./catalogues" title="Catalogues Link">Catalogues</a></li>
                         <li><a href="./people" title="People Link">People</a></li>
-                        <li><a href="http://libraryblogs.is.ed.ac.uk/towardsdolly/" title="LHSA Blog Link" target="_blank">Blog</a></li>
+                        <li><a href="http://lhsa.blogspot.co.uk/" title="LHSA Blog Link" target="_blank">Blog</a></li>
                         <li><a href="./feedback" title="Feedback Form">Feedback</a></li>
                     </ul>
                 </div><!--/.nav-collapse -->
