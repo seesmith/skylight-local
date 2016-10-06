@@ -1,61 +1,47 @@
 <div class="content">
     <div class="content byEditor">
-        <p>Since 2012, the Wellcome Trust has funded a number of projects relating to animal genetics collections held
-            at the University of Edinburgh's Centre for Research Collections. ‘Towards Dolly: Edinburgh, Roslin and the
-            Birth of Modern Genetics’ and ‘The Making of Dolly: Science, Politics and Ethics’ have catalogued, preserved
-            and made available archival, printed and visual collections relating to animal genetics in Edinburgh, from
-            nineteenth century zoology to the birth of Dolly the sheep in 1996, and beyond to present day cutting-edge
-            research. Working on the project were Rare Book Cataloguer Kristy Davis and Project Archivist Clare Button.
+        <h3>Case note cataloguing at LHSA</h3>
+
+        <p> Modern archival case records are rich resources for medical humanities’ researchers, clinicians and genealogists
+            alike, giving context to ground-breaking procedures and telling fascinating stories about the development of
+            medical care in the twentieth century. Case notes are collected documents produced during the treatment and
+            care of a particular patient. Loose notes in folders superseded the use of bound books from the mid-1920s,
+            and they record the progress of patients in a range of ways, from typed summaries to a range of charts,
+            handwritten notes, x-rays, photographs, drawings and letters.</p>
+
+        <p>Despite case notes’ potential as an academic resource, their research use to date has been limited. Researchers
+            can be deterred by case notes’ physical condition (often housed in original folders), the sheer number of
+            records produced, time-consuming searches for a particular category of data and case notes’ extremely specialist
+            medical language. Confidentiality restrictions on modern health records also mean that potential researchers
+            have to meet strict conditions for access even for scoping purposes. Previous grants from the Wellcome Trust
+            (link to http://www.lhsa.lib.ed.ac.uk/conservation/conserv_case_notes.htm) have rehoused many of our most
+            significant collections of case notes, removing physical barriers to their access. LHSA’s case note cataloguing
+            aims to remove more intellectual hurdles, realising the potential of these absorbing records as research resources.</p>
+
+        <p> Funded by the Wellcome Trust, LHSA began a project to catalogue over 26,500 cases created by renowned Edinburgh
+            neurosurgeon, Norman Dott (link to http://www.lhsa.lib.ed.ac.uk/projects/Cataloguingcasenotes.htm) in 2012.
+            Cataloguing Norman Dott’s neurosurgical case notes (1920 – 1960) developed a methodology that describes each
+            case in language accessible to researchers from different backgrounds whilst protecting patient privacy. Using
+            the Encoded Archival Description (EAD)eXtensible Mark-up Language (XML) standard along with tailored index terms
+            allows confidential data to be hidden from a public, online catalogue whilst emphasising other, non-identifying
+            details for search. Dott’s case notes span his formidable career, from early private practice in the 1920s to
+            opening the first neurosurgery department in Scotland in 1938, his wartime service to military patients and his
+            flagship achievement in 1960: the Department of Surgical Neurology at the Western General Hospital, a pioneering
+            centre of neurosurgical treatment and rehabilitation.</p>
+
+        <p>When LHSA was awarded a further Wellcome Trust Research Resources grant in 2013, the same methodology was used
+            to describe cases from a very different specialism. RVH v TB: a project to catalogue LHSA’s Royal Victoria Hospital
+            Tuberculosis and Diseases of the Chest Case Notes and Registers will catalogue over 24,000 individual cases
+            treated in the Royal Victoria Hospital, in its dispensary and sanatoriums and in the Scottish Mass Miniature
+            Radiography (MMR) campaigns of 1957 and 1958. Although the cataloguing methodology remains basically the same
+            as that used for Dott’s cases, the nature of tuberculosis means that certain details are emphasised above
+            others for search.</p>
+
+        <p>These pages act as a gateway to LHSA case note catalogues produced to date. They will give you an idea of the
+            people, places and ideas behind the cases and provide a ‘user-guide’ to searching the collections. At present,
+            only the catalogue to Dott’s case notes can be accessed, but new catalogues will be added as they are completed.
+
         </p>
-        <p>In all, 23 collections have been catalogued and preserved, with key items receiving conservation treatment.
-            These collections include rare books, scientific papers, the archives of institutions such as Roslin
-            Institute and the papers of pioneering scientists including Charlotte Auerbach, C.H. Waddington and Sir
-            Ian Wilmut. Nine oral history recordings were also carried out with leading contemporary geneticists.
-        </p>
-        <p>Between October 2014 and May 2015, the project ‘Science on a Plate: the natural sciences through glass slides,
-            1870-1930’ digitised nearly 3,500 historic glass slides which were catalogued as part of ‘Towards Dolly’.
-            Depicting different animal breeds and scenes and people from around the world, this rich visual resource
-            is now available to  <a href="http://images.is.ed.ac.uk/luna/servlet/UoEgal~6~6" title="Roslin Glass Slide online" target="_blank">view online</a>.
-        </p>
-
-        <p>These projects were generously funded by the Wellcome Trust's
-            <a href="http://www.wellcome.ac.uk/Funding/Humanities-and-social-science/Funding-schemes/Research-resources-awards/index.htm" title="Wellcome Trust Research Resources" target="_blank">Research Resources scheme</a>.
-            Watch the Project Archivist, Clare Button, talking about the collections in the Wellcome Trust's film about the scheme.
-
-        <div class="flowplayer" data-analytics="<?php echo $ga_code ?>"
-             title="Introduction to Towards Dolly by Clare Button, Project Archivist">
-            <video id="video-archives" title="Introduction to Towards Dolly by Clare Button, Project Archivist" controls preload="true">
-                <?php if (strpos($_SERVER['HTTP_USER_AGENT'], 'Chrome') == false) { ?>
-                    <source src="<?php echo base_url(); ?>videos/Towards_Dolly_Wellcome_Trust_showreel.mp4" type="video/mp4"/>
-                <?php } else { ?>
-                    <source src="<?php echo base_url(); ?>videos/Towards_Dolly_Wellcome_Trust_showreel.webm" type="video/webm"/>
-                <?php } ?>
-                Video loading...'
-            </video>
-        </div>
-        </p>
-
-        <p>From July to October 2015, the University of Edinburgh Main Library Exhibition Gallery hosted the
-            <a href="https://exhibitions.ed.ac.uk/towardsdolly" title="Toward's Dolly Exhibition online" target="_blank">exhibition</a>
-            ‘Towards Dolly: a century of animal genetics in Edinburgh.’ This was curated by Project Archivist Clare Button
-            and featured an array of archival, printed and visual collections, as well as Dolly the sheep herself, on
-            loan courtesy of National Museums Scotland. Watch the Library and University Collections Digital Imaging
-            Unit’s timelapse video of Dolly being installed in the exhibition gallery here:
-        </p>
-        <div class="flowplayer" data-analytics="<?php echo $ga_code ?>"
-             title="Towards Dolly Exhibition being installed, Video by Univeristy of Edinburgh Digital Imaging Unit"">
-            <video id="video-archives" title="Towards Dolly Exhibition being installed, Video by Univeristy of Edinburgh Digital Imaging Unit" controls preload="true">
-
-                <?php if (strpos($_SERVER['HTTP_USER_AGENT'], 'Chrome') == false) { ?>
-                    <source src="<?php echo base_url(); ?>videos/0051021v-001.mp4" type="video/mp4"/>
-                <?php } else { ?>
-                    <source src="<?php echo base_url(); ?>videos/0051021v-001.webm" type="video/webm"/>
-                <?php } ?>
-                Video loading...'
-            </video>
-        </div>
-
-
         <h1>Contact Details</h1>
         <p>
             For further information  please contact:
@@ -67,6 +53,6 @@
             Edinburgh,<br />
             EH8 9LJ<br />
             Email: <a class="email" href="mailto:is-crc@ed.ac.uk">is-crc@ed.ac.uk</a><br/>
-
+        </p>
     </div>
 </div>

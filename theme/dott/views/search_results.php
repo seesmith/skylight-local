@@ -19,38 +19,39 @@
             $sort = '&sort_by=';
         }
     ?>
-    <div class="listing-filter">
-        <span class="no-results">
-            <strong><?php echo $startrow ?>-<?php echo $endrow ?></strong> of
-            <strong><?php echo $rows ?></strong> results
-        </span>
+    <div class="col-md-9 col-sm-9 col-xs-9">
+        <div class="row">
+            <div class="col-xs-6">
+                <h5 class="text-muted">Showing <?php echo $rows ?> results </h5>
+            </div>
 
-        <span class="sort">
-            <strong>Sort by</strong>
-            <?php foreach($sort_options as $label => $field) {
-                if($label == 'Relevancy')
-                {
+            <div class="col-xs-3">
+                <span class="sort">
+                    <strong>Sort by</strong>
+                    <?php foreach($sort_options as $label => $field) {
+                        if($label == 'Relevancy')
+                        {
+                            ?>
+                            <em><a href="<?php echo $base_search.$base_parameters.$sort.$field.'+desc'?>"><?php echo $label ?></a></em>
+                            <?php
+                        }
+                        else {
                     ?>
-                    <em><a href="<?php echo $base_search.$base_parameters.$sort.$field.'+desc'?>"><?php echo $label ?></a></em>
-                    <?php
-                }
-                else {
-            ?>
 
-                <em><?php echo $label ?></em>
-                <?php if($label != "Date") { ?>
-                <a href="<?php echo $base_search.$base_parameters.$sort.$field.'+asc' ?>">A-Z</a> |
-                <a href="<?php echo $base_search.$base_parameters.$sort.$field.'+desc' ?>">Z-A</a>
-            <?php } else { ?>
-                <a href="<?php echo $base_search.$base_parameters.$sort.$field.'+desc' ?>">newest</a> |
-                <a href="<?php echo $base_search.$base_parameters.$sort.$field.'+asc' ?>">oldest</a>
-          <?php } } } ?>
-        </span>
+                        <em><?php echo $label ?></em>
+                        <?php if($label != "Date") { ?>
+                        <a href="<?php echo $base_search.$base_parameters.$sort.$field.'+asc' ?>">A-Z</a> |
+                        <a href="<?php echo $base_search.$base_parameters.$sort.$field.'+desc' ?>">Z-A</a>
+                    <?php } else { ?>
+                        <a href="<?php echo $base_search.$base_parameters.$sort.$field.'+desc' ?>">newest</a> |
+                        <a href="<?php echo $base_search.$base_parameters.$sort.$field.'+asc' ?>">oldest</a>
+                  <?php } } } ?>
+                </span>
+            </div>
 
-    </div>
-
-
-    <ul class="listing">
+        </div>
+        <div class="row">
+        <ul class="listing">
 
         <?php
         $j = 0;
@@ -118,11 +119,20 @@
 
         ?>
     </ul>
+     </div> <!-- close row-->
 
-
-    <div class="pagination">
-        <span class="no-results">
-            <strong><?php echo $startrow ?>-<?php echo $endrow ?></strong> of
-            <strong><?php echo $rows ?></strong> results </span>
-        <?php echo $pagelinks ?>
-    </div>
+            <div class="row">
+                <div class="centered text-center">
+                    <nav>
+                        <ul class="pagination pagination-sm pagination-xs">
+                            <?php
+                            foreach ($paginationlinks as $pagelink)
+                            {
+                                echo $pagelink;
+                            }
+                            ?>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+    </div> <!-- close col 9 -->
