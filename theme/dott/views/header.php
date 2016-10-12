@@ -39,8 +39,7 @@
         <link rel="stylesheet" href="http://releases.flowplayer.org/6.0.4/skin/minimalist.css">
         <link rel="stylesheet" href="<?php echo base_url()?>assets/font-awesome/css/font-awesome.min.css">
         <link rel="stylesheet" href="<?php echo base_url(); ?>theme/<?php echo $this->config->item('skylight_theme'); ?>/css/style.css?v=2">
-        <link href="https://fonts.googleapis.com/css?family=Crimson+Text" rel="stylesheet">
-        <link href="https://fonts.googleapis.com/css?family=Indie+Flower" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Special+Elite" rel="stylesheet">
 
         <!-- All JavaScript at the bottom, except for Modernizr which enables HTML5 elements & feature detects -->
         <script src="<?php echo base_url()?>assets/modernizr/modernizr-1.7.min.js"></script>

@@ -108,7 +108,7 @@ h1 								{ font-size: 20px; line-height: 24px; margin: 18px 0 17px 0; position
 h2 								{ font-size: 18px; line-height: 36px; margin: 0 0 0 0; }
 h3 								{ color: #373B41; font-size: 16px; line-height: 18px; margin: 0 0 9px 0; }
 
-h1.itemtitle 					{ font-family: 'Indie Flower', cursive; font-size: 28px; line-height: 30px;
+h1.itemtitle 					{ font-family: 'Special Elite', cursive; font-size: 22px; line-height: 30px;
                                     margin: 15px 0 10px 0; position: relative; color: #373B41; }
 .left-title h1.itemtitle, .full-title h1.itemtitle
                                 { margin-top: 0; padding-top: 10px; }
@@ -144,7 +144,7 @@ header .container   { padding: 0;}
                         float: left;
                         color:#ffffff;
                         text-rendering: optimizeLegibility;
-                        font-family: 'Indie Flower', cursive;
+                        font-family: 'Special Elite', cursive;
                         font-weight: 700;
                         font-style: normal;
                         font-size: 38px;
