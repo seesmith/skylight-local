@@ -214,7 +214,7 @@ if(isset($solr[$bitstream_field]) && $link_bitstream)
                 $tileSource = str_replace('images.is.ed.ac.uk', 'lac-luna-test2.is.ed.ac.uk:8181', $linkURI);
                 $tileSource = str_replace('detail', 'iiif', $tileSource) . '/info.json';
                 $iiifmax = str_replace('info.json', 'full/full/0/default.jpg', $tileSource);
-                list($width, $height) = getimagesize($iiifmax);
+                //list($width, $height) = getimagesize($iiifmax);
                 //echo 'WIDTH'.$width.'HEIGHT'.$height;
 
 
