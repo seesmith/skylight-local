@@ -12,6 +12,7 @@
         $thumbnail_field = $this->skylight_utilities->getField('Thumbnail');
         $abstract_field = $this->skylight_utilities->getField('Abstract');
         $subject_field = $this->skylight_utilities->getField('Subject');
+        $link_uri_field = $this->skylight_utilities->getField('Link');
 
         $base_parameters = preg_replace("/[?&]sort_by=[_a-zA-Z+%20. ]+/","",$base_parameters);
         if($base_parameters == "") {
@@ -138,8 +139,39 @@
             </div> <!-- close item-info -->
 
             <div class = "thumbnail-image">
-                <?php
 
+                <?php
+                $numThumbnails = 0;
+                $imageset = false;
+                $thumbnailLink = array();
+                if (isset($doc[$link_uri_field]))
+                {
+                    foreach ($doc[$link_uri_field] as $linkURI)
+                    {
+                        if (strpos($linkURI, 'luna') > 0)
+                        {
+                                //just for test, this line!
+                            $tileSource = str_replace('images.is.ed.ac.uk', 'lac-luna-test2.is.ed.ac.uk:8181', $linkURI);
+                            $tileSource = str_replace('detail', 'iiif', $tileSource) . '/info.json';
+                            $iiifmax = str_replace('info.json', 'full/full/0/default.jpg', $tileSource);
+                                //list($width, $height) = getimagesize($iiifmax);
+                                //echo 'WIDTH'.$width.'HEIGHT'.$height;
+                            $iiifurlsmall = str_replace('info.json', 'full/250,250/0/default.jpg', $tileSource);
+                            $iiifurlfull = str_replace('info.json', 'full/!660,660/0/default.jpg', $tileSource);
+
+                            $thumbnailLink[$numThumbnails]  = '<a title = "' . $doc[$title_field][0] . '" class="fancybox" rel="group" href="' . $iiifurlfull . '"> ';
+                            $thumbnailLink[$numThumbnails] .= '<img src = "' . $iiifurlsmall . '" class="record-thumbnail" title="' . $doc[$title_field][0] . '" /></a>';
+
+                            $numThumbnails++;
+                            $imageset = true;
+                        }
+                    }
+                    if ($imageset == true) {
+                        echo $thumbnailLink[0];
+                    }
+                }
+
+/*
                 $bitstream_array = array();
 
                 if(isset($doc[$bitstream_field])) {
@@ -210,7 +242,13 @@
                         echo $thumbnailLink;
                     }
 
-                } //end if there are bitstreams ?>
+                } //end if there are bitstreams */
+
+
+
+
+                ?>
+            <!--</div>-->
 
             </div>
             <div class="clearfix"></div>
