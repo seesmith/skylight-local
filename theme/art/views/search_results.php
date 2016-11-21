@@ -138,7 +138,7 @@
 
             </div> <!-- close item-info -->
 
-            <div class = "thumbnail-image">
+            <div class = "thumbnail-image-search">
 
                 <?php
                 $numThumbnails = 0;
@@ -154,13 +154,22 @@
                             $tileSource = str_replace('images.is.ed.ac.uk', 'lac-luna-test2.is.ed.ac.uk:8181', $linkURI);
                             $tileSource = str_replace('detail', 'iiif', $tileSource) . '/info.json';
                             $iiifmax = str_replace('info.json', 'full/full/0/default.jpg', $tileSource);
-                                //list($width, $height) = getimagesize($iiifmax);
-                                //echo 'WIDTH'.$width.'HEIGHT'.$height;
-                            $iiifurlsmall = str_replace('info.json', 'full/250,250/0/default.jpg', $tileSource);
-                            $iiifurlfull = str_replace('info.json', 'full/!660,660/0/default.jpg', $tileSource);
+                            list($width, $height) = getimagesize($iiifmax);
+                            $portrait = true;
+                            if ($width > $height)
+                            {
+                                $portrait = false;
+                            }
+                            if ($portrait) {
+                                $iiifurlsmall = str_replace('info.json', 'full/,250/0/default.jpg', $tileSource);
+                            }
+                            else{
+                                $iiifurlsmall = str_replace('info.json', 'full/250,/0/default.jpg', $tileSource);
+                            }
+                            $iiifurlfull = str_replace('info.json', 'full/full/0/default.jpg', $tileSource);
 
                             $thumbnailLink[$numThumbnails]  = '<a title = "' . $doc[$title_field][0] . '" class="fancybox" rel="group" href="' . $iiifurlfull . '"> ';
-                            $thumbnailLink[$numThumbnails] .= '<img src = "' . $iiifurlsmall . '" class="record-thumbnail" title="' . $doc[$title_field][0] . '" /></a>';
+                            $thumbnailLink[$numThumbnails] .= '<img src = "' . $iiifurlsmall . '" class="record-thumbnail-search" title="' . $doc[$title_field][0] . '" /></a>';
 
                             $numThumbnails++;
                             $imageset = true;
