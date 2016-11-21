@@ -89,7 +89,7 @@
                 </a>
             </li>
             <li class="tile">
-                <a href="www.ed.ac.uk/is/crc" class="caption" target="_blank" title="Access the collections at the Centre for Research Collections">
+                <a href="http://www.ed.ac.uk/information-services/library-museum-gallery/crc" class="caption" target="_blank" title="Access the collections at the Centre for Research Collections">
                     <img src="<?php echo base_url(); ?>theme/<?php echo $this->config->item('skylight_theme'); ?>/images/accesscrc.jpg" alt="Edinburgh University Library News" title="Access the collections at the Centre for Research Collections">
                     <span onmouseover="this.style.background='#005784';this.style.color='#FFF'" onmouseout="this.style.background='#FFFFFF';this.style.color='#005784'">Visit</span>
                 </a>
