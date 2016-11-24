@@ -81,7 +81,7 @@ $config['skylight_meta_fields'] = array('Title' => 'dc.title',
     'Subject' => 'dc.subject',
     'Type' => 'dc.type');
 
-$config['skylight_recorddisplay'] = array('Alternative Title',
+$config['skylight_recorddisplay'] = array('Title','Alternative Title',
     'Short Description',
     'Instrument',
     'Instrument Family',

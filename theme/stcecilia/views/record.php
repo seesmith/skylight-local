@@ -1,7 +1,35 @@
+
+<nav class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#">St Cecilia's Hall</a>
+        </div>
+        <div>
+            <div class="collapse navbar-collapse" id="myNavbar">
+                <ul class="nav navbar-nav">
+                    <li><a href="<?php echo $_SERVER['REQUEST_URI'];?>#stc-section1">Top</a></li>
+                    <li><a href="<?php echo $_SERVER['REQUEST_URI'];?>#stc-section2">Image</a></li>
+                    <li><a href="<?php echo $_SERVER['REQUEST_URI'];?>#stc-section3">Basic Info</a></li>
+                    <li><a href="<?php echo $_SERVER['REQUEST_URI'];?>#stc-section4">Audio/Visual</a></li>
+                    <li><a href="<?php echo $_SERVER['REQUEST_URI'];?>#stc-section5">More Data</a></li>
+                    <li><a href="<?php echo $_SERVER['REQUEST_URI'];?>#stc-section6">Related Items</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</nav>
 <?php
 
+//print_r ($solr);
 $author_field = $this->skylight_utilities->getField("Author");
+$title_field = $this->skylight_utilities->getField("Title");
 $maker_field = $this->skylight_utilities->getField("Maker");
+
 $type_field = $this->skylight_utilities->getField("Type");
 $bitstream_field = $this->skylight_utilities->getField("Bitstream");
 $thumbnail_field = $this->skylight_utilities->getField("Thumbnail");
@@ -10,6 +38,7 @@ $link_uri_field = $this->skylight_utilities->getField("Link");
 $short_field = $this->skylight_utilities->getField("Short Description");
 $date_field = $this->skylight_utilities->getField("Date");
 $media_uri = $this->config->item("skylight_media_url_prefix");
+$theme = $this->config->item("skylight_theme");
 
 $type = 'Unknown';
 $mainImageTest = false;
@@ -23,219 +52,336 @@ $videoFile = false;
 $audioFile = false;
 
 
-if(isset($solr[$bitstream_field]) && $link_bitstream) {
+foreach($recorddisplay as $key)
+{
+    $element = $this->skylight_utilities->getField($key);
 
-    foreach ($solr[$bitstream_field] as $bitstream_for_array)
+    if(isset($solr[$element]))
     {
-        $b_segments = explode("##", $bitstream_for_array);
-        $b_seq = $b_segments[4];
-        $bitstream_array[$b_seq] = $bitstream_for_array;
-    }
-
-    ksort($bitstream_array);
-
-    $mainImage = false;
-    $videoFile = false;
-    $audioFile = false;
-    $audioLink = "";
-    $videoLink = "";
-    $b_seq =  "";
-
-    foreach($bitstream_array as $bitstream) {
-        $mp4ok = false;
-        $b_segments = explode("##", $bitstream);
-        $b_filename = $b_segments[1];
-        if($image_id == "") {
-            $image_id = substr($b_filename,0,7);
-        }
-        $b_handle = $b_segments[3];
-        $b_seq = $b_segments[4];
-        $b_handle_id = preg_replace('/^.*\//', '',$b_handle);
-        $b_uri = './record/'.$b_handle_id.'/'.$b_seq.'/'.$b_filename;
-
-        if ((strpos($b_uri, ".jpg") > 0) or (strpos($b_uri, ".JPG") > 0))
+        foreach($solr[$element] as $index => $metadatavalue)
         {
-            if (!$mainImage) {
+            // if it's a facet search
+            // make it a clickable search link
 
-                // we have a main image
-                $mainImageTest = true;
-
-                $bitstreamLink = '<div class="main-image">';
-                $bitstreamLink .= '<a title = "' . $record_title . '" class="fancybox" rel="group" href="' . $b_uri . '"> ';
-                $bitstreamLink .= '<img class="record-main-image" src = "'. $b_uri .'">';
-                $bitstreamLink .= '</a>';
-                $bitstreamLink .= '</div>';
-
-                $mainImage = true;
+            if($key == 'Date Made') {
+                $date = $metadatavalue;
             }
-            // we need to display a thumbnail
-            else {
-                // if there are thumbnails
-                if(isset($solr[$thumbnail_field])) {
-                    foreach ($solr[$thumbnail_field] as $thumbnail) {
+            if (!(isset($date))){
+                $date = 'Undated';
+            }
 
-                        $t_segments = explode("##", $thumbnail);
-                        $t_filename = $t_segments[1];
+            if($key == 'Maker') {
+                $maker = $metadatavalue;
+            }
+            if (!(isset($maker))){
+                $maker = 'Unknown maker';
+            }
 
-                        if ($t_filename === $b_filename . ".jpg") {
 
-                            $t_handle = $t_segments[3];
-                            $t_seq = $t_segments[4];
-                            $t_uri = './record/'.$b_handle_id.'/'.$t_seq.'/'.$t_filename;
+            if($key == 'Title') {
+                $title = $metadatavalue;
+            }
 
-                            $thumbnailLink[$numThumbnails] = '<a title = "' . $record_title . '" class="fancybox" rel="group" href="' . $b_uri . '"> ';
-                            $thumbnailLink[$numThumbnails] .= '<img src = "'.$t_uri.'" title="'. $record_title .'" /></a>';
+            if (!(isset($title))){
+                $title = 'Unnamed item';
+            }
 
-                            $numThumbnails++;
-                        }
+        }
+    }
+}
+
+?>
+
+<div id="stc-section1" class="container-fluid">
+    <h1 class="itemtitle hidden-sm hidden-xs"><?php echo $title .' / '. $maker. ' / '.$date;?></h1>
+    <h4 class="itemtitle hidden-lg hidden-md"><?php echo $title .' / '. $maker. ' / '.$date;?></h4>
+</div>
+
+<?php
+    if (isset($solr[$link_uri_field]))
+    {
+        foreach($solr[$link_uri_field] as $linkURI) {
+
+            if (strpos($linkURI, 'luna') > 0) {
+                //just for test, this line!
+                $tileSource = str_replace('images.is.ed.ac.uk', 'lac-luna-test2.is.ed.ac.uk:8181', $linkURI);
+                $tileSource = str_replace('detail', 'iiif', $tileSource) . '/info.json';
+                $iiifmax = str_replace('info.json', 'full/full/0/default.jpg', $tileSource);
+                list($width, $height) = getimagesize($iiifmax);
+                //echo 'WIDTH'.$width.'HEIGHT'.$height
+                $portrait = true;
+                if ($width > $height)
+                {
+                    $portrait = false;
+                }
+                $json =  file_get_contents($tileSource);
+                $jobj = json_decode($json, true);
+
+                $error = json_last_error();
+
+                $jsoncontext = $jobj['@context'];
+                $jsonid = $jobj['@id'];
+                $jsonheight = $jobj['height'];
+                $jsonwidth = $jobj['width'];
+                $jsonprotocol = $jobj['protocol'];
+                $jsontiles = $jobj['tiles'];
+                $jsonprofile = $jobj['profile'];
+            }
+        }
+    }
+?>
+
+<div id="stc-section2" class="container-fluid">
+    <div class="col-lg-12 hidden-md hidden-sm hidden-xs main-image">
+        <div id="openseadragon1" style="width: 1140px; height:660px;">
+            <script type="text/javascript">
+                OpenSeadragon({
+                    id: "openseadragon1",
+                    prefixUrl: "<?php echo base_url() ?>assets/openseadragon/images/",
+                    tileSources: [{
+                        "@context": "<?php echo $jsoncontext ?>",
+                        "@id": "<?php echo $jsonid ?>",
+                        "height": <?php echo $jsonheight ?>,
+                        "width": <?php echo $jsonwidth ?>,
+                        "profile":  [ "http://iiif.io/api/image/2/level2.json" ,
+                            {
+                                "formats" : [ "gif", "pdf"]
+                            }
+                        ],
+                        "protocol": "<?php echo $jsonprotocol ?>",
+                        "tiles": [{
+                            "scaleFactors": [ 1, 2, 8, 16, 32 ],
+                            "width": 512
+                        }],
+                        tileSize: 500,
+                        //minLevel: 2,
+                        preserveViewport: true,
+                        visibilityRatio: 1,
+                        minZoomLevel: 1,
+                        defaultZoomLevel: 1,
+                        sequenceMode: true
+                    }]
+                });
+            </script>
+        </div>
+    </div>
+    <div class="col-md-9 hidden-lg hidden-sm hidden-xs resized-image">
+        <img class ="stc-img-responsive" src = "<?php
+        $iiifstatic = str_replace('info.json','full/!600,600/0/default.jpg',$tileSource);
+        echo $iiifstatic;?>">
+    </div>
+    <div class="col-sm-6 hidden-lg hidden-md hidden-xs resized-image">
+        <img class ="stc-img-responsive"  src = "<?php
+        $iiifstatic = str_replace('info.json','full/!400,400/0/default.jpg',$tileSource);
+        echo $iiifstatic;?>">
+    </div>
+    <div class="col-xs-3 hidden-lg hidden-md hidden-sm resized-image">
+        <img class ="stc-img-responsive"  src = "<?php  $iiifstatic = str_replace('info.json','full/!200,200/0/default.jpg',$tileSource);
+        echo $iiifstatic;
+        ?>">
+    </div>
+</div>
+
+
+<div id="stc-section3" class="container-fluid">
+    <h1 class="itemtitle hidden-sm hidden-xs">Categories</h1>
+    <h4 class="itemtitle hidden-md hidden-lg">Categories</h4>
+    <?php
+    foreach($recorddisplay as $key) {
+
+        $element = $this->skylight_utilities->getField($key);
+
+        if(isset($solr[$element])) {
+
+            foreach($solr[$element] as $index => $metadatavalue) {
+                echo '<div class="stc-tags">';
+
+                // if it's a facet search
+                // make it a clickable search link
+                if(in_array($key, $filters)) {
+                    if (!strpos($metadatavalue, "/")> 0)
+                    {
+                        $orig_filter = urlencode($metadatavalue);
+                        $lower_orig_filter = strtolower($metadatavalue);
+                        $lower_orig_filter = urlencode($lower_orig_filter);
+
+                        echo '<a href="./search/*:*/' . $key . ':%22' . $lower_orig_filter . '%7C%7C%7C' . $orig_filter . '%22">' . $metadatavalue . '</a>';
                     }
                 }
+                echo '</div>';
+
             }
         }
-        else if ((strpos($b_uri, ".mp3") > 0) or (strpos($b_uri, ".MP3") > 0)) {
+    }
+    ?>
+</div>
+<?php
 
-            $audioLink .= '<audio controls>';
-            $audioLink .= '<source src="' . $b_uri . '" type="audio/mpeg" />Audio loading...';
-            $audioLink .= '</audio>';
-            $audioFile = true;
-        }
-        else if ((strpos($b_filename, ".mp4") > 0) or (strpos($b_filename, ".MP4") > 0))
-        {
-            $b_uri = $media_uri.$b_handle_id.'/'.$b_seq.'/'.$b_filename;
-            // Use MP4 for all browsers other than Chrome
-            if (strpos($_SERVER['HTTP_USER_AGENT'], 'Chrome') == false)
-            {
-                $mp4ok = true;
-            }
-            //Microsoft Edge is calling itself Chrome, Mozilla and Safari, as well as Edge, so we need to deal with that.
-            else if (strpos($_SERVER['HTTP_USER_AGENT'], 'Edge') == true)
-            {
-                $mp4ok = true;
-            }
+    if(isset($solr[$bitstream_field]) && $link_bitstream) {
 
-            if ($mp4ok == true)
-            {
-                $videoLink .= '<div class="flowplayer" data-analytics="' . $ga_code . '" title="' . $record_title . ": " . $b_filename . '">';
-                $videoLink .= '<video preload=auto loop width="100%" height="auto" controls preload="true" width="660">';
-                $videoLink .= '<source src="' . $b_uri . '" type="video/mp4" />Video loading...';
-                $videoLink .= '</video>';
-                $videoLink .= '</div>';
-                $videoFile = true;
-            }
+        foreach ($solr[$bitstream_field] as $bitstream_for_array) {
+            $b_segments = explode("##", $bitstream_for_array);
+            $b_seq = $b_segments[4];
+            $bitstream_array[$b_seq] = $bitstream_for_array;
         }
 
-        else if ((strpos($b_filename, ".webm") > 0) or (strpos($b_filename, ".WEBM") > 0))
-        {
-            //Microsoft Edge needs to be dealt with. Chrome calls itself Safari too, but that doesn't matter.
-            if (strpos($_SERVER['HTTP_USER_AGENT'], 'Edge') == false)
+        ksort($bitstream_array);
+
+        $mainImage = false;
+        $videoFile = false;
+        $audioFile = false;
+        $audioLink = "";
+        $videoLink = "";
+        $b_seq = "";
+
+        foreach ($bitstream_array as $bitstream) {
+            $mp4ok = false;
+            $b_segments = explode("##", $bitstream);
+            $b_filename = $b_segments[1];
+            if ($image_id == "") {
+                $image_id = substr($b_filename, 0, 7);
+            }
+            $b_handle = $b_segments[3];
+            $b_seq = $b_segments[4];
+            $b_handle_id = preg_replace('/^.*\//', '', $b_handle);
+            $b_uri = './record/' . $b_handle_id . '/' . $b_seq . '/' . $b_filename;
+
+            if ((strpos($b_uri, ".mp3") > 0) or (strpos($b_uri, ".MP3") > 0))
             {
-                if (strpos($_SERVER['HTTP_USER_AGENT'], 'Chrome') == true)
+                $audioLink .= '<audio controls>';
+                $audioLink .= '<source src="' . $b_uri . '" type="audio/mpeg" />Audio loading...';
+                $audioLink .= '</audio>';
+                $audioFile = true;
+            }
+            else if ((strpos($b_filename, ".mp4") > 0) or (strpos($b_filename, ".MP4") > 0))
+            {
+                $b_uri = $media_uri . $b_handle_id . '/' . $b_seq . '/' . $b_filename;
+                // Use MP4 for all browsers other than Chrome
+                if (strpos($_SERVER['HTTP_USER_AGENT'], 'Chrome') == false)
                 {
-                    $b_uri = $media_uri . $b_handle_id . '/' . $b_seq . '/' . $b_filename;
-                    // if it's chrome, use webm if it exists
+                    $mp4ok = true;
+                } //Microsoft Edge is calling itself Chrome, Mozilla and Safari, as well as Edge, so we need to deal with that.
+                else if (strpos($_SERVER['HTTP_USER_AGENT'], 'Edge') == true)
+                {
+                    $mp4ok = true;
+                }
+                if ($mp4ok == true)
+                {
                     $videoLink .= '<div class="flowplayer" data-analytics="' . $ga_code . '" title="' . $record_title . ": " . $b_filename . '">';
                     $videoLink .= '<video preload=auto loop width="100%" height="auto" controls preload="true" width="660">';
-                    $videoLink .= '<source src="' . $b_uri . '" type="video/webm" />Video loading...';
+                    $videoLink .= '<source src="' . $b_uri . '" type="video/mp4" />Video loading...';
                     $videoLink .= '</video>';
                     $videoLink .= '</div>';
                     $videoFile = true;
                 }
+            } else if ((strpos($b_filename, ".webm") > 0) or (strpos($b_filename, ".WEBM") > 0))
+            {
+                //Microsoft Edge needs to be dealt with. Chrome calls itself Safari too, but that doesn't matter.
+                if (strpos($_SERVER['HTTP_USER_AGENT'], 'Edge') == false) {
+                    if (strpos($_SERVER['HTTP_USER_AGENT'], 'Chrome') == true) {
+                        $b_uri = $media_uri . $b_handle_id . '/' . $b_seq . '/' . $b_filename;
+                        // if it's chrome, use webm if it exists
+                        $videoLink .= '<div class="flowplayer" data-analytics="' . $ga_code . '" title="' . $record_title . ": " . $b_filename . '">';
+                        $videoLink .= '<video preload=auto loop width="100%" height="auto" controls preload="true" width="660">';
+                        $videoLink .= '<source src="' . $b_uri . '" type="video/webm" />Video loading...';
+                        $videoLink .= '</video>';
+                        $videoLink .= '</div>';
+                        $videoFile = true;
+                    }
+                }
             }
-        }
-        else if ((strpos($b_uri, ".pdf") > 0) or (strpos($b_uri, ".PDF") > 0)) {
-
-            $bitstreamLink = $this->skylight_utilities->getBitstreamLink($bitstream);
-            $bitstreamUri = $this->skylight_utilities->getBitstreamUri($bitstream);
-            $pdfLink .= 'Click ' . $bitstreamLink . 'to download. (<span class="bitstream_size">' . getBitstreamSize($bitstream) . '</span>)';
         }
     }
-}
 ?>
 
-<div class="row container">
-    <div class="content">
+<?php
+    if (!$videoLink == '' or !$audioLink == '')
+    {
+        echo '<div id="stc-section4" class="container-fluid">
+            <h1 class="itemtitle hidden-sm hidden-xs">Audio/Visual</h1>
+            <h4 class="itemtitle hidden-lg hidden-md">Audio/Visual</h4>'.
+            $videoLink.$audioLink;
+            echo'
+        </div>';
+    }
 
-        <div class="page-header">
-            <h1 class="itemtitle hidden-sm hidden-xs"><?php echo $record_title; ?></h1>
-            <h4 class="itemtitle hidden-lg hidden-md"><?php echo $record_title; ?></h4>
+?>
+
+<div id="stc-section5" class="container-fluid">
+
+    <div class="jcontainer">
+        <h1 class="itemtitle hidden-sm hidden-xs">More Data</h1>
+        <h4 class="itemtitle hidden-lg hidden-md">More Data</h4>
+
+        <div class="jheader"><h3><span>Expand</span></h3>
+
         </div>
+        <div class="jcontent">
+            <?php
 
-        <?php if($mainImageTest === true) { ?>
+            foreach($recorddisplay as $key) {
+                $element = $this->skylight_utilities->getField($key);
 
-                <div class="col-md-6 hidden-sm hidden-xs full-image ">
-                    <?php echo $bitstreamLink; ?>
-                    <br />
-                    <a title="Back to Search Results" class="btn btn-default" onClick="history.go(-1);"><i class="fa fa-arrow-left">&nbsp;</i>Back to Search Results</a>
+                if (isset($solr[$element])) {
+                    foreach ($solr[$element] as $index => $metadatavalue) {
 
-                </div>
-                <div class="col-sm-6 hidden-lg hidden-md resized-image">
-                    <?php echo str_replace("group", "group-small", $bitstreamLink); ?>
-                    <br />
-                    <a title="Back to Search Results" class="btn btn-default" onClick="history.go(-1);"><i class="fa fa-arrow-left">&nbsp;</i>Back to Search Results</a>
-
-                </div>
-        <?php } ?>
-        <div class="col-sm-6 col-xs-12 metadata">
-            <?php if(isset($solr[$short_field][0])) {
-                echo '<p>' . $solr[$short_field][0] . '</p>';
+                        echo '<p>'.$key . ' : ' . $metadatavalue.'</p>';
+                    }
+                }
             }
+            /*
+            ---Get all metadatavalues from iiif info.json---
+            $json =  file_get_contents($tileSource);
+            $jobj = json_decode($json, true);
+            $error = json_last_error();
+
+            foreach($jobj['metadata'] as $item)
+            {
+                echo '<p>'.$item['label'].': <strong>'.$item['value'].'</strong></p>';
+            }*/
             ?>
 
-            <div class="record-tabs ">
-                <ul id="tabs" class="hidden-xs nav nav-tabs  nav-justified" data-tabs="tabs">
-                    <li class="active"><a data-toggle="tab" href="#about"><i class="fa fa-list fa-1x"></i></span><br/>About</a></li>
-                    <li><a data-toggle="tab" href="#gallery" title="Gallery"><i class="fa fa-image fa-1x"></i><br/>Gallery</a></li>
-                    <?php if($videoFile > 0) { ?>
-                        <li><a data-toggle="tab" href="#video" title="Videos"><i class="fa fa-video-camera fa-1x"></i><br/>Video</a></li>
-                    <?php } else { ?>
-                        <li><a data-toggle="tab" href="#video" title="Videos" class="inactive"><i class="fa fa-video-camera fa-inactive fa-1x"></i><br/>Video</a></li>
-                    <?php } ?>
-                    <?php if($audioFile) { ?>
-                        <li><a data-toggle="tab" href="#audio" title="Audio"><i class="fa fa-music fa-1x"></i><br/>Audio</a></li>
-                    <?php } else { ?>
-                        <li><a data-toggle="tab" href="#audio" title="Audio" class="inactive"><i class="fa fa-music fa-inactive fa-1x"></i><br/>Audio</a></li>
-                    <?php } ?>
-                    <li><a data-toggle="tab" href="#maker" title="Marker Information"><i class="fa fa-industry fa-1x"></i><br/>Maker</a></li>
-                    <li><a data-toggle="tab" href="#description" title="Description"><i class="fa fa-file-text fa-1x">&nbsp;</i><br/>Description</a></li>
-                </ul>
-                <ul id="tabs" class="hidden-sm hidden-md hidden-lg nav nav-tabs  nav-justified" data-tabs="tabs">
-                    <li class="active"><a data-toggle="tab" href="#about"><i class="fa fa-list  fa-lg"></i></a></li>
-                    <li><a data-toggle="tab" href="#gallery" title="Gallery"><i class="fa fa-image  fa-lg"></i></a></li>
-                    <?php if($videoFile > 0) { ?>
-                        <li><a data-toggle="tab" href="#video" title="Videos"><i class="fa fa-video-camera fa-1x"></i></a></li>
-                    <?php } else { ?>
-                        <li><a data-toggle="tab" href="#video" title="Videos" class="inactive"><i class="fa fa-video-camera fa-inactive fa-1x"></i></a></li>
-                    <?php } ?>
-                    <?php if($audioFile) { ?>
-                        <li><a data-toggle="tab" href="#audio" title="Audio"><i class="fa fa-music fa-1x"></i></a></li>
-                    <?php } else { ?>
-                        <li><a data-toggle="tab" href="#audio" title="Audio" class="inactive"><i class="fa fa-music fa-inactive fa-1x"></i></a></li>
-                    <?php } ?>
-                    <li><a data-toggle="tab" href="#maker"  title="Marker Information"><i class="fa fa-industry  fa-lg"></i></a></li>
-                    <li><a data-toggle="tab" href="#description"  title="Description"><i class="fa fa-file-text  fa-lg"></i></a></li>
-                </ul>
-
-                <div class="tab-content">
-                    <div id="about" class="tab-pane fade in active">
-                        <?php include('record_about.php');?>
-                    </div>
-                    <div id="gallery" class="tab-pane fade ">
-                        <?php include('gallery.php');?>
-                    </div>
-                    <div id="audio" class="tab-pane fade">
-                        <?php include('audio.php');?>
-                    </div>
-                    <div id="video" class="tab-pane fade">
-                        <?php include('video.php');?>
-                    </div>
-                    <div id="maker" class="tab-pane fade">
-                        <?php include('creator.php');?>
-                    </div>
-                    <div id="description" class="tab-pane fade">
-                        <?php include('description.php');?>
-                    </div>
-                </div>
-            </div>
         </div>
+    </div>
+</div>
+<?php
+/*
+    if (!$mainImage) {
+
+    // we have a main image
+    $mainImageTest = true;
+
+    $bitstreamLink = '<div class="main-image">';
+        $bitstreamLink .= '<a title = "' . $record_title . '" class="fancybox" rel="group" href="' . $b_uri . '"> ';
+            $fullurl = base_url().$theme.'/'.$b_uri;
+
+            list($width, $height) = getImageSize($fullurl);
+            if (isset($solr[$link_uri_field]))
+            {
+            foreach($solr[$link_uri_field] as $linkURI) {
+
+            if (strpos($linkURI, 'luna') > 0) {
+
+            $iiif_uri = str_replace("images.is.ed.ac.uk", "lac-luna-test2.is.ed.ac.uk:8181",$linkURI);
+            $iiif_uri =  str_replace("detail", "iiif", $iiif_uri);
+            $iiif_uri =  $iiif_uri.'/full/!200,200/0/default.jpg';
+
+            }
+            }
+            }
+            if ($width > $height)
+            {
+            $bitstreamLink .= '<img class="record-main-image-landscape" src = "'. $iiif_uri .'">';
+            }
+            else
+            {
+            $bitstreamLink .= '<img class="record-main-image-portrait" src = "'. $iiif_uri .'">';
+            }
+            $bitstreamLink .= '</a>';
+        $bitstreamLink .= '</div>';*/
+?>
+
+    </div>
+	</div>
     </div><!-- content-->
 </div> <!-- row container-->

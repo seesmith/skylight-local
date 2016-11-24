@@ -11,7 +11,6 @@ $tags_field = $this->skylight_utilities->getField("Tags");
 $media_uri = $this->config->item("skylight_media_url_prefix");
 
 $type = 'Unknown';
-$mainImage = false;
 $mainImageTest = false;
 $numThumbnails = 0;
 $bitstreamLinks = array();
@@ -21,12 +20,35 @@ if(isset($solr[$type_field])) {
     $type = "media-" . strtolower(str_replace(' ','-',$solr[$type_field][0]));
 }
 
+if(isset($solr[$bitstream_field]) && $link_bitstream) {
 
-// we need to display a thumbnail
+    foreach ($solr[$bitstream_field] as $bitstream_for_array)
+    {
+        $b_segments = explode("##", $bitstream_for_array);
+        $b_seq = $b_segments[4];
+        $bitstream_array[$b_seq] = $bitstream_for_array;
+    }
 
+    ksort($bitstream_array);
 
-/*
+    $mainImage = false;
+    $videoFile = false;
+    $audioFile = false;
+    $audioLink = "";
+    $videoLink = "";
+    $b_seq =  "";
 
+    foreach($bitstream_array as $bitstream) {
+        $mp4ok = false;
+        $b_segments = explode("##", $bitstream);
+        $b_filename = $b_segments[1];
+        if($image_id == "") {
+            $image_id = substr($b_filename,0,7);
+        }
+        $b_handle = $b_segments[3];
+        $b_seq = $b_segments[4];
+        $b_handle_id = preg_replace('/^.*\//', '',$b_handle);
+        $b_uri = './record/'.$b_handle_id.'/'.$b_seq.'/'.$b_filename;
 
         if ((strpos($b_uri, ".jpg") > 0) or (strpos($b_uri, ".JPG") > 0))
         {
@@ -43,10 +65,42 @@ if(isset($solr[$type_field])) {
 
                                 $bitstreamLink .= '</div>';
                         */
+                if (isset($solr[$link_uri_field]))
+                {
+                    foreach($solr[$link_uri_field] as $linkURI) {
+                        if (strpos($linkURI, 'luna') > 0) {
+                            //just for test, this line!
+                            $tileSource = str_replace('images.is.ed.ac.uk', 'images-test.is.ed.ac.uk:8181', $linkURI);
+                            $tileSource = str_replace('detail', 'iiif', $tileSource) . '/info.json';
+                        }
+                    }
+                }
 
+                echo' <div id="openseadragon1" style="width: 500px; height: 500px;"><script type="text/javascript">
+                OpenSeadragon({
+                    id:                 "openseadragon1",
+                    prefixUrl:          "assets/openseadragon/images/",
+                    preserveViewport:   true,
+                    visibilityRatio:    1,
+                    minZoomLevel:       1,
+                    defaultZoomLevel:   1,
+                    sequenceMode:       true,
+                    tileSources:        "'.$tileSource.'"
+
+                });
+                </script></div>';
+
+                                $mainImage = true;
+
+
+
+
+
+            }
+            // we need to display a thumbnail
+            else {
 
                 // if there are thumbnails
-/*
                 if(isset($solr[$thumbnail_field])) {
                     foreach ($solr[$thumbnail_field] as $thumbnail) {
 
@@ -75,46 +129,16 @@ if(isset($solr[$type_field])) {
 
             }
 
-        }*/
-if(isset($solr[$bitstream_field]) && $link_bitstream)
-{
-
-    foreach ($solr[$bitstream_field] as $bitstream_for_array)
-    {
-        $b_segments = explode("##", $bitstream_for_array);
-        $b_seq = $b_segments[4];
-        $bitstream_array[$b_seq] = $bitstream_for_array;
-    }
-
-    ksort($bitstream_array);
-
-    $mainImage = false;
-    $videoFile = false;
-    $audioFile = false;
-    $audioLink = "";
-    $videoLink = "";
-    $b_seq =  "";
-
-    foreach($bitstream_array as $bitstream)
-    {
-        $mp4ok = false;
-        $b_segments = explode("##", $bitstream);
-        $b_filename = $b_segments[1];
-        if($image_id == "")
-        {
-            $image_id = substr($b_filename,0,7);
         }
-        $b_handle = $b_segments[3];
-        $b_seq = $b_segments[4];
-        $b_handle_id = preg_replace('/^.*\//', '',$b_handle);
-        $b_uri = './record/'.$b_handle_id.'/'.$b_seq.'/'.$b_filename;
-        if ((strpos($b_uri, ".mp3") > 0) or (strpos($b_uri, ".MP3") > 0))
-        {
+        else if ((strpos($b_uri, ".mp3") > 0) or (strpos($b_uri, ".MP3") > 0)) {
+
             $audioLink .= '<audio controls>';
             $audioLink .= '<source src="' . $b_uri . '" type="audio/mpeg" />Audio loading...';
             $audioLink .= '</audio>';
             $audioFile = true;
+
         }
+
         else if ((strpos($b_filename, ".mp4") > 0) or (strpos($b_filename, ".MP4") > 0))
         {
             $b_uri = $media_uri.$b_handle_id.'/'.$b_seq.'/'.$b_filename;
@@ -159,24 +183,26 @@ if(isset($solr[$bitstream_field]) && $link_bitstream)
             }
         }
 
-        else if ((strpos($b_uri, ".pdf") > 0) or (strpos($b_uri, ".PDF") > 0))
-        {
+        else if ((strpos($b_uri, ".pdf") > 0) or (strpos($b_uri, ".PDF") > 0)) {
 
             $bitstreamLink = $this->skylight_utilities->getBitstreamLink($bitstream);
             $bitstreamUri = $this->skylight_utilities->getBitstreamUri($bitstream);
+
             $pdfLink .= 'Click ' . $bitstreamLink . 'to download. (<span class="bitstream_size">' . getBitstreamSize($bitstream) . '</span>)';
         }
 
         ?>
     <?php
     }
+
 }
 ?>
 
 <div class="content">
-    <?php //if($mainImageTest === true) { ?>
+
+    <?php if($mainImageTest === true) { ?>
     <div class="full-title">
-        <?php //} ?>
+        <?php } ?>
         <h1 class="itemtitle"><?php echo $record_title ?>
             <?php if(isset($solr[$date_field])) {
                 echo " (" . $solr[$date_field][0] . ")";
@@ -199,91 +225,19 @@ if(isset($solr[$bitstream_field]) && $link_bitstream)
 
             ?>
         </div>
-        <?php //if($mainImageTest === true) { ?>
+        <?php if($mainImageTest === true) { ?>
     </div>
-<?php //if($mainImage) { ?>
+<?php if($mainImage) { ?>
+    <div class="full-image">
+        <?php echo $bitstreamLink; ?>
+    </div>
+<?php } ?>
+<?php } ?>
 
-        <?php //echo $bitstreamLink;
-        //if (isset($solr[$link_uri_field])) {
-        $numThumbnails = 0;
-        foreach ($solr[$link_uri_field] as $linkURI)
-        {
-            if (strpos($linkURI, 'luna') > 0)
-            {
-                //just for test, this line!
-                $tileSource = str_replace('images.is.ed.ac.uk', 'lac-luna-test2.is.ed.ac.uk:8181', $linkURI);
-                $tileSource = str_replace('detail', 'iiif', $tileSource) . '/info.json';
-                $iiifmax = str_replace('info.json', 'full/full/0/default.jpg', $tileSource);
-                //list($width, $height) = getimagesize($iiifmax);
-                //echo 'WIDTH'.$width.'HEIGHT'.$height;
-
-
-                if (!$mainImage)
-                {
-
-                    $mainImageTest = true;
-                ?>
-                    <div class="full-image">
-                        <div id="openseadragon1" style="width: 660px; height:660px;">
-                            <script type="text/javascript">
-                                OpenSeadragon({
-                                    id: "openseadragon1",
-                                    prefixUrl: "<?php echo base_url();?>assets/openseadragon/images/",
-                                    preserveViewport: true,
-                                    visibilityRatio: 1,
-                                    minZoomLevel: 1,
-                                    defaultZoomLevel: 1,
-                                    sequenceMode: true,
-                                    tileSources: "<?php echo $tileSource;?>"
-
-                                });
-                            </script>
-                        </div>
-                    </div>
-                <?php
-                    $mainImage = true;
-                    $iiifurlsmall = str_replace('info.json', '1300,500,500,500/250,250/0/default.jpg', $tileSource);
-                    $iiifurlfull = str_replace('info.json', 'full/!660,660/0/default.jpg', $tileSource);
-
-                    $thumbnailLink[$numThumbnails] = '<div class="thumbnail-tile';
-
-                    if ($numThumbnails % 4 === 0)
-                    {
-                        $thumbnailLink[$numThumbnails] .= ' first';
-                    }
-
-                    $thumbnailLink[$numThumbnails] .= '"><a title = "' . $record_title . '" class="fancybox" rel="group" href="' . $iiifurlfull . '"> ';
-                    $thumbnailLink[$numThumbnails] .= '<img src = "' . $iiifurlsmall . '" class="record-thumbnail" title="' . $record_title . '" /></a></div>';
-                }
-                else
-                {
-                    $iiifurlsmall = str_replace('info.json', '1300,500,500,500/250,250/0/default.jpg', $tileSource);
-                    $iiifurlfull = str_replace('info.json', 'full/!660,660/0/default.jpg', $tileSource);
-
-                    $thumbnailLink[$numThumbnails] = '<div class="thumbnail-tile';
-
-                    if ($numThumbnails % 4 === 0)
-                    {
-                        $thumbnailLink[$numThumbnails] .= ' first';
-                    }
-
-                    $thumbnailLink[$numThumbnails] .= '"><a title = "' . $record_title . '" class="fancybox" rel="group" href="' . $iiifurlfull . '"> ';
-                    $thumbnailLink[$numThumbnails] .= '<img src = "' . $iiifurlsmall . '" class="record-thumbnail" title="' . $record_title . '" /></a></div>';
-
-
-                }
-                $numThumbnails++;
-            }
-        //}
-        } ?>
-
-<?php// } ?>
-<?php //} ?>
-
-    <?php //if($mainImageTest === true) { ?>
+    <?php if($mainImageTest === true) { ?>
 
     <div class="full-metadata">
-        <?php// } ?>
+        <?php } ?>
         <table>
             <tbody>
             <?php $excludes = array(""); ?>
@@ -324,7 +278,7 @@ if(isset($solr[$bitstream_field]) && $link_bitstream)
             <?php
             $i = 0;
             $lunalink = false;
-            /*if (isset($solr[$link_uri_field])) {
+            if (isset($solr[$link_uri_field])) {
                 foreach($solr[$link_uri_field] as $linkURI) {
                     $linkURI = str_replace('"', '%22', $linkURI);
                     $linkURI = str_replace('|', '%7C', $linkURI);
@@ -347,12 +301,12 @@ if(isset($solr[$bitstream_field]) && $link_bitstream)
                 if($lunalink) {
                     echo '</td></tr>';
                 }
-            }*/?>
+            }?>
             </tbody>
         </table>
-        <?php //if($mainImageTest === true) { ?>
+        <?php if($mainImageTest === true) { ?>
     </div>
-<?php// } ?>
+<?php } ?>
     <div class="clearfix"></div>
     <!-- print out crowdsourced tags -->
     <?php
@@ -381,54 +335,56 @@ if(isset($solr[$bitstream_field]) && $link_bitstream)
     else {
 
     ?>
-        <div class="crowd-tags">
-            <div class="crowd-info">
-                <form id="libraylabs" method="get" action="http://librarylabs.ed.ac.uk/games/gameCrowdSourcing.php" target="_blank">
-                    <input type="hidden" name="image_id" value="<?php echo $image_id ?>">
-                    <input type="hidden" name="theme" value="art">
-                    Add tags to this image at <a href="#" onclick="document.forms[1].submit();return false;" title="University of Edinburgh, Library Labs Metadata Games">Library Labs Games</a>
-                    (Create a login at <a href="https://www.ease.ed.ac.uk/friend/" target="_blank" title="EASE Friend">Edinburgh Friend Account</a>)
-                </form>
-            </div>
+    <div class="crowd-tags">
+        <div class="crowd-info">
+            <form id="libraylabs" method="get" action="http://librarylabs.ed.ac.uk/games/gameCrowdSourcing.php" target="_blank">
+                <input type="hidden" name="image_id" value="<?php echo $image_id ?>">
+                <input type="hidden" name="theme" value="art">
+                Add tags to this image at <a href="#" onclick="document.forms[1].submit();return false;" title="University of Edinburgh, Library Labs Metadata Games">Library Labs Games</a>
+                (Create a login at <a href="https://www.ease.ed.ac.uk/friend/" target="_blank" title="EASE Friend">Edinburgh Friend Account</a>)
+            </form>
         </div>
+    </div>
 
 
     <?php
     }
 
-    $i = 0;
-    $newStrip = false;
-    if($numThumbnails > 0) {
+    if(isset($solr[$bitstream_field]) && $link_bitstream) {
 
-        echo '<div class="thumbnail-strip">';
-
-        foreach ($thumbnailLink as $thumb) {
-
-            if ($newStrip) {
-
-                echo '</div><div class="clearfix"></div>';
-                echo '<div class="thumbnail-strip">';
-                echo $thumb;
-                $newStrip = false;
-            } else {
-
-                echo $thumb;
-            }
-
-            $i++;
-
-            // if we're starting a new thumbnail strip
-            if ($i % 4 === 0) {
-                $newStrip = true;
-            }
-        }
-        echo '</div>';
-    }
-    echo '<div class="clearfix"></div>';
-
-    if(isset($solr[$bitstream_field]) && $link_bitstream)
-    {
         echo '<div class="record_bitstreams">';
+
+        $i = 0;
+        $newStrip = false;
+        if($numThumbnails > 0) {
+
+            echo '<div class="thumbnail-strip">';
+
+            foreach($thumbnailLink as $thumb) {
+
+                if($newStrip)
+                {
+
+                    echo '</div><div class="clearfix"></div>';
+                    echo '<div class="thumbnail-strip">';
+                    echo $thumb;
+                    $newStrip = false;
+                }
+                else {
+
+                    echo $thumb;
+                }
+
+                $i++;
+
+                // if we're starting a new thumbnail strip
+                if($i % 4 === 0) {
+                    $newStrip = true;
+                }
+            }
+
+            echo '</div><div class="clearfix"></div>';
+        }
 
         if($audioFile) {
 
@@ -440,12 +396,12 @@ if(isset($solr[$bitstream_field]) && $link_bitstream)
 
             echo '<br>.<br>'.$videoLink;
         }
-        echo '</div>';
+
         echo '</div><div class="clearfix"></div>';
 
     }
 
-
+    echo '</div>';
     ?>
 
     <input type="button" value="Back to Search Results" class="backbtn" onClick="history.go(-1);">
