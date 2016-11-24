@@ -1,0 +1,443 @@
+/** added for UoE */
+.carousel-container {
+    padding-right: 0;
+    padding-left: 0;
+    margin-right: -15px;
+    margin-left: -15px;
+    margin-top: -20px;
+    margin-bottom: -20px;
+}
+
+.footer {
+    padding: 0 15px 15px 15px;
+    background-color: #313131;
+    color: #ffffff;
+}
+
+.footer ul
+{
+    margin-top: 10px;
+    list-style-type: none;
+}
+
+.footer a{
+    color: #ffffff;
+    text-decoration: underline;
+}
+
+.footer a:hover{
+    color: #eeeeee;
+    text-decoration: underline;
+}
+
+.footer .nav { display: inline-block; }
+
+.footer .nav a:hover{
+    color: #ffffff;
+    background-color: #eeeeee;
+}
+
+.footer-margin {
+    height: 10px;
+}
+
+.results-item {
+    margin-bottom: 25px;
+}
+
+.result-info > .nav > li > span > i {
+    margin-top: 2px;
+    padding: 2px;
+    color: #dddddd;
+}
+
+.result-info > .nav > li > a{
+    margin-top: 2px;
+    padding: 2px;
+    text-align: center;
+}
+
+.result-info > .nav > li > a:hover {
+    background-color: #9FAB97;
+    color: #eeeeee;
+    text-decoration: none;
+}
+
+.col-xs-8 .record-title {
+    font-size: 15px;
+}
+
+.items-link {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.list-group-item.active a, .list-group-item.active:focus a, .list-group-item.active:hover a {
+    color: #FFF;
+}
+
+.list-group-item a {
+    word-wrap: break-word;
+}
+
+.list-group-item.active {
+    background-color: #9FAB97;
+    border-color: #9FAB97;
+}
+
+.list-group-item.active:hover {
+    background-color: #98767E;
+    color: #eeeeee;
+    border-color: #9FAB97;
+}
+
+.list-group-item.active:hover a{
+    color: #eeeeee;
+}
+
+.list-group-item.hover a{
+    color: #98767E;
+}
+
+a:focus, a:hover {
+    color: #98767E;
+    text-decoration: underline;
+}
+
+.main-image {
+    width: 100%;
+    height: 100%;
+    text-align: center;
+}
+
+div.resized-image {
+    text-align: center;
+    width: 100%;
+}
+
+img.record-main-image {
+    height: 700px;
+    width: 100%;
+}
+
+div.resized-image img.record-main-image {
+    height: 400px;
+    width: 100%;
+}
+
+div.related {
+    margin-top: 20px;
+}
+
+.related-title
+{
+    background-color: #333333;
+    color: #ffffff;
+    padding: 2px;
+}
+
+.page-header {
+    margin: 0 0 10px;
+}
+
+.wide {
+    width: 100%;
+}
+.wide a{
+    color: #ffffff;
+}
+
+.wide a:hover{
+    color: #9FAB97;
+    background-color: #eeeeee;
+}
+
+.content{
+    margin-top: 10px;
+}
+
+.bg-primary {
+    background-color: #9FAB97;
+}
+
+.btn-primary {
+    background-color: #9FAB97;
+    border-color: #eeeeee;
+}
+
+.btn-primary:hover {
+    background-color: #eeeeee;
+    color: #9FAB97;
+    border-color: #eeeeee;
+}
+.text-primary {
+    color: #9FAB97;
+}
+
+a {
+    color: #9FAB97;
+}
+
+.pagination > .active > span {
+    background-color: #9FAB97;
+    color: #ffffff;
+    border-color: #ffffff;
+}
+
+
+.pagination > .active > span.hover {
+    background-color: #98767E;
+    color: #ffffff;
+    border-color: #ffffff;
+}
+
+.pagination > li > a {
+    color: #9FAB97;
+}
+
+.record-tabs {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.feedback_form {
+    margin-bottom: -50px;
+}
+
+.feedback_form h1 {
+    font-size: 18px;
+    color: #9FAB97;
+}
+
+.feedback_form label {
+    display: block;
+    display: block;
+    width: 100px;
+}
+
+label, input[type="button"], input[type="submit"], input[type="image"], button {
+    cursor: pointer;
+}
+
+.feedback_form input[type="text"] {
+    border: 1px solid #bbbbbc;
+    border-radius: 5px;
+    font-size: 13px;
+    height: 28px;
+    padding: 0 10px;
+    width: 100%;
+}
+
+#feedback {
+    border: 1px solid #bbbbbc;
+    border-radius: 5px;
+    font-size: 13px;
+    padding: 0 10px;
+    width: 100%;
+}
+
+.form-inline .input-group {
+    display: inline-table;
+    vertical-align: middle;
+}
+
+input.btn {
+    background: #9FAB97 none repeat scroll 0 0;
+    border: medium none;
+    border-radius: 5px;
+    color: #fff;
+    font-size: 14px;
+    font-weight: bold;
+    height: 28px;
+    margin-left: 8px;
+    padding: 0 18px;
+    text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.3);
+    text-transform: uppercase;
+}
+
+div.spacer {
+    height: 20px;
+}
+
+.related-image {
+    width: 100%;
+    text-align: center;
+}
+
+.related-xs {
+    width: 100%;
+}
+
+.tab-content dl {
+    padding-top: 5px;
+}
+
+.tab-content dl dd {
+    padding: 5px 0;
+    border-bottom: 1px solid #eeeeee;
+}
+
+.tab-content dd:last-child {
+    padding-bottom: 0;
+    border: none;
+}
+
+.nav > li > i.fa-inactive {
+    display: block;
+    padding: 5px 5px;
+    position: relative;
+    color: #dddddd;
+}
+
+.navbar-form > button {
+    background-color: #666666;
+    color: #dddddd;
+}
+
+.navbar-right {
+    margin-top: 10px;
+}
+
+.sch-link a {
+    color: #660000;
+    font-family: "Baskerville, Baskerville Old Face, Hoefler Text, Garamond, Times New Roman, serif";
+    font-size: 24px;
+    font-style: normal;
+    font-variant: normal;
+    padding-top: 30px;
+    text-decoration: none;
+}
+
+.sch-link a:hover {
+    color: #666666;
+}
+
+#uoe-search {width:430px !important;}
+
+.record-tabs > ul > li > a > i.fa-inactive {
+    color: #dddddd;
+}
+.record-tabs > ul > li > a.inactive {
+    color: #dddddd;
+}
+
+
+.tags > li.active > a,
+.tags > li.active > a:focus,
+.tags > li.active > a:hover{
+    position: relative;
+    display: block;
+    padding: 5px 5px;
+    background: #eeeeee;
+    color: #9FAB97;
+}
+
+.tags > li.active > a:hover {
+    background: #9FAB97;
+    color: #ffffff;
+}
+
+@media (max-width: 768px) {
+    .nav-justified > li {
+        display: table-cell;
+        width: 1%;
+    }
+    .nav-justified > li > a  {
+        border-bottom: 1px solid #ddd !important;
+        border-radius: 4px 4px 0 0 !important;
+        margin-bottom: 0 !important;
+    }
+}
+
+.record_bitstreams
+{
+    padding-top: 2px;
+}
+
+/* ---- grid for related items---- */
+
+.grid {
+    background: #ffffff;
+}
+
+/* clear fix */
+.grid:after {
+    content: '';
+    display: block;
+    clear: both;
+}
+
+/* ---- .grid-item ---- */
+
+.grid-sizer,
+.grid-item {
+    width: 150px;
+}
+
+.grid-item {
+    float: left;
+}
+
+.grid-item img {
+    display: block;
+    width: 100%;
+}
+
+.thumbnail {
+    border:0;
+}
+
+.uoe_logo
+{
+    width: 89px;
+    height: 86px;
+}
+
+/*---stc- things for the new functionality---*/
+body{
+    font-family: 'Baskerville, Baskerville Old Face, Hoefler Text, Garamond, Times New Roman, serif';
+}
+h1{
+    font-size:48px;
+}
+
+h2{
+    font-size:36px;
+}
+h3{
+    font-size:24px;
+}
+
+.stc-resized-image{text-align:center;}
+.stc-img-responsive{margin:0 auto}
+
+#stc-section1 {padding-top:10px;padding-bottom:10px;max-height:1100px;color: #fff; background-color: #999999; width: 100%;}
+#stc-section2 {padding-top:10px;padding-bottom:10px;max-height:1100px;color: #000; background-color: #fff;	display:table-cell; vertical-align:middle; text-align:center;}
+#stc-section3 {padding-top:10px;padding-bottom:10px;max-height:1100px;color: #fff; background-color: #999999;}
+#stc-section4 {padding-top:10px;padding-bottom:10px;max-height:1100px;color: #000; background-color: #fff;}
+#stc-section5 {padding-top:10px;padding-bottom:10px;max-height:1100px;color: #fff; background-color: #999999;}
+#stc-section6 {padding-top:10px;padding-bottom:10px;max-height:1100px;color: #000; background-color: #fff;}
+
+.stc-tags                   { margin-top: 5px; margin: 0; display: inline;}
+.stc-tags a                 { font-size: 13px; color: #fff;background: #EB0955; -webkit-border-radius: 5px; -moz-border-radius: 5px; border-radius: 5px; padding: 2px 6px; line-height: 20px; margin-right: 8px; text-decoration: none; display:inline-block; }
+.stc-tags a.bold            { font-weight: bold; }
+.stc-tags a:hover           { background: #093563; color: #ffffff; }
+.stc-tags a.maker           { display:inline-block; line-height: 15px; margin-bottom: 5px; }
+
+.jcontainer {
+    width:100%;
+}
+.jcontainer div {
+    width:100%;
+}
+.jcontainer .jheader {
+    background-color:#000;
+    padding: 2px;
+    cursor: pointer;
+    font-weight: bold;
+}
+.jcontainer .jcontent {
+    display: none;
+    padding : 5px;
+}

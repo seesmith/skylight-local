@@ -55,6 +55,27 @@
     $("p.trigger").click(function(){
         $(this).toggleClass("active").next().slideToggle("normal");
     });</script>
+    <script type='text/javascript'>//<![CDATA[
+        $(window).load(function(){
+            $(".jheader").click(function () {
+
+                $jheader = $(this);
+                //getting the next element
+                $jcontent = $jheader.next();
+                //open up the content needed - toggle the slide- if visible, slide up, if not slidedown.
+                $jcontent.slideToggle(500, function () {
+                    //execute this after slideToggle is done
+                    //change text of header based on visibility of content div
+                    $jheader.text(function () {
+                        //change text based on condition
+                        return $jcontent.is(":visible") ? "Collapse" : "Expand";
+                    });
+                });
+
+            });
+        });//]]>
+
+    </script>
     <?php if ($ga_code != '') {?>
         <script src="http://www.google-analytics.com/analytics.js"></script>
 
@@ -79,7 +100,7 @@
                 analytics: "<?php echo $ga_code ?>"
             };
         </script>
-		
+
 
     <?php } ?>
 
