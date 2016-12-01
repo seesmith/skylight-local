@@ -6,12 +6,18 @@
     <div class="info-box">
         <h4>Search Tips</h4>
         <ul>
-            <li>Please note that courses may not run every year and so it is possible that search results may not include papers for each year</li>
-            <li>If searching by course code please be aware that a new code structure was introduced by the University in 2010/11 and so a search on code may produce incomplete results</li>
+            <!--<li>Please note that courses may not run every year and so it is possible that search results may not include papers for each year</li>
+            <li>If searching by course code please be aware that a new code structure was introduced by the University in 2010/11 and so a search on code may produce incomplete results</li>-->
+            <li>Typing in the course name or code will bring up suggestions for records already in the database.</li>
+            <li>If you cannot find the paper you are looking for from a title search try entering the course code. Course codes changed format in 2010/11 so results will be different before and after this time.</li>
+            <li>You can browse to the paper you are looking for by clicking the options on the right-hand side of the screen to narrow the results by School, subject, year and title.</li>
         </ul>
     </div>
     <div class="clearfix"></div>
     <hr />
+    <h4><a href="faqs">FAQs</a></h4>
+    <p>Frequently asked questions for students, and administrative and teaching staff.</p>
+    <hr/>
     <h4>Marking Guides and Sample Solutions</h4>
     <p>The Library does not hold any marking guides or sample solutions to exam papers. We suggest that you contact the course secretary or course organiser to check if these have been created for your course and how they have been made available.</p>
     <hr />
