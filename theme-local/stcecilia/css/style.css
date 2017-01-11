@@ -467,23 +467,30 @@ div.spacer {
     padding-top: 2px;
 }
 
-/* ---- grid for related items from isotope---- */
+/* ---- grid from masonry---- */
 
-/*.grid-item { width: 25%;}
-.grid-item--width2 { width: 50%; }*/
-/* ---- grid ---- */
-
-.grid {
-    border: 1px solid #333;
-    max-width: 1200px;
+.box {
+    display: flex;
+    flex-wrap: wrap; /* optional. only if you want the items to wrap */
+    justify-content: center; /* for horizontal alignment */
+    align-items: center; /* for vertical alignment */
 }
 
-/* clear fix */
-.grid:after {
-    content: '';
-    display: block;
-    clear: both;
+.grid-item {
+    margin-bottom: 10px;
 }
+
+.grid-item-content {
+    background: #eeeeee;
+    border: 2px solid #cecece;
+    border-radius: 5px;
+
+
+}
+
+.grid-item-content--height2 { height: 200px; }
+
+
 
 /* ---- .element-item ---- */
 
