@@ -1,4 +1,14 @@
 /** added for UoE */
+body
+{
+    font-family: Frutiger, ‘Frutiger Linotype’, Univers, Calibri, ‘Gill Sans’, ‘Gill Sans MT’, ‘Myriad Pro’, Myriad, ‘DejaVu Sans Condensed’, ‘Liberation Sans’, ‘Nimbus Sans L’, Tahoma, Geneva, ‘Helvetica Neue’, Helvetica, Arial, sans-serif;
+
+}
+
+.carousel-control.left, .carousel-control.right {
+    background-image: none
+}
+
 .carousel-container {
     padding-right: 0;
     padding-left: 0;
@@ -6,6 +16,73 @@
     margin-left: -15px;
     margin-top: -20px;
     margin-bottom: -20px;
+    height: 645px;
+    max-height: 645px;
+    overflow: hidden;
+}
+
+.carousel-caption {
+    position: absolute;
+    padding-bottom: 30px;
+    padding-left: 15px;
+    color: #660000;
+    padding-top: 20px;
+    text-align: left;
+    text-shadow: none;
+    /*text-transform: uppercase;*/
+    z-index: 10;
+    background-color: #FFF;
+    opacity: 0.80;
+    filter: alpha(opacity=80);
+    top: 20px;
+    left: 0;
+    width: 400px;
+    height: 100px;
+}
+
+.carousel-caption h3
+{
+    font-family: Baskerville, "Times New Roman", Times, serif;
+    font-size: 24px;
+    font-style: normal;
+    font-variant: normal;
+    margin-top: 1px;
+}
+
+.carousel-caption p
+{
+    font-family: Frutiger, ‘Frutiger Linotype’, Univers, Calibri, ‘Gill Sans’, ‘Gill Sans MT’, ‘Myriad Pro’, Myriad, ‘DejaVu Sans Condensed’, ‘Liberation Sans’, ‘Nimbus Sans L’, Tahoma, Geneva, ‘Helvetica Neue’, Helvetica, Arial, sans-serif;
+    font-size: 18px;
+    font-style: normal;
+    font-variant: normal;
+    margin-top: 1px;
+}
+
+.carousel-caption .btn
+{
+    font-family: Frutiger, ‘Frutiger Linotype’, Univers, Calibri, ‘Gill Sans’, ‘Gill Sans MT’, ‘Myriad Pro’, Myriad, ‘DejaVu Sans Condensed’, ‘Liberation Sans’, ‘Nimbus Sans L’, Tahoma, Geneva, ‘Helvetica Neue’, Helvetica, Arial, sans-serif;
+    font-size: 18px;
+    font-style: normal;
+    font-variant: normal;
+    background-color: #660000;
+    color: #ffffff;
+    margin-top: 20px;
+}
+
+.carousel-caption .btn a
+{
+    color: #FFFFFF;
+}
+
+.carousel-caption .btn:hover
+{
+    background-color: #ffffff;
+    color: #660000;
+}
+
+.carousel-caption .btn:hover a
+{
+    color: #660000;
 }
 
 .footer {
@@ -149,7 +226,7 @@ div.related {
 }
 
 .wide a:hover{
-    color: #9FAB97;
+    color: #660000;
     background-color: #eeeeee;
 }
 
@@ -158,17 +235,17 @@ div.related {
 }
 
 .bg-primary {
-    background-color: #9FAB97;
+    background-color: #660000;
 }
 
 .btn-primary {
-    background-color: #9FAB97;
+    background-color: #660000;
     border-color: #eeeeee;
 }
 
 .btn-primary:hover {
     background-color: #eeeeee;
-    color: #9FAB97;
+    color: #660000;
     border-color: #eeeeee;
 }
 .text-primary {
@@ -176,15 +253,14 @@ div.related {
 }
 
 a {
-    color: #9FAB97;
+    color: #660000;
 }
 
 .pagination > .active > span {
-    background-color: #9FAB97;
+    background-color: #660000;
     color: #ffffff;
     border-color: #ffffff;
 }
-
 
 .pagination > .active > span.hover {
     background-color: #98767E;
@@ -193,7 +269,7 @@ a {
 }
 
 .pagination > li > a {
-    color: #9FAB97;
+    color: #660000;
 }
 
 .record-tabs {
@@ -293,6 +369,13 @@ div.spacer {
 .navbar-form > button {
     background-color: #666666;
     color: #dddddd;
+    font-weight: bold;
+    letter-spacing: 0.05em;
+}
+
+.navbar-form > button:hover{
+    background-color: #dddddd;
+    color: #666666;
 }
 
 .navbar-right {
@@ -301,7 +384,7 @@ div.spacer {
 
 .sch-link a {
     color: #660000;
-    font-family: "Baskerville, Baskerville Old Face, Hoefler Text, Garamond, Times New Roman, serif";
+    font-family: Baskerville, "Times New Roman", Times, serif;
     font-size: 24px;
     font-style: normal;
     font-variant: normal;
@@ -309,11 +392,16 @@ div.spacer {
     text-decoration: none;
 }
 
+.sch-link-sm a{
+    font-size: 16px;
+}
+
 .sch-link a:hover {
     color: #666666;
 }
 
-#uoe-search {width:430px !important;}
+#uoe-search {width:350px}
+#uoe-search-sm {width:150px}
 
 .record-tabs > ul > li > a > i.fa-inactive {
     color: #dddddd;
@@ -330,11 +418,11 @@ div.spacer {
     display: block;
     padding: 5px 5px;
     background: #eeeeee;
-    color: #9FAB97;
+    color: #660000;
 }
 
 .tags > li.active > a:hover {
-    background: #9FAB97;
+    background: #660000;
     color: #ffffff;
 }
 

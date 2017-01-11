@@ -9,9 +9,6 @@
         $date_field = $this->skylight_utilities->getField('Date Made');
         $bitstream_field = $this->skylight_utilities->getField('Bitstream');
         $thumbnail_field = $this->skylight_utilities->getField('Thumbnail');
-
-
-
         $base_parameters = preg_replace("/[?&]sort_by=[_a-zA-Z+%20. ]+/","",$base_parameters);
         if($base_parameters == "") {
             $sort = '?sort_by=';
@@ -23,11 +20,23 @@
 
         <!--//todo add sort-->
     <div class="row">
-    <div class="col-md-9 col-lg-9 col-sm-9 col-xs-12">
+    <div class="col-xs-12">
     <div class="col-main">
         <div class="row">
-            <div class="col-md-9">
-                <h5 class="text-muted">Showing <?php echo $rows ?> results </h5>
+            <h5 class="text-muted">Found <?php echo $rows ?> instruments </h5>
+        </div>
+        <div class="row">
+            <div class="centered text-center">
+                <nav>
+                    <ul class="pagination pagination-sm pagination-xs">
+                        <?php
+                        foreach ($paginationlinks as $pagelink)
+                        {
+                            echo $pagelink;
+                        }
+                        ?>
+                    </ul>
+                </nav>
             </div>
         </div>
             <?php
@@ -116,14 +125,10 @@
                         {
                             $thumbnailLink = '<a href="./record/'. $doc['id'].'" title = "' . $doc[$title_field][0] . '"> ';
                             $thumbnailLink .= '<img class="img-responsive" src ="../theme/iconics/images/comingsoon.gif" title="'. $doc[$title_field][0] .'" /></a>';
-
                         }?>
                         <div class="row">
-                            <div class="col-md-3 col-lg-3 col-sm-3 col-xs-4 result-img">
                            <?php echo $thumbnailLink; ?>
-                        </div>
-                            <!--div class="col-sm-9 col-md-9 col-lg-9 hidden-xs result-info"-->
-                            <div class="col-xs-8 col-sm-9 col-md-9 col-lg-9 result-info">
+                            <div class="result-info">
                             <h4 class="record-title">
                                 <a href="./record/<?php echo $doc['id']?>?highlight=<?php echo $query ?>"><?php echo $doc[$title_field][0]; ?></a>
 
@@ -146,14 +151,13 @@
                                     <?php } ?>
 
                             <ul class="nav nav-pills">
-                                <li><a href="./record/<?php echo $doc['id']?>/#gallery" title="Image Gallery link"><i class="fa fa-image fa-fw fa-2x">&nbsp;</i></a></li>
                                 <?php if($videotab) { ?>
-                                    <li><a href="./record/<?php echo $doc['id']?>/#video" title="Videos link"><i class="fa fa-video-camera fa-fw fa-2x">&nbsp;</i></a></li>
+                                    <li><span><i class="fa fa-video-camera fa-fw fa-2x">&nbsp;</i></span></li>
                                 <?php } else { ?>
                                     <li><span><i class="fa fa-video-camera fa-2x fa-inactive">&nbsp;</i></span></li>
                                 <?php } ?>
                                 <?php if($audiotab) { ?>
-                                    <li><a href="./record/<?php echo $doc['id']?>/#audio" title="Audio link "><i class="fa fa-music fa-fw fa-2x">&nbsp;</i></a></li>
+                                    <li><span></span><i class="fa fa-music fa-fw fa-2x">&nbsp;</i></span></li>
                                 <?php } else { ?>
                                     <li><span><i class="fa fa-music fa-2x fa-inactive">&nbsp;</i></span></li>
                                 <?php } ?>
