@@ -55,6 +55,27 @@
     $("p.trigger").click(function(){
         $(this).toggleClass("active").next().slideToggle("normal");
     });</script>
+    <script type='text/javascript'>//<![CDATA[
+        $(window).load(function(){
+            $(".jheader").click(function () {
+
+                $jheader = $(this);
+                //getting the next element
+                $jcontent = $jheader.next();
+                //open up the content needed - toggle the slide- if visible, slide up, if not slidedown.
+                $jcontent.slideToggle(500, function () {
+                    //execute this after slideToggle is done
+                    //change text of header based on visibility of content div
+                    $jheader.text(function () {
+                        //change text based on condition
+                        return $jcontent.is(":visible") ? "Collapse" : "Expand";
+                    });
+                });
+
+            });
+        });//]]>
+
+    </script>
     <?php if ($ga_code != '') {?>
         <script src="http://www.google-analytics.com/analytics.js"></script>
 
@@ -79,7 +100,7 @@
                 analytics: "<?php echo $ga_code ?>"
             };
         </script>
-		
+
 
     <?php } ?>
 
@@ -104,24 +125,23 @@
 </head>
 
 <body>
-
     <nav class="navbar navbar-default">
         <div class="col-xs-12">
-            <div class="navbar-header">
-                <a class="navbar-brand navbar-left" href="http://www.ed.ac.uk" title="The University of Edinburgh Homepage Link" target="_blank"><img src="<?php echo base_url(); ?>theme/stcecilia/images/logo.png" class="img-responsive uoe_logo" alt="University of Edinburgh link" /></a>
-                <a class="navbar-brand navbar-left" href="http://www.ed.ac.uk" title="The St Cecilia's Hall Homepage Link" target="_blank">St Cecilia's Hall home page link</a>
-            </div>
             <div class="collapse navbar-collapse">
                 <!-- Collect the nav links, forms, and other content for toggling -->
-                    <form class="navbar-form navbar-right" role="search" action="./redirect/" method="post">
-                        <div class="form-group">
-                            <input id="uoe-search" type="text" class="form-control" placeholder="Search the collections" name="q" value="<?php if (isset($searchbox_query)) echo urldecode($searchbox_query); ?>" id="q" />
-                        </div>
-                        <button class="btn" type="submit">
-                            <i class="glyphicon glyphicon-search"></i>
-                        </button>
-                    </form>
-           </div>
+                <form class="navbar-form navbar-left" role="search" action="./redirect/" method="post">
+                    <div class="form-group">
+                        <input id="uoe-search" type="text" class="form-control" placeholder="Search the museum collections" name="q" value="<?php if (isset($searchbox_query)) echo urldecode($searchbox_query); ?>" id="q" />
+                    </div>
+                    <button class="btn" type="submit">
+                        <i class="glyphicon glyphicon-search"></i>
+                    </button>
+                </form>
+                <div class="navbar-right sch-link">
+                    <a href="http://stcecilias.ed.ac.uk" title="Visit the Museum">Visit the Museum</a>
+                </div>
+            </div>
+
         </div>
     </nav><!-- end of header container -->
 
