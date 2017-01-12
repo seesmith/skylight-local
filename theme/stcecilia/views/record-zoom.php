@@ -132,14 +132,37 @@ foreach($recorddisplay as $key)
 
 <div id="stc-section2" class="container-fluid">
     <div class="col-lg-12 hidden-md hidden-sm hidden-xs main-image">
-        <img class ="stc-img-responsive" src = "<?php
-        if ($portrait){
-            $iiifstatic = str_replace('info.json','full/,600/0/default.jpg',$tileSource);
-        }
-        else{
-            $iiifstatic = str_replace('info.json','full/1200,/0/default.jpg',$tileSource);
-        }
-        echo $iiifstatic;?>">
+        <div id="openseadragon1" style="width: 1140px; height:660px;">
+            <script type="text/javascript">
+                OpenSeadragon({
+                    id: "openseadragon1",
+                    prefixUrl: "<?php echo base_url() ?>assets/openseadragon/images/",
+                    tileSources: [{
+                        "@context": "<?php echo $jsoncontext ?>",
+                        "@id": "<?php echo $jsonid ?>",
+                        "height": <?php echo $jsonheight ?>,
+                        "width": <?php echo $jsonwidth ?>,
+                        "profile":  [ "http://iiif.io/api/image/2/level2.json" ,
+                            {
+                                "formats" : [ "gif", "pdf"]
+                            }
+                        ],
+                        "protocol": "<?php echo $jsonprotocol ?>",
+                        "tiles": [{
+                            "scaleFactors": [ 1, 2, 8, 16, 32 ],
+                            "width": 512
+                        }],
+                        tileSize: 500,
+                        //minLevel: 2,
+                        preserveViewport: true,
+                        visibilityRatio: 1,
+                        minZoomLevel: 1,
+                        defaultZoomLevel: 1,
+                        sequenceMode: true
+                    }]
+                });
+            </script>
+        </div>
     </div>
     <div class="col-md-9 hidden-lg hidden-sm hidden-xs resized-image">
         <img class ="stc-img-responsive" src = "<?php
