@@ -18,7 +18,12 @@
         }
     ?>
 
+
+
     <div class="container-fluid">
+        <div class="row searchFoundRow">
+            <span class="searchFound">Found: <?php echo $rows ?> instruments </span>
+        </div>
     <div class="grid">
         <div class="grid-sizer col-xs-4"></div>
         <?php
@@ -94,9 +99,9 @@
 
         <div class="grid-item col-xs-12 col-sm-6 col-sm-3 ">
             <div class="grid-item-content box">
-                <?php echo $thumbnailLink; ?><?php echo $doc[$title_field][0]; ?>
-                &nbsp;(<?php if(isset($doc[$date_field][0])) { echo $doc[$date_field][0];} else { echo 'Unknown';}?>)
-            </div>
+                <?php echo $thumbnailLink; ?>
+                <span class="searchTitle"><?php echo $doc[$title_field][0]; ?></span>
+             </div>
         </div>
 
     <?php }?>

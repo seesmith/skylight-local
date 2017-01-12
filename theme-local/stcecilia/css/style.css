@@ -129,9 +129,9 @@ body
     width:100%;
 }
 .tags                   { margin-top: 5px; margin: 0;}
-.tags a                 { font-size: 13px; color: #fff;background: #EB0955; -webkit-border-radius: 5px; -moz-border-radius: 5px; border-radius: 5px; padding: 2px 6px; line-height: 20px; margin-right: 8px; text-decoration: none;  }
+.tags a                 { font-size: 13px; color: #fff;background: #dddddd; -webkit-border-radius: 5px; -moz-border-radius: 5px; border-radius: 5px; padding: 2px 6px; line-height: 20px; margin-right: 8px; text-decoration: none;  }
 .tags a.bold            { font-weight: bold; }
-.tags a:hover           { background: #093563; color: #ffffff; }
+.tags a:hover           { background: #98767E; color: #ffffff; }
 .tags a.maker           { display:inline-block; line-height: 15px; margin-bottom: 5px; }
 
 .result-info > .nav > li > span > i {
@@ -147,7 +147,7 @@ body
 }
 
 .result-info > .nav > li > a:hover {
-    background-color: #9FAB97;
+    background-color: #98767E;
     color: #eeeeee;
     text-decoration: none;
 }
@@ -390,6 +390,12 @@ div.spacer {
     color: #dddddd;
 }
 
+.navbar{
+    background-color: #111111;
+    border-radius: 0;
+    color: rgb(153, 153, 153);
+}
+
 .navbar-form > button {
     background-color: #666666;
     color: #dddddd;
@@ -407,12 +413,13 @@ div.spacer {
 }
 
 .sch-link a {
-    color: #660000;
-    font-family: Baskerville, "Times New Roman", Times, serif;
+    color: rgb(153, 153, 153);
+    font-family: 'Hind', sans-serif;
     font-size: 24px;
     font-style: normal;
     font-variant: normal;
     padding-top: 30px;
+    padding-right: 30px;
     text-decoration: none;
 }
 
@@ -424,8 +431,13 @@ div.spacer {
     color: #666666;
 }
 
-#uoe-search {width:350px}
-#uoe-search-sm {width:150px}
+#uoe-search     {
+    width:  350px;
+    font-size: 18px;}
+
+#uoe-search-sm  {
+    width:150px;
+    font-size: 14px;}
 
 .record-tabs > ul > li > a > i.fa-inactive {
     color: #dddddd;
@@ -467,7 +479,7 @@ div.spacer {
     padding-top: 2px;
 }
 
-/* ---- grid from masonry---- */
+/* ---- grid from masonry for search results ---- */
 
 .box {
     display: flex;
@@ -481,17 +493,28 @@ div.spacer {
 }
 
 .grid-item-content {
-    background: #eeeeee;
-    border: 2px solid #cecece;
-    border-radius: 5px;
-
-
+    /*background: #eeeeee;
+    border: 2px solid #cecece;*/
+    border-radius: 1px;
+    padding: 2px;
+    text-align: center;
 }
 
-.grid-item-content--height2 { height: 200px; }
+.searchTitle{
+    font-size: 20px;
+}
 
+.searchFoundRow {
+    margin-bottom: 10px;
+}
 
-
+.searchFound {
+    font-size: 20px;
+    border: solid 2px rgb(153, 153, 153);
+    color: #660000;
+    padding: 5px;
+    border-radius: 5px;
+}
 /* ---- .element-item ---- */
 
 .element-item {
