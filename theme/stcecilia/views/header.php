@@ -38,6 +38,7 @@
     <link rel="stylesheet" href="http://releases.flowplayer.org/6.0.4/skin/minimalist.css">
     <link rel="stylesheet" href="<?php echo base_url()?>assets/font-awesome/css/font-awesome.min.css">
     <link rel="stylesheet" href="<?php echo base_url(); ?>theme/<?php echo $this->config->item('skylight_theme'); ?>/css/style.css?v=2">
+    <link href="https://fonts.googleapis.com/css?family=Hind" rel="stylesheet">
 
     <!-- All JavaScript at the bottom, except for Modernizr which enables HTML5 elements & feature detects -->
     <script src="<?php echo base_url()?>assets/modernizr/modernizr-1.7.min.js"></script>
@@ -125,7 +126,7 @@
 </head>
 
 <body>
-    <nav class="navbar navbar-default">
+    <nav class="navbar navbar-default navbar-fixed-top">
         <div class="hidden-lg hidden-md col-sm-8 col-xs-8">
         <!-- Collect the nav links, forms, and other content for toggling -->
             <form class="navbar-form navbar-left" role="search" action="./redirect/" method="post">

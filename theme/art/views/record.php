@@ -214,9 +214,25 @@ if(isset($solr[$bitstream_field]) && $link_bitstream)
                 $tileSource = str_replace('images.is.ed.ac.uk', 'lac-luna-test2.is.ed.ac.uk:8181', $linkURI);
                 $tileSource = str_replace('detail', 'iiif', $tileSource) . '/info.json';
                 $iiifmax = str_replace('info.json', 'full/full/0/default.jpg', $tileSource);
-                //list($width, $height) = getimagesize($iiifmax);
-                //echo 'WIDTH'.$width.'HEIGHT'.$height;
+                list($width, $height) = getimagesize($iiifmax);
+                //echo 'WIDTH'.$width.'HEIGHT'.$height
+                $portrait = true;
+                if ($width > $height)
+                {
+                    $portrait = false;
+                }
+                $json =  file_get_contents($tileSource);
+                $jobj = json_decode($json, true);
 
+                $error = json_last_error();
+
+                $jsoncontext = $jobj['@context'];
+                $jsonid = $jobj['@id'];
+                $jsonheight = $jobj['height'];
+                $jsonwidth = $jobj['width'];
+                $jsonprotocol = $jobj['protocol'];
+                $jsontiles = $jobj['tiles'];
+                $jsonprofile = $jobj['profile'];
 
                 if (!$mainImage)
                 {
@@ -229,20 +245,43 @@ if(isset($solr[$bitstream_field]) && $link_bitstream)
                                 OpenSeadragon({
                                     id: "openseadragon1",
                                     prefixUrl: "<?php echo base_url();?>assets/openseadragon/images/",
-                                    preserveViewport: true,
-                                    visibilityRatio: 1,
-                                    minZoomLevel: 1,
-                                    defaultZoomLevel: 1,
-                                    sequenceMode: true,
-                                    tileSources: "<?php echo $tileSource;?>"
-
+                                    tileSources: [{
+                                        "@context": "<?php echo $jsoncontext ?>",
+                                        "@id": "<?php echo $jsonid ?>",
+                                        "height": <?php echo $jsonheight ?>,
+                                        "width": <?php echo $jsonwidth ?>,
+                                        "profile":  [ "http://iiif.io/api/image/2/level2.json" ,
+                                            {
+                                                "formats" : [ "gif", "pdf"]
+                                            }
+                                        ],
+                                        "protocol": "<?php echo $jsonprotocol ?>",
+                                        "tiles": [{
+                                            "scaleFactors": [ 1, 2, 8, 16, 32 ],
+                                            "width": 512
+                                        }],
+                                        tileSize: 500,
+                                        //minLevel: 2,
+                                        preserveViewport: true,
+                                        visibilityRatio: 1,
+                                        minZoomLevel: 1,
+                                        defaultZoomLevel: 1,
+                                        sequenceMode: true
+                                    }]
                                 });
                             </script>
                         </div>
                     </div>
                 <?php
                     $mainImage = true;
-                    $iiifurlsmall = str_replace('info.json', '1300,500,500,500/250,250/0/default.jpg', $tileSource);
+                    if ($portrait)
+                    {
+                        $iiifurlsmall = str_replace('info.json', 'full/,250/0/default.jpg', $tileSource);
+                    }
+                    else
+                    {
+                        $iiifurlsmall = str_replace('info.json', 'full/250,/0/default.jpg', $tileSource);
+                    }
                     $iiifurlfull = str_replace('info.json', 'full/!660,660/0/default.jpg', $tileSource);
 
                     $thumbnailLink[$numThumbnails] = '<div class="thumbnail-tile';
@@ -257,7 +296,15 @@ if(isset($solr[$bitstream_field]) && $link_bitstream)
                 }
                 else
                 {
-                    $iiifurlsmall = str_replace('info.json', '1300,500,500,500/250,250/0/default.jpg', $tileSource);
+                    if ($portrait)
+                    {
+                        $iiifurlsmall = str_replace('info.json', 'full/,250/0/default.jpg', $tileSource);
+                    }
+                    else
+                    {
+                        $iiifurlsmall = str_replace('info.json', 'full/250,/0/default.jpg', $tileSource);
+                    }
+
                     $iiifurlfull = str_replace('info.json', 'full/!660,660/0/default.jpg', $tileSource);
 
                     $thumbnailLink[$numThumbnails] = '<div class="thumbnail-tile';
