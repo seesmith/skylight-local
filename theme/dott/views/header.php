@@ -105,8 +105,10 @@
                     <ul class="nav navbar-nav">
                         <li><a href="./" title="Medical Case Notes Home Link">Home</a></li>
                         <li><a href="./about" title="About Link">About</a></li>
-                        <li><a href="./history" title="History Link">History</a></li><li><a href="./catalogues" title="Catalogues Link">Catalogues</a></li>
+                        <li><a href="./history" title="History Link">History</a></li>
+                        <li><a href="./catalogues" title="Catalogues Link">Catalogues</a></li>
                         <li><a href="./people" title="People Link">People</a></li>
+                        <li><a href="./achievements" title="Achievements Link">Achievements</a></li>
                         <li><a href="http://lhsa.blogspot.co.uk/" title="LHSA Blog Link" target="_blank">Blog</a></li>
                         <li><a href="./feedback" title="Feedback Form">Feedback</a></li>
                     </ul>
@@ -116,24 +118,23 @@
         <header>
             <div class="container">
 
-                    <div class="header-normal">
-                        <div id="collection-title">Medical Records Revived:
-                            <div id="collection-sub-title">Case Note Catalogues at <br />Lothian Health Services Archive</div>
-                        </div>
+                <div class="header-normal">
+                    <div id="collection-title">Medical Records Revived:
+                        <div id="collection-sub-title">Case Note Catalogues at <br />Lothian Health Services Archive</div>
+                    </div>
 
-                        <div id="collection-search">
+                    <div id="collection-search">
                         <form action="./redirect/" method="post" class="navbar-form">
                             <div class="input-group search-box">
                                 <input type="text" class="form-control" placeholder="Search" name="q" value="<?php if (isset($searchbox_query)) echo urldecode($searchbox_query); ?>" id="q" />
-                                            <span class="input-group-btn">
-                                                <button type="submit" class="btn btn-default" name="submit_search" value="Search" id="submit_search"><i class="glyphicon glyphicon-search"></i></button>
-                                            </span>
+                                <span class="input-group-btn">
+                                    <button type="submit" class="btn btn-default" name="submit_search" value="Search" id="submit_search"><i class="glyphicon glyphicon-search"></i></button>
+                                </span>
                             </div>
                         </form>
-                        </div>
                     </div>
-
+                </div>
             </div>
         </header>
 
-            <div class="container content">
+        <div class="container content">

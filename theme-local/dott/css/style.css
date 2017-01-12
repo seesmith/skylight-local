@@ -249,6 +249,15 @@ footer                          { padding-top: 10px; padding-bottom: 10px;}
     margin-right: 30px;
 }
 
+/** images in text */
+.gap-right {
+    margin-right: 10px;
+}
+
+.gap-left {
+    margin-left: 10px;
+}
+
 /* Custom Containers & Subclasses ----------------------------------------------------------------------------------------*/
 
 .tags					            { margin-top: 5px;  }
