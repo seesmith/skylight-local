@@ -1,7 +1,10 @@
+
 /** added for UoE */
+
 body
 {
-    font-family: Frutiger, ‘Frutiger Linotype’, Univers, Calibri, ‘Gill Sans’, ‘Gill Sans MT’, ‘Myriad Pro’, Myriad, ‘DejaVu Sans Condensed’, ‘Liberation Sans’, ‘Nimbus Sans L’, Tahoma, Geneva, ‘Helvetica Neue’, Helvetica, Arial, sans-serif;
+    font-family: 'Hind', Frutiger, ‘Frutiger Linotype’, Univers, Calibri, ‘Gill Sans’, ‘Gill Sans MT’, ‘Myriad Pro’, Myriad, ‘DejaVu Sans Condensed’, ‘Liberation Sans’, ‘Nimbus Sans L’, Tahoma, Geneva, ‘Helvetica Neue’, Helvetica, Arial, sans-serif;
+
 }
 
 .carousel-control.left, .carousel-control.right {
@@ -41,7 +44,7 @@ body
 
 .carousel-caption h3
 {
-    font-family: Baskerville, "Times New Roman", Times, serif;
+    font-family: 'Hind', Univers, "Times New Roman", Times, serif;
     font-size: 24px;
     font-style: normal;
     font-variant: normal;
@@ -50,7 +53,7 @@ body
 
 .carousel-caption p
 {
-    font-family: Frutiger, ‘Frutiger Linotype’, Univers, Calibri, ‘Gill Sans’, ‘Gill Sans MT’, ‘Myriad Pro’, Myriad, ‘DejaVu Sans Condensed’, ‘Liberation Sans’, ‘Nimbus Sans L’, Tahoma, Geneva, ‘Helvetica Neue’, Helvetica, Arial, sans-serif;
+    font-family: 'Hind', Frutiger, ‘Frutiger Linotype’, Univers, Calibri, ‘Gill Sans’, ‘Gill Sans MT’, ‘Myriad Pro’, Myriad, ‘DejaVu Sans Condensed’, ‘Liberation Sans’, ‘Nimbus Sans L’, Tahoma, Geneva, ‘Helvetica Neue’, Helvetica, Arial, sans-serif;
     font-size: 18px;
     font-style: normal;
     font-variant: normal;
@@ -113,10 +116,6 @@ body
     background-color: #eeeeee;
 }
 
-.footer {
-    padding: 0 15px 15px 15px;
-}
-
 .footer-margin {
     height: 10px;
 }
@@ -124,15 +123,6 @@ body
 .results-item {
     margin-bottom: 25px;
 }
-
-.alltags{
-    width:100%;
-}
-.tags                   { margin-top: 5px; margin: 0;}
-.tags a                 { font-size: 13px; color: #fff;background: #dddddd; -webkit-border-radius: 5px; -moz-border-radius: 5px; border-radius: 5px; padding: 2px 6px; line-height: 20px; margin-right: 8px; text-decoration: none;  }
-.tags a.bold            { font-weight: bold; }
-.tags a:hover           { background: #98767E; color: #ffffff; }
-.tags a.maker           { display:inline-block; line-height: 15px; margin-bottom: 5px; }
 
 .result-info > .nav > li > span > i {
     margin-top: 2px;
@@ -147,7 +137,7 @@ body
 }
 
 .result-info > .nav > li > a:hover {
-    background-color: #98767E;
+    background-color: #9FAB97;
     color: #eeeeee;
     text-decoration: none;
 }
@@ -198,6 +188,8 @@ a:focus, a:hover {
     width: 100%;
     height: 100%;
     text-align: center;
+    bgcolor: #000000;
+
 }
 
 div.resized-image {
@@ -205,27 +197,18 @@ div.resized-image {
     width: 100%;
 }
 
-img.record-main-image-portrait {
-    max-height:450px;
+img.record-main-image {
+    height: 700px;
+    width: 100%;
 }
 
 img.record-main-image-landscape {
-    width: 100px;
+    width: 100%px;
 }
 
 div.resized-image img.record-main-image {
-   height: 400px;
-   width: 100%;
-}
-
-div.image-canvas{
-    height:500px;
-    width:768px;
-}
-
-div.resized-image-canvas{
-    height:339px;
-    width:339px;
+    height: 400px;
+    width: 100%;
 }
 
 div.related {
@@ -256,7 +239,8 @@ div.related {
 }
 
 .content{
-    margin-top: 10px;
+    width:100%;
+    padding:0;
 }
 
 .bg-primary {
@@ -515,6 +499,16 @@ div.spacer {
     padding: 5px;
     border-radius: 5px;
 }
+
+.thumbnail {
+    border:0;
+}
+
+.uoe_logo
+{
+    width: 89px;
+    height: 86px;
+}
 /* ---- .element-item ---- */
 
 .element-item {
@@ -526,7 +520,6 @@ div.spacer {
     background: #888;
     color: #262524;
 }
-
 .element-item > * {
     margin: 0;
     padding: 0;
@@ -572,4 +565,47 @@ div.spacer {
 {
     width: 89px;
     height: 86px;
+}
+
+.stc-resized-image{text-align:center;}
+.stc-img-responsive{
+    margin: auto;
+    position: relative;
+    text-align:center;
+}
+
+#stc-section1 {padding-top:110px;padding-bottom:10px;max-height:1100px;color: #fff; background-color: #999999; width: 100%;}
+#stc-section2 {padding-top:10px;padding-bottom:10px;max-height:1100px;color: #fff; background-color:#000000;width:100%;}
+#stc-section3 {padding-top:10px;padding-bottom:10px;max-height:1100px;color: #fff; background-color: #999999;}
+#stc-section4 {padding-top:10px;padding-bottom:10px;max-height:1100px;color: #000; background-color: #fff;}
+#stc-section5 {padding-top:10px;padding-bottom:10px;max-height:1100px;color: #fff; background-color: #999999;}
+#stc-section6 {padding-top:10px;padding-bottom:10px;max-height:1100px;color: #000; background-color: #fff;}
+
+.stc-tags                   { margin-top: 5px; margin: 0; display: inline;}
+.stc-tags a                 { font-size: 13px; color: #fff;background: #EB0955; -webkit-border-radius: 5px; -moz-border-radius: 5px; border-radius: 5px; padding: 2px 6px; line-height: 20px; margin-right: 8px; text-decoration: none; display:inline-block; }
+.stc-tags a.bold            { font-weight: bold; }
+.stc-tags a:hover           { background: #093563; color: #ffffff; }
+.stc-tags a.maker           { display:inline-block; line-height: 15px; margin-bottom: 5px; }
+
+.jcontainer {
+    width:100%;
+}
+.jcontainer div {
+    width:100%;
+}
+.jcontainer .jheader {
+    background-color:#000;
+    padding: 2px;
+    cursor: pointer;
+    font-weight: bold;
+}
+.jcontainer .jcontent {
+    display: none;
+    padding : 5px;
+}
+.second-navbar{
+    margin-bottom: 0px;
+    top:50px;
+    background-color:#cdcdcd;
+    border:none;
 }

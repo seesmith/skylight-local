@@ -38,6 +38,7 @@
     <link rel="stylesheet" href="http://releases.flowplayer.org/6.0.4/skin/minimalist.css">
     <link rel="stylesheet" href="<?php echo base_url()?>assets/font-awesome/css/font-awesome.min.css">
     <link rel="stylesheet" href="<?php echo base_url(); ?>theme/<?php echo $this->config->item('skylight_theme'); ?>/css/style.css?v=2">
+    <link href="https://fonts.googleapis.com/css?family=Hind" rel="stylesheet">
 
     <!-- All JavaScript at the bottom, except for Modernizr which enables HTML5 elements & feature detects -->
     <script src="<?php echo base_url()?>assets/modernizr/modernizr-1.7.min.js"></script>
@@ -50,13 +51,35 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.7/leaflet.js"></script>
     <script src="https://cdn.rawgit.com/mejackreed/Leaflet-IIIF/master/leaflet-iiif.js"></script>
     <script src="<?php echo base_url()?>assets/openseadragon/openseadragon.min.js"></script>
-		<script>
+    <script>
 		$(".toggle_container").hide();
     
     $("p.trigger").click(function(){
         $(this).toggleClass("active").next().slideToggle("normal");
     });
-        </script>
+    </script>
+    
+    <script type='text/javascript'>//<![CDATA[
+        $(window).load(function(){
+            $(".jheader").click(function () {
+
+                $jheader = $(this);
+                //getting the next element
+                $jcontent = $jheader.next();
+                //open up the content needed - toggle the slide- if visible, slide up, if not slidedown.
+                $jcontent.slideToggle(500, function () {
+                    //execute this after slideToggle is done
+                    //change text of header based on visibility of content div
+                    $jheader.text(function () {
+                        //change text based on condition
+                        return $jcontent.is(":visible") ? "Collapse" : "Expand";
+                    });
+                });
+
+            });
+        });//]]>
+
+    </script>
     <?php if ($ga_code != '') {?>
         <script src="http://www.google-analytics.com/analytics.js"></script>
 
@@ -106,7 +129,7 @@
 </head>
 
 <body>
-    <nav class="navbar navbar-default">
+    <nav class="navbar navbar-default navbar-fixed-top">
         <div class="hidden-lg hidden-md col-sm-8 col-xs-8">
         <!-- Collect the nav links, forms, and other content for toggling -->
             <form class="navbar-form navbar-left" role="search" action="./redirect/" method="post">
