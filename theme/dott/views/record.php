@@ -18,17 +18,18 @@ $numThumbnails = 0;
 $bitstreamLinks = array();
 ?>
 
-<div class="content">
-
-    <div class="full-title">
+<div class="col-md-9 col-sm-9 col-xs-12" xmlns="http://www.w3.org/1999/html">
+    <div class="row">
         <h1 class="itemtitle"><?php echo $record_title ?></h1>
     </div>
 
-
-
-    <a href ="<?php echo $link_uri_prefix ?><?php echo $solr[$id][0] ?>" title="Full record at archive collections online " target="_blank">View full record in University of Edinburgh archives catalogue</a>
-    <div class="full-metadata">
-        <table>
+    <div class="row">
+    <button class="btn btn-info"><a href ="<?php echo $link_uri_prefix ?><?php echo $solr[$id][0] ?>"
+                                    title="Full record at archive collections online " target="_blank">
+            View full record in University of Edinburgh archives catalogue <span class="glyphicon glyphicon-new-window" aria-hidden="true"></span></a></button>
+    </div>
+    <div class="row full-metadata">
+        <table class="table">
             <tbody>
             <?php $excludes = array("");
 
@@ -72,8 +73,7 @@ $bitstreamLinks = array();
             </tbody>
         </table>
     </div>
-    <div class="clearfix"></div>
-
-
-    <input type="button" value="Back to Search Results" class="backbtn" onClick="history.go(-1);">
+    <div class="row">
+        <button class="btn btn-info" onClick="history.go(-1);"><span class="glyphicon glyphicon-menu-left" aria-hidden="true"></span>Back to Search Results</button>
+    </div>
 </div>

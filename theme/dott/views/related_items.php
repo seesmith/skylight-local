@@ -1,9 +1,10 @@
-    <h4>Related Items</h4>
+<div class="col-md-3 col-sm-3 hidden-xs" >
 
-    <ul class="related">
+    <div class="sidebar-nav related-items">
+        <ul class="list-group">
+            <li class="list-group-item active">Related Items</li>
 
-       
-    <?php
+        <?php
 
         // if there are related items
         if(count($related_items) > 0) {
@@ -12,16 +13,8 @@
             $id_field = $this->skylight_utilities->getField('Identifier');
 
             foreach ($related_items as $index => $doc) {
-
-                $type = 'Unknown';
-
-                if(isset($doc[$type_field])) {
-                    $type = "media-" . strtolower(str_replace(' ','-',$doc[$type_field][0]));
-                }
-
-                ?>
-
-                <li<?php if($index == 0) { echo ' class="first"'; } elseif($index == sizeof($related_items) - 1) { echo ' class="last"'; } ?>>
+            ?>
+                <li class="list-group-item">
                     <a class="related-record" href="./record/<?php echo $doc['id']?>/<?php echo $doc['types'][0]?>"><?php echo $doc[$title_field][0]; ?></a>
                     <?php
                     if (isset($doc["component_id"])) {
@@ -36,7 +29,9 @@
         // else there aren't any related items
         else { ?>
 
-            <li>None.</li>
+            <li class="list-group-item">None.</li>
 
         <?php }?>
     </ul>
+</div>
+</div>

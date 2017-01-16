@@ -1,26 +1,40 @@
-<div class="content">
+<div class="col-md-9 col-sm-9 col-xs-12">
     <div class="content byEditor">
-        <h1>People</h1>
-        <p>These are the individuals whose papers feature as part of the projects. Click on the image to find out more.</p>
+        <h1 class="itemtitle">Norman Dott</h1>
+        <img src="<?php echo base_url()?>/theme/dott/images/LHB1CC24-PR1-1536d.gif" alt="Royal Infirmary of Edinburgh" class="img-responsive pull-right img-circle" />
 
-        <div id="tile-block">
-            <a href="http://archives.collections.ed.ac.uk/agents/1331?agent_type=agent_person" target=_blank" title="Charlotte Auerbach"><div id="tile-1" class="people-tile"></div></a>
-            <a href="http://archives.collections.ed.ac.uk/agents/9840?agent_type=agent_person" title="Geoffrey Beale" target=_blank><div id="tile-2" class="people-tile"></div></a>
-            <a href="http://archives.collections.ed.ac.uk/agents/3747?agent_type=agent_person" title="Richard Alan Beatty" target=_blank"><div id="tile-3" class="people-tile"></div></a>
-            <a href="http://archives.collections.ed.ac.uk/agents/4243?agent_type=agent_person" title="Grahame Bulfield" target=_blank"><div id="tile-4" class="people-tile"></div></a>
-            <a href="http://archives.collections.ed.ac.uk/agents/13778?agent_type=agent_person" title="F.A.E. Crew" target=_blank"><div id="tile-5" class="people-tile"></div></a>
-            <a href="http://archives.collections.ed.ac.uk/agents/11946?agent_type=agent_person" title="James Cossar Ewart" target=_blank"><div id="tile-6" class="people-tile"></div></a>
-            <a href="http://archives.collections.ed.ac.uk/agents/591?agent_type=agent_person" title="Douglas Falconer" target=_blank"><div id="tile-7" class="people-tile"></div></a>
-            <a href="http://archives.collections.ed.ac.uk/agents/11979?agent_type=agent_person" title="Alan Greenwood " target=_blank"><div id="tile-8" class="people-tile"></div></a>
-            <a href="http://archives.collections.ed.ac.uk/agents/4426?agent_type=agent_person" title="Eric Lucey" target=_blank"><div id="tile-9" class="people-tile"></div></a>
-            <a href="http://archives.collections.ed.ac.uk/agents/5181?agent_type=agent_person" title="Ian Mason" target=_blank"><div id="tile-10" class="people-tile"></div></a>
-            <a href="http://archives.collections.ed.ac.uk/agents/3716?agent_type=agent_person" title="Michael L. Ryder" target=_blank"><div id="tile-11" class="people-tile"></div></a>
-            <a href="http://archives.collections.ed.ac.uk/agents/4420?agent_type=agent_person" title="James H. Sang" target=_blank"><div id="tile-12" class="people-tile"></div></a>
-            <a href="http://archives.collections.ed.ac.uk/agents/6156?agent_type=agent_person" title="Yolanda Sonnabend" target=_blank"><div id="tile-16" class="people-tile"></div></a>
-            <a href="http://archives.collections.ed.ac.uk/agents/3682?agent_type=agent_person" title="Gerald Wiener" target=_blank"><div id="tile-13" class="people-tile"></div></a>
-            <a href="http://archives.collections.ed.ac.uk/agents/219?agent_type=agent_person" title="C.H. Waddington" target=_blank"><div id="tile-14" class="people-tile"></div></a>
-            <a href="http://archives.collections.ed.ac.uk/agents/3951?agent_type=agent_person" title="Ian Wilmut" target=_blank"><div id="tile-15" class="people-tile"></div></a>
+        <p>Dott was born in Edinburgh in 1897 to art dealer Peter McOmish Dott and his wife, Rebecca, and was the
+            third of five children. Norman showed considerable flair for design and engineering and was apprenticed to
+            the local engineering firm of McTaggart Scott & Co after he left George Heriot’s School. However, a
+            motorcycle accident in Lothian Road in 1913 led to a leg injury and a spell in the Royal Infirmary of
+            Edinburgh. Although the injury was to affect him for the rest of his life, Dott became fascinated by hospital
+            life and entered the University of Edinburgh to study medicine, where he graduated M.D Ch.B. in 1919.</p>
 
-        </div>
+        <p>Following Edinburgh-based surgical appointments, teaching and research, Dott was awarded a Rockefeller
+        Travelling Fellowship in 1923, spending a year with American neurosurgery pioneer Professor Harvey Williams
+        Cushing (1869-1939) in Boston. In the same year (1923), he was made a Fellow of the Royal College of Surgeons
+        of Edinburgh. The next stage in Dott’s career saw him become Honorary Surgeon at the Royal Hospital for Sick
+        Children whilst at the same time working in private practice as a neurosurgeon. Dott used a nursing home in
+        Edinburgh’s New Town for neurosurgery on private patients, to which he and his team had to transport their
+        instruments by taxi or private car!</p>
+
+        <img src="<?php echo base_url()?>/theme/dott/images/LHB1CC24-PR1-1717d.gif" alt="Royal Infirmary of Edinburgh" class="img-responsive pull-left gap-right img-rounded" />
+
+
+        <p>Dott worked throughout his life for neurosurgery to be recognised and funded as a medical specialism in
+        Scotland. Finally, 1938 saw the first patients enter Scotland’s first dedicated neurosurgical ward, the Department
+        of Surgical Neurology in Ward 20 of the Royal Infirmary of Edinburgh, where Dott had been given limited bed-space
+        and theatre time since 1931. During the Second World War, Dott set up the Brain Injuries Unit in Bangour General
+        (Emergency Medical Service) Hospital in Broxburn, West Lothian. Working with two neurology teams to treat both
+        civilian and service casualties, he was awarded a C.B.E for this work in 1948.</p>
+
+        <p>Never giving up on his ambitions to obtain world-class ward, theatre and rehabilitation facilities for
+        neurosurgery, Dott helped to establish the Department of Surgical Neurology at the Western General Hospital in
+        1960, taking a leading role in the design of operating theatres, notably including a reflector vaulted roof that
+        avoided shadow falling on patient and surgeon. Dott spent only a brief time in the Western General Hospital
+        before he retired in 1963. In the previous year, he was honoured as a Freeman of the City of Edinburgh and was
+        made Emeritus Professor at the University of Edinburgh. He died in the city in December 1973 survived by his
+        wife, Peggy, and only daughter, Jean.</p>
+
     </div>
 </div>

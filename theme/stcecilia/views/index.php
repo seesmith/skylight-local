@@ -18,7 +18,7 @@
                     <h3>Gallery One</h3>
                     <p>Lifting the lid on keyboard instruments</p>
                     <button class="btn">
-                    <a href="./search_results.php" title="Gallery One Items">View Gallery One</a>
+                    <a href="search_results.php" title="Gallery One Items">View Gallery One</a>
                     </button>
                 </div>
             </div>
@@ -29,7 +29,7 @@
                     <h3>Gallery Two</h3>
                     <p>Keyboards changing roles in society</p>
                     <button class="btn">
-                    <a href="./search_results.php" title="Gallery One Items">Explore Gallery Two</a>
+                    <a href="search_results.php" title="Gallery One Items">Explore Gallery Two</a>
                     </button>
                 </div>
             </div>
@@ -40,7 +40,7 @@
                     <h3>Gallery Three</h3>
                     <p>Creation and development of musical instruments</p>
                     <button class="btn">
-                    <a href="./search_results.php" title="Gallery One Items">View the Instruments</a>
+                    <a href="search_results.php" title="Gallery One Items">View the Instruments</a>
                     </button>
                 </div>
             </div>
@@ -51,7 +51,7 @@
                     <h3>Laigh Hall</h3>
                     <p>Playing together: instruments in their social context</p>
                     <button class="btn">
-                    <a href="./search_results.php" title="Gallery One Items">Discover the Laigh Room Instruments</a>
+                    <a href="search_results.php" title="Gallery One Items">Discover the Laigh Room Instruments</a>
                     </button>
                 </div>
             </div>

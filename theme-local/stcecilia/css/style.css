@@ -1,3 +1,4 @@
+
 /** added for UoE */
 
 body
@@ -93,7 +94,7 @@ body
 }
 
 .footer ul
-{
+    {
     margin-top: 10px;
     list-style-type: none;
 }
@@ -201,6 +202,10 @@ img.record-main-image {
     width: 100%;
 }
 
+img.record-main-image-landscape {
+    width: 100%px;
+}
+
 div.resized-image img.record-main-image {
     height: 400px;
     width: 100%;
@@ -235,7 +240,7 @@ div.related {
 
 .content{
     width:100%;
-    padding:0px;
+    padding:0;
 }
 
 .bg-primary {
@@ -292,7 +297,6 @@ a {
 
 .feedback_form label {
     display: block;
-    display: block;
     width: 100px;
 }
 
@@ -346,7 +350,7 @@ div.spacer {
 }
 
 .related-xs {
-    width: 100%;
+   width: 100%;
 }
 
 .tab-content dl {
@@ -370,6 +374,12 @@ div.spacer {
     color: #dddddd;
 }
 
+.navbar{
+    background-color: #111111;
+    border-radius: 0;
+    color: rgb(153, 153, 153);
+}
+
 .navbar-form > button {
     background-color: #666666;
     color: #dddddd;
@@ -387,12 +397,13 @@ div.spacer {
 }
 
 .sch-link a {
-    color: #660000;
-    font-family: 'Hind', Baskerville, "Times New Roman", Times, serif;
+    color: rgb(153, 153, 153);
+    font-family: 'Hind', sans-serif;
     font-size: 24px;
     font-style: normal;
     font-variant: normal;
     padding-top: 30px;
+    padding-right: 30px;
     text-decoration: none;
 }
 
@@ -404,8 +415,13 @@ div.spacer {
     color: #666666;
 }
 
-#uoe-search {width:350px}
-#uoe-search-sm {width:150px}
+#uoe-search     {
+    width:  350px;
+    font-size: 18px;}
+
+#uoe-search-sm  {
+    width:150px;
+    font-size: 14px;}
 
 .record-tabs > ul > li > a > i.fa-inactive {
     color: #dddddd;
@@ -447,33 +463,41 @@ div.spacer {
     padding-top: 2px;
 }
 
-/* ---- grid for related items---- */
+/* ---- grid from masonry for search results ---- */
 
-.grid {
-    background: #ffffff;
-}
-
-/* clear fix */
-.grid:after {
-    content: '';
-    display: block;
-    clear: both;
-}
-
-/* ---- .grid-item ---- */
-
-.grid-sizer,
-.grid-item {
-    width: 150px;
+.box {
+    display: flex;
+    flex-wrap: wrap; /* optional. only if you want the items to wrap */
+    justify-content: center; /* for horizontal alignment */
+    align-items: center; /* for vertical alignment */
 }
 
 .grid-item {
-    float: left;
+    margin-bottom: 10px;
 }
 
-.grid-item img {
-    display: block;
-    width: 100%;
+.grid-item-content {
+    /*background: #eeeeee;
+    border: 2px solid #cecece;*/
+    border-radius: 1px;
+    padding: 2px;
+    text-align: center;
+}
+
+.searchTitle{
+    font-size: 20px;
+}
+
+.searchFoundRow {
+    margin-bottom: 10px;
+}
+
+.searchFound {
+    font-size: 20px;
+    border: solid 2px rgb(153, 153, 153);
+    color: #660000;
+    padding: 5px;
+    border-radius: 5px;
 }
 
 .thumbnail {
@@ -485,20 +509,62 @@ div.spacer {
     width: 89px;
     height: 86px;
 }
+/* ---- .element-item ---- */
 
-/*---stc- things for the new functionality---*/
-body{
-    font-family: 'Hind', 'Frutiger, Baskerville, Baskerville Old Face, Hoefler Text, Garamond, Times New Roman, serif';
+.element-item {
+    position: relative;
+    float: left;
+    width: 25%;
+    /*margin: 5px;
+    padding: 10px;*/
+    background: #888;
+    color: #262524;
 }
-h1{
-    font-size:48px;
+.element-item > * {
+    margin: 0;
+    padding: 0;
 }
 
-h2{
-    font-size:36px;
+.element-item .name {
+    position: absolute;
+    left: 10px;
+    top: 60px;
+    text-transform: none;
+    letter-spacing: 0;
+    font-size: 12px;
+    font-weight: normal;
 }
-h3{
-    font-size:24px;
+
+.element-item .symbol {
+    position: absolute;
+    left: 10px;
+    top: 0px;
+    font-size: 42px;
+    font-weight: bold;
+    color: white;
+}
+
+.element-item .number {
+    position: absolute;
+    right: 8px;
+    top: 5px;
+}
+
+.element-item .weight {
+    position: absolute;
+    left: 10px;
+    top: 76px;
+    font-size: 12px;
+}
+
+.thumbnail {
+    border:0;
+}
+
+.uoe_logo
+{
+    width: 89px;
+    height: 86px;
 }
 
 .stc-resized-image{text-align:center;}

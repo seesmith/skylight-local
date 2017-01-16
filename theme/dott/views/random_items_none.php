@@ -1,1 +1,0 @@
-<span>No items</span>
