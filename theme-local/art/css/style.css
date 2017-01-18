@@ -177,9 +177,25 @@ header				{ position: relative; width: 940px;}
 .thumbnail-image                { display: block; text-align: center; width: 23%; float: right; }
 
 .thumbnail-strip                { max-width: 660px; display: block; }
-.thumbnail-tile                 { margin-top: 20px; margin-left: 20px; float: left; }
+.thumbnail-tile-test            { margin-top: 20px; margin-left:20px; float: left; }
+.thumbnail-tile                {       width: 158px;
+    height: 158px;
+    position: relative;
+    margin-left: auto;
+    margin-top:auto;
+    overflow: hidden;
+float:left;}
 .thumbnail-strip .first         { margin-left: 0px; }
-.record-thumbnail               { max-width: 150px; max-height: 200px; }
+.record-thumbnail             {    position: absolute;
+    margin: auto;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+max-height:150px;
+max-width:150px;}
+.thumbnail-tile-search { margin-top: 20px; margin-left: 20px; float: left; }
+.record-thumbnail-search { max-width: 150px; max-height: 200px; }
 
 .left-title                     { width: 410px; float: left; }
 .right-image                    { width: 250px; float: right; text-align: center; }
