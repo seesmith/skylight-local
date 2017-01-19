@@ -26,6 +26,72 @@ if(isset($solr[$type_field])) {
     $type = "media-" . strtolower(str_replace(' ','-',$solr[$type_field][0]));
 }
 
+        $numThumbnails = 0;
+        foreach ($solr[$link_uri_field] as $linkURI) {
+            if (strpos($linkURI, 'luna') > 0) {
+                //just for test, this line!
+                //$tileSource = str_replace('images.is.ed.ac.uk', 'lac-luna-test2.is.ed.ac.uk:8181', $linkURI);
+                $tileSource = str_replace('detail', 'iiif', $linkURI) . '/info.json';
+                $iiifmax = str_replace('info.json', 'full/full/0/default.jpg', $tileSource);
+                list($width, $height) = getimagesize($iiifmax);
+                //echo 'WIDTH'.$width.'HEIGHT'.$height
+                $portrait = true;
+                if ($width > $height) {
+                    $portrait = false;
+                }
+                $mainImage = false;
+                $json = file_get_contents($tileSource);
+                $jobj = json_decode($json, true);
+                $error = json_last_error();
+                $jsoncontext = $jobj['@context'];
+                $jsonid = $jobj['@id'];
+                $jsonheight = $jobj['height'];
+                $jsonwidth = $jobj['width'];
+                $jsonprotocol = $jobj['protocol'];
+                $jsontiles = $jobj['tiles'];
+                $jsonprofile = $jobj['profile'];
+                if (!$mainImage) {
+                    $mainImageTest = true;
+                    ?>
+                    <div class="full-image">
+                        <div id="openseadragon">
+                            <script type="text/javascript">
+                                OpenSeadragon({
+                                    id: "openseadragon",
+                                    prefixUrl: "<?php echo base_url();?>assets/openseadragon/images/",
+                                    preserveViewport: false,
+                                    visibilityRatio: 1,
+                                    minZoomLevel: 0.7,
+                                    defaultZoomLevel: 3,
+                                    panHorizontal: true,
+                                    sequenceMode: true,
+                                    tileSize: 500,
+                                    tileSources: [{
+                                        "@context": "<?php echo $jsoncontext ?>",
+                                        "@id": "<?php echo $jsonid ?>",
+                                        "height": <?php echo $jsonheight ?>,
+                                        "width": <?php echo $jsonwidth ?>,
+                                        "profile": ["http://iiif.io/api/image/2/level2.json",
+                                            {
+                                                "formats": ["gif", "pdf"]
+                                            }
+                                        ],
+                                        "protocol": "<?php echo $jsonprotocol ?>",
+                                        "tiles": [{
+                                            "scaleFactors": [1, 2, 8, 16, 32],
+                                            "width": 512
+                                        }]
+                                        //minLevel: 2
+                                    }]
+                                });
+                            </script>
+                        </div>
+                    </div>
+                    <?php
+                }
+            }
+        }
+
 if(isset($solr[$bitstream_field]) && $link_bitstream) {
 
     foreach ($solr[$bitstream_field] as $bitstream_for_array)
@@ -53,7 +119,7 @@ if(isset($solr[$bitstream_field]) && $link_bitstream) {
         $b_seq = $b_segments[4];
         $b_handle_id = preg_replace('/^.*\//', '',$b_handle);
         $b_uri = './record/'.$b_handle_id.'/'.$b_seq.'/'.$b_filename;
-
+/*
         if ((strpos($b_uri, ".jpg") > 0) or (strpos($b_uri, ".JPG") > 0))
         {
             if (!$mainImage) {
@@ -105,7 +171,9 @@ if(isset($solr[$bitstream_field]) && $link_bitstream) {
             }
 
         }
-        else if ((strpos($b_uri, ".mp3") > 0) or (strpos($b_uri, ".MP3") > 0)) {
+        else
+*/
+        if ((strpos($b_uri, ".mp3") > 0) or (strpos($b_uri, ".MP3") > 0)) {
 
             $audioLink .= '<audio controls>';
             $audioLink .= '<source src="' . $b_uri . '" type="audio/mpeg" />Audio loading...';
@@ -251,6 +319,7 @@ if(isset($solr[$bitstream_field]) && $link_bitstream) {
             } ?>
 
             <?php
+            /*
 
             $lunalink = false;
             if (isset($solr[$link_uri_field])) {
@@ -273,7 +342,8 @@ if(isset($solr[$bitstream_field]) && $link_bitstream) {
                 if($lunalink) {
                     echo '<br />';
                 }
-            }?>
+            }
+            */?>
 
         <?php if($mainImageTest === true) { ?>
     </div>
