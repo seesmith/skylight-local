@@ -119,60 +119,7 @@ if(isset($solr[$bitstream_field]) && $link_bitstream) {
         $b_seq = $b_segments[4];
         $b_handle_id = preg_replace('/^.*\//', '',$b_handle);
         $b_uri = './record/'.$b_handle_id.'/'.$b_seq.'/'.$b_filename;
-/*
-        if ((strpos($b_uri, ".jpg") > 0) or (strpos($b_uri, ".JPG") > 0))
-        {
-            if (!$mainImage) {
 
-                // we have a main image
-                $mainImageTest = true;
-
-                $bitstreamLink = '<div class="main-image">';
-
-                $bitstreamLink .= '<a title = "' . $record_title . '" class="fancybox" rel="group" href="' . $b_uri . '"> ';
-                $bitstreamLink .= '<img class="record-main-image" src = "'. $b_uri .'">';
-                $bitstreamLink .= '</a>';
-
-                $bitstreamLink .= '</div>';
-
-                $mainImage = true;
-
-            }
-            // we need to display a thumbnail
-            else {
-
-                // if there are thumbnails
-                if(isset($solr[$thumbnail_field])) {
-                    foreach ($solr[$thumbnail_field] as $thumbnail) {
-
-                        $t_segments = explode("##", $thumbnail);
-                        $t_filename = $t_segments[1];
-
-                        if ($t_filename === $b_filename . ".jpg") {
-
-                            $t_handle = $t_segments[3];
-                            $t_seq = $t_segments[4];
-                            $t_uri = './record/'.$b_handle_id.'/'.$t_seq.'/'.$t_filename;
-
-                            $thumbnailLink[$numThumbnails] = '<div class="thumbnail-tile';
-
-                            if($numThumbnails % 4 === 0) {
-                                $thumbnailLink[$numThumbnails] .= ' first';
-                            }
-
-                            $thumbnailLink[$numThumbnails] .= '"><a title = "' . $record_title . '" class="fancybox" rel="group" href="' . $b_uri . '"> ';
-                            $thumbnailLink[$numThumbnails] .= '<img src = "'.$t_uri.'" class="record-thumbnail" title="'. $record_title .'" /></a></div>';
-
-                            $numThumbnails++;
-                        }
-                    }
-                }
-
-            }
-
-        }
-        else
-*/
         if ((strpos($b_uri, ".mp3") > 0) or (strpos($b_uri, ".MP3") > 0)) {
 
             $audioLink .= '<audio controls>';
@@ -316,39 +263,16 @@ if(isset($solr[$bitstream_field]) && $link_bitstream) {
                     }
                 }
 
-            } ?>
-
-            <?php
-            /*
-
-            $lunalink = false;
-            if (isset($solr[$link_uri_field])) {
-                foreach($solr[$link_uri_field] as $linkURI) {
-                    $linkURI = str_replace('"', '%22', $linkURI);
-                    $linkURI = str_replace('|', '%7C', $linkURI);
-
-                    if (strpos($linkURI,"images.is.ed.ac.uk") != false)
-                    {
-                        $lunalink = true;?>
-
-                        <br />
-                        <a href="<?php echo $linkURI; ?>" target="_blank">View full-size image</a>
-
-                    <?php
-                    }
-
-                }
-
-                if($lunalink) {
-                    echo '<br />';
-                }
             }
-            */?>
-
-        <?php if($mainImageTest === true) { ?>
+            if($mainImageTest === true) { ?>
     </div>
     </div>
-<?php } ?>
+<?php }
+    $manifestURI = str_replace('detail', 'iiif/m',$linkURI);?>
+    <a target="_blank" href="<?php echo $manifestURI; ?>/manifest">
+        <img src="http://manifests.britishart.yale.edu/logo-iiif.png" alt="IIIF Manifest">
+        Right-click, Copy Link to get the IIIF manifest for this item.
+    </a>
     <div class="clearfix"></div>
     <!-- print out crowdsourced tags -->
     <?php
