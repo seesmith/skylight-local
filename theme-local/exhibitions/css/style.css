@@ -275,7 +275,7 @@ ul.ex-list a:visited,
 ul.ex-list a:active         { color: #333; }
 ul.ex-list a:hover          { color: #555; }
 li.past-ex                  { display: inline; float: left; width: 160px; text-align: center; margin-right: 5px;}
-#current-banner             { width: 560px; height: 408px; background: url(../images/godfreythomsonbanner.jpg) no-repeat 0 0; display: block; margin: auto}
+#current-banner             { width: 560px; height: 408px; background: url(../images/godfreythomsonbanner-update.jpg) no-repeat 0 0; display: block; margin: auto}
 #past-exhib-block br        { line-height: 20px; }
 
 /* for the past exhibitions section on the home page*/
@@ -301,7 +301,7 @@ li.past-ex                  { display: inline; float: left; width: 160px; text-a
 #cradle-banner              { width: 660px; height: 190px; background: url(../images/Cradle1.jpg) no-repeat 0 0; margin: auto; }
 #gillies-banner             { width: 660px; height: 342px; background: url(../images/gbrennan-13073.jpg) no-repeat 0 0; margin: auto; }
 #anatomy-banner             { width: 522px; height: 322px; background: url(../images/anatomy-home.jpg) no-repeat 0 0; margin: auto;}
-#thomson-banner             { width: 560px; height: 408px; background: url(../images/godfreythomsonbanner.jpg) no-repeat 0 0; display: block; margin: auto;}
+#thomson-banner             { width: 560px; height: 408px; background: url(../images/godfreythomsonbanner-update.jpg) no-repeat 0 0; display: block; margin: auto;}
 #thomson-banner2            { width: 560px; height: 437px; background: url(../images/5ravelstondykes.gif) no-repeat 0 0; display: block; margin: auto;}
 
 

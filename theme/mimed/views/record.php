@@ -39,6 +39,7 @@ if(isset($solr[$bitstream_field]) && $link_bitstream) {
 
     foreach($bitstream_array as $bitstream) {
 
+        $mp4ok = false;
         $b_segments = explode("##", $bitstream);
         $b_filename = $b_segments[1];
         $b_handle = $b_segments[3];
@@ -83,34 +84,44 @@ if(isset($solr[$bitstream_field]) && $link_bitstream) {
         else if ((strpos($b_filename, ".mp4") > 0) or (strpos($b_filename, ".MP4") > 0))
         {
             $b_uri = $media_uri.$b_handle_id.'/'.$b_seq.'/'.$b_filename;
-            // if it's chrome, use webm if it exists
-            if (strpos($_SERVER['HTTP_USER_AGENT'], 'Chrome') == false) {
+            // Use MP4 for all browsers other than Chrome
+            if (strpos($_SERVER['HTTP_USER_AGENT'], 'Chrome') == false)
+            {
+                $mp4ok = true;
+            }
+            //Microsoft Edge is calling itself Chrome, Mozilla and Safari, as well as Edge, so we need to deal with that.
+            else if (strpos($_SERVER['HTTP_USER_AGENT'], 'Edge') == true)
+            {
+                $mp4ok = true;
+            }
 
-
-                $videoLink .= '<div class="flowplayer" data-analytics="' . $ga_code . '" title="' . $b_filename . '">';
-                $videoLink .= '<video preload=auto loop width="100%" height="auto" controls>';
+            if ($mp4ok == true)
+            {
+                $videoLink .= '<div class="flowplayer" data-analytics="' . $ga_code . '" title="' . $record_title . ": " . $b_filename . '">';
+                $videoLink .= '<video preload=auto loop width="100%" height="auto" controls preload="true" width="660">';
                 $videoLink .= '<source src="' . $b_uri . '" type="video/mp4" />Video loading...';
                 $videoLink .= '</video>';
                 $videoLink .= '</div>';
                 $videoFile = true;
-
             }
         }
+
         else if ((strpos($b_filename, ".webm") > 0) or (strpos($b_filename, ".WEBM") > 0))
         {
-
-            $b_uri = $media_uri.$b_handle_id.'/'.$b_seq.'/'.$b_filename;
-            // if it's chrome, use webm if it exists
-            if (strpos($_SERVER['HTTP_USER_AGENT'], 'Chrome') == true) {
-
-                $videoLink .= '<div class="flowplayer" data-analytics="' . $ga_code . '" title="' . $record_title . ": " . $b_filename . '">';
-                $videoLink .= '<video preload=auto loop width="100%" height="auto">';
-                $videoLink .= '<source src="' . $b_uri . '" type="video/webm" />Video loading...';
-                $videoLink .= '</video>';
-                $videoLink .= '</div>';
-
-                $videoFile = true;
-
+            //Microsoft Edge needs to be dealt with. Chrome calls itself Safari too, but that doesn't matter.
+            if (strpos($_SERVER['HTTP_USER_AGENT'], 'Edge') == false)
+            {
+                if (strpos($_SERVER['HTTP_USER_AGENT'], 'Chrome') == true)
+                {
+                    $b_uri = $media_uri . $b_handle_id . '/' . $b_seq . '/' . $b_filename;
+                    // if it's chrome, use webm if it exists
+                    $videoLink .= '<div class="flowplayer" data-analytics="' . $ga_code . '" title="' . $record_title . ": " . $b_filename . '">';
+                    $videoLink .= '<video preload=auto loop width="100%" height="auto" controls preload="true" width="660">';
+                    $videoLink .= '<source src="' . $b_uri . '" type="video/webm" />Video loading...';
+                    $videoLink .= '</video>';
+                    $videoLink .= '</div>';
+                    $videoFile = true;
+                }
             }
         }
 

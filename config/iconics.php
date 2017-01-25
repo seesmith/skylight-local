@@ -13,16 +13,16 @@ $config['skylight_adminemail'] = 'lddt@mlist.is.ed.ac.uk';
 
 $config['skylight_oaipmhcollection'] = 'hdl_10683_117182';
 
-// set ga code
+// set ga code and dspace collection id
 if (strpos($_SERVER['HTTP_HOST'], "test") !== false) {
     $config['skylight_ga_code'] = 'UA-25737241-6';
+    $config['skylight_container_id'] = '48';
 }
 else {
     $config['skylight_ga_code'] = 'UA-25737241-9';
+    $config['skylight_container_id'] = '30';
 }
 
-// Container ID and the field used in solr index to store this ID. Used for restricting search/browse scope.
-$config['skylight_container_id'] = '30';
 $config['skylight_container_field'] = 'location.coll';
 
 $config['skylight_fields'] = array('Title' => 'dc.title.en',

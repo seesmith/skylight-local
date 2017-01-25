@@ -38,6 +38,7 @@
     <link rel="stylesheet" href="http://releases.flowplayer.org/6.0.4/skin/minimalist.css">
     <link rel="stylesheet" href="<?php echo base_url()?>assets/font-awesome/css/font-awesome.min.css">
     <link rel="stylesheet" href="<?php echo base_url(); ?>theme/<?php echo $this->config->item('skylight_theme'); ?>/css/style.css?v=2">
+    <link href="https://fonts.googleapis.com/css?family=Hind" rel="stylesheet">
 
     <!-- All JavaScript at the bottom, except for Modernizr which enables HTML5 elements & feature detects -->
     <script src="<?php echo base_url()?>assets/modernizr/modernizr-1.7.min.js"></script>
@@ -46,7 +47,39 @@
     <script src="<?php echo base_url()?>assets/jquery-1.11.0/jcarousel/jquery.jcarousel.min.js"></script>
     <script src="<?php echo base_url()?>assets/bootstrap/js/bootstrap.min.js"></script>
     <script src="<?php echo base_url()?>assets/masonry/masonry.pkgd.min.js"></script>
+    <script src="<?php echo base_url()?>assets/isotope/isotope.pkgd.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.7/leaflet.js"></script>
+    <script src="https://cdn.rawgit.com/mejackreed/Leaflet-IIIF/master/leaflet-iiif.js"></script>
+    <script src="<?php echo base_url()?>assets/openseadragon/openseadragon.min.js"></script>
+    <script>
+		$(".toggle_container").hide();
+    
+    $("p.trigger").click(function(){
+        $(this).toggleClass("active").next().slideToggle("normal");
+    });
+    </script>
+    
+    <script type='text/javascript'>//<![CDATA[
+        $(window).load(function(){
+            $(".jheader").click(function () {
 
+                $jheader = $(this);
+                //getting the next element
+                $jcontent = $jheader.next();
+                //open up the content needed - toggle the slide- if visible, slide up, if not slidedown.
+                $jcontent.slideToggle(500, function () {
+                    //execute this after slideToggle is done
+                    //change text of header based on visibility of content div
+                    $jheader.text(function () {
+                        //change text based on condition
+                        return $jcontent.is(":visible") ? "Collapse" : "Expand";
+                    });
+                });
+
+            });
+        });//]]>
+
+    </script>
     <?php if ($ga_code != '') {?>
         <script src="http://www.google-analytics.com/analytics.js"></script>
 
@@ -71,6 +104,8 @@
                 analytics: "<?php echo $ga_code ?>"
             };
         </script>
+		
+
     <?php } ?>
 
     <?php if (isset($solr)) { ?><link rel="schema.DC" href="http://purl.org/dc/elements/1.1/" />
@@ -94,24 +129,42 @@
 </head>
 
 <body>
-
-    <nav class="navbar navbar-default">
-        <div class="col-xs-12">
-            <div class="navbar-header">
-                <a class="navbar-brand navbar-left" href="http://www.ed.ac.uk" title="The University of Edinburgh Homepage Link" target="_blank"><img src="<?php echo base_url(); ?>theme/stcecilia/images/logo.png" class="img-responsive uoe_logo" alt="University of Edinburgh link" /></a>
-                <a class="navbar-brand navbar-left" href="http://www.ed.ac.uk" title="The St Cecilia's Hall Homepage Link" target="_blank">St Cecilia's Hall home page link</a>
-            </div>
-            <div class="collapse navbar-collapse">
-                <!-- Collect the nav links, forms, and other content for toggling -->
-                    <form class="navbar-form navbar-right" role="search" action="./redirect/" method="post">
-                        <div class="form-group">
-                            <input id="uoe-search" type="text" class="form-control" placeholder="Search the collections" name="q" value="<?php if (isset($searchbox_query)) echo urldecode($searchbox_query); ?>" id="q" />
-                        </div>
-                        <button class="btn" type="submit">
+    <nav class="navbar navbar-default navbar-fixed-top">
+        <div class="hidden-lg hidden-md col-sm-8 col-xs-8">
+        <!-- Collect the nav links, forms, and other content for toggling -->
+            <form class="navbar-form navbar-left" role="search" action="./redirect/" method="post">
+                <div class="input-group search-box">
+                    <input id="uoe-search-sm" type="text" class="form-control" placeholder="Search" name="q" value="<?php if (isset($searchbox_query)) echo urldecode($searchbox_query); ?>" id="q" />
+                    <span class="input-group-btn">
+                        <button type="submit" class="btn btn-default" name="submit_search" value="Search" id="submit_search">
                             <i class="glyphicon glyphicon-search"></i>
                         </button>
-                    </form>
-           </div>
+                    </span>
+                </div>
+            </form>
+        </div>
+        <div class="col-lg-8 col-md-8 hidden-sm hidden-xs">
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <form class="navbar-form navbar-left" role="search" action="./redirect/" method="post">
+                <div class="input-group">
+                    <input id="uoe-search" type="text" class="form-control" placeholder="Search the museum collections" name="q" value="<?php if (isset($searchbox_query)) echo urldecode($searchbox_query); ?>" id="q" />
+                    <span class="input-group-btn">
+                        <button type="submit" class="btn btn-default" name="submit_search" value="Search" id="submit_search">
+                            <i class="glyphicon glyphicon-search"></i>&nbsp;Search
+                        </button>
+                    </span>
+                </div>
+            </form>
+        </div>
+        <div class="hidden-lg hidden-md col-sm-4 col-xs-4">
+            <div class="navbar-right sch-link sch-link-sm">
+                <a href="http://stcecilias.ed.ac.uk" title="Visit St Cecilia's Hall">St Cecilia's Hall</a>
+            </div>
+        </div>
+        <div class="col-lg-4 col-md-4 hidden-sm hidden-xs">
+            <div class="navbar-right sch-link">
+                <a href="http://stcecilias.ed.ac.uk" title="Visit St Cecilia's Hall">Visit St Cecilia's Hall</a>
+            </div>
         </div>
     </nav><!-- end of header container -->
 

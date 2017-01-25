@@ -118,30 +118,7 @@
 
                 ?>
                 </span>
-        
 
-
-        <?php
-
-            //if(array_key_exists($type_field, $doc)) {
-             //   echo '<p>';
-            //    $type =  $doc[$type_field][0];
-              //  $type_words = explode(' ',$type);
-              //  $shortened = '';
-             //   $max = 40;
-             //   $suffix = '...';
-             //   if($max > sizeof($type_words)) {
-             //       $max = sizeof($type_words);
-              //      $suffix = '';
-            //    }
-             //   for ($i=0 ; $i<$max ; $i++){
-             //       $shortened .= $type_words[$i] . ' ';
-         //       }
-            //    echo $shortened.$suffix;
-//       '</p>';
-          //  }
-
-        ?>
 
         </div> <!-- close tags div -->
             <?php if(isset($doc[$bitstream_field])) //&& $link_bitstream)
@@ -152,12 +129,37 @@
                 <div class="record-bitstreams">
 
                     <?php
-                    foreach($doc[$bitstream_field] as $bitstream) {
 
+                    $pdfcount =  0;
+                    foreach($doc[$bitstream_field] as $bitstream)
+                    {
                         $bitstreamLink = $this->skylight_utilities->getBitstreamURI($bitstream);
-
-                        echo '<a href="'.$bitstreamLink.'" class="downloadButton">Download PDF</a>';
+                        if (strpos($bitstreamLink, ".pdf") > 0)
+                        {
+                            $pdfcount = $pdfcount + 1;
+                        }
                     }
+
+                    if ($pdfcount > 1)
+                    {
+                        echo 'Multiple PDFs. Open the record to view them all.';
+                    }
+                    else if ($pdfcount == 1)
+                    {
+                        foreach($doc[$bitstream_field] as $bitstream)
+                        {
+                            if (strpos($bitstreamLink, ".pdf") > 0) {
+                                $bitstreamLink = $this->skylight_utilities->getBitstreamURI($bitstream);
+                                echo '<a href="' . $bitstreamLink . '" target= "_blank" class="downloadButton">Download  PDF</a>';
+                            }
+                        }
+
+                    }
+                    else
+                    {
+                        echo '<div class="record-bitstreams"><a href="./unavailable" title="Click here to find out why this book may be unavailable">Book unavailable</a></div>';
+                    }
+
                     ?>
 
                 </div>
@@ -174,49 +176,6 @@
 
                 echo 'Shelfmark: '.$doc[$shelfmark_field][0]; ?></p>
 
-            <div class = "thumbnail-image">
-             <?php
-              /*  if(isset($doc[$bitstream_field])) {
-                    $bitstream_array = array();
-
-                    foreach ($doc[$bitstream_field] as $bitstream_for_array)
-                    {
-                        $b_segments = explode("##", $bitstream_for_array);
-                        $b_seq = $b_segments[4];
-                        $bitstream_array[$b_seq] = $bitstream_for_array;
-                    }
-
-                    ksort($bitstream_array);
-
-                        $firstImg = false;
-
-                        foreach ($bitstream_array as $bitstream) {
-
-                            $b_segments = explode("##", $bitstream);
-                            $b_filename = $b_segments[1];
-                            $b_handle = $b_segments[3];
-                            $b_seq = $b_segments[4];
-                            $b_handle_id = preg_replace('/^.*\//', '',$b_handle);
-                            $b_uri = './record/'.$b_handle_id.'/'.$b_seq.'/'.$b_filename;
-
-                            if (!$firstImg && strpos($b_uri, ".jpg") > 0)
-                            {
-                                $firstImg = true;
-                                $t_uri = $b_uri . '.jpg';
-
-                                $thumbnailLink = '<a title = "' . $doc[$title_field][0] . '" class="fancybox" rel="group' . $j . '" href=' . $b_uri . '> ';
-                                $thumbnailLink .= '<img src = "'.$t_uri.'" class="search-thumbnail" title="'. $doc[$title_field][0] .'" /></a>';
-
-                                echo $thumbnailLink;
-                            }
-
-                            $j++;
-
-                    } // end for each
-
-                } //end if bitstream */?>
-
-            </div>
         </div>
     </li>
         <?php }?>
