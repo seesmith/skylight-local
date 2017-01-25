@@ -300,40 +300,7 @@ foreach($recorddisplay as $key)
                 if (isset($solr[$element])) {
                     foreach ($solr[$element] as $index => $metadatavalue) {
 
-        <?php } ?>
-        <div class="col-sm-6 col-xs-12 col-md-8 col-lg-12 metadata">
-            <?php if(isset($solr[$short_field][0])) {
-                echo '<p>' . $solr[$short_field][0] . '</p>';
-            }
-            ?>
-
-            <!--<dl>-->
-                <?php
-                $maker = '';
-                $date = '';
-                $title = '';
-
-                foreach($recorddisplay as $key) {
-
-                    $element = $this->skylight_utilities->getField($key);
-
-                    if(isset($solr[$element])) {
-
-
-                       //echo '<dd>';
-                        foreach($solr[$element] as $index => $metadatavalue) {
-                            // if it's a facet search
-                            // make it a clickable search link
-
-                            if($key == 'Date Made') {
-                                $date = $metadatavalue;
-                            }
-
-                            if($key == 'Maker') {
-                                $maker = $metadatavalue;
-                            }
-                        }
-                        //echo '</dd>';
+                        echo '<p>'.$key . ' : ' . $metadatavalue.'</p>';
                     }
                 }
             }
@@ -389,7 +356,7 @@ foreach($recorddisplay as $key)
         $bitstreamLink .= '</div>';*/
 ?>
 
-    </div>
-	</div>
-    </div><!-- content-->
-</div> <!-- row container-->
+</div>
+</div>
+</div><!-- content-->
+</div>
