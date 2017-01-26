@@ -1,5 +1,6 @@
-<div class="col-xs-12 related inactive container">
-    <h4 class="related-title">Related Instruments</h4>
+<div id="stc-section6" class="col-xs-12 related inactive container-fluid">
+    <h2 class="itemtitle hidden-sm hidden-xs">Related Instruments</h2>
+    <h4 class="itemtitle hidden-md hidden-lg">Related Instruments</h4>
     <?php
     $numrel = count($related_items);
     // if there are related items
@@ -8,10 +9,14 @@
         $i = 0;?>
     <div class="grid" data-masonry='{ "itemSelector": ".grid-item", "columnWidth": 150 }'>
         <?php
+
         foreach ($related_items as $index => $doc) {
+
             ?>
                     <div class="grid-item thumbnail">
-                        <?php $bitstream_array = array();
+                        <?php
+
+                        /*$bitstream_array = array();
                         if (isset($doc[$bitstream_field])) {
                             $started = false;
                             // loop through to get min sequence
@@ -69,7 +74,54 @@
                                 }
                                 echo $thumbnailLink;
                             }
-                        } //end if there are bitstreams ?>
+                        } //end if there are bitstreams
+                        */
+
+                        $needlink = true;
+
+                        if (isset($doc['dcidentifieruri']))
+                        {
+                            foreach ($doc['dcidentifieruri'] as $linkURI)
+                            {
+                                    if (strpos($linkURI, 'luna') > 0 and $needlink == true)
+                                    {
+
+                                        $tileSource = str_replace('detail', 'iiif', $linkURI) . '/info.json';
+                                        $iiifmax = str_replace('info.json', 'full/full/0/default.jpg', $tileSource);
+                                        list($width, $height) = getimagesize($iiifmax);
+                                        $portrait = true;
+                                        if ($width > $height)
+                                        {
+                                            $portrait = false;
+                                        }
+                                        if ($portrait)
+                                        {
+                                            $iiifurlsmall = str_replace('info.json', 'full/,250/0/default.jpg', $tileSource);
+                                        }
+                                        else
+                                        {
+                                            $iiifurlsmall = str_replace('info.json', 'full/250,/0/default.jpg', $tileSource);
+                                        }
+                                        $iiifurlfull = str_replace('info.json', 'full/full/0/default.jpg', $tileSource);
+
+                                        $thumbnailLink = '<a href="./record/' . $doc['id'] . '" title = "' . $doc[$title_field][0] . '" >';
+                                        $thumbnailLink .= '<img src = "' . $iiifurlsmall . '" class="record-thumbnail-search" title="' . $doc[$title_field][0] . '" /></a>';
+
+                                        echo $thumbnailLink;
+                                        $needlink = false;
+
+                                    }
+
+                            }
+                        }
+                        else
+                        {
+                            $thumbnailLink  =  '<a href="./record/'.$doc['id'].'" title = "'. $doc[$title_field][0].'" > No Image for this </a>';
+                            echo $thumbnailLink;
+                            $needlink = false;
+                        }
+
+                        ?>
                         <p class="text-center hidden-xs">
                             <a href="./record/<?php echo $doc['id'] ?>"><?php echo $doc[$title_field][0]; ?></a>
                         </p>
