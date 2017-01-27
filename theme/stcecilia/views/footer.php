@@ -1,6 +1,4 @@
-        <div class="footer-margin"></div>
-</div> <!--END of ROW -- move into col sidebar -->
-</div><!--END of container -- move into col sidebar -->
+
         <footer class="footer footer-piccolo bg-primary">
                 <div class="row">
                     <div class="col-md-12 col-sm-12 col-xs-12">
@@ -79,7 +77,7 @@
         <script type="text/javascript" src="<?php echo base_url()?>assets/fancybox/source/helpers/jquery.fancybox-media.js?v=1.0.5"></script>
         <script type="text/javascript" src="<?php echo base_url()?>assets/fancybox/source/helpers/jquery.fancybox-thumbs.js?v=1.0.7"></script>
         <script src="<?php echo base_url()?>assets/plugins/plugins.js"></script>
-       <script src="<?php echo base_url()?>assets/script/script.js"></script>
+        <script src="<?php echo base_url()?>assets/script/script.js"></script>
 
     </body>
 </html>

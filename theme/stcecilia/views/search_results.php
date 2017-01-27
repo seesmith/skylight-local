@@ -1,4 +1,4 @@
-
+<div class="col-md-9 col-sm-9 col-xs-12">
     <?php
 
         // Set up some variables to easily refer to particular fields you've configured
@@ -17,8 +17,6 @@
             $sort = '&sort_by=';
         }
     ?>
-
-
 
     <div class="container-fluid">
         <div class="row searchFoundRow">
@@ -107,6 +105,7 @@
     <?php }?>
         </div>
         </div>
+</div>
 <script>
     //init Masonry
     //$('.grid').masonry({
