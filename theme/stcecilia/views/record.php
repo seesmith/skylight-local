@@ -23,6 +23,8 @@ $image_id = "";
 $mainImage = false;
 $videoFile = false;
 $audioFile = false;
+$audioLink = "";
+$videoLink = "";
 
 if(isset($solr[$bitstream_field]) && $link_bitstream) {
 
@@ -37,8 +39,7 @@ if(isset($solr[$bitstream_field]) && $link_bitstream) {
     $mainImage = false;
     $videoFile = false;
     $audioFile = false;
-    $audioLink = "";
-    $videoLink = "";
+
     $b_seq = "";
 
     foreach ($bitstream_array as $bitstream) {
@@ -106,11 +107,11 @@ if(isset($solr[$bitstream_field]) && $link_bitstream) {
                 <ul class="nav navbar-nav">
                     <li><a href="<?php echo $_SERVER['REQUEST_URI'];?>#stc-section1">Top</a></li>
                     <li><a href="<?php echo $_SERVER['REQUEST_URI'];?>#stc-section2">Image</a></li>
-                    <li><a href="<?php echo $_SERVER['REQUEST_URI'];?>#stc-section3">Categories</a></li>
+                    <li><a href="<?php echo $_SERVER['REQUEST_URI'];?>#stc-section3">Description</a></li>
                     <?php if($audioLink != '') {
-                        echo '<li ><a href ="'.$_SERVER['REQUEST_URI'].'#stc-section4" > Audio</a ></li >';
+                        echo '<li ><a href ="'.$_SERVER['REQUEST_URI'].'#stc-section4" >Audio</a ></li >';
                     } ?>
-                    <li><a href="<?php echo $_SERVER['REQUEST_URI'];?>#stc-section5">More Data</a></li>
+                    <li><a href="<?php echo $_SERVER['REQUEST_URI'];?>#stc-section5">Instrument Data</a></li>
                     <li><a href="<?php echo $_SERVER['REQUEST_URI'];?>#stc-section6">Related Instruments</a></li>
                 </ul>
             </div>
@@ -137,23 +138,18 @@ foreach($recorddisplay as $key)
             if (!(isset($date))){
                 $date = 'Undated';
             }
-
             if($key == 'Maker') {
                 $maker = $metadatavalue;
             }
             if (!(isset($maker))){
                 $maker = 'Unknown maker';
             }
-
-
             if($key == 'Title') {
                 $title = $metadatavalue;
             }
-
             if (!(isset($title))){
                 $title = 'Unnamed item';
             }
-
         }
     }
 }
@@ -161,8 +157,8 @@ foreach($recorddisplay as $key)
 ?>
 
 <div id="stc-section1" class="container-fluid">
-    <h1 class="itemtitle hidden-sm hidden-xs"><?php echo $title .' / '. $maker. ' / '.$date;?></h1>
-    <h4 class="itemtitle hidden-lg hidden-md"><?php echo $title .' / '. $maker. ' / '.$date;?></h4>
+    <h2 class="itemtitle hidden-sm hidden-xs"><?php echo $title .' | '. $maker. ' | '.$date;?></h2>
+    <h4 class="itemtitle hidden-lg hidden-md"><?php echo $title .' | '. $maker. ' | '.$date;?></h4>
 </div>
 
 <?php
@@ -311,24 +307,28 @@ if (isset($solr[$link_uri_field]))
                 $imageset = true;
             }
         }
-        if ($imageset == true) {
-        //    echo $thumbnailLink[0];
-        }
     }
-
-
 ?>
-
-
-
-
-
 </div>
-
-
 <div id="stc-section3" class="container-fluid">
     <!--h2 class="itemtitle hidden-sm hidden-xs">Categories</h2-->
     <!--h4 class="itemtitle hidden-md hidden-lg">Categories</h4-->
+    <!--TODO Display Short description and description-->
+    <div class="col-description">
+    <?php foreach($descriptiondisplay as $key) {
+
+        $element = $this->skylight_utilities->getField($key);
+
+        if(isset($solr[$element])) {
+            foreach($solr[$element] as $index => $metadatavalue) {
+                echo "<span class='description'>";
+                echo $metadatavalue;
+                echo "</span>";
+            }
+        }
+    } ?>
+    </div>
+
     <?php
     foreach($recorddisplay as $key) {
 
@@ -373,14 +373,16 @@ if(isset($solr[$bitstream_field]) && $link_bitstream) {
 }
 ?>
 
-
         <div id="stc-section5" class="panel panel-default container-fluid">
-            <div class="panel-heading">
+            <div class="panel-heading straight-borders">
                 <h2 class="panel-title hidden-sm hidden-xs ">
-                    <a class="accordion-toggle" data-toggle="collapse" href="#collapse1">More Data</a>
+                    <a class="accordion-toggle" data-toggle="collapse" href="#collapse1">Instrument Data <i class="fa fa-chevron-down" aria-hidden="true"></i>
+                    </a>
                 </h2>
                 <h4 class="panel-title hidden-md hidden-lg ">
-                    <a class="accordion-toggle" data-toggle="collapse" href="#collapse1">More Data</a>
+                    <a class="accordion-toggle" data-toggle="collapse" href="#collapse1">Instrument Data <i class="fa fa-chevron-down" aria-hidden="true"></i>
+
+                    </a>
                 </h4>
             </div>
             <div id="collapse1" class="panel-collapse collapse">
@@ -394,7 +396,6 @@ if(isset($solr[$bitstream_field]) && $link_bitstream) {
 
                             if (isset($solr[$element])) {
                                 foreach ($solr[$element] as $index => $metadatavalue) { ?>
-
                                     <?php echo '<dt>' . $key . '</dt>';
                                           echo '<dd>' . $metadatavalue . '</dd>';
 

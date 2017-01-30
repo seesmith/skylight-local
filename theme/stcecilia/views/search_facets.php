@@ -15,7 +15,9 @@
                 <div class="panel-heading">
                     <span class="facet_title">
                     <a data-toggle="collapse" data-parent="#accordion" href="?query=h#collapse<?php echo $index ?>">
-                        + <?php echo $facet['name'] ?>
+
+                        <?php echo $facet['name'] ?><i class="fa fa-chevron-down" aria-hidden="true"></i>
+
                     </a></span>
                 </div>
 
