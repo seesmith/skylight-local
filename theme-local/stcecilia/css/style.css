@@ -152,35 +152,9 @@ body
     margin-bottom: 20px;
 }
 
-.list-group-item.active a, .list-group-item.active:focus a, .list-group-item.active:hover a {
-    color: #FFF;
-}
-
-.list-group-item a {
-    word-wrap: break-word;
-}
-
-.list-group-item.active {
-    background-color: #9FAB97;
-    border-color: #9FAB97;
-}
-
-.list-group-item.active:hover {
-    background-color: #98767E;
-    color: #eeeeee;
-    border-color: #9FAB97;
-}
-
-.list-group-item.active:hover a{
-    color: #eeeeee;
-}
-
-.list-group-item.hover a{
-    color: #98767E;
-}
 
 a:focus, a:hover {
-    color: #98767E;
+    color: #660000;
     text-decoration: underline;
 }
 
@@ -258,7 +232,7 @@ div.related {
     border-color: #eeeeee;
 }
 .text-primary {
-    color: #9FAB97;
+    color: #999999;
 }
 
 a {
@@ -292,7 +266,7 @@ a {
 
 .feedback_form h1 {
     font-size: 18px;
-    color: #9FAB97;
+    color: #bbbbbc;
 }
 
 .feedback_form label {
@@ -367,6 +341,7 @@ div.spacer {
     border: none;
 }
 
+
 .nav > li > i.fa-inactive {
     display: block;
     padding: 5px 5px;
@@ -378,6 +353,16 @@ div.spacer {
     background-color: #111111;
     border-radius: 0;
     color: rgb(153, 153, 153);
+}
+
+.navbar a {
+    color: #EEEEEE;
+    text-decoration: none;
+}
+
+.navbar a:focus, a:hover {
+    color: #660000;
+    text-decoration: none;
 }
 
 .navbar-form > button {
@@ -474,18 +459,27 @@ div.spacer {
 
 .grid-item {
     margin-bottom: 10px;
+    height: 200px;
 }
 
 .grid-item-content {
-    /*background: #eeeeee;
-    border: 2px solid #cecece;*/
+    /*background: #eeeeee;*/
+    border: 2px solid #cecece;
     border-radius: 1px;
-    padding: 2px;
+    /*padding: 2px;*/
     text-align: center;
+    height: 100%;
+}
+
+#openseadragon {
+    margin: 0 auto;
+    width: 100%;
+    height: 800px;
 }
 
 .searchTitle{
-    font-size: 20px;
+    font-size: 16px;
+    width: 100%;
 }
 
 .searchFoundRow {
@@ -574,14 +568,14 @@ div.spacer {
     text-align:center;
 }
 
-#stc-section1 {padding-top:110px;padding-bottom:10px;max-height:1100px;color: #fff; background-color: #999999; width: 100%;}
-#stc-section2 {padding-top:10px;padding-bottom:10px;max-height:1100px;color: #fff; background-color:#000000;width:100%;}
-#stc-section3 {padding-top:10px;padding-bottom:10px;max-height:1100px;color: #fff; background-color: #999999;}
-#stc-section4 {padding-top:10px;padding-bottom:10px;max-height:1100px;color: #000; background-color: #fff;}
-#stc-section5 {padding-top:10px;padding-bottom:10px;max-height:1100px;color: #fff; background-color: #999999;}
-#stc-section6 {padding-top:10px;padding-bottom:10px;max-height:1100px;color: #000; background-color: #fff;}
+#stc-section1 {padding-top:110px;padding-bottom:10px;max-height:1100px; color: #000; background-color: #C5C5C5; width: 100%;}
+#stc-section2 {padding-top:10px;padding-bottom:10px;max-height:1100px; color: #fff; background-color: #EEEEEE; width: 100%; }
+#stc-section3 {padding-top:10px;padding-bottom:10px;max-height:1100px; color: #fff; background-color: #999999;}
+#stc-section4 {padding-top:10px;padding-bottom:10px;max-height:1100px; color: #000; background-color: #fff;}
+#stc-section5 {padding-top:10px;padding-bottom:10px;max-height:1100px; color: #fff; background-color: #999999; width: 100%;border-radius: 0;}
+#stc-section6 {padding-top:10px;padding-bottom:10px;max-height:1100px; color: #000; background-color: #fff;}
 
-.stc-tags                   { margin-top: 5px; margin: 0; display: inline;}
+.stc-tags                   { margin-top: 5px; display: inline;}
 .stc-tags a                 { font-size: 13px; color: #fff;background: #EB0955; -webkit-border-radius: 5px; -moz-border-radius: 5px; border-radius: 5px; padding: 2px 6px; line-height: 20px; margin-right: 8px; text-decoration: none; display:inline-block; }
 .stc-tags a.bold            { font-weight: bold; }
 .stc-tags a:hover           { background: #093563; color: #ffffff; }
@@ -606,6 +600,40 @@ div.spacer {
 .second-navbar{
     margin-bottom: 0px;
     top:50px;
-    background-color:#cdcdcd;
+    background-color: #444444;
     border:none;
 }
+
+/** FACETS */
+
+.facet_title{
+    font-size: 16px;
+}
+
+.collapse.in {
+    display: block;
+}
+
+.panel-facets {
+    color: #777;
+    border: none;
+    box-shadow: none;
+}
+
+.panel-group .panel-heading + .panel-collapse > .list-group, .panel-group .panel-heading + .panel-collapse > .panel-body{
+    border: none;
+}
+
+.description {
+    padding: 1px;
+    font-size: 14px;
+}
+
+.straight-borders
+{
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+}
+
