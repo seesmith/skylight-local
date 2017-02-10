@@ -81,8 +81,7 @@ $config['skylight_meta_fields'] = array('Title' => 'dc.title',
     'Subject' => 'dc.subject',
     'Type' => 'dc.type');
 
-$config['skylight_recorddisplay'] = array('Title','Alternative Title',
-    'Short Description',
+$config['skylight_recorddisplay'] = array('Alternative Title',
     'Instrument',
     'Instrument Family',
     'Maker',
@@ -90,54 +89,11 @@ $config['skylight_recorddisplay'] = array('Title','Alternative Title',
     'Place Made',
     'Date Made',
     'Measurements',
-    'Inscription',
-    'Author',
-    'Country',
-    'City',
-    'Subject',
-    'Abstract',
-    'Date',
-    'Period',
-    'Accession Number',
-    'Technical Description',
-    'Other Information',
-    'Collection',
-    'Notes',
-    'Signature',
-    'Rights Holder',
-    'Genus',
-    'Provenance',
-    'Decorations',
-    'Maker Biography',
-    'Associated Musician Full',
-    'Associated Musician',
-    'Piccolo Description',
+    'Inscription');
+
+$config['skylight_descriptiondisplay'] = array(
     'Short Description',
-    'Description',
-    'Associated Musician Biography',
-    'Instrument Type',
-    'Instrument Type History');
-
-$config['skylight_descriptiondisplay'] = array(
-    'Abstract',
-    'Decorations',
-    'Instrument Type',
-    'Instrument Type History',
-    'Signature',
-    'Rights Holder',
-    'Accession Number');
-
-$config['skylight_descriptiondisplay'] = array(
-    'Abstract',
-    'Decorations',
-    //'Provenance',
-    'Description',
-    'Technical Description',
-    'Other Information',
-    'Notes',
-    'Collection',
-    'Instrument Type Info',
-    'Instrument Type History');
+    'Description');
 
 $config['skylight_creatordisplay'] = array(
     'Maker',
@@ -148,13 +104,7 @@ $config['skylight_creatordisplay'] = array(
 
 $config['skylight_fullrecorddisplay'] = array(
     'Alternative Title',
-    'Instrument',
-    'Instrument Family',
-    'Maker','Subject',
     'Abstract',
-    'Place Made',
-    'Date Made',
-    'Description',
     'Other Information',
     'Notes',
     'Decorations',
@@ -168,7 +118,7 @@ $config['skylight_fullrecorddisplay'] = array(
     'Maker Biography',
     'Associated Musician Full',
     'Associated Musician',
-    'Piccolo Description',
+    'Description',
     'Technical Description',
     'Associated Musician Biography',
     'Instrument Type',
@@ -200,7 +150,7 @@ $config['skylight_feed_fields'] = array('Title' => 'Title',
     'Description' => 'Abstract',
     'Date' => 'Date');
 
-$config['skylight_related_number'] = 20;
+$config['skylight_related_number'] = 5;
 $config['skylight_results_per_page'] = 20;
 $config['skylight_show_facets'] = false;
 $config['skylight_share_buttons'] = false;

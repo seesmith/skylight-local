@@ -332,7 +332,7 @@ footer                  { display: block; padding-bottom: 20px; width: 100%; bac
 
 .container-fluid                    { margin-top: 10px;}
 
-.panel                              { margin-top: 5px; width: 700px;}
+.panel                              { margin-top: 5px; width: 710px;}
 .panel-body                         { font-size: 13px; color: #333; }
 .metadatarow                        { margin: 0 auto; padding: 0; overflow: auto; width: 668px;}
 .metadatakey                        { width: 100px; padding: 0; margin: 0; float: left; color: #666;}
@@ -405,6 +405,14 @@ table tr:last-child                 { border: 0; border-bottom: none; }
 .feedback_form                      { padding: 0 20px;}
 .feedback_form label                { display: block; width: 100px;}
 #recaptcha_table                    { width: 480px; }
+
+/*for IIIF*/
+.full-image                         { border: 2px solid #333; width: 710px;}
+#openseadragon                      { width: 706px; height: 706px; }
+
+.iiiflogo                           { height:50px;}
+.iiifstatic                         { height:80px;}
+.lunaiiif                           { height:50px;}
 
 
 /* <END> Site Css \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\ */
