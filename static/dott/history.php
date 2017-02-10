@@ -3,7 +3,7 @@
         <h1 class="itemtitle">History</h1>
 
         <h1 class="itemtitle">Neurosurgery at the Royal Infirmary of Edinburgh</h1>
-        <img src="<?php echo base_url()?>/theme/dott/images/LHB11-7-2d.gif" alt="Royal Infirmary of Edinburgh" class="img-responsive pull-right img-circle" />
+        <img src="<?php echo base_url()?>/theme/dott/images/P-PL1-S-103d.gif" alt="Royal Infirmary of Edinburgh" class="img-responsive pull-right img-circle" />
 
         <p>When Dott started out on his neurosurgical career in the 1920s there were no dedicated facilities for
             neurosurgery or neurorehabilitation. Dott worked in private practice, using his own consulting rooms and
@@ -47,7 +47,7 @@
             Western General Hospital in 1960.</p>
 
         <h1 class="itemtitle">Department of Surgical Neurology, Western General Hospital</h1>
-        <img src="<?php echo base_url()?>/theme/dott/images/P-PL1-S-103d.gif" alt="Bangour General Hospital" class="img-responsive pull-right img-circle" />
+        <img src="<?php echo base_url()?>/theme/dott/images/LHB11-7-2d.gif" alt="Western General Hospital" class="img-responsive pull-right img-circle" />
 
         <p>In 1960, Dott took charge of a new Department of Surgical Neurology at the Western General Hospital, Edinburgh
             (WGH). This new department brought together the facilities for the diagnosis, treatment and rehabilitation

@@ -14,7 +14,7 @@ if (strpos($_SERVER['HTTP_HOST'], "localhost") !== false) {
 else if (strpos($_SERVER['HTTP_HOST'], "test") !== false) {
     $config['skylight_ga_code'] = '';
     $config['skylight_solrbase'] = 'http://lac-repo-test14.is.ed.ac.uk:8090/';
-    $config['skylight_link_url'] = 'http://lac-archives-dev.is.ed.ac.uk:8081';
+    $config['skylight_link_url'] = 'http://lac-archives-test.is.ed.ac.uk:8081';
 }
 else {
     $config['skylight_ga_code'] = 'UA-25737241-19';
