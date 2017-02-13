@@ -4,88 +4,77 @@
     <?php
     $numrel = count($related_items);
     // if there are related items
-    if ($numrel > 0) {
+    if ($numrel > 0)
+    {
         $type_field = $this->skylight_utilities->getField('Type');
         $i = 0;?>
-    <div class="grid" data-masonry='{ "itemSelector": ".grid-item", "columnWidth": 150 }'>
+        <div class="grid" data-masonry='{ "itemSelector": ".grid-item", "columnWidth": 150 }'>
         <?php
 
-        foreach ($related_items as $index => $doc) {
+        $link_uri_field = $this->skylight_utilities->getField("ImageURI");
+        foreach ($related_items as $index => $doc)
+        {
 
             ?>
-                    <div class="grid-item thumbnail">
-                        <?php
+            <div class="grid-item thumbnail">
+                <?php
 
-                        $needlink = true;
+                $needlink = true;
 
-                        //TODO dcidentifieruri is a temporary location for the IIIF URIs
-                        if (isset($doc['dcidentifieruri']))
-                        {
-                            foreach ($doc['dcidentifieruri'] as $linkURI)
-                            {
-                                if (strpos($linkURI, 'luna') > 0 and $needlink == true)
-                                {
-                                    $tileSource = str_replace('detail', 'iiif', $linkURI) . '/info.json';
-                                    $iiifmax = str_replace('info.json', 'full/full/0/default.jpg', $tileSource);
-                                    list($width, $height) = getimagesize($iiifmax);
-                                    $portrait = true;
-                                    if ($width > $height)
-                                    {
-                                        $portrait = false;
-                                    }
-                                    if ($portrait)
-                                    {
-                                        $iiifurlsmall = str_replace('info.json', 'full/,160/0/default.jpg', $tileSource);
-                                    }
-                                    else
-                                    {
-                                        $iiifurlsmall = str_replace('info.json', 'full/160,/0/default.jpg', $tileSource);
-                                    }
-                                    $iiifurlfull = str_replace('info.json', 'full/full/0/default.jpg', $tileSource);
+                //TODO dcidentifieruri is a temporary location for the IIIF URIs
+                if (isset($doc[$link_uri_field])) {
+                    foreach ($doc[$link_uri_field] as $linkURI) {
+                        if (strpos($linkURI, 'luna') > 0 and $needlink == true) {
 
-                                    $thumbnailLink = '<a href="./record/' . $doc['id'] . '" title = "' . $doc[$title_field][0] . '" >';
-                                    $thumbnailLink .= '<img src = "' . $iiifurlsmall . '" class="record-thumbnail-search" title="' . $doc[$title_field][0] . '" /></a>';
+                            $thumbnailLink = '<a href="./record/' . $doc['id'] . '" title = "' . $doc[$title_field][0] . '" >';
 
-                                    echo $thumbnailLink;
-                                    $needlink = false;
-
-                                }
+                            list($width, $height) = getimagesize($linkURI);
+                            $portrait = true;
+                            if ($width > $height) {
+                                $portrait = false;
                             }
-                        }
-                        else
-                        {
-                            $thumbnailLink  =  '<a href="./record/'.$doc['id'].'" title = "'. $doc[$title_field][0].'" > No Image for this </a>';
+                            if ($portrait) {
+                                $thumbnailLink .= '<img src = "' . $linkURI . '" class="record-thumbnail-portrait" title="' . $doc[$title_field][0] . '" /></a>';
+                            } else {
+                                $thumbnailLink .= '<img src = "' . $linkURI . '" class="record-thumbnail-landscape" title="' . $doc[$title_field][0] . '" /></a>';
+                            }
+
                             echo $thumbnailLink;
                             $needlink = false;
+
                         }
-
-                        ?>
-                        <p class="text-center hidden-xs">
-                            <a href="./record/<?php echo $doc['id'] ?>"><?php echo $doc[$title_field][0]; ?></a>
-                        </p>
-
-                        <p class="text-center hidden-md hidden-sm hidden-lg">
-                            <small><a href="./record/<?php echo $doc['id'] ?>"><?php echo $doc[$title_field][0]; ?></a>
-                            </small>
-                        </p>
-                    </div>
-            <?php
-        }?>
-        <script>
-            var $grid = $('.grid').imagesLoaded( function() {
-                // init Masonry after all images have loaded
-                $grid.masonry({
-                    // options...
-                });
-            });
-        </script>
-        </div>
+                    }
+                }
+                else
+                {
+                    $thumbnailLink  =  '<a href="./record/'.$doc['id'].'" title = "'. $doc[$title_field][0].'" > No Image for this </a>';
+                    echo $thumbnailLink;
+                    $needlink = false;
+                }
+                ?>
+                <p class="text-center hidden-xs">
+                    <a href="./record/<?php echo $doc['id'] ?>"><?php echo $doc[$title_field][0]; ?></a>
+                </p>
+                <p class="text-center hidden-md hidden-sm hidden-lg">
+                    <small><a href="./record/<?php echo $doc['id'] ?>"><?php echo $doc[$title_field][0]; ?></a>
+                    </small>
+                </p>
+            </div>
         <?php
-    } // else there aren't any related items
-    else { ?>
-
-        None.
-        <div class="spacer"></div>
-
+        }?>
+            <script>
+                var $grid = $('.grid').imagesLoaded( function() {
+                    // init Masonry after all images have loaded
+                    $grid.masonry({
+                        // options...
+                    });
+                });
+            </script>
+        </div>
+<?php
+} // else there aren't any related items
+else { ?>
+    None.
+    <div class="spacer"></div>
     <?php } ?>
 </div>

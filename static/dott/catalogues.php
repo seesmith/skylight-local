@@ -3,6 +3,7 @@
         <h1 class="itemtitle">How to use the catalogues</h1>
             <p>LHSA’s anonymised case note catalogues are accessed from a section of the University of Edinburgh’s online
                     archive catalogue, ArchivesSpace:</p>
+
             <p>Neurosurgery case notes (Norman Dott)
             There are four main groups (or series) of case notes in the Dott collections:</p>
         <p>
@@ -38,7 +39,7 @@
                             Entering either one of these terms will bring up all patients recorded under these categories.</li>
                     <li>Medical condition: medical condition can either be searched through entering a condition name in
                             the search box, or by clicking in the Subject menu bar of the catalogue page and entering a
-                            condition (expressed as an authority term from <a href=https://www.nlm.nih.gov/mesh/MBrowser.html" target="_blank">MeSH</a>) in the ‘filter by text’ box.</li>
+                            condition (expressed as an authority term from <a href="https://www.nlm.nih.gov/mesh/MBrowser.html" target="_blank">MeSH</a>) in the ‘filter by text’ box.</li>
                     <li>Geographical origin of patient (Dott catalogues): in order to protect the anonymity of patients,
                             we have expressed where patients come from in four main ways: Edinburgh and the Lothians,
                             Scotland (outside Edinburgh and the Lothians), Great Britain (excluding Scotland) and outside
@@ -60,6 +61,7 @@
             meet strict conditions on the use of patient-identifiable data. Access is by means of an application to NHS
             Lothian through the LHSA Archivist. These highly confidential resources can only be consulted in person in
             our reading room in the Centre for Research Collections, University of Edinburgh. Please contact us
+
             <a href="mailto:lhsa@ed.ac.uk">lhsa@ed.ac.uk</a> for further details.</p>
     </div>
 </div>

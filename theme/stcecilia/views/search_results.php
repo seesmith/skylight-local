@@ -25,20 +25,23 @@
     <div class="grid">
         <div class="grid-sizer col-xs-3"></div>
         <?php
+        $link_uri_field = $this->skylight_utilities->getField("ImageURI");
         foreach ($docs as $index => $doc) {
 
         $bitstream_array = array();
         $thumbnailLink = "";
-            $thumbnailImg = "";
+        $thumbnailImg = "";
 
             //TODO dcidentifieruri is a temporary location for the IIIF URIs
-            if (isset($doc['dcidentifieruri']))
+            if (isset($doc[$link_uri_field][0]))
             {
-                $linkURI = $doc['dcidentifieruri'][0];
-                if (strpos($linkURI, 'luna') > 0)
+                $linkURI = $doc[$link_uri_field][0];
+                if (strpos($linkURI, 'luna') > 0 )
                 {
-                    $tileSource = str_replace('detail', 'iiif', $linkURI) . '/info.json';
-                    $iiifmax = str_replace('info.json', 'full/full/0/default.jpg', $tileSource);
+                    //$tileSource = str_replace('images.is.ed.ac.uk', 'lac-luna-test2.is.ed.ac.uk:8181', $linkURI);
+                    $tileSource = str_replace('detail', 'iiif', $linkURI);
+                    $tileSource = str_replace('full/full/0/default.jpg', 'info.json', $linkURI);
+                    $iiifmax = $linkURI;
                     list($width, $height) = getimagesize($iiifmax);
                     $portrait = true;
                     if ($width > $height)
@@ -47,37 +50,41 @@
                     }
                     if ($portrait)
                     {
-                        $iiifurlsmall = str_replace('info.json', 'full/,160/0/default.jpg', $tileSource);
+                        $iiifurlsmall = str_replace('info.json', 'full/,266/0/default.jpg', $tileSource);
                     }
                     else
                     {
-                        $iiifurlsmall = str_replace('info.json', 'full/160,/0/default.jpg', $tileSource);
+                        $iiifurlsmall = str_replace('info.json', 'full/266,/0/default.jpg', $tileSource);
                     }
                     $iiifurlfull = str_replace('info.json', 'full/full/0/default.jpg', $tileSource);
 
                     $thumbnailLink = '<a href="./record/' . $doc['id'] . '" title = "' . $doc[$title_field][0] . '" >';
-                    $thumbnailLink .= '<img class="img-responsive record-thumbnail-search" src="' . $iiifurlsmall . '"  title="' . $doc[$title_field][0] . '" /></a>';
+                    $thumbnailImg = '<img class="img-responsive record-thumbnail-search" src="' . $iiifurlsmall . '"  title="' . $doc[$title_field][0] . '" />';
 
                 }
                 else
                 {
-                    $thumbnailLink  =  '<a href="./record/'.$doc['id'].'" title = "'. $doc[$title_field][0].'" ><img class="img-responsive record-thumbnail-search" src="../theme/stcecilia/images/comingsoon.gif"  title="' . $doc[$title_field][0] . '" /> </a>';
+                    $thumbnailLink  =  '<a href="./record/'.$doc['id'].'" title = "'. $doc[$title_field][0].'" >';
+                    $thumbnailImg = '<img class="img-responsive record-thumbnail-search" src="../theme/stcecilia/images/comingsoon1.gif"  title="' . $doc[$title_field][0] . '" />';
                 }
             }
             else
             {
-                $thumbnailLink  =  '<a href="./record/'.$doc['id'].'" title = "'. $doc[$title_field][0].'" ><img class="img-responsive record-thumbnail-search" src="../theme/stcecilia/images/comingsoon.gif"  title="' . $doc[$title_field][0] . '" /> </a>';
+                $thumbnailLink  =  '<a href="./record/'.$doc['id'].'" title = "'. $doc[$title_field][0].'" >';
+                $thumbnailImg = '<img class="img-responsive record-thumbnail-search" src="../theme/stcecilia/images/comingsoon.gif"  title="' . $doc[$title_field][0] . '" />';
             }
 
         ?>
 
         <div class="grid-item col-xs-6 col-sm-6 col-md-3 col-lg-3">
+            <?php echo $thumbnailLink; ?>
             <div class="grid-item-content box">
-                <div>
-                <?php echo $thumbnailLink; ?>
-                </div>
-                <span class="searchTitle"><?php echo $doc[$title_field][0]; ?></span>
-             </div>
+
+                <?php echo $thumbnailImg; ?>
+                <figcaption><span class="searchTitle"><?php echo $doc[$title_field][0]; ?></span><br>
+                <span class="searchDate"><?php echo empty($doc[$date_field][0]) ? "unknown" : $doc[$date_field][0] ; ?></span></<figcaption>
+            </div>
+            </a>
         </div>
 
     <?php }?>
