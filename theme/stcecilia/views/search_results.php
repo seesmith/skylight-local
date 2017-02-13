@@ -1,4 +1,4 @@
-<div class="col-lg-9 col-md-9 col-sm-9 col-xs-12 ">
+<div class="col-lg-9 col-md-9 col-sm-12 col-xs-12 ">
     <?php
 
         // Set up some variables to easily refer to particular fields you've configured
@@ -19,8 +19,8 @@
     ?>
 
     <div class="container-fluid">
-        <div class="row searchFoundRow">
-            <span class="searchFound">Found: <?php echo $rows ?> instruments </span>
+        <div class="searchFoundRow">
+            <span class="searchFound"><?php echo $rows ?> instruments found </span>
         </div>
     <div class="grid">
         <div class="grid-sizer col-xs-3"></div>
@@ -71,7 +71,7 @@
 
         ?>
 
-        <div class="grid-item col-xs-12 col-sm-3 ">
+        <div class="grid-item col-xs-6 col-sm-6 col-md-3 col-lg-3">
             <div class="grid-item-content box">
                 <div>
                 <?php echo $thumbnailLink; ?>
