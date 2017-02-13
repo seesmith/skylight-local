@@ -14,5 +14,4 @@
                 for Diseases of the Chest, the Regional Hospital National X-ray Campaign and Southfield Sanitorium. For more
                 information about these projects, see (link to LHSA page when it is up). </p>
 
-
         </div>
