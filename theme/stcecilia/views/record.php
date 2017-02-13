@@ -7,7 +7,7 @@ $type_field = $this->skylight_utilities->getField("Type");
 $bitstream_field = $this->skylight_utilities->getField("Bitstream");
 $thumbnail_field = $this->skylight_utilities->getField("Thumbnail");
 $filters = array_keys($this->config->item("skylight_filters"));
-$link_uri_field = $this->skylight_utilities->getField("Link");
+$link_uri_field = $this->skylight_utilities->getField("ImageURI");
 $short_field = $this->skylight_utilities->getField("Short Description");
 $date_field = $this->skylight_utilities->getField("Date");
 $media_uri = $this->config->item("skylight_media_url_prefix");
@@ -96,14 +96,14 @@ if(isset($solr[$bitstream_field]) && $link_bitstream) {
 <nav class="navbar navbar-fixed-top second-navbar">
     <div class="container-fluid">
         <div class="navbar-header">
-            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#record-navbar">
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
         </div>
         <div>
-            <div class="collapse navbar-collapse" id="myNavbar">
+            <div class="collapse navbar-collapse" id="record-navbar">
                 <ul class="nav navbar-nav">
                     <li><a href="<?php echo $_SERVER['REQUEST_URI'];?>#stc-section1">Top</a></li>
                     <li><a href="<?php echo $_SERVER['REQUEST_URI'];?>#stc-section2">Image</a></li>
@@ -156,121 +156,85 @@ foreach($recorddisplay as $key)
 
 ?>
 
-<div id="stc-section1" class="container-fluid">
+<div id="stc-section1" class="container-fluid record-content">
     <h2 class="itemtitle hidden-sm hidden-xs"><?php echo $title .' | '. $maker. ' | '.$date;?></h2>
     <h4 class="itemtitle hidden-lg hidden-md"><?php echo $title .' | '. $maker. ' | '.$date;?></h4>
 </div>
 
+<div id="stc-section2" class="container-fluid">
 <?php
 if (isset($solr[$link_uri_field]))
 {
-    foreach($solr[$link_uri_field] as $linkURI) {
+    $imageCounter = 0;
+    foreach($solr[$link_uri_field] as $linkURI)
+    {
+        $tileSource = str_replace('full/full/0/default.jpg', 'info.json', $linkURI);
+        $json =  file_get_contents($tileSource);
+        $jobj = json_decode($json, true);
+        $error = json_last_error();
 
-        if (strpos($linkURI, 'luna') > 0) {
-            //just for test, this line!
-            //$tileSource = str_replace('images.is.ed.ac.uk', 'lac-luna-test2.is.ed.ac.uk:8181', $linkURI);
-            $tileSource = str_replace('detail', 'iiif', $linkURI) . '/info.json';
-            $iiifmax = str_replace('info.json', 'full/full/0/default.jpg', $tileSource);
-            list($width, $height) = getimagesize($iiifmax);
-            //echo 'WIDTH'.$width.'HEIGHT'.$height
-            $portrait = true;
-            if ($width > $height)
-            {
-                $portrait = false;
-            }
-            $json =  file_get_contents($tileSource);
-            $jobj = json_decode($json, true);
+        $jsoncontext[$imageCounter] = $jobj['@context'];
+        $jsonid[$imageCounter] = $jobj['@id'];
+        $jsonheight[$imageCounter] = $jobj['height'];
+        $jsonwidth[$imageCounter] = $jobj['width'];
+        $jsonprotocol[$imageCounter] = $jobj['protocol'];
+        $jsontiles[$imageCounter]= $jobj['tiles'];
+        $jsonprofile[$imageCounter] = $jobj['profile'];
 
-            $error = json_last_error();
-
-            $jsoncontext = $jobj['@context'];
-            $jsonid = $jobj['@id'];
-            $jsonheight = $jobj['height'];
-            $jsonwidth = $jobj['width'];
-            $jsonprotocol = $jobj['protocol'];
-            $jsontiles = $jobj['tiles'];
-            $jsonprofile = $jobj['profile'];
+        list($width, $height) = getimagesize($linkURI);
+        //echo 'WIDTH'.$width.'HEIGHT'.$height
+        $portrait = true;
+        if ($width > $height)
+        {
+            $jsontilesize[$imageCounter] = $jsontiles[$imageCounter][0]['width'];
+            $portrait = false;
         }
+        else
+        {
+            $jsontilesize[$imageCounter] = $jsontiles[$imageCounter][0]['height'];
+        }
+        $imageCounter++;
     }
-}
 ?>
 
-<!--div id="stc-section2" class="container-fluid">
-    <div class="col-lg-12 hidden-md hidden-sm hidden-xs main-image">
-        <img class ="stc-img-responsive" src = "<?php
-        if ($portrait){
-            $iiifstatic = str_replace('info.json','full/,600/0/default.jpg',$tileSource);
-        }
-        else{
-            $iiifstatic = str_replace('info.json','full/1200,/0/default.jpg',$tileSource);
-        }
-        echo $iiifstatic;?>">
-    </div>
-    <div class="col-md-9 hidden-lg hidden-sm hidden-xs resized-image">
-        <img class ="stc-img-responsive" src = "<?php
-        $iiifstatic = str_replace('info.json','full/!600,600/0/default.jpg',$tileSource);
-        echo $iiifstatic;?>">
-    </div>
-    <div class="col-sm-6 hidden-lg hidden-md hidden-xs resized-image">
-        <img class ="stc-img-responsive"  src = "<?php
-        $iiifstatic = str_replace('info.json','full/!400,400/0/default.jpg',$tileSource);
-        echo $iiifstatic;?>">
-    </div>
-    <div class="col-xs-3 hidden-lg hidden-md hidden-sm resized-image">
-        <img class ="stc-img-responsive"  src = "<?php  $iiifstatic = str_replace('info.json','full/!200,200/0/default.jpg',$tileSource);
-        echo $iiifstatic;
-        ?>">
-    </div>
-</div-->
+    <div class="col-lg-12 main-image">
+        <?php  $divCounter = 0;
+        $freshIn = true;
+        while ($divCounter < $imageCounter)
+        {?>
+            <div id="openseadragon<?php echo $divCounter; ?>" class="image-toggle"<?php if (!$freshIn) { echo ' style="display:none;"'; } ?>>
+                <script type="text/javascript">
+                    OpenSeadragon({
+                        id: "openseadragon<?php echo $divCounter;?>",
+                        prefixUrl: "<?php echo base_url() ?>assets/openseadragon/images/",
+                        mouseNavEnabled: false,
+                        tileSources: [{
+                            "@context": "<?php echo $jsoncontext[$divCounter] ?>",
+                            "@id": "<?php echo $jsonid[$divCounter] ?>",
+                            "height": <?php echo $jsonheight[$divCounter] ?>,
+                            "width": <?php echo $jsonwidth[$divCounter] ?>,
+                            "profile": ["http://iiif.io/api/image/2/level2.json",
+                                {
+                                    "formats": ["jpg"]
+                                }
+                            ],
+                            "protocol": "<?php echo $jsonprotocol[$divCounter] ?>",
+                            "tiles": [{
+                                "scaleFactors": [1, 2, 8, 16, 32],
+                                "width": "<?php echo $jsontiles[$divCounter][0]['width'];?>",
+                                "height": "<?php echo $jsontiles[$divCounter][0]['height'];?>"
+                            }],
+                            "tileSize":<?php echo $jsontilesize[$divCounter];?>
+                        }]
+                    });
+                </script>
+            </div>
 
-<div id="stc-section2" class="container-fluid">
-    <div class="col-lg-12 hidden-md hidden-sm hidden-xs main-image">
-        <div id="openseadragon">
-            <script type="text/javascript">
-                OpenSeadragon({
-                    id: "openseadragon",
-                    prefixUrl: "<?php echo base_url() ?>assets/openseadragon/images/",
-                    tileSources: [{
-                        "@context": "<?php echo $jsoncontext ?>",
-                        "@id": "<?php echo $jsonid ?>",
-                        "height": <?php echo $jsonheight ?>,
-                        "width": <?php echo $jsonwidth ?>,
-                        "profile":  [ "http://iiif.io/api/image/2/level2.json" ,
-                            {
-                                "formats" : [ "gif", "pdf"]
-                            }
-                        ],
-                        "protocol": "<?php echo $jsonprotocol ?>",
-                        "tiles": [{
-                            "scaleFactors": [ 1, 2, 8, 16, 32 ],
-                            "width": 512
-                        }],
-                        tileSize: 500,
-                        //minLevel: 2,
-                        preserveViewport: true,
-                        visibilityRatio: 1,
-                        minZoomLevel: 1,
-                        defaultZoomLevel: 1,
-                        sequenceMode: true
-                    }]
-                });
-            </script>
-        </div>
-    </div>
-    <div class="col-md-9 hidden-lg hidden-sm hidden-xs resized-image">
-        <img class ="stc-img-responsive" src = "<?php
-        $iiifstatic = str_replace('info.json','full/!600,600/0/default.jpg',$tileSource);
-        echo $iiifstatic;?>">
-    </div>
-    <div class="col-sm-6 hidden-lg hidden-md hidden-xs resized-image">
-        <img class ="stc-img-responsive"  src = "<?php
-        $iiifstatic = str_replace('info.json','full/!400,400/0/default.jpg',$tileSource);
-        echo $iiifstatic;?>">
-    </div>
-    <div class="col-xs-3 hidden-lg hidden-md hidden-sm resized-image">
-        <img class ="stc-img-responsive"  src = "<?php  $iiifstatic = str_replace('info.json','full/!200,200/0/default.jpg',$tileSource);
-        echo $iiifstatic;
-        ?>">
+            <?php
+            $divCounter++;
+            $freshIn = false;
+        }
+        ?>
     </div>
 
 
@@ -278,55 +242,61 @@ if (isset($solr[$link_uri_field]))
     $numThumbnails = 0;
     $imageset = false;
     $thumbnailLink = array();
-    if (isset($solr[$link_uri_field]))
+
+    $countThumbnails = count($solr[$link_uri_field]);
+    echo '<div class="thumb-strip">';
+    if ($countThumbnails > 1)
     {
         foreach ($solr[$link_uri_field] as $linkURI)
         {
-            if (strpos($linkURI, 'luna') > 0)
+            $linkURI = $solr[$link_uri_field][$numThumbnails];
+
+            $thumbnailLink[$numThumbnails] = '<label class="image-toggler" data-image-id="#openseadragon'.$numThumbnails.'">';
+            $thumbnailLink[$numThumbnails] .= '<input type="radio" name="options" id="option'.$numThumbnails.'">';
+
+            list($width, $height) = getimagesize($linkURI);
+            $portrait = true;
+            if ($width > $height)
             {
-                $tileSource = str_replace('detail', 'iiif', $linkURI) . '/info.json';
-                $iiifmax = str_replace('info.json', 'full/full/0/default.jpg', $tileSource);
-                list($width, $height) = getimagesize($iiifmax);
-                $portrait = true;
-                if ($width > $height)
-                {
-                    $portrait = false;
-                }
-                if ($portrait) {
-                    $iiifurlsmall = str_replace('info.json', 'full/,250/0/default.jpg', $tileSource);
-                }
-                else{
-                    $iiifurlsmall = str_replace('info.json', 'full/250,/0/default.jpg', $tileSource);
-                }
-                $iiifurlfull = str_replace('info.json', 'full/full/0/default.jpg', $tileSource);
-
-                $thumbnailLink[$numThumbnails]  = '<a title = "' . $solr[$title_field][0] . '" class="fancybox" rel="group" href="' . $iiifurlfull . '"> ';
-                $thumbnailLink[$numThumbnails] .= '<img src = "' . $iiifurlsmall . '" class="record-thumbnail-search" title="' . $solr[$title_field][0] . '" /></a>';
-
-                $numThumbnails++;
-                $imageset = true;
+                $portrait = false;
             }
+            if ($portrait)
+            {
+                $thumbnailLink[$numThumbnails] .= '<img src = "' . $linkURI . '" class="record-thumb-strip" title="' . $solr[$title_field][0] . '" /></label>';
+            } else
+            {
+                $thumbnailLink[$numThumbnails] .= '<img src = "' . $linkURI . '" class="record-thumb-strip" title="' . $solr[$title_field][0] . '" /></label>';
+            }
+
+            echo $thumbnailLink[$numThumbnails];
+            $numThumbnails++;
+            $imageset = true;
+
         }
     }
-?>
+
+    ?>
+        </div>
+    <?php
+    }
+    ?>
 </div>
+
 <div id="stc-section3" class="container-fluid">
-    <!--h2 class="itemtitle hidden-sm hidden-xs">Categories</h2-->
-    <!--h4 class="itemtitle hidden-md hidden-lg">Categories</h4-->
     <!--TODO Display Short description and description-->
     <div class="col-description">
-    <?php foreach($descriptiondisplay as $key) {
+        <?php foreach($descriptiondisplay as $key) {
 
-        $element = $this->skylight_utilities->getField($key);
+            $element = $this->skylight_utilities->getField($key);
 
-        if(isset($solr[$element])) {
-            foreach($solr[$element] as $index => $metadatavalue) {
-                echo "<span class='description'>";
-                echo $metadatavalue;
-                echo "</span>";
+            if(isset($solr[$element])) {
+                foreach($solr[$element] as $index => $metadatavalue) {
+                    echo "<span class='description'>";
+                    echo $metadatavalue;
+                    echo "</span>";
+                }
             }
-        }
-    } ?>
+        } ?>
     </div>
 
     <?php
@@ -362,7 +332,6 @@ if (isset($solr[$link_uri_field]))
 
 if(isset($solr[$bitstream_field]) && $link_bitstream) {
 
-    //if (!$videoLink == '' or !$audioLink == '')
     if (!$audioLink == '')
     {
         echo '<div id="stc-section4" class="container-fluid">
@@ -373,43 +342,39 @@ if(isset($solr[$bitstream_field]) && $link_bitstream) {
 }
 ?>
 
-        <div id="stc-section5" class="panel panel-default container-fluid">
-            <div class="panel-heading straight-borders">
-                <h2 class="panel-title hidden-sm hidden-xs ">
-                    <a class="accordion-toggle" data-toggle="collapse" href="#collapse1">Instrument Data <i class="fa fa-chevron-down" aria-hidden="true"></i>
-                    </a>
-                </h2>
-                <h4 class="panel-title hidden-md hidden-lg ">
-                    <a class="accordion-toggle" data-toggle="collapse" href="#collapse1">Instrument Data <i class="fa fa-chevron-down" aria-hidden="true"></i>
+<div id="stc-section5" class="panel panel-default container-fluid">
+    <div class="panel-heading straight-borders">
+        <h2 class="panel-title hidden-sm hidden-xs ">
+            <a class="accordion-toggle" data-toggle="collapse" href="#collapse1">Instrument Data <i class="fa fa-chevron-down" aria-hidden="true"></i>
+            </a>
+        </h2>
+        <h4 class="panel-title hidden-md hidden-lg ">
+            <a class="accordion-toggle" data-toggle="collapse" href="#collapse1">Instrument Data <i class="fa fa-chevron-down" aria-hidden="true"></i>
 
-                    </a>
-                </h4>
-            </div>
-            <div id="collapse1" class="panel-collapse collapse">
-                <div class="panel-body">
-                    <div class="col-sm-6 col-xs-12 col-md-8 col-lg-12 metadata">
-                    <dl class="dl-horizontal">
+            </a>
+        </h4>
+    </div>
+    <div id="collapse1" class="panel-collapse collapse">
+        <div class="panel-body">
+            <div class="col-sm-6 col-xs-12 col-md-8 col-lg-12 metadata">
+                <dl class="dl-horizontal">
                     <?php
 
-                        foreach($recorddisplay as $key) {
+                    foreach($recorddisplay as $key) {
                         $element = $this->skylight_utilities->getField($key);
 
-                            if (isset($solr[$element])) {
-                                foreach ($solr[$element] as $index => $metadatavalue) { ?>
-                                    <?php echo '<dt>' . $key . '</dt>';
-                                          echo '<dd>' . $metadatavalue . '</dd>';
+                        if (isset($solr[$element])) {
+                            foreach ($solr[$element] as $index => $metadatavalue) { ?>
+                                <?php echo '<dt>' . $key . '</dt>';
+                                echo '<dd>' . $metadatavalue . '</dd>';
 
-                                }
                             }
                         }
+                    }
                     ?>
 
-                    </dl>
-                    </div>
-                </div> <!-- panel body -->
+                </dl>
             </div>
-        </div>
-
-
-
+        </div> <!-- panel body -->
+    </div>
 </div>

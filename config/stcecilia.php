@@ -66,8 +66,8 @@ $config['skylight_fields'] = array(
     'Description' => 'dc.description.level2.en',
     'Associated Musician Biography' => 'dc.contributor.assocbio.en',
     'Instrument Type' => 'dc.type.desc.en',
-    'Instrument Type History' => 'dc.type.history.en'
-
+    'Instrument Type History' => 'dc.type.history.en',
+    'ImageURI' => 'dc.identifier.imageUri'
 );
 
 
@@ -81,7 +81,9 @@ $config['skylight_meta_fields'] = array('Title' => 'dc.title',
     'Subject' => 'dc.subject',
     'Type' => 'dc.type');
 
-$config['skylight_recorddisplay'] = array('Alternative Title',
+$config['skylight_recorddisplay'] = array(
+    'Title',
+    'Alternative Title',
     'Instrument',
     'Instrument Family',
     'Maker',
@@ -176,7 +178,7 @@ $config['skylight_feed_fields'] = array('Title' => 'Title',
     'Description' => 'Abstract',
     'Date' => 'Date');
 
-$config['skylight_related_number'] = 5;
+$config['skylight_related_number'] = 6;
 $config['skylight_results_per_page'] = 20;
 $config['skylight_show_facets'] = false;
 $config['skylight_share_buttons'] = false;

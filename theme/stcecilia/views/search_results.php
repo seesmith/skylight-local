@@ -25,6 +25,7 @@
     <div class="grid">
         <div class="grid-sizer col-xs-3"></div>
         <?php
+        $link_uri_field = $this->skylight_utilities->getField("ImageURI");
         foreach ($docs as $index => $doc) {
 
         $bitstream_array = array();
@@ -32,13 +33,15 @@
             $thumbnailImg = "";
 
             //TODO dcidentifieruri is a temporary location for the IIIF URIs
-            if (isset($doc['dcidentifieruri']))
+            if (isset($doc[$link_uri_field][0]))
             {
-                $linkURI = $doc['dcidentifieruri'][0];
-                if (strpos($linkURI, 'luna') > 0)
+                $linkURI = $doc[$link_uri_field][0];
+                if (strpos($linkURI, 'luna') > 0 )
                 {
-                    $tileSource = str_replace('detail', 'iiif', $linkURI) . '/info.json';
-                    $iiifmax = str_replace('info.json', 'full/full/0/default.jpg', $tileSource);
+                    //$tileSource = str_replace('images.is.ed.ac.uk', 'lac-luna-test2.is.ed.ac.uk:8181', $linkURI);
+                    $tileSource = str_replace('detail', 'iiif', $linkURI);
+                    $tileSource = str_replace('full/full/0/default.jpg', 'info.json', $linkURI);
+                    $iiifmax = $linkURI;
                     list($width, $height) = getimagesize($iiifmax);
                     $portrait = true;
                     if ($width > $height)
