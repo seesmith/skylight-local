@@ -3,7 +3,8 @@
         <h1 class="itemtitle">How to use the catalogues</h1>
             <p>LHSA’s anonymised case note catalogues are accessed from a section of the University of Edinburgh’s online
                     archive catalogue, ArchivesSpace:</p>
-            <p>Neurosurgery case notes (Norman Dott) – link to artificial fonds level
+
+            <p>Neurosurgery case notes (Norman Dott)
             There are four main groups (or series) of case notes in the Dott collections:</p>
         <p>
             <ul>
@@ -18,8 +19,8 @@
 
             <p>We have tried to make the item-level catalogue descriptions of the case notes accessible to everyone by using
                     different language in different parts of them. For example, we describe medical conditions in modern
-                    clinical terms taken from the Medical Subject Headings thesaurus (MeSH)– link to
-                    https://www.nlm.nih.gov/mesh/MBrowser.html as ‘subjects’, whereas medical conditions are expressed
+                    clinical terms taken from the <a href="https://www.nlm.nih.gov/mesh/MBrowser.html" target="_blank">
+                    Medical Subject Headings thesaurus (MeSH)</a> as ‘subjects’, whereas medical conditions are expressed
                     in terms from the case notes themselves in the ‘Scope and Contents’ part of the description. For
                     example, a male patient might be described as suffering from ‘fainting’ in the text of the case
                     notes (which we record in the ‘Scope and Contents’ part of the catalogue entry), but in the ‘Subject’
@@ -38,8 +39,7 @@
                             Entering either one of these terms will bring up all patients recorded under these categories.</li>
                     <li>Medical condition: medical condition can either be searched through entering a condition name in
                             the search box, or by clicking in the Subject menu bar of the catalogue page and entering a
-                            condition (expressed as an authority term from MeSH – link to
-                            https://www.nlm.nih.gov/mesh/MBrowser.html) in the ‘filter by text’ box.</li>
+                            condition (expressed as an authority term from <a href="https://www.nlm.nih.gov/mesh/MBrowser.html" target="_blank">MeSH</a>) in the ‘filter by text’ box.</li>
                     <li>Geographical origin of patient (Dott catalogues): in order to protect the anonymity of patients,
                             we have expressed where patients come from in four main ways: Edinburgh and the Lothians,
                             Scotland (outside Edinburgh and the Lothians), Great Britain (excluding Scotland) and outside
@@ -61,6 +61,7 @@
             meet strict conditions on the use of patient-identifiable data. Access is by means of an application to NHS
             Lothian through the LHSA Archivist. These highly confidential resources can only be consulted in person in
             our reading room in the Centre for Research Collections, University of Edinburgh. Please contact us
-            (link to email) for further details.</p>
+
+            <a href="mailto:lhsa@ed.ac.uk">lhsa@ed.ac.uk</a> for further details.</p>
     </div>
 </div>

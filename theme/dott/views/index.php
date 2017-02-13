@@ -7,6 +7,8 @@
                 describes them for researchers whilst protecting the privacy of individual patients. Individual catalogues
                 can be accessed from this page. Read more about case note cataloguing projects here.</p>
 
+            <img src="<?php echo base_url()?>/theme/dott/images/dott-index-image.gif" alt="Norman Dott Case Notes" class="img-responsive pull-right index-img" />
+
             <p>The support of the Wellcome Trust is gratefully acknowledged. Research Resources funding has enabled the
                 cataloguing of Norman Dott’s case notes and those of the Royal Victoria Hospital, the Royal Victoria Dispensary
                 for Diseases of the Chest, the Regional Hospital National X-ray Campaign and Southfield Sanitorium. For more
