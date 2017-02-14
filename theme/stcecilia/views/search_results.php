@@ -1,4 +1,4 @@
-<div class="col-lg-9 col-md-9 col-sm-9 col-xs-12 ">
+<div class="col-lg-9 col-md-9 col-sm-12 col-xs-12 ">
     <?php
 
         // Set up some variables to easily refer to particular fields you've configured
@@ -19,8 +19,8 @@
     ?>
 
     <div class="container-fluid">
-        <div class="row searchFoundRow">
-            <span class="searchFound">Found: <?php echo $rows ?> instruments </span>
+        <div class="searchFoundRow">
+            <span class="searchFound"><?php echo $rows ?> instruments found </span>
         </div>
     <div class="grid">
         <div class="grid-sizer col-xs-3"></div>
@@ -30,7 +30,7 @@
 
         $bitstream_array = array();
         $thumbnailLink = "";
-            $thumbnailImg = "";
+        $thumbnailImg = "";
 
             //TODO dcidentifieruri is a temporary location for the IIIF URIs
             if (isset($doc[$link_uri_field][0]))
@@ -50,37 +50,41 @@
                     }
                     if ($portrait)
                     {
-                        $iiifurlsmall = str_replace('info.json', 'full/,160/0/default.jpg', $tileSource);
+                        $iiifurlsmall = str_replace('info.json', 'full/,266/0/default.jpg', $tileSource);
                     }
                     else
                     {
-                        $iiifurlsmall = str_replace('info.json', 'full/160,/0/default.jpg', $tileSource);
+                        $iiifurlsmall = str_replace('info.json', 'full/266,/0/default.jpg', $tileSource);
                     }
                     $iiifurlfull = str_replace('info.json', 'full/full/0/default.jpg', $tileSource);
 
                     $thumbnailLink = '<a href="./record/' . $doc['id'] . '" title = "' . $doc[$title_field][0] . '" >';
-                    $thumbnailLink .= '<img class="img-responsive record-thumbnail-search" src="' . $iiifurlsmall . '"  title="' . $doc[$title_field][0] . '" /></a>';
+                    $thumbnailImg = '<img class="img-responsive record-thumbnail-search" src="' . $iiifurlsmall . '"  title="' . $doc[$title_field][0] . '" />';
 
                 }
                 else
                 {
-                    $thumbnailLink  =  '<a href="./record/'.$doc['id'].'" title = "'. $doc[$title_field][0].'" ><img class="img-responsive record-thumbnail-search" src="../theme/stcecilia/images/comingsoon.gif"  title="' . $doc[$title_field][0] . '" /> </a>';
+                    $thumbnailLink  =  '<a href="./record/'.$doc['id'].'" title = "'. $doc[$title_field][0].'" >';
+                    $thumbnailImg = '<img class="img-responsive record-thumbnail-search" src="../theme/stcecilia/images/comingsoon1.gif"  title="' . $doc[$title_field][0] . '" />';
                 }
             }
             else
             {
-                $thumbnailLink  =  '<a href="./record/'.$doc['id'].'" title = "'. $doc[$title_field][0].'" ><img class="img-responsive record-thumbnail-search" src="../theme/stcecilia/images/comingsoon.gif"  title="' . $doc[$title_field][0] . '" /> </a>';
+                $thumbnailLink  =  '<a href="./record/'.$doc['id'].'" title = "'. $doc[$title_field][0].'" >';
+                $thumbnailImg = '<img class="img-responsive record-thumbnail-search" src="../theme/stcecilia/images/comingsoon.gif"  title="' . $doc[$title_field][0] . '" />';
             }
 
         ?>
 
-        <div class="grid-item col-xs-12 col-sm-3 ">
+        <div class="grid-item col-xs-6 col-sm-6 col-md-3 col-lg-3">
+            <?php echo $thumbnailLink; ?>
             <div class="grid-item-content box">
-                <div>
-                <?php echo $thumbnailLink; ?>
-                </div>
-                <span class="searchTitle"><?php echo $doc[$title_field][0]; ?></span>
-             </div>
+
+                <?php echo $thumbnailImg; ?>
+                <figcaption><span class="searchTitle"><?php echo $doc[$title_field][0]; ?></span><br>
+                <span class="searchDate"><?php echo empty($doc[$date_field][0]) ? "unknown" : $doc[$date_field][0] ; ?></span></<figcaption>
+            </div>
+            </a>
         </div>
 
     <?php }?>

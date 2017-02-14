@@ -136,7 +136,7 @@ body
 }
 
 .result-info > .nav > li > a:hover {
-    background-color: #9FAB97;
+    background-color: #999999;
     color: #eeeeee;
     text-decoration: none;
 }
@@ -346,7 +346,6 @@ div.spacer {
     border: none;
 }
 
-
 .nav > li > i.fa-inactive {
     display: block;
     padding: 5px 5px;
@@ -451,6 +450,7 @@ div.spacer {
 .record-tabs > ul > li > a > i.fa-inactive {
     color: #dddddd;
 }
+
 .record-tabs > ul > li > a.inactive {
     color: #dddddd;
 }
@@ -492,23 +492,31 @@ div.spacer {
 .box {
     display: flex;
     flex-wrap: wrap; /* optional. only if you want the items to wrap */
-    justify-content: center; /* for horizontal alignment */
-    align-items: center; /* for vertical alignment */
+     justify-content: left; /*for horizontal alignment */
+    /* align-items: center; /* for vertical alignment */
+}
+
+.img-responsive {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    vertical-align: middle;
+    margin: 0 auto;
+    opacity: .99;
+    clear: both;
 }
 
 .grid-item {
-    margin-bottom: 10px;
-    height: 250px;
-    vertical-align: middle;
+    display: block;
+    margin: 0 0 1em;
+    float: none;
+    padding-right: 10px;
+    padding-left: 10px;
 }
 
 .grid-item-content {
-    /*background: #eeeeee;*/
-    border: 2px solid #cecece;
-    border-radius: 1px;
-    /*padding: 2px;*/
-    text-align: center;
     height: 100%;
+    padding-bottom: 20px;
 }
 
 #openseadragon {
@@ -517,25 +525,37 @@ div.spacer {
     height: 800px;
 }
 
+figcaption {
+    width: 100%;
+    padding-top: 5px;
+}
 .searchTitle{
-    font-size: 16px;
+    font-size: 15px;
+    font-weight: bold;
+    width: 100%;
+}
+
+.searchDate{
+    font-size: 15px;
     width: 100%;
 }
 
 .searchFoundRow {
-    margin-bottom: 10px;
+    margin: 10px;
 }
 
 .searchFound {
-    font-size: 20px;
-    border: solid 2px rgb(153, 153, 153);
+    font-size: 16px;
     color: #333;
-    padding: 5px;
-    border-radius: 5px;
+    font-weight: bold;
 }
 
 .thumbnail {
     border:0;
+}
+
+.record-thumbnail-search{
+    border: solid 1px #cecece;
 }
 
 .uoe_logo
