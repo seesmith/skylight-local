@@ -14,12 +14,14 @@
             records produced, time-consuming searches for a particular category of data and case notes’ extremely specialist
             medical language. Confidentiality restrictions on modern health records also mean that potential researchers
             have to meet strict conditions for access even for scoping purposes. Previous grants from the Wellcome Trust
-            (link to http://www.lhsa.lib.ed.ac.uk/conservation/conserv_case_notes.htm) have rehoused many of our most
-            significant collections of case notes, removing physical barriers to their access. LHSA’s case note cataloguing
-            aims to remove more intellectual hurdles, realising the potential of these absorbing records as research resources.</p>
+            have rehoused many of our most significant collections of
+            <a href="http://www.lhsa.lib.ed.ac.uk/conservation/conserv_case_notes.htm" title="Case Notes" target="_blank"> case notes</a>, r
+            emoving physical barriers to their access. LHSA’s case note cataloguing aims to remove more intellectual hurdles,
+            realising the potential of these absorbing records as research resources.</p>
 
-        <p> Funded by the Wellcome Trust, LHSA began a project to catalogue over 26,500 cases created by renowned Edinburgh
-            neurosurgeon, Norman Dott (link to http://www.lhsa.lib.ed.ac.uk/projects/Cataloguingcasenotes.htm) in 2012.
+        <p> Funded by the Wellcome Trust, LHSA began a
+            <a href="http://www.lhsa.lib.ed.ac.uk/projects/Cataloguingcasenotes.htm" title="Cataloguing Case Notes" target="_blank">project to catalogue</a>
+            over 26,500 cases created by renowned Edinburgh neurosurgeon, Norman Dott in 2012.
             Cataloguing Norman Dott’s neurosurgical case notes (1920 – 1960) developed a methodology that describes each
             case in language accessible to researchers from different backgrounds whilst protecting patient privacy. Using
             the Encoded Archival Description (EAD)eXtensible Mark-up Language (XML) standard along with tailored index terms
