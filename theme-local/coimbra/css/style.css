@@ -9,6 +9,12 @@ body {
     overflow-x: hidden; /* Prevent scroll on narrow devices */
 }
 
+.container{
+    widht:100%;
+    padding: 0px;
+    width:100%;
+}
+
 /*Header, move to header.css when ready*/
 .navbar{
     background-color: white;
@@ -36,9 +42,11 @@ body {
         height: 120px;
         -webkit-transition: all 0.7s ease;
         transition: all 0.7s ease;
+        background-color: rgba(8,68,102, 0.9);
     }
     .navbar.shrink{
         height:40px;
+        background-color: rgba(8,68,102, 0.6);
     }
     .navbar .navbar-brand{
         margin: 5px 0px 0px 0px;
@@ -180,4 +188,21 @@ body {
 
 .footer a{
     color: rgb(102, 147, 176);
+}
+
+
+/*Index parallax effect*/
+.parallax {
+    /* The image used */
+    background-image: url('../images/parallax1.jpg');
+
+    /* Full height */
+    min-height:500px;
+    width:100%;
+
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
