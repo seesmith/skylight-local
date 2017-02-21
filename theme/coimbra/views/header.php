@@ -37,7 +37,7 @@
     <link rel="stylesheet" href="<?php echo base_url(); ?>assets/fancybox/source/helpers/jquery.fancybox-thumbs.css?v=1.0.7" type="text/css" media="screen" />
     <link rel="stylesheet" href="http://releases.flowplayer.org/6.0.4/skin/minimalist.css">
     <link rel="stylesheet" href="<?php echo base_url()?>assets/font-awesome/css/font-awesome.min.css">
-    <link rel="stylesheet" href="<?php echo base_url(); ?>theme/<?php echo $this->config->item('skylight_theme'); ?>/css/style.css?v=2">
+    <link rel="stylesheet" href="<?php echo base_url(); ?>theme/<?php echo $this->config->item('skylight_theme'); ?>/css/style.scss?v=2">
 
     <!-- All JavaScript at the bottom, except for Modernizr which enables HTML5 elements & feature detects -->
     <script src="<?php echo base_url()?>assets/modernizr/modernizr-1.7.min.js"></script>
@@ -141,6 +141,10 @@
                     </li>
                     <li><a href="#">Read more</a></li>
                     <li><a href="#">Contact</a></li>
+                    <li class="more"> <span>...</span>
+                        <ul id="overflow">
+                        </ul>
+                    </li>
                 </ul>
                 <ul class="nav navbar-nav navbar-right">
                     <li><a href="#"><span class="glyphicon glyphicon-user"></span> Intranet</a></li>

@@ -1,8 +1,8 @@
 <div class="content">
     <!-- todo replace two with sass or less -->
 <div class="container">
-
-    <div class="parallax"></div>
+<!--Add paralax when there is enough content-->
+<!--    <div class="parallax"></div>-->
 
 </div>
 

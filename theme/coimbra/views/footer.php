@@ -44,6 +44,5 @@
         <script src="<?php echo base_url()?>assets/script/script.js"></script>
         <script src="<?php echo base_url()?>assets/script/script.js"></script>
         <script src="<?php echo base_url(); ?>theme/<?php echo $this->config->item('skylight_theme'); ?>/js/shrink_header.js?v=2"></script>
-
     </body>
 </html>
