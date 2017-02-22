@@ -85,6 +85,7 @@
         <script type="text/javascript" src="<?php echo base_url()?>assets/fancybox/source/helpers/jquery.fancybox-thumbs.js?v=1.0.7"></script>
         <script src="<?php echo base_url()?>assets/plugins/plugins.js"></script>
         <script src="<?php echo base_url()?>assets/script/script.js"></script>
+        <script src="<?php echo base_url()?>theme/stcecilia/js/script.js"></script>
 
     </body>
 </html>
