@@ -93,7 +93,7 @@ body
 }
 
 .footer ul
-    {
+{
     margin-top: 10px;
     list-style-type: none;
 }
@@ -329,7 +329,7 @@ div.spacer {
 }
 
 .related-xs {
-   width: 100%;
+    width: 100%;
 }
 
 .tab-content dl {
@@ -443,6 +443,7 @@ div.spacer {
 .col-xs-7 a.home-icon {
     padding-right: 10px;
 }
+
 .home-icon:hover, .home-icon:active {
     color: #666;
 }
@@ -457,7 +458,7 @@ div.spacer {
 
 .tags > li.active > a,
 .tags > li.active > a:focus,
-.tags > li.active > a:hover{
+.tags > li.active > a:hover {
     position: relative;
     display: block;
     padding: 5px 5px;
@@ -470,18 +471,6 @@ div.spacer {
     color: #ffffff;
 }
 
-@media (max-width: 768px) {
-    .nav-justified > li {
-        display: table-cell;
-        width: 1%;
-    }
-    .nav-justified > li > a  {
-        border-bottom: 1px solid #ddd !important;
-        border-radius: 4px 4px 0 0 !important;
-        margin-bottom: 0 !important;
-    }
-}
-
 .record_bitstreams
 {
     padding-top: 2px;
@@ -492,7 +481,7 @@ div.spacer {
 .box {
     display: flex;
     flex-wrap: wrap; /* optional. only if you want the items to wrap */
-     justify-content: left; /*for horizontal alignment */
+    justify-content: left; /*for horizontal alignment */
     /* align-items: center; /* for vertical alignment */
 }
 
@@ -519,16 +508,11 @@ div.spacer {
     padding-bottom: 20px;
 }
 
-#openseadragon {
-    margin: 0 auto;
-    width: 100%;
-    height: 800px;
-}
-
 figcaption {
     width: 100%;
     padding-top: 5px;
 }
+
 .searchTitle{
     font-size: 15px;
     font-weight: bold;
@@ -563,6 +547,7 @@ figcaption {
     width: 89px;
     height: 86px;
 }
+
 /* ---- .element-item ---- */
 
 .element-item {
@@ -574,6 +559,7 @@ figcaption {
     background: #888;
     color: #262524;
 }
+
 .element-item > * {
     margin: 0;
     padding: 0;
@@ -615,7 +601,10 @@ figcaption {
     border:0;
 }
 
-.stc-resized-image{text-align:center;}
+.stc-resized-image {
+    text-align:center;
+}
+
 .stc-img-responsive{
     margin: auto;
     position: relative;
@@ -756,7 +745,7 @@ figcaption {
     box-shadow: none;
 }
 
-.panel-group .panel-heading + .panel-collapse > .list-group, .panel-group .panel-heading + .panel-collapse > .panel-body{
+.panel-group .panel-heading + .panel-collapse > .list-group, .panel-group .panel-heading + .panel-collapse > .panel-body {
     border: none;
 }
 
@@ -796,6 +785,96 @@ figcaption {
     margin-bottom: 0;
 }
 
+/***** Index Page *****/
+
+.container-full {
+    margin: 0;
+    padding: 0;
+}
+
+#sch_banner {
+    float: left;
+    background-image: url(../images/ruckers.jpg);
+    background-position: center;
+    width: 100%;
+    height: auto;
+    background-size: 100%;
+    padding-top: 50px;
+    padding-bottom: 100px;
+}
+
+.sch_logo {
+    width: 100%;
+    height: auto;
+}
+
+.grid-sizer {
+    width: 33.33%;
+}
+
+div[id^="gallery"].grid-item {
+    width: 33.33%;
+    margin: 0;
+    height: 500px;
+    float: left;
+}
+
+div[id^="gallery"] {
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    text-align: center;
+}
+
+#gallery1 {
+    background-image: url(../images/gallery1.jpg);
+}
+
+#gallery2 {
+    background-image: url(../images/gallery2.jpg);
+}
+
+#gallery3case1 {
+    background-image: url(../images/gallery3case1.jpg);
+}
+
+#gallery3case2 {
+    background-image: url(../images/gallery3case2.jpg);
+}
+
+#gallery3case3 {
+    background-image: url(../images/gallery3case3.jpg);
+}
+
+#gallery4 {
+    background-image: url(../images/gallery4.jpg);
+}
+
+.gallery-title {
+    background-image: url(../images/header.png);
+    width: 50%;
+    height: 25%;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    padding: 10px;
+}
+
+.gallery-title a {
+    width: 100%;
+    text-align: center;
+    font-size: 20px;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+.gallery-title a:hover {
+    color: #630d0d;
+}
+
+
 /* Open Seadragon */
 
 div[id^="openseadragon"] {
@@ -804,10 +883,30 @@ div[id^="openseadragon"] {
     height: 800px;
 }
 
+@media only screen and (max-width : 1800px) {
+
+    div[id^="openseadragon"] {
+        height: 1000px;
+    }
+
+    div.grid-item[id^="gallery"]
+    {
+        width: 33.33%;
+        height: 450px;
+    }
+
+}
+
 @media only screen and (max-width : 1200px) {
 
     div[id^="openseadragon"] {
         height: 1000px;
+    }
+
+    div.grid-item[id^="gallery"]
+    {
+        width: 33.33%;
+        height: 400px;
     }
 
 }
@@ -818,6 +917,12 @@ div[id^="openseadragon"] {
         height: 800px;
     }
 
+    div.grid-item[id^="gallery"]
+    {
+        width: 50%;
+        height: 350px;
+    }
+
 }
 
 @media only screen and (max-width : 767px) {
@@ -826,6 +931,22 @@ div[id^="openseadragon"] {
         height: 600px;
     }
 
+    div.grid-item[id^="gallery"]
+    {
+        width: 100%;
+        height: 300px;
+    }
+
+    .nav-justified > li {
+        display: table-cell;
+        width: 1%;
+    }
+
+    .nav-justified > li > a  {
+        border-bottom: 1px solid #ddd !important;
+        border-radius: 4px 4px 0 0 !important;
+        margin-bottom: 0 !important;
+    }
 }
 
 @media only screen and (max-width : 480px) {
@@ -834,11 +955,23 @@ div[id^="openseadragon"] {
         height: 400px;
     }
 
+    div.grid-item[id^="gallery"]m
+    {
+        width: 100%;
+        height: 300px;
+    }
+
 }
 
 @media only screen and (max-width : 320px) {
 
     div[id^="openseadragon"] {
         height: 200px;
+    }
+
+    div.grid-item[id^="gallery"]
+    {
+        width: 100%;
+        height: 250px;
     }
 }

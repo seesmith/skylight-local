@@ -51,6 +51,10 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.7/leaflet.js"></script>
     <script src="https://cdn.rawgit.com/mejackreed/Leaflet-IIIF/master/leaflet-iiif.js"></script>
     <script src="<?php echo base_url()?>assets/openseadragon/openseadragon.min.js"></script>
+    <!-- Enable media queries for old IE -->
+    <!--[if lt IE 9]>
+    <script src="http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>
+    <![endif]-->
     <script>
 		$(".toggle_container").hide();
     
@@ -110,7 +114,7 @@
 <body class="record">
     <nav class="navbar navbar-default navbar-fixed-top">
 
-        <div class="col-lg-8 col-md-8 col-sm-8 hidden-xs">
+        <div class="col-lg-8 col-md-8 col-sm-9 hidden-xs">
             <!-- Collect the nav links, forms, and other content for toggling -->
             <a href="./" class="home-icon"><i class="fa fa-home fa-lg"></i></a>
             <form class="navbar-form navbar-left" role="search" action="./redirect/" method="post">
@@ -138,13 +142,18 @@
                 </div>
             </form>
         </div>
-        <div class="col-lg-4 col-md-4 col-sm-4 hidden-xs">
+        <div class="col-lg-4 col-md-4 hidden-sm hidden-xs">
             <div class="navbar-right sch-link">
                 <a href="http://stcecilias.ed.ac.uk" title="Visit St Cecilia's Hall" target="_blank">Visit St Cecilia's Hall</a>
             </div>
         </div>
-        <div class="hidden-lg hidden-md hidden-sm col-xs-5">
+        <div class="hidden-lg hidden-md col-sm-3 hidden-xs">
             <div class="navbar-right sch-link sch-link-sm">
+                <a href="http://stcecilias.ed.ac.uk" title="Visit St Cecilia's Hall" target="_blank">St Cecilia's Hall</a>
+            </div>
+        </div>
+        <div class="hidden-lg hidden-md hidden-sm col-xs-5">
+            <div class="navbar-right sch-link sch-link-xs">
                 <a href="http://stcecilias.ed.ac.uk" title="Visit St Cecilia's Hall" target="_blank">St Cecilia's Hall</a>
             </div>
         </div>
