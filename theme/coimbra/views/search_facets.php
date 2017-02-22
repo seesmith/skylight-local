@@ -1,4 +1,4 @@
-<div class="col-md-3 col-sm-3 hidden-xs" >
+<div class="col-md-3 col-sm-3 col-xs-12 hidden-xs" >
 <?php if (isset($facets)) {?>
 
         <div class="sidebar-nav">

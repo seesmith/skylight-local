@@ -7,7 +7,9 @@
 $(window).scroll(function() {
     if ($(document).scrollTop() > 50) {
         $('.navbar').addClass('shrink');
+        $('.sidebar-nav').addClass('shrinked-nav');
     } else {
         $('.navbar').removeClass('shrink');
+        $('.sidebar-nav').removeClass('shrinked-nav');
     }
 });
