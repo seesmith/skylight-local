@@ -196,7 +196,21 @@ if (isset($solr[$link_uri_field]))
         $imageCounter++;
     }
 ?>
-
+    <div id="toolbarDiv" class="toolbar">
+       <span style='float:left;margin:10px 20px 0 0'>
+           | <a id="zoom-in" href="#zoom-in">Zoom In</a>
+           | <a id="zoom-out" href="#zoom-out">Zoom Out</a>
+           | <a id="home" href="#home">Home</a>
+           | <a id="full-page" href="#full-page">Full Page</a>
+       </span>
+            <span style='float:left;margin:10px 0 0 20px'>
+       &lt;&nbsp;
+           <a id="previous" href="#previous-page">Previous</a>
+           | <a id="next" href="#next-page">Next</a>
+           &nbsp;&gt;
+           <span id='currentpage'> 1 of 3 </span>
+       </span>
+    </div>
     <div class="col-lg-12 main-image">
         <?php  $divCounter = 0;
         $freshIn = true;
@@ -207,7 +221,15 @@ if (isset($solr[$link_uri_field]))
                     OpenSeadragon({
                         id: "openseadragon<?php echo $divCounter;?>",
                         prefixUrl: "<?php echo base_url() ?>assets/openseadragon/images/",
-                        mouseNavEnabled: false,
+                        zoomPerScroll: 1,
+                        toolbar:       "toolbarDiv",
+                        showNavigator:  true,
+                        zoomInButton:   "zoom-in",
+                        zoomOutButton:  "zoom-out",
+                        homeButton:     "home",
+                        fullPageButton: "full-page",
+                        nextButton:     "next",
+                        previousButton: "previous",
                         tileSources: [{
                             "@context": "<?php echo $jsoncontext[$divCounter] ?>",
                             "@id": "<?php echo $jsonid[$divCounter] ?>",

@@ -22,7 +22,7 @@
         <div class="searchFoundRow">
             <span class="searchFound"><?php echo $rows ?> instruments found </span>
         </div>
-    <div class="grid">
+    <div id="results-grid" class="grid">
         <div class="grid-sizer col-xs-3"></div>
         <?php
         $link_uri_field = $this->skylight_utilities->getField("ImageURI");
