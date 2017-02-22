@@ -498,7 +498,7 @@ div.spacer {
 
 .img-responsive {
     display: block;
-    max-width: 100%;
+    /*max-width: 100%;*/
     height: auto;
     vertical-align: middle;
     margin: 0 auto;

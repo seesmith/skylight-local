@@ -68,6 +68,7 @@
                         $iiifurlfull = str_replace('info.json', 'full/full/0/default.jpg', $tileSource);
 
                         $thumbnailLink = 'href="./record/' . $doc['id'] . '" title = "' . $doc[$title_field][0] . '"';
+                        list($width, $height, $type, $imgText) = getimagesize($iiifurlsmall);
                         $thumbnailImg = '<img class="img-responsive record-thumbnail-search" src="' . $iiifurlsmall . '"  title="' . $doc[$title_field][0] . '" ' . $imgText . '/>';
 
 
@@ -133,9 +134,11 @@
         $('.grid').masonry({
             itemSelector: '.grid-item',
             columnWidth: '.grid-sizer',
-            percentPosition: true
+            percentPosition: true,
+            fitWidth: true
         });
     }
+
 
 </script>
 
