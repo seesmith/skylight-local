@@ -757,7 +757,7 @@ div[id$="info"] {
     height: auto;
 }
 
-.grid-sizer {
+#galleries .grid-sizer {
     width: 33.33%;
 }
 
