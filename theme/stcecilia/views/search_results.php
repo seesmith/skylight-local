@@ -38,9 +38,13 @@
                 $linkURI = $doc[$link_uri_field][0];
                 if (strpos($linkURI, 'luna') > 0 )
                 {
+                    //$tileSource = str_replace('images.is.ed.ac.uk', 'lac-luna-test2.is.ed.ac.uk:8181', $linkURI);
+                    $tileSource = str_replace('detail', 'iiif', $linkURI);
+                    $tileSource = str_replace('full/full/0/default.jpg', 'info.json', $linkURI);
+                    $iiifmax = $linkURI;
                     $content = true;
                     try{
-                       $content = @file_get_contents($linkURI,0,null,0,1);
+                       $content = @file_get_contents($iiifmax,0,null,0,1);
                     } catch (Exception $e) {
                         // Handle exception
                     }
@@ -51,21 +55,21 @@
                     }
                     else
                     {
-                        list($width, $height, $type, $imgText) = getimagesize($linkURI);
+                        list($width, $height, $type, $imgText) = getimagesize($iiifmax);
                         $portrait = true;
                         if ($width > $height) {
                             $portrait = false;
                         }
                         if ($portrait) {
-                            $iiifurlsmall = str_replace('full/full/0/default.jpg', 'full/,266/0/default.jpg', $linkURI);
+                            $iiifurlsmall = str_replace('info.json', 'full/,266/0/default.jpg', $tileSource);
                         } else {
-                            $iiifurlsmall = str_replace('full/full/0/default.jpg', 'full/266,/0/default.jpg', $linkURI);
+                            $iiifurlsmall = str_replace('info.json', 'full/266,/0/default.jpg', $tileSource);
                         }
-
-                        list($width, $height, $type, $imgText) = getimagesize($iiifurlsmall);
+                        $iiifurlfull = str_replace('info.json', 'full/full/0/default.jpg', $tileSource);
 
                         $thumbnailLink = 'href="./record/' . $doc['id'] . '" title = "' . $doc[$title_field][0] . '"';
-                        $thumbnailImg = '<img class="img-responsive record-thumbnail-search" src="' . $linkURI . '"  title="' . $doc[$title_field][0] . '" ' . $imgText . '/>';
+                        list($width, $height, $type, $imgText) = getimagesize($iiifurlsmall);
+                        $thumbnailImg = '<img class="img-responsive record-thumbnail-search" src="' . $iiifurlsmall . '"  title="' . $doc[$title_field][0] . '" ' . $imgText . '/>';
 
 
                     }
@@ -117,22 +121,16 @@
 <script>
     //init Masonry
 
-    $(document).ready(function(){
-        setTimeout(function() { masonry_go();}, 1000);
+    var $grid = $('.grid').masonry({
+        itemSelector: '.grid-item',
+        columnWidth: '.grid-sizer',
+        percentPosition: true
     });
-    $(window).resize(function()
-    {
-        // jQuery
-        $('.grid').masonry( 'destroy')
-        setTimeout(function() { masonry_go();}, 1000);
+    // layout Masonry after each image loads
+    $grid.imagesLoaded().progress( function() {
+        $grid.masonry('layout');
     });
-    function masonry_go(){
-        $('.grid').masonry({
-            itemSelector: '.grid-item',
-            columnWidth: '.grid-sizer',
-            percentPosition: true
-        });
-    }
+
 
 </script>
 

@@ -47,6 +47,7 @@
     <script src="<?php echo base_url()?>assets/jquery-1.11.0/jcarousel/jquery.jcarousel.min.js"></script>
     <script src="<?php echo base_url()?>assets/bootstrap/js/bootstrap.min.js"></script>
     <script src="<?php echo base_url()?>assets/masonry/masonry.pkgd.min.js"></script>
+    <script src="<?php echo base_url()?>assets/imagesloaded/imagesloaded.pkgd.min.js"></script>
     <script src="<?php echo base_url()?>assets/isotope/isotope.pkgd.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.7/leaflet.js"></script>
     <script src="https://cdn.rawgit.com/mejackreed/Leaflet-IIIF/master/leaflet-iiif.js"></script>
