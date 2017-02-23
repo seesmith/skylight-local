@@ -38,13 +38,9 @@
                 $linkURI = $doc[$link_uri_field][0];
                 if (strpos($linkURI, 'luna') > 0 )
                 {
-                    //$tileSource = str_replace('images.is.ed.ac.uk', 'lac-luna-test2.is.ed.ac.uk:8181', $linkURI);
-                    $tileSource = str_replace('detail', 'iiif', $linkURI);
-                    $tileSource = str_replace('full/full/0/default.jpg', 'info.json', $linkURI);
-                    $iiifmax = $linkURI;
                     $content = true;
                     try{
-                       $content = @file_get_contents($iiifmax,0,null,0,1);
+                       $content = @file_get_contents($linkURI,0,null,0,1);
                     } catch (Exception $e) {
                         // Handle exception
                     }
@@ -55,20 +51,21 @@
                     }
                     else
                     {
-                        list($width, $height, $type, $imgText) = getimagesize($iiifmax);
+                        list($width, $height, $type, $imgText) = getimagesize($linkURI);
                         $portrait = true;
                         if ($width > $height) {
                             $portrait = false;
                         }
                         if ($portrait) {
-                            $iiifurlsmall = str_replace('info.json', 'full/,266/0/default.jpg', $tileSource);
+                            $iiifurlsmall = str_replace('full/full/0/default.jpg', 'full/,266/0/default.jpg', $linkURI);
                         } else {
-                            $iiifurlsmall = str_replace('info.json', 'full/266,/0/default.jpg', $tileSource);
+                            $iiifurlsmall = str_replace('full/full/0/default.jpg', 'full/266,/0/default.jpg', $linkURI);
                         }
-                        $iiifurlfull = str_replace('info.json', 'full/full/0/default.jpg', $tileSource);
+
+                        list($width, $height, $type, $imgText) = getimagesize($iiifurlsmall);
 
                         $thumbnailLink = 'href="./record/' . $doc['id'] . '" title = "' . $doc[$title_field][0] . '"';
-                        $thumbnailImg = '<img class="img-responsive record-thumbnail-search" src="' . $iiifurlsmall . '"  title="' . $doc[$title_field][0] . '" ' . $imgText . '/>';
+                        $thumbnailImg = '<img class="img-responsive record-thumbnail-search" src="' . $linkURI . '"  title="' . $doc[$title_field][0] . '" ' . $imgText . '/>';
 
 
                     }

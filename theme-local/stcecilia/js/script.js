@@ -75,7 +75,48 @@
     $(document).ready($.proxy(anchorScrolls, 'init'));
 })(window.document, window.history, window.location);
 
+
+
+var currentDiv = "#openseadragon0";
+var currentDivNum = 0;
+
+var previousNum = 0;
+var nextNum = 0;
+
 $('.image-toggler').click(function(){
     $('div.image-toggle').hide();
     $($(this).attr('data-image-id')).show();
+    currentDiv = $(this).attr('data-image-id');
+    currentDivNum = parseInt(currentDiv.replace("#openseadragon", ""));
+
+    previousNum = (currentDivNum - 1);
+    nextNum = (currentDivNum + 1);
+
+    var imageCounter = parseInt($("#imageCounter").text());
+    if(previousNum == -1) { previousNum = (imageCounter - 1);}
+    if(nextNum > (imageCounter - 1)) { nextNum = 0;}
+
+
+    $("#prev").attr("data-image-id", "#openseadragon" + previousNum);
+    $("#next").attr("data-image-id", "#openseadragon" + nextNum);
+});
+
+$("div[id^='navigator-'].navigator").css("background", "transparent none repeat scroll 0% 0%");
+$("div[id^='navigator-'].navigator").css("border", "medium none");
+
+$(".displayregion").css("border", "2px solid #630d0d");
+
+$('.accordion-toggle').click(function(){
+
+// push the footer to the bottom for piccolo
+    var docHeight = $(window).height();
+    var footerHeight = $('.footer-piccolo').height();
+    var footerTop = $('.footer-piccolo').position().top + footerHeight;
+
+    var footerMargin = docHeight - footerTop;
+
+    if (footerTop < (docHeight)) {
+        $('.footer-margin').css('height', footerMargin + 'px');
+    }
+
 });
