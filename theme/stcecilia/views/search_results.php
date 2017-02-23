@@ -120,23 +120,6 @@
 </div>
 <script>
     //init Masonry
-//
-//    $(document).ready(function(){
-//        setTimeout(function() { masonry_go();}, 1000);
-//    });
-//    $(window).resize(function()
-//    {
-//        // jQuery
-//        $('.grid').masonry( 'destroy')
-//        setTimeout(function() { masonry_go();}, 1000);
-//    });
-//    function masonry_go(){
-//        $('.grid').masonry({
-//            itemSelector: '.grid-item',
-//            columnWidth: '.grid-sizer',
-//            percentPosition: true
-//        });
-//    }
 
     var $grid = $('.grid').masonry({
         itemSelector: '.grid-item',

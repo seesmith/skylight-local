@@ -195,35 +195,30 @@ if (isset($solr[$link_uri_field]))
         }
         $imageCounter++;
     }
+
+    echo "<div id='imageCounter' style='display:none;'>$imageCounter</div>";
 ?>
-    <div id="toolbarDiv" class="toolbar">
-       <span style='float:left;margin:10px 20px 0 0'>
-           | <a id="zoom-in" href="#zoom-in">Zoom In</a>
-           | <a id="zoom-out" href="#zoom-out">Zoom Out</a>
-           | <a id="home" href="#home">Home</a>
-           | <a id="full-page" href="#full-page">Full Page</a>
-       </span>
-            <span style='float:left;margin:10px 0 0 20px'>
-       &lt;&nbsp;
-           <a id="previous" href="#previous-page">Previous</a>
-           | <a id="next" href="#next-page">Next</a>
-           &nbsp;&gt;
-           <span id='currentpage'> 1 of 3 </span>
-       </span>
+
+
+    <div id='toolbarDiv'>
+        <div class='toolbarItem' id='zoom-in'></div><div class='toolbarItem' id='zoom-out'></div><div class='toolbarItem' id='home'></div><div class='toolbarItem' id='full-page'></div><?php if($imageCounter > 1){ ?><div class='toolbarItem image-toggler' id='prev' data-image-id="#openseadragon<?php echo ($imageCounter - 1);?>"></div><div class='toolbarItem image-toggler' id='next' data-image-id="#openseadragon1"><?php } ?></div>
     </div>
+
     <div class="col-lg-12 main-image">
+
         <?php  $divCounter = 0;
         $freshIn = true;
         while ($divCounter < $imageCounter)
         {?>
-            <div id="openseadragon<?php echo $divCounter; ?>" class="image-toggle"<?php if (!$freshIn) { echo ' style="display:none;"'; } ?>>
+            <div id="openseadragon<?php echo $divCounter; ?>" class="image-toggle"<?php if (!$freshIn) { echo ' style="display:none;"'; } else { echo ' style="display:block;"'; }?>>
                 <script type="text/javascript">
                     OpenSeadragon({
                         id: "openseadragon<?php echo $divCounter;?>",
-                        prefixUrl: "<?php echo base_url() ?>assets/openseadragon/images/",
+                        prefixUrl: "<?php echo base_url() ?>theme/stcecilia/images/buttons/",
                         zoomPerScroll: 1,
                         toolbar:       "toolbarDiv",
                         showNavigator:  true,
+                        autoHideControls: false,
                         zoomInButton:   "zoom-in",
                         zoomOutButton:  "zoom-out",
                         homeButton:     "home",
@@ -379,24 +374,200 @@ if(isset($solr[$bitstream_field]) && $link_bitstream) {
     <div id="collapse1" class="panel-collapse collapse">
         <div class="panel-body">
             <div class="col-sm-6 col-xs-12 col-md-8 col-lg-12 metadata">
-                <dl class="dl-horizontal">
-                    <?php
 
-                    foreach($recorddisplay as $key) {
-                        $element = $this->skylight_utilities->getField($key);
+                <div id="main-info">
+                    <?php if(isset($solr[$short_field][0])) {
+                        echo '<p>' . $solr[$short_field][0] . '</p>';
+                    } ?>
+                    <h2>Main Information</h2>
+                    <dl class="dl-horizontal">
+                        <?php foreach($recorddisplay as $key) {
 
-                        if (isset($solr[$element])) {
-                            foreach ($solr[$element] as $index => $metadatavalue) { ?>
-                                <?php echo '<dt>' . $key . '</dt>';
-                                echo '<dd>' . $metadatavalue . '</dd>';
+                            $element = $this->skylight_utilities->getField($key);
 
+                            if(isset($solr[$element])) {
+
+                                echo '<dt>' . $key . '</dt>';
+
+                                echo '<dd>';
+                                foreach($solr[$element] as $index => $metadatavalue) {
+                                    // if it's a facet search
+                                    // make it a clickable search link
+                                    if(in_array($key, $filters)) {
+
+                                        $orig_filter = urlencode($metadatavalue);
+                                        $lower_orig_filter = strtolower($metadatavalue);
+                                        $lower_orig_filter = urlencode($lower_orig_filter);
+
+                                        echo '<a href="./search/*:*/' . $key . ':%22'.$lower_orig_filter.'%7C%7C%7C'.$orig_filter.'%22">'.$metadatavalue.'</a>';
+                                    }
+                                    else {
+                                        echo $metadatavalue;
+                                    }
+                                    if($index < sizeof($solr[$element]) - 1) {
+
+                                        echo '; ';
+                                    }
+                                }
+                                echo '</dd>';
+                            }
+                        } ?>
+                    </dl>
+                </div> <!-- main-info -->
+
+                <div id="meta-info">
+                    <h3>Object Information</h3>
+                    <dl class="dl-horizontal">
+                        <?php foreach($metafields as $key) {
+
+                            $element = $this->skylight_utilities->getField($key);
+
+                            if(isset($solr[$element])) {
+
+                                echo '<dt>' . $key . '</dt>';
+
+                                echo '<dd>';
+                                foreach($solr[$element] as $index => $metadatavalue) {
+                                    // if it's a facet search
+                                    // make it a clickable search link
+                                    if(in_array($key, $filters)) {
+
+                                        $orig_filter = urlencode($metadatavalue);
+                                        $lower_orig_filter = strtolower($metadatavalue);
+                                        $lower_orig_filter = urlencode($lower_orig_filter);
+
+                                        echo '<a href="./search/*:*/' . $key . ':%22'.$lower_orig_filter.'%7C%7C%7C'.$orig_filter.'%22">'.$metadatavalue.'</a>';
+                                    }
+                                    else {
+                                        echo $metadatavalue;
+                                    }
+                                    if($index < sizeof($solr[$element]) - 1) {
+
+                                        echo '; ';
+                                    }
+                                }
+                                echo '</dd>';
+                            }
+
+                        } ?>
+                    </dl>
+                </div> <!-- meta-info -->
+
+                <div id="description-info">
+                    <h3>Description</h3>
+                    <dl class="dl-horizontal">
+                        <?php foreach($descriptiondisplay as $key) {
+
+                            $element = $this->skylight_utilities->getField($key);
+
+                            if(isset($solr[$element])) {
+
+                                echo '<dt>' . $key . '</dt>';
+
+                                echo '<dd>';
+                                foreach($solr[$element] as $index => $metadatavalue) {
+                                    // if it's a facet search
+                                    // make it a clickable search link
+                                    if(in_array($key, $filters)) {
+
+                                        $orig_filter = urlencode($metadatavalue);
+                                        $lower_orig_filter = strtolower($metadatavalue);
+                                        $lower_orig_filter = urlencode($lower_orig_filter);
+
+                                        echo '<a href="./search/*:*/' . $key . ':%22'.$lower_orig_filter.'%7C%7C%7C'.$orig_filter.'%22">'.$metadatavalue.'</a>';
+                                    }
+                                    else {
+                                        echo $metadatavalue;
+                                    }
+                                    if($index < sizeof($solr[$element]) - 1) {
+
+                                        echo '; ';
+                                    }
+                                }
+                                echo '</dd>';
+                            }
+                        } ?>
+                    </dl>
+                </div> <!-- description-info -->
+
+                <div id="creator-info">
+                    <h3>Maker</h3>
+                    <dl class="dl-horizontal">
+                        <?php foreach($creatordisplay as $key) {
+
+                            $element = $this->skylight_utilities->getField($key);
+
+                            if(isset($solr[$element])) {
+
+                                echo '<dt>' . $key . '</dt>';
+
+                                echo '<dd>';
+                                foreach($solr[$element] as $index => $metadatavalue) {
+                                    // if it's a facet search
+                                    // make it a clickable search link
+                                    if(in_array($key, $filters)) {
+
+                                        $orig_filter = urlencode($metadatavalue);
+                                        $lower_orig_filter = strtolower($metadatavalue);
+                                        $lower_orig_filter = urlencode($lower_orig_filter);
+
+                                        echo '<a href="./search/*:*/' . $key . ':%22'.$lower_orig_filter.'%7C%7C%7C'.$orig_filter.'%22">'.$metadatavalue.'</a>';
+                                    }
+                                    else {
+                                        echo $metadatavalue;
+                                    }
+                                    if($index < sizeof($solr[$element]) - 1) {
+
+                                        echo '; ';
+                                    }
+                                }
+                                echo '</dd>';
+                            }
+                        } ?>
+                    </dl>
+                </div> <!-- creator-info -->
+
+                <div id="all-info">
+                    <h3>All Information</h3>
+                    <dl class="dl-horizontal">
+                        <?php
+
+                        foreach($recorddisplay as $key) {
+                            $element = $this->skylight_utilities->getField($key);
+
+                            if(isset($solr[$element])) {
+
+                                echo '<dt>' . $key . '</dt>';
+
+                                echo '<dd>';
+                                foreach($solr[$element] as $index => $metadatavalue) {
+                                    // if it's a facet search
+                                    // make it a clickable search link
+                                    if(in_array($key, $filters)) {
+
+                                        $orig_filter = urlencode($metadatavalue);
+                                        $lower_orig_filter = strtolower($metadatavalue);
+                                        $lower_orig_filter = urlencode($lower_orig_filter);
+
+                                        echo '<a href="./search/*:*/' . $key . ':%22'.$lower_orig_filter.'%7C%7C%7C'.$orig_filter.'%22">'.$metadatavalue.'</a>';
+                                    }
+                                    else {
+                                        echo $metadatavalue;
+                                    }
+                                    if($index < sizeof($solr[$element]) - 1) {
+
+                                        echo '; ';
+                                    }
+                                }
+                                echo '</dd>';
                             }
                         }
-                    }
-                    ?>
+                        ?>
 
-                </dl>
-            </div>
+                    </dl>
+                </div> <!-- all-info -->
+
+            </div> <!-- metadata -->
         </div> <!-- panel body -->
     </div>
 </div>
