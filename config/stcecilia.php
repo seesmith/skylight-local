@@ -75,11 +75,11 @@ $config['skylight_date_filters'] = array();
 $config['skylight_filters'] = array('Instrument' => 'type_filter', 'Maker' => 'author_filter', 'Place Made' => 'place_filter');
 $config['skylight_filter_delimiter'] = ':';
 
-$config['skylight_meta_fields'] = array('Title' => 'dc.title',
-    'Alternative Title' => 'dc.title.alternative.en',
-    'Maker' => 'dc.contributor.author.en',
-    'Subject' => 'dc.subject',
-    'Type' => 'dc.type');
+$config['skylight_meta_fields'] = array('Title',
+    'Alternative Title',
+    'Maker',
+    'Subject',
+    'Type');
 
 $config['skylight_recorddisplay'] = array(
     'Title',
