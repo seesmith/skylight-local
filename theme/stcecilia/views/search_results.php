@@ -47,7 +47,6 @@
                         if (false === $content) {
                             $thumbnailLink  =  'href="./record/'.$doc['id'].'" title = "'. $doc[$title_field][0].'"';
                             $thumbnailImg = '<img class="img-responsive record-thumbnail-search" src="../theme/stcecilia/images/comingsoon.gif"  title="' . $doc[$title_field][0] . '" />';
-
                         }
                         else
                         {
@@ -66,8 +65,6 @@
 
                             $thumbnailLink = 'href="./record/' . $doc['id'] . '" title = "' . $doc[$title_field][0] . '"';
                             $thumbnailImg = '<img class="img-responsive record-thumbnail-search" src="' . $linkURI . '"  title="' . $doc[$title_field][0] . '" ' . $imgText . '/>';
-
-
                         }
                     }
                     else
@@ -95,7 +92,6 @@
                         </div>
                     </a>
                 </div>
-
             <?php }?>
         </div>
         <div class="row">
