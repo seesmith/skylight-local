@@ -17,229 +17,58 @@ if(isset($solr[$type_field])) {
     $type = "media-" . strtolower(str_replace(' ','-',$solr[$type_field][0]));
 }
 
+//Cover image link
+$coverImage = '<img class="record-image" src ="http://lorempixel.com/' . rand(200,1000) . '/' . rand(200,1000) .'"/>';
 
 ?>
 
-<h1 class="itemtitle"><?php echo $record_title ?></h1>
-<div class="tags">
-    <?php
-
-    if (isset($solr[$subject_field])) {
-        foreach($solr[$subject_field] as $subject) {
-
-            $orig_filter = urlencode($subject);
-
-            $lower_orig_filter = strtolower($subject);
-            $lower_orig_filter = urlencode($lower_orig_filter);
-
-            echo '<a class="$month" href="./search/*:*/%22Subject'.$lower_orig_filter.'%7C%7C%7C'.$orig_filter.'%22">'.$subject.'</a>';
-        }
-    }
-
-    ?>
+<div class="cover-image-container col-xs-12 col-md-8 full-width">
+    <?php echo $coverImage; ?>
 </div>
 
-<div class="content">
-    <?php if(isset($solr[$bitstream_field]) && $link_bitstream) { ?>
+<div class="record-info col-xs-12 col-md-4">
+    <h1 class="itemtitle">
+        <div class="toggle-image hidden-xs hidden-sm">
+            <i class="fa fa-arrow-left" aria-hidden="true" type="button" value="Back to Search Results" onClick="history.go(-1);"></i>
+        </div>
+        <div class="backbtn">
+            <i class="fa fa-arrow-left" aria-hidden="true" type="button" value="Back to Search Results" onClick="history.go(-1);"></i>
+        </div>
+        <?php echo $record_title ?>
+    </h1>
+    <div class="description">
+        Lorem ipsum dolor sit amet, ut sea nihil fabellas mandamus. Eam id ornatus docendi fastidii, ignota appareat est no. Per at bonorum vivendo, vis et electram scripserit. Quo tantas consul mediocritatem te, democritum vituperatoribus vel et. Nulla ullamcorper vim in, no debet delenit per, duo scripta viderer an. Convenire voluptatum pri in, in est justo possit verterem. Est eu dicant voluptatum, dicit vocibus abhorreant eu vel.
 
-    <div class="record_bitstreams"><?php
+        Porro verear viderer in has, ad cum ullum animal. Ne vero fastidii vulputate mea, persius pertinacia scriptorem ad vix. Vix quis luptatum an. Quas instructior ea has, usu te libris probatus, id nullam facete mea. Mollis definiebas qui ea, ei eum vivendum qualisque, novum molestie eam ex. Aeque sensibus consetetur nec cu, sed inermis adversarium an.
 
-        $mainImage = false;
-        $videoFile = false;
-        $audioFile = false;
-        $audioLink = "";
-        $videoLink = "";
+        Appareat detraxit pertinax pro an. Euripidis signiferumque vel ea. In iuvaret hendrerit mediocritatem qui, nam cibo definitiones et, at qui solet inciderint. Mei id apeirian scriptorem. Ludus solet admodum ei eos, ius oblique expetendis theophrastus in. Vocent atomorum temporibus vis an, sumo hinc voluptatum ne qui. Duo posse congue ea.
 
-        foreach ($solr[$bitstream_field] as $bitstream)
-        {
-            $b_segments = explode("##", $bitstream);
-            $b_filename = $b_segments[1];
-            $b_seq = $b_segments[4];
+        Nullam habemus nominavi an eos, possit laoreet vocibus in duo. Cum cibo ancillae ei. Ius enim vocent an, in omnium volutpat deseruisse usu. Consul soleat ut quo, nec eu epicurei praesent gloriatur, veniam epicurei cu sea. Id vel iuvaret omittam. Eum et dicam constituto mediocritatem.
 
-            if((strpos($b_filename, ".jpg") > 0) || (strpos($b_filename, ".JPG") > 0)) {
+        Appareat sadipscing definitiones et mel, tantas senserit disputando ut vis. Pri no aeterno omnesque, te qui clita nostro neglegentur. Ex summo deseruisse qui, per ullum veritus ei. An sint mollis sit. At ullum nostrum suscipit qui.
+    </div>
+    <div class="tags">
+        <?php
 
-                $bitstream_array[$b_seq] = $bitstream;
+        if (isset($solr[$subject_field])) {
+            foreach($solr[$subject_field] as $subject) {
 
+                $orig_filter = urlencode($subject);
+
+                $lower_orig_filter = strtolower($subject);
+                $lower_orig_filter = urlencode($lower_orig_filter);
+
+                echo '<a class="$month" href="./search/*:*/%22Subject'.$lower_orig_filter.'%7C%7C%7C'.$orig_filter.'%22">'.$subject.'</a>';
             }
         }
 
-        // sorting array so main image is first
-        ksort($bitstream_array);
-
-        $b_seq =  "";
-
-        foreach($bitstream_array as $bitstream) {
-            $mp4ok = false;
-            $b_segments = explode("##", $bitstream);
-            $b_filename = $b_segments[1];
-            $b_handle = $b_segments[3];
-            $b_seq = $b_segments[4];
-            $b_handle_id = preg_replace('/^.*\//', '',$b_handle);
-            $b_uri = './record/'.$b_handle_id.'/'.$b_seq.'/'.$b_filename;
-
-            if ((strpos($b_uri, ".jpg") > 0) or (strpos($b_uri, ".JPG") > 0))
-            {
-                // is there a main image
-                if (!$mainImage) {
-
-                    $bitstreamLink = '<div class="main-image">';
-
-                    $bitstreamLink .= '<a title = "' . $record_title . '" class="fancybox" rel="group" href="' . $b_uri . '"> ';
-                    $bitstreamLink .= '<img class="record-main-image" src = "'. $b_uri .'">';
-                    $bitstreamLink .= '</a>';
-
-                    $bitstreamLink .= '</div>';
-
-                    $mainImage = true;
-
-                }
-                // we need to display a thumbnail
-                else {
-
-                    // if there are thumbnails
-                    if(isset($solr[$thumbnail_field])) {
-                        foreach ($solr[$thumbnail_field] as $thumbnail) {
-
-                            $t_segments = explode("##", $thumbnail);
-                            $t_filename = $t_segments[1];
-
-                            if ($t_filename === $b_filename . ".jpg") {
-
-                                $t_handle = $t_segments[3];
-                                $t_seq = $t_segments[4];
-                                $t_uri = './record/'.$b_handle_id.'/'.$t_seq.'/'.$t_filename;
-
-                                $thumbnailLink[$numThumbnails] = '<div class="thumbnail-tile';
-
-                                if($numThumbnails % 4 === 0) {
-                                    $thumbnailLink[$numThumbnails] .= ' first';
-                                }
-
-                                $thumbnailLink[$numThumbnails] .= '"><a title = "' . $record_title . '" class="fancybox" rel="group" href="' . $b_uri . '"> ';
-                                $thumbnailLink[$numThumbnails] .= '<img src = "'.$t_uri.'" class="record-thumbnail" title="'. $record_title .'" /></a></div>';
-
-                                $numThumbnails++;
-                            }
-                        }
-                    }
-
-                }
-
-            }
-            else if ((strpos($b_uri, ".mp3") > 0) or (strpos($b_uri, ".MP3") > 0)) {
-
-                $audioLink .= '<audio controls>';
-                $audioLink .= '<source src="' . $b_uri . '" type="audio/mpeg" />Audio loading...';
-                $audioLink .= '</audio>';
-                $audioFile = true;
-
-            }
-
-            else if ((strpos($b_filename, ".mp4") > 0) or (strpos($b_filename, ".MP4") > 0))
-            {
-                $b_uri = $media_uri.$b_handle_id.'/'.$b_seq.'/'.$b_filename;
-                // Use MP4 for all browsers other than Chrome
-                if (strpos($_SERVER['HTTP_USER_AGENT'], 'Chrome') == false)
-                {
-                    $mp4ok = true;
-                }
-                //Microsoft Edge is calling itself Chrome, Mozilla and Safari, as well as Edge, so we need to deal with that.
-                else if (strpos($_SERVER['HTTP_USER_AGENT'], 'Edge') == true)
-                {
-                    $mp4ok = true;
-                }
-
-                if ($mp4ok == true)
-                {
-                    $videoLink .= '<div class="flowplayer" data-analytics="' . $ga_code . '" title="' . $record_title . ": " . $b_filename . '">';
-                    $videoLink .= '<video preload=auto loop width="100%" height="auto" controls preload="true" width="660">';
-                    $videoLink .= '<source src="' . $b_uri . '" type="video/mp4" />Video loading...';
-                    $videoLink .= '</video>';
-                    $videoLink .= '</div>';
-                    $videoFile = true;
-                }
-            }
-
-            else if ((strpos($b_filename, ".webm") > 0) or (strpos($b_filename, ".WEBM") > 0))
-            {
-                //Microsoft Edge needs to be dealt with. Chrome calls itself Safari too, but that doesn't matter.
-                if (strpos($_SERVER['HTTP_USER_AGENT'], 'Edge') == false)
-                {
-                    if (strpos($_SERVER['HTTP_USER_AGENT'], 'Chrome') == true)
-                    {
-                        $b_uri = $media_uri . $b_handle_id . '/' . $b_seq . '/' . $b_filename;
-                        // if it's chrome, use webm if it exists
-                        $videoLink .= '<div class="flowplayer" data-analytics="' . $ga_code . '" title="' . $record_title . ": " . $b_filename . '">';
-                        $videoLink .= '<video preload=auto loop width="100%" height="auto" controls preload="true" width="660">';
-                        $videoLink .= '<source src="' . $b_uri . '" type="video/webm" />Video loading...';
-                        $videoLink .= '</video>';
-                        $videoLink .= '</div>';
-                        $videoFile = true;
-                    }
-                }
-            }
-
-            ?>
-            <?php
-        } // end for each bitstream
-
-
-        if($mainImage) {
-
-            echo $bitstreamLink;
-            echo '<div class="clearfix"></div>';
-        }
-
-        $i = 0;
-        $newStrip = false;
-        if($numThumbnails > 0) {
-
-            echo '<div class="thumbnail-strip">';
-
-            foreach($thumbnailLink as $thumb) {
-
-                if($newStrip)
-                {
-
-                    echo '</div><div class="clearfix"></div>';
-                    echo '<div class="thumbnail-strip">';
-                    echo $thumb;
-                    $newStrip = false;
-                }
-                else {
-
-                    echo $thumb;
-                }
-
-                $i++;
-
-                // if we're starting a new thumbnail strip
-                if($i % 4 === 0) {
-                    $newStrip = true;
-                }
-            }
-
-            echo '</div><div class="clearfix"></div>';
-        }
-
-        if($audioFile) {
-
-            echo $audioLink;
-        }
-
-        if($videoFile) {
-
-            echo $videoLink;
-        }
-
-        echo '</div><div class="clearfix"></div>';
-
-        }
-
-        echo '</div>';
         ?>
+    </div>
+</div>
 
 
+
+<div class="content hidden">
         <table>
             <tbody>
             <?php foreach($recorddisplay as $key) {
@@ -302,7 +131,5 @@ if(isset($solr[$type_field])) {
 
             </tbody>
         </table>
-
-        <input type="button" value="Back to Search Results" class="backbtn" onClick="history.go(-1);">
 
 

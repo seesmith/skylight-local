@@ -470,3 +470,73 @@ nav #overflow li a:hover {
   -webkit-transform: translate3d(0,0,0);
   transform: translate3d(0,0,0);
 }
+
+.full-width img{
+  width: 100%;
+}
+
+.full-height{
+  text-align: center;
+}
+.full-height img{
+  height: calc(100vh - 120px);
+}
+
+.record-info{
+  right: 0px;
+  height: calc(100vh - 200px);
+  overflow: hidden;
+}
+
+.record-info .itemtitle{
+  position: relative;
+  margin: 0px;
+  padding:10px;
+  padding-left: 60px;
+  text-align: center;
+  font-size: 3vh;
+  background: rgb(8, 68, 102);
+  color: white;
+}
+
+.record-info .itemtitle .backbtn{
+  display: block;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  height: 100%;
+  width: 50px;
+  border: 0px;
+  background: rgb(102, 147, 176);
+  font-size: 4vh;
+}
+
+.record-info .itemtitle .toggle-image{
+  display: block;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  height: 100%;
+  width: 50px;
+  border: 0px;
+  background-color: rgb(102, 147, 176);
+  font-size: 4vh;
+}
+
+.record-info .itemtitle  i{
+  position: absolute;
+  width:100%;
+  left: 0px;
+  top: calc(50% - 2vh);
+}
+
+.record-info .itemtitle .backbtn:hover{
+  background: white;
+  color: black;
+}
+
+.record-info .description{
+  padding: 10px;
+  height:100%;
+  overflow: auto;
+}
