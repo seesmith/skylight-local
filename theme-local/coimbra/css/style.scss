@@ -411,8 +411,8 @@ nav #overflow li a:hover {
   position: relative;
   -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
   transition: opacity 0.35s, transform 0.35s;
-  -webkit-transform: translate3d(0,0,0);
-  transform: translate3d(0,0,0);
+  -webkit-transform: scale(1, 1);
+  transform: scale(1, 1);
   -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
 }
@@ -420,8 +420,8 @@ nav #overflow li a:hover {
 .row.record:hover img {
   opacity: 0.4;
   filter: alpha(opacity=40);
-  -webkit-transform: translate3d(10px,0,0);
-  transform: translate3d(10px,0,0);
+  -webkit-transform: scale(1, 1);
+  transform: scale(1, 1);
 }
 
 .row.record h4 {
@@ -471,12 +471,17 @@ nav #overflow li a:hover {
   transform: translate3d(0,0,0);
 }
 
+.row.record a:hover{
+  text-decoration: none;
+}
+
 .full-width img{
   width: 100%;
 }
 
 .full-height{
   text-align: center;
+  overflow: hidden;
 }
 .full-height img{
   height: calc(100vh - 120px);
@@ -484,8 +489,7 @@ nav #overflow li a:hover {
 
 .record-info{
   right: 0px;
-  height: calc(100vh - 200px);
-  overflow: hidden;
+  height: calc(100vh - 120px);
 }
 
 .record-info .itemtitle{
@@ -509,18 +513,21 @@ nav #overflow li a:hover {
   border: 0px;
   background: rgb(102, 147, 176);
   font-size: 4vh;
+  border-left: 1px solid rgba(8, 68, 102, 0.4);
 }
 
 .record-info .itemtitle .toggle-image{
   display: block;
   position: absolute;
   top: 0px;
-  left: 0px;
+  left: -50px;
   height: 100%;
   width: 50px;
   border: 0px;
-  background-color: rgb(102, 147, 176);
+  background: rgb(102, 147, 176);
   font-size: 4vh;
+  z-index: 100;
+
 }
 
 .record-info .itemtitle  i{
@@ -539,4 +546,17 @@ nav #overflow li a:hover {
   padding: 10px;
   height:100%;
   overflow: auto;
+}
+
+.invisible{
+  opacity: 0.7;
+  visibility: visible;
+  -webkit-filter: blur(1px);
+  -webkit-transition: all 1s ease;
+  transition: all 1s ease;
+}
+
+.invisible.visible{
+  opacity: 1;
+  -webkit-filter: blur(0px);
 }

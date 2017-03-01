@@ -38,6 +38,7 @@
     <link rel="stylesheet" href="http://releases.flowplayer.org/6.0.4/skin/minimalist.css">
     <link rel="stylesheet" href="<?php echo base_url()?>assets/font-awesome/css/font-awesome.min.css">
     <link rel="stylesheet" href="<?php echo base_url(); ?>theme/<?php echo $this->config->item('skylight_theme'); ?>/css/style.scss?v=2">
+    <link rel="stylesheet" href="<?php echo base_url(); ?>theme/<?php echo $this->config->item('skylight_theme'); ?>/css/animate.css">
 
     <!-- All JavaScript at the bottom, except for Modernizr which enables HTML5 elements & feature detects -->
     <script src="<?php echo base_url()?>assets/modernizr/modernizr-1.7.min.js"></script>
@@ -45,6 +46,8 @@
     <script src="<?php echo base_url()?>assets/jquery-ui-1.10.4/ui/minified/jquery-ui.min.js"></script>
     <script src="<?php echo base_url()?>assets/jquery-1.11.0/jcarousel/jquery.jcarousel.min.js"></script>
     <script src="<?php echo base_url()?>assets/bootstrap/js/bootstrap.min.js"></script>
+    <script src="<?php echo base_url(); ?>theme/<?php echo $this->config->item('skylight_theme'); ?>/js/visible.js"></script>
+    <script src="<?php echo base_url(); ?>theme/<?php echo $this->config->item('skylight_theme'); ?>/js/viewportchecker.js"></script>
 
     <script src="http://www.google-analytics.com/analytics.js"></script>
 

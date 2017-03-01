@@ -21,7 +21,6 @@ if ($base_parameters == "") {
 }
 ?>
 
-<!--//todo add sort-->
 <div class="row">
     <div class="col-sm-9 col-xs-12">
         <div id="gallery-container">
@@ -103,10 +102,10 @@ if ($base_parameters == "") {
 
                     $thumbnailLink = '<a  class= "record-link" href="./record/' . $doc['id'] . '" title = "' . $doc[$title_field][0] . '"> ';
 //                Change that back to normal after you have images
-                    $thumbnailLink .= '<img class="img-responsive" src ="http://lorempixel.com/' . rand(200,400) . '/' . rand(200,400) .'" title="' . $doc[$title_field][0] . '" /></a>';
+                    $thumbnailLink .= '<img class="img-responsive" src ="http://placekitten.com/' . rand(200,400) . '/' . rand(200,400) .'" title="' . $doc[$title_field][0] . '" /></a>';
 
                 } ?>
-                <div class="row record">
+                <div class="row record invisible">
                     <?php echo $thumbnailLink; ?>
                     <div class="col-xs-8 col-sm-9 result-info">
                         <h4 class="record-title">

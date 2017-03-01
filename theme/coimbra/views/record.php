@@ -7,6 +7,18 @@ $subject_field = $this->skylight_utilities->getField("Subject");
 $link_uri_field = $this->skylight_utilities->getField("Link");
 $filters = array_keys($this->config->item("skylight_filters"));
 
+$title = $this->skylight_utilities->getField("Title");
+$creator = $this->skylight_utilities->getField("Creator");
+$production_date = $this->skylight_utilities->getField("Production Date");
+$place_of_origin = $this->skylight_utilities->getField("Place of Origin");
+$material_medium = $this->skylight_utilities->getField("Material/Medium");
+$height = $this->skylight_utilities->getField("Height");
+$width = $this->skylight_utilities->getField("Width");
+$depth = $this->skylight_utilities->getField("Depth");
+$description = $this->skylight_utilities->getField("Description");
+$official_link = $this->skylight_utilities->getField("Institutional Link to Object");
+
+
 $media_uri = $this->config->item("skylight_media_url_prefix");
 
 $type = 'Unknown';
@@ -18,7 +30,7 @@ if(isset($solr[$type_field])) {
 }
 
 //Cover image link
-$coverImage = '<img class="record-image" src ="http://lorempixel.com/' . rand(200,1000) . '/' . rand(200,1000) .'"/>';
+$coverImage = '<img class="record-image" src ="http://lorempixel.com/' . rand(200,900) . '/' . rand(200, 900) .'"/>';
 
 ?>
 
@@ -29,7 +41,7 @@ $coverImage = '<img class="record-image" src ="http://lorempixel.com/' . rand(20
 <div class="record-info col-xs-12 col-md-4">
     <h1 class="itemtitle">
         <div class="toggle-image hidden-xs hidden-sm">
-            <i class="fa fa-arrow-left" aria-hidden="true" type="button" value="Back to Search Results" onClick="history.go(-1);"></i>
+            <i class="fa fa-arrows-h" aria-hidden="true" type="button" value="Back to Search Results" onClick="toggleImage();"></i>
         </div>
         <div class="backbtn">
             <i class="fa fa-arrow-left" aria-hidden="true" type="button" value="Back to Search Results" onClick="history.go(-1);"></i>
