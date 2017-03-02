@@ -49,7 +49,7 @@ mark { background-color: #ff9; color: #000; font-style: italic; font-weight: bol
 del { text-decoration: line-through; }
 abbr[title], dfn[title] { border-bottom: 1px dotted; cursor: help; }
 table { border-collapse: collapse; border-spacing: 0; }
-hr { display: block; height: 1px; border: 0; border-top: 1px solid #ccc; margin: 1em 0; padding: 0; }
+hr { display: block; height: 1px; border: 0; border-top: 1px solid #999; margin: 1em 0; padding: 0; }
 input, select { vertical-align: middle; }
 
 
@@ -113,13 +113,13 @@ h1.itemtitle 					{ font-family: 'Special Elite', cursive; font-size: 22px; line
 .left-title h1.itemtitle, .full-title h1.itemtitle
                                 { margin-top: 0; padding-top: 10px; }
 
-h1 a.heading-link               { color: #BBBEC3; text-decoration: none; }
+h1 a.heading-link               { color: #999; text-decoration: none; }
 h1 a.heading-link:hover         { text-decoration: underline; }
 
 p 								{ font-size: 17px; margin-bottom: 18px; }
 
 a, a:active, a:visited          { color: #163772; }
-a:hover 						{ text-decoration: underline; color: #BBBEC3; }
+a:hover 						{ text-decoration: underline; color: #999; }
 
 
 /* Site Css ///////////////////////////////////////////////////////////////////////////////////////////////////////////// */
@@ -134,7 +134,7 @@ header .container   { padding: 0;}
 
 .navbar-default .navbar-nav > li > a:focus, .navbar-default .navbar-nav > li > a:hover { background-color: #4A7787; color: #FFFFFF;  }
 
-.navbar-default     { background-color: #EEEEEE; border: 0;  }
+.navbar-default     { background-color: #999; border: 0;  }
 
 
 /* Common Containers & Subclasses ----------------------------------------------------------------------------------------*/
@@ -190,6 +190,13 @@ header .container   { padding: 0;}
 .related-items .list-group-item.active         { background-color: #AA841E; color: #FFFFFF;}
 .related-items .list-group-item.active:hover   { background-color: #AA841E; color: #FFFFFF;}
 
+/** Search results */
+.search-row {
+    border-bottom: 1px solid #999;
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
 
 /** footer */
 
@@ -200,7 +207,7 @@ footer                          { padding-top: 10px; padding-bottom: 10px;}
 .footer-policies                { font-size: 14px; margin-bottom: 5px; color: #555555;  text-align: center;}
 
 .footer-policies a, a:active, a:visited         { color: #4A7787; text-decoration: none;}
-.footer-policies a:hover 						{ text-decoration: underline; color: #BBBEC3;}
+.footer-policies a:hover 						{ text-decoration: underline; color: #999;}
 .footer-copyright                               { font-size: 11px;}
 
 .uoe-logo {
@@ -265,7 +272,7 @@ footer                          { padding-top: 10px; padding-bottom: 10px;}
 /* Custom Containers & Subclasses ----------------------------------------------------------------------------------------*/
 
 .tags					            { margin-top: 5px;  }
-.tags a 				            { color: #fff; font-size: 15px; background: #BBBEC3; -webkit-border-radius: 5px; -moz-border-radius: 5px; border-radius: 5px; padding: 2px 6px; line-height: 20px; margin-right: 8px; margin-top: 6px; text-decoration: none; display:inline-block; }
+.tags a 				            { color: #fff; font-size: 15px; background: #999; -webkit-border-radius: 5px; -moz-border-radius: 5px; border-radius: 5px; padding: 2px 6px; line-height: 20px; margin-right: 8px; margin-top: 6px; text-decoration: none; display:inline-block; }
 .tags a.bold			            { font-weight: bold; }
 .tags a:hover			            { background: #4A7787; color: #ffffff; text-decoration: none; }
 .tags a.artist                      { display:inline-block; line-height: 15px; margin-bottom: 5px; }

@@ -35,7 +35,7 @@
                 </nav>
             </div>
         </div>
-        <div class="row">
+        <div class="row search-row">
             <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
                 <h5 class="text-muted">Showing <?php echo $rows ?> results </h5>
             </div>
@@ -64,14 +64,10 @@
             </div>
 
         </div>
-
-
-
-        <hr>
         <?php
         foreach ($docs as $index => $doc) {
         ?>
-            <div class="row">
+            <div class="row search-row">
 
             <h3><a href="./record/<?php echo $doc['id']?>/<?php echo $doc['types'][0]?>"><?php echo $doc[$title_field]; ?></a></h3>
             <?php
@@ -115,8 +111,6 @@
                     </div>
                 <?php } ?>
             </div> <!-- close row-->
-            <hr>
-
             <?php
 
         } // end for each search result
