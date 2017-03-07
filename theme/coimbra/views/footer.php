@@ -40,8 +40,6 @@
         <script type="text/javascript" src="<?php echo base_url()?>assets/fancybox/source/helpers/jquery.fancybox-thumbs.js?v=1.0.7"></script>
         <script src="<?php echo base_url()?>assets/plugins/plugins.js"></script>
         <script src="<?php echo base_url()?>assets/script/script.js"></script>
-        <script src="<?php echo base_url()?>assets/script/script.js"></script>
-        <script src="<?php echo base_url(); ?>theme/<?php echo $this->config->item('skylight_theme'); ?>/js/shrink_header.js"></script>
         <script src="<?php echo base_url(); ?>theme/<?php echo $this->config->item('skylight_theme'); ?>/js/responsive_image.js"></script>
 <!--        Starts the loading animation effect on the gallery. You might move it to a js file.-->
 <script>

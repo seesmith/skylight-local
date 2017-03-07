@@ -4,7 +4,6 @@
 
 
 (function($){
-
     /**
      * Copyright 2012, Digital Fusion
      * Licensed under the MIT license.
@@ -26,7 +25,7 @@
             wPosition        = isContained ? $w.position() : 0,
             t           = $t.get(0),
             vpWidth     = $w.outerWidth(),
-            vpHeight    = $w.outerHeight(),
+            vpHeight    = $w.outerHeight()+100,
             direction   = (direction) ? direction : 'both',
             clientSize  = hidden === true ? t.offsetWidth * t.offsetHeight : true;
 
@@ -56,12 +55,11 @@
             else if(direction === 'horizontal')
                 return clientSize && hVisible;
         } else {
-
-            var viewTop 				= isContained ? 0 : wPosition,
+            var viewTop 		= isContained ? 0 : wPosition,
                 viewBottom      = viewTop + vpHeight,
                 viewLeft        = $w.scrollLeft(),
                 viewRight       = viewLeft + vpWidth,
-                position          = $t.position(),
+                position        = $t.position(),
                 _top            = position.top,
                 _bottom         = _top + $t.height(),
                 _left           = position.left,

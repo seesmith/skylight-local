@@ -102,7 +102,7 @@ if ($base_parameters == "") {
 
                     $thumbnailLink = '<a  class= "record-link" href="./record/' . $doc['id'] . '" title = "' . $doc[$title_field][0] . '"> ';
 //                Change that back to normal after you have images
-                    $thumbnailLink .= '<img class="img-responsive" src ="http://placekitten.com/' . rand(200,400) . '/' . rand(200,400) .'" title="' . $doc[$title_field][0] . '" /></a>';
+                    $thumbnailLink .= '<img class="img-responsive" src ="http://lorempixel.com/' . rand(200,400) . '/' . rand(200,400) .'" title="' . $doc[$title_field][0] . '" /></a>';
 
                 } ?>
                 <div class="row record invisible">

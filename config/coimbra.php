@@ -22,44 +22,26 @@ $config['skylight_container_id'] = '61';
 $config['skylight_sitemap_type'] = 'internal';
 
 $config['skylight_fields'] = array(
-    'Title' => 'dc.title',
-    'Alternative Title' => 'dc.title.alternative.en',
-    'Maker' => 'dc.contributor.author.en',
-    'Author' => 'dc.contributor.author.en',
-    'Country' => 'lido.country.en',
-    'City' => 'lido.city.en',
-    'Subject' => 'dc.subject.en',
-    'Instrument' => 'dc.type.en',
-    'Abstract' => 'dc.description.abstract.en',
-    'Date' => 'dc.date.created',
-    'Bitstream'=> 'dc.format.original.en',
-    'Thumbnail'=> 'dc.format.thumbnail.en',
-    'Place Made' => 'dc.coverage.spatial.en',
-    'Date Made' => 'dc.coverage.temporal.en',
-    'Period' => 'dc.coverage.temporalperiod.en',
-    'Accession Number' => 'dc.identifier.en',
-    'Technical Description' => 'dc.description.en',
-    'Other Information' => 'dc.description.usage.en',
-    'Collection' => 'dc.relation.ispartof.en',
-    'Notes' => 'dc.description.cataloguernotes',
-    'Measurements' => 'dc.format.extent.en',
-    'Signature' => 'dc.format.signature.en',
-    'Inscription' => 'dc.format.inscription.en',
-    'Rights Holder' => 'dc.rights.holder.en',
-    'Instrument Family' => 'dc.type.family.en',
-    'Genus' => 'dc.type.genus.en',
-    'Provenance' => 'dc.provenance.en',
-    'Decorations' => 'dc.description.decoration.en',
-    'Link' => 'dc.identifier.uri.en',
-    'Author Biography' => 'dc.contributor.authorbio.en',
-    'Associated Musician Full' => 'dc.contributor.assocfull.en',
-    'Associated Musician' => 'dc.contributor.assoc.en',
-    'Short Description' => 'dc.description.level1.en',
-    'Description' => 'dc.description.level2.en',
-    'Associated Musician Biography' => 'dc.contributor.assocbio.en',
-    'Instrument Type Info' => 'dc.type.desc.en',
-    'Instrument Type History' => 'dc.type.history.en'
-
+    'Collection'                => 'collection',
+    'Relation'                  => 'dc.relation',
+    'Identifier'                => 'dc.identifier',
+    'Title'                     => 'dc.title',
+    'Creator'                   => 'dc.creator',
+    'Temporal Coverage'         => 'dc.coverage.temporal',
+    'Spatialcountry Coverage'   => 'dc.coverage.spatialcountry',
+    'Format'                    => 'dc.format',
+    'Format Extent'             => 'dc.format.extent',
+    'Description'               => 'dc.description',
+    'Identifier Citation'       => 'dc.identifier.citation',
+    'Source URI'                => 'dc.source.uri',
+    'License'                   => 'dc.license',
+    'Rights Holder'             => 'dc.rights.holder',
+    'Contributor'               => 'dc.contributor',
+    'Rights'                    => 'dc.rights',
+    'Original'                  => 'dim.original',
+    'Identifier URI'            => 'dc.identifier.uri',
+    'Subject'                   => 'dc.subject',
+    'Spatial Coverage'          => 'dc.coverage.spatial'
 );
 
 
@@ -73,18 +55,16 @@ $config['skylight_meta_fields'] = array('Title' => 'dc.title',
     'Subject' => 'dc.subject',
     'Type' => 'dc.type');
 
-$config['skylight_recorddisplay'] = array('Alternative Title',
-    'Instrument',
-    'Instrument Family',
-    'Maker',
-    'Subject',
-    'Place Made',
-    'Date Made',
-    'Measurements',
-    'Inscription',
-    'Signature',
-    'Rights Holder',
-    'Accession Number');
+$config['skylight_recorddisplay'] = array(
+    'Title',
+    'Creator',
+    'Temporal Coverage',
+    'Spatialcountry Coverage',
+    'Format',
+    'Format Extent',
+    'Description',
+    'Subject'
+);
 
 $config['skylight_descriptiondisplay'] = array(
     'Abstract',
