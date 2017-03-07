@@ -31,8 +31,9 @@ $coverImage = '<img class="record-image" src ="http://placekitten.com/' . rand(2
             echo '<div class="col-xs-12"><span class="field">' . $key . '</span>' . $element . '</div>';
         }
         ?>
+        <div class="col-xs-12" id="map"></div>
     </div>
-    <div class="tags">
+    <div class="tags hidden">
         <?php
 
         if (isset($solr[$subject_field])) {

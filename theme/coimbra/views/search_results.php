@@ -106,8 +106,11 @@ if ($base_parameters == "") {
 
                 } ?>
                 <div class="row record invisible">
+                    <h4 class="visible-xs">
+                        <a href="./record/<?php echo $doc['id'] ?>?highlight=<?php echo $query ?>"><?php echo $doc[$title_field][0]; ?></a>
+                    </h4>
                     <?php echo $thumbnailLink; ?>
-                    <div class="col-xs-8 col-sm-9 result-info">
+                    <div class="col-sm-9 hidden-xs result-info">
                         <h4 class="record-title">
                             <a href="./record/<?php echo $doc['id'] ?>?highlight=<?php echo $query ?>"><?php echo $doc[$title_field][0]; ?></a>
                         </h4>
@@ -165,11 +168,11 @@ if ($base_parameters == "") {
                     <!--                            </ul>-->
                     <!--                        </div>-->
                 </div>
+                <hr class="visible-xs">
                 <?php
             } // end for each search result
             ?>
         </div>
-
         <div class="row">
 
             <div class="centered text-center">
