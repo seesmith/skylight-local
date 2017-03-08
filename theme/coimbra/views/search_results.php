@@ -174,7 +174,6 @@ if ($base_parameters == "") {
             ?>
         </div>
         <div class="row">
-
             <div class="centered text-center">
                 <nav>
                     <ul class="pagination">

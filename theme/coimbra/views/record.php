@@ -32,6 +32,7 @@ $coverImage = '<img class="record-image" src ="http://placekitten.com/' . rand(2
         }
         ?>
         <div class="col-xs-12" id="map"></div>
+        <i class="fa fa-angle-double-down hidden-xs hidden-sm" aria-hidden="true"></i>
     </div>
     <div class="tags hidden">
         <?php
