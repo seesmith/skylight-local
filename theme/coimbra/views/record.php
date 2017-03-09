@@ -28,7 +28,7 @@ $coverImage = '<img class="record-image" src ="http://placekitten.com/' . rand(2
     <div class="description">
         <?php foreach($recorddisplay as $key) {
             $element = $this->skylight_utilities->getField($key);
-            echo '<div class="col-xs-12"><span class="field">' . $key . '</span>' . $element . '</div>';
+            echo '<div class="row"><span class="field">' . $key . '</span>' . $element . '</div>';
         }
         ?>
         <div class="col-xs-12" id="map"></div>

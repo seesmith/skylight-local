@@ -568,6 +568,7 @@ nav #overflow li a:hover {
 }
 @media screen and (max-width: 768px) {
   .full-height img {
+    max-width: 100%;
     max-height: calc(100vh - 80px);
     display: block;
     margin: auto;
@@ -658,18 +659,18 @@ nav #overflow li a:hover {
   .record-info .description {
     height: calc(100% - 50px);
     width: calc(100% + 18px);
-    padding: 10px;
+    padding: 10px 30px 10px 10px;
     overflow-y: scroll;
   }
   #map{
-    margin-left: -2px;
     height: 400px;
   }
-  .record-info .description div {
+  .record-info .description .row {
     padding: 10px 0px 10px;
     word-wrap:break-word;
+    width: calc(100% + 18px);
   }
-  .record-info .description span {
+  .record-info .description .field {
     width: 100%;
     display: block;
     color: rgb(230, 230, 230);
@@ -764,15 +765,16 @@ nav #overflow li a:hover {
   .record-info .description {
     padding: 10px;
     overflow: auto;
+    width: 100%;
   }
   #map{
     height: 400px;
   }
-  .record-info .description div {
+  .record-info .description .row {
     border-bottom: 1px solid rgba(20, 20, 20, 0.1);
     padding: 10px 0px 10px;
   }
-  .record-info .description span {
+  .record-info .description .field {
     width: 100%;
     display: block;
     color: rgb(8, 68, 102);
