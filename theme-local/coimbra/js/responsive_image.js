@@ -35,7 +35,11 @@ function resizeImage(){
     var i_height = $('.record-image').height();
     var i_width  = $('.record-image').width();
 
-    if ((w_width*i_height)/(i_width) + 80 < w_height || (w_height*i_width)/i_height > w_width*0.6-30) {
+    if ((w_width*i_height)/(i_width) + 80 < w_height && (w_height*i_width)/(i_height) + 45 > w_height*0.7) {
+        if(i_width>i_height) $('.full-height').removeClass('full-height').addClass('full-width');
+        else                 $('.full-width').removeClass('full-width').addClass('full-height');
+    }
+    else if ((w_width*i_height)/(i_width) + 80 < w_height || (w_height*i_width)/(i_height) + 45 > w_height*0.7) {
         $('.full-height').removeClass('full-height').addClass('full-width');
     }
     else {

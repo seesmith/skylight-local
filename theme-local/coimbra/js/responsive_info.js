@@ -4,10 +4,8 @@
  */
 
 window.onload = function (){
-    alert();
     var i_width  = $('.record-image').width();
     var w_width  = $(window).width();
 
-    $('.record-info').width(w_width - i_width);
-    alert();
+    if(w_width>768) $('.record-info').width(w_width - i_width);
 };
