@@ -41,6 +41,7 @@
         <script src="<?php echo base_url()?>assets/plugins/plugins.js"></script>
         <script src="<?php echo base_url()?>assets/script/script.js"></script>
         <script src="<?php echo base_url(); ?>theme/<?php echo $this->config->item('skylight_theme'); ?>/js/responsive_image.js"></script>
+        <script src="<?php echo base_url(); ?>theme/<?php echo $this->config->item('skylight_theme'); ?>/js/disable_map_scroll.js"></script>
         <!--        Starts the loading animation effect on the gallery. You might move it to a js file.-->
         <script>
             $(window).bind("load", function() {

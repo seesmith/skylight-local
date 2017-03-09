@@ -536,8 +536,7 @@ nav #overflow li a:hover {
 
 @media screen and (min-width: 768px) {
   .full-width img {
-    max-height: 100%;
-    max-width: 60%;
+    width: 60%;
     box-shadow: 5px 5px 5px rgb(220, 220, 220);
   }
 }
@@ -553,7 +552,7 @@ nav #overflow li a:hover {
 
 @media screen and (min-width: 768px) {
   .full-height img {
-    max-height: calc(100vh - 80px);
+    height: calc(100vh - 80px);
     display: block;
     margin: auto;
     box-shadow: 10px 10px 10px rgb(220, 220, 220);
@@ -664,11 +663,13 @@ nav #overflow li a:hover {
   }
   #map{
     height: 400px;
+    width: calc(100% + 18px);
   }
   .record-info .description .row {
     padding: 10px 0px 10px;
     word-wrap:break-word;
     width: calc(100% + 18px);
+    border-bottom: 1px solid rgba(240, 240, 240, 0.1);
   }
   .record-info .description .field {
     width: 100%;

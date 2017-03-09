@@ -31,7 +31,7 @@ $coverImage = '<img class="record-image" src ="http://placekitten.com/' . rand(2
             echo '<div class="row"><span class="field">' . $key . '</span>' . $element . '</div>';
         }
         ?>
-        <div class="col-xs-12" id="map"></div>
+        <div id="map"></div>
         <i class="fa fa-angle-double-down hidden-xs hidden-sm" aria-hidden="true"></i>
     </div>
     <div class="tags hidden">
