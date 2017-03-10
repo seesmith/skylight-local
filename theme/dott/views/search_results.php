@@ -36,11 +36,11 @@
             </div>
         </div>
         <div class="row search-row">
-            <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+            <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 results-num">
                 <h5 class="text-muted">Showing <?php echo $rows ?> results </h5>
             </div>
 
-            <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 sort">
+            <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 results-num sort">
                     <h5 class="text-muted">Sort By:
                     <?php foreach($sort_options as $label => $field) {
                         if($label == 'Relevancy')

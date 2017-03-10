@@ -8,8 +8,8 @@ $config['skylight_url_prefix'] = 'dott';
 // set the base url and ga code
 if (strpos($_SERVER['HTTP_HOST'], "localhost") !== false) {
     $config['skylight_ga_code'] = '';
-    $config['skylight_solrbase'] = 'http://localhost:9125/';
-    $config['skylight_link_url'] = 'http://localhost:8081';
+    $config['skylight_solrbase'] = 'http://localhost:9129/';
+    $config['skylight_link_url'] = 'http://lac-archives-test.is.ed.ac.uk:8081';
 }
 else if (strpos($_SERVER['HTTP_HOST'], "test") !== false) {
     $config['skylight_ga_code'] = '';
@@ -87,7 +87,7 @@ $config['skylight_meta_fields'] = array('Title' => 'title',
     'Level' => 'level',);
 
 $config['skylight_recorddisplay'] = array('Identifier','Creator','Dates','Extent','Extent Type','Agent','Subject',
-    'Notes','Rights','Language','Scope and Contents','Related','Bibliography','Physical','Physical Description',
+    'Rights','Language','Scope and Contents','Related','Bibliography','Physical','Physical Description',
     'Access','Alternative Format' );
 
 $config['skylight_searchresult_display'] = array('Title','Creator','Subject','Agent');

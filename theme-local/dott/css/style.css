@@ -170,31 +170,41 @@ header .container   { padding: 0;}
 .menu-links li a:hover		    { background-color: #4A7787; color: #FFFFFF;}
 
 /** content pages*/
-.content a                      { color: #163772;}
-.btn-info                       { background-color: #4A7787; color: #FFFFFF; letter-spacing: 1px; margin-bottom: 5px;}
-.btn-info:hover                 { background-color: #AA841E; color: #FFFFFF;}
+.content a                      { color: #AA841E;}
+.content a:visited              { color: #AA841E;}
+.content a:hover                { color: #4A7787;}
+
+.btn-info                       { background-color: #AA841E; color: #FFFFFF; letter-spacing: 1px; margin-bottom: 5px;}
+.btn-info:hover                 { background-color: #4A7787; color: #FFFFFF;}
 
 .btn-info a                     { color: #FFFFFF; letter-spacing: 1px;}
+.btn-info a:active              { color: #FFFFFF; letter-spacing: 1px;}
+.btn-info a:visited             { color: #FFFFFF; letter-spacing: 1px;}
 
 .item-div                       { width: 660px; text-align: left; display: block; }
 .iteminfo                       { display: block; min-height:40px; text-align: left; width: 100%; float:left; }
 .iteminfo h3                    { font-size: 20px; margin-top: 5px; }
-.sort                           { float: right;}
+.sort                           { float: right;  text-align: right; }
 
 /** side panel */
-.list-group-item.active         { background-color: #4A7787; color: #FFFFFF;}
-.list-group-item.active:hover   { background-color: #AA841E; color: #FFFFFF;}
+.list-group-item.active         { background-color: #AA841E; color: #FFFFFF;}
+.list-group-item.active:hover   { background-color: #4A7787; color: #FFFFFF;}
 
 .list-group-item.active a       { color: #FFFFFF; letter-spacing: 1px;}
 
-.related-items .list-group-item.active         { background-color: #AA841E; color: #FFFFFF;}
-.related-items .list-group-item.active:hover   { background-color: #AA841E; color: #FFFFFF;}
+.related-items .list-group-item.active         { background-color: #4A7787; color: #FFFFFF;}
+.related-items .list-group-item.active:hover   { background-color: #4A7787; color: #FFFFFF;}
 
 /** Search results */
 .search-row {
     border-bottom: 1px solid #999;
     padding-top: 15px;
     padding-bottom: 15px;
+}
+
+.results-num {
+    padding-left: 0;
+    padding-right: 0;
 }
 
 
@@ -275,7 +285,8 @@ footer                          { padding-top: 10px; padding-bottom: 10px;}
 .tags a 				            { color: #fff; font-size: 15px; background: #999; -webkit-border-radius: 5px; -moz-border-radius: 5px; border-radius: 5px; padding: 2px 6px; line-height: 20px; margin-right: 8px; margin-top: 6px; text-decoration: none; display:inline-block; }
 .tags a.bold			            { font-weight: bold; }
 .tags a:hover			            { background: #4A7787; color: #ffffff; text-decoration: none; }
-.tags a.artist                      { display:inline-block; line-height: 15px; margin-bottom: 5px; }
+.tags a:visited			            { background: #999; color: #ffffff; text-decoration: none; }
+.tags a:visited:hover		        { background: #4A7787; color: #ffffff; text-decoration: none; }
 
 
 /** pagination */
