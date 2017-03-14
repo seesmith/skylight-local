@@ -26,12 +26,22 @@ $coverImage = '<img class="record-image" src ="http://placekitten.com/' . rand(2
         <?php echo $title ?>
     </h1>
     <div class="description">
-        <?php foreach($recorddisplay as $key) {
-            $element = $this->skylight_utilities->getField($key);
-            echo '<div class="row"><span class="field">' . $key . '</span>' . $element . '</div>';
-        }
+        <?php
+            foreach($recorddisplay as $key) {
+                $element = $this->skylight_utilities->getField($key);
+                echo '<div class="row"><span class="field">' . $key . '</span>' . $element . '</div>';
+            }
         ?>
-        <div id="map"></div>
+        <div id="map">
+            <script>
+                $(window).bind("load", function() {
+//                  TODO: Add real location, center map on that location
+                    initMap(); addLocation(55.9445,3.1892);
+                });
+            </script>
+            <?php
+            ?>
+        </div>
         <i class="fa fa-angle-double-down hidden-xs hidden-sm" aria-hidden="true"></i>
     </div>
     <div class="tags hidden">

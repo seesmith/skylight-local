@@ -14,7 +14,6 @@ window.onload = function(){
     $('.cover-image-container').addClass("loaded");
     $('.record-image').click(function(){ openImage();});
     manageInfo();
-    initMap();
 };
 
 function manageInfo(){
