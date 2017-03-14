@@ -1,14 +1,13 @@
 <div class="col-md-9 col-sm-9 col-xs-12">
     <div class="content byEditor">
-        <h1 class="itemtitle">History</h1>
+        <h1 class="itemtitle">Case histories: Norman Dott's neurosurgical case notes</h1>
 
         <h1 class="itemtitle">Neurosurgery at the Royal Infirmary of Edinburgh</h1>
         <img src="<?php echo base_url()?>/theme/dott/images/P-PL1-S-103d.gif" alt="Royal Infirmary of Edinburgh" class="img-responsive pull-right img-circle" />
 
         <p>When Dott started out on his neurosurgical career in the 1920s there were no dedicated facilities for
             neurosurgery or neurorehabilitation. Dott worked in private practice, using his own consulting rooms and
-            beds in a private nursing home in Edinburgh’s Great King Street, moving his surgical equipment across
-            Edinburgh in a taxi.</p>
+            beds in a private nursing home in Edinburgh’s Great King Street, moving his surgical equipment in a taxi.</p>
         <p>In 1931, Dott was appointed Associate Neurological Surgeon at the Royal Infirmary of Edinburgh (RIE) and was
             and given access to four post-operative beds for his patients in Wards 13 and 14 and use of the operating
             theatre by surgeon, Sir David Wilkie. This was the beginning of the Department of Surgical Neurology at the
@@ -41,10 +40,9 @@
             from the forces and auxiliaries, along with military pensioners and prisoners of war.</p>
         <p>In 1941, Dott was made Consultant in Neurosurgery to the Army in Scotland and Consultant Neurosurgeon to the
             Emergency Medical Service. He was also a member of the National Brain Injuries Committee throughout the war,
-            and was awarded the Commander of the Order of the British Empire (C.B.E) for his work in Bangour in 1948.
+            and was awarded the Commander of the Order of the British Empire (CBE) for his work in Bangour in 1948.
             After the war, the Brain Injuries Unit at Bangour continued to treat patients in tandem with Dott’s team in
-            Ward 20 of the Royal Infirmary of Edinburgh until a new Department of Surgical Neurology opened at the
-            Western General Hospital in 1960.</p>
+            Ward 20 of the RIE until a new Department of Surgical Neurology opened at the Western General Hospital in 1960.</p>
 
         <h1 class="itemtitle">Department of Surgical Neurology, Western General Hospital</h1>
         <img src="<?php echo base_url()?>/theme/dott/images/LHB11-7-2d.gif" alt="Western General Hospital" class="img-responsive pull-right img-circle" />
@@ -52,7 +50,7 @@
         <p>In 1960, Dott took charge of a new Department of Surgical Neurology at the Western General Hospital, Edinburgh
             (WGH). This new department brought together the facilities for the diagnosis, treatment and rehabilitation
             of surgical neurology patients that Dott had been working towards throughout his career.</p>
-        <p>The Department of Surgical Neurology in Ward 20 of the Royal Infirmary of Edinburgh was firmly established as
+        <p>The Department of Surgical Neurology in Ward 20 of the RIE was firmly established as
             a specialist unit by the late 1950s. It operated over two sites providing different services at each location
             throughout the 1940s and 1950s. Although the department was extended in the 1950s, the growing number of
             patients (in 1959/1960 Ward 20 dealt with 1,100 patients, performed 900 operations and saw 6,000 out-patients
@@ -64,11 +62,12 @@
             and occupational therapy rooms; and staff accommodation.The theatres, which were specially designed by Dott
             and described by fellow surgeons as ‘utopian’, were an ovoid shape designed to limit infection and had domed
             roofs which featured shadowless lamps.</p>
-        <p>Ward 20 at the Infirmary became a specialist unit for head and spinal injuries and for out-patient services,
+        <p>Ward 20 became a specialist unit for head and spinal injuries and for out-patient services,
             while the new department at WGH was mainly for elective surgery, with patients transferring between the two
             sites. The sites were even more equipped to work together when, in 1962 a television link was set up. Norman
             Dott retired in 1963, but the department that he established continued to grow and lead the way in research
             and treatment, finally merging in 1986 with the Department of Medical Neurology to form the Department of
-            Clinical Neurosciences.</p>
+            Clinical Neurosciences. In 2018, the Department of Clinical Neurosciences will move to Little France, with
+            neurosurgery services returning to the RIE.</p>
     </div>
 </div>
