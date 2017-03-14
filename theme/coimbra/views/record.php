@@ -36,7 +36,7 @@ $coverImage = '<img class="record-image" src ="http://placekitten.com/' . rand(2
             <script>
                 $(window).bind("load", function() {
 //                  TODO: Add real location, center map on that location
-                    initMap(); addLocation(55.9445,3.1892);
+                    initMap(); addLocation("55.9445,8.18");
                 });
             </script>
             <?php

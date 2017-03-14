@@ -542,8 +542,10 @@ nav #overflow li a:hover {
 }
 @media screen and (max-width: 768px) {
   .full-width img {
+    max-height: calc(100vh - 80px);
     max-width: 100%;
-    max-height: 100%;
+    display: block;
+    margin: auto;
     box-shadow: 5px 5px 5px rgb(220, 220, 220);
   }
 }

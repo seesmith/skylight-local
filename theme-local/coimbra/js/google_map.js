@@ -315,12 +315,23 @@ function initMap() {
 }
 
 // Adding pinpoint to map given coordinates
-function addLocation(latitude, longitude){
-    var myLatLng = {lat: latitude, lng: longitude};
+function addLocation(ugly_coordinates, record_name){
+
+    var coordinates = convertToCoordinates(ugly_coordinates);
 
     var marker = new google.maps.Marker({
-        position: myLatLng,
+        position: coordinates,
         map: map,
-        title: 'Hello World!'
+        title: record_name
     });
+}
+
+// Reading coordinates
+function convertToCoordinates(ugly_coordinates){
+    var latitude, longitude;
+
+    latitude = parseFloat(ugly_coordinates.substring(0, ugly_coordinates.indexOf(",")));
+    longitude = parseFloat(ugly_coordinates.substring(ugly_coordinates.indexOf(",")+1, ugly_coordinates.length));
+
+    return {lat: latitude, lng: longitude};
 }
