@@ -22,6 +22,7 @@ $config['skylight_container_id'] = '61';
 $config['skylight_sitemap_type'] = 'internal';
 
 $config['skylight_fields'] = array(
+    'ID'                        => 'id',
     'Collection'                => 'collection',
     'Relation'                  => 'dc.relation',
     'Identifier'                => 'dc.identifier',
@@ -46,7 +47,7 @@ $config['skylight_fields'] = array(
 
 
 $config['skylight_date_filters'] = array();
-$config['skylight_filters'] = array('Instrument' => 'type_filter', 'Maker' => 'author_filter', 'Place Made' => 'place_filter');
+$config['skylight_filters'] = array('Maker' => 'author_filter', 'Place Made' => 'place_filter');
 $config['skylight_filter_delimiter'] = ':';
 
 $config['skylight_meta_fields'] = array('Title' => 'dc.title',

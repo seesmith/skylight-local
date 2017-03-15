@@ -3,6 +3,16 @@
 
         <div class="sidebar-nav">
 
+            <ul class="list-group">
+                <li class="list-group-item active">
+                    <a href="">Map</a>
+                    <button class="pull-right" onclick="toggleViewMode();">Open map view</button>
+                </li>
+                <li class="list-group-item toggle-map">
+                    <div id="map">
+
+                    </div>
+                </li>
 
         <?php foreach ($facets as $facet) {
 
@@ -10,7 +20,6 @@
         $active_terms = array();
 
         ?>
-            <ul class="list-group">
                 <li class="list-group-item active">
                     <a href="./browse/<?php echo $facet['name']; ?>">
                         <?php echo $facet['name'] ?>

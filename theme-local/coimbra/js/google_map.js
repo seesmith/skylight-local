@@ -9,8 +9,8 @@ var map;
 
 function initMap() {
     map = new google.maps.Map(document.getElementById('map'), {
-        zoom: 2,
-        center:  {lat: -25.363, lng: 131.044},
+        zoom: 4,
+        center:  {lat:51.509865, lng:-0.118092},
         scrollwheel: false,
         styles: [
             {
@@ -315,15 +315,23 @@ function initMap() {
 }
 
 // Adding pinpoint to map given coordinates
-function addLocation(ugly_coordinates, record_name){
+function addLocation(ugly_coordinates, record_name, index){
 
     var coordinates = convertToCoordinates(ugly_coordinates);
 
     var marker = new google.maps.Marker({
         position: coordinates,
         map: map,
-        title: record_name
+        title: record_name,
+        id: index
     });
+
+    marker.addListener('mouseover', function() {
+        $('.row.record').hide();
+        $('.row.record.'+marker.id).addClass('visible').show();
+    });
+
+
 }
 
 // Reading coordinates
@@ -334,4 +342,24 @@ function convertToCoordinates(ugly_coordinates){
     longitude = parseFloat(ugly_coordinates.substring(ugly_coordinates.indexOf(",")+1, ugly_coordinates.length));
 
     return {lat: latitude, lng: longitude};
+}
+
+function toggleViewMode(){
+    var swap = $('#gallery-container').html();
+    $('.list-group-item .pull-right').html()=='Open map view' ? $('.list-group-item .pull-right').html('Open gallery view') : $('.list-group-item .pull-right').html('Open map view');
+    $('#gallery-container').html($('.toggle-map').html());
+    $('.toggle-map').html(swap);
+    initMapAndAddLocations();
+}
+
+$(window).bind("load", function() {
+    initMapAndAddLocations();
+});
+
+function initMapAndAddLocations(){
+    initMap();
+
+    for (var i = 0; i < locations.length; i++) {
+        addLocation(locations[i]['location'], locations[i]['title'], locations[i]['index']);
+    }
 }

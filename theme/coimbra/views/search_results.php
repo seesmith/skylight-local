@@ -9,9 +9,8 @@ $date_field = $this->skylight_utilities->getField('Date Made');
 $bitstream_field = $this->skylight_utilities->getField('Bitstream');
 $thumbnail_field = $this->skylight_utilities->getField('Thumbnail');
 
-// booleans for video/audio
-$videotab = false;
-$audiotab = false;
+//indexing each record
+$index = rand(0,100000);
 
 $base_parameters = preg_replace("/[?&]sort_by=[_a-zA-Z+%20. ]+/", "", $base_parameters);
 if ($base_parameters == "") {
@@ -28,8 +27,21 @@ if ($base_parameters == "") {
                 <h5 class="text-muted">Showing <?php echo $rows ?> results </h5>
             </div>
 
+            <script>
+//                Will add locations to this array while iteration over the records
+                var locations = [], index=0;
+            </script>
+
             <?php
             foreach ($docs as $index => $doc) {
+
+//                TODO: Change with actial coordinates
+//                        Trying to pull coordinates for each item, will use random coordinates until data comes
+//                    $coordinates = $this->skylight_utilities->getField('Spatial Coverage');
+//                    $doc[$coordinates][0]
+                $coordinates = rand(40,60) . ', ' . rand(5,20);
+                echo '<script> locations.push({"location" : "' . $coordinates . '", "title" : "Hey", "index" : ' . $index . '}); </script>';
+
                 $bitstream_array = array();
                 $thumbnailLink = "";
 
@@ -105,7 +117,7 @@ if ($base_parameters == "") {
                     $thumbnailLink .= '<img class="img-responsive" src ="http://lorempixel.com/' . rand(200,400) . '/' . rand(200,400) .'" title="' . $doc[$title_field][0] . '" /></a>';
 
                 } ?>
-                <div class="row record invisible">
+                <div class="row record invisible <?php echo $index ?>">
                     <h4 class="visible-xs">
                         <a href="./record/<?php echo $doc['id'] ?>?highlight=<?php echo $query ?>"><?php echo $doc[$title_field][0]; ?></a>
                     </h4>
@@ -128,45 +140,7 @@ if ($base_parameters == "") {
                                 ?>
                             </ul>
                         <?php } ?>
-
-                        <ul class="nav nav-pills">
-                            <li><a href="./record/<?php echo $doc['id'] ?>/#description" title="Description Link"><i
-                                            class="fa fa-file-text fa-lg">&nbsp;</i></a></li>
-                            <li><a href="./record/<?php echo $doc['id'] ?>/#maker" title="Maker Link"><i
-                                            class="fa fa-industry fa-lg">&nbsp;</i></a></li>
-                            <li><a href="./record/<?php echo $doc['id'] ?>/#gallery" title="Image Gallery link"><i
-                                            class="fa fa-image fa-lg">&nbsp;</i></a></li>
-                            <?php if ($videotab) { ?>
-                                <li><a href="./record/<?php echo $doc['id'] ?>/#video" title="Videos link"><i
-                                                class="fa fa-video-camera fa-lg">&nbsp;</i></a></li>
-                            <?php } else { ?>
-                                <li><i class="fa fa-video-camera fa-lg fa-inactive">&nbsp;</i></li>
-                            <?php } ?>
-                            <?php if ($audiotab) { ?>
-                                <li><a href="./record/<?php echo $doc['id'] ?>/#audio" title="Audio link "><i
-                                                class="fa fa-music fa-lg">&nbsp;</i></a></li>
-                            <?php } else { ?>
-                                <li><i class="fa fa-music fa-lg fa-inactive">&nbsp;</i></li>
-                            <?php } ?>
-                        </ul>
                     </div>
-                    <!--                        <div class="col-xs-9 hidden-sm hidden-md hidden-lg result-info">-->
-                    <!--                            <h5>-->
-                    <!--                                <a href="./record/--><?php //echo $doc['id']?><!--?highlight=-->
-                    <?php //echo $query ?><!--">--><?php //echo $doc[$title_field][0]; ?><!--</a>-->
-                    <!--                                <small>-->
-                    <!--                                    --><?php //if(isset($doc[$date_field][0])) { echo $doc[$date_field][0];} else { echo 'Unknown';}?>
-                    <!--                                </small>-->
-                    <!--                            </h5>-->
-                    <!--                            <ul class="nav nav-pills">-->
-                    <!--                                <li><a href="./gallery/-->
-                    <?php //echo $doc['id']?><!--" title="Image Gallery link"><i class="fa fa-image fa-lg">&nbsp;</i></a></li>-->
-                    <!--                                <li><a href="./videos/-->
-                    <?php //echo $doc['id']?><!--" title="Videos link"><i class="fa fa-video-camera fa-lg">&nbsp;</i></a></li>-->
-                    <!--                                <li><a href="./audio/-->
-                    <?php //echo $doc['id']?><!--" title="Audio link "><i class="fa fa-music fa-lg">&nbsp;</i></a></li>-->
-                    <!--                            </ul>-->
-                    <!--                        </div>-->
                 </div>
                 <hr class="visible-xs">
                 <?php
