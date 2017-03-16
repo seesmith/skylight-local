@@ -40,7 +40,8 @@ if ($base_parameters == "") {
 //                    $coordinates = $this->skylight_utilities->getField('Spatial Coverage');
 //                    $doc[$coordinates][0]
                 $coordinates = rand(40,60) . ', ' . rand(5,20);
-                echo '<script> locations.push({"location" : "' . $coordinates . '", "title" : "Hey", "index" : ' . $index . '}); </script>';
+//                TODO: Replace all " in string with code
+                echo '<script> locations.push({"location" : "' . $coordinates . '", "title" : "' . str_replace(array("\n","\r"), "", str_replace('"', '\"', $doc[$title_field][0])) . '", "index" : ' . $index . '}); </script>';
 
                 $bitstream_array = array();
                 $thumbnailLink = "";

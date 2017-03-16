@@ -331,6 +331,10 @@ function addLocation(ugly_coordinates, record_name, index){
         $('.row.record.'+marker.id).addClass('visible').show();
     });
 
+    marker.addListener('mouseout', function() {
+        $('.list-group-item .pull-right').html()=='Open map view' ? $('.row.record').fadeIn() : $('.row.record').hide();
+    });
+
 
 }
 
