@@ -5,8 +5,8 @@
         <h1 class="itemtitle">Neurosurgery at the Royal Infirmary of Edinburgh</h1>
         <img src="<?php echo base_url()?>/theme/dott/images/P-PL1-S-103d.gif" alt="Royal Infirmary of Edinburgh" class="img-responsive pull-right img-circle" />
 
-        <p>When Dott started out on his neurosurgical career in the 1920s there were no dedicated facilities for
-            neurosurgery or neurorehabilitation. Dott worked in private practice, using his own consulting rooms and
+        <p>When Dott started his career in the 1920s there were no dedicated facilities for
+            neurosurgery or neurorehabilitation. Dott worked in private practice at first, using his own consulting rooms and
             beds in a private nursing home in Edinburgh’s Great King Street, moving his surgical equipment in a taxi.</p>
         <p>In 1931, Dott was appointed Associate Neurological Surgeon at the Royal Infirmary of Edinburgh (RIE) and was
             and given access to four post-operative beds for his patients in Wards 13 and 14 and use of the operating
@@ -53,18 +53,16 @@
         <p>The Department of Surgical Neurology in Ward 20 of the RIE was firmly established as
             a specialist unit by the late 1950s. It operated over two sites providing different services at each location
             throughout the 1940s and 1950s. Although the department was extended in the 1950s, the growing number of
-            patients (in 1959/1960 Ward 20 dealt with 1,100 patients, performed 900 operations and saw 6,000 out-patients
-            – still with only twenty beds) and the demands on the expertise of Dott and his team meant that more space
+            patients and the demands on the expertise of Dott and his team meant that more space
             was needed. A major contributing factor to the growth in patient numbers was the increase in head injuries
             sustained in road accidents due to the rise in car use.</p>
-        <p>A six-storey block was built at the WGH at a cost of £500,000 to accommodate the expanded Department of
-            Surgical Neurology. The new building housed twin operating theatres; sixty beds; physiotherapy, hydrotherapy
+        <p>A six-storey block was built at the WGH at a cost of £500,000. The new building housed twin operating theatres;
+            sixty beds; physiotherapy, hydrotherapy
             and occupational therapy rooms; and staff accommodation.The theatres, which were specially designed by Dott
             and described by fellow surgeons as ‘utopian’, were an ovoid shape designed to limit infection and had domed
             roofs which featured shadowless lamps.</p>
-        <p>Ward 20 became a specialist unit for head and spinal injuries and for out-patient services,
-            while the new department at WGH was mainly for elective surgery, with patients transferring between the two
-            sites. The sites were even more equipped to work together when, in 1962 a television link was set up. Norman
+        <p>The new department at WGH was mainly for elective surgery, with patients transferring to and from the RIE.
+            The sites were even more equipped to work together when, in 1962 a television link was set up. Norman
             Dott retired in 1963, but the department that he established continued to grow and lead the way in research
             and treatment, finally merging in 1986 with the Department of Medical Neurology to form the Department of
             Clinical Neurosciences. In 2018, the Department of Clinical Neurosciences will move to Little France, with
