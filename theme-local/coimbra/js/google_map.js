@@ -12,6 +12,9 @@ function initMap() {
         zoom: 4,
         center:  {lat:51.509865, lng:-0.118092},
         scrollwheel: false,
+        disableDefaultUI: true,
+        scaleControl: true,
+        zoomControl: true,
         styles: [
             {
                 "elementType": "geometry",
@@ -331,9 +334,10 @@ function addLocation(ugly_coordinates, record_name, index){
         $('.row.record.'+marker.id).addClass('visible').show();
     });
 
-    marker.addListener('mouseout', function() {
-        $('.list-group-item .pull-right').html()=='Open map view' ? $('.row.record').fadeIn() : $('.row.record').hide();
-    });
+    // Didn't allow users to click on the reord he liked
+    // marker.addListener('mouseout', function() {
+    //     $('.list-group-item .pull-right').html()=='Open map view' ? $('.row.record').fadeIn() : $('.row.record').hide();
+    // });
 
 
 }

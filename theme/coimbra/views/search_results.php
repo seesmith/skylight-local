@@ -114,7 +114,7 @@ if ($base_parameters == "") {
                 } else {
 
                     $thumbnailLink = '<a  class= "record-link" href="./record/' . $doc['id'] . '" title = "' . $doc[$title_field][0] . '"> ';
-//                Change that back to normal after you have images
+//                  Delete the following line after you have images
                     $thumbnailLink .= '<img class="img-responsive" src ="http://lorempixel.com/' . rand(200,400) . '/' . rand(200,400) .'" title="' . $doc[$title_field][0] . '" /></a>';
 
                 } ?>

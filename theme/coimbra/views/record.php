@@ -10,13 +10,42 @@ $bitstreamLinks = array();
 
 
 //Cover image link
-$coverImage = '<img class="record-image" src ="http://placekitten.com/' . rand(200,900) . '/' . rand(200, 900) .'"/>';
+$coverImage = '<img class="record-image" src ="http://localhost:8182/iiif/2/2.tif"/>';
+$coverImageURL = "http://localhost:8182/iiif/2/2.tif";
+$imageSize = getimagesize($coverImageURL);
+$json =  file_get_contents($coverImageURL . '/info.json');
+$jobj = json_decode($json, true);
+$error = json_last_error();
+$jsonheight = $jobj['height'];
+$jsonwidth = $jobj['width'];
 
 ?>
 
-<div class="cover-image-container full-width">
-    <?php echo $coverImage; ?>
+<!--Seadragon image viewer-->
+<div id="toolbarDiv" class="toolbar" style="position: relative;">
+    <div style="background: transparent none repeat scroll 0% 0%; border: medium none; margin: 0px; padding: 0px; position: static; width: 100%; height: 100%;">
+        <div style="background: transparent none repeat scroll 0% 0%; border: medium none; margin: 0px; padding: 0px; position: absolute; left: 0px; top: 0px;"></div>
+        <div style="background: transparent none repeat scroll 0% 0%; border: medium none; margin: 0px; padding: 0px; position: absolute; right: 0px; top: 0px;"></div>
+        <div style="background: transparent none repeat scroll 0% 0%; border: medium none; margin: 0px; padding: 0px; position: absolute; right: 0px; bottom: 0px;"></div>
+        <div style="background: transparent none repeat scroll 0% 0%; border: medium none; margin: 0px; padding: 0px; position: absolute; left: 0px; bottom: 0px;"></div>
+    </div>
 </div>
+<div id="openseadragon" class="cover-image-container full-width">
+
+</div>
+
+
+<!--This is page-specific script-->
+<script>
+    var imageURL = <?php echo json_encode($coverImageURL); ?>;
+    var imageHeight = <?php echo json_encode($jsonheight); ?>;
+    var imageWidth = <?php echo json_encode($jsonwidth); ?>;
+</script>
+<script src="<?php echo base_url(); ?>theme/<?php echo $this->config->item('skylight_theme'); ?>/js/openseadragon.min.js"></script>
+<script src="<?php echo base_url(); ?>theme/<?php echo $this->config->item('skylight_theme'); ?>/js/openseadragonconfig.js"></script>
+
+
+
 
 <div class="record-info">
     <h1 class="itemtitle">
