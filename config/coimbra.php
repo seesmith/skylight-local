@@ -42,7 +42,8 @@ $config['skylight_fields'] = array(
     'Original'                  => 'dim.original',
     'Identifier URI'            => 'dc.identifier.uri',
     'Subject'                   => 'dc.subject',
-    'Spatial Coverage'          => 'dc.coverage.spatial'
+    'Spatial Coverage'          => 'dc.coverage.spatial',
+    'Image Name'                => 'dc.format.original'
 );
 
 

@@ -1,19 +1,21 @@
 <?php
 
-//Title
+//Fast access to important variables
+$id = $this->skylight_utilities->getField("ID");
 $title = $this->skylight_utilities->getField("Title");
+$coverImageName = $this->skylight_utilities->getField("Image Name");
 
 $type = 'Unknown';
 $numThumbnails = 0;
 $bitstreamLinks = array();
 
-
-
-//Cover image link
-$coverImage = '<img class="record-image" src ="http://localhost:8182/iiif/2/2.tif"/>';
-$coverImageURL = "http://localhost:8182/iiif/2/2.tif";
+//Image variables setup
+$coverImageJSON = "http://127.0.0.1:8182/iiif/2/" . $solr[$coverImageName][0];
+$coverImageURL = $coverImageJSON . '/full/full/0/default.jpg';
+$coverImage = '<img class="record-image" src ="' .$coverImageURL .'"/>';
 $imageSize = getimagesize($coverImageURL);
-$json =  file_get_contents($coverImageURL . '/info.json');
+
+$json =  file_get_contents($coverImageJSON);
 $jobj = json_decode($json, true);
 $error = json_last_error();
 $jsonheight = $jobj['height'];
@@ -30,35 +32,33 @@ $jsonwidth = $jobj['width'];
         <div style="background: transparent none repeat scroll 0% 0%; border: medium none; margin: 0px; padding: 0px; position: absolute; left: 0px; bottom: 0px;"></div>
     </div>
 </div>
-<div id="openseadragon" class="cover-image-container full-width">
 
+<div id="openseadragon" class="cover-image-container full-width">
 </div>
 
 
-<!--This is page-specific script-->
+<!--Page-specific script to load the record image-->
 <script>
-    var imageURL = <?php echo json_encode($coverImageURL); ?>;
+    var imageURL = <?php echo json_encode($coverImageJSON); ?>;
     var imageHeight = <?php echo json_encode($jsonheight); ?>;
     var imageWidth = <?php echo json_encode($jsonwidth); ?>;
 </script>
 <script src="<?php echo base_url(); ?>theme/<?php echo $this->config->item('skylight_theme'); ?>/js/openseadragon.min.js"></script>
 <script src="<?php echo base_url(); ?>theme/<?php echo $this->config->item('skylight_theme'); ?>/js/openseadragonconfig.js"></script>
 
-
-
-
+<!--Record information-->
 <div class="record-info">
     <h1 class="itemtitle">
         <div class="backbtn">
             <i class="fa fa-arrow-left" aria-hidden="true" type="button" value="Back to Search Results" onClick="history.go(-1);"></i>
         </div>
-        <?php echo $title ?>
+        <?php echo $solr[$title][0] ?>
     </h1>
     <div class="description">
         <?php
             foreach($recorddisplay as $key) {
                 $element = $this->skylight_utilities->getField($key);
-                echo '<div class="row"><span class="field">' . $key . '</span>' . $element . '</div>';
+                echo '<div class="row"><span class="field">' . $key . '</span>' . $solr[$element][0] . '</div>';
             }
         ?>
         <div id="map">
@@ -92,70 +92,7 @@ $jsonwidth = $jobj['width'];
     </div>
 </div>
 
-
-
 <div class="content hidden">
-        <table>
-            <tbody>
-            <?php foreach($recorddisplay as $key) {
 
-                $element = $this->skylight_utilities->getField($key);
-                if(isset($solr[$element])) {
-                    echo '<tr><th>'.$key.'</th><td>';
-                    foreach($solr[$element] as $index => $metadatavalue) {
-                        // if it's a facet search
-                        // make it a clickable search link
-                        if(in_array($key, $filters)) {
-
-                            $orig_filter = urlencode($metadatavalue);
-                            $lower_orig_filter = strtolower($metadatavalue);
-                            $lower_orig_filter = urlencode($lower_orig_filter);
-
-                            echo '<a href="./search/*:*/' . $key . ':%22'.$lower_orig_filter.'%7C%7C%7C'.$orig_filter.'%22">'.$metadatavalue.'</a>';
-                        }
-                        else {
-                            echo $metadatavalue;
-                        }
-                        if($index < sizeof($solr[$element]) - 1) {
-                            echo '; ';
-                        }
-                    }
-                    echo '</td></tr>';
-                }
-
-            }
-            ?>
-
-            <?php
-            $i = 0;
-            $lunalink = false;
-            if (isset($solr[$link_uri_field])) {
-                foreach($solr[$link_uri_field] as $linkURI) {
-                    $linkURI = str_replace('"', '%22', $linkURI);
-                    $linkURI = str_replace('|', '%7C', $linkURI);
-
-                    if (strpos($linkURI,"images.is.ed.ac.uk") != false)
-                    {
-                        $lunalink = true;
-
-                        if($i == 0) {
-                            echo '<tr><th>Zoomable Image</th><td>';
-                        }
-
-                        echo '<a href="'. $linkURI . '" target="_blank"><i class="fa fa-file-image-o fa-lg">&nbsp;</i></a>';
-
-                        $i++;
-                    }
-
-                }
-
-                if($lunalink) {
-                    echo '</td></tr>';
-                }
-            }?>
-
-
-            </tbody>
-        </table>
 
 

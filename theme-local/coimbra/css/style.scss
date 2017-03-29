@@ -42,6 +42,7 @@ html, body {
 }
 body {
   margin-top: 50px;
+
   /* Height of header */
 }
 @media screen and (max-width: 768px) {
@@ -104,6 +105,7 @@ body {
   padding: 12px;
 }
 #myNavbar .search input{
+  width: 184px !important;
   float: left;
   border: 1px solid rgb(230,230,230);
   border-right: 0px;
@@ -672,7 +674,7 @@ nav #overflow li a:hover {
   .record-info .itemtitle {
     position: relative;
     margin: 0px;
-    padding: 10px 10px 10px 35px;
+    padding: 10px 10px 10px 85px;
     color: white;
     text-align: center;
     font-size: 3vh;

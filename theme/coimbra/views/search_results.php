@@ -3,14 +3,17 @@
 // Set up some variables to easily refer to particular fields you've configured
 // in $config['skylight_searchresult_display']
 
+$id_field = $this->skylight_utilities->getField('ID');
 $title_field = $this->skylight_utilities->getField('Title');
 $author_field = $this->skylight_utilities->getField('Author');
 $date_field = $this->skylight_utilities->getField('Date Made');
 $bitstream_field = $this->skylight_utilities->getField('Bitstream');
 $thumbnail_field = $this->skylight_utilities->getField('Thumbnail');
+$coverImageName = $this->skylight_utilities->getField("Image Name");
 
-//indexing each record
+//indexing each record in order to link the record to the map view
 $index = rand(0,100000);
+
 
 $base_parameters = preg_replace("/[?&]sort_by=[_a-zA-Z+%20. ]+/", "", $base_parameters);
 if ($base_parameters == "") {
@@ -26,7 +29,6 @@ if ($base_parameters == "") {
             <div class="col-xs-12 hidden">
                 <h5 class="text-muted">Showing <?php echo $rows ?> results </h5>
             </div>
-
             <script>
 //                Will add locations to this array while iteration over the records
                 var locations = [], index=0;
@@ -34,6 +36,7 @@ if ($base_parameters == "") {
 
             <?php
             foreach ($docs as $index => $doc) {
+//                Adding locations
 
 //                TODO: Change with actial coordinates
 //                        Trying to pull coordinates for each item, will use random coordinates until data comes
@@ -43,86 +46,27 @@ if ($base_parameters == "") {
 //                TODO: Replace all " in string with code
                 echo '<script> locations.push({"location" : "' . $coordinates . '", "title" : "' . str_replace(array("\n","\r"), "", str_replace('"', '\"', $doc[$title_field][0])) . '", "index" : ' . $index . '}); </script>';
 
+
+//              Finding image
+
                 $bitstream_array = array();
-                $thumbnailLink = "";
+                $coverImageJSON = "http://test.cantaloupe.is.ed.ac.uk/iiif/2/" . $doc[$coverImageName][0];
+                $coverImageURL = $coverImageJSON . '/full/,400/0/default.jpg';
+                $thumbnailLink = '<a  class= "record-link" href="./record/' . $doc['id'] . '" title = "' . $doc[$title_field][0] . '"> ';
+                $thumbnailLink .= '<img class="img-responsive" src ="' . $coverImageURL . '" title="' . $doc[$title_field][0] . '" /></a>';
+                 ?>
 
-                if (isset($doc[$bitstream_field])) {
 
-                    $i = 0;
-                    $started = false;
-
-                    // loop through to get min sequence
-                    foreach ($doc[$bitstream_field] as $bitstream) {
-                        $b_segments = explode("##", $bitstream);
-                        $b_filename = $b_segments[1];
-                        $b_seq = $b_segments[4];
-
-                        if ((strpos($b_filename, ".jpg") > 0) || (strpos($b_filename, ".JPG") > 0)) {
-
-                            $bitstream_array[$b_seq] = $bitstream;
-
-                            if ($started) {
-                                if ($b_seq < $min_seq) {
-                                    $min_seq = $b_seq;
-                                }
-                            } else {
-                                $min_seq = $b_seq;
-                                $started = true;
-                            }
-                        } else if (((strpos($b_filename, ".mp4") > 0) or (strpos($b_filename, ".MP4") > 0) or (strpos($b_filename, ".webm") > 0) or (strpos($b_filename, ".WEBM") > 0))) {
-                            $videotab = true;
-                        } else if ((strpos($b_filename, ".mp3") > 0) or (strpos($b_filename, ".MP3") > 0)) {
-                            $audiotab = true;
-                        }
-                        $i++;
-                    }
-
-                    // if there is a thumbnail and a bitstream
-                    if (isset($min_seq) && count($bitstream_array) > 0) {
-
-                        // get all the information
-                        $b_segments = explode("##", $bitstream_array[$min_seq]);
-                        $b_filename = $b_segments[1];
-                        $b_handle = $b_segments[3];
-                        $b_seq = $b_segments[4];
-                        $b_handle_id = preg_replace('/^.*\//', '', $b_handle);
-                        $b_uri = './record/' . $b_handle_id . '/' . $b_seq . '/' . $b_filename;
-                        $thumbnailLink = "";
-
-                        if (isset($doc[$thumbnail_field])) {
-                            foreach ($doc[$thumbnail_field] as $thumbnail) {
-
-                                $t_segments = explode("##", $thumbnail);
-                                $t_filename = $t_segments[1];
-
-                                if ($t_filename === $b_filename . ".jpg") {
-                                    $t_handle = $t_segments[3];
-                                    $t_seq = $t_segments[4];
-                                    $t_uri = './record/' . $b_handle_id . '/' . $t_seq . '/' . $t_filename;
-
-                                    $thumbnailLink = '<a href="./record/' . $doc['id'] . '" title = "' . $doc[$title_field][0] . '"> ';
-                                    $thumbnailLink .= '<img class="img-responsive" src = "' . $t_uri . '" title="' . $doc[$title_field][0] . '" /></a>';
-                                }
-                            }
-                        } // there isn't a thumbnail so display the bitstream itself
-                        else {
-
-                            $thumbnailLink = '<a href="./record/' . $doc['id'] . '" title = "' . $doc[$title_field][0] . '"> ';
-                            $thumbnailLink .= '<img class="img-responsive" src = "' . $b_uri . '" title="' . $doc[$title_field][0] . '" /></a>';
-                        }
-                    }
-                } else {
-
-                    $thumbnailLink = '<a  class= "record-link" href="./record/' . $doc['id'] . '" title = "' . $doc[$title_field][0] . '"> ';
-//                  Delete the following line after you have images
-                    $thumbnailLink .= '<img class="img-responsive" src ="http://lorempixel.com/' . rand(200,400) . '/' . rand(200,400) .'" title="' . $doc[$title_field][0] . '" /></a>';
-
-                } ?>
                 <div class="row record invisible <?php echo $index ?>">
+<!--                    Title   -->
                     <h4 class="visible-xs">
                         <a href="./record/<?php echo $doc['id'] ?>?highlight=<?php echo $query ?>"><?php echo $doc[$title_field][0]; ?></a>
                     </h4>
+
+<!--                    Thumbnail   -->
                     <?php echo $thumbnailLink; ?>
+
+<!--                    Record info     -->
                     <div class="col-sm-9 hidden-xs result-info">
                         <h4 class="record-title">
                             <a href="./record/<?php echo $doc['id'] ?>?highlight=<?php echo $query ?>"><?php echo $doc[$title_field][0]; ?></a>
@@ -148,6 +92,8 @@ if ($base_parameters == "") {
             } // end for each search result
             ?>
         </div>
+
+<!--        Pagination  -->
         <div class="row">
             <div class="centered text-center">
                 <nav>

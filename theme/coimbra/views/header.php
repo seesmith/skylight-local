@@ -39,6 +39,7 @@
     <link rel="stylesheet" href="<?php echo base_url()?>assets/font-awesome/css/font-awesome.min.css">
     <link rel="stylesheet" href="<?php echo base_url(); ?>theme/<?php echo $this->config->item('skylight_theme'); ?>/css/style.scss?v=2">
     <link rel="stylesheet" href="<?php echo base_url(); ?>theme/<?php echo $this->config->item('skylight_theme'); ?>/css/animate.css">
+    <link rel="stylesheet" href="<?php echo base_url(); ?>theme/<?php echo $this->config->item('skylight_theme'); ?>/css/loader.css">
 
     <!-- All JavaScript at the bottom, except for Modernizr which enables HTML5 elements & feature detects -->
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA29rpRdgUXPQoVfAhO5KlO4cV55CMSMi0&callback=initMap" async defer></script>
@@ -47,8 +48,10 @@
     <script src="<?php echo base_url()?>assets/jquery-ui-1.10.4/ui/minified/jquery-ui.min.js"></script>
     <script src="<?php echo base_url()?>assets/jquery-1.11.0/jcarousel/jquery.jcarousel.min.js"></script>
     <script src="<?php echo base_url()?>assets/bootstrap/js/bootstrap.min.js"></script>
+    <script src="<?php echo base_url(); ?>theme/<?php echo $this->config->item('skylight_theme'); ?>/js/pace.js"></script>
 
-<!--    Scripts added by Kristiyan Tsvetanov-->
+
+    <!--    Scripts added by Kristiyan Tsvetanov-->
     <script src="<?php echo base_url(); ?>theme/<?php echo $this->config->item('skylight_theme'); ?>/js/visible.js"></script>
     <script src="<?php echo base_url(); ?>theme/<?php echo $this->config->item('skylight_theme'); ?>/js/viewportchecker.js"></script>
 
@@ -149,7 +152,16 @@
                     <li><a href="#">Read more</a></li>
                     <li><a href="#">Contact</a></li>
                     <li class="search">
-                        <input type="text" placeholder="Search..."><button><i class="fa fa-search" aria-hidden="true"></i></button>
+                        <form role="search" action="./redirect/" method="post">
+
+                            <input id="uoe-search" type="text"
+                                       placeholder="Search..." name="q"
+                                       value="<?php if (isset($searchbox_query)) echo urldecode($searchbox_query); ?>"
+                                       id="q"/>
+                            <button type="submit" name="submit_search" value="Search">
+                                <i class="fa fa-search" aria-hidden="true"></i>
+                            </button>
+                        </form>
                     </li>
                 </ul>
                 <ul class="nav navbar-nav navbar-right">
