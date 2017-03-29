@@ -78,4 +78,11 @@
         }
     };
 
+    $(window).bind("load", function() {
+        jQuery('.record').viewportChecker({
+            classToAdd: 'visible', // Class to add to the elements when they are visible
+            offset: 1
+        });
+    });
+
 })(jQuery);

@@ -5,15 +5,10 @@ $id = $this->skylight_utilities->getField("ID");
 $title = $this->skylight_utilities->getField("Title");
 $coverImageName = $this->skylight_utilities->getField("Image Name");
 
-$type = 'Unknown';
-$numThumbnails = 0;
-$bitstreamLinks = array();
-
 //Image variables setup
-$coverImageJSON = "http://127.0.0.1:8182/iiif/2/" . $solr[$coverImageName][0];
+$coverImageJSON = "http://test.cantaloupe.is.ed.ac.uk/iiif/2/" . $solr[$coverImageName][0];
 $coverImageURL = $coverImageJSON . '/full/full/0/default.jpg';
 $coverImage = '<img class="record-image" src ="' .$coverImageURL .'"/>';
-$imageSize = getimagesize($coverImageURL);
 
 $json =  file_get_contents($coverImageJSON);
 $jobj = json_decode($json, true);
@@ -72,23 +67,6 @@ $jsonwidth = $jobj['width'];
             ?>
         </div>
         <i class="fa fa-angle-double-down hidden-xs hidden-sm" aria-hidden="true"></i>
-    </div>
-    <div class="tags hidden">
-        <?php
-
-        if (isset($solr[$subject_field])) {
-            foreach($solr[$subject_field] as $subject) {
-
-                $orig_filter = urlencode($subject);
-
-                $lower_orig_filter = strtolower($subject);
-                $lower_orig_filter = urlencode($lower_orig_filter);
-
-                echo '<a class="$month" href="./search/*:*/%22Subject'.$lower_orig_filter.'%7C%7C%7C'.$orig_filter.'%22">'.$subject.'</a>';
-            }
-        }
-
-        ?>
     </div>
 </div>
 

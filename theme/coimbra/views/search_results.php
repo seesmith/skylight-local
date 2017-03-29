@@ -1,19 +1,9 @@
 <?php
 
 // Set up some variables to easily refer to particular fields you've configured
-// in $config['skylight_searchresult_display']
-
 $id_field = $this->skylight_utilities->getField('ID');
 $title_field = $this->skylight_utilities->getField('Title');
-$author_field = $this->skylight_utilities->getField('Author');
-$date_field = $this->skylight_utilities->getField('Date Made');
-$bitstream_field = $this->skylight_utilities->getField('Bitstream');
-$thumbnail_field = $this->skylight_utilities->getField('Thumbnail');
 $coverImageName = $this->skylight_utilities->getField("Image Name");
-
-//indexing each record in order to link the record to the map view
-$index = rand(0,100000);
-
 
 $base_parameters = preg_replace("/[?&]sort_by=[_a-zA-Z+%20. ]+/", "", $base_parameters);
 if ($base_parameters == "") {
@@ -31,20 +21,19 @@ if ($base_parameters == "") {
             </div>
             <script>
 //                Will add locations to this array while iteration over the records
-                var locations = [], index=0;
+                var locations = [];
             </script>
 
             <?php
-            foreach ($docs as $index => $doc) {
+            foreach ($docs as $doc) {
 //                Adding locations
-
 //                TODO: Change with actial coordinates
 //                        Trying to pull coordinates for each item, will use random coordinates until data comes
 //                    $coordinates = $this->skylight_utilities->getField('Spatial Coverage');
 //                    $doc[$coordinates][0]
                 $coordinates = rand(40,60) . ', ' . rand(5,20);
 //                TODO: Replace all " in string with code
-                echo '<script> locations.push({"location" : "' . $coordinates . '", "title" : "' . str_replace(array("\n","\r"), "", str_replace('"', '\"', $doc[$title_field][0])) . '", "index" : ' . $index . '}); </script>';
+                echo '<script> locations.push({"location" : "' . $coordinates . '", "title" : "' . str_replace(array("\n","\r"), "", str_replace('"', '\"', $doc[$title_field][0])) . '", "index" : ' . $doc[$id_field] . '}); </script>';
 
 
 //              Finding image
@@ -57,7 +46,7 @@ if ($base_parameters == "") {
                  ?>
 
 
-                <div class="row record invisible <?php echo $index ?>">
+                <div class="row record invisible <?php echo $doc[$id_field] ?>">
 <!--                    Title   -->
                     <h4 class="visible-xs">
                         <a href="./record/<?php echo $doc['id'] ?>?highlight=<?php echo $query ?>"><?php echo $doc[$title_field][0]; ?></a>
@@ -71,20 +60,6 @@ if ($base_parameters == "") {
                         <h4 class="record-title">
                             <a href="./record/<?php echo $doc['id'] ?>?highlight=<?php echo $query ?>"><?php echo $doc[$title_field][0]; ?></a>
                         </h4>
-                        <?php if (array_key_exists($author_field, $doc)) { ?>
-                            <ul class="hidden-xs nav nav-pills tags">
-                                <?php
-                                foreach ($doc[$author_field] as $author) {
-
-                                    $orig_filter = urlencode($author);
-                                    $lower_orig_filter = strtolower($author);
-                                    $lower_orig_filter = urlencode($lower_orig_filter);
-
-                                    echo '<li class="active"><a href="./search/*:*/Maker:%22' . $lower_orig_filter . '%7C%7C%7C' . $orig_filter . '%22">' . $author . '</a></li>';
-                                }
-                                ?>
-                            </ul>
-                        <?php } ?>
                     </div>
                 </div>
                 <hr class="visible-xs">

@@ -16,7 +16,7 @@
     $('.parallax').css('background-image', 'url(' + images[i] + ')');
     $('.main-categories li:nth-child(' + (i) + ')').addClass('active');
 
-    // Chages the focused category every n seconds
+    // Changes the focused category every n seconds
     window.setInterval(function () {
         if(!hovered) {
             $('.main-categories li').removeClass('active');
