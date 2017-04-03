@@ -1,9 +1,9 @@
 <?php
 
-$config['skylight_appname'] = 'dott';
+$config['skylight_appname'] = 'lhsacasenotes';
 
 // Uncomment this if you are using a url of the form http://.../art/...
-$config['skylight_url_prefix'] = 'dott';
+$config['skylight_url_prefix'] = 'lhsacasenotes';
 
 // set the base url and ga code
 if (strpos($_SERVER['HTTP_HOST'], "localhost") !== false) {
@@ -25,11 +25,11 @@ else {
 $config['skylight_repository_type'] = 'archivesspace'; // Demo 'dspace'
 $config['skylight_repository_version'] = '1';
 
-$config['skylight_theme'] = 'dott';
+$config['skylight_theme'] = 'lhsacasenotes';
 
 $config['skylight_handle_prefix'] = '/repositories/4/';
 
-$config['skylight_fullname'] = 'Norman Dott';
+$config['skylight_fullname'] = 'Lothian Health Service Archives: Medical Case Notes';
 
 $config['skylight_adminemail'] = 'lddt@mlist.is.ed.ac.uk';
 
