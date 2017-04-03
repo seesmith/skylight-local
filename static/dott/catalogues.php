@@ -2,7 +2,7 @@
     <div class="content byEditor">
         <h1 class="itemtitle">How to use the catalogues</h1>
             <p>LHSA’s anonymised case note catalogues are accessed from both these pages and a section of the University
-                of Edinburgh’s online archive catalogue, <a href="http://archives.collections.ed.ac.uk" target="_blank" title="Archives at Edinburgh">ArchivesSpace.</a>
+                of Edinburgh’s online archives catalogue, <a href="http://archives.collections.ed.ac.uk" target="_blank" title="Archives Online at Edinburgh">Archives Online.</a>
             </p>
             <p>
                 <h3>Norman Dott’s Neurosurgical Case Notes (1920 – 1960)</h3>
@@ -32,11 +32,12 @@
             notable medical practitioners.
         </p>
         <p>
-            In ArchivesSpace, the catalogues can be searched by some of the key characteristics of the case notes that
+            In Archives Online, the catalogues can be searched by some of the key characteristics of the case notes that
             we have highlighted in each catalogue entry:
         <ul>
-        <li>Patient age: entering an age in the search box in ArchivesSpace will bring up catalogue entries for all the patients of this age.</li>
-        <li>Patient sex: entering ‘female’ or ‘male’ in the search box in ArchivesSpace will bring up cases by sex.</li>
+        <li>Patient age: entering an age in the search box in Archives Online will bring up catalogue entries for all
+            the patients of this age.</li>
+        <li>Patient sex: entering ‘female’ or ‘male’ in the search box in Archives Online will bring up cases by sex.</li>
         <li>Geographical origin of patient: in order to protect the anonymity of patients, we have expressed where
             patients come from in four main ways: Edinburgh and the Lothians, Scotland (outside Edinburgh and the Lothians),
             Great Britain (excluding Scotland) and outside Great Britain. In order to find patients from a particular area,
