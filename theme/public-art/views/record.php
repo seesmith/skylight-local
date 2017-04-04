@@ -55,9 +55,7 @@ $jsonwidth = $jobj['width'];
         <?php
             foreach($recorddisplay as $key) {
                 $element = $this->skylight_utilities->getField($key);
-                if(isset( $solr[$element][0] )) {
-                    echo '<div class="row"><span class="field">' . $key . '</span>' . $solr[$element][0] . '</div>';
-                }
+                echo '<div class="row"><span class="field">' . $key . '</span>' . $solr[$element][0] . '</div>';
             }
         ?>
         <div id="map">

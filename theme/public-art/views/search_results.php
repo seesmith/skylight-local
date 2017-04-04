@@ -28,14 +28,14 @@ if ($base_parameters == "") {
             <?php
             foreach ($docs as $doc) {
 //                Adding locations
-                $coordinates = ''. $doc[$location][0] . '';
+                $coordinates = ''. $doc[$location] . '';
                 echo '<script> locations.push({"location" : "' . $coordinates . '", "title" : "' . str_replace(array("\n","\r"), "", str_replace('"', '\"', $doc[$title_field][0])) . '", "index" : ' . $doc[$id_field] . '}); </script>';
 
                 //              Finding image
 
                 $bitstream_array = array();
-                $coverImageJSON = "http://test.cantaloupe.is.ed.ac.uk/iiif/2/" . $doc[$coverImageName][0];
-                $coverImageURL = $coverImageJSON . '/full/400,/0/default.jpg';
+                $coverImageJSON = "http://127.0.0.1:8182/iiif/2/" . $doc[$coverImageName][0];
+                $coverImageURL = $coverImageJSON . '/full/,400/0/default.jpg';
                 $thumbnailLink = '<a  class= "record-link" href="./record/' . $doc['id'] . '" title = "' . $doc[$title_field][0] . '"> ';
                 $thumbnailLink .= '<img class="img-responsive" src ="' . $coverImageURL . '" title="' . $doc[$title_field][0] . '" /></a>';
                  ?>
