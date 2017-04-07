@@ -7,16 +7,46 @@ $coverImageName = $this->skylight_utilities->getField("Image Name");
 $location = $this->skylight_utilities->getField("Spatial Coverage");
 
 
-//Image variables setup
-$coverImageJSON = "http://test.cantaloupe.is.ed.ac.uk/iiif/2/" . $solr[$coverImageName][0];
-$coverImageURL = $coverImageJSON . '/full/full/0/default.jpg';
-$coverImage = '<img class="record-image" src ="' .$coverImageURL .'"/>';
+////Image variables setup
+//$coverImageJSON = "http://test.cantaloupe.is.ed.ac.uk/iiif/2/" . $solr[$coverImageName][0];
+//$coverImageURL = $coverImageJSON . '/full/full/0/default.jpg';
+//$coverImage = '<img class="record-image" src ="' .$coverImageURL .'"/>';
 
-$json =  file_get_contents($coverImageJSON);
-$jobj = json_decode($json, true);
-$error = json_last_error();
-$jsonheight = $jobj['height'];
-$jsonwidth = $jobj['width'];
+//Image variables setup
+$imageNames = ['1.jpg', '2.jpg', '3.jpeg', '4.jpg'];
+echo '<script>var imageSource = [];</script>';
+for($i=0;$i<4;$i++){
+    $coverImageJSON = "http://127.0.0.1:8182/iiif/2/" . $imageNames[$i];
+    $coverImageURL = $coverImageJSON . '/full/full/0/default.jpg';
+    $coverImage = '<img class="record-image" src ="' .$coverImageURL .'"/>';
+
+    $json =  file_get_contents($coverImageJSON);
+    $jobj = json_decode($json, true);
+    $error = json_last_error();
+    $jsonheight = $jobj['height'];
+    $jsonwidth = $jobj['width'];
+    echo '
+    <script>
+    imageSource[' . $i . '] = {
+        "@context": "http://iiif.io/api/image/2/context.json",
+            "@id": "' . $coverImageJSON . '",
+            "height": ' . $jsonheight . ',
+            "width": ' . $jsonwidth . ',
+            "profile": ["http://iiif.io/api/image/2/level2.json",
+                {
+                    "formats": ["jpg"]
+                }
+            ],
+            "protocol": "http://iiif.io/api/image",
+            "tiles": [{
+            "scaleFactors": [1, 2, 8, 16, 32],
+                "width": "750",
+                "height": "750"
+            }],
+            "tileSize": 750
+        };
+        </script>';
+}
 
 ?>
 
@@ -27,13 +57,35 @@ $jsonwidth = $jobj['width'];
         $.scrollify({
             section : ".scroll",
             offset: -50,
-            updateHash: false
+            updateHash: false,
+            standardScrollElements: "#openseadragon, .record-info",
+            interstitialSection: ".footer"
         });
     });
 </script>
 <section class="image-view full-height-section scroll">
-    <a href="#left" class="picture-arrow-left"></a>
-    <a href="#right" class="picture-arrow-right"></a>
+
+    <!--Seadragon image viewer-->
+    <div id="toolbarDiv" class="toolbar">
+        <h2 id="previous-pic"></h2>
+        <h2 id="next-pic"></h2>
+    </div>
+
+    <div id="openseadragon" class="cover-image-container full-width">
+    </div>
+
+
+    <!--Page-specific script to load the record image-->
+    <script>
+        var imageURL = <?php echo json_encode($coverImageJSON); ?>;
+        var imageHeight = <?php echo json_encode($jsonheight); ?>;
+        var imageWidth = <?php echo json_encode($jsonwidth); ?>;
+    </script>
+    <script src="<?php echo base_url(); ?>theme/<?php echo $this->config->item('skylight_theme'); ?>/js/openseadragon.min.js"></script>
+    <script src="<?php echo base_url(); ?>theme/<?php echo $this->config->item('skylight_theme'); ?>/js/openseadragonconfig.js"></script>
+
+    <h3 class="text-center">&#x1F6C8;</h3>
+    <h3 class="text-center"><i class="fa fa-angle-double-down hidden-xs hidden-sm text-center" aria-hidden="true"></i></h3>
 </section>
 
 <section class="info-view full-height-section scroll">

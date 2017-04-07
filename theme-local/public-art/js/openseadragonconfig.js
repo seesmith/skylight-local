@@ -3,7 +3,6 @@
  * Contact me: kristiyan.c@gmail.com
  */
 (function($){
-
     OpenSeadragon({
         id: "openseadragon",
         prefixUrl: "assets/openseadragon/images/",
@@ -16,24 +15,10 @@
         previousButton: "previous",
         showNavigator: true,
 
-        tileSources: [{
-            "@context": "http://iiif.io/api/image/2/context.json",
-            "@id": imageURL,
-            "height": imageHeight,
-            "width": imageWidth,
-            "profile": ["http://iiif.io/api/image/2/level2.json",
-                {
-                    "formats": ["jpg"]
-                }
-            ],
-            "protocol": "http://iiif.io/api/image",
-            "tiles": [{
-                "scaleFactors": [1, 2, 8, 16, 32],
-                "width": "750",
-                "height": "750"
-            }],
-            "tileSize": 750
-        }]
+        tileSources: [imageSource],
+        sequenceMode: true,
+        nextButton: 'next-pic',
+        previousButton: 'previous-pic'
     });
 
 })(jQuery);
