@@ -1,6 +1,6 @@
 </div> <!--END of ROW -- move into col sidebar -->
 </div><!--END of container -- move into col sidebar -->
-        <div class="footer">
+        <div class="footer scroll">
             <div class="col-xs-12 col-md-4">
                 <div class="col-xs-12 text-center"><i class="fa fa-globe fa-4x" aria-hidden="true"></i></div>
                 <ul class="col-xs-12">

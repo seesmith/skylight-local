@@ -3,9 +3,8 @@
  * email: kristiyan.c@gmail.com for any questions
  */
 
-// A little bit overloaded, move some of code
 window.onload = function(){
-    $('#loader').fadeOut();
+    $('#loader').fadeOut(2000);
     $('#loader').click(function(){ $('#loader').fadeOut(); });
 
     $('.cover-image-container').addClass("loaded");

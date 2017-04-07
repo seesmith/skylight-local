@@ -20,57 +20,46 @@ $jsonwidth = $jobj['width'];
 
 ?>
 
-<!--Seadragon image viewer-->
-<div id="toolbarDiv" class="toolbar" style="position: relative;">
-    <div style="background: transparent none repeat scroll 0% 0%; border: medium none; margin: 0px; padding: 0px; position: static; width: 100%; height: 100%;">
-        <div style="background: transparent none repeat scroll 0% 0%; border: medium none; margin: 0px; padding: 0px; position: absolute; left: 0px; top: 0px;"></div>
-        <div style="background: transparent none repeat scroll 0% 0%; border: medium none; margin: 0px; padding: 0px; position: absolute; right: 0px; top: 0px;"></div>
-        <div style="background: transparent none repeat scroll 0% 0%; border: medium none; margin: 0px; padding: 0px; position: absolute; right: 0px; bottom: 0px;"></div>
-        <div style="background: transparent none repeat scroll 0% 0%; border: medium none; margin: 0px; padding: 0px; position: absolute; left: 0px; bottom: 0px;"></div>
-    </div>
-</div>
 
-<div id="openseadragon" class="cover-image-container full-width">
-</div>
-
-
-<!--Page-specific script to load the record image-->
+<script src="<?php echo base_url(); ?>theme/<?php echo $this->config->item('skylight_theme'); ?>/js/scrollify.js"></script>
 <script>
-    var imageURL = <?php echo json_encode($coverImageJSON); ?>;
-    var imageHeight = <?php echo json_encode($jsonheight); ?>;
-    var imageWidth = <?php echo json_encode($jsonwidth); ?>;
+    $(function() {
+        $.scrollify({
+            section : ".scroll",
+            offset: -50,
+            updateHash: false
+        });
+    });
 </script>
-<script src="<?php echo base_url(); ?>theme/<?php echo $this->config->item('skylight_theme'); ?>/js/openseadragon.min.js"></script>
-<script src="<?php echo base_url(); ?>theme/<?php echo $this->config->item('skylight_theme'); ?>/js/openseadragonconfig.js"></script>
+<section class="image-view full-height-section scroll">
+    <a href="#left" class="picture-arrow-left"></a>
+    <a href="#right" class="picture-arrow-right"></a>
+</section>
 
-<!--Record information-->
-<div class="record-info">
-    <h1 class="itemtitle">
-        <div class="backbtn">
-            <i class="fa fa-arrow-left" aria-hidden="true" type="button" value="Back to Search Results" onClick="history.go(-1);"></i>
-        </div>
-        <?php echo $solr[$title][0] ?>
-    </h1>
-    <div class="description">
-        <?php
+<section class="info-view full-height-section scroll">
+    <div class="record-info col-xs-12 col-md-4 col-md-offset-1">
+        <h2 class="itemtitle">
+            <?php echo $solr[$title][0] ?>
+        </h2>
+        <div class="description">
+            <?php
             foreach($recorddisplay as $key) {
                 $element = $this->skylight_utilities->getField($key);
-                echo '<div class="row"><span class="field">' . $key . '</span>' . $solr[$element][0] . '</div>';
+                if(isset( $solr[$element][0] )) {
+                    echo '<div class="row"><span class="field">' . $key . '</span>' . $solr[$element][0] . '</div>';
+                }
             }
-        ?>
-        <div id="map">
-            <script>
-                $(window).bind("load", function() {
-                    initMap(); addLocation("<?php echo $solr[$location][0] ?>");
-                });
-            </script>
-            <?php
             ?>
         </div>
-        <i class="fa fa-angle-double-down hidden-xs hidden-sm" aria-hidden="true"></i>
     </div>
-</div>
-
+    <div id="map" class="col-xs-12 col-md-4 col-md-offset-2">
+        <script>
+            $(window).bind("load", function() {
+                initMap(); addLocation("<?php echo $solr[$location][0] ?>");
+            });
+        </script>
+    </div>
+</section>
 <div class="content hidden">
 
 

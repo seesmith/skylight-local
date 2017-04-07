@@ -101,7 +101,7 @@
 </head>
 
 <body>
-    <div id="loader"><img class="logo" src="<?php echo base_url(); ?>theme/<?php echo $this->config->item('skylight_theme'); ?>/images/logo.png"></div>
+    <div id="loader"></div>
     <nav class="navbar navbar-fixed-top">
         <div class="container-fluid">
             <div class="navbar-header">
@@ -112,6 +112,7 @@
                 </button>
                 <a class="navbar-brand" href="#"></a>
             </div>
+
             <div class="collapse navbar-collapse" id="myNavbar">
                 <ul class="nav navbar-nav">
                     <li class="active dropdown">
@@ -140,13 +141,6 @@
                             <li><a href="#">Seminars</a></li>
                             <li><a href="#">Policy Seminars</a></li>
                             <li><a href="#">Arenberg-CG Prize</a></li>
-                        </ul>
-                    </li>
-                    <li>
-                        <a class="dropdown-toggle" data-toggle="dropdown" href="#">Publications <span class="caret"></span></a>
-                        <ul class="dropdown-menu">
-                            <li><a href="#">Policy Papers</a></li>
-                            <li><a href="#">CG Publications</a></li>
                         </ul>
                     </li>
                     <li><a href="#">Read more</a></li>

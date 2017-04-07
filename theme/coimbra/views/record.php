@@ -61,13 +61,12 @@ $jsonwidth = $jobj['width'];
             }
         ?>
         <div id="map">
+
             <script>
                 $(window).bind("load", function() {
                     initMap(); addLocation("<?php echo $solr[$location][0] ?>");
                 });
             </script>
-            <?php
-            ?>
         </div>
         <i class="fa fa-angle-double-down hidden-xs hidden-sm" aria-hidden="true"></i>
     </div>
