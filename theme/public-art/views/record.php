@@ -84,8 +84,7 @@ for($i=0;$i<4;$i++){
     <script src="<?php echo base_url(); ?>theme/<?php echo $this->config->item('skylight_theme'); ?>/js/openseadragon.min.js"></script>
     <script src="<?php echo base_url(); ?>theme/<?php echo $this->config->item('skylight_theme'); ?>/js/openseadragonconfig.js"></script>
 
-    <h3 class="text-center">&#x1F6C8;</h3>
-    <h3 class="text-center"><i class="fa fa-angle-double-down hidden-xs hidden-sm text-center" aria-hidden="true"></i></h3>
+    <h3 class="more-info" onclick="$.scrollify.next();">&#x1D55A;</h3>
 </section>
 
 <section class="info-view full-height-section scroll">
@@ -104,13 +103,14 @@ for($i=0;$i<4;$i++){
             ?>
         </div>
     </div>
-    <div id="map" class="col-xs-12 col-md-4 col-md-offset-2">
+    <div id="map" class="col-md-4 col-md-offset-2">
         <script>
             $(window).bind("load", function() {
                 initMap(); addLocation("<?php echo $solr[$location][0] ?>");
             });
         </script>
     </div>
+    <hr>
 </section>
 <div class="content hidden">
 

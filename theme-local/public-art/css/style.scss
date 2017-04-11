@@ -341,8 +341,11 @@ nav #overflow li a:hover {
   background-color: transparent;
 }
 .list-group-item.active a {
-  color: #e69817;
+  color: #021f47;
   font-weight: bold;
+}
+.list-group-item button.pull-right{
+  color: #e69817;
 }
 .list-group-item .row.record{
   height:390px;
@@ -403,6 +406,11 @@ nav #overflow li a:hover {
 /*Sidebar gallery view */
 .toggle-map{
   max-height: 450px;
+}
+.toggle-map #map{
+  margin-top: 0px;
+  width:  100%;
+  height: 100% important;
 }
 .list-group-item.active:hover a, .list-group-item.active:hover button{
   color: white;
@@ -648,43 +656,131 @@ section.image-view{
   margin-top: -50px;
   background-color: rgb(230,230,230);
 }
-#toolbarDiv{
-  position: absolute !important;
-  top: 50vh;
-  width: 100vw;
-}
-#previous-pic{
-  content: "";
-  position: absolute !important;
-  top: calc(50% - 60px);
-  border: 20px solid transparent;
-  border-right: 20px solid #e69817;
-}
-#next-pic{
-  content: "";
-  position: absolute !important;
-  top: calc(50% - 60px);
-  right: 0px !important;
-  border: 20px solid transparent;
-  border-left: 20px solid #e69817;
-}
-#openseadragon{
-  width: 90vw;
-  max-height: calc(100vh - 120px);
-  margin: 0 auto;
-  padding-top: 100px;
-  border-radius: 5px;
-}
-.fa-angle-double-down{
-  font-size:40px;
+
+@media screen and (min-width: 768px) {
+  #toolbarDiv {
+    position: absolute !important;
+    top: 50vh;
+    width: 100vw;
+  }
+  #previous-pic {
+    content: "";
+    position: absolute !important;
+    top: calc(50% - 60px);
+    border: 20px solid transparent;
+    border-right: 20px solid #e69817;
+    -webkit-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+  }
+  #next-pic {
+    content: "";
+    position: absolute !important;
+    top: calc(50% - 60px);
+    right: 0px !important;
+    border: 20px solid transparent;
+    border-left: 20px solid #e69817;
+    -webkit-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+  }
+  #previous-pic:hover {
+    border: 30px solid transparent;
+    border-right: 30px solid #e69817;
+  }
+  #next-pic:hover {
+    border: 30px solid transparent;
+    border-left: 30px solid #e69817;
+  }
+  #openseadragon {
+    width: calc(100vw - 60px);
+    height: calc(100vh - 120px);
+    margin: 0 auto;
+    padding-top: 100px;
+    border-radius: 5px;
+  }
+  .more-info{
+    text-align: center;
+    width:50px;
+    height: 50px;
+    line-height: 50px;
+    margin: 20px auto;
+    background-color: #e69817;
+    color: rgb(240,240,240);
+    border: 1px solid #e69817;
+    border-radius: 50%;
+    -webkit-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+  }
+  .more-info:hover{
+    width: 60px;
+    height: 60px;
+    line-height: 60px;
+  }
+  .record-info{
+    margin-top: 50px;
+    height: calc(100vh - 120px);
+    overflow-y: auto;
+    overflow-x: hidden;
+    padding-rigth: 50px;
+  }
+  .info-view #map{
+    margin-top: 50px;
+    height: calc(100vh - 120px);
+    width: 33vw;
+    border-radius: 5px;
+  }
 }
 
-.record-info{
-  margin-top: 50px;
-  height: calc(100vh - 120px);
-  overflow-y: auto;
-  overflow-x: hidden;
-  padding-rigth: 50px;
+@media screen and (max-width: 768px) {
+  #toolbarDiv{
+    position: absolute !important;
+    top: 90vh;
+    width: 100vw;
+  }
+  #previous-pic{
+    content: "";
+    position: absolute !important;
+    top: calc(50% - 60px);
+    border: 20px solid transparent;
+    border-right: 20px solid #e69817;
+  }
+  #next-pic{
+    content: "";
+    position: absolute !important;
+    top: calc(50% - 60px);
+    right: 0px !important;
+    border: 20px solid transparent;
+    border-left: 20px solid #e69817;
+  }
+  #openseadragon{
+    width: 100vw;
+    height: calc(100vh - 120px);
+    margin: 0 auto;
+    padding: 65px 0px 0px 0px;
+    border-radius: 5px;
+  }
+  .more-info{
+    width:50px;
+    text-align: center;
+    height: 50px;
+    line-height: 50px;
+    margin: 20px auto;
+    background-color: #e69817;
+    color: rgb(240,240,240);
+    border: 1px solid #e69817;
+    border-radius: 50%;
+  }
+  .record-info{
+    margin-top: 20px;
+    padding: 10px;
+  }
+  .info-view #map{
+    position: relative;
+    margin-top: 20px;
+    height: 300px;
+    width: 90vw;
+    margin: 0 auto;
+    margin-bottom: 70px;
+  }
 }
 .record-info .itemtitle{
   padding: 0px;
@@ -696,13 +792,6 @@ section.image-view{
   display: block;
   font-weight: bold;
   width: 100%;
-}
-
-#map{
-  margin-top: 50px;
-  height: calc(100vh - 120px);
-  width: 33vw;
-  border-radius: 5px;
 }
 
 
