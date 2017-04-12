@@ -16,6 +16,7 @@
         previousButton: "previous",
         showNavigator: showNavigator,
 
+
         tileSources: [imageSource],
         sequenceMode: true,
         nextButton: 'next-pic',

@@ -104,6 +104,7 @@ for($i=0;$i<4;$i++){
         </div>
     </div>
     <div id="map" class="col-md-5 col-md-offset-1">
+
         <script>
             $(window).bind("load", function() {
                 initMap(); addLocation("<?php echo $solr[$location][0] ?>");

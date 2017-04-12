@@ -49,7 +49,6 @@ if ($base_parameters == "") {
                 }
                 ?>
 
-
                 <div class="row record invisible <?php echo $doc[$id_field] ?>">
 <!--                    Title   -->
                     <h4 class="visible-xs">

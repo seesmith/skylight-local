@@ -12,8 +12,8 @@
 
         <p>Following Edinburgh-based surgical appointments, teaching and research, Dott was awarded a Rockefeller
         Travelling Fellowship in 1923, spending a year with American neurosurgery pioneer Professor Harvey Williams
-        Cushing (1869-1939) in Boston. In the same year (1923), he was made a Fellow of the Royal College of Surgeons
-        of Edinburgh. The next stage in Dott’s career saw him become Honorary Surgeon at the Royal Hospital for Sick
+        Cushing (1869 - 1939) in Boston. In the same year, he was made a Fellow of the Royal College of Surgeons
+        of Edinburgh. The next stage in Dott’s career saw him become Honorary Surgeon at the Royal Edinburgh Hospital for Sick
         Children whilst at the same time working in private practice as a neurosurgeon. Dott used a nursing home in
         Edinburgh’s New Town for neurosurgery on private patients, to which he and his team had to transport their
         instruments by taxi or private car!</p>

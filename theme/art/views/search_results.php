@@ -1,5 +1,4 @@
-
-    <?php
+<?php
 
         // Set up some variables to easily refer to particular fields you've configured
         // in $config['skylight_searchresult_display']
@@ -12,7 +11,6 @@
         $thumbnail_field = $this->skylight_utilities->getField('Thumbnail');
         $abstract_field = $this->skylight_utilities->getField('Abstract');
         $subject_field = $this->skylight_utilities->getField('Subject');
-        $link_uri_field = $this->skylight_utilities->getField('Link');
 
         $base_parameters = preg_replace("/[?&]sort_by=[_a-zA-Z+%20. ]+/","",$base_parameters);
         if($base_parameters == "") {
@@ -138,49 +136,9 @@
 
             </div> <!-- close item-info -->
 
-            <div class = "thumbnail-image-search">
-
+            <div class = "thumbnail-image">
                 <?php
-                $numThumbnails = 0;
-                $imageset = false;
-                $thumbnailLink = array();
-                if (isset($doc[$link_uri_field]))
-                {
-                    foreach ($doc[$link_uri_field] as $linkURI)
-                    {
-                        if (strpos($linkURI, 'luna') > 0)
-                        {
-                                //just for test, this line!
-                            $tileSource = str_replace('images.is.ed.ac.uk', 'lac-luna-test2.is.ed.ac.uk:8181', $linkURI);
-                            $tileSource = str_replace('detail', 'iiif', $tileSource) . '/info.json';
-                            $iiifmax = str_replace('info.json', 'full/full/0/default.jpg', $tileSource);
-                            list($width, $height) = getimagesize($iiifmax);
-                            $portrait = true;
-                            if ($width > $height)
-                            {
-                                $portrait = false;
-                            }
-                            if ($portrait) {
-                                $iiifurlsmall = str_replace('info.json', 'full/,250/0/default.jpg', $tileSource);
-                            }
-                            else{
-                                $iiifurlsmall = str_replace('info.json', 'full/250,/0/default.jpg', $tileSource);
-                            }
-                            $iiifurlfull = str_replace('info.json', 'full/full/0/default.jpg', $tileSource);
 
-                            $thumbnailLink[$numThumbnails]  = '<a title = "' . $doc[$title_field][0] . '" class="fancybox" rel="group" href="' . $iiifurlfull . '"> ';
-                            $thumbnailLink[$numThumbnails] .= '<img src = "' . $iiifurlsmall . '" class="record-thumbnail-search" title="' . $doc[$title_field][0] . '" /></a>';
-
-                            $numThumbnails++;
-                            $imageset = true;
-                        }
-                    }
-                    if ($imageset == true) {
-                        echo $thumbnailLink[0];
-                    }
-                }
-
-/*
                 $bitstream_array = array();
 
                 if(isset($doc[$bitstream_field])) {
@@ -251,13 +209,7 @@
                         echo $thumbnailLink;
                     }
 
-                } //end if there are bitstreams */
-
-
-
-
-                ?>
-            <!--</div>-->
+                } //end if there are bitstreams ?>
 
             </div>
             <div class="clearfix"></div>
