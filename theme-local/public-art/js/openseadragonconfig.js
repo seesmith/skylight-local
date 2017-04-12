@@ -3,6 +3,7 @@
  * Contact me: kristiyan.c@gmail.com
  */
 (function($){
+    var showNavigator = screen.width>768;
     OpenSeadragon({
         id: "openseadragon",
         prefixUrl: "assets/openseadragon/images/",
@@ -13,7 +14,8 @@
         fullPageButton: "full-page",
         nextButton: "next",
         previousButton: "previous",
-        showNavigator: true,
+        showNavigator: showNavigator,
+
 
         tileSources: [imageSource],
         sequenceMode: true,

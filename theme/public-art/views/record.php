@@ -88,7 +88,7 @@ for($i=0;$i<4;$i++){
 </section>
 
 <section class="info-view full-height-section scroll">
-    <div class="record-info col-xs-12 col-md-4 col-md-offset-1">
+    <div class="record-info col-xs-12 col-md-5 col-md-offset-1">
         <h2 class="itemtitle">
             <?php echo $solr[$title][0] ?>
         </h2>
@@ -103,7 +103,8 @@ for($i=0;$i<4;$i++){
             ?>
         </div>
     </div>
-    <div id="map" class="col-md-4 col-md-offset-2">
+    <div id="map" class="col-md-5 col-md-offset-1">
+
         <script>
             $(window).bind("load", function() {
                 initMap(); addLocation("<?php echo $solr[$location][0] ?>");

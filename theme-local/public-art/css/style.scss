@@ -685,42 +685,48 @@ section.image-view{
   #previous-pic:hover {
     border: 30px solid transparent;
     border-right: 30px solid #e69817;
+    margin-left:-20px;
   }
   #next-pic:hover {
     border: 30px solid transparent;
     border-left: 30px solid #e69817;
+    margin-right: -20px;
   }
   #openseadragon {
-    width: calc(100vw - 60px);
+    width: calc(100vw - 90px);
     height: calc(100vh - 120px);
     margin: 0 auto;
-    padding-top: 100px;
+    padding-top: 65px;
     border-radius: 5px;
+    background-color: rgb(210,210,210);
   }
   .more-info{
     text-align: center;
-    width:50px;
+    width: 200px;
     height: 50px;
     line-height: 50px;
-    margin: 20px auto;
+    margin: 40px auto;
     background-color: #e69817;
     color: rgb(240,240,240);
     border: 1px solid #e69817;
-    border-radius: 50%;
+    border-radius: 5px;
     -webkit-transition: all 0.5s ease;
     transition: all 0.5s ease;
   }
   .more-info:hover{
-    width: 60px;
+    width: 210px;
     height: 60px;
     line-height: 60px;
   }
   .record-info{
+    border-radius: 5px;
     margin-top: 50px;
     height: calc(100vh - 120px);
     overflow-y: auto;
     overflow-x: hidden;
     padding-rigth: 50px;
+    padding: 10px;
+    background-color: rgb(230,230,230);
   }
   .info-view #map{
     margin-top: 50px;
@@ -759,11 +765,11 @@ section.image-view{
     border-radius: 5px;
   }
   .more-info{
-    width:50px;
+    width:40px;
     text-align: center;
-    height: 50px;
-    line-height: 50px;
-    margin: 20px auto;
+    height: 40px;
+    line-height: 40px;
+    margin: 30px auto;
     background-color: #e69817;
     color: rgb(240,240,240);
     border: 1px solid #e69817;
