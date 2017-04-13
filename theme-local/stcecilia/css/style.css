@@ -339,7 +339,7 @@ div.spacer {
 }
 
 .sch-link a {
-    color: rgb(153, 153, 153);
+    color: #ffffff;
     font-family: 'Hind', sans-serif;
     font-size: 24px;
     font-style: normal;
@@ -361,7 +361,7 @@ div.spacer {
 }
 
 .sch-link a:hover {
-    color: #ffffff;
+    color: #666666;
 }
 
 #uoe-search {
@@ -449,9 +449,14 @@ div.spacer {
     padding-bottom: 20px;
 }
 
+.grid-item-container {
+    text-align: center;
+}
+
 figcaption {
     width: 100%;
     padding-top: 5px;
+    text-align: center;
 }
 
 .searchTitle{
@@ -743,13 +748,12 @@ div[id$="info"] {
 
 #sch_banner {
     float: left;
-    /*background-image: url(../images/ruckers.jpg);*/
     background-position: center;
     width: 100%;
     height: auto;
     background-size: 100%;
     padding-top: 50px;
-    padding-bottom: 100px;
+    padding-bottom: 50px;
 }
 
 .sch_logo {
@@ -816,7 +820,6 @@ div[id^="gallery"] {
 .gallery-title {
     background-image: url(../images/header.png);
     width: 50%;
-    height: 25%;
     margin: auto;
     display: flex;
     align-items: center;
@@ -830,15 +833,6 @@ div[id^="gallery"] {
     font-family: 'Hind', Frutiger, ‘Frutiger Linotype’, Univers, Calibri, ‘Gill Sans’, ‘Gill Sans MT’, ‘Myriad Pro’, Myriad, ‘DejaVu Sans Condensed’, ‘Liberation Sans’, ‘Nimbus Sans L’, Tahoma, Geneva, ‘Helvetica Neue’, Helvetica, Arial, sans-serif
 
 }
-
-.gallery-title a {
-    width: 100%;
-    text-align: center;
-    font-size: 20px;
-    text-transform: uppercase;
-    cursor: pointer;
-}
-
 
 .gallery-title a:hover {
     color: #630d0d;

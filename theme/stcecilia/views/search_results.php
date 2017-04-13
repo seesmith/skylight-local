@@ -99,13 +99,15 @@
 
                 <div class="grid-item col-xs-6 col-sm-6 col-md-3 col-lg-3">
                     <a <?php echo $thumbnailLink; ?> >
-                        <div class="grid-item-content box">
+                        <div class="grid-item-container">
+                            <div class="grid-item-content box">
 
-                            <?php echo $thumbnailImg; ?>
+                                <?php echo $thumbnailImg; ?>
 
-                            <figcaption><span class="searchTitle"><?php echo $doc[$title_field][0]; ?></span><br>
-                                <span class="searchDate"><?php echo empty($doc[$maker_field][0]) ? "unknown" : $doc[$maker_field][0] ; ?></span><br>
-                                <span class="searchDate"><?php echo empty($doc[$date_field][0]) ? "unknown" : $doc[$date_field][0] ; ?></span></figcaption>
+                                <figcaption><span class="searchTitle"><?php echo $doc[$title_field][0]; ?></span><br>
+                                    <span class="searchDate"><?php echo empty($doc[$maker_field][0]) ? "unknown" : $doc[$maker_field][0] ; ?></span><br>
+                                    <span class="searchDate"><?php echo empty($doc[$date_field][0]) ? "unknown" : $doc[$date_field][0] ; ?></span></figcaption>
+                            </div>
                         </div>
                     </a>
                 </div>
