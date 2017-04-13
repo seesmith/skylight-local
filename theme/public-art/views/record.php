@@ -54,13 +54,15 @@ for($i=0;$i<4;$i++){
 <script src="<?php echo base_url(); ?>theme/<?php echo $this->config->item('skylight_theme'); ?>/js/scrollify.js"></script>
 <script>
     $(function() {
-        $.scrollify({
-            section : ".scroll",
-            offset: -50,
-            updateHash: false,
-            standardScrollElements: "#openseadragon, .record-info",
-            interstitialSection: ".footer"
-        });
+        if(!(/Android|webOS|BlackBerry|iPhone|iPad|iPod|Opera Mini|IEMobile/i.test(navigator.userAgent) )) {
+            $.scrollify({
+                section: ".scroll",
+                offset: -50,
+                updateHash: false,
+                standardScrollElements: "#openseadragon, .record-info",
+                interstitialSection: ".footer"
+            });
+        }
     });
 </script>
 <section class="image-view full-height-section scroll">
@@ -84,7 +86,13 @@ for($i=0;$i<4;$i++){
     <script src="<?php echo base_url(); ?>theme/<?php echo $this->config->item('skylight_theme'); ?>/js/openseadragon.min.js"></script>
     <script src="<?php echo base_url(); ?>theme/<?php echo $this->config->item('skylight_theme'); ?>/js/openseadragonconfig.js"></script>
 
+
+
+
     <h3 class="more-info" onclick="$.scrollify.next();">&#x1D55A;</h3>
+</section>
+<section class="section-divisor">
+
 </section>
 
 <section class="info-view full-height-section scroll">
@@ -103,15 +111,25 @@ for($i=0;$i<4;$i++){
             ?>
         </div>
     </div>
+    <script>
+        (function($){
+            $(window).on("load",function(){
+                $(".record-info").mCustomScrollbar({
+                    theme: "light-thick",
+                    scrollInertia: 100,
+                    mouseWheel:{ preventDefault: true}
+                    });
+            });
+        })(jQuery);
+    </script>
     <div id="map" class="col-md-5 col-md-offset-1">
-
         <script>
             $(window).bind("load", function() {
                 initMap(); addLocation("<?php echo $solr[$location][0] ?>");
             });
         </script>
     </div>
-    <hr>
+    <h4 class="back-to-search" value="Back to Search Results" onClick="history.go(-1);">Back to search</h4>
 </section>
 <div class="content hidden">
 

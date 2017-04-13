@@ -6,9 +6,10 @@ $title = $this->skylight_utilities->getField("Title");
 $coverImageName = $this->skylight_utilities->getField("Image Name");
 $location = $this->skylight_utilities->getField("Spatial Coverage");
 
-
+$title = isset( $doc[$title_field][0] ) ? $doc[$title_field][0] : "Untitled";
+$image_name = isset( $solr[$coverImageName][0] ) ? $solr[$coverImageName][0] : "missing.jpg";
 //Image variables setup
-$coverImageJSON = "http://test.cantaloupe.is.ed.ac.uk/iiif/2/" . $solr[$coverImageName][0];
+$coverImageJSON = "http://test.cantaloupe.is.ed.ac.uk/iiif/2/" . $image_name;
 $coverImageURL = $coverImageJSON . '/full/full/0/default.jpg';
 $coverImage = '<img class="record-image" src ="' .$coverImageURL .'"/>';
 
@@ -49,7 +50,7 @@ $jsonwidth = $jobj['width'];
         <div class="backbtn">
             <i class="fa fa-arrow-left" aria-hidden="true" type="button" value="Back to Search Results" onClick="history.go(-1);"></i>
         </div>
-        <?php echo $solr[$title][0] ?>
+        <?php echo $title ?>
     </h1>
     <div class="description">
         <?php

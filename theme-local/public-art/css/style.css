@@ -39,8 +39,10 @@
 
 html{ overflow-y: scroll; }
 body {
+  position: relative;
   overflow-x: hidden;
   margin-top: 50px;
+  padding-bottom: 200px;
 }
 
 @media screen and (max-width: 768px) {
@@ -242,25 +244,31 @@ body {
   color: #555;
 }
 .footer {
-  position: relative;
-  margin-top: 100px;
-  height: 600px;
+  height: 200px;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
   padding-top: 20px;
-  background-color: #021f47;
+  background-color: rgb(2, 31, 71);
   color: white;
   clear: both;
 }
-.footer .pull-bottom {
-  margin-bottom: 0px;
-}
-.footer ul {
-  margin-top: 20px;
+.footer ul{
+  display: block;
 }
 .footer li {
   list-style: none;
+  float: left;
+  margin: 0 auto;
+  padding: 10px;
 }
 .footer a {
   color: rgb(102, 147, 176);
+}
+.footer p{
+  clear: both;
+  padding-left:50px;
 }
 
 /*Index parallax effect*/
@@ -646,7 +654,6 @@ nav #overflow li a:hover {
 }
 
 
-
 section.full-height-section{
   position: relative;
   min-height: calc(100vh - 50px);
@@ -655,6 +662,16 @@ section.full-height-section{
 section.image-view{
   margin-top: -50px;
   background-color: rgb(230,230,230);
+}
+section.divisor{
+  height:200px;
+  background-color: rgb(2, 31, 71);
+  width: 100vw;
+  background-image: url('../images/ornament.png');
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 200px;
 }
 
 @media screen and (min-width: 768px) {
@@ -706,9 +723,8 @@ section.image-view{
     height: 50px;
     line-height: 50px;
     margin: 40px auto;
-    background-color: #e69817;
-    color: rgb(240,240,240);
     border: 1px solid #e69817;
+    color: #e69817;
     border-radius: 5px;
     -webkit-transition: all 0.5s ease;
     transition: all 0.5s ease;
@@ -717,20 +733,46 @@ section.image-view{
     width: 210px;
     height: 60px;
     line-height: 60px;
+    background-color: #e69817;
+    color: white;
+  }
+  .back-to-search{
+    position: absolute;
+    top: calc(100vh - 130px);
+    left: calc(50% - 100px);
+    text-align: center;
+    width: 200px;
+    height: 50px;
+    line-height: 49px;
+    margin: 0 auto;
+    border: 1px solid #e69817;
+    color: #e69817;
+    border-radius: 5px;
+    -webkit-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+  }
+  .back-to-search:hover{
+    width: 210px;
+    left: calc(50% - 105px);
+    height: 60px;
+    line-height: 60px;
+    background-color: #e69817;
+    color: white;
   }
   .record-info{
     border-radius: 5px;
-    margin-top: 50px;
-    height: calc(100vh - 120px);
+    margin-top: 30px;
+    height: calc(100vh - 200px);
     overflow-y: auto;
     overflow-x: hidden;
     padding-rigth: 50px;
     padding: 10px;
-    background-color: rgb(230,230,230);
+    background-color: rgb(240,240,240);
+    border: 1px solid rgb(220,220,220);
   }
   .info-view #map{
-    margin-top: 50px;
-    height: calc(100vh - 120px);
+    margin-top: 30px;
+    height: calc(100vh - 200px);
     width: 33vw;
     border-radius: 5px;
   }
@@ -774,6 +816,18 @@ section.image-view{
     color: rgb(240,240,240);
     border: 1px solid #e69817;
     border-radius: 50%;
+  }
+  .back-to-search{
+    text-align: center;
+    width: 200px;
+    height: 50px;
+    line-height: 50px;
+    margin: 0 auto;
+    border: 1px solid #e69817;
+    color: #e69817;
+    border-radius: 5px;
+    -webkit-transition: all 0.5s ease;
+    transition: all 0.5s ease;
   }
   .record-info{
     margin-top: 20px;
@@ -886,20 +940,6 @@ section.image-view{
     background-color: rgb(8, 62, 102);
   }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 

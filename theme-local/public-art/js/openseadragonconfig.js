@@ -4,7 +4,7 @@
  */
 (function($){
     var showNavigator = screen.width>768;
-    OpenSeadragon({
+    var seadragon = OpenSeadragon({
         id: "openseadragon",
         prefixUrl: "assets/openseadragon/images/",
         toolbar: "toolbarDiv",
@@ -15,12 +15,18 @@
         nextButton: "next",
         previousButton: "previous",
         showNavigator: showNavigator,
-
-
+        mouseNavEnabled: false,
         tileSources: [imageSource],
         sequenceMode: true,
         nextButton: 'next-pic',
         previousButton: 'previous-pic'
+    });
+
+    $("#openseadragon").on('click', function () {
+        seadragon.setMouseNavEnabled(true);
+    });
+    $("#openseadragon").on('mouseleave', function () {
+        seadragon.setMouseNavEnabled(false);
     });
 
 })(jQuery);
