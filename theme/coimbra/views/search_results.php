@@ -33,10 +33,9 @@ if ($base_parameters == "") {
                 if(isset( $doc[$location][0])) {
                     $coordinates = '' . $doc[$location][0] . '';
                     echo '<script> locations.push({"location" : "' . $coordinates . '", "title" : "' . str_replace(array("\n", "\r"), "", str_replace('"', '\"', $title)) . '", "index" : ' . $doc[$id_field] . '}); </script>';
+
                 }
                 //              Finding image
-
-                $bitstream_array = array();
                 if(isset( $doc[$coverImageName][0] )) {
                     $coverImageJSON = "http://test.cantaloupe.is.ed.ac.uk/iiif/2/" . $doc[$coverImageName][0];
                     $coverImageURL = $coverImageJSON . '/full/400,/0/default.jpg';
