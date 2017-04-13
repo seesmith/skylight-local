@@ -26,6 +26,17 @@
             <div class="grid-sizer col-xs-3"></div>
             <?php
             $link_uri_field = $this->skylight_utilities->getField("ImageURI");
+            //$link_uri_field = '';
+            //$link_uri_field = 'http://images.is.ed.ac.uk/luna/servlet/iiif/UoEart~2~2~73511~166929/full/full/0/default.jpg';
+
+            $content = true;
+
+            try{
+                $content = @file_get_contents('http://images.is.ed.ac.uk/luna/images/favicon.ico',0,null,0,1);
+            } catch (Exception $e) {
+                // Handle exception
+            }
+
             foreach ($docs as $index => $doc) {
 
                 $bitstream_array = array();
@@ -36,20 +47,17 @@
                 if (isset($doc[$link_uri_field][0]))
                 {
                     $linkURI = $doc[$link_uri_field][0];
+                    //$linkURI = str_replace('/full/full/0/default.jpg','', $linkURI);
+
                     if (strpos($linkURI, 'luna') > 0 )
                     {
-                        $content = true;
-                        try{
-                            $content = @file_get_contents($linkURI,0,null,0,1);
-                        } catch (Exception $e) {
-                            // Handle exception
-                        }
                         if (false === $content) {
                             $thumbnailLink  =  'href="./record/'.$doc['id'].'" title = "'. $doc[$title_field][0].'"';
                             $thumbnailImg = '<img class="img-responsive record-thumbnail-search" src="../theme/stcecilia/images/comingsoon.gif"  title="' . $doc[$title_field][0] . '" />';
                         }
                         else
                         {
+                            /*
                             list($width, $height, $type, $imgText) = getimagesize($linkURI);
                             $portrait = true;
                             if ($width > $height) {
@@ -57,14 +65,22 @@
                             }
                             if ($portrait) {
                                 $iiifurlsmall = str_replace('full/full/0/default.jpg', 'full/,266/0/default.jpg', $linkURI);
+                                //$iiifurlsmall = $linkURI.'full/,266/0/default.jpg';
                             } else {
                                 $iiifurlsmall = str_replace('full/full/0/default.jpg', 'full/266,/0/default.jpg', $linkURI);
+                                //$iiifurlsmall = $linkURI.'full/266,/0/default.jpg';
                             }
 
-                            list($width, $height, $type, $imgText) = getimagesize($iiifurlsmall);
 
+                            list($width, $height, $type, $imgText) = getimagesize($linkURI);
+                            */
+
+                            $linkURI = str_replace('full/full', 'full/!300,300', $linkURI);
                             $thumbnailLink = 'href="./record/' . $doc['id'] . '" title = "' . $doc[$title_field][0] . '"';
-                            $thumbnailImg = '<img class="img-responsive record-thumbnail-search" src="' . $linkURI . '"  title="' . $doc[$title_field][0] . '" ' . $imgText . '/>';
+                            $thumbnailImg = '<img class="img-responsive record-thumbnail-search" src="' . $linkURI . '"  title="' . $doc[$title_field][0] . '" />';
+                            //$thumbnailImg = '<img class="img-responsive record-thumbnail-search" src="' . $linkURI . '"  title="' . $doc[$title_field][0] . '" '.  $imgText .'/>';
+                            //$thumbnailImg = '<img class="img-responsive record-thumbnail-search" src="' . $linkURI.'/full/full/0/default.jpg"  title="' . $doc[$title_field][0] . '" ' . $imgText . '/>';
+                            //$thumbnailImg = '<img class="img-responsive record-thumbnail-search" src="' . $iiifurlsmall.'"  title="' . $doc[$title_field][0] . '" ' . $imgText . '/>';
                         }
                     }
                     else
@@ -78,6 +94,7 @@
                     $thumbnailLink  =  'href="./record/'.$doc['id'].'" title = "'. $doc[$title_field][0].'"';
                     $thumbnailImg = '<img class="img-responsive record-thumbnail-search" src="../theme/stcecilia/images/comingsoon.gif"  title="' . $doc[$title_field][0] . '" />';
                 }
+
                 ?>
 
                 <div class="grid-item col-xs-6 col-sm-6 col-md-3 col-lg-3">

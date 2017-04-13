@@ -7,6 +7,14 @@ $type_field = $this->skylight_utilities->getField("Type");
 $bitstream_field = $this->skylight_utilities->getField("Bitstream");
 $thumbnail_field = $this->skylight_utilities->getField("Thumbnail");
 $filters = array_keys($this->config->item("skylight_filters"));
+$placedisplay = $this->config->item("skylight_placedisplay");
+$measurementdisplay = $this->config->item("skylight_measurementdisplay");
+$associationdisplay = $this->config->item("skylight_associationdisplay");
+$locationdisplay = $this->config->item("skylight_locationdisplay");
+$datedisplay = $this->config->item("skylight_datedisplay");
+$identificationdisplay = $this->config->item("skylight_identificationdisplay");
+$descriptiondatadisplay = $this->config->item("skylight_descriptiondatadisplay");
+$typedisplay = $this->config->item("skylight_typedisplay");
 $link_uri_field = $this->skylight_utilities->getField("ImageURI");
 $short_field = $this->skylight_utilities->getField("Short Description");
 $date_field = $this->skylight_utilities->getField("Date");
@@ -308,9 +316,11 @@ if (isset($solr[$link_uri_field]))
 
             if(isset($solr[$element])) {
                 foreach($solr[$element] as $index => $metadatavalue) {
-                    echo "<span class='description'>";
-                    echo $metadatavalue;
-                    echo "</span>";
+                    if ($key == "Short Description" or $key == "Description") {
+                        echo "<span class='description'>";
+                        echo $metadatavalue;
+                        echo "</span>";
+                    }
                 }
             }
         } ?>
@@ -375,164 +385,14 @@ if(isset($solr[$bitstream_field]) && $link_bitstream) {
         <div class="panel-body">
             <div class="col-sm-6 col-xs-12 col-md-8 col-lg-12 metadata">
 
-                <div id="main-info">
-                    <?php if(isset($solr[$short_field][0])) {
-                        echo '<p>' . $solr[$short_field][0] . '</p>';
-                    } ?>
-                    <h2>Main Information</h2>
-                    <dl class="dl-horizontal">
-                        <?php foreach($recorddisplay as $key) {
+                <div id="info-box">
 
-                            $element = $this->skylight_utilities->getField($key);
-
-                            if(isset($solr[$element])) {
-
-                                echo '<dt>' . $key . '</dt>';
-
-                                echo '<dd>';
-                                foreach($solr[$element] as $index => $metadatavalue) {
-                                    // if it's a facet search
-                                    // make it a clickable search link
-                                    if(in_array($key, $filters)) {
-
-                                        $orig_filter = urlencode($metadatavalue);
-                                        $lower_orig_filter = strtolower($metadatavalue);
-                                        $lower_orig_filter = urlencode($lower_orig_filter);
-
-                                        echo '<a href="./search/*:*/' . $key . ':%22'.$lower_orig_filter.'%7C%7C%7C'.$orig_filter.'%22">'.$metadatavalue.'</a>';
-                                    }
-                                    else {
-                                        echo $metadatavalue;
-                                    }
-                                    if($index < sizeof($solr[$element]) - 1) {
-
-                                        echo '; ';
-                                    }
-                                }
-                                echo '</dd>';
-                            }
-                        } ?>
-                    </dl>
-                </div> <!-- main-info -->
-
-                <div id="meta-info">
-                    <h3>Object Information</h3>
-                    <dl class="dl-horizontal">
-                        <?php foreach($metafields as $key) {
-
-                            $element = $this->skylight_utilities->getField($key);
-
-                            if(isset($solr[$element])) {
-
-                                echo '<dt>' . $key . '</dt>';
-
-                                echo '<dd>';
-                                foreach($solr[$element] as $index => $metadatavalue) {
-                                    // if it's a facet search
-                                    // make it a clickable search link
-                                    if(in_array($key, $filters)) {
-
-                                        $orig_filter = urlencode($metadatavalue);
-                                        $lower_orig_filter = strtolower($metadatavalue);
-                                        $lower_orig_filter = urlencode($lower_orig_filter);
-
-                                        echo '<a href="./search/*:*/' . $key . ':%22'.$lower_orig_filter.'%7C%7C%7C'.$orig_filter.'%22">'.$metadatavalue.'</a>';
-                                    }
-                                    else {
-                                        echo $metadatavalue;
-                                    }
-                                    if($index < sizeof($solr[$element]) - 1) {
-
-                                        echo '; ';
-                                    }
-                                }
-                                echo '</dd>';
-                            }
-
-                        } ?>
-                    </dl>
-                </div> <!-- meta-info -->
-
-                <div id="description-info">
-                    <h3>Description</h3>
-                    <dl class="dl-horizontal">
-                        <?php foreach($descriptiondisplay as $key) {
-
-                            $element = $this->skylight_utilities->getField($key);
-
-                            if(isset($solr[$element])) {
-
-                                echo '<dt>' . $key . '</dt>';
-
-                                echo '<dd>';
-                                foreach($solr[$element] as $index => $metadatavalue) {
-                                    // if it's a facet search
-                                    // make it a clickable search link
-                                    if(in_array($key, $filters)) {
-
-                                        $orig_filter = urlencode($metadatavalue);
-                                        $lower_orig_filter = strtolower($metadatavalue);
-                                        $lower_orig_filter = urlencode($lower_orig_filter);
-
-                                        echo '<a href="./search/*:*/' . $key . ':%22'.$lower_orig_filter.'%7C%7C%7C'.$orig_filter.'%22">'.$metadatavalue.'</a>';
-                                    }
-                                    else {
-                                        echo $metadatavalue;
-                                    }
-                                    if($index < sizeof($solr[$element]) - 1) {
-
-                                        echo '; ';
-                                    }
-                                }
-                                echo '</dd>';
-                            }
-                        } ?>
-                    </dl>
-                </div> <!-- description-info -->
-
-                <div id="creator-info">
-                    <h3>Maker</h3>
-                    <dl class="dl-horizontal">
-                        <?php foreach($creatordisplay as $key) {
-
-                            $element = $this->skylight_utilities->getField($key);
-
-                            if(isset($solr[$element])) {
-
-                                echo '<dt>' . $key . '</dt>';
-
-                                echo '<dd>';
-                                foreach($solr[$element] as $index => $metadatavalue) {
-                                    // if it's a facet search
-                                    // make it a clickable search link
-                                    if(in_array($key, $filters)) {
-
-                                        $orig_filter = urlencode($metadatavalue);
-                                        $lower_orig_filter = strtolower($metadatavalue);
-                                        $lower_orig_filter = urlencode($lower_orig_filter);
-
-                                        echo '<a href="./search/*:*/' . $key . ':%22'.$lower_orig_filter.'%7C%7C%7C'.$orig_filter.'%22">'.$metadatavalue.'</a>';
-                                    }
-                                    else {
-                                        echo $metadatavalue;
-                                    }
-                                    if($index < sizeof($solr[$element]) - 1) {
-
-                                        echo '; ';
-                                    }
-                                }
-                                echo '</dd>';
-                            }
-                        } ?>
-                    </dl>
-                </div> <!-- creator-info -->
-
-                <div id="all-info">
-                    <h3>All Information</h3>
+                    <h3>Identification Information</h3>
                     <dl class="dl-horizontal">
                         <?php
+                        $infofound = false;
+                        foreach($identificationdisplay as $key) {
 
-                        foreach($recorddisplay as $key) {
                             $element = $this->skylight_utilities->getField($key);
 
                             if(isset($solr[$element])) {
@@ -559,13 +419,363 @@ if(isset($solr[$bitstream_field]) && $link_bitstream) {
                                         echo '; ';
                                     }
                                 }
+                                $infofound = true;
                                 echo '</dd>';
                             }
                         }
-                        ?>
-
+                        if (!$infofound) {
+                            echo '<p>No information recorded.</p>';
+                        }?>
                     </dl>
-                </div> <!-- all-info -->
+                </div> <!-- main-info -->
+
+                <div id="info-box">
+                    <h3>Date Information</h3>
+                    <dl class="dl-horizontal">
+                        <?php
+                            $infofound = false;
+                            foreach($datedisplay as $key) {
+
+                            $element = $this->skylight_utilities->getField($key);
+
+                            if(isset($solr[$element])) {
+
+                                echo '<dt>' . $key . '</dt>';
+
+                                echo '<dd>';
+                                foreach($solr[$element] as $index => $metadatavalue) {
+                                    // if it's a facet search
+                                    // make it a clickable search link
+                                    if(in_array($key, $filters)) {
+
+                                        $orig_filter = urlencode($metadatavalue);
+                                        $lower_orig_filter = strtolower($metadatavalue);
+                                        $lower_orig_filter = urlencode($lower_orig_filter);
+
+                                        echo '<a href="./search/*:*/' . $key . ':%22'.$lower_orig_filter.'%7C%7C%7C'.$orig_filter.'%22">'.$metadatavalue.'</a>';
+                                    }
+                                    else {
+                                        echo $metadatavalue;
+                                    }
+
+                                    if($index < sizeof($solr[$element]) - 1) {
+
+                                        echo '; ';
+                                    }
+                                }
+                                $infofound = true;
+                                echo '</dd>';
+                            }
+
+                        }
+                        if (!$infofound) {
+                            echo '<p>No information recorded.</p>';
+                        }
+                        ?>
+                    </dl>
+                </div> <!-- meta-info -->
+
+                <div id="info-box">
+                    <h3>Maker</h3>
+                    <dl class="dl-horizontal">
+                        <?php
+                        $infofound = false;
+                        foreach($creatordisplay as $key) {
+
+                            $element = $this->skylight_utilities->getField($key);
+
+                            if(isset($solr[$element])) {
+
+                                echo '<dt>' . $key . '</dt>';
+
+                                echo '<dd>';
+                                foreach($solr[$element] as $index => $metadatavalue) {
+                                    // if it's a facet search
+                                    // make it a clickable search link
+                                    if(in_array($key, $filters)) {
+
+                                        $orig_filter = urlencode($metadatavalue);
+                                        $lower_orig_filter = strtolower($metadatavalue);
+                                        $lower_orig_filter = urlencode($lower_orig_filter);
+
+                                        echo '<a href="./search/*:*/' . $key . ':%22'.$lower_orig_filter.'%7C%7C%7C'.$orig_filter.'%22">'.$metadatavalue.'</a>';
+                                    }
+                                    else {
+                                        echo $metadatavalue;
+                                    }
+                                    if($index < sizeof($solr[$element]) - 1) {
+
+                                        echo '; ';
+                                    }
+                                }
+                                $infofound = true;
+                                echo '</dd>';
+                            }
+                        }
+                        if (!$infofound) {
+                            echo '<p>No information recorded.</p>';
+                        }?>
+                    </dl>
+                </div> <!-- creator-info -->
+
+                <div id="info-box">
+                    <h3>Production Place</h3>
+                    <dl class="dl-horizontal">
+                        <?php
+                        $infofound = false;
+                        foreach($placedisplay as $key) {
+
+                            $element = $this->skylight_utilities->getField($key);
+
+                            if(isset($solr[$element])) {
+
+                                echo '<dt>' . $key . '</dt>';
+
+                                echo '<dd>';
+                                foreach($solr[$element] as $index => $metadatavalue) {
+                                    // if it's a facet search
+                                    // make it a clickable search link
+                                    if(in_array($key, $filters)) {
+
+                                        $orig_filter = urlencode($metadatavalue);
+                                        $lower_orig_filter = strtolower($metadatavalue);
+                                        $lower_orig_filter = urlencode($lower_orig_filter);
+
+                                        echo '<a href="./search/*:*/' . $key . ':%22'.$lower_orig_filter.'%7C%7C%7C'.$orig_filter.'%22">'.$metadatavalue.'</a>';
+                                    }
+                                    else {
+                                        echo $metadatavalue;
+                                    }
+                                    if($index < sizeof($solr[$element]) - 1) {
+
+                                        echo '; ';
+                                    }
+                                }
+                                $infofound = true;
+                                echo '</dd>';
+                            }
+                        }
+                        if (!$infofound) {
+                            echo '<p>No information recorded.</p>';
+                        }?>
+                    </dl>
+                </div> <!--place-info -->
+
+                <div id="info-box">
+                    <h3>Object Type Information</h3>
+                    <dl class="dl-horizontal">
+                        <?php
+                        $infofound = false;
+                        foreach($typedisplay as $key) {
+
+                            $element = $this->skylight_utilities->getField($key);
+
+                            if(isset($solr[$element])) {
+
+                                echo '<dt>' . $key . '</dt>';
+
+                                echo '<dd>';
+                                foreach($solr[$element] as $index => $metadatavalue) {
+                                    // if it's a facet search
+                                    // make it a clickable search link
+                                    if(in_array($key, $filters)) {
+
+                                        $orig_filter = urlencode($metadatavalue);
+                                        $lower_orig_filter = strtolower($metadatavalue);
+                                        $lower_orig_filter = urlencode($lower_orig_filter);
+
+                                        echo '<a href="./search/*:*/' . $key . ':%22'.$lower_orig_filter.'%7C%7C%7C'.$orig_filter.'%22">'.$metadatavalue.'</a>';
+                                    }
+                                    else {
+                                        echo $metadatavalue;
+                                    }
+                                    if($index < sizeof($solr[$element]) - 1) {
+
+                                        echo '; ';
+                                    }
+                                }
+                                $infofound = true;
+                                echo '</dd>';
+                            }
+                        }
+                        if (!$infofound) {
+                            echo '<p>No information recorded.</p>';
+                        }?>
+                    </dl>
+                </div> <!--type-info -->
+
+                <div id="info-box">
+                    <h3>Location</h3>
+                    <dl class="dl-horizontal">
+                        <?php
+                        $infofound = false;
+                        foreach($locationdisplay as $key) {
+
+                            $element = $this->skylight_utilities->getField($key);
+
+                            if(isset($solr[$element])) {
+
+                                echo '<dt>' . $key . '</dt>';
+
+                                echo '<dd>';
+                                foreach($solr[$element] as $index => $metadatavalue) {
+                                    // if it's a facet search
+                                    // make it a clickable search link
+                                    if(in_array($key, $filters)) {
+
+                                        $orig_filter = urlencode($metadatavalue);
+                                        $lower_orig_filter = strtolower($metadatavalue);
+                                        $lower_orig_filter = urlencode($lower_orig_filter);
+
+                                        echo '<a href="./search/*:*/' . $key . ':%22'.$lower_orig_filter.'%7C%7C%7C'.$orig_filter.'%22">'.$metadatavalue.'</a>';
+                                    }
+                                    else {
+                                        echo $metadatavalue;
+                                    }
+                                    if($index < sizeof($solr[$element]) - 1) {
+
+                                        echo '; ';
+                                    }
+                                }
+                                $infofound = true;
+                                echo '</dd>';
+                            }
+                        }
+                        if (!$infofound) {
+                            echo '<p>No information recorded.</p>';
+                        }?>
+                    </dl>
+                </div> <!--location-info -->
+
+                <div id="info-box">
+                    <h3>Associated Performers</h3>
+                    <dl class="dl-horizontal">
+                        <?php
+                        $infofound = false;
+                        foreach($associationdisplay as $key) {
+
+                            $element = $this->skylight_utilities->getField($key);
+
+                            if(isset($solr[$element])) {
+
+                                echo '<dt>' . $key . '</dt>';
+
+                                echo '<dd>';
+                                foreach($solr[$element] as $index => $metadatavalue) {
+                                    // if it's a facet search
+                                    // make it a clickable search link
+                                    if(in_array($key, $filters)) {
+
+                                        $orig_filter = urlencode($metadatavalue);
+                                        $lower_orig_filter = strtolower($metadatavalue);
+                                        $lower_orig_filter = urlencode($lower_orig_filter);
+
+                                        echo '<a href="./search/*:*/' . $key . ':%22'.$lower_orig_filter.'%7C%7C%7C'.$orig_filter.'%22">'.$metadatavalue.'</a>';
+                                    }
+                                    else {
+                                        echo $metadatavalue;
+                                    }
+                                    if($index < sizeof($solr[$element]) - 1) {
+
+                                        echo '; ';
+                                    }
+                                }
+                                $infofound = true;
+                                echo '</dd>';
+                            }
+                        }
+                        if (!$infofound) {
+                            echo '<p>No information recorded.</p>';
+                        }?>
+                    </dl>
+                </div> <!--association-info -->
+
+                <div id="info-box">
+                    <h3>Measurements</h3>
+                    <dl class="dl-horizontal">
+                        <?php
+                        $infofound = false;
+                        foreach($measurementdisplay as $key) {
+
+                            $element = $this->skylight_utilities->getField($key);
+
+                            if(isset($solr[$element])) {
+
+                                echo '<dt>' . $key . '</dt>';
+
+                                echo '<dd>';
+                                foreach($solr[$element] as $index => $metadatavalue) {
+                                    // if it's a facet search
+                                    // make it a clickable search link
+                                    if(in_array($key, $filters)) {
+
+                                        $orig_filter = urlencode($metadatavalue);
+                                        $lower_orig_filter = strtolower($metadatavalue);
+                                        $lower_orig_filter = urlencode($lower_orig_filter);
+
+                                        echo '<a href="./search/*:*/' . $key . ':%22'.$lower_orig_filter.'%7C%7C%7C'.$orig_filter.'%22">'.$metadatavalue.'</a>';
+                                    }
+                                    else {
+                                        echo $metadatavalue;
+                                    }
+                                    if($index < sizeof($solr[$element]) - 1) {
+
+                                        echo '; ';
+                                    }
+                                }
+                                $infofound = true;
+                                echo '</dd>';
+                            }
+                        }
+                        if (!$infofound) {
+                            echo '<p>No information recorded.</p>';
+                        }?>
+                    </dl>
+                </div> <!--measurement-info -->
+
+                <div id="info-box">
+                    <h3>Description</h3>
+                    <dl class="dl-horizontal">
+                        <?php
+                        $infofound = false;
+                        foreach($descriptiondatadisplay as $key) {
+
+                            $element = $this->skylight_utilities->getField($key);
+
+                            if(isset($solr[$element])) {
+
+                                echo '<dt>' . $key . '</dt>';
+
+                                echo '<dd>';
+                                foreach($solr[$element] as $index => $metadatavalue) {
+                                    // if it's a facet search
+                                    // make it a clickable search link
+                                    if(in_array($key, $filters)) {
+
+                                        $orig_filter = urlencode($metadatavalue);
+                                        $lower_orig_filter = strtolower($metadatavalue);
+                                        $lower_orig_filter = urlencode($lower_orig_filter);
+
+                                        echo '<a href="./search/*:*/' . $key . ':%22'.$lower_orig_filter.'%7C%7C%7C'.$orig_filter.'%22">'.$metadatavalue.'</a>';
+                                    }
+                                    else {
+                                        echo $metadatavalue;
+                                    }
+                                    if($index < sizeof($solr[$element]) - 1) {
+
+                                        echo '; ';
+                                    }
+                                }
+                                $infofound = true;
+                                echo '</dd>';
+                            }
+                        }
+                        if (!$infofound) {
+                            echo '<p>No information recorded.</p>';
+                        }?>
+                    </dl>
+                </div> <!--description info -->
+
 
             </div> <!-- metadata -->
         </div> <!-- panel body -->
