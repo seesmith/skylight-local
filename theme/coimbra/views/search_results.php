@@ -28,18 +28,19 @@ if ($base_parameters == "") {
             <?php
             foreach ($docs as $doc) {
 //                Adding locations
-                if(isset( $doc[$location][0]) && isset( $doc[$title_field][0] )) {
+                $title = isset( $doc[$title_field][0] ) ? $doc[$title_field][0] : "Untitled";
+
+                if(isset( $doc[$location][0])) {
                     $coordinates = '' . $doc[$location][0] . '';
-                    echo '<script> locations.push({"location" : "' . $coordinates . '", "title" : "' . str_replace(array("\n", "\r"), "", str_replace('"', '\"', $doc[$title_field][0])) . '", "index" : ' . $doc[$id_field] . '}); </script>';
+                    echo '<script> locations.push({"location" : "' . $coordinates . '", "title" : "' . str_replace(array("\n", "\r"), "", str_replace('"', '\"', $title)) . '", "index" : ' . $doc[$id_field] . '}); </script>';
+
                 }
                 //              Finding image
-
-                $bitstream_array = array();
-                if(isset( $doc[$coverImageName][0] ) && isset( $doc[$title_field][0] )) {
+                if(isset( $doc[$coverImageName][0] )) {
                     $coverImageJSON = "http://test.cantaloupe.is.ed.ac.uk/iiif/2/" . $doc[$coverImageName][0];
                     $coverImageURL = $coverImageJSON . '/full/400,/0/default.jpg';
-                    $thumbnailLink = '<a  class= "record-link" href="./record/' . $doc['id'] . '" title = "' . $doc[$title_field][0] . '"> ';
-                    $thumbnailLink .= '<img class="img-responsive" src ="' . $coverImageURL . '" title="' . $doc[$title_field][0] . '" /></a>';
+                    $thumbnailLink = '<a  class= "record-link" href="./record/' . $doc['id'] . '" title = "' . $title . '"> ';
+                    $thumbnailLink .= '<img class="img-responsive" src ="' . $coverImageURL . '" title="' . $title . '" /></a>';
                 }
                 else{
                     $coverImageJSON = "http://test.cantaloupe.is.ed.ac.uk/iiif/2/missing.jpg";
@@ -52,15 +53,7 @@ if ($base_parameters == "") {
                 <div class="row record invisible <?php echo $doc[$id_field] ?>">
 <!--                    Title   -->
                     <h4 class="visible-xs">
-                        <a href="./record/<?php echo $doc['id'] ?>"><?php
-                            if(isset( $doc[$title_field][0] )) {
-                                echo $doc[$title_field][0];
-                            }
-                            else{
-                                echo "Untitled";
-                            }
-
-                            ?></a>
+                        <a href="./record/<?php echo $doc['id'] ?>"><?php echo $title;?></a>
                     </h4>
 
 <!--                    Thumbnail   -->
@@ -69,15 +62,7 @@ if ($base_parameters == "") {
 <!--                    Record info     -->
                     <div class="col-sm-9 hidden-xs result-info">
                         <h4 class="record-title">
-                            <a href="./record/<?php echo $doc['id'] ?>"><?php
-                                if(isset( $doc[$title_field][0] )) {
-                                    echo $doc[$title_field][0];
-                                }
-                                else{
-                                    echo "Untitled";
-                                }
-
-                                ?></a>
+                            <a href="./record/<?php echo $doc['id'] ?>"><?php echo $title; ?></a>
                         </h4>
                     </div>
                 </div>
