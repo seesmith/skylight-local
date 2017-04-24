@@ -120,3 +120,18 @@ $('.accordion-toggle').click(function(){
     }
 
 });
+
+// if it's chrome, get rid of flex
+if(window.chrome) {
+    $(".box").css("display", "inline-block");
+}
+
+//front page hover text
+var e = document.getElementById(name^='gallery');
+e.onmouseover = function() {
+    document.getElementById('gallery-title').style.display = 'block';
+}
+e.onmouseout = function() {
+    document.getElementById('gallery-title').style.display = 'none';
+}
+

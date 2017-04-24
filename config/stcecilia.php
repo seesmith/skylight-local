@@ -12,9 +12,11 @@ $config['skylight_fullname'] = 'St Cecilia\'s Hall';
 // set ga code
 if (strpos($_SERVER['HTTP_HOST'], "test") !== false) {
     $config['skylight_ga_code'] = '';
+    $config['skylight_container_id'] = '54';
 }
 else {
-    //$config['skylight_ga_code'] = 'UA-25737241-9';
+    $config['skylight_ga_code'] = 'UA-25737241-9';
+    $config['skylight_container_id'] = '49';
 }
 
 $config['skylight_adminemail'] = 'lddt@mlist.is.ed.ac.uk';
@@ -24,7 +26,7 @@ $config['skylight_oaipmhcollection'] = 'hdl_10683_14558';
 $config['skylight_oaipmhallowed'] = true;
 
 // Container ID and the field used in solr index to store this ID. Used for restricting search/browse scope.
-$config['skylight_container_id'] = '54';
+
 $config['skylight_container_field'] = 'location.coll';
 $config['skylight_sitemap_type'] = 'internal';
 
@@ -33,8 +35,8 @@ $config['skylight_fields'] = array(
     'Alternative Title' => 'dc.title.alternative.en',
     'Maker' => 'dc.contributor.author.en',
     'Author' => 'dc.contributor.author.en',
-    'Country' => 'lido.country.en',
-    'City' => 'lido.city.en',
+    'Country' => 'dc.coverage.spatialcountry.en',
+    'City' => 'dc.coveragespatialcity.en',
     'Subject' => 'dc.subject.en',
     'Instrument' => 'dc.type.en',
     'Abstract' => 'dc.description.abstract.en',
@@ -50,7 +52,7 @@ $config['skylight_fields'] = array(
     'Collection' => 'dc.relation.ispartof.en',
     'Notes' => 'dc.description.cataloguernotes',
     'Measurements' => 'dc.format.extent.en',
-    'Signature' => 'dc.format.signature.en',
+    'Signature Date' => 'dc.format.signature.en',
     'Inscription' => 'dc.format.inscription.en',
     'Rights Holder' => 'dc.rights.holder.en',
     'Instrument Family' => 'dc.type.family.en',
@@ -59,7 +61,7 @@ $config['skylight_fields'] = array(
     'Decorations' => 'dc.description.decoration.en',
     'Link' => 'dc.identifier.uri.en',
     'Maker Biography' => 'dc.contributor.authorbio.en',
-    'Associated Musician Full' => 'dc.contributor.assocfull.en',
+    'Associated Musician Name' => 'dc.contributor.assocfull.en',
     'Associated Musician' => 'dc.contributor.assoc.en',
     'Piccolo Description' => 'dc.description.piccolo.en',
     'Short Description' => 'dc.description.level1.en',
@@ -67,19 +69,15 @@ $config['skylight_fields'] = array(
     'Associated Musician Biography' => 'dc.contributor.assocbio.en',
     'Instrument Type' => 'dc.type.desc.en',
     'Instrument Type History' => 'dc.type.history.en',
-    'ImageURI' => 'dc.identifier.imageUri'
+    'ImageURI' => 'dc.identifier.imageUri',
+    'Rights Statement' => 'dc.rights.en',
+    'Case' => 'dc.coverage.spatialcase.en',
+    'Gallery'=> 'dc.coverage.spatialgallery.en',
+    'Maker Name' => 'dc.contributor.authorfull.en',
+    'Hornbostel Sachs Classification' => 'dc.subject.classification.en',
+    'Grouping' => 'dc.coverage.spatiallogical.en',
+    'Specific Type' => 'dc.type.specific.en',
 );
-
-
-$config['skylight_date_filters'] = array();
-$config['skylight_filters'] = array('Instrument' => 'type_filter', 'Maker' => 'author_filter', 'Place Made' => 'place_filter');
-$config['skylight_filter_delimiter'] = ':';
-
-$config['skylight_meta_fields'] = array('Title',
-    'Alternative Title',
-    'Maker',
-    'Subject',
-    'Type');
 
 $config['skylight_recorddisplay'] = array(
     'Title',
@@ -90,7 +88,7 @@ $config['skylight_recorddisplay'] = array(
     'Subject',
     'Place Made',
     'Date Made',
-    'Measurements',
+    'Measurements (in mm)',
     'Inscription',
     'Author',
     'Country',
@@ -119,38 +117,69 @@ $config['skylight_recorddisplay'] = array(
     'Instrument Type',
     'Instrument Type History');
 
+$config['skylight_date_filters'] = array();
+$config['skylight_filters'] = array('Instrument' => 'type_filter', 'Maker' => 'author_filter', 'Place Made' => 'place_filter');
+$config['skylight_filter_delimiter'] = ':';
+
+$config['skylight_meta_fields'] = array('Title',
+    'Alternative Title',
+    'Maker',
+    'Subject',
+    'Type');
+
+$config['skylight_identificationdisplay'] = array(
+    'Title',
+    'Alternative Title',
+    'Accession Number',
+    'Collection',
+    'Inscription',
+    'Rights Statement'
+);
+
+$config['skylight_locationdisplay'] = array(
+    'Gallery',
+    'Case'
+);
+
 $config['skylight_descriptiondisplay'] = array(
     'Short Description',
-    'Description');
+    'Description'
+    );
+
+$config['skylight_descriptiondatadisplay'] = array(
+    'Decorations',
+    'Other Information',
+    'Technical Description',
+    'Provenance');
+
+$config['skylight_measurementdisplay'] = array(
+    'Measurements');
+
+$config['skylight_placedisplay'] = array(
+    'City',
+    'Country');
 
 $config['skylight_creatordisplay'] = array(
-    'Maker',
-    'Maker Biography',
+    'Maker Name',
+    'Maker Biography',);
+
+$config['skylight_typedisplay'] = array(
+    'Instrument',
+    'Genus',
+    'Instrument Family',
+    'Grouping',
+    'Hornbostel Sachs Classification',
+    'Specific Type');
+
+$config['skylight_datedisplay'] = array(
+    'Date Made',
+    'Period',
+    'Signature Date');
+
+$config['skylight_associationdisplay'] = array(
     'Associated Musician Full',
     'Associated Musician',
     'Associated Musician Biography',);
-
-$config['skylight_fullrecorddisplay'] = array(
-    'Alternative Title',
-    'Abstract',
-    'Other Information',
-    'Notes',
-    'Decorations',
-    'Measurements',
-    'Provenance',
-    'Inscription',
-    'Signature',
-    'Collection',
-    'Rights Holder',
-    'Accession Number',
-    'Maker Biography',
-    'Associated Musician Full',
-    'Associated Musician',
-    'Description',
-    'Technical Description',
-    'Associated Musician Biography',
-    'Instrument Type',
-    'Instrument Type History');
 
 $config['skylight_searchresult_display'] = array('Title','Instrument','Maker','Subject','Abstract','Bitstream','Thumbnail');
 
