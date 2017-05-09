@@ -282,7 +282,7 @@ body {
   position: absolute;
   top: 50px;
   left:0px;
-  height: calc(100vh - 250px);
+  height: calc(100vh - 50px);
   width: 100vw;
   background-image: url('../images/parallax2.jpg');
   background-attachment: fixed;
@@ -742,12 +742,13 @@ nav #overflow li a:hover {
   .record-info .description {
     height: calc(100% - 50px);
     width: calc(100% + 18px);
-    padding: 10px 30px 10px 10px;
-    overflow-y: scroll;
+    padding: 10px 30px 50px 10px;
+    overflow: auto;
   }
   .record-info #map{
     height: 400px;
     width: calc(100% + 18px);
+    margin-bottom: 100px;
   }
   .sidebar-nav #map{
     height: 400px;
@@ -924,21 +925,21 @@ nav #overflow li a:hover {
 
 @media screen and (min-width: 768px) {
   .main-categories {
-    margin-top: calc(100vh - 250px);
+    margin-top: calc(75vh - 50px);
     width: 100vw;
     padding: 0px;
   }
   .main-categories li {
-    position: relative;
     width: 13vw;
-    height: 200px;
+    height: 25vh;
     border-right: 1px solid rgba(240, 240, 240, 0.3);
+    border-bottom: 5px solid white;
     color: white;
     background: rgba(8, 68, 102, 0.8);
     font-size: 12px;
     word-wrap: break-word;
     text-align: center;
-    line-height: 200px;
+    line-height: 25vh;
     font-weight: bold;
     list-style: none;
     -webkit-transition: all 1s ease-in-out;
@@ -948,6 +949,7 @@ nav #overflow li a:hover {
     transition: all 1s ease-in-out;
   }
   .main-categories li.active {
+    border-bottom: none;
     width: 22vw;
     background-color: rgb(8, 62, 102);
     font-size: 18px;
