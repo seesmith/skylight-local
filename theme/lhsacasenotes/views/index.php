@@ -12,7 +12,7 @@
 
         <p>
             Patient records are an invaluable way of bringing Edinburgh’s historic breakthroughs in medical treatment and
-            care to light. As well as bound cases (dating back to the eighteenth century), LHSA holds over one million
+            care to light. As well as bound accounts of treatment (dating back to the eighteenth century), LHSA holds over one million
             twentieth-century patient case notes in folders, making LHSA one of the largest medical archives in the UK.
             The majority of these cases (although by no means all) were written in the Royal Infirmary of Edinburgh.
             They cover both specific medical specialisms (from neurosurgery, respiratory disease and psychiatric care

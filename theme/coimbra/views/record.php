@@ -1,13 +1,13 @@
 <?php
 
 //Fast access to important variables
-$id = $this->skylight_utilities->getField("ID");
 $title = $this->skylight_utilities->getField("Title");
-$coverImageName = $this->skylight_utilities->getField("Image Name");
-$location = $this->skylight_utilities->getField("Spatial Coverage");
+$coverImageName = $this->skylight_utilities->getField("Image File Name");
+$location = $this->skylight_utilities->getField("Institutional Map Reference");
 
-$title = isset( $doc[$title_field][0] ) ? $doc[$title_field][0] : "Untitled";
+$title = isset( $solr[$title] ) ? $solr[$title][0] : "Untitled";
 $image_name = isset( $solr[$coverImageName][0] ) ? $solr[$coverImageName][0] : "missing.jpg";
+
 //Image variables setup
 $coverImageJSON = "http://test.cantaloupe.is.ed.ac.uk/iiif/2/" . $image_name;
 $coverImageURL = $coverImageJSON . '/full/full/0/default.jpg';

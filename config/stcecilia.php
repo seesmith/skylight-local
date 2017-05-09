@@ -19,9 +19,6 @@ else {
     $config['skylight_container_id'] = '49';
 }
 
-//just for localhost
-$config['skylight_container_id'] = '54';
-
 $config['skylight_adminemail'] = 'lddt@mlist.is.ed.ac.uk';
 
 $config['skylight_oaipmhcollection'] = 'hdl_10683_14558';

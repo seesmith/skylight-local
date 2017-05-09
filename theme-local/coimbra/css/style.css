@@ -235,14 +235,33 @@ body {
   background: none;
   color: #555;
 }
+
 .footer {
   position: relative;
-  margin-top: 100px;
-  height: 600px;
   padding-top: 20px;
   background-color: rgb(8, 62, 102);
   color: white;
   clear: both;
+}
+.footer ul{
+  width: 90vw;
+  margin: 0;
+  padding-left: 5vw;
+  display: block;
+}
+.footer li {
+  list-style: none;
+  float: left;
+  margin: 0 auto;
+  padding: 10px 10px 0px 0px;
+}
+.footer a {
+  color: rgb(102, 147, 176);
+}
+.footer p{
+  clear: both;
+  padding: 10px 5vw 30px 5vw;
+  margin: 0px;
 }
 .footer .pull-bottom {
   margin-bottom: 0px;
@@ -390,6 +409,8 @@ nav #overflow li a:hover {
   }
 }
 .sidebar-nav {
+  position: fixed;
+  width: 25vw;
   margin-top: 15px;
   -webkit-transition: all 0.5s ease;
   transition: all 0.5s ease;
@@ -422,6 +443,10 @@ nav #overflow li a:hover {
 }
 .list-group-item .row.record:hover img {
   opacity: 0.2;
+}
+.row.record img.active {
+  border: 3px solid rgba(8, 68, 102, 0.9);
+  border-radius: 20px;
 }
 .list-group-item .row.record h4 {
   position: relative;
@@ -905,7 +930,7 @@ nav #overflow li a:hover {
     height: 200px;
     border-right: 1px solid rgba(240, 240, 240, 0.3);
     color: white;
-    background: rgba(8, 68, 102, 0.4);
+    background: rgba(8, 68, 102, 0.8);
     font-size: 12px;
     word-wrap: break-word;
     text-align: center;
@@ -950,18 +975,6 @@ nav #overflow li a:hover {
     background-color: rgb(8, 62, 102);
   }
 }
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
