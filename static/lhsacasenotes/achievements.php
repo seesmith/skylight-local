@@ -9,7 +9,7 @@
             the motor and sensory systems of the rest of the body pass, operating in this area carried a great deal of
             potential risk in the early days of Dott’s ground-breaking surgeries.</p>
 
-        <img src="<?php echo base_url()?>/theme/dott/images/LHB1-CC24-PR1-682d.gif" alt="Royal Infirmary of Edinburgh" class="img-responsive pull-left gap-right img-rounded" />
+        <img src="<?php echo base_url()?>/theme/lhsacasenotes/images/LHB1-CC24-PR1-682d.gif" alt="Royal Infirmary of Edinburgh" class="img-responsive pull-left gap-right img-rounded" />
 
         <p>The operation was carried out on a middle-aged patient whom Dott described as a
             ‘personal friend and benefactor’. Dott wrapped the area of the aneurysm with muscle from the patient’s leg

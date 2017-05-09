@@ -15,7 +15,7 @@
         </ul>
         </p>
         <p>
-                The catalogue description for each series of case notes describes the historical context behind the files and the types of documents represented in them.
+            The catalogue description for each series of case notes describes the historical context behind the files and the types of documents represented in them.
         </p>
         <p>
             Different language is used in different parts of the case descriptions to make them as accessible as possible.
@@ -31,8 +31,12 @@
             a list of catalogue entries which mention this condition or treatment. You can also search by mention of
             notable medical practitioners.
         </p>
+
+        <img src="<?php echo base_url()?>/theme/lhsacasenotes/images/confused_man.gif" alt="Confused Man" class="img-responsive pull-right img-rounded" />
+
         <p>
-            In Archives Online, the catalogues can be searched by some of the key characteristics of the case notes that
+            In <a href="http://archives.collections.ed.ac.uk" target="_blank" title="Archives Online at Edinburgh">Archives Online.</a>,
+            the catalogues can be searched by some of the key characteristics of the case notes that
             we have highlighted in each catalogue entry:
         <ul>
         <li>Patient age: entering an age in the search box in Archives Online will bring up catalogue entries for all
