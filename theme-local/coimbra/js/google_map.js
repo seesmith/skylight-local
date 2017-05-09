@@ -318,7 +318,7 @@ function initMap() {
 }
 
 // Adding pinpoint to map given coordinates
-function addLocation(ugly_coordinates, record_name, index){
+function addLocation(ugly_coordinates, record_name, index, image_url){
 
     var coordinates = convertToCoordinates(ugly_coordinates);
 
@@ -326,20 +326,23 @@ function addLocation(ugly_coordinates, record_name, index){
         position: coordinates,
         map: map,
         title: record_name,
+        icon: image_url,
         id: index
     });
 
     marker.addListener('mouseover', function() {
-        $('.row.record').hide();
-        $('.row.record.'+marker.id).addClass('visible').show();
+        $('.row.record img.active').removeClass('active');
+        $('html, body').animate({
+            scrollTop: $('.row.record.'+marker.id).offset().top - 100
+        }, 1000);
+        $('.row.record.'+marker.id + ' img').addClass('active');
+
     });
 
     // Didn't allow users to click on the reord he liked
     // marker.addListener('mouseout', function() {
     //     $('.list-group-item .pull-right').html()=='Open map view' ? $('.row.record').fadeIn() : $('.row.record').hide();
     // });
-
-
 }
 
 // Reading coordinates
@@ -368,6 +371,6 @@ function initMapAndAddLocations(){
     initMap();
 
     for (var i = 0; i < locations.length; i++) {
-        addLocation(locations[i]['location'], locations[i]['title'], locations[i]['index']);
+        addLocation(locations[i]['location'], locations[i]['title'], locations[i]['index'], locations[i]['image_url']);
     }
 }

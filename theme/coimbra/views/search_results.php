@@ -3,8 +3,8 @@
 // Set up some variables to easily refer to particular fields you've configured
 $id_field = $this->skylight_utilities->getField('ID');
 $title_field = $this->skylight_utilities->getField('Title');
-$coverImageName = $this->skylight_utilities->getField("Image Name");
-$location = $this->skylight_utilities->getField("Spatial Coverage");
+$coverImageName = $this->skylight_utilities->getField("Image File Name");
+$location = $this->skylight_utilities->getField("Institutional Map Reference");
 
 $base_parameters = preg_replace("/[?&]sort_by=[_a-zA-Z+%20. ]+/", "", $base_parameters);
 if ($base_parameters == "") {
@@ -30,15 +30,11 @@ if ($base_parameters == "") {
 //                Adding locations
                 $title = isset( $doc[$title_field][0] ) ? $doc[$title_field][0] : "Untitled";
 
-                if(isset( $doc[$location][0])) {
-                    $coordinates = '' . $doc[$location][0] . '';
-                    echo '<script> locations.push({"location" : "' . $coordinates . '", "title" : "' . str_replace(array("\n", "\r"), "", str_replace('"', '\"', $title)) . '", "index" : ' . $doc[$id_field] . '}); </script>';
-
-                }
                 //              Finding image
                 if(isset( $doc[$coverImageName][0] )) {
                     $coverImageJSON = "http://test.cantaloupe.is.ed.ac.uk/iiif/2/" . $doc[$coverImageName][0];
                     $coverImageURL = $coverImageJSON . '/full/400,/0/default.jpg';
+                    $coverImageURLMap = $coverImageJSON . '/full/50,/0/default.jpg';
                     $thumbnailLink = '<a  class= "record-link" href="./record/' . $doc['id'] . '" title = "' . $title . '"> ';
                     $thumbnailLink .= '<img class="img-responsive" src ="' . $coverImageURL . '" title="' . $title . '" /></a>';
                 }
@@ -48,9 +44,15 @@ if ($base_parameters == "") {
                     $thumbnailLink = '<a  class= "record-link" href="./record/' . $doc['id'] . '"> ';
                     $thumbnailLink .= '<img class="img-responsive" src ="' . $coverImageURL . '"/></a>';
                 }
+
+                if(isset( $doc[$location][0])) {
+                    $coordinates = '' . $doc[$location][0] . '';
+                    echo '<script> locations.push({"location" : "' . $coordinates . '", "title" : "' . str_replace(array("\n", "\r"), "", str_replace('"', '\"', $title)) . '", "index" : "' . $doc['id'] . '", "image_url" : "' . $coverImageURLMap . '"}); </script>';
+                }
+
                 ?>
 
-                <div class="row record invisible <?php echo $doc[$id_field] ?>">
+                <div class="row record invisible <?php echo $doc['id'] ?>">
 <!--                    Title   -->
                     <h4 class="visible-xs">
                         <a href="./record/<?php echo $doc['id'] ?>"><?php echo $title;?></a>
