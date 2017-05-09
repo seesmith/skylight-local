@@ -3,7 +3,7 @@
         <h1 class="itemtitle">Case histories: Norman Dott's neurosurgical case notes</h1>
 
         <h1 class="itemtitle">Neurosurgery at the Royal Infirmary of Edinburgh</h1>
-        <img src="<?php echo base_url()?>/theme/dott/images/P-PL1-S-103d.gif" alt="Royal Infirmary of Edinburgh" class="img-responsive pull-right img-circle" />
+        <img src="<?php echo base_url()?>/theme/lhsacasenotes/images/P-PL1-S-103d.gif" alt="Royal Infirmary of Edinburgh" class="img-responsive pull-right img-circle" />
 
         <p>When Dott started his career in the 1920s there were no dedicated facilities for
             neurosurgery or neurorehabilitation. Dott worked in private practice at first, using his own consulting rooms and
@@ -25,7 +25,7 @@
             became a specialist head injuries’ unit dealing with acute and out-patient care.</p>
 
         <h1 class="itemtitle">Bangour General Hospital</h1>
-        <img src="<?php echo base_url()?>/theme/dott/images/P-PL44-B-E-009d.gif" alt="Bangour General Hospital" class="img-responsive pull-right img-circle" />
+        <img src="<?php echo base_url()?>/theme/lhsacasenotes/images/P-PL44-B-E-009d.gif" alt="Bangour General Hospital" class="img-responsive pull-right img-circle" />
 
         <p>During the Second World War, Norman Dott set up the Brain Injuries Unit inside Bangour General Emergency Medical
             Service Hospital in Broxburn, West Lothian.</p>
@@ -45,7 +45,7 @@
             Ward 20 of the RIE until a new Department of Surgical Neurology opened at the Western General Hospital in 1960.</p>
 
         <h1 class="itemtitle">Department of Surgical Neurology, Western General Hospital</h1>
-        <img src="<?php echo base_url()?>/theme/dott/images/LHB11-7-2d.gif" alt="Western General Hospital" class="img-responsive pull-right img-circle" />
+        <img src="<?php echo base_url()?>/theme/lhsacasenotes/images/LHB11-7-2d.gif" alt="Western General Hospital" class="img-responsive pull-right img-circle" />
 
         <p>In 1960, Dott took charge of a new Department of Surgical Neurology at the Western General Hospital, Edinburgh
             (WGH). This new department brought together the facilities for the diagnosis, treatment and rehabilitation

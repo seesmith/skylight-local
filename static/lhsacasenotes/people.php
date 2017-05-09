@@ -1,7 +1,7 @@
 <div class="col-md-9 col-sm-9 col-xs-12">
     <div class="content byEditor">
         <h1 class="itemtitle">Norman Dott</h1>
-        <img src="<?php echo base_url()?>/theme/dott/images/LHB1CC24-PR1-1536d.gif" alt="Royal Infirmary of Edinburgh" class="img-responsive pull-right img-circle" />
+        <img src="<?php echo base_url()?>/theme/lhsacasenotes/images/LHB1CC24-PR1-1536d.gif" alt="Royal Infirmary of Edinburgh" class="img-responsive pull-right img-circle" />
 
         <p>Dott was born in Edinburgh in 1897 to art dealer Peter McOmish Dott and his wife, Rebecca, and was the
             third of five children. Norman showed considerable flair for design and engineering and was apprenticed to
@@ -18,7 +18,7 @@
         Edinburgh’s New Town for neurosurgery on private patients, to which he and his team had to transport their
         instruments by taxi or private car!</p>
 
-        <img src="<?php echo base_url()?>/theme/dott/images/LHB1CC24-PR1-1717d.gif" alt="Royal Infirmary of Edinburgh" class="img-responsive pull-left gap-right img-rounded" />
+        <img src="<?php echo base_url()?>/theme/lhsacasenotes/images/LHB1CC24-PR1-1717d.gif" alt="Royal Infirmary of Edinburgh" class="img-responsive pull-left gap-right img-rounded" />
 
 
         <p>Dott worked throughout his life for neurosurgery to be recognised and funded as a medical specialism in
