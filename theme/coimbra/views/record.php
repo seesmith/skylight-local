@@ -3,6 +3,7 @@
 //Fast access to important variables
 $title = $this->skylight_utilities->getField("Title");
 $coverImageName = $this->skylight_utilities->getField("Image File Name");
+$logoImageName = $this->skylight_utilities->getField("Logo Thumbnail");
 $location = $this->skylight_utilities->getField("Institutional Map Reference");
 
 $title = isset( $solr[$title] ) ? $solr[$title][0] : "Untitled";
@@ -68,6 +69,20 @@ $jsonwidth = $jobj['width'];
                     initMap(); addLocation("<?php echo $solr[$location][0] ?>");
                 });
             </script>
+        </div>
+        <div>
+            <?php
+            $t_segments = explode("##", $solr[$logoImageName][0]);
+            $t_filename = $t_segments[1];
+
+            $t_handle = $t_segments[3];
+            $t_handle_id = preg_replace('/^.*\//', '',$t_handle);
+            $t_seq = $t_segments[4];
+            $t_uri = './record/' . $t_handle_id . '/' . $t_seq . '/' . $t_filename;
+            $thumbnailLink = '<img src = "' . $t_uri . '" class="uni-thumbnail" title="' . $record_title . '" /></a>';
+
+            echo $thumbnailLink;
+            ?>
         </div>
         <i class="fa fa-angle-double-down hidden-xs hidden-sm" aria-hidden="true"></i>
     </div>
