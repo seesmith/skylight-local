@@ -82,9 +82,9 @@ body {
   }
   .navbar .navbar-brand {
     margin-left: 20px;
-    width: 53px;
-    height: 40px;
-    background: url("../images/logo.png") center/53px 40px no-repeat;
+    width: 66px;
+    height: 50px;
+    background: url("../images/logo.png") center/66px 50px no-repeat;
   }
   .dropdown-menu {
     background-color: rgba(102, 147, 176, 0.8);
