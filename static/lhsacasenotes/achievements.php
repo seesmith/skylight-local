@@ -2,8 +2,8 @@
     <div class="content byEditor">
         <h1 class="itemtitle">‘… the work that I have at heart’ – Norman Dott and neurosurgery</h1>
         <p>Aneurysms occur when weakness in the walls of veins or arteries cause a ‘bulge’ when blood passes through them.
-            This weakness can produce bleeding, a haemorrhage, when the walls of the vessel rupture. In the field of
-            surgical practice, Norman Dott stands out for his pioneering 1931 operation to treat an intracranial aneurysm
+            This can result in bleeding, a haemorrhage, when the walls of the vessel rupture. Norman Dott secured
+            his place in medical history by a pioneering 1931 operation to treat an intracranial aneurysm
             by direct surgical intervention into an area called the Circle of Willis, a loop of arteries at the base of
             the brain. Since these arteries sit near the brainstem, through which the nerves that connect the brain to
             the motor and sensory systems of the rest of the body pass, operating in this area carried a great deal of
@@ -11,7 +11,7 @@
 
         <img src="<?php echo base_url()?>/theme/dott/images/LHB1-CC24-PR1-682d.gif" alt="Royal Infirmary of Edinburgh" class="img-responsive pull-left gap-right img-rounded" />
 
-        <p>This first operation on such an aneurysm was carried out on a middle-aged patient whom Dott described as a
+        <p>The operation was carried out on a middle-aged patient whom Dott described as a
             ‘personal friend and benefactor’. Dott wrapped the area of the aneurysm with muscle from the patient’s leg
             in order to strengthen the blood vessel walls where they were thinning dangerously. Weary of seeing patients
             die from brain haemorrhages, post-mortem observations had led Dott to realise that brain haemorrhages could
@@ -20,12 +20,11 @@
             surgical intervention for fear of fatality (for medical specialisms such as neurosurgery in their relative
             infancy could ill afford a high mortality rate), the operation was a success, with the patient’s only complaint
             being a pain in his leg from where the muscle graft was taken!</p>
-        <p>However, such surgery was a major undertaking and carried considerable risk. For aneurysms of the carotid
-            artery, Dott practised tying (ligation) of arteries, shutting off blood-flow to the aneurysm, a practice that
-            he pioneered in 1932, just a year after his aneurysm wrapping operation. The process of detecting aneurysms
-            was considerably aided in 1933, when Dott was the first to demonstrate an aneurysm by means of angiography,
-            an x-ray technique that involved operating on the patient under anaesthetic to expose the artery, injecting
-            it with a dye and subsequently taking x-ray films.</p>
+        <p>In order to treat aneurysms of the carotid artery, Dott practised tying (ligation) of arteries, shutting off
+            blood-flow to the aneurysm, a practice that he pioneered in 1932, just a year after his aneurysm wrapping
+            operation. The process of detecting aneurysms was considerably aided in 1933, when Dott was the first to
+            demonstrate an aneurysm by means of angiography, an x-ray technique that involved operating on the patient
+            under anaesthetic to expose the artery, injecting it with a dye and subsequently taking x-ray films.</p>
         <p>Yet another breakthrough was to come in the midst of the Second World War, when Dott performed an operation
             on a foreign forces’ patient. The patient had an aneurysm in the anterior communicating artery, a small vessel
             which carries blood from one side of the brain to another - a common site for aneurysm formation and difficult

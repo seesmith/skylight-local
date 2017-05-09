@@ -25,8 +25,8 @@ $bitstreamLinks = array();
 
     <div class="row">
     <button class="btn btn-info"><a href ="<?php echo $link_uri_prefix ?><?php echo $solr[$id][0] ?>"
-                                    title="Full record at archive collections online " target="_blank">
-            View full record in University of Edinburgh archives catalogue <span class="glyphicon glyphicon-new-window" aria-hidden="true"></span></a></button>
+                                    title="Full record at archives online " target="_blank">
+            View full record in University of Edinburgh Archives Online <span class="glyphicon glyphicon-new-window" aria-hidden="true"></span></a></button>
     </div>
     <div class="row full-metadata">
         <table class="table">
