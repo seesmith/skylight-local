@@ -41,6 +41,7 @@ if ($base_parameters == "") {
                 else{
                     $coverImageJSON = "http://test.cantaloupe.is.ed.ac.uk/iiif/2/missing.jpg";
                     $coverImageURL = $coverImageJSON . '/full/400,/0/default.jpg';
+                    $coverImageURLMap = $coverImageJSON . '/full/50,/0/default.jpg';
                     $thumbnailLink = '<a  class= "record-link" href="./record/' . $doc['id'] . '"> ';
                     $thumbnailLink .= '<img class="img-responsive" src ="' . $coverImageURL . '"/></a>';
                 }
