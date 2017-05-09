@@ -8,7 +8,7 @@
             LHSA records date from 1594 to the present day.
 
         </p>
-        <img src="<?php echo base_url()?>/theme/dott/images/P_PL1_B_E_101-RIE-Exterior-1985.gif" alt="Royal Infirmary Edinburgh Exterior" class="img-responsive pull-right img-circle" />
+        <img src="<?php echo base_url()?>/theme/lhsacasenotes/images/P_PL1_B_E_101-RIE-Exterior-1985.gif" alt="Royal Infirmary Edinburgh Exterior" class="img-responsive pull-right img-circle" />
 
         <p>
             Patient records are an invaluable way of bringing Edinburgh’s historic breakthroughs in medical treatment and
@@ -36,7 +36,7 @@
             Victoria Dispensary for Diseases of the Chest, the Regional Hospital National X-ray Campaign and Southfield
             Sanitorium. <a href="http://www.lhsa.lib.ed.ac.uk/projects/index.htm" target="_blank">More information about these projects.</a>
         </p>
-        <img src="<?php echo base_url()?>/theme/dott/images/dott-index-image.gif" alt="Norman Dott Case Notes" class="img-responsive pull-right index-img" />
+        <img src="<?php echo base_url()?>/theme/lhsacasenotes/images/dott-index-image.gif" alt="Norman Dott Case Notes" class="img-responsive pull-right index-img" />
 
 
     </div>
