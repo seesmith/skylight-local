@@ -291,6 +291,10 @@ body {
   background-size: cover;
 }
 
+.main-categories a {
+  color: white;
+}
+
 /*Show more menu*/
 
 nav ul li.more {
