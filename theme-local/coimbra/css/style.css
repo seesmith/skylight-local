@@ -38,18 +38,13 @@
 */
 
 html, body {
+  padding: 0px;
   overflow-x: hidden;
 }
 body {
-  margin-top: 50px;
-
-  /* Height of header */
-}
-@media screen and (max-width: 768px) {
-  html,
-  body {
-    margin-top: 25px;
-  }
+  position: relative;
+  padding: 50px 0px 200px 0px;
+  min-height: calc(100vh);
 }
 .row {
   margin: 0px;
@@ -237,16 +232,21 @@ body {
 }
 
 .footer {
-  position: relative;
-  padding-top: 20px;
+  min-height: 200px;
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+  right: 0px;
   background-color: rgb(8, 62, 102);
   color: white;
   clear: both;
+  z-index: 10;
+  overflow: auto;
 }
 .footer ul{
   width: 90vw;
   margin: 0;
-  padding-left: 5vw;
+  padding: 0px 5vw 10px 5vw;
   display: block;
 }
 .footer li {
@@ -260,7 +260,7 @@ body {
 }
 .footer p{
   clear: both;
-  padding: 10px 5vw 30px 5vw;
+  padding: 10px 5vw 0px 5vw;
   margin: 0px;
 }
 .footer .pull-bottom {
@@ -274,6 +274,9 @@ body {
 }
 .footer a {
   color: rgb(102, 147, 176);
+}
+.footer img{
+  line-height: 100%;
 }
 
 /*Index parallax effect*/
@@ -289,6 +292,16 @@ body {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+}
+
+.parallax h1{
+  text-transform: uppercase;
+  font-size: 3vh;
+  margin: 0px;
+  color: white;
+  padding: 70px;
+  font-weight: bold;
+  background: rgba(8, 68, 102, 0.3) url("../images/logo.png") center/112px 100px no-repeat;
 }
 
 .main-categories a {
@@ -413,15 +426,22 @@ nav #overflow li a:hover {
   }
 }
 .sidebar-nav {
+  border-left: 2px solid rgb(240,240,240);
+  z-index: 20;
   position: fixed;
-  width: 25vw;
+  top: 50px;
+  height: 90vh;
+  background-color: white;
+  width: calc(41.6vw - 15px);
   margin-top: 15px;
   -webkit-transition: all 0.5s ease;
   transition: all 0.5s ease;
+  -webkit-transition: top 0.0s ease;
+  transition: top 0.0s ease;
 }
 /*Sidebar gallery view */
 .toggle-map{
-  max-height: 450px;
+  max-height: 100%;
 }
 .list-group-item.active:hover a, .list-group-item.active:hover button{
   color: white;
@@ -529,7 +549,7 @@ nav #overflow li a:hover {
 .row.record.visible{
   opacity: 1;
 }
-.record-link {
+a.record-link {
   opacity: 1 !important;
 }
 .row.record .result-info {
@@ -584,8 +604,9 @@ nav #overflow li a:hover {
 .row.record .nav-pills {
   margin-bottom: 20px;
 }
-.row.record a,
-.row.record nav-pills {
+.row.record .record-title a {
+  width: 100%;
+  height: 100%;
   color: rgb(8, 68, 102);
   opacity: 0;
   filter: alpha(opacity=0);
@@ -751,8 +772,9 @@ nav #overflow li a:hover {
     margin-bottom: 100px;
   }
   .sidebar-nav #map{
-    height: 400px;
+    z-index: 10000;
     width: 100%;
+    height: calc(100vh - 135px);
   }
   #gallery-container #map{
     width: calc(75vw - 40px);
@@ -887,6 +909,7 @@ nav #overflow li a:hover {
   width: 100vw;
   height:100vh;
   line-height: 100vh;
+  text-align: center;
   /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#1e5799+0,2989d8+50,207cca+51,7db9e8+100;Blue+Gloss+Default */
   background: rgba(30, 87, 153, 0.8); /* Old browsers */
   background: -moz-linear-gradient(top,  rgba(30, 87, 153, 0.8) 0%, rgba(41, 137, 216, 0.8) 50%, rgba(32, 124, 202, 0.8) 51%, rgba(125, 185, 232, 0.8) 100%); /* FF3.6-15 */
@@ -899,10 +922,18 @@ nav #overflow li a:hover {
   display: block;
   width: 231px;
   height: 177px;
-  margin: calc(50vh - 88px) auto;
+  margin: auto;
+  margin-top: calc(45vh - 100px);
   animation-name: rotate-logo;
   animation-duration: 6s;
   animation-iteration-count: 3;
+}
+
+#loader h1{
+  text-transform: uppercase;
+  display: block;
+  margin: 0px auto;
+  color: white;
 }
 
 @-webkit-keyframes rotate-logo {
@@ -936,7 +967,7 @@ nav #overflow li a:hover {
     border-bottom: 5px solid white;
     color: white;
     background: rgba(8, 68, 102, 0.8);
-    font-size: 12px;
+    font-size: 2vh;
     word-wrap: break-word;
     text-align: center;
     line-height: 25vh;
@@ -952,7 +983,7 @@ nav #overflow li a:hover {
     border-bottom: none;
     width: 22vw;
     background-color: rgb(8, 62, 102);
-    font-size: 18px;
+    font-size: 3vh;
   }
 }
 @media screen and (max-width: 768px) {
@@ -983,10 +1014,26 @@ nav #overflow li a:hover {
 }
 
 
-
-
-
-
+.feedback_form{
+  padding: 20px;
+}
+.feedback_form label{
+  margin-top: 20px;
+  display: block;
+}
+.feedback_form input{
+  line-height: 40px;
+  padding: 0px 10px 0px 10px;
+}
+.feedback_form input, .feedback_form textarea{
+  font-size: 20px;
+  width: 100%;
+  border: 1px solid grey;
+  border-radius: 5px;
+}
+.feedback_form textarea{
+  padding: 10px;
+}
 
 
 

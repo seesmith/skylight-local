@@ -63,12 +63,12 @@ $config['skylight_meta_fields'] = array('Title' => 'dc.title',
 $config['skylight_recorddisplay'] = array(
     'Title',
     'Creator',
-    'Temporal Coverage',
-    'Spatialcountry Coverage',
-    'Format',
-    'Format Extent',
+    'Place of Origin',
+    'Production Date',
     'Description',
-    'Subject'
+    'Dimensions',
+    'Material/Medium',
+    'Tags'
 );
 
 $config['skylight_descriptiondisplay'] = array(
@@ -146,7 +146,7 @@ $config['skylight_feed_fields'] = array('Title' => 'Title',
     'Date' => 'Date');
 
 $config['skylight_related_number'] = 20;
-$config['skylight_results_per_page'] = 20;
+$config['skylight_results_per_page'] = 80;
 $config['skylight_show_facets'] = false;
 $config['skylight_share_buttons'] = false;
 

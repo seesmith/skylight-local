@@ -7,10 +7,11 @@
 
 var map;
 
-function initMap() {
+function initMap(center) {
+    center = center || {lat:51.509865, lng:-0.118092};
     map = new google.maps.Map(document.getElementById('map'), {
         zoom: 4,
-        center:  {lat:51.509865, lng:-0.118092},
+        center:  center,
         scrollwheel: false,
         disableDefaultUI: true,
         scaleControl: true,
@@ -363,10 +364,6 @@ function toggleViewMode(){
     initMapAndAddLocations();
 }
 
-$(window).bind("load", function() {
-    initMapAndAddLocations();
-});
-
 function initMapAndAddLocations(){
     initMap();
 
@@ -374,3 +371,13 @@ function initMapAndAddLocations(){
         addLocation(locations[i]['location'], locations[i]['title'], locations[i]['index'], locations[i]['image_url']);
     }
 }
+
+$(window).scroll(function(){
+    if ($(window).scrollTop()+$(window).height() + 80 >= $('.footer').offset().top) {
+        $(".sidebar-nav").css('position', 'absolute').css('top', $('.footer').offset().top - $('.sidebar-nav').height() - 150);
+    }
+    else{
+        $(".sidebar-nav").css('position', 'fixed').css('top', 50);
+    }
+
+});

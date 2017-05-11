@@ -63,10 +63,13 @@ $jsonwidth = $jobj['width'];
             }
         ?>
         <div id="map">
-
             <script>
                 $(window).bind("load", function() {
-                    initMap(); addLocation("<?php echo $solr[$location][0] ?>");
+                    <?php
+                    echo 'initMap(convertToCoordinates("' . $solr[$location][0] . '"));';
+                    $addLocation = $solr[$location][0] . '", "' . addslashes($title);
+                    echo 'addLocation("' . $addLocation . '");';
+                    ?>
                 });
             </script>
         </div>
