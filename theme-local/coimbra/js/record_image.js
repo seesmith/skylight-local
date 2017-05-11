@@ -5,7 +5,7 @@
 
 // A little bit overloaded, move some of code
 window.onload = function(){
-    $('#loader').fadeOut();
+    $('#loader').delay(1000).fadeOut();
     $('#loader').click(function(){ $('#loader').fadeOut(); });
 
     $('.cover-image-container').addClass("loaded");

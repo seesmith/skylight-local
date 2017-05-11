@@ -40,4 +40,8 @@
         }).fadeTo(400, 1);
         hovered = true;
     });
+
+    // Setting body padding bottom dynamically because the footer has dynamic height
+    $('body').css('padding-bottom',$('.footer').height());
+
 })(jQuery);
