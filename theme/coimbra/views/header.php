@@ -100,7 +100,10 @@
 </head>
 
 <body>
-    <div id="loader"><img class="logo" src="<?php echo base_url(); ?>theme/<?php echo $this->config->item('skylight_theme'); ?>/images/logo.png"></div>
+    <div id="loader">
+        <img class="logo" src="<?php echo base_url(); ?>theme/<?php echo $this->config->item('skylight_theme'); ?>/images/logo.png">
+        <h1>Coimbra Exhibition</h1>
+    </div>
     <nav class="navbar navbar-fixed-top">
         <div class="container-fluid">
             <div class="navbar-header">
@@ -115,13 +118,16 @@
                 <ul class="nav navbar-nav">
                     <li class="active dropdown"><a href="#">Home</a></li>
                     <li><a href="#">Contact</a></li>
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="./search">All records</a></li>
                     <li class="search">
                         <form role="search" action="./redirect/" method="post">
 
                             <input id="uoe-search" type="text"
-                                       placeholder="Search..." name="q"
-                                       value="<?php if (isset($searchbox_query)) echo urldecode($searchbox_query); ?>"
-                                       id="q"/>
+                                   placeholder="Search..." name="q"
+                                   value="<?php if (isset($searchbox_query)) echo urldecode($searchbox_query); ?>"
+                                   id="q"/>
                             <button type="submit" name="submit_search" value="Search">
                                 <i class="fa fa-search" aria-hidden="true"></i>
                             </button>

@@ -2,7 +2,6 @@
     <!-- todo replace two with sass or less -->
 <div>
     <div class="parallax">
-
     </div>
     <ul class="main-categories">
         <li class="col-xs-6"><a href='./search/"The+Arts"'><div class="border-top"></div>The Arts</a></li>
