@@ -5,12 +5,17 @@ $title = $this->skylight_utilities->getField("Title");
 $coverImageName = $this->skylight_utilities->getField("Image File Name");
 $logoImageName = $this->skylight_utilities->getField("Logo Thumbnail");
 $location = $this->skylight_utilities->getField("Institutional Map Reference");
+$filters = array_keys($this->config->item("skylight_filters"));
+
+$institutionUri= $this->skylight_utilities->getField("Institutional Web URL");
+$additionalUri = $this->skylight_utilities->getField("Additional URLs");
+
 
 $title = isset( $solr[$title] ) ? $solr[$title][0] : "Untitled";
 $image_name = isset( $solr[$coverImageName][0] ) ? $solr[$coverImageName][0] : "missing.jpg";
 
 //Image variables setup
-$coverImageJSON = "http://test.cantaloupe.is.ed.ac.uk/iiif/2/" . $image_name;
+$coverImageJSON = "http://test.cantaloupe.is.ed.ac.uk/iiif/2/" . $image_name; //TODO move to config
 $coverImageURL = $coverImageJSON . '/full/full/0/default.jpg';
 $coverImage = '<img class="record-image" src ="' .$coverImageURL .'"/>';
 
@@ -57,8 +62,25 @@ $jsonwidth = $jobj['width'];
         <?php
             foreach($recorddisplay as $key) {
                 $element = $this->skylight_utilities->getField($key);
-                if(isset( $solr[$element][0] )) {
-                    echo '<div class="row"><span class="field">' . $key . '</span>' . $solr[$element][0] . '</div>';
+
+                if(isset($solr[$element])) {
+                    echo '<div class="row"><span class="field">' . $key . '</span>';
+                    foreach($solr[$element] as $index => $metadatavalue) {
+
+                        if(in_array($key, $filters)) {
+
+                            $orig_filter = urlencode($metadatavalue);
+                            $lower_orig_filter = strtolower($metadatavalue);
+                            $lower_orig_filter = urlencode($lower_orig_filter);
+
+                            echo '<a href="./search/*:*/' . $key . ':%22'.$lower_orig_filter.'%7C%7C%7C'.$orig_filter.'%22">'.$metadatavalue.'</a>';
+                        }
+                        else {
+                            echo $solr[$element][0];
+                        }
+
+                    }
+                echo '</div>';
                 }
             }
         ?>
@@ -87,6 +109,7 @@ $jsonwidth = $jobj['width'];
             echo $thumbnailLink;
             ?>
         </div>
+        <?php include('description.php');?>
         <i class="fa fa-angle-double-down hidden-xs hidden-sm" aria-hidden="true"></i>
     </div>
 </div>

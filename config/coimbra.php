@@ -25,33 +25,34 @@ $config['skylight_fields'] = array(
     'ID'                                    => 'dc.identifier.en',
     'Title'                                 => 'dc.title.en',
     'Creator'                               => 'dc.creator.en',
-    'Production Date'                       => 'dc.coverage.temporal.en',
+    'Date'                                  => 'dc.coverage.temporal.en',
     'Place of Origin'                       => 'dc.coverage.spatialcountry.en',
+    'Coimbra Institution'                   => 'dc.relation.ispartofpath.en',
     'Material/Medium'                       => 'dc.format.en',
     'Dimensions'                            => 'dc.format.extent.en',
     'Description'                           => 'dc.description.en',
     'Institutional Link to Object'          => 'dc.identifier.citation.en',
     'Institutional Link to Online Portal'   => 'dc.source.uri.en',
     'Image License'                         => 'dc.license.en',
-    'Image Rightsholder'                    => 'dc.rights.holder.en',
+    'Image Rights Holder'                   => 'dc.rights.holder.en',
     'Photographic Credits'                  => 'dc.contributor.en',
     'Metadata Rights'                       => 'dc.rights.en',
     'Image File Name'                       => 'dc.identifier.imageUri.en',
     'Logo URL'                              => 'dc.format.original.en',
     'Image URL'                             => 'dc.identifier.uri.en',
     'Tags'                                  => 'dc.subject.en',
+    'Category'                              => 'dc.subject.classification.en',
     'Logo Thumbnail'                        => 'dc.format.thumbnail.en',
     'Institutional Web URL'                 => 'dc.relation.uri.en',
     'Institutional Map Reference'           => 'dc.coverage.spatial.en',
     'Additional URLs'                       => 'dc.description.uri.en',
-    'University Contact'                    => 'dc.contributor.other.en',
-    'Contact email'                         => 'dc.contributor.otheremail.en',
+    'University Contact'                    => 'dc.contributor.en',
+    //'Contact email'                         => 'dc.contributor.otheremail.en',
     'Date of Submission'                    => 'dc.date.submitted.en'
 );
 
-
 $config['skylight_date_filters'] = array();
-$config['skylight_filters'] = array('Maker' => 'author_filter', 'Place Made' => 'place_filter');
+$config['skylight_filters'] = array('Exhibition' => 'exhibition_filter'); //TODO
 $config['skylight_filter_delimiter'] = ':';
 
 $config['skylight_meta_fields'] = array('Title' => 'dc.title',
@@ -61,62 +62,25 @@ $config['skylight_meta_fields'] = array('Title' => 'dc.title',
     'Type' => 'dc.type');
 
 $config['skylight_recorddisplay'] = array(
-    'Title',
     'Creator',
+    'Coimbra Institution',
     'Place of Origin',
-    'Production Date',
+    'Date',
     'Description',
-    'Dimensions',
-    'Material/Medium',
     'Tags'
 );
 
+
 $config['skylight_descriptiondisplay'] = array(
-    'Abstract',
-    'Decorations',
-    //'Provenance',
-    'Description',
-    'Technical Description',
-    'Other Information',
-    'Notes',
-    'Collection',
-    'Instrument Type Info',
-    'Instrument Type History');
-
-$config['skylight_creatordisplay'] = array(
-    'Maker',
-    'Author Biography',
-    'Associated Musician Full',
-    'Associated Musician',
-    'Associated Musician Biography',);
-
-$config['skylight_fullrecorddisplay'] = array(
-    'Alternative Title',
-    'Instrument',
-    'Instrument Family',
-    'Maker','Subject',
-    'Abstract',
-    'Place Made',
-    'Date Made',
-    'Description',
-    'Other Information',
-    'Notes',
-    'Decorations',
-    'Measurements',
-    'Provenance',
-    'Inscription',
-    'Signature',
-    'Collection',
-    'Rights Holder',
-    'Accession Number',
-    'Author Biography',
-    'Associated Musician Full',
-    'Associated Musician',
-    'Piccolo Description',
-    'Technical Description',
-    'Associated Musician Biography',
-    'Instrument Type Info',
-    'Instrument Type History');
+    'Dimensions',
+    'Material/Medium',
+    'Category',
+    'Institutional Link to Object',
+    'Institutional Link to Online Portal',
+    'Image License',
+    'Image Rights Holder',
+    'Photographic Credits',
+    'Metadata Rights');
 
 $config['skylight_searchresult_display'] = array('Title','Instrument','Maker','Subject','Abstract', 'Bitstream', 'Thumbnail');
 
