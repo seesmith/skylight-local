@@ -17,7 +17,7 @@
                 <p>Copyright © 2017 Coimbra Group</p>
             </div>
             <div class="col-xs-12 col-md-6 text-center">
-                <img style="height: 100px; width: 100px; position: relative; margin: 25px auto" src="http://earnshaw.bio.ed.ac.uk/earnshaw/sites/sbsweb2.bio.ed.ac.uk.earnshaw/files/common/eduni-logo.png" alt="">
+                <a href="http://www.ed.ac.uk" title="Link to University of Edinburgh Home Page" target="_blank"> <img style="height: 100px; width: 100px; position: relative; margin: 25px auto" src="<?php echo base_url()?>/theme/<?php echo $this->config->item('skylight_theme'); ?>/images/eduni-logo.png" alt="University of Edinburgh Logo"></a>
             </div>
         </div>
 
