@@ -18,7 +18,7 @@
     Remove this if you use the .htaccess -->
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 
-    <title>Stuart Sounds</title>
+    <title>Coimbra Virtual Exhibition 2017</title>
 
     <meta name="description" content="">
     <meta name="author" content="">
@@ -112,7 +112,7 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="http://www.coimbra-group.eu/"></a>
+                <a class="navbar-brand" href="http://www.coimbra-group.eu/" title="Coimbra Group Website link" target="_blank"></a>
             </div>
             <div class="collapse navbar-collapse" id="myNavbar">
                 <ul class="nav navbar-nav">
