@@ -76,13 +76,13 @@ $jsonwidth = $jobj['width'];
                             echo '<a href="./search/*:*/' . $key . ':%22'.$lower_orig_filter.'%7C%7C%7C'.$orig_filter.'%22">'.$metadatavalue.'</a>';
                         }
                         else {
-                        }
-                             if (stripos($element, "uri") !== FALSE) {
+                            if (stripos($element, "uri") !== FALSE) {
                                 echo '<a href="' . $solr[$element][0] . '" title="URL Links for item" target="_blank">' . $solr[$element][0] . '</a>';
 
                             }
-                        else {
-                            echo $solr[$element][0];
+                            else {
+                                echo $solr[$element][0];
+                            }
                         }
 
                     }
