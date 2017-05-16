@@ -5,11 +5,12 @@
 (function($){
     var i = Math.floor((Math.random() * 7)),
         hovered = false,
-        images = [  "../theme/coimbra/images/0035504c-0001.jpg",
-                    "../theme/coimbra/images/01_unibo.jpg",
+        images = [
                     "../theme/coimbra/images/web_hent_bilde.jpg",
                     "../theme/coimbra/images/JU_Astrolabe.jpg",
                     "../theme/coimbra/images/MS58_130r_HI_CROP.jpg",
+                    "../theme/coimbra/images/Goe04_MathMod.jpg",
+                    "../theme/coimbra/images/01_unibo.jpg",
                     "../theme/coimbra/images/Wuerzburg_submission1_tyrannicide.jpg",
                     "../theme/coimbra/images/old-bug-boxes-33.jpg"];
 
