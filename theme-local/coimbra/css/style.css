@@ -377,6 +377,18 @@ nav #overflow li a:hover {
 .list-group-item .row.record{
   height:390px;
 }
+.row a{
+  color: #FFFFFF;
+  text-decoration: underline;
+}
+.row a.active{
+  color: #FFFFFF;
+  text-decoration: underline;
+}
+.row a.hover {
+  color: #FFFFFF;
+  text-decoration: underline;
+}
 #gallery-container {
   padding: 15px;
   line-height: 0;
