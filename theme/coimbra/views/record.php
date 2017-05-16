@@ -8,13 +8,14 @@ $location = $this->skylight_utilities->getField("Institutional Map Reference");
 $filters = array_keys($this->config->item("skylight_filters"));
 
 $institutionUri= $this->skylight_utilities->getField("Institutional Web URL");
+$imageServer = $this->config->item('skylight_image_server');
 
 $title = isset( $solr[$title] ) ? $solr[$title][0] : "Untitled";
 $institutionUri= isset( $solr[$institutionUri] ) ? $solr[$institutionUri][0] : "";
 $image_name = isset( $solr[$coverImageName][0] ) ? $solr[$coverImageName][0] : "missing.jpg";
 
 //Image variables setup
-$coverImageJSON = "http://test.cantaloupe.is.ed.ac.uk/iiif/2/" . $image_name; //TODO move to config
+$coverImageJSON = $imageServer . "/iiif/2/" . $image_name;
 $coverImageURL = $coverImageJSON . '/full/full/0/default.jpg';
 $coverImage = '<img class="record-image" src ="' .$coverImageURL .'"/>';
 
