@@ -5,7 +5,7 @@ $id_field = $this->skylight_utilities->getField('ID');
 $title_field = $this->skylight_utilities->getField('Title');
 $coverImageName = $this->skylight_utilities->getField("Image File Name");
 $location = $this->skylight_utilities->getField("Institutional Map Reference");
-$imageServer = $this->config->item('skylight_theme');
+$imageServer = $this->config->item('skylight_image_server');
 
 $base_parameters = preg_replace("/[?&]sort_by=[_a-zA-Z+%20. ]+/", "", $base_parameters);
 if ($base_parameters == "") {
