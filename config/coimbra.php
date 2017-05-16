@@ -27,7 +27,7 @@ $config['skylight_fields'] = array(
     'Creator'                               => 'dc.creator.en',
     'Date'                                  => 'dc.coverage.temporal.en',
     'Place of Origin'                       => 'dc.coverage.spatialcountry.en',
-    'Coimbra Institution'                   => 'dc.relation.ispartofpath.en',
+    'Institution'                           => 'dc.relation.ispartof.en',
     'Material/Medium'                       => 'dc.format.en',
     'Dimensions'                            => 'dc.format.extent.en',
     'Description'                           => 'dc.description.en',
@@ -41,7 +41,7 @@ $config['skylight_fields'] = array(
     'Logo URL'                              => 'dc.format.original.en',
     'Image URL'                             => 'dc.identifier.uri.en',
     'Tags'                                  => 'dc.subject.en',
-    'Category'                              => 'dc.subject.classification.en',
+    'Category'                              => 'dc.relation.ispartofexhibition.en',
     'Logo Thumbnail'                        => 'dc.format.thumbnail.en',
     'Institutional Web URL'                 => 'dc.relation.uri.en',
     'Institutional Map Reference'           => 'dc.coverage.spatial.en',
@@ -52,7 +52,7 @@ $config['skylight_fields'] = array(
 );
 
 $config['skylight_date_filters'] = array();
-$config['skylight_filters'] = array('Exhibition' => 'exhibition_filter'); //TODO
+$config['skylight_filters'] = array('Category' => 'exhibition_filter', 'Institution'=> 'collection_filter'); //TODO
 $config['skylight_filter_delimiter'] = ':';
 
 $config['skylight_meta_fields'] = array('Title' => 'dc.title',
@@ -63,7 +63,7 @@ $config['skylight_meta_fields'] = array('Title' => 'dc.title',
 
 $config['skylight_recorddisplay'] = array(
     'Creator',
-    'Coimbra Institution',
+    'Institution',
     'Place of Origin',
     'Date',
     'Description',

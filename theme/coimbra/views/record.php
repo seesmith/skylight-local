@@ -8,10 +8,9 @@ $location = $this->skylight_utilities->getField("Institutional Map Reference");
 $filters = array_keys($this->config->item("skylight_filters"));
 
 $institutionUri= $this->skylight_utilities->getField("Institutional Web URL");
-$additionalUri = $this->skylight_utilities->getField("Additional URLs");
-
 
 $title = isset( $solr[$title] ) ? $solr[$title][0] : "Untitled";
+$institutionUri= isset( $solr[$institutionUri] ) ? $solr[$institutionUri][0] : "";
 $image_name = isset( $solr[$coverImageName][0] ) ? $solr[$coverImageName][0] : "missing.jpg";
 
 //Image variables setup
@@ -76,6 +75,12 @@ $jsonwidth = $jobj['width'];
                             echo '<a href="./search/*:*/' . $key . ':%22'.$lower_orig_filter.'%7C%7C%7C'.$orig_filter.'%22">'.$metadatavalue.'</a>';
                         }
                         else {
+                        }
+                             if (stripos($element, "uri") !== FALSE) {
+                                echo '<a href="' . $solr[$element][0] . '" title="URL Links for item" target="_blank">' . $solr[$element][0] . '</a>';
+
+                            }
+                        else {
                             echo $solr[$element][0];
                         }
 
@@ -97,17 +102,21 @@ $jsonwidth = $jobj['width'];
         </div>
         <div>
             <?php
-            $t_segments = explode("##", $solr[$logoImageName][0]);
-            $t_filename = $t_segments[1];
+            if (isset($solr[$logoImageName]))
+            {
+                $t_segments = explode("##", $solr[$logoImageName][0]);
+                $t_filename = $t_segments[1];
 
-            $t_handle = $t_segments[3];
-            $t_handle_id = preg_replace('/^.*\//', '',$t_handle);
-            $t_seq = $t_segments[4];
-            $t_uri = './record/' . $t_handle_id . '/' . $t_seq . '/' . $t_filename;
-            $thumbnailLink = '<img src = "' . $t_uri . '" class="uni-thumbnail" title="' . $record_title . '" /></a>';
+                $t_handle = $t_segments[3];
+                $t_handle_id = preg_replace('/^.*\//', '',$t_handle);
+                $t_seq = $t_segments[4];
+                $t_uri = './record/' . $t_handle_id . '/' . $t_seq . '/' . $t_filename;
+                $thumbnailLink = '<a href="' . $institutionUri . '" title="Link to Institution" target="_blank"><img src = "' . $t_uri . '" class="uni-thumbnail" title="' . $record_title . '" /></a>';
 
-            echo $thumbnailLink;
+                echo $thumbnailLink;
+            }
             ?>
+
         </div>
         <?php include('description.php');?>
         <i class="fa fa-angle-double-down hidden-xs hidden-sm" aria-hidden="true"></i>
