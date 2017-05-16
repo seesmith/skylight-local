@@ -5,15 +5,15 @@
 (function($){
     var i = Math.floor((Math.random() * 7)),
         hovered = false,
-        images = ["http://images.is.ed.ac.uk/luna/servlet/iiif/UoEart~2~2~73051~164085/full/!1024,1024/0/default.jpg",
-                  "https://apps.utu.fi/media/kuvat/Coimbra/Kalm-kirja-3.jpg",
-                  "https://gwdu64.gwdg.de/images/forster/overview/189_Prodr_Nr_255_b_1.jpg",
-                  "https://apps.utu.fi/media/kuvat/Coimbra/old-bug-boxes-33.jpg",
-                  "http://www.unimus.no/felles/bilder/web_hent_bilde.php?id=12136228&type=jpeg",
-                  "http://images.is.ed.ac.uk/luna/servlet/iiif/UoEgal~5~5~51583~103971/full/!1024,1024/0/default.jpg",
-                  "https://apps.utu.fi/media/kuvat/Coimbra/old-bug-boxes-33.jpg"];
+        images = [  "../theme/coimbra/images/0035504c-0001.jpg",
+                    "../theme/coimbra/images/01_unibo.jpg",
+                    "../theme/coimbra/images/web_hent_bilde.jpg",
+                    "../theme/coimbra/images/JU_Astrolabe.jpg",
+                    "../theme/coimbra/images/MS58_130r_HI_CROP.jpg",
+                    "../theme/coimbra/images/Wuerzburg_submission1_tyrannicide.jpg",
+                    "../theme/coimbra/images/old-bug-boxes-33.jpg"];
 
-    $('.parallax').css('background-image', 'url(' + images[i] + ')');
+    $('.parallax').css('background-image', 'data-image-src="' + images[i] + '"');
     $('.main-categories li:nth-child(' + (i) + ')').addClass('active');
 
     // Changes the focused category every n seconds
@@ -40,4 +40,8 @@
         }).fadeTo(400, 1);
         hovered = true;
     });
+
+    // Setting body padding bottom dynamically because the footer has dynamic height
+    $('body').css('padding-bottom',$('.footer').height());
+
 })(jQuery);

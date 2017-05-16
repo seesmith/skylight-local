@@ -15,7 +15,7 @@ if ($base_parameters == "") {
 ?>
 
 <div class="row">
-    <div class="col-sm-9 col-xs-12">
+    <div class="col-sm-7 col-xs-12">
         <div id="gallery-container">
             <div class="col-xs-12 hidden">
                 <h5 class="text-muted">Showing <?php echo $rows ?> results </h5>
@@ -27,7 +27,6 @@ if ($base_parameters == "") {
 
             <?php
             foreach ($docs as $doc) {
-//                Adding locations
                 $title = isset( $doc[$title_field][0] ) ? $doc[$title_field][0] : "Untitled";
 
                 //              Finding image
@@ -48,31 +47,31 @@ if ($base_parameters == "") {
 
                 if(isset( $doc[$location][0])) {
                     $coordinates = '' . $doc[$location][0] . '';
-                    echo '<script> locations.push({"location" : "' . $coordinates . '", "title" : "' . str_replace(array("\n", "\r"), "", str_replace('"', '\"', $title)) . '", "index" : "' . $doc['id'] . '", "image_url" : "' . $coverImageURLMap . '"}); </script>';
+                    echo '<script> locations.push({"location" : "' . $coordinates . '", "title" : "' . addslashes($title) . '", "index" : "' . $doc['id'] . '", "image_url" : "' . $coverImageURLMap . '"}); </script>';
                 }
 
                 ?>
 
                 <div class="row record invisible <?php echo $doc['id'] ?>">
-<!--                    Title   -->
                     <h4 class="visible-xs">
+                        <a href="./record/<?php echo $doc['id'] ?>"><?php echo $title;?></a>
+                    </h4>
+                    <h4 class="result-info record-title">
                         <a href="./record/<?php echo $doc['id'] ?>"><?php echo $title;?></a>
                     </h4>
 
 <!--                    Thumbnail   -->
                     <?php echo $thumbnailLink; ?>
-
-<!--                    Record info     -->
-                    <div class="col-sm-9 hidden-xs result-info">
-                        <h4 class="record-title">
-                            <a href="./record/<?php echo $doc['id'] ?>"><?php echo $title; ?></a>
-                        </h4>
-                    </div>
                 </div>
                 <hr class="visible-xs">
                 <?php
             } // end for each search result
             ?>
+            <script>
+                $(window).bind("load", function() {
+                    initMapAndAddLocations();
+                });
+            </script>
         </div>
 
 <!--        Pagination  -->

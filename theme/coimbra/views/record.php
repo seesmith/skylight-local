@@ -5,12 +5,16 @@ $title = $this->skylight_utilities->getField("Title");
 $coverImageName = $this->skylight_utilities->getField("Image File Name");
 $logoImageName = $this->skylight_utilities->getField("Logo Thumbnail");
 $location = $this->skylight_utilities->getField("Institutional Map Reference");
+$filters = array_keys($this->config->item("skylight_filters"));
+
+$institutionUri= $this->skylight_utilities->getField("Institutional Web URL");
 
 $title = isset( $solr[$title] ) ? $solr[$title][0] : "Untitled";
+$institutionUri= isset( $solr[$institutionUri] ) ? $solr[$institutionUri][0] : "";
 $image_name = isset( $solr[$coverImageName][0] ) ? $solr[$coverImageName][0] : "missing.jpg";
 
 //Image variables setup
-$coverImageJSON = "http://test.cantaloupe.is.ed.ac.uk/iiif/2/" . $image_name;
+$coverImageJSON = "http://test.cantaloupe.is.ed.ac.uk/iiif/2/" . $image_name; //TODO move to config
 $coverImageURL = $coverImageJSON . '/full/full/0/default.jpg';
 $coverImage = '<img class="record-image" src ="' .$coverImageURL .'"/>';
 
@@ -57,33 +61,64 @@ $jsonwidth = $jobj['width'];
         <?php
             foreach($recorddisplay as $key) {
                 $element = $this->skylight_utilities->getField($key);
-                if(isset( $solr[$element][0] )) {
-                    echo '<div class="row"><span class="field">' . $key . '</span>' . $solr[$element][0] . '</div>';
+
+                if(isset($solr[$element])) {
+                    echo '<div class="row"><span class="field">' . $key . '</span>';
+                    foreach($solr[$element] as $index => $metadatavalue) {
+
+                        if(in_array($key, $filters)) {
+
+                            $orig_filter = urlencode($metadatavalue);
+                            $lower_orig_filter = strtolower($metadatavalue);
+                            $lower_orig_filter = urlencode($lower_orig_filter);
+
+                            echo '<a href="./search/*:*/' . $key . ':%22'.$lower_orig_filter.'%7C%7C%7C'.$orig_filter.'%22">'.$metadatavalue.'</a>';
+                        }
+                        else {
+                        }
+                             if (stripos($element, "uri") !== FALSE) {
+                                echo '<a href="' . $solr[$element][0] . '" title="URL Links for item" target="_blank">' . $solr[$element][0] . '</a>';
+
+                            }
+                        else {
+                            echo $solr[$element][0];
+                        }
+
+                    }
+                echo '</div>';
                 }
             }
         ?>
         <div id="map">
-
             <script>
                 $(window).bind("load", function() {
-                    initMap(); addLocation("<?php echo $solr[$location][0] ?>");
+                    <?php
+                    echo 'initMap(convertToCoordinates("' . $solr[$location][0] . '"));';
+                    $addLocation = $solr[$location][0] . '", "' . addslashes($title);
+                    echo 'addLocation("' . $addLocation . '");';
+                    ?>
                 });
             </script>
         </div>
         <div>
             <?php
-            $t_segments = explode("##", $solr[$logoImageName][0]);
-            $t_filename = $t_segments[1];
+            if (isset($solr[$logoImageName]))
+            {
+                $t_segments = explode("##", $solr[$logoImageName][0]);
+                $t_filename = $t_segments[1];
 
-            $t_handle = $t_segments[3];
-            $t_handle_id = preg_replace('/^.*\//', '',$t_handle);
-            $t_seq = $t_segments[4];
-            $t_uri = './record/' . $t_handle_id . '/' . $t_seq . '/' . $t_filename;
-            $thumbnailLink = '<img src = "' . $t_uri . '" class="uni-thumbnail" title="' . $record_title . '" /></a>';
+                $t_handle = $t_segments[3];
+                $t_handle_id = preg_replace('/^.*\//', '',$t_handle);
+                $t_seq = $t_segments[4];
+                $t_uri = './record/' . $t_handle_id . '/' . $t_seq . '/' . $t_filename;
+                $thumbnailLink = '<a href="' . $institutionUri . '" title="Link to Institution" target="_blank"><img src = "' . $t_uri . '" class="uni-thumbnail" title="' . $record_title . '" /></a>';
 
-            echo $thumbnailLink;
+                echo $thumbnailLink;
+            }
             ?>
+
         </div>
+        <?php include('description.php');?>
         <i class="fa fa-angle-double-down hidden-xs hidden-sm" aria-hidden="true"></i>
     </div>
 </div>
