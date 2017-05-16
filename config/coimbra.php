@@ -1,6 +1,6 @@
 <?php
 
-if (strpos($_SERVER['HTTP_HOST'], "test") !== false) {
+if (strpos($_SERVER['HTTP_HOST'], "test") !== false || strpos($_SERVER['HTTP_HOST'], "localhost") !== false) {
     $config['skylight_ga_code'] = 'UA-25737241-6';
     $config['skylight_container_id'] = '63';
     $config['skylight_image_server'] = 'http://test.cantaloupe.is.ed.ac.uk';
@@ -48,7 +48,7 @@ $config['skylight_fields'] = array(
     'Image Rights Holder'                   => 'dc.rights.holder.en',
     'Photographic Credits'                  => 'dc.contributor.en',
     'Metadata Rights'                       => 'dc.rights.en',
-    'Image File Name'                       => 'dc.identifier.imageUri.en',
+    'Image File Name'                       => 'dc.format.bitstream.en',
     'Logo URL'                              => 'dc.format.original.en',
     'Image URL'                             => 'dc.identifier.uri.en',
     'Tags'                                  => 'dc.subject.en',
