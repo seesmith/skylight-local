@@ -1,5 +1,16 @@
 <?php
 
+if (strpos($_SERVER['HTTP_HOST'], "test") !== false) {
+    $config['skylight_ga_code'] = 'UA-25737241-6';
+    $config['skylight_container_id'] = '63';
+    $config['skylight_image_server'] = 'http://test.cantaloupe.is.ed.ac.uk';
+}
+else {
+    $config['skylight_ga_code'] = 'UA-25737241-6';
+    $config['skylight_container_id'] = '50';
+    $config['skylight_image_server'] = 'http://cantaloupe.is.ed.ac.uk';
+}
+
 $config['skylight_appname'] = 'coimbra';
 
 // Uncomment this if you are using a url of the form http://.../art/...
@@ -18,7 +29,7 @@ $config['skylight_oaipmhallowed'] = true;
 // Container ID and the field used in solr index to store this ID. Used for restricting search/browse scope.
 
 $config['skylight_container_field'] = 'location.coll';
-$config['skylight_container_id'] = '62';
+//$config['skylight_container_id'] = '62';
 $config['skylight_sitemap_type'] = 'internal';
 
 $config['skylight_fields'] = array(

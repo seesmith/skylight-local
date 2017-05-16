@@ -5,6 +5,7 @@ $id_field = $this->skylight_utilities->getField('ID');
 $title_field = $this->skylight_utilities->getField('Title');
 $coverImageName = $this->skylight_utilities->getField("Image File Name");
 $location = $this->skylight_utilities->getField("Institutional Map Reference");
+$imageServer = $this->config->item('skylight_theme');
 
 $base_parameters = preg_replace("/[?&]sort_by=[_a-zA-Z+%20. ]+/", "", $base_parameters);
 if ($base_parameters == "") {
@@ -31,14 +32,14 @@ if ($base_parameters == "") {
 
                 //              Finding image
                 if(isset( $doc[$coverImageName][0] )) {
-                    $coverImageJSON = "http://test.cantaloupe.is.ed.ac.uk/iiif/2/" . $doc[$coverImageName][0];
+                    $coverImageJSON = $imageServer . "/iiif/2/" . $doc[$coverImageName][0];
                     $coverImageURL = $coverImageJSON . '/full/400,/0/default.jpg';
                     $coverImageURLMap = $coverImageJSON . '/full/50,/0/default.jpg';
                     $thumbnailLink = '<a  class= "record-link" href="./record/' . $doc['id'] . '" title = "' . $title . '"> ';
                     $thumbnailLink .= '<img class="img-responsive" src ="' . $coverImageURL . '" title="' . $title . '" /></a>';
                 }
                 else{
-                    $coverImageJSON = "http://test.cantaloupe.is.ed.ac.uk/iiif/2/missing.jpg";
+                    $coverImageJSON = $imageServer . "/iiif/2/missing.jpg";
                     $coverImageURL = $coverImageJSON . '/full/400,/0/default.jpg';
                     $coverImageURLMap = $coverImageJSON . '/full/50,/0/default.jpg';
                     $thumbnailLink = '<a  class= "record-link" href="./record/' . $doc['id'] . '"> ';
