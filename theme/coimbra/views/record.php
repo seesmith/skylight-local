@@ -16,6 +16,7 @@ $image_name = isset( $solr[$coverImageName][0] ) ? $solr[$coverImageName][0] : "
 
 //Image variables setup
 $coverImageJSON = $imageServer . "/iiif/2/" . $image_name;
+
 $coverImageURL = $coverImageJSON . '/full/full/0/default.jpg';
 $coverImage = '<img class="record-image" src ="' .$coverImageURL .'"/>';
 
@@ -38,6 +39,9 @@ $jsonwidth = $jobj['width'];
 </div>
 
 <div id="openseadragon" class="cover-image-container full-width">
+    <button class="show-info" onclick="$('html, body').animate({scrollTop: $('.record-info').offset().top-50},1000);">
+        Show info
+    </button>
 </div>
 
 
@@ -101,7 +105,7 @@ $jsonwidth = $jobj['width'];
                 });
             </script>
         </div>
-        <div class="instituion-logo">
+        <div class="institution-logo row">
             <?php
             if (isset($solr[$logoImageName]))
             {

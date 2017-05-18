@@ -77,13 +77,4 @@
                 return !!clientSize && ((compareRight <= viewRight) && (compareLeft >= viewLeft));
         }
     };
-
-    // $(window).bind("load", function() {
-    //     alert();
-    //     jQuery('.record').viewportChecker({
-    //         classToAdd: 'visible', // Class to add to the elements when they are visible
-    //         offset: 1
-    //     });
-    // });
-
 })(jQuery);
