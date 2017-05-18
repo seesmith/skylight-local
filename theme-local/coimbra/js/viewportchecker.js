@@ -14,6 +14,7 @@
  The above copyright notice and this permission notice shall be included in all
  copies or substantial portions of the Software.
  */
+markers = {};
 
 (function($){
     $.fn.viewportChecker = function(useroptions){
@@ -32,11 +33,15 @@
             $elem.each(function(){
 
                 var $obj = $(this);
+                var id = $obj.attr('class').split(/\s+/)[3];
                 if($obj.visible()){
                     $obj.addClass(options.classToAdd);
-                    // $obj.removeClass("invisible");
-
-                    // Do the callback function. Callback wil send the jQuery object as parameter
+                    if (markers[id]){markers[id].setOpacity(1);}
+                    options.callbackFunction($obj);
+                }
+                else{
+                    $obj.removeClass(options.classToAdd);
+                    if (markers[id]){markers[id].setOpacity(0);}
                     options.callbackFunction($obj);
                 }
             });

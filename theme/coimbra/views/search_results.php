@@ -18,8 +18,8 @@ if ($base_parameters == "") {
 <div class="row">
     <div class="col-sm-7 col-xs-12">
         <div id="gallery-container">
-            <div class="col-xs-12 hidden">
-                <h5 class="text-muted">Showing <?php echo $rows ?> results </h5>
+            <div class="col-xs-12 visible-xs">
+                <h5 class="text-muted">All <?php echo urldecode($searchbox_query) ?> records </h5>
             </div>
             <script>
 //                Will add locations to this array while iteration over the records
@@ -73,21 +73,6 @@ if ($base_parameters == "") {
                     initMapAndAddLocations();
                 });
             </script>
-        </div>
-
-<!--        Pagination  -->
-        <div class="row">
-            <div class="centered text-center">
-                <nav>
-                    <ul class="pagination">
-                        <?php
-                        foreach ($paginationlinks as $pagelink) {
-                            echo $pagelink;
-                        }
-                        ?>
-                    </ul>
-                </nav>
-            </div>
         </div>
     </div>
 

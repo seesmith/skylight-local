@@ -95,13 +95,13 @@ $jsonwidth = $jobj['width'];
                 $(window).bind("load", function() {
                     <?php
                     echo 'initMap(convertToCoordinates("' . $solr[$location][0] . '"));';
-                    $addLocation = $solr[$location][0] . '", "' . addslashes($title);
-                    echo 'addLocation("' . $addLocation . '");';
+                    $addLocation = $solr[$location][0] . '", "' . addslashes($title) . '", 0, "../theme/coimbra/images/pinpoint.png", 1';
+                    echo 'addLocation("' . $addLocation . ');';
                     ?>
                 });
             </script>
         </div>
-        <div>
+        <div class="col-xs-12 col-md-6>
             <?php
             if (isset($solr[$logoImageName]))
             {
