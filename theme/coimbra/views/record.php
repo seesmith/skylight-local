@@ -16,6 +16,7 @@ $image_name = isset( $solr[$coverImageName][0] ) ? $solr[$coverImageName][0] : "
 
 //Image variables setup
 $coverImageJSON = $imageServer . "/iiif/2/" . $image_name;
+
 $coverImageURL = $coverImageJSON . '/full/full/0/default.jpg';
 $coverImage = '<img class="record-image" src ="' .$coverImageURL .'"/>';
 
