@@ -12,7 +12,7 @@
                     echo " " . $case_segments[1] . " ";
                 }
                 else {
-                    echo " " . urldecode($searchbox_query) . " ";
+                    echo "All " . urldecode($searchbox_query) . " ";
                 }
                 ?>
                 records
