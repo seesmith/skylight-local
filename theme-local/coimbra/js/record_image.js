@@ -11,13 +11,16 @@ window.onload = function(){
 
     $('.cover-image-container').addClass("loaded");
     $('.record-info').addClass("showing");
-
     // Starts the code that checks which images are visible
-    jQuery('.record').viewportChecker({
-        classToAdd: 'visible', // Class to add to the elements when they are visible
-        offset: 1
-    });
+    // Calling in a timeout in order to make sure that the images are ordered before checking for visibility
+    setTimeout(function(){
+        jQuery('.record').viewportChecker({
+            classToAdd: 'visible', // Class to add to the elements when they are visible
+            offset: 1
+        });
+    },500);
 
+    // Calling the slideshow function for homepage
     slideshow();
 };
 

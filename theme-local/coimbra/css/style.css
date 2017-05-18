@@ -351,14 +351,14 @@ body {
     width: calc(100vw - 15px);
     padding: 0px;
   }
-  .main-categories li {
+  .main-categories a {
     width: calc(13vw - 2px);
     height: 25vh;
     border-right: 1px solid rgba(240, 240, 240, 0.3);
     border-bottom: 5px solid white;
     color: white;
     background: rgba(8, 68, 102, 0.8);
-    font-size: 1.5vh;
+    font-size: 1.8vh;
     word-wrap: break-word;
     text-align: center;
     line-height: 25vh;
@@ -370,7 +370,7 @@ body {
     -ms-transition: all 1s ease-in-out;
     transition: all 1s ease-in-out;
   }
-  .main-categories li.active {
+  .main-categories a.active {
     border-bottom: none;
     width: calc(22vw - 3px);
     background-color: rgb(8, 62, 102);
@@ -383,7 +383,7 @@ body {
     width: 100vw;
     padding: 0px;
   }
-  .main-categories li {
+  .main-categories a {
     height: 50px;
     color: white;
     background: rgba(8, 68, 102, 0.4);
@@ -399,7 +399,7 @@ body {
     -ms-transition: all 1s ease-in-out;
     transition: all 1s ease-in-out;
   }
-  .main-categories li.active {
+  .main-categories a.active {
     background-color: rgb(8, 62, 102);
   }
 }
@@ -735,6 +735,12 @@ a.record-link {
 
 
 /* RECORD PAGE */
+.institution-logo {
+  background-color: white;
+  text-align: center;
+  width: 100%;
+  padding: 10px;
+}
 @media screen and (min-width: 768px) {
   .cover-image-container {
     height: calc(100vh - 50px);
@@ -758,12 +764,6 @@ a.record-link {
   }
   #openseadragon {
     width: 60%;
-  }
-  .institution-logo {
-    background-color: white;
-    text-align: center;
-    width: 100%;
-    padding: 10px;
   }
   .record-info {
     position: absolute;
@@ -839,7 +839,7 @@ a.record-link {
   .record-info #map{
     height: 400px;
     width: calc(100% + 18px);
-    margin-bottom: 10mappx;
+    margin-bottom: 10px;
   }
   .sidebar-nav #map{
     z-index: 10000;
