@@ -340,7 +340,6 @@ function addLocation(ugly_coordinates, record_name, index, image_url, opacity){
         // }, 1000);
         $('.row.record.'+marker.id + ' img').addClass('active');
     });
-
     // Didn't allow users to click on the reord he liked
     // marker.addListener('mouseout', function() {
     //     $('.list-group-item .pull-right').html()=='Open map view' ? $('.row.record').fadeIn() : $('.row.record').hide();

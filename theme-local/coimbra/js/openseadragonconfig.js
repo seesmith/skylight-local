@@ -15,6 +15,7 @@
         nextButton: "next",
         previousButton: "previous",
         showNavigator: true,
+        mouseNavEnabled: false,
 
         tileSources: [{
             "@context": "http://iiif.io/api/image/2/context.json",

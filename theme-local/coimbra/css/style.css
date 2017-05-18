@@ -735,12 +735,6 @@ a.record-link {
 
 
 /* RECORD PAGE */
-.institution-logo {
-  background-color: white;
-  text-align: center;
-  width: 100%;
-  padding: 10px;
-}
 @media screen and (min-width: 768px) {
   .cover-image-container {
     height: calc(100vh - 50px);
@@ -846,6 +840,11 @@ a.record-link {
     width: 100%;
     height: calc(100vh - 135px);
   }
+  .institution-logo {
+    background-color: white;
+    text-align: center;
+    padding: 10px;
+  }
   .record-info .description .row {
     padding: 10px 0px 10px;
     word-wrap:break-word;
@@ -932,7 +931,7 @@ a.record-link {
     border: 1px solid rgba(8, 68, 102, 0.9);
     color: rgba(8, 68, 102, 0.9);
     background-color: transparent;
-    top: calc(100vh - 100px);
+    top: calc(100vh - 80px);
     left: 35%;
     z-index: 20;
   }
@@ -983,6 +982,12 @@ a.record-link {
   }
   #map {
     height: 400px;
+    margin-bottom: 15px;
+  }
+  .institution-logo {
+    background-color: white;
+    text-align: center;
+    padding: 10px;
   }
   .record-info .description .row {
     border-bottom: 1px solid rgba(20, 20, 20, 0.1);
