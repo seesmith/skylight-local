@@ -463,6 +463,8 @@ nav #overflow li a:hover {
   overflow: hidden;
   border: 0px;
   border-radius: 0px !important;
+  font-weight: bold;
+  color: rgba(8, 68, 102, 0.9);
 }
 .list-group-item.active {
   background-color: transparent;
@@ -757,6 +759,12 @@ a.record-link {
   #openseadragon {
     width: 60%;
   }
+  .institution-logo {
+    background-color: white;
+    text-align: center;
+    width: 100%;
+    padding: 10px;
+  }
   .record-info {
     position: absolute;
     top: 15px;
@@ -831,7 +839,7 @@ a.record-link {
   .record-info #map{
     height: 400px;
     width: calc(100% + 18px);
-    margin-bottom: 100px;
+    margin-bottom: 10mappx;
   }
   .sidebar-nav #map{
     z-index: 10000;
@@ -916,7 +924,7 @@ a.record-link {
     width: 100%;
     height: calc(100vh - 50px);
   }
-  .show-info{
+  .show-info {
     position: absolute;
     width: 30%;
     text-align: center;
@@ -973,7 +981,7 @@ a.record-link {
     overflow: auto;
     width: 100%;
   }
-  #map{
+  #map {
     height: 400px;
   }
   .record-info .description .row {

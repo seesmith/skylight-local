@@ -2,8 +2,20 @@
     <div class="sidebar-nav">
 
         <ul class="list-group">
-            <li class="list-group-item active">
-                <a href="">All <?php echo urldecode($searchbox_query) ?> records</a>
+            <li class="list-group-item">
+                <?php
+                if(isset($searchbox_filters) && count($searchbox_filters) > 0)
+                {
+                    $filter_segments = explode("\"", urldecode($searchbox_filters[0]));
+                    $case_segments = explode("|||", urldecode($filter_segments[1]));
+
+                    echo " " . $case_segments[1] . " ";
+                }
+                else {
+                    echo " " . urldecode($searchbox_query) . " ";
+                }
+                ?>
+                records
             </li>
             <li class="list-group-item">
                 <div id="map">
@@ -12,4 +24,3 @@
         </ul>
     </div>
 </div>
-
