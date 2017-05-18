@@ -191,7 +191,7 @@ $config['skylight_search_fields'] = array(
     'Accession Number' => 'dc.identifier.en'
 );
 
-$config['skylight_related_fields'] = array('Instrument' => 'dc.type.family.en');
+$config['skylight_related_fields'] = array('Instrument' => 'dc.type.en');
 
 //only by title, no date at the moment
 $config['skylight_sort_fields'] = array(
