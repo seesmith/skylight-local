@@ -35,15 +35,13 @@ if ($base_parameters == "") {
                     $coverImageJSON = $imageServer . "/iiif/2/" . $doc[$coverImageName][0];
                     $coverImageURL = $coverImageJSON . '/full/400,/0/default.jpg';
                     $coverImageURLMap = $coverImageJSON . '/full/50,/0/default.jpg';
-                    $thumbnailLink = '<a  class= "record-link" href="./record/' . $doc['id'] . '" title = "' . $title . '"> ';
-                    $thumbnailLink .= '<img class="img-responsive" src ="' . $coverImageURL . '" title="' . $title . '" /></a>';
+                    $thumbnailLink = '<img class="img-responsive" src ="' . $coverImageURL . '" title="' . $title . '" />';
                 }
                 else{
                     $coverImageJSON = $imageServer . "/iiif/2/missing.jpg";
                     $coverImageURL = $coverImageJSON . '/full/400,/0/default.jpg';
                     $coverImageURLMap = $coverImageJSON . '/full/50,/0/default.jpg';
-                    $thumbnailLink = '<a  class= "record-link" href="./record/' . $doc['id'] . '"> ';
-                    $thumbnailLink .= '<img class="img-responsive" src ="' . $coverImageURL . '"/></a>';
+                    $thumbnailLink = '<img class="img-responsive" src ="' . $coverImageURL . '"/>';
                 }
 
                 if(isset( $doc[$location][0])) {
@@ -53,18 +51,14 @@ if ($base_parameters == "") {
 
                 ?>
 
-                <div class="row record invisible <?php echo $doc['id'] ?>">
-                    <h4 class="visible-xs">
-                        <a href="./record/<?php echo $doc['id'] ?>"><?php echo $title;?></a>
-                    </h4>
+                <a href="./record/<?php echo $doc['id'] ?>" class="row record invisible <?php echo $doc['id'] ?>">
+<!--                    Title-->
                     <h4 class="result-info record-title">
-                        <a href="./record/<?php echo $doc['id'] ?>"><?php echo $title;?></a>
+                        <?php echo $title;?>
                     </h4>
-
-<!--                    Thumbnail   -->
+<!--                    Thumbnail-->
                     <?php echo $thumbnailLink; ?>
-                </div>
-                <hr class="visible-xs">
+                </a>
                 <?php
             } // end for each search result
             ?>
