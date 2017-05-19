@@ -39,7 +39,7 @@ $jsonwidth = $jobj['width'];
 </div>
 
 <div id="openseadragon" class="cover-image-container full-width">
-    <button class="show-info" onclick="$('html, body').animate({scrollTop: $('.record-info').offset().top-50},1000);">
+    <button class="show-info visible-xs" onclick="$('html, body').animate({scrollTop: $('.record-info').offset().top-50},1000);">
         Show info
     </button>
 </div>

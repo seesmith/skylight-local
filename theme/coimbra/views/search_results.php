@@ -16,11 +16,11 @@ if ($base_parameters == "") {
 ?>
 
 <div class="row">
-    <div class="col-sm-7 col-xs-12">
+    <div class="col-md-7 col-xs-12">
+        <div class="col-xs-12 text-center visible-xs">
+            <h5 class="text-muted">All <?php echo urldecode($searchbox_query) ?> records </h5>
+        </div>
         <div id="gallery-container">
-            <div class="col-xs-12 visible-xs">
-                <h5 class="text-muted">All <?php echo urldecode($searchbox_query) ?> records </h5>
-            </div>
             <script>
 //                Will add locations to this array while iteration over the records
                 var locations = [];
