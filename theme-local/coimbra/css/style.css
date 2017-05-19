@@ -224,6 +224,43 @@ body {
   background: none;
   color: #555;
 }
+/*Possible fix for ugly header for tablets by changing the breakpoint*/
+@media (max-width: 1200px) {
+  .navbar-header {
+    float: none;
+  }
+  .navbar-left,.navbar-right {
+    float: none !important;
+  }
+  .navbar-toggle {
+    display: block;
+  }
+  .navbar-collapse {
+    border-top: 1px solid transparent;
+    box-shadow: inset 0 1px 0 rgba(255,255,255,0.1);
+  }
+  .navbar-fixed-top {
+    top: 0;
+    border-width: 0 0 1px;
+  }
+  .navbar-collapse.collapse {
+    display: none!important;
+  }
+  .navbar-nav {
+    float: none!important;
+    margin-top: 7.5px;
+  }
+  .navbar-nav>li {
+    float: none;
+  }
+  .navbar-nav>li>a {
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+  .collapse.in{
+    display:block !important;
+  }
+}
 
 
 
@@ -348,17 +385,17 @@ body {
 @media screen and (min-width: 768px) {
   .main-categories {
     margin-top: calc(75vh - 50px);
-    width: calc(100vw - 15px);
+    width: 100vw;
     padding: 0px;
   }
   .main-categories a {
-    width: calc(13vw - 2px);
+    width: 13.5%;
     height: 25vh;
     border-right: 1px solid rgba(240, 240, 240, 0.3);
     border-bottom: 5px solid white;
     color: white;
     background: rgba(8, 68, 102, 0.8);
-    font-size: 1.8vh;
+    font-size: 1.4vh;
     word-wrap: break-word;
     text-align: center;
     line-height: 25vh;
@@ -372,9 +409,9 @@ body {
   }
   .main-categories a.active {
     border-bottom: none;
-    width: calc(22vw - 3px);
+    width: 19%;
     background-color: rgb(8, 62, 102);
-    font-size: 2.5vh;
+    font-size: 2.2vh;
   }
 }
 @media screen and (max-width: 768px) {
@@ -480,11 +517,11 @@ nav #overflow li a:hover {
   min-height: 100vh;
   padding: 15px;
   line-height: 0;
-  -webkit-column-count: 5;
+  -webkit-column-count: 4;
   -webkit-column-gap: 15px;
-  -moz-column-count: 5;
+  -moz-column-count: 4;
   -moz-column-gap: 15px;
-  column-count: 5;
+  column-count: 4;
   column-gap: 15px;
 }
 #gallery-container .record {
@@ -511,18 +548,11 @@ nav #overflow li a:hover {
     column-count: 3;
   }
 }
-@media (max-width: 800px) {
+@media (max-width: 768px) {
   #gallery-container {
     -moz-column-count: 2;
     -webkit-column-count: 2;
     column-count: 2;
-  }
-}
-@media (max-width: 400px) {
-  #gallery-container {
-    -moz-column-count: 1;
-    -webkit-column-count: 1;
-    column-count: 1;
   }
 }
 .sidebar-nav {
@@ -1076,13 +1106,5 @@ a.record-link {
 .feedback_form textarea{
   padding: 10px;
 }
-
-
-
-
-
-
-
-
 
 

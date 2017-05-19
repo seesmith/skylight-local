@@ -1,4 +1,4 @@
-<div class="col-sm-5 hidden-xs">
+<div class="col-md-5 hidden-sm hidden-xs">
     <div class="sidebar-nav">
 
         <ul class="list-group">
