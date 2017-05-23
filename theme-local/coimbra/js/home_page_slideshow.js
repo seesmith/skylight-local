@@ -2,19 +2,19 @@
  * Created by Kristiyan Tsvetanov on 16/03/2017.
  * Contact me: kristiyan.c@gmail.com
  */
-$(function() {
+function slideshow() {
     var i = Math.floor((Math.random() * 7)),
         hovered = false;
 
     $('.parallax.active').removeClass('active').addClass('inactive');
     $('.parallax.img' + (i)).removeClass('inactive').addClass('active');
-    $('.main-categories a:nth-child(' + (i+1) + ')').addClass('active');
+    $('.main-categories a:nth-child(' + (i + 1) + ')').addClass('active');
 
     // Changes the focused category every n seconds
     window.setInterval(function () {
         if (!hovered) {
             $('.main-categories a.active').removeClass('active');
-            $('.main-categories a:nth-child(' + (i+1) + ')').addClass('active');
+            $('.main-categories a:nth-child(' + (i + 1) + ')').addClass('active');
 
             $('.parallax.active').removeClass('active').addClass('inactive');
             $('.parallax.img' + (i)).removeClass('inactive').addClass('active');
@@ -32,4 +32,4 @@ $(function() {
         $('.parallax.img' + (i)).removeClass('inactive').addClass('active');
         hovered = true;
     });
-});
+}

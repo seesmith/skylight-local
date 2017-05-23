@@ -14,7 +14,7 @@
  The above copyright notice and this permission notice shall be included in all
  copies or substantial portions of the Software.
  */
-markers = {};
+var markers = [];
 
 (function($){
     $.fn.viewportChecker = function(useroptions){
@@ -36,12 +36,12 @@ markers = {};
                 var id = $obj.attr('class').split(/\s+/)[3];
                 if(!$obj.visible() && !map_mode){
                     $obj.removeClass(options.classToAdd);
-                    if (markers[id]){markers[id].setOpacity(0);}
+                    if (markers[id]){markers[id].setOpacity(0); centerMap();}
                     options.callbackFunction($obj);
                 }
                 else{
                     $obj.addClass(options.classToAdd);
-                    if (markers[id]){markers[id].setOpacity(1);}
+                    if (markers[id]){markers[id].setOpacity(1); centerMap();}
                     options.callbackFunction($obj);
                 }
             });

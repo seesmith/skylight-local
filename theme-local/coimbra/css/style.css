@@ -44,7 +44,7 @@ html, body {
 body {
   position: relative;
   padding: 50px 0px 200px 0px;
-  min-height: calc(100vh);
+  min-height: 100vh;
 }
 .row {
   margin: 0px;
@@ -366,16 +366,6 @@ body {
   -ms-transition: all 1.4s ease-in-out;
   transition: all 1.4s ease-in-out;
 }
-
-.parallax h1{
-  text-transform: uppercase;
-  font-size: 3vh;
-  margin: 0px;
-  color: white;
-  padding: 70px;
-  font-weight: bold;
-  background: rgba(8, 68, 102, 0.3) url("../images/logo.png") center/112px 100px no-repeat;
-}
 .main-categories a {
   color: white;
 }
@@ -392,7 +382,7 @@ body {
     border-bottom: 5px solid white;
     color: white;
     background: rgba(8, 68, 102, 0.8);
-    font-size: 1.4vh;
+    font-size: 14px;
     word-wrap: break-word;
     text-align: center;
     line-height: 25vh;
@@ -408,7 +398,7 @@ body {
     border-bottom: none;
     width: 19%;
     background-color: rgb(8, 62, 102);
-    font-size: 2.2vh;
+    font-size: 22px;
   }
 }
 @media screen and (max-width: 768px) {
@@ -724,7 +714,7 @@ nav #overflow li a:hover {
     padding: 10px 10px 10px 85px;
     color: white;
     text-align: center;
-    font-size: 3vh;
+    font-size: 20px;
   }
   .record-info .itemtitle .backbtn {
     position: absolute;
@@ -735,12 +725,12 @@ nav #overflow li a:hover {
     width: 50px;
     border: 0px;
     color: white;
-    font-size: 4vh;
+    font-size: 25px;
   }
   .record-info .itemtitle .backbtn::after{
     margin-left: 40px;
     color: white;
-    font-size: 12px;
+    font-size: 14px;
     content: "Back";
   }
   .record-info .itemtitle .backbtn:hover::after{
@@ -889,7 +879,8 @@ nav #overflow li a:hover {
     padding: 10px 10px 10px 35px;
     color: rgb(8, 68, 102);
     text-align: center;
-    font-size: 4vh;
+    font-size: 16px;
+    font-weight: bold;
   }
   .record-info .itemtitle .backbtn {
     position: absolute;
@@ -900,7 +891,7 @@ nav #overflow li a:hover {
     width: 50px;
     border: 0px;
     color: rgb(8, 68, 102);
-    font-size: 4vh;
+    font-size: 18px;
   }
   .record-info .itemtitle i {
     position: absolute;

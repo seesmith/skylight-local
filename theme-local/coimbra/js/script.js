@@ -3,21 +3,6 @@
  * email: kristiyan.c@gmail.com for any questions
  */
 
-// // Executes the code when all the page has loaded
-// window.onload = function(){
-//     //Removes loader overlay
-//     $('#loader').delay(1000).fadeOut();
-//     $('#loader').click(function(){ $('#loader').fadeOut(); });
-//
-//     $('.cover-image-container').addClass("loaded");
-//     $('.record-info').addClass("showing");
-//     // Starts the code that checks which images are visible
-//     // Calling in a timeout in order to make sure that the images are ordered before checking for visibility
-//     // Calling the slideshow function for homepage
-//     slideshow();
-//
-// };
-
 window.addEventListener('load',
     function() {
         //Removes loader overlay
@@ -66,5 +51,10 @@ window.addEventListener('load',
                     $(".sidebar-nav").css('position', 'fixed').css('top', 50).css('width', 'inherit');
                 }
             });
+        }
+
+        // If it is the home page, start the slideshow
+        if($('.main-categories')[0]) {
+            slideshow();
         }
 }, false);

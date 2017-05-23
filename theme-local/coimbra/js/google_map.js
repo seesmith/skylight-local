@@ -358,3 +358,12 @@ function initMapAndAddLocations(){
         addLocation(locations[i]['location'], locations[i]['title'], locations[i]['index'], locations[i]['image_url']);
     }
 }
+
+function centerMap(){
+    var bounds = new google.maps.LatLngBounds();
+    for (var key in markers) {
+        if(markers[key].opacity == 1)
+            bounds.extend(markers[key].getPosition());
+    }
+    map.fitBounds(bounds);
+}
