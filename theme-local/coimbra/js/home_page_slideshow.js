@@ -2,14 +2,14 @@
  * Created by Kristiyan Tsvetanov on 16/03/2017.
  * Contact me: kristiyan.c@gmail.com
  */
-var slideshow = new Function()
-{
+$(function() {
     var i = Math.floor((Math.random() * 7)),
         hovered = false;
 
     $('.parallax.active').removeClass('active').addClass('inactive');
     $('.parallax.img' + (i)).removeClass('inactive').addClass('active');
     $('.main-categories a:nth-child(' + (i+1) + ')').addClass('active');
+
     // Changes the focused category every n seconds
     window.setInterval(function () {
         if (!hovered) {
@@ -21,7 +21,7 @@ var slideshow = new Function()
         }
         hovered = false;
         i == 6 ? i = 0 : i++;
-    }, 5000);
+    }, 7000);
 
     // If a category is hovered
     $(".main-categories a").mouseover(function () {
@@ -32,8 +32,4 @@ var slideshow = new Function()
         $('.parallax.img' + (i)).removeClass('inactive').addClass('active');
         hovered = true;
     });
-
-    // Setting body padding bottom dynamically because the footer has dynamic height
-    $('body').css('padding-bottom', $('.footer').height());
-
-}
+});

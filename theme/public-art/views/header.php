@@ -53,8 +53,8 @@
 
 
     <!--    Scripts added by Kristiyan Tsvetanov-->
-    <script src="<?php echo base_url(); ?>theme/<?php echo $this->config->item('skylight_theme'); ?>/js/visible.js"></script>
-    <script src="<?php echo base_url(); ?>theme/<?php echo $this->config->item('skylight_theme'); ?>/js/viewportchecker.js"></script>
+<!--    <script src="--><?php //echo base_url(); ?><!--theme/--><?php //echo $this->config->item('skylight_theme'); ?><!--/js/visible.js"></script>-->
+<!--    <script src="--><?php //echo base_url(); ?><!--theme/--><?php //echo $this->config->item('skylight_theme'); ?><!--/js/viewportchecker.js"></script>-->
 
 
     <script src="http://www.google-analytics.com/analytics.js"></script>
@@ -116,52 +116,22 @@
 
             <div class="collapse navbar-collapse" id="myNavbar">
                 <ul class="nav navbar-nav">
-                    <li class="active dropdown">
-                        <a class="dropdown-toggle" data-toggle="dropdown" href="#">Home <span class="caret"></span></a>
-                        <ul class="dropdown-menu">
-                            <li><a href="#">Organisation chart</a></li>
-                            <li><a href="#">Mission Statement</a></li>
-                            <li><a href="#">Members</a></li>
-                        </ul>
-                    </li>
-                    <li class="dropdown">
-                        <a class="dropdown-toggle" data-toggle="dropdown" href="#">Policy Pillars <span class="caret"></span></a>
-                        <ul class="dropdown-menu">
-                            <li><a href="#">Research</a></li>
-                            <li><a href="#">Education</a></li>
-                            <li><a href="#">Outreach</a></li>
-                        </ul>
-                    </li>
-                    <li>
-                        <a class="dropdown-toggle" data-toggle="dropdown" href="#">Activities <span class="caret"></span></a>
-                        <ul class="dropdown-menu">
-                            <li><a href="#">Current events</a></li>
-                            <li><a href="#">Scholarships</a></li>
-                            <li><a href="#">Projects</a></li>
-                            <li><a href="#">Summer/Winter Schools</a></li>
-                            <li><a href="#">Seminars</a></li>
-                            <li><a href="#">Policy Seminars</a></li>
-                            <li><a href="#">Arenberg-CG Prize</a></li>
-                        </ul>
-                    </li>
-                    <li><a href="#">Read more</a></li>
+                    <li><a href="#">Home</a></li>
                     <li><a href="#">Contact</a></li>
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
                     <li class="search">
                         <form role="search" action="./redirect/" method="post">
 
                             <input id="uoe-search" type="text"
-                                       placeholder="Search..." name="q"
-                                       value="<?php if (isset($searchbox_query)) echo urldecode($searchbox_query); ?>"
-                                       id="q"/>
+                                   placeholder="Search..." name="q"
+                                   value="<?php if (isset($searchbox_query)) echo urldecode($searchbox_query); ?>"
+                                   id="q"/>
                             <button type="submit" name="submit_search" value="Search">
                                 <i class="fa fa-search" aria-hidden="true"></i>
                             </button>
                         </form>
                     </li>
-                </ul>
-                <ul class="nav navbar-nav navbar-right">
-                    <li><a href="#"><span class="glyphicon glyphicon-user"></span> Intranet</a></li>
-                    <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Intranet EB</a></li>
                 </ul>
             </div>
         </div>

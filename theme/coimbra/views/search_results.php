@@ -16,7 +16,7 @@ if ($base_parameters == "") {
 ?>
 
 <div class="row">
-    <div class="col-md-7 col-xs-12">
+    <div class="col-md-7 col-xs-12 gallery">
         <div class="col-xs-12 text-center visible-xs">
             <h5 class="text-muted">All <?php echo urldecode($searchbox_query) ?> records </h5>
         </div>

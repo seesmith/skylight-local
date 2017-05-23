@@ -14,10 +14,12 @@ function disableScrollingWithMouseWheel() {
     map.setOptions({ scrollwheel: false });
 }
 
-$('body').on('mousedown', function(event) {
-    var clickedInsideMap = $(event.target).parents('#map').length > 0;
+if($('#map')[0]) {
+    $('body').on('mousedown', function (event) {
+        var clickedInsideMap = $(event.target).parents('#map').length > 0;
 
-    if(!clickedInsideMap) {
-        disableScrollingWithMouseWheel();
-    }
-});
+        if (!clickedInsideMap) {
+            disableScrollingWithMouseWheel();
+        }
+    });
+}

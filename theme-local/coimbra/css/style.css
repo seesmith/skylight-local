@@ -515,6 +515,9 @@ nav #overflow li a:hover {
 }
 @media screen and (min-width: 768px) {
   /*Sidebar*/
+  .list-group{
+    height: 100%;
+  }
   .list-group-item.active:hover a, .list-group-item.active:hover button{
     color: white;
   }
@@ -532,19 +535,30 @@ nav #overflow li a:hover {
     color: rgb(8, 68, 102);
     font-weight: bold;
   }
+  .list-group-item:nth-of-type(2){
+    padding: 0px;
+    height: calc(100% - 40px);
+  }
+  .sidebar{
+    min-height: calc(100vh - 50px);
+    margin-left: 0px;
+    padding: 0px;
+  }
   .sidebar-nav {
-    border-left: 2px solid rgb(240,240,240);
     z-index: 20;
     position: fixed;
     top: 50px;
-    height: 90vh;
+    width: inherit;
     background-color: white;
-    width: calc(41.6vw - 15px);
-    margin-top: 15px;
+    padding: 15px;
     -webkit-transition: all 0.5s ease;
     transition: all 0.5s ease;
     -webkit-transition: top 0.0s ease;
     transition: top 0.0s ease;
+  }
+  .map-view{
+    color: #e69817;
+    font-weight: bold;
   }
   /*Gallery container*/
   .result-info {

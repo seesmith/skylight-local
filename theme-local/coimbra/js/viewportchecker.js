@@ -34,14 +34,14 @@ markers = {};
 
                 var $obj = $(this);
                 var id = $obj.attr('class').split(/\s+/)[3];
-                if($obj.visible()){
-                    $obj.addClass(options.classToAdd);
-                    if (markers[id]){markers[id].setOpacity(1);}
+                if(!$obj.visible() && !map_mode){
+                    $obj.removeClass(options.classToAdd);
+                    if (markers[id]){markers[id].setOpacity(0);}
                     options.callbackFunction($obj);
                 }
                 else{
-                    $obj.removeClass(options.classToAdd);
-                    if (markers[id]){markers[id].setOpacity(0);}
+                    $obj.addClass(options.classToAdd);
+                    if (markers[id]){markers[id].setOpacity(1);}
                     options.callbackFunction($obj);
                 }
             });

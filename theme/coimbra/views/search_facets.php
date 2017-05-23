@@ -1,4 +1,4 @@
-<div class="col-md-5 hidden-sm hidden-xs">
+<div class="col-md-5 hidden-sm hidden-xs sidebar">
     <div class="sidebar-nav">
 
         <ul class="list-group">
@@ -16,6 +16,7 @@
                 }
                 ?>
                 records
+                <a class="pull-right map-view">Map view</a>
             </li>
             <li class="list-group-item">
                 <div id="map">
