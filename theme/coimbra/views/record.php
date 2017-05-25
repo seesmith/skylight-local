@@ -116,7 +116,7 @@ $jsonwidth = $jobj['width'];
                 $t_handle_id = preg_replace('/^.*\//', '',$t_handle);
                 $t_seq = $t_segments[4];
                 $t_uri = './record/' . $t_handle_id . '/' . $t_seq . '/' . $t_filename;
-                $LogoLink = '<a href="' . $institutionUri . '" title="Link to Institution" target="_blank"><img src = "' . $t_uri . '" class="uni-thumbnail" title="' . $record_title . '" /></a>';
+                $LogoLink = '<a href="' . $institutionUri . '" title="Link to Institution" target="_blank"><img src = "' . $t_uri . '" class="uni-thumbnail" /></a>';
 
                 echo $LogoLink;
             }
