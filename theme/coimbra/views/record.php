@@ -99,7 +99,7 @@ $jsonwidth = $jobj['width'];
                 $(window).bind("load", function() {
                     <?php
                     echo 'initMap(convertToCoordinates("' . $solr[$location][0] . '"));';
-                    $addLocation = $solr[$location][0] . '", "' . addslashes($title) . '", 0, "../theme/coimbra/images/pinpoint.png", 1';
+                    $addLocation = $solr[$location][0] . '", "' . addslashes($title) . '", 0, "../theme/coimbra/images/google-pinpoint.png", 1';
                     echo 'addLocation("' . $addLocation . ');';
                     ?>
                 });
