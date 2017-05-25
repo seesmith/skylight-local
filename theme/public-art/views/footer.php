@@ -23,8 +23,8 @@
         <script src="<?php echo base_url()?>assets/script/script.js"></script>
         <script src="<?php echo base_url(); ?>theme/<?php echo $this->config->item('skylight_theme'); ?>/js/record_image.js"></script>
         <script src="<?php echo base_url(); ?>theme/<?php echo $this->config->item('skylight_theme'); ?>/js/record_info.js"></script>
-        <script src="<?php echo base_url(); ?>theme/<?php echo $this->config->item('skylight_theme'); ?>/js/google_map.js"></script>
-        <script src="<?php echo base_url(); ?>theme/<?php echo $this->config->item('skylight_theme'); ?>/js/disable_map_scroll.js"></script>
+<!--        <script src="--><?php //echo base_url(); ?><!--theme/--><?php //echo $this->config->item('skylight_theme'); ?><!--/js/google_map.js"></script>-->
+<!--        <script src="--><?php //echo base_url(); ?><!--theme/--><?php //echo $this->config->item('skylight_theme'); ?><!--/js/disable_map_scroll.js"></script>-->
         <script src="<?php echo base_url(); ?>theme/<?php echo $this->config->item('skylight_theme'); ?>/js/home_page.js"></script>
         <script src="<?php echo base_url(); ?>theme/<?php echo $this->config->item('skylight_theme'); ?>/js/jquery.mCustomScrollbar.js"></script>
     </body>

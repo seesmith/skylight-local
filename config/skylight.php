@@ -12,7 +12,6 @@ $config['skylight_handle_prefixes'] = array(3 => "art", 11 => "mimed");
 //$config['skylight_solrbase'] = 'http://localhost:9125/solr/search/';
 $config['skylight_solrbase'] = 'http://collectionssolr.is.ed.ac.uk/search/';
 
-
 //DSpace handle server prefix
 $config['skylight_handle_prefix'] = '10683';
 
