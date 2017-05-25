@@ -58,7 +58,7 @@ $jsonwidth = $jobj['width'];
 <div class="record-info">
     <h1 class="itemtitle">
         <div class="backbtn">
-            <i class="fa fa-arrow-left" aria-hidden="true" type="button" value="Back to Search Results" onClick="history.go(-1);"></i>
+            <i class="fa fa-arrow-left" aria-hidden="true" type="button" value="Back to Search Results" title="Back to Search Results" onClick="history.go(-1);"></i>
         </div>
         <?php echo $title ?>
     </h1>

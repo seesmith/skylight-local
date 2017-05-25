@@ -731,10 +731,11 @@ nav #overflow li a:hover {
     margin-left: 40px;
     color: white;
     font-size: 14px;
-    content: "Back";
   }
   .record-info .itemtitle .backbtn:hover::after{
-    opacity: 0;
+    margin-left: 40px;
+    color: #ffffff;
+    font-size: 14px;
   }
   .record-info a{
     color: white;
@@ -747,8 +748,7 @@ nav #overflow li a:hover {
     width: 100%;
   }
   .record-info .itemtitle .backbtn:hover {
-    background: white;
-    color: black;
+    color: #e69817;
   }
   .record-info .description {
     height: calc(100% - 50px);
