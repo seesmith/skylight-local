@@ -8,6 +8,7 @@
             <div id="current-banner"></div>
             <div class="clearfix"></div>
         <div id="past-exhib-block">
+            <h1><a href="./comingsoon" alt="Future Exhibitions" title="Future Exhibitions">Future Exhibitions</a></h1>
             <h1><a href="./past" alt="Past Exhibitions" title="Past Exhibitions">Past Exhibitions</a>:</h1>
             <div class="jcarousel-wrapper">
                 <div class="jcarousel" data-jcarousel="true">
