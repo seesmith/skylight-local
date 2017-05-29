@@ -64,43 +64,43 @@ $jsonwidth = $jobj['width'];
     </h1>
     <div class="description">
         <?php
-            foreach($recorddisplay as $key) {
-                $element = $this->skylight_utilities->getField($key);
+        foreach($recorddisplay as $key) {
+            $element = $this->skylight_utilities->getField($key);
 
-                if(isset($solr[$element])) {
-                    echo '<div class="row"><span class="field">' . $key . '</span>';
-                    foreach($solr[$element] as $index => $metadatavalue) {
+            if(isset($solr[$element])) {
+                echo '<div class="row"><span class="field">' . $key . '</span>';
+                foreach($solr[$element] as $index => $metadatavalue) {
 
-                        if(in_array($key, $filters)) {
+                    if(in_array($key, $filters)) {
 
-                            $orig_filter = urlencode($metadatavalue);
-                            $lower_orig_filter = strtolower($metadatavalue);
-                            $lower_orig_filter = urlencode($lower_orig_filter);
+                        $orig_filter = urlencode($metadatavalue);
+                        $lower_orig_filter = strtolower($metadatavalue);
+                        $lower_orig_filter = urlencode($lower_orig_filter);
 
-                            echo '<a href="./search/*:*/' . $key . ':%22'.$lower_orig_filter.'%7C%7C%7C'.$orig_filter.'%22">'.$metadatavalue.'</a>';
+                        echo '<a href="./search/*:*/' . $key . ':%22'.$lower_orig_filter.'%7C%7C%7C'.$orig_filter.'%22">'.$metadatavalue.'</a>';
+                    }
+                    else {
+                        if (stripos($element, "uri") !== FALSE) {
+                            echo '<a href="' . $solr[$element][0] . '" title="URL Links for item" target="_blank">' . $solr[$element][0] . '</a>';
+
                         }
                         else {
-                            if (stripos($element, "uri") !== FALSE) {
-                                echo '<a href="' . $solr[$element][0] . '" title="URL Links for item" target="_blank">' . $solr[$element][0] . '</a>';
-
-                            }
-                            else {
-                                echo $solr[$element][0];
-                            }
+                            echo $solr[$element][0];
                         }
-
                     }
-                echo '</div>';
+
                 }
+                echo '</div>';
             }
+        }
         ?>
         <div id="map">
             <script>
                 $(window).bind("load", function() {
                     <?php
                     echo 'initMap(convertToCoordinates("' . $solr[$location][0] . '"));';
-                    $addLocation = $solr[$location][0] . '", "' . addslashes($title) . '", 0, "../theme/coimbra/images/google-pinpoint.png", 1';
-                    echo 'addLocation("' . $addLocation . ');';
+                    $location = $solr[$location][0] . '", "' . addslashes($title) . '", 0, "../theme/coimbra/images/pinpoint.png", 1';
+                    echo 'addLocation("' . $location . ');';
                     ?>
                 });
             </script>

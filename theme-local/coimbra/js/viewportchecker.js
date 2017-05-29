@@ -46,15 +46,8 @@ var markers = [];
                 }
             });
         };
-
-
         // Run checkelements on load and scroll
         $(window).scroll(this.checkElements);
         this.checkElements();
-
-        // On resize change the height var
-        $(window).resize(function(e){
-            windowHeight = e.currentTarget.innerHeight;
-        });
     };
 })(jQuery);

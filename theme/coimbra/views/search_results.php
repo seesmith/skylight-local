@@ -22,10 +22,10 @@ if ($base_parameters == "") {
         </div>
         <div id="gallery-container">
             <script>
-//                Will add locations to this array while iteration over the records
-                var locations = [];
+                $(window).bind("load", function() {
+                    initMap();
+                });
             </script>
-
             <?php
             foreach ($docs as $doc) {
                 $title = isset( $doc[$title_field][0] ) ? $doc[$title_field][0] : "Untitled";
@@ -45,28 +45,29 @@ if ($base_parameters == "") {
                 }
 
                 if(isset( $doc[$location][0])) {
-                    $coordinates = '' . $doc[$location][0] . '';
-                    echo '<script> locations.push({"location" : "' . $coordinates . '", "title" : "' . addslashes($title) . '", "index" : "' . $doc['id'] . '", "image_url" : "' . $coverImageURLMap . '"}); </script>';
+                    echo '
+                        <script>
+                            $(window).bind("load", function() {
+                                addLocation("', $doc[$location][0], '", "', addslashes($title), '", "', $doc['id'],
+                                            '", "', $coverImageURLMap, '");
+                            });
+                        </script>
+                    ';
                 }
 
                 ?>
 
                 <a href="./record/<?php echo $doc['id'] ?>" class="row record invisible <?php echo $doc['id'] ?>">
-<!--                    Title-->
+                    <!--                    Title-->
                     <h4 class="result-info record-title">
                         <?php echo $title;?>
                     </h4>
-<!--                    Thumbnail-->
+                    <!--                    Thumbnail-->
                     <?php echo $thumbnailLink; ?>
                 </a>
                 <?php
             } // end for each search result
             ?>
-            <script>
-                $(window).bind("load", function() {
-                    initMapAndAddLocations();
-                });
-            </script>
         </div>
     </div>
 

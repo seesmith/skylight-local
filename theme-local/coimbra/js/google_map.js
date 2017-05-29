@@ -352,13 +352,6 @@ function convertToCoordinates(ugly_coordinates){
     return {lat: latitude, lng: longitude};
 }
 
-function initMapAndAddLocations(){
-    initMap();
-    for (var i = 0; i < locations.length; i++) {
-        addLocation(locations[i]['location'], locations[i]['title'], locations[i]['index'], locations[i]['image_url']);
-    }
-}
-
 function centerMap(){
     var bounds = new google.maps.LatLngBounds();
     for (var key in markers) {

@@ -1,34 +1,47 @@
 <div class="content">
-    <div class="container">
-        <h2>About the University Collections</h2>
-        <p>
-            Special Collections include manuscripts and archives, rare books, photographs, printed and handwritten music,
-            architectural drawings, theses and microfilms. The collections relate to University of Edinburgh and its history,
-            and to Scotland and the wider world.
-        </p>
-        <p>
-            In total we have about 35 kilometres of historic material, much of which cannot be found anywhere else in the world.
-        </p>
-        <h2>University Collections Online</h2>
-        <p>
-            We aim to represent all of the University's rare and unique collections on this site, where possible there are links to websites where you can view the items within the collection.
-        </p>
-        <h2>Centre for Research Collections</h2>
-        <p>
-            Further information about the <a href="http://www.ed.ac.uk/schools-departments/information-services/library-museum-gallery/crc" title="Centre for Research Collections" target="_blank">Centre for Research Collections</a>.
-        </p>
-        <h2>Contact</h2>
-        <p>
-            Centre for Research Collections<br />
-            Edinburgh University Library,<br />
-            George Square,<br />
-            Edinburgh,<br />
-            EH8 9LJ<br />
-            Tel:: +44(0)131 650 8379<br />
-            Fax: +44(0)131 650 2922<br />
-            <a class="email" href="mailto:is-crc@ed.ac.uk">is-crc@ed.ac.uk</a><br />
+    <div class="about-container">
 
-        </p>
-        <br />
+        <div class="information-container col-xs-12 col-md-8 col-md-offset-2">
+            <b class="big-title">About the Exhibition</b>
+            <div class="content">
+                This online exhibition celebrates shared cultural heritage across the Coimbra Group of
+                European universities. To coincide with the June 2017 Coimbra Conference, hosted at the
+                University of Edinburgh, this is the first time that Collections from across the X (How many?)
+                member institutions have been brought together in this unique collaboration.
+                <br><br>
+                Over 70 objects have been selected that straddle thousands of miles of the continent and millions of years of its history.
+                From the stunning Augsburg Art Cabinet to a petrified mammoth tooth, these objects highlight
+                the rich cultural diversity and uniqueness of University collections around Europe.
+                Neil Lebeter, Coimbra Exhibition Curator, Library and University Collections, The University of Edinburgh
+            </div>
+        </div>
+
+        <div class="information-container col-xs-12 col-sm-6 col-md-4 col-md-offset-2">
+            <b class="big-title">The Coimbra Group Annual Conference and General Assembly - 7-9 June 2017</b>
+            <div class="content">
+                The theme of the conference is Universities and the Future of Cultural Heritage, inspired
+                by the Scottish Year of 2017, History, Heritage and Archaeology.
+                <br><br>
+                <b><a href="http://www.ed.ac.uk/global/coimbra-2017">Conference Details</a></b>
+            </div>
+        </div>
+
+        <div class="information-container col-xs-12 col-sm-6 col-md-4">
+            <b class="big-title">About the Coimbra Group</b>
+            <div class="content">
+                Founded in 1985 and formally constituted by Charter in 1987, the Coimbra Group is an association
+                of long-established European multidisciplinary universities of high international standard.
+                <br><br>
+                The Coimbra Group is committed to creating special academic and cultural ties in order to promote,
+                for the benefit of its members, internationalisation, academic collaboration, excellence in learning
+                and research, and service to society.
+                <br><br>
+                It is also the purpose of the Group to influence European educational policy and to develop best
+                practice through mutual exchange of experience.
+                <br><br>
+                <b>
+                    <a href="">More information on the Coimbra Group Website</a></b>
+            </div>
+        </div>
     </div>
 </div>
