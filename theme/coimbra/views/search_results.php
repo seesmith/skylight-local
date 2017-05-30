@@ -56,8 +56,7 @@ if ($base_parameters == "") {
                 }
 
                 ?>
-
-                <a href="./record/<?php echo $doc['id'] ?>" class="row record invisible <?php echo $doc['id'] ?>">
+                <a href="./record/<?php echo $doc['id'] ?>" class="<?php echo $doc['id'] ?> row record visible">
                     <!--                    Title-->
                     <h4 class="result-info record-title">
                         <?php echo $title;?>

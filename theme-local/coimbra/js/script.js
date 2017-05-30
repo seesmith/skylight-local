@@ -11,22 +11,6 @@ window.addEventListener('load',
         $('.cover-image-container').addClass("loaded");
         $('.record-info').addClass("showing");
 
-        // Starts the code that checks which images are visible
-        // Calling in a timeout in order to make sure that the images are ordered before checking for visibility
-        // No idea why the css does the ordering after the page load
-        // If the device has small height we just show the images because they might be taller than the screen
-        if($(window).height()>700) {
-            setTimeout(function () {
-                jQuery('.record').viewportChecker({
-                    classToAdd: 'visible', // Class to add to the elements when they are visible
-                    offset: 1
-                });
-            }, 2000);
-        }
-        else{
-            $(".row.record").removeClass("invisible").addClass("visible");
-        }
-
         // Refresh page on windows resize(there are bugs when a tablet goes from portrait to landscape)
         $(window).bind('resize', function(e)
         {
