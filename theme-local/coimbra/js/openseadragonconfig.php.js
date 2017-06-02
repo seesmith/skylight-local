@@ -6,14 +6,12 @@
 
     OpenSeadragon({
         id: "openseadragon",
-        prefixUrl: "assets/openseadragon/images/",
+        prefixUrl: "<?php echo base_url() ?>theme/coimbra/images/buttons/",
         toolbar: "toolbarDiv",
         zoomInButton: "zoom-in",
         zoomOutButton: "zoom-out",
         homeButton: "home",
-        fullPageButton: "full-page",
-        nextButton: "next",
-        previousButton: "previous",
+        fullPageButton: "full-screen",
         showNavigator: true,
         mouseNavEnabled: true,
 

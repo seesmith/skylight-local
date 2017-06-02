@@ -37,7 +37,10 @@
     }
 */
 
+@import url('https://fonts.googleapis.com/css?family=Muli');
+
 html, body {
+  font-family: 'Muli', sans-serif !important;
   padding: 0px;
   overflow-x: hidden;
 }
@@ -662,6 +665,36 @@ nav #overflow li a:hover {
         RECORD PAGE
 
 ------------------------*/
+#toolbarDiv {
+  position: absolute !important;
+  top: 0px;
+  left: 15px;
+  width: 100%;
+  z-index: 20;
+}
+#toolbarDiv h2 {
+  float: left;
+}
+#toolbarDiv #zoom-in {
+  height:50px;
+  width:50px;
+  background-image: url(../images/buttons/zoomin_rest.png);
+}
+#toolbarDiv #zoom-out {
+  height:50px;
+  width:50px;
+  background-image: url(../images/buttons/zoomout_rest.png);
+}
+#toolbarDiv #home {
+  height:50px;
+  width:50px;
+  background-image: url(../images/buttons/home_rest.png);
+}
+#toolbarDiv #full-screen {
+  height:50px;
+  width:50px;
+  background-image: url(../images/buttons/fullpage_rest.png);
+}
 @media screen and (min-width: 768px) {
   .cover-image-container {
     height: calc(100vh - 50px);
@@ -1010,8 +1043,6 @@ nav #overflow li a:hover {
         ABOUT
 
 ------------------------*/
-.about-container {
-}
 .information-container {
   padding: 15px;
   margin-top: 30px;
@@ -1042,4 +1073,22 @@ nav #overflow li a:hover {
     -moz-column-count: 2; /* Firefox */
     column-count: 2;
   }
+}
+/* ---------------------
+
+        INTRO
+
+------------------------*/
+@media screen and (max-width: 768px) {
+  .intro {
+    padding: 0px 15px 0px 15px;
+    text-align: left;
+  }
+}
+.intro {
+  text-align: justify;
+}
+.intro img {
+  width: 100%;
+  margin-top: 15px;
 }

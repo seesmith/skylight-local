@@ -12,14 +12,14 @@ window.addEventListener('load',
         $('.record-info').addClass("showing");
 
         // Refresh page on windows resize(there are bugs when a tablet goes from portrait to landscape)
-        $(window).bind('resize', function(e)
-        {
-            if (window.RT) clearTimeout(window.RT);
-            window.RT = setTimeout(function()
-            {
-                this.location.reload(false); /* false to get page from cache */
-            }, 100);
-        });
+        // $(window).bind('resize', function(e)
+        // {
+        //     if (window.RT) clearTimeout(window.RT);
+        //     window.RT = setTimeout(function()
+        //     {
+        //         this.location.reload(false); /* false to get page from cache */
+        //     }, 100);
+        // });
 
         // Setting body padding bottom dynamically because the footer has dynamic height
         $('body').css('padding-bottom', $('.footer').height());

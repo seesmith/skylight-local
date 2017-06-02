@@ -5,7 +5,9 @@ $id_field = $this->skylight_utilities->getField('ID');
 $title_field = $this->skylight_utilities->getField('Title');
 $coverImageName = $this->skylight_utilities->getField("Image File Name");
 $location = $this->skylight_utilities->getField("Institutional Map Reference");
+$image = $this->skylight_utilities->getField("Image URL");
 $imageServer = $this->config->item('skylight_image_server');
+
 
 $base_parameters = preg_replace("/[?&]sort_by=[_a-zA-Z+%20. ]+/", "", $base_parameters);
 if ($base_parameters == "") {
@@ -31,18 +33,19 @@ if ($base_parameters == "") {
                 $title = isset( $doc[$title_field][0] ) ? $doc[$title_field][0] : "Untitled";
 
                 //              Finding image
-                if(isset( $doc[$coverImageName][0] )) {
+                if(isset( $doc[$image][0] )){
+                    // Remove json.config from the end of the link
+                    $coverImageJSON = substr($doc[$image][0], 0, -10);
+                }
+                else if(isset( $doc[$coverImageName][0] )) {
                     $coverImageJSON = $imageServer . "/iiif/2/" . $doc[$coverImageName][0];
-                    $coverImageURL = $coverImageJSON . '/full/400,/0/default.jpg';
-                    $coverImageURLMap = $coverImageJSON . '/full/50,/0/default.jpg';
-                    $thumbnailLink = '<img class="img-responsive" src ="' . $coverImageURL . '" title="' . $title . '" />';
                 }
                 else{
                     $coverImageJSON = $imageServer . "/iiif/2/missing.jpg";
-                    $coverImageURL = $coverImageJSON . '/full/400,/0/default.jpg';
-                    $coverImageURLMap = $coverImageJSON . '/full/50,/0/default.jpg';
-                    $thumbnailLink = '<img class="img-responsive" src ="' . $coverImageURL . '"/>';
                 }
+                $coverImageURL = $coverImageJSON . '/full/400,/0/default.jpg';
+                $coverImageURLMap = $coverImageJSON . '/full/50,/0/default.jpg';
+                $thumbnailLink = '<img class="img-responsive" src ="' . $coverImageURL . '" title="' . $title . '" />';
 
                 if(isset( $doc[$location][0])) {
                     echo '
