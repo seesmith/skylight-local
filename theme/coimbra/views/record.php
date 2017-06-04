@@ -4,20 +4,29 @@
 $title = $this->skylight_utilities->getField("Title");
 $coverImageName = $this->skylight_utilities->getField("Image File Name");
 $logoImageName = $this->skylight_utilities->getField("Logo");
+$imageURI = $this->skylight_utilities->getField("Image URL");
 $location = $this->skylight_utilities->getField("Institutional Map Reference");
 $filters = array_keys($this->config->item("skylight_filters"));
 
 $institutionUri= $this->skylight_utilities->getField("Institutional Web URL");
 
 $title = isset( $solr[$title] ) ? $solr[$title][0] : "Untitled";
-$institutionUri= isset( $solr[$institutionUri] ) ? $solr[$institutionUri][0] : "";
+$institutionUri = isset( $solr[$institutionUri] ) ? $solr[$institutionUri][0] : "";
+$iiifJson = isset( $solr[$imageURI] ) ? $solr[$imageURI][0] : "";
 
 //Image setup
 $image_name = isset( $solr[$coverImageName][0] ) ? $solr[$coverImageName][0] : "missing.jpg";
 $imageServer = $this->config->item('skylight_image_server');
-$coverImageJSON = $imageServer . "/iiif/2/" . $image_name;
+
+if($iiifJson != "") {
+        $coverImageJSON = substr($iiifJson, 0, -10);
+        $json = file_get_contents($iiifJson);
+} else {
+        $coverImageJSON = $imageServer . "/iiif/2/" . $image_name;
+        $json = file_get_contents($coverImageJSON);
+}
+
 $coverImageURL = $coverImageJSON . '/full/full/0/default.jpg';
-$json =  file_get_contents($coverImageJSON);
 $jobj = json_decode($json, true);
 $error = json_last_error();
 $jsonheight = $jobj['height'];
