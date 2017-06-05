@@ -44,7 +44,6 @@
     <script src="<?php echo base_url()?>assets/jquery-ui-1.10.4/ui/minified/jquery-ui.min.js"></script>
     <script src="<?php echo base_url()?>assets/jquery-1.11.0/jcarousel/jquery.jcarousel.min.js"></script>
     <script src="<?php echo base_url()?>assets/bootstrap/js/bootstrap.min.js"></script>
-    <script src="<?php echo base_url(); ?>theme/<?php echo $this->config->item('skylight_theme'); ?>/js/pace.js"></script>
     <script src="http://www.google-analytics.com/analytics.js"></script>
 
     <!-- Google Analytics -->
