@@ -33,12 +33,11 @@ if ($base_parameters == "") {
                 $title = isset( $doc[$title_field][0] ) ? $doc[$title_field][0] : "Untitled";
 
                 //              Finding image
-                /* commenting out because of luna resizing issues 
-		if(isset( $doc[$image][0] )){
+                if(isset( $doc[$image][0] )){
                     // Remove json.config from the end of the link
                     $coverImageJSON = substr($doc[$image][0], 0, -10);
                 }
-                else*/ if(isset( $doc[$coverImageName][0] )) {
+                else if(isset( $doc[$coverImageName][0] )) {
                     $coverImageJSON = $imageServer . "/iiif/2/" . $doc[$coverImageName][0];
                 }
                 else{

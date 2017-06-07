@@ -6,8 +6,8 @@
             <div class="content">
                 This online exhibition celebrates shared cultural heritage across the Coimbra Group of
                 European universities. To coincide with the June 2017 Coimbra Conference, hosted at the
-                University of Edinburgh, this is the first time that Collections from across the X (How many?)
-                member institutions have been brought together in this unique collaboration.
+                University of Edinburgh, this is the first time that Collections from across the 35 member
+                institutions have been brought together in this unique collaboration.
                 <br><br>
                 Over 70 objects have been selected that straddle thousands of miles of the continent and millions of years of its history.
                 From the stunning Augsburg Art Cabinet to a petrified mammoth tooth, these objects highlight

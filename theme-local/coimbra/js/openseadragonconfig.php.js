@@ -6,7 +6,7 @@
 
     OpenSeadragon({
         id: "openseadragon",
-        prefixUrl: "../theme/coimbra/images/buttons/",
+        prefixUrl: "<?php echo base_url() ?>theme/coimbra/images/buttons/",
         toolbar: "toolbarDiv",
         zoomInButton: "zoom-in",
         zoomOutButton: "zoom-out",

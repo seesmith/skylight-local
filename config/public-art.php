@@ -18,7 +18,7 @@ $config['skylight_oaipmhallowed'] = true;
 // Container ID and the field used in solr index to store this ID. Used for restricting search/browse scope.
 
 $config['skylight_container_field'] = 'location.coll';
-$config['skylight_container_id'] = '61';
+$config['skylight_container_id'] = '64';
 $config['skylight_sitemap_type'] = 'internal';
 
 $config['skylight_fields'] = array(

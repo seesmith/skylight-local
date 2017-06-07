@@ -749,27 +749,26 @@ nav #overflow li a:hover {
     color: white;
     text-align: center;
     font-size: 20px;
+    -webkit-box-shadow: 0px 4px 10px -3px rgba(0,0,0,0.9);
+    -moz-box-shadow: 0px 4px 10px -3px rgba(0,0,0,0.9);
+    box-shadow: 0px 4px 10px -3px rgba(0,0,0,0.9);
   }
   .record-info .itemtitle .backbtn {
     position: absolute;
     top: 0px;
     left: 0px;
-    display: block;
-    height: 100%;
     width: 50px;
+    height: 50px;
     border: 0px;
     color: white;
     font-size: 25px;
+    z-index: 200;
   }
-  .record-info .itemtitle .backbtn::after {
-    margin-left: 40px;
-    color: white;
-    font-size: 14px;
-  }
-  .record-info .itemtitle .backbtn:hover::after {
-    margin-left: 40px;
-    color: #ffffff;
-    font-size: 14px;
+  .record-info .itemtitle .backbtn .fa-arrow-left{
+    height: 50px;
+    widht: 50px;
+    line-height: 50px;
+    margin-top: -10px;
   }
   .record-info a {
     color: white;

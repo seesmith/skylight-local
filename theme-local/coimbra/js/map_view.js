@@ -15,12 +15,14 @@ $(".map-view").click(function(){
 });
 
 function galleryMode(){
+    $('.map-view').text('Map view');
     $('.gallery').fadeIn(1000).addClass('col-md-7');
     $('.sidebar').removeClass('col-md-12').addClass('col-md-5');
     google.maps.event.trigger(map, "resize");
 }
 
 function mapMode(){
+    $('.map-view').text('Gallery view');
     $('.gallery').fadeOut(1000).removeClass('col-md-7');
     $('.sidebar').removeClass('col-md-5').addClass('col-md-12');
     google.maps.event.trigger(map, "resize");
@@ -30,5 +32,3 @@ function mapMode(){
         markers[key].setOpacity(1);
     }
 }
-
-

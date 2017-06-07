@@ -5,8 +5,10 @@
 
 var id;
 
-// Starts the script
-$(window).on('DOMContentLoaded load resize scroll', handler);
+// Starts the script unsless the screen is small and some images might be higher than the viewport
+if($(window).height()>600){
+    $(window).on('DOMContentLoaded load resize scroll', handler);
+}
 
 function handler(){
     $('.row.record').each(function () {
