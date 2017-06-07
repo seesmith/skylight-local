@@ -11,7 +11,6 @@
         zoomInButton: "zoom-in",
         zoomOutButton: "zoom-out",
         homeButton: "home",
-        fullPageButton: "full-screen",
         showNavigator: true,
         mouseNavEnabled: true,
 
@@ -36,3 +35,5 @@
     });
 
 })(jQuery);
+
+
