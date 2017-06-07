@@ -6,7 +6,7 @@
 var id;
 
 // Starts the script unsless the screen is small and some images might be higher than the viewport
-if($(window).height()>600){
+if($(window).height()>767){
     $(window).on('DOMContentLoaded load resize scroll', handler);
 }
 

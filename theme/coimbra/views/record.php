@@ -39,13 +39,12 @@ $jsonwidth = $jobj['width'];
     <h2 id="zoom-in"></h2>
     <h2 id="zoom-out"></h2>
     <h2 id="home"></h2>
-    <h2 id="full-screen"></h2>
+    <h2 class="visible-xs" onclick="$('html, body').animate({scrollTop: $('.record-info').offset().top-50},1000);">
+        <i class="fa fa-info" aria-hidden="true"></i>
+    </h2>
 </div>
 
 <div id="openseadragon" class="cover-image-container full-width">
-    <button class="show-info visible-xs" onclick="$('html, body').animate({scrollTop: $('.record-info').offset().top-50},1000);">
-        Show info
-    </button>
 </div>
 
 

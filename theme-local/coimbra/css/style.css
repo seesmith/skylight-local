@@ -120,7 +120,7 @@ body {
     display: none!important;
   }
   .navbar-nav {
-    float: none!important;
+    float: none !important;
     margin-top: 7.5px;
   }
   .navbar-nav>li {
@@ -139,8 +139,9 @@ body {
   padding: 12px;
 }
 #myNavbar .search input {
+  display: inline;
   width: 184px !important;
-  float: left;
+  float: left !important;
   border: 1px solid rgb(230,230,230);
   border-right: 0px;
   border-radius: 5px 0px 0px 5px;
@@ -159,6 +160,8 @@ body {
   border-right: 8px solid rgba(8, 68, 102, 0.9);
 }
 #myNavbar .search button {
+  display: inline;
+  float: left;
   border: 1px solid rgb(230,230,230);
   border-left: 0px;
   border-radius: 0px 5px 5px 0px;
@@ -674,6 +677,14 @@ nav #overflow li a:hover {
 }
 #toolbarDiv h2 {
   float: left;
+}
+#toolbarDiv i {
+  width: 50px;
+  height: 50px;
+  text-align: center;
+  line-height: 50px;
+  color: white;
+  background-color: rgba(0,0,0, 0.5);
 }
 #toolbarDiv #zoom-in {
   height:50px;
