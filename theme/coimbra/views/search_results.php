@@ -30,14 +30,17 @@ if ($base_parameters == "") {
             </script>
             <?php
             foreach ($docs as $doc) {
+
                 $title = isset( $doc[$title_field][0] ) ? $doc[$title_field][0] : "Untitled";
 
+                /* temporarily commenting out thumbnail from external IIIF because of LUNA
+                   scaling issues making the thumbnails look grainy
                 //              Finding image
                 if(isset( $doc[$image][0] )){
                     // Remove json.config from the end of the link
                     $coverImageJSON = substr($doc[$image][0], 0, -10);
                 }
-                else if(isset( $doc[$coverImageName][0] )) {
+                else */if(isset( $doc[$coverImageName][0] )) {
                     $coverImageJSON = $imageServer . "/iiif/2/" . $doc[$coverImageName][0];
                 }
                 else{

@@ -55,7 +55,7 @@ $jsonwidth = $jobj['width'];
     var imageWidth = <?php echo json_encode($jsonwidth); ?>;
 </script>
 <script src="<?php echo base_url(); ?>theme/<?php echo $this->config->item('skylight_theme'); ?>/js/openseadragon.min.js"></script>
-<script src="<?php echo base_url(); ?>theme/<?php echo $this->config->item('skylight_theme'); ?>/js/openseadragonconfig.php.js"></script>
+<script src="<?php echo base_url(); ?>theme/<?php echo $this->config->item('skylight_theme'); ?>/js/openseadragonconfig.js"></script>
 
 <!--Record information-->
 <div class="record-info">
