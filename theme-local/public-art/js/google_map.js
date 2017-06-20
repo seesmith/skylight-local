@@ -7,10 +7,16 @@
 
 var map;
 
-function initMap() {
-    map = new google.maps.Map(document.getElementById('map'), {
-        zoom: 4,
-        center:  {lat:51.509865, lng:-0.118092},
+function initMap(elementid, zoom, center){
+
+    // Setting the default value in the function definition doesn't work for some reason
+    elementid === undefined ? 'map' : elementid;
+    zoom === undefined ? 4 : zoom;
+    center === undefined ? {lat:51.509865, lng:-0.118092} : center;
+
+    map = new google.maps.Map(document.getElementById(elementid), {
+        zoom: zoom,
+        center:  center,
         scrollwheel: false,
         disableDefaultUI: true,
         scaleControl: true,

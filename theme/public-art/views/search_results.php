@@ -9,7 +9,7 @@ $location = $this->skylight_utilities->getField("Spatial Coverage");
 
 <div class="row">
     <div class="col-sm-9 col-xs-12">
-        <div id="gallery-container">
+        <div class="gallery-container">
             <?php
             foreach ($docs as $doc) {
 //               Setting up variables if they exist
@@ -37,7 +37,6 @@ $location = $this->skylight_utilities->getField("Spatial Coverage");
 //                End of for each
             }?>
         </div>
-
 <!--        Pagination  -->
         <div class="row">
             <div class="centered text-center">

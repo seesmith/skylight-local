@@ -53,8 +53,8 @@
 
 
     <!--    Scripts added by Kristiyan Tsvetanov-->
-<!--    <script src="--><?php //echo base_url(); ?><!--theme/--><?php //echo $this->config->item('skylight_theme'); ?><!--/js/visible.js"></script>-->
-<!--    <script src="--><?php //echo base_url(); ?><!--theme/--><?php //echo $this->config->item('skylight_theme'); ?><!--/js/viewportchecker.js"></script>-->
+    <script src="<?php echo base_url(); ?>theme/<?php echo $this->config->item('skylight_theme'); ?>/js/visible.js"></script>
+    <script src="<?php echo base_url(); ?>theme/<?php echo $this->config->item('skylight_theme'); ?>/js/viewportchecker.js"></script>
 
 
     <script src="http://www.google-analytics.com/analytics.js"></script>
@@ -116,17 +116,22 @@
 
             <div class="collapse navbar-collapse" id="myNavbar">
                 <ul class="nav navbar-nav">
-                    <li><a href="#">Home</a></li>
+                    <li class="active dropdown">
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="#">Home <span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">Organisation chart</a></li>
+                            <li><a href="#">Mission Statement</a></li>
+                            <li><a href="#">Members</a></li>
+                        </ul>
+                    </li>
                     <li><a href="#">Contact</a></li>
-                </ul>
-                <ul class="nav navbar-nav navbar-right">
                     <li class="search">
                         <form role="search" action="./redirect/" method="post">
 
                             <input id="uoe-search" type="text"
-                                   placeholder="Search..." name="q"
-                                   value="<?php if (isset($searchbox_query)) echo urldecode($searchbox_query); ?>"
-                                   id="q"/>
+                                       placeholder="Search..." name="q"
+                                       value="<?php if (isset($searchbox_query)) echo urldecode($searchbox_query); ?>"
+                                       id="q"/>
                             <button type="submit" name="submit_search" value="Search">
                                 <i class="fa fa-search" aria-hidden="true"></i>
                             </button>
