@@ -2,20 +2,19 @@
     <div class="content byEditor">
         <h1>Takedown Policy</h1>
 
-        <p>Publications on the <a href="http://scottishgovernmentyearbooks.ed.ac.uk" title="Scottish Government Yearbook Home">platform </a> make every effort to ensure that published content
+        <p>Collections on the platform <a href="http://collections.ed.ac.uk" title="University Collections Home">collections.ed.ac.uk</a> make every effort to ensure that published content
             does not infringe any person's rights, or applicable UK laws.</p>
 
         <p>However, if you believe that content, in any of the sites hosted on this platform, may be illegal, please
-            contact Dr. Michael Rosie, Director of the Institute of Governance, who will review the complaint and take appropriate
+            contact the Head of Special Collections &amp; Centre for Research Collections who will review the complaint and take appropriate
             action.</p>
 
-        <p>Sociology<br/>
-            School of Social and Political Science<br/>
-            University of Edinburgh<br/>
-            Room 1.01; 22 George Square<br/>
-            Edinburgh<br/>
-            UK EH8 9LF<br/>
-            Email: <a class="email" href="m.j.rosie@ed.ac.uk">m.j.rosie@ed.ac.uk</a><br/>
+        <p>Centre for Research Collections (Library & University Collections)<br/>
+            Main Library, George Square<br/>
+            Edinburgh, EH8 9LJ<br/>
+            Email: <a class="email" href="mailto:is-crc@ed.ac.uk">is-crc@ed.ac.uk</a><br/>
+
+        <p>Please note the Library is staffed 9-5pm Monday-Friday.</p>
 
         <p>
             <strong>Making a complaint</strong></p>
@@ -37,7 +36,7 @@
                 </ul>
             </li>
         </ul>
-        <strong>On receipt of your complaint, the Director of the Institute of Governance will:</strong><br/>
+        <strong>On receipt of your complaint, the Centre for Research Collections will:</strong><br/>
         <ol>
             <li>Make an initial assessment of its validity</li>
             <li>For all but spurious complaints, temporarily remove access to the item that is subject to complaint</li>
@@ -47,7 +46,7 @@
         </ol></p>
         <p><strong>Potential outcomes:</strong></p>
 
-        <p>When the Director of the Institute of Governance has verified the authenticity of your complaint and has been advised
+        <p>When the Head of Special Collections &amp; Centre for Research Collections has verified the authenticity of your complaint and has been advised
             that it is ostensibly legitimate, the file will be permanently removed from public access.<br/>
             <strong>OR</strong><br/>
             If the Legal Advisor confirms that it does not breach any law then the item will be reinstated.</p>
