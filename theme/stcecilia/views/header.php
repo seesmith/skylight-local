@@ -53,9 +53,9 @@
     <!---<script src="https://cdn.rawgit.com/mejackreed/Leaflet-IIIF/master/leaflet-iiif.js"></script>-->
     <script src="<?php echo base_url()?>assets/openseadragon/openseadragon.min.js"></script>
     <!-- Enable media queries for old IE -->
-    <!--[if lt IE 9]>-->
-    <script src="<?php echo base_url()?>assets/css3/css3-mediaqueries.js"></script>
-    <!--[endif]-->
+    <!--[if lt IE 9]>
+    <script src="http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>
+    [endif]-->
     <script>
 		$(".toggle_container").hide();
     
