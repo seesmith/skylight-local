@@ -47,7 +47,7 @@
         <h1 class="itemtitle">Department of Surgical Neurology, Western General Hospital</h1>
         <img src="<?php echo base_url()?>/theme/lhsacasenotes/images/LHB11-7-2d.gif" alt="Western General Hospital" class="img-responsive pull-right img-circle" />
 
-        <p>In 1960, Dott took charge of a new Department of Surgical Neurology at the Western General Hospital, Edinburgh
+        <p>Dott took charge of a new Department of Surgical Neurology at the Western General Hospital, Edinburgh
             (WGH). This new department brought together the facilities for the diagnosis, treatment and rehabilitation
             of surgical neurology patients that Dott had been working towards throughout his career.</p>
         <p>The Department of Surgical Neurology in Ward 20 of the RIE was firmly established as
