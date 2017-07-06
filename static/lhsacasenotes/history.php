@@ -18,7 +18,7 @@
             and a sound-proof viewing room which featured one-way glass for students to view operations), twenty beds,
             an ophthalmic room, staff-room and out-patient facilities.The modifications to the department were aided by
             a grant from the Rockefeller Foundation, a contribution from Dott and his circle, various individual
-            donations and funds from the Trust of Sir Alexander Grant, head of biscuit manufacturer McVitie and Price Ltd.</p>
+            donations and funds from the trust of Sir Alexander Grant, head of biscuit manufacturer McVitie and Price Ltd.</p>
 
         <p>During and after the Second World War, Ward 20 worked alongside the Brain Injuries’ Unit at Bangour General
             Hospital. On the opening of the new Department of Surgical Neurology in the Western General Hospital, Ward 20
