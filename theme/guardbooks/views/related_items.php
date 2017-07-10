@@ -1,8 +1,11 @@
-    <h4>Related Items</h4>
+<div class="col-md-3 col-sm-3 hidden-xs" >
 
-    <ul class="related">
+    <div class="sidebar-nav related-items">
+        <ul class="list-group">
+            <li class="list-group-item active">Related Items</li>
 
-        <?php
+
+            <?php
 
         // if there are related items
         if(count($related_items) > 0) {
