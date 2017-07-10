@@ -32,8 +32,8 @@
         <link rel="stylesheet" href="<?php echo base_url(); ?>assets/fancybox/source/jquery.fancybox.css?v=2.1.4" type="text/css" media="screen" />
         <link rel="stylesheet" href="<?php echo base_url(); ?>assets/fancybox/source/helpers/jquery.fancybox-buttons.css?v=1.0.5" type="text/css" media="screen" />
         <link rel="stylesheet" href="<?php echo base_url(); ?>assets/fancybox/source/helpers/jquery.fancybox-thumbs.css?v=1.0.7" type="text/css" media="screen" />
-        <link rel="stylesheet" href="http://releases.flowplayer.org/6.0.4/skin/minimalist.css">
-        <link rel="stylesheet" href="<?php echo base_url()?>assets/font-awesome/css/font-awesome.min.css">
+        <link rel="stylesheet" href="<?php echo base_url(); ?>assets/flowplayer-7.0.4/skin/skin.css">
+        <link rel="stylesheet" href="<?php echo base_url(); ?>assets/font-awesome/css/font-awesome.min.css">
 
         <!-- All JavaScript at the bottom, except for Modernizr which enables HTML5 elements & feature detects -->
         <script src="<?php echo base_url()?>assets/modernizr/modernizr-1.7.min.js"></script>
@@ -41,14 +41,14 @@
         <script src="<?php echo base_url()?>assets/jquery-ui-1.10.4/ui/minified/jquery-ui.min.js"></script>
         <script src="<?php echo base_url()?>assets/bootstrap/js/bootstrap.min.js"></script>
         <script src="<?php echo base_url()?>assets/jquery-1.11.0/jcarousel/jquery.jcarousel.min.js"></script>
-        <script src="http://www.google-analytics.com/analytics.js"></script>
+        <script src="<?php echo base_url()?>assets/google-analytics/analytics.js"></script>
 
         <!-- Google Analytics -->
         <script>
             (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
                 (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
                 m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-            })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+            })(window,document,'script','<?php echo base_url()?>assets/google-analytics/analytics.js','ga');
 
             ga('create', '<?php echo $ga_code ?>', 'auto');
             ga('send', 'pageview');
@@ -56,7 +56,7 @@
         </script>
         <!-- End Google Analytics -->
 
-        <script src="http://releases.flowplayer.org/6.0.4/flowplayer.min.js"></script>
+        <script src="<?php echo base_url(); ?>assets/flowplayer-7.0.4/flowplayer.min.js"></script>
 
         <!-- global options -->
         <script>

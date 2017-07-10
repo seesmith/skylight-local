@@ -18,7 +18,7 @@
             and a sound-proof viewing room which featured one-way glass for students to view operations), twenty beds,
             an ophthalmic room, staff-room and out-patient facilities.The modifications to the department were aided by
             a grant from the Rockefeller Foundation, a contribution from Dott and his circle, various individual
-            donations and funds from the Trust of Sir Alexander Grant, head of biscuit manufacturer McVitie and Price Ltd.</p>
+            donations and funds from the trust of Sir Alexander Grant, head of biscuit manufacturer McVitie and Price Ltd.</p>
 
         <p>During and after the Second World War, Ward 20 worked alongside the Brain Injuries’ Unit at Bangour General
             Hospital. On the opening of the new Department of Surgical Neurology in the Western General Hospital, Ward 20
@@ -47,7 +47,7 @@
         <h1 class="itemtitle">Department of Surgical Neurology, Western General Hospital</h1>
         <img src="<?php echo base_url()?>/theme/lhsacasenotes/images/LHB11-7-2d.gif" alt="Western General Hospital" class="img-responsive pull-right img-circle" />
 
-        <p>In 1960, Dott took charge of a new Department of Surgical Neurology at the Western General Hospital, Edinburgh
+        <p>Dott took charge of a new Department of Surgical Neurology at the Western General Hospital, Edinburgh
             (WGH). This new department brought together the facilities for the diagnosis, treatment and rehabilitation
             of surgical neurology patients that Dott had been working towards throughout his career.</p>
         <p>The Department of Surgical Neurology in Ward 20 of the RIE was firmly established as
