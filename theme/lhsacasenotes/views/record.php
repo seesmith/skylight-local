@@ -31,6 +31,15 @@ $bitstreamLinks = array();
     <div class="row full-metadata">
         <table class="table">
             <tbody>
+
+            <?php
+            if(isset($solr[$parent_id_field])) {
+                echo '<tr><th>Heirarchy</th><td>';
+                echo '<a href ="./record/' . $solr[$parent_id_field][0] .'/'. $solr[$parent_type_field][0] . '" > Parent Record </a>';
+                echo '</td><tr>';
+            }
+            ?>
+
             <?php $excludes = array("");
 
             foreach($recorddisplay as $key) {
