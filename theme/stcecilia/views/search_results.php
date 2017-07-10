@@ -26,13 +26,11 @@
             <div class="grid-sizer col-xs-3"></div>
             <?php
             $link_uri_field = $this->skylight_utilities->getField("ImageURI");
-            //$link_uri_field = '';
-            //$link_uri_field = 'http://images.is.ed.ac.uk/luna/servlet/iiif/UoEart~2~2~73511~166929/full/full/0/default.jpg';
 
             $content = true;
 
             try{
-                $content = @file_get_contents('http://images.is.ed.ac.uk/luna/images/favicon.ico',0,null,0,1);
+                $content = @file_get_contents('http://images.is.ed.ac.uk/luna/images/favicon.ico',0,null,0,1); //todo move to config
             } catch (Exception $e) {
                 // Handle exception
             }
@@ -57,30 +55,11 @@
                         }
                         else
                         {
-                            /*
-                            list($width, $height, $type, $imgText) = getimagesize($linkURI);
-                            $portrait = true;
-                            if ($width > $height) {
-                                $portrait = false;
-                            }
-                            if ($portrait) {
-                                $iiifurlsmall = str_replace('full/full/0/default.jpg', 'full/,266/0/default.jpg', $linkURI);
-                                //$iiifurlsmall = $linkURI.'full/,266/0/default.jpg';
-                            } else {
-                                $iiifurlsmall = str_replace('full/full/0/default.jpg', 'full/266,/0/default.jpg', $linkURI);
-                                //$iiifurlsmall = $linkURI.'full/266,/0/default.jpg';
-                            }
 
-
-                            list($width, $height, $type, $imgText) = getimagesize($linkURI);
-                            */
 
                             $linkURI = str_replace('full/full', 'full/!300,300', $linkURI);
                             $thumbnailLink = 'href="./record/' . $doc['id'] . '" title = "' . $doc[$title_field][0] . '"';
                             $thumbnailImg = '<img class="img-responsive record-thumbnail-search" src="' . $linkURI . '"  title="' . $doc[$title_field][0] . '" />';
-                            //$thumbnailImg = '<img class="img-responsive record-thumbnail-search" src="' . $linkURI . '"  title="' . $doc[$title_field][0] . '" '.  $imgText .'/>';
-                            //$thumbnailImg = '<img class="img-responsive record-thumbnail-search" src="' . $linkURI.'/full/full/0/default.jpg"  title="' . $doc[$title_field][0] . '" ' . $imgText . '/>';
-                            //$thumbnailImg = '<img class="img-responsive record-thumbnail-search" src="' . $iiifurlsmall.'"  title="' . $doc[$title_field][0] . '" ' . $imgText . '/>';
                         }
                     }
                     else

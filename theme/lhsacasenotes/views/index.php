@@ -13,14 +13,14 @@
         <p>
             Patient records are an invaluable way of bringing Edinburgh’s historic breakthroughs in medical treatment and
             care to light. As well as bound accounts of treatment (dating back to the eighteenth century), LHSA holds over one million
-            twentieth-century patient case notes in folders, making LHSA one of the largest medical archives in the UK.
+            twentieth-century patient case notes in folders in one of the largest medical archives in the UK.
             The majority of these cases (although by no means all) were written in the Royal Infirmary of Edinburgh.
             They cover both specific medical specialisms (from neurosurgery, respiratory disease and psychiatric care
             to orthopaedics and obstetrics) and more general medicine and surgery.
         </p>
         <p>
         In 2012, LHSA developed a methodology for cataloguing these modern archival case notes. Catalogues describe
-            individual cases for researchers whilst protecting the privacy of individual patients through careful
+            individual cases for researchers whilst protecting the privacy of patients through careful
             redaction of potentially identifying details. This resource acts as a gateway to these anonymised case note
             catalogues. It will guide you in using the catalogues for the first time, give context to key people,
             subjects and places, and will provide information for legitimate researchers on applying to access the
@@ -34,7 +34,7 @@
             gratefully acknowledged. Research Resources funding has enabled the
             cataloguing of Norman Dott’s neurosurgical case notes and those of the Royal Victoria Hospital, the Royal
             Victoria Dispensary for Diseases of the Chest, the Regional Hospital National X-ray Campaign and Southfield
-            Sanitorium. <a href="http://www.lhsa.lib.ed.ac.uk/projects/index.htm" target="_blank">More information about these projects.</a>
+            Sanitorium. <a href="http://www.lhsa.lib.ed.ac.uk/projects/Projects-WTProjects.htm" target="_blank">Find out more about these projects here.</a>
         </p>
         <img src="<?php echo base_url()?>/theme/lhsacasenotes/images/dott-index-image.gif" alt="Norman Dott Case Notes" class="img-responsive pull-right index-img" />
 
