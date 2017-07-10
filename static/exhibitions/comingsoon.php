@@ -4,7 +4,7 @@
         <h1>Future Exhibitions:</h1>
             <div>
                 <h2><a href="./highlandstohindustan" alt="Highlands to Hindustan" title="Highlands to Hindustan Information Page">Highlands to Hindustan: Indian Art from University of Edinburgh Collections</a></h2>
-                <p>28th July 2017 - 28th October 2017</p>
+                <p>28th July 2017 - 4th November 2017</p>
                 <a href="./highlandstohindustan" alt="Highlands to Hindustan" title="Highlands to Hindustan">
                 <div id="highlands-banner"></div>
                 </a>

@@ -32,9 +32,6 @@
 
     <!-- CSS: implied media="all" -->
     <link rel="stylesheet" href="<?php echo base_url(); ?>assets/bootstrap/css/bootstrap.min.css" type="text/css" media="screen" />
-    <link rel="stylesheet" href="<?php echo base_url(); ?>assets/fancybox/source/jquery.fancybox.css?v=2.1.4" type="text/css" media="screen" />
-    <link rel="stylesheet" href="<?php echo base_url(); ?>assets/fancybox/source/helpers/jquery.fancybox-buttons.css?v=1.0.5" type="text/css" media="screen" />
-    <link rel="stylesheet" href="<?php echo base_url(); ?>assets/fancybox/source/helpers/jquery.fancybox-thumbs.css?v=1.0.7" type="text/css" media="screen" />
     <link rel="stylesheet" href="http://releases.flowplayer.org/6.0.4/skin/minimalist.css">
     <link rel="stylesheet" href="<?php echo base_url()?>assets/font-awesome/css/font-awesome.min.css">
     <link rel="stylesheet" href="<?php echo base_url(); ?>theme/<?php echo $this->config->item('skylight_theme'); ?>/css/style.css">
@@ -47,14 +44,6 @@
     <script src="<?php echo base_url()?>assets/jquery-ui-1.10.4/ui/minified/jquery-ui.min.js"></script>
     <script src="<?php echo base_url()?>assets/jquery-1.11.0/jcarousel/jquery.jcarousel.min.js"></script>
     <script src="<?php echo base_url()?>assets/bootstrap/js/bootstrap.min.js"></script>
-    <script src="<?php echo base_url(); ?>theme/<?php echo $this->config->item('skylight_theme'); ?>/js/pace.js"></script>
-
-
-    <!--    Scripts added by Kristiyan Tsvetanov-->
-    <script src="<?php echo base_url(); ?>theme/<?php echo $this->config->item('skylight_theme'); ?>/js/visible.js"></script>
-    <script src="<?php echo base_url(); ?>theme/<?php echo $this->config->item('skylight_theme'); ?>/js/viewportchecker.js"></script>
-
-
     <script src="http://www.google-analytics.com/analytics.js"></script>
 
     <!-- Google Analytics -->
@@ -117,18 +106,18 @@
             <div class="collapse navbar-collapse" id="myNavbar">
                 <ul class="nav navbar-nav">
                     <li class="active dropdown"><a href="#">Home</a></li>
-                    <li><a href="#">Contact</a></li>
+                    <li><a href="./feedback">Feedback</a></li>
+                    <li><a href="./about">About</a></li>
+                    <li><a href="./intro">Intro</a></li>
                 </ul>
                 <ul class="nav navbar-nav navbar-right">
                     <li><a href="./search">All records</a></li>
                     <li class="search">
                         <form role="search" action="./redirect/" method="post">
-
                             <input id="uoe-search" type="text"
                                    placeholder="Search..." name="q"
                                    value="<?php if (isset($searchbox_query)) echo urldecode($searchbox_query); ?>"
-                                   id="q"/>
-                            <button type="submit" name="submit_search" value="Search">
+                                   id="q"/><button type="submit" name="submit_search" value="Search">
                                 <i class="fa fa-search" aria-hidden="true"></i>
                             </button>
                         </form>

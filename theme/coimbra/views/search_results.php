@@ -5,7 +5,9 @@ $id_field = $this->skylight_utilities->getField('ID');
 $title_field = $this->skylight_utilities->getField('Title');
 $coverImageName = $this->skylight_utilities->getField("Image File Name");
 $location = $this->skylight_utilities->getField("Institutional Map Reference");
+$image = $this->skylight_utilities->getField("Image URL");
 $imageServer = $this->config->item('skylight_image_server');
+
 
 $base_parameters = preg_replace("/[?&]sort_by=[_a-zA-Z+%20. ]+/", "", $base_parameters);
 if ($base_parameters == "") {
@@ -22,51 +24,55 @@ if ($base_parameters == "") {
         </div>
         <div id="gallery-container">
             <script>
-//                Will add locations to this array while iteration over the records
-                var locations = [];
+                $(window).bind("load", function() {
+                    initMap();
+                });
             </script>
-
             <?php
             foreach ($docs as $doc) {
+
                 $title = isset( $doc[$title_field][0] ) ? $doc[$title_field][0] : "Untitled";
 
+                /* temporarily commenting out thumbnail from external IIIF because of LUNA
+                   scaling issues making the thumbnails look grainy
                 //              Finding image
-                if(isset( $doc[$coverImageName][0] )) {
+                if(isset( $doc[$image][0] )){
+                    // Remove json.config from the end of the link
+                    $coverImageJSON = substr($doc[$image][0], 0, -10);
+                }
+                else */if(isset( $doc[$coverImageName][0] )) {
                     $coverImageJSON = $imageServer . "/iiif/2/" . $doc[$coverImageName][0];
-                    $coverImageURL = $coverImageJSON . '/full/400,/0/default.jpg';
-                    $coverImageURLMap = $coverImageJSON . '/full/50,/0/default.jpg';
-                    $thumbnailLink = '<img class="img-responsive" src ="' . $coverImageURL . '" title="' . $title . '" />';
                 }
                 else{
                     $coverImageJSON = $imageServer . "/iiif/2/missing.jpg";
-                    $coverImageURL = $coverImageJSON . '/full/400,/0/default.jpg';
-                    $coverImageURLMap = $coverImageJSON . '/full/50,/0/default.jpg';
-                    $thumbnailLink = '<img class="img-responsive" src ="' . $coverImageURL . '"/>';
                 }
+                $coverImageURL = $coverImageJSON . '/full/400,/0/default.jpg';
+                $coverImageURLMap = $coverImageJSON . '/full/50,/0/default.jpg';
+                $thumbnailLink = '<img class="img-responsive" src ="' . $coverImageURL . '" title="' . $title . '" />';
 
                 if(isset( $doc[$location][0])) {
-                    $coordinates = '' . $doc[$location][0] . '';
-                    echo '<script> locations.push({"location" : "' . $coordinates . '", "title" : "' . addslashes($title) . '", "index" : "' . $doc['id'] . '", "image_url" : "' . $coverImageURLMap . '"}); </script>';
+                    echo '
+                        <script>
+                            $(window).bind("load", function() {
+                                addLocation("', $doc[$location][0], '", "', addslashes($title), '", "', $doc['id'],
+                                            '", "', $coverImageURLMap, '");
+                            });
+                        </script>
+                    ';
                 }
 
                 ?>
-
-                <a href="./record/<?php echo $doc['id'] ?>" class="row record invisible <?php echo $doc['id'] ?>">
-<!--                    Title-->
+                <a href="./record/<?php echo $doc['id'] ?>" class="<?php echo $doc['id'] ?> row record visible">
+                    <!--                    Title-->
                     <h4 class="result-info record-title">
                         <?php echo $title;?>
                     </h4>
-<!--                    Thumbnail-->
+                    <!--                    Thumbnail-->
                     <?php echo $thumbnailLink; ?>
                 </a>
                 <?php
             } // end for each search result
             ?>
-            <script>
-                $(window).bind("load", function() {
-                    initMapAndAddLocations();
-                });
-            </script>
         </div>
     </div>
 

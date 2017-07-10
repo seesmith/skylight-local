@@ -91,9 +91,7 @@ for($i=0;$i<4;$i++){
 
     <h3 class="more-info" onclick="$.scrollify.next();">&#x1D55A;</h3>
 </section>
-<section class="section-divisor">
-
-</section>
+<section class="section-divisor hidden-sm hidden-xs"></section>
 
 <section class="info-view full-height-section scroll">
     <div class="record-info col-xs-12 col-md-5 col-md-offset-1">

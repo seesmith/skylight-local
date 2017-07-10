@@ -3,7 +3,7 @@
         <h1>Highlands to Hindustan: Indian Art from University of Edinburgh Collections</a></h1>
         <div id="highlands-banner"></div>
         <h2>About the Exhibition</h2>
-        <h3>Opening: 28th July 2017 | Where: Exhibition Gallery, Main Library, George Square | Closing: 28th October 2017 |
+        <h3>Opening: 28th July 2017 | Where: Exhibition Gallery, Main Library, George Square | Closing: 4th November 2017 |
             Curated by: Dr. Yuthika Sharma, Lecturer in Indian/South Asian Art, Edinburgh College of Art</h3>
         <p>
             The University of Edinburgh enjoys a long-standing
