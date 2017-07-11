@@ -98,6 +98,7 @@
     <body>
         <nav class="navbar navbar-default">
             <div class="container">
+                <div class="uoe-logo"></div>
                 <div class="navbar-header">
                     <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
                         <span class="icon-bar"></span>
@@ -119,7 +120,7 @@
             <div class="container">
 
                 <div class="header-normal">
-                    <div id="collection-title">Guard Books
+                    <div id="collection-title">Guardbook Catalogue
                     </div>
 
                     <div id="collection-search">

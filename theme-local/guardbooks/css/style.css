@@ -60,12 +60,22 @@ a:hover 						{ text-decoration: underline; color: #999; }
 header .container   { padding: 0;}
 .col-main			{ float: left; margin-right: 0; }
 
+/* header */
 .navbar             { margin-bottom: 0;}
 
 .navbar-default .navbar-nav > li > a:focus, .navbar-default .navbar-nav > li > a:hover { background-color: #a50034; color: #FFFFFF;  }
 
 .navbar-default     { background-color: #999; border: 0;  }
 
+.uoe-logo {
+    display: block;
+    width: 300px;
+    height: 72px;
+    float: left;
+    background: url(../images/logo-sml.png) no-repeat 0 0;
+    margin-right: 30px;
+    margin-top: 5px;
+}
 
 /* Common Containers & Subclasses ----------------------------------------------------------------------------------------*/
 
@@ -86,8 +96,13 @@ header .container   { padding: 0;}
 #collection-title a         { text-decoration: none; color: #a50034;}
 #collection-title a:hover   { text-decoration: none; color: #008046;}
 #collection-search          { float: right; }
+
 .search-box                 { width: 280px;}
 .sidebar-nav                { padding-top: 10px;  }
+
+.index-content{
+    padding-left: 0;
+}
 
 #menu                           { width: 940px; background-color: #EEEDE8; margin: 0 auto; height: 33px; }
 .menu-links li					{ display: inline; float: right; height: 33px; padding-left: 0; padding-right: 0; }
@@ -147,37 +162,8 @@ footer                          { padding-top: 10px; padding-bottom: 10px;}
 .footer-policies a:hover 						{ text-decoration: underline; color: #008046;}
 .footer-copyright                               { font-size: 11px;}
 
-.uoe-logo {
-    display: block;
-    width: 119px;
-    height: 88px;
-    float: left;
-    background: url(../images/UoELogo.gif) no-repeat 0 0;
-    margin-right: 30px;
-    margin-top: 5px;
-}
-
-.wellcome-logo {
-    display: block;
-    width: 120px;
-    height: 120px;
-    float: left;
-    background: url(../images/wellcome-logo-black.gif) no-repeat 0 0;
-    margin-right: 30px;
-}
-
 .index-img {
     padding-bottom: 20px;
-}
-
-
-.crc-logo {
-    display: block;
-    width: 135px;
-    height: 80px;
-    float: left;
-    background: url(../images/CRC_logo.gif) no-repeat 0 0;
-    margin-right: 30px;
 }
 
 /** images in text */
