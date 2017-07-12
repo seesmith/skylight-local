@@ -1,5 +1,5 @@
 <div class="content">
-    <div class="content byEditor">
+    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 byEditor">
         <h1>Takedown Policy</h1>
 
         <p>Collections on the platform <a href="http://collections.ed.ac.uk" title="University Collections Home">collections.ed.ac.uk</a> make every effort to ensure that published content

@@ -1,5 +1,5 @@
 <div class="content">
-    <div class="content byEditor">
+    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 byEditor">
         <h1>About the museum</h1>
 
         <h2>History</h2>
