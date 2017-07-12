@@ -5,7 +5,11 @@ $config['skylight_appname'] = 'guardbooks';
 $config['skylight_url_prefix'] = 'guardbooks';
 
 // set the base url and ga code
-if (strpos($_SERVER['HTTP_HOST'], "test") !== false) {
+if (strpos($_SERVER['HTTP_HOST'], "localhost") !== false) {
+    $config['skylight_ga_code'] = '';
+    $config['skylight_container_id'] = '47';
+}
+else if (strpos($_SERVER['HTTP_HOST'], "test") !== false) {
     $config['skylight_ga_code'] = 'UA-25737241-6';
     $config['skylight_container_id'] = '47';
 }

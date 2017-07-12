@@ -38,7 +38,6 @@
                 }
                 else {
             ?>
-
                 <em><?php echo $label ?></em>
                 <?php if($label != "Date") { ?>
                 <a href="<?php echo $base_search.$base_parameters.$sort.$field.'+asc' ?>">A-Z</a> |
@@ -52,21 +51,17 @@
 
     </div>
 
-
     <ul class="listing">
 
-       
-    <?php foreach ($docs as $index => $doc) {
-        ?>
-
+    <?php foreach ($docs as $index => $doc) {?>
 
         <?php
         $type = 'Unknown';
 
-        if(isset($doc[$type_field])) {
-                    $type = "media-" . strtolower(str_replace(' ','-',$doc[$type_field][0]));
-                }
-
+        if(isset($doc[$type_field]))
+        {
+            $type = "media-" . strtolower(str_replace(' ','-',$doc[$type_field][0]));
+        }
         ?>
 
     <li<?php if($index == 0) { echo ' class="first"'; } elseif($index == sizeof($docs) - 1) { echo ' class="last"'; } ?>>
@@ -74,16 +69,13 @@
 
         <div class = "iteminfo">
             <h3><a href="./record/<?php echo $doc['id']?>?highlight=<?php echo $query ?>"><?php echo $doc[$title_field][0]; ?></a></h3>
-
             <div class="tags">
-
 
         <?php if(array_key_exists($author_field,$doc)) { ?>
 
             <?php
 
             $num_authors = 0;
-
 
             foreach ($doc[$author_field] as $author) {
 
@@ -100,36 +92,21 @@
                     echo ' ';
                 }
             }
-
-
-            ?>
-        
-            <?php } ?>
+        } ?>
 
 
        <?php if(array_key_exists($date_field, $doc)) { ?>
             <span>
                 <?php
                 echo '(' . $doc[$date_field][0] . ')';
-          }
-                    //elseif(array_key_exists('dateIssuedyear', $doc)) {
-                   //     echo '( ' . $doc['dateIssuedyear'][0] . ')';
-                   // }
-
-                ?>
-                </span>
-
+            } ?>
+            </span>
 
         </div> <!-- close tags div -->
-            <?php if(isset($doc[$bitstream_field])) //&& $link_bitstream)
-            {
-
-                ?>
-
+            <?php if(isset($doc[$bitstream_field]))
+            { ?>
                 <div class="record-bitstreams">
-
                     <?php
-
                     $pdfcount =  0;
                     foreach($doc[$bitstream_field] as $bitstream)
                     {
@@ -153,28 +130,22 @@
                                 echo '<a href="' . $bitstreamLink . '" target= "_blank" class="downloadButton">Download  PDF</a>';
                             }
                         }
-
                     }
                     else
                     {
                         echo '<div class="record-bitstreams"><a href="./unavailable" title="Click here to find out why this book may be unavailable">Book unavailable</a></div>';
                     }
-
                     ?>
-
                 </div>
-
             <?php
             }
             else { ?>
 
                 <div class="record-bitstreams"><a href="./unavailable" title="Click here to find out why this paper may be unavailable">Paper unavailable</a></div>
-
             <?php } ?>
             <p><?php
-
-
-                echo 'Shelfmark: '.$doc[$shelfmark_field][0]; ?></p>
+                if (isset($doc[$shelfmark_field])) {
+                echo 'Shelfmark: '.$doc[$shelfmark_field][0]; }?></p>
 
         </div>
     </li>
