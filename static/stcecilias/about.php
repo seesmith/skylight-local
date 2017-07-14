@@ -21,5 +21,12 @@
             <a href="http://www.stcecilias.ed.ac.uk" title="Visit St Cecilia's Hall" target="_blank">St Cecilia's Hall</a></p>
 
     </div>
+
+    <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 byEditor">
+        <img src="<?php echo base_url()?>/theme/stcecilia/images/StCeciliasHall1a.jpg" alt="The Sypert Concert Room" class="img-responsive pull-left" />
+    </div>
+    <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 byEditor">
+        <img src="<?php echo base_url()?>/theme/stcecilia/images/StCeciliasHall10a.jpg" alt="St Cecilia's Hall, Musical Instruments Museum" class="img-responsive" />
+    </div>
 </div>
 </div>

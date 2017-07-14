@@ -1,7 +1,7 @@
 <div class="container-fluid">
     <div id="sch_banner">
         <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-            <img class="img-responsive sch-logo" alt="St_Cecilias_Hall_logo" src="<?php echo base_url(); ?>theme/stcecilia/images/Instrument-Collection-logo-1200.gif">
+            <img class="img-responsive sch-logo" alt="St_Cecilias_Hall_logo" src="<?php echo base_url(); ?>theme/stcecilia/images/Instrument-Collection-logo.gif">
         </div>
     </div>
     <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
