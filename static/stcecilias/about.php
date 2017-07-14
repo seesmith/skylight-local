@@ -1,8 +1,6 @@
-<div class="content">
+<div class="container-fluid">
     <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 byEditor">
         <h1>About the museum</h1>
-
-        <h2>History</h2>
 
         <p>Originally opened in 1763 , St Cecilia’s Hall is the oldest purpose-built concert hall in Scotland. It is the
             only place in the world where it is possible to hear eighteenth century music in an eighteenth century concert
@@ -17,16 +15,18 @@
             to offer more performances, enhance access by increasing the opening hours of the museum and provide new
             ways for more visitors to engage, participate and learn about its world-class collection of instruments.</p>
 
-        <p>The museum re-opened its doors to the public in May 2017. Find out more about visiting at the museum site
-            <a href="http://www.stcecilias.ed.ac.uk" title="Visit St Cecilia's Hall" target="_blank">St Cecilia's Hall</a></p>
+        <p>The museum re-opened its doors to the public in May 2017. Find out more about visiting the museum at the
+         <a href="http://www.stcecilias.ed.ac.uk" title="Visit St Cecilia's Hall" target="_blank">St Cecilia's Hall website</a>.</p>
 
     </div>
 
-    <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 byEditor">
+    <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
         <img src="<?php echo base_url()?>/theme/stcecilia/images/StCeciliasHall1a.jpg" alt="The Sypert Concert Room" class="img-responsive pull-left" />
     </div>
-    <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 byEditor">
-        <img src="<?php echo base_url()?>/theme/stcecilia/images/StCeciliasHall10a.jpg" alt="St Cecilia's Hall, Musical Instruments Museum" class="img-responsive" />
+    <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+        <img src="<?php echo base_url()?>/theme/stcecilia/images/StCeciliasHall10a.jpg" alt="St Cecilia's Hall, Musical Instruments Museum" class="img-responsive pull-left" />
     </div>
-</div>
+    <div class="clearfix"></div>
+    <div class="spacer"></div>
+    <div class="clearfix"></div>
 </div>

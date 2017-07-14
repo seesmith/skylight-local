@@ -1,7 +1,7 @@
 <div class="container-fluid">
     <div id="sch_banner">
         <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-            <img class="img-responsive sch-logo" alt="St_Cecilias_Hall_logo" src="<?php echo base_url(); ?>theme/stcecilia/images/Instrument-Collection-logo.gif">
+            <a href="./about" title="About St Cecilia's Hall"><img class="img-responsive sch-logo" alt="St_Cecilias_Hall_logo" src="<?php echo base_url(); ?>theme/stcecilia/images/Instrument-Collection-logo.gif"></a>
         </div>
     </div>
     <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
@@ -18,4 +18,7 @@
             <a href='./search/"Ethnographic+woodwind+grouping"'><div id="galleryethww" class="grid-item"><div class="gallery-title"><h4>Non-western Woodwind</h4></div></div></a>
         </div>
     </div>
+    <div class="clearfix"></div>
+    <div class="spacer"></div>
+    <div class="clearfix"></div>
 </div>
