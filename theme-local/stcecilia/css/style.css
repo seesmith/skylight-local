@@ -128,6 +128,10 @@ img.record-main-image-landscape {
     width: 100%;
 }
 
+.img-about {
+    padding-bottom: 15px;
+}
+
 div.resized-image img.record-main-image {
     height: 400px;
     width: 100%;

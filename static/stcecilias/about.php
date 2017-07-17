@@ -20,11 +20,23 @@
 
     </div>
 
-    <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
-        <img src="<?php echo base_url()?>/theme/stcecilia/images/StCeciliasHall1a.jpg" alt="The Sypert Concert Room" class="img-responsive pull-left" />
+    <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
+        <img src="<?php echo base_url()?>/theme/stcecilia/images/StCeciliasHall1a.jpg" title="The Sypert Concert Room, The Sypert Concert Room" alt="The Sypert Concert Room, The Sypert Concert Room" class="img-responsive pull-left img-about" />
     </div>
-    <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
-        <img src="<?php echo base_url()?>/theme/stcecilia/images/StCeciliasHall10a.jpg" alt="St Cecilia's Hall, Musical Instruments Museum" class="img-responsive pull-left" />
+    <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
+        <img src="<?php echo base_url()?>/theme/stcecilia/images/StCeciliasHall10a.jpg" title="St Cecilia's Hall, Musical Instruments Museum" alt="St Cecilia's Hall, Musical Instruments Museum" class="img-responsive pull-left img-about" />
+    </div>
+    <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
+        <img src="<?php echo base_url()?>/theme/stcecilia/images/0027122da.jpg" title="St Cecilia's Hall, Musical Instruments Museum, instrument performance" alt="St Cecilia's Hall, Musical Instruments Museum, instrument performance" class="img-responsive pull-left img-about" />
+    </div>
+    <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
+        <img src="<?php echo base_url()?>/theme/stcecilia/images/0143017d.jpg" title="St Cecilia's Hall, Musical Instruments Museum Entrance" alt="St Cecilia's Hall, Musical Instruments Museum Entrance" class="img-responsive pull-left img-about" />
+    </div>
+    <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
+        <img src="<?php echo base_url()?>/theme/stcecilia/images/0143033d.jpg" title="St Cecilia's Hall, The Sypert Concert Room" alt="St Cecilia's Hall, The Sypert Concert Room" class="img-responsive pull-left img-about" />
+    </div>
+    <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
+        <img src="<?php echo base_url()?>/theme/stcecilia/images/0143036d.jpg" title="St Cecilia's Hall, The Laigh Hall" alt="St Cecilia's Hall, The Laigh Hall" class="img-responsive pull-left img-about" />
     </div>
     <div class="clearfix"></div>
     <div class="spacer"></div>
