@@ -1,6 +1,6 @@
 <div class="container-fluid">
     <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 byEditor">
-        <h1>About the museum</h1>
+        <h1>About St Cecilia’s Hall</h1>
 
         <p>Originally opened in 1763 , St Cecilia’s Hall is the oldest purpose-built concert hall in Scotland. It is the
             only place in the world where it is possible to hear eighteenth century music in an eighteenth century concert
