@@ -145,17 +145,17 @@
         </div>
         <div class="col-lg-4 col-md-4 hidden-sm hidden-xs">
             <div class="navbar-right sch-link">
-                <a href="http://stcecilias.ed.ac.uk" title="Visit St Cecilia's Hall" target="_blank">Visit St Cecilia's Hall</a>
+                <a href="http://www.stcecilias.ed.ac.uk" title="Visit St Cecilia's Hall" target="_blank">Visit St Cecilia's Hall</a>
             </div>
         </div>
         <div class="hidden-lg hidden-md col-sm-3 hidden-xs">
             <div class="navbar-right sch-link sch-link-sm">
-                <a href="http://stcecilias.ed.ac.uk" title="Visit St Cecilia's Hall" target="_blank">St Cecilia's Hall</a>
+                <a href="http://www.stcecilias.ed.ac.uk" title="Visit St Cecilia's Hall" target="_blank">St Cecilia's Hall</a>
             </div>
         </div>
         <div class="hidden-lg hidden-md hidden-sm col-xs-5">
             <div class="navbar-right sch-link sch-link-xs">
-                <a href="http://stcecilias.ed.ac.uk" title="Visit St Cecilia's Hall" target="_blank">St Cecilia's Hall</a>
+                <a href="http://www.stcecilias.ed.ac.uk" title="Visit St Cecilia's Hall" target="_blank">St Cecilia's Hall</a>
             </div>
         </div>
     </nav><!-- end of header container -->

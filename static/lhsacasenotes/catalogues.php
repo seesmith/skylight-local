@@ -1,9 +1,10 @@
 <div class="col-md-9 col-sm-9 col-xs-12">
     <div class="content byEditor">
         <h1 class="itemtitle">How to use the catalogues</h1>
-            <p>LHSA’s anonymised case note catalogues are accessed from both these pages and a section of the University
+            <!--<p>LHSA’s anonymised case note catalogues are accessed from both these pages and a section of the University
                 of Edinburgh’s online archives catalogue, <a href="http://archives.collections.ed.ac.uk" target="_blank" title="Archives Online at Edinburgh">Archives Online.</a>
-            </p>
+            </p>-->
+        <p>You can access LHSA's case note catalogues from these pages.</p>
             <p>
                 <h3>Norman Dott’s Neurosurgical Case Notes (1920 – 1960)</h3>
                 There are four main groups (or series) of case notes created by Norman Dott:
@@ -19,14 +20,14 @@
         </p>
         <p>
             Different language is used in different parts of the case descriptions to make them as accessible as possible.
-            For example, medical conditions are described in modern clinical terms taken from the
+            Medical conditions are described in modern clinical terms taken from the
             <a href="https://www.nlm.nih.gov/mesh/MBrowser.html" title="MESH" target="_blank">Medical Subject Headings thesaurus (MeSH)</a>
              as ‘Subjects’, whereas medical conditions are expressed in terms from the case notes themselves in the
             ‘Scope and Contents’ part of the description. For example, a male patient might be described as suffering
             from ‘fainting’ in the text of the case notes (recorded in the ‘Scope and Contents’ part of the catalogue entry),
             but in the ‘Subject’ field, we would describe his condition as ‘Syncope’ (the modern medical term used for fainting).
         </p>
-        <p>From these pages, catalogues can be searched by subject, covering medical condition and general type of
+        <p>Catalogues can be searched by subject, covering medical condition and general type of
             treatment received, also visible in menus at the side of the screen. Clicking on a subject will take you to
             a list of catalogue entries which mention this condition or treatment. You can also search by mention of
             notable medical practitioners.
@@ -34,7 +35,7 @@
 
         <img src="<?php echo base_url()?>/theme/lhsacasenotes/images/confused_man.gif" alt="Confused Man" class="img-responsive pull-right img-rounded" />
 
-        <p>
+        <!--<p>
             In <a href="http://archives.collections.ed.ac.uk" target="_blank" title="Archives Online at Edinburgh">Archives Online.</a>,
             the catalogues can be searched by some of the key characteristics of the case notes that
             we have highlighted in each catalogue entry:
@@ -54,12 +55,12 @@
             search box, or by clicking on a medical condition inside the catalogue entry will bring up all cases
             recorded under these categories.</li>
         </ul>
-        </p>
+        </p>-->
         <p>
             In the public catalogues, there are certain aspects of the descriptions that have been removed to protect
             the anonymity of patients – these include the name of each patient and (in some cases) their occupation.
             We can reveal other details about each case, since it would be hard to identify the patient from those factors
-            – such as their age in years (rather than their birthdate) or whether they are male or female. Sometimes,
+            – such as their age in years (rather than their date of birth) or whether they are male or female. Sometimes,
             a form of information – such as medical condition – can be revealed in certain circumstances
             (the occurrence of a common type of brain tumour would not in itself identify someone), but not others
             (a rare, genetic condition might easily be linked to a particular individual).

@@ -5,11 +5,13 @@
         // in $config['skylight_searchresult_display']
 
         $title_field = $this->skylight_utilities->getField('Title');
-        $author_field = $this->skylight_utilities->getField('Creator');
-        $date_field = $this->skylight_utilities->getField('Date');
+        $author_field = $this->skylight_utilities->getField('Author');
         $type_field = $this->skylight_utilities->getField('Type');
-        $abstract_field = $this->skylight_utilities->getField('Agents');
-        $subject_field = $this->skylight_utilities->getField('Subject');
+        $bitstream_field = $this->skylight_utilities->getField('Bitstream');
+        $thumbnail_field = $this->skylight_utilities->getField('Thumbnail');
+        $date_field = $this->skylight_utilities->getField('Document Date');
+        $shelfmark_field = $this->skylight_utilities->getField('Shelfmark');
+
 
         $base_parameters = preg_replace("/[?&]sort_by=[_a-zA-Z+%20. ]+/","",$base_parameters);
         if($base_parameters == "") {
@@ -36,7 +38,6 @@
                 }
                 else {
             ?>
-
                 <em><?php echo $label ?></em>
                 <?php if($label != "Date") { ?>
                 <a href="<?php echo $base_search.$base_parameters.$sort.$field.'+asc' ?>">A-Z</a> |
@@ -45,23 +46,22 @@
                 <a href="<?php echo $base_search.$base_parameters.$sort.$field.'+desc' ?>">newest</a> |
                 <a href="<?php echo $base_search.$base_parameters.$sort.$field.'+asc' ?>">oldest</a>
           <?php } } } ?>
-
+            
         </span>
 
     </div>
 
-
     <ul class="listing">
 
+    <?php foreach ($docs as $index => $doc) {?>
 
-    <?php foreach ($docs as $index => $doc) {
-        ?>
         <?php
         $type = 'Unknown';
 
-        if(isset($doc[$type_field])) {
-                    $type = "media-" . strtolower(str_replace(' ','-',$doc[$type_field][0]));
-                }
+        if(isset($doc[$type_field]))
+        {
+            $type = "media-" . strtolower(str_replace(' ','-',$doc[$type_field][0]));
+        }
         ?>
 
     <li<?php if($index == 0) { echo ' class="first"'; } elseif($index == sizeof($docs) - 1) { echo ' class="last"'; } ?>>
@@ -71,11 +71,12 @@
             <h3><a href="./record/<?php echo $doc['id']?>?highlight=<?php echo $query ?>"><?php echo $doc[$title_field][0]; ?></a></h3>
             <div class="tags">
 
-
         <?php if(array_key_exists($author_field,$doc)) { ?>
 
             <?php
+
             $num_authors = 0;
+
             foreach ($doc[$author_field] as $author) {
 
                // test author linking
@@ -91,23 +92,20 @@
                     echo ' ';
                 }
             }
-         } ?>
+        } ?>
 
 
        <?php if(array_key_exists($date_field, $doc)) { ?>
             <span>
                 <?php
                 echo '(' . $doc[$date_field][0] . ')';
-          } ?>
-                </span>
-
+            } ?>
+            </span>
 
         </div> <!-- close tags div -->
-            <?php if(isset($doc[$bitstream_field])) //&& $link_bitstream)
-            {
-                ?>
+            <?php if(isset($doc[$bitstream_field]))
+            { ?>
                 <div class="record-bitstreams">
-
                     <?php
                     $pdfcount =  0;
                     foreach($doc[$bitstream_field] as $bitstream)
@@ -139,18 +137,22 @@
                     }
                     ?>
                 </div>
-
             <?php
             }
             else { ?>
+
                 <div class="record-bitstreams"><a href="./unavailable" title="Click here to find out why this paper may be unavailable">Paper unavailable</a></div>
             <?php } ?>
             <p><?php
-                echo 'Shelfmark: '.$doc[$shelfmark_field][0]; ?></p>
+                if (isset($doc[$shelfmark_field])) {
+                echo 'Shelfmark: '.$doc[$shelfmark_field][0]; }?></p>
+
         </div>
     </li>
         <?php }?>
     </ul>
+
+
     <div class="pagination">
        <?php echo $pagelinks ?>
     </div>
