@@ -20,7 +20,7 @@ $bitstreamLinks = array();
 
 <div class="col-md-9 col-sm-9 col-xs-12" xmlns="http://www.w3.org/1999/html">
     <div class="row">
-        <h1 class="itemtitle"><?php echo $record_title ?></h1>
+        <h1 class="itemtitle"><?php echo strip_tags($record_title) ?></h1>
     </div>
 
     <!--<div class="row">

@@ -9,7 +9,7 @@
             neurosurgery or neurorehabilitation. Dott worked in private practice at first, using his own consulting rooms and
             beds in a private nursing home in Edinburgh’s Great King Street, moving his surgical equipment in a taxi.</p>
         <p>In 1931, Dott was appointed Associate Neurological Surgeon at the Royal Infirmary of Edinburgh (RIE) and was
-            and given access to four post-operative beds for his patients in Wards 13 and 14 and use of the operating
+            given access to four post-operative beds for his patients in Wards 13 and 14 and use of the operating
             theatre by surgeon, Sir David Wilkie. This was the beginning of the Department of Surgical Neurology at the
             RIE, which was the first of its kind in Scotland. This move was followed in 1936 with the allocation of Ward
             20, located in the Infirmary clock tower, for Dott to set up his own department. However it wasn’t until 1938

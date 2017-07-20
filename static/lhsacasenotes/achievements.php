@@ -42,8 +42,8 @@
             intestine in the neonate; and wrote studies on the dislocation of the hip. No doubt due to his background in
             engineering, Norman Dott was also skilled in the development and improvement of surgical devices, designing
             his own instruments and equipment, including the "Dott Slow Occlusion Carotid Artery Clamp" in 1935. Other
-            designs included a fine needle holder used for anastomosing facial nerve in the depths of the cranium, a
-            headpiece for accurate positioning of the operation site facial surgery, a sterilisable gun for making and
+            designs included a fine needle holder used for anastomosing facial nerves in the depths of the cranium, a
+            headpiece for accurate positioning of the operation site for facial surgery, a sterilisable gun for making and
             delivering metal surgical clips, and malleable needles for passing ligatures round the necks of aneurysms.
             Dott also had strong interests in pain management and in developing facilities and techniques for post-operative
             rehabilitation.</p>

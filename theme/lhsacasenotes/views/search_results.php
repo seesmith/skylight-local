@@ -68,7 +68,7 @@ else {
     foreach ($docs as $index => $doc) {
         ?>
         <div class="row search-row">
-            <h3><a href="./record/<?php echo $doc['id']?>/<?php echo $doc['types'][0]?>"><?php echo $doc[$title_field]; ?></a></h3>
+            <h3><a href="./record/<?php echo $doc['id']?>/<?php echo $doc['types'][0]?>"><?php echo strip_tags($doc[$title_field]); ?></a></h3>
 
             <?php
             if (isset($doc["component_id"])) {
