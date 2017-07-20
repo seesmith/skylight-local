@@ -10,7 +10,7 @@
 
         <base href="<?php echo base_url() . index_page(); if (index_page() !== '') { echo '/'; } echo $this->config->item('skylight_url_prefix'); echo '/' ?>">
 
-        <title><?php echo $page_title; ?></title>
+        <title><?php echo strip_tags($page_title); ?></title>
 
         <link rel="pingback" href="<?php echo base_url() . index_page(); if (index_page() !== '') { echo '/'; } echo 'pingback'; ?>" />
 
@@ -22,7 +22,7 @@
 
         <meta name="description" content="">
         <meta name="author" content="">
-        <meta name="title" content="<?php echo $page_title; ?>">
+        <meta name="title" content=<?php echo $page_title; ?>>
 
         <!-- Mobile viewport optimized: j.mp/bplateviewport -->
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
