@@ -31,7 +31,7 @@
 
         <p>
         The support of the <a href="https://wellcome.ac.uk/" alt="Welcome Trust" target="_blank">Wellcome Trust</a> is
-            gratefully acknowledged. Research Resources funding has enabled the
+            gratefully acknowledged. Research Resources funding has enabled the ongoing
             cataloguing of Norman Dott’s neurosurgical case notes and those of the Royal Victoria Hospital, the Royal
             Victoria Dispensary for Diseases of the Chest, the Regional Hospital National X-ray Campaign and Southfield
             Sanitorium. <a href="http://www.lhsa.lib.ed.ac.uk/projects/Projects-WTProjects.htm" target="_blank">Find out more about these projects here.</a>
