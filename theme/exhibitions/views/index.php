@@ -4,7 +4,7 @@
                                    title="Highlands to Hindustan">Highlands to Hindustan: Indian Art from University of Edinburgh Collections
             </a>
         <h3>University of Edinburgh, Main Library, George Square<br/>
-            28th July 2017 t 4th November 2017, Monday - Saturday, 10:00 - 17:00</h3>
+            28th July 2017 to 4th November 2017, Monday - Saturday, 10:00 - 17:00</h3>
         <h3>Curated by: Dr. Yuthika Sharma, Lecturer in Indian/South Asian Art, Edinburgh College of Art</h3>
             <div id="highlands-banner"></div>
             <div class="clearfix"></div>
