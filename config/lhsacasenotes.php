@@ -27,7 +27,7 @@ $config['skylight_repository_version'] = '1';
 
 $config['skylight_theme'] = 'lhsacasenotes';
 
-$config['skylight_handle_prefix'] = '/repositories/2/';
+$config['skylight_handle_prefix'] = '/repositories/9/';
 
 $config['skylight_fullname'] = 'Lothian Health Service Archives: Medical Case Notes';
 
@@ -40,7 +40,7 @@ $config['skylight_oaipmhallowed'] = true;
 
 // Container ID and the field used in solr index to store this ID. Used for restricting search/browse scope.
 $config['skylight_container_id'] = array(
-    '"/repositories/2/resources/85257"', '"/repositories/2/resources/85826"');
+    '"/repositories/9/resources/85315"', '"/repositories/9/resources/85318"');
 $config['skylight_container_field'] = 'resource';
 $config['skylight_sitemap_type'] = 'external';
 
