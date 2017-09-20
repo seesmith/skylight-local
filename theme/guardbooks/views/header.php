@@ -4,13 +4,14 @@
 <!--[if IE 7 ]>    <html class="no-js ie7" lang="en"> <![endif]-->
 <!--[if IE 8 ]>    <html class="no-js ie8" lang="en"> <![endif]-->
 <!--[if (gte IE 9)|!(IE)]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+
 <head>
     <meta charset="utf-8">
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 
         <base href="<?php echo base_url() . index_page(); if (index_page() !== '') { echo '/'; } echo $this->config->item('skylight_url_prefix'); echo '/' ?>">
 
-        <title><?php echo $page_title; ?></title>
+        <title><?php echo $this->config->item('skylight_fullname');?><?php echo $page_title; ?></title>
 
         <link rel="pingback" href="<?php echo base_url() . index_page(); if (index_page() !== '') { echo '/'; } echo 'pingback'; ?>" />
 
@@ -18,10 +19,8 @@
         Remove this if you use the .htaccess -->
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 
-        <title><?php echo $this->config->item('skylight_fullname');?></title>
-        <meta name="description" content="">
-        <meta name="author" content="">
-        <meta name="title" content="<?php echo $page_title; ?>">
+        <meta name="author" content="University of Edinburgh">
+        <meta name="title" content='<?php echo $this->config->item('skylight_fullname');?> <?php echo $page_title; ?>'>
 
         <!-- Mobile viewport optimized: j.mp/bplateviewport -->
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -65,15 +64,6 @@
 
         </script>
         <!-- End Google Analytics -->
-
-        <script src="http://releases.flowplayer.org/6.0.4/flowplayer.min.js"></script>
-
-        <!-- global options -->
-        <script>
-            flowplayer.conf = {
-                analytics: "<?php echo $ga_code ?>"
-            };
-        </script>
 
     <?php if (isset($solr)) { ?><link rel="schema.DC" href="http://purl.org/dc/elements/1.1/" />
         <link rel="schema.DCTERMS" href="http://purl.org/dc/terms/" />
@@ -120,7 +110,7 @@
             <div class="container">
 
                 <div class="header-normal">
-                    <div id="collection-title">Guardbook Catalogue
+                    <div id="collection-title"><a href="<?php echo base_url()?>/guardbooks" title="Guardbook Catalogue Home"><?php echo $this->config->item('skylight_fullname');?></a>
                     </div>
 
                     <div id="collection-search">

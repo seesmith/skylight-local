@@ -7,7 +7,7 @@ $config['skylight_url_prefix'] = 'guardbooks';
 // set the base url and ga code
 if (strpos($_SERVER['HTTP_HOST'], "localhost") !== false) {
     $config['skylight_ga_code'] = '';
-    $config['skylight_container_id'] = '47';
+    $config['skylight_container_id'] = '67';
 }
 else if (strpos($_SERVER['HTTP_HOST'], "test") !== false) {
     $config['skylight_ga_code'] = 'UA-25737241-6';
@@ -17,6 +17,12 @@ else {
     $config['skylight_ga_code'] = 'UA-25737241-18';
     $config['skylight_container_id'] = '33';
 }
+
+// The platform and version of your repository.
+// Currently DSpace 1.7.1+ is the only supported repository
+$config['skylight_repository_type'] = 'dspace'; // Demo 'dspace'
+$config['skylight_repository_version'] = 'exams'; // Demo '171'
+
 
 $config['skylight_theme'] = 'guardbooks';
 
@@ -33,71 +39,36 @@ $config['skylight_container_field'] = 'location.coll';
 $config['skylight_sitemap_type'] = 'external';
 
 $config['skylight_fields'] = array('Title' => 'dc.title.en',
-    'Author' => 'dc.contributor.authorza.en',
-    'Pamphlet Author' => 'dc.creator.en',
     'Subject' => 'dc.subject.en',
-    'Doc Author' => 'dc.contributor.author.en',
-    'Type' => 'dc.type.en',
-    'Number of Pages' => 'dc.extent.noOfPages.en',
-    'Page Numbers' => 'dc.extent.pageNumbers.en',
-    'Date Scanned' => 'dc.date.created',
-    'Document Date' => 'dc.coverage.temporal',
     'Shelfmark' => 'dc.identifier.en',
-    'Pamphlet No' => 'dc.identifier.other.en',
-    'Pamphlet Title' => 'dc.title.alternative.en',
-    'Collection' => 'dc.relation.ispartof.en',
     'Bitstream' => 'dc.format.original.en',
     'Link' => 'dc.identifier.uri.en'
-
 );
 
 $config['skylight_date_filters'] = array();
-$config['skylight_filters'] = array('Author' => 'authorza_filter', 'Subject' => 'subject_filter', 'Collection' => 'collection_filter','Date' => 'datetemporal_filter');
+$config['skylight_filters'] = array('A-Z' => 'subject_filter');
 $config['skylight_filter_delimiter'] = ':';
 
 $config['skylight_meta_fields'] = array('Title' => 'dc.title.en',
-    'Author' => 'dc.contributor.authorza.en',
-    'Subject' => 'dc.subject',
-    'Date' => 'dc.date.issued',
-    'Type' => 'dc.type');
+    'Subject' => 'dc.subject');
 
 $config['skylight_recorddisplay'] = array('Title',
-    'Author' ,
-    'Pamphlet Author',
     'Subject',
-    'Type',
-    'Number of Pages',
-    'Page Numbers',
-    'Date Scanned',
-    'Document Date',
-    'Shelfmark',
-    'Pamphlet No' ,
-    'Pamphlet Title',
-    'Collection');
+    'Shelfmark');
 
-$config['skylight_searchresult_display'] = array('Title',
-    'Author' ,    'Subject',
-    'Type');
+$config['skylight_searchresult_display'] = array('Title', 'Subject',
+    'Shelfmark');
 
 $config['skylight_search_fields'] = array(
-    'Subject' => 'dc.subject',
-    'Type' => 'dc.type',
-    'Author' => 'dc.contributor.authorza.en',
-    'Collection' => 'dc.relation.ispartof.en',
+    'Subject' => 'dc.subject'
 );
 
-$config['skylight_sort_fields'] = array('Author' => 'dc.contributor.authorza_sort ',
-    'Title' => 'dc.title_sort',
-    'Date' => 'dc.date.issued_dt'
-);
+$config['skylight_sort_fields'] = array('Title' => 'dc.title_sort');
 
-$config['skylight_related_fields'] = array('Type' => 'dc.type.en', 'Author' => 'dc.contributor.authorza.en', 'Subject' => 'dc.subject.en', 'Title' => 'dc.title.en', );
+$config['skylight_related_fields'] = array('Subject' => 'dc.subject.en');
 
 $config['skylight_feed_fields'] = array('Title' => 'Title',
-    'Author' => 'Author',
-    'Subject' => 'Subject',
-    'Description' => 'Abstract',
-    'Date' => 'Date');
+    'Subject' => 'Subject');
 
 $config['skylight_results_per_page'] = 10;
 $config['skylight_share_buttons'] = false;
