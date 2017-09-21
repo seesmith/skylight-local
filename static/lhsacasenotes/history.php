@@ -20,7 +20,7 @@
             a grant from the Rockefeller Foundation, a contribution from Dott and his circle, various individual
             donations and funds from the trust of Sir Alexander Grant, head of biscuit manufacturer McVitie and Price Ltd.</p>
 
-        <p>During and after the Second World War, Ward 20 worked alongside the Brain Injuries’ Unit at Bangour General
+        <p>During and after the Second World War, Ward 20 worked alongside the Brain Injuries Unit at Bangour General
             Hospital. On the opening of the new Department of Surgical Neurology in the Western General Hospital, Ward 20
             became a specialist head injuries’ unit dealing with acute and out-patient care.</p>
 
