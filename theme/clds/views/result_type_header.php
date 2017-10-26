@@ -92,7 +92,7 @@ if (strpos($search_url, 'Header:%22archives%22') > 0)
 <?php } elseif (strpos($search_url, 'Header:%22art%22') > 0) { ?>
 
     <div class="results_header art_header">
-        <div class="results_text">The Art Collection contains over 5,000 items which reflect the history of the
+        <div class="results_text">The Art Collection contains over 10,000 items which reflect the history of the
             University, the city and Scotland and also supports world-leading research and teaching at Edinburgh. The
             collection comprises an astonishing range of objects, spanning two millennia and a multitude of artistic
             periods.
