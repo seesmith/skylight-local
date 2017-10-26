@@ -1,8 +1,8 @@
 <?php
 
-$config['skylight_appname'] = 'guardbooks';
+$config['skylight_appname'] = 'guardbook';
 
-$config['skylight_url_prefix'] = 'guardbooks';
+$config['skylight_url_prefix'] = 'guardbook';
 
 // set the base url and ga code
 if (strpos($_SERVER['HTTP_HOST'], "localhost") !== false) {
@@ -26,7 +26,7 @@ $config['skylight_repository_version'] = 'exams'; // Demo '171'
 
 $config['skylight_theme'] = 'guardbooks';
 
-$config['skylight_fullname'] = 'Guard Books';
+$config['skylight_fullname'] = 'Guardbook';
 
 $config['skylight_adminemail'] = 'lddt@mlist.is.ed.ac.uk';
 
