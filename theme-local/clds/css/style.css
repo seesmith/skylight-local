@@ -180,6 +180,36 @@ header				{ position: relative; width: 940px; height: 170px; background-color: #
 .social-links li a.wordpress-icon         { display: block; width: 33px; height: 33px; float: left; background: url(../images/wordpressicon.png) no-repeat 0px 0px;}
 .social-links li a.wordpress-icon:hover   { display: block; background: url(../images/wordpressicon2.png) no-repeat 0px 0px; }
 
+.barker-panorama a {
+    display:block; /* allow height and width to be specified - not needed if floated */
+    height:140px; /* match img */
+    width:940px; /* match img */
+    position:relative; /* so children of .pic-link can be positioned absolutely in relation it */
+    color: #005784;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 30px;
+    text-align: center;
+}
+
+.barker-panorama a:hover {
+    color:#ffffff; /* IE6 requires a change of some kind to occur on a:hover for hover to work on a.pic-link:hover span, otherwise this could be applied to that selector */
+}
+
+.barker-panorama img {
+    border:none;
+    vertical-align:bottom; /* removes the space reserved for text descenders */
+}
+
+.barker-panorama span {
+    position:absolute;
+    bottom:0;
+    left:0;
+    width:100%;
+    padding:3.7em 2%; /* 2% left + 2% right + 96% width = 100% */
+}
+
+
 
 #collection-title	            { display: block; width: 540px; height: 88px; padding: 10px 0; float: left; }
 .uoelogo                        { display: block; width: 119px; height: 88px; float: left; background: url(../images/UoELogo.gif) no-repeat 0px 0px;}
