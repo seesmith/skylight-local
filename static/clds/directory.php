@@ -1,0 +1,25 @@
+<div class="content">
+    <div class="content byEditor">
+        <h1>Directory of Collections</h1>
+        <p>
+            For the first time, the scale and variety of the collections held at the University of Edinburgh will be
+            captured in a single, fully illustrated volume. The Directory of Collections at the University of Edinburgh
+            presents a detailed and easily navigable guide to the main named heritage collections of the University,
+            introduced by a section on its most iconic items.<p>
+            <p>
+
+            The University holds one of the world's greatest collections, which has been growing since its foundation in
+            1582. It includes rare books, archives and manuscripts, art, historical musical instruments and a wide range
+            of other museum objects from geological specimens to anatomical models - in total, some 60 kilometres of
+            heritage material. They are curated by specialist staff across 45 different sites within the University and
+            are used for teaching, research and by the wider public community.
+        </p>
+
+        <object data="<?php echo base_url(); ?>theme/clds/pdfs/Directory_of_Collections_at_The_University_of_Edinburgh.pdf" type="application/pdf" width="920" height="928">
+            <p><span class="label">It appears you don't have a PDF plugin for this browser.</span>
+                <a href="<?php echo base_url(); ?>theme/clds/pdfs/Directory_of_Collections_at_The_University_of_Edinburgh.pdf">Click</a> to download.
+            </p>
+
+        </object>
+    </div>
+</div>

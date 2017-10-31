@@ -8,6 +8,8 @@
         <h3>Curated by: Dr. Yuthika Sharma, Lecturer in Indian/South Asian Art, Edinburgh College of Art</h3>
             <div id="highlands-banner"></div>
             <div class="clearfix"></div>
+            <h1>Coming Soon: <a href="./shoredagainstruin" alt="Shored Against Ruin"
+                                title="Shored Against Ruin">Shored Against Ruin: Fragments from the University of Edinburgh Collections</a></h1>
         <div id="past-exhib-block">
             <h1><a href="./past" alt="Past Exhibitions" title="Past Exhibitions">Past Exhibitions</a>:</h1>
             <div>

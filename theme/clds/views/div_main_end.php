@@ -12,7 +12,7 @@
                     <a href="http://www.ed.ac.uk/schools-departments/information-services/about/organisation/library-and-collections" target="_blank" class="luclogo" title="Library &amp; University Collections Home"></a>
                 </div>
                 <div class="footer-policies">
-                    <h3><a href="<?php echo base_url(); ?> "title="University Collections Home">University Collections</a></h3>
+                    <h3><a href="<?php echo base_url(); ?>" title="University Collections Home">University Collections</a></h3>
                     <p><a href="http://www.ed.ac.uk/about/website/privacy" title="Privacy and Cookies Link"  target="_blank">Privacy &amp; Cookies</a>
                         &nbsp;&nbsp;<a href="./takedown" title="Takedown Policy Link">Takedown Policy</a>
                         &nbsp;&nbsp;<a href="./licensing" title="Licensing and Copyright Link">Licensing &amp; Copyright</a>

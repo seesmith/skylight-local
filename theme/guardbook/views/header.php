@@ -110,7 +110,7 @@
             <div class="container">
 
                 <div class="header-normal">
-                    <div id="collection-title"><a href="<?php echo base_url()?>/guardbooks" title="Guardbook Catalogue Home"><?php echo $this->config->item('skylight_fullname');?></a>
+                    <div id="collection-title"><a href="<?php echo base_url()?>/guardbook" title="Guardbook Catalogue Home"><?php echo $this->config->item('skylight_fullname');?></a>
                     </div>
 
                     <div id="collection-search">
