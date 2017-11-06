@@ -119,8 +119,8 @@ h3.collection-link a:hover      { color: #A50034; text-decoration: underline; }
 
 p 								{ font-size: 13px; padding-bottom: 10px; }
 
-a, a:active, a:visited          { color: #333333; text-decoration: underline;}
-a:hover 						{ text-decoration: underline; color: #004F71; }
+a, a:active, a:visited          { color: #004F71; text-decoration: underline;}
+a:hover 						{ text-decoration: underline; color: #A50034; }
 
 input[type=text], input[type=password]				{
     border: 1px solid #bbbbbc; font-size: 13px; height: 28px; padding: 0 10px;
@@ -188,7 +188,7 @@ header				{ position: relative; width: 940px; height: 170px; background-color: #
     color: #004F71;
     text-transform: uppercase;
     font-weight: bold;
-    font-size: 30px;
+    font-size: 60px;
     text-align: center;
 }
 
@@ -206,7 +206,7 @@ header				{ position: relative; width: 940px; height: 170px; background-color: #
     bottom:0;
     left:0;
     width:100%;
-    padding:3.7em 2%; /* 2% left + 2% right + 96% width = 100% */
+    padding:1.7em 2%; /* 2% left + 2% right + 96% width = 100% */
 }
 
 
@@ -236,19 +236,19 @@ header				{ position: relative; width: 940px; height: 170px; background-color: #
 
 .thumbnail-strip                { max-width: 660px; display: block; }
 .thumbnail-tile                 { margin-top: 20px; margin-right: 20px; float: left; }
-.record-thumbnail               { max-width: 150px; max-height: 200px; border: solid 1px #093563; }
+.record-thumbnail               { max-width: 150px; max-height: 200px; border: solid 1px #004F71; }
 
 .record-bitstreams              { display: block; width: 660px; margin: 5px 0; }
 
 .main-image                     { max-width: 660px; display: block; }
-.record-main-image              { max-width: 660px; max-height: 800px; border: solid 1px #093563; }
+.record-main-image              { max-width: 660px; max-height: 800px; border: solid 1px #004F71; }
 
 audio[id^="audio-"]             { margin: 5px 0; }
 span[id^="video-"]              { margin: 5px 0; }
 
-.col-sidebar h4					{ color: #fff; line-height: 26px; font-weight: bold; text-transform: uppercase; font-size: 12px; margin-bottom: 17px; background: #333333; padding: 0 17px; }
+.col-sidebar h4					{ color: #fff; line-height: 26px; font-weight: bold; text-transform: uppercase; font-size: 12px; margin-bottom: 17px; background: #004F71; padding: 0 17px; }
 .col-sidebar h4 a 				{
-    background: #333333 url(../images/bg-arrows.png) no-repeat 100% -92px;
+    background: #004F71 url(../images/bg-arrows.png) no-repeat 100% -92px;
     display: block; color: #fff; text-decoration: none; width: 241px; padding-left: 17px; position: relative; left: -17px;
 }
 .col-sidebar h4 a:hover         { background: #A50034 url(../images/bg-arrows.png) no-repeat 100% -92px; }
@@ -268,7 +268,7 @@ span[id^="video-"]              { margin: 5px 0; }
 .col-sidebar ul.related li a 				{ padding: 0; }
 .col-sidebar ul.related li a:hover			{ background: none; text-decoration: underline; }
 .col-sidebar ul.related .tags				{ margin: 0 0 0 0; }
-.col-sidebar ul.related .tags a 			{ padding: 2px 5px; display: inline-block; background: #ffffff; color: #333333;}
+.col-sidebar ul.related .tags a 			{ padding: 2px 5px; display: inline-block; background: #ffffff; color: #004F71;}
 .col-sidebar ul.related .tags a:hover		{ text-decoration: none; background: #A50034; color: #fff; }
 
 .col-sidebar ul.related li a.related-record { font-size: 14px; padding-bottom: 5px;}
