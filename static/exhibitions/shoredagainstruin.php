@@ -1,6 +1,7 @@
 <div class="content">
     <div class="content byEditor">
-        <h1>Shored Against Ruin: Fragments from the University of Edinburgh Collections</h1><div id="shored-against-ruin-banner"></div>
+        <h1>Shored Against Ruin: Fragments from the University of Edinburgh Collections</h1>
+        <div id="sar-banner"></div>
         <h2>About the Exhibition</h2>
 
         <h3>Main Library Exhibition Gallery, Ground Floor 8 December 2017 – 24 February 2018 (Closed 23 December 2017
