@@ -1,7 +1,14 @@
 <div class="col-md-9 col-sm-9 col-xs-12 index-content">
 
-    <img src="<?php echo base_url()?>/theme/guardbooks/images/0028709c.jpg" alt="Guardbook example" class="img-responsive pull-right" />
+    <p class="float-right">
+        <a class="btn btn-default" href="<?php echo base_url(); ?>guardbook/search">View all volumes</a>
+
+    </p>
     <div class="clearfix"></div>
+    <img src="<?php echo base_url()?>/theme/guardbook/images/0028709c.jpg" alt="Guardbook example" class="img-responsive pull-right" />
+    <p>
+    <div class="clearfix"></div>
+    <br />
     <p>The Guardbook was the University Library's last catalogue on paper, before computerisation. It was closed to new
         additions and amendments in 1985, and the electronic catalogue now replaces it for all General Collections material.
         It remains a useful source of information for Rare Books, as retrospective conversion of the Guardbook's contents

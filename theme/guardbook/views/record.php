@@ -19,7 +19,7 @@ $bitstreamLinks = array();
 
         $element = $this->skylight_utilities->getField($key);
         if(isset($solr[$element])) {
-            echo '<tr><th>'.$key.'</th><td>';
+            echo '<tr><th>' .$key. '&nbsp; </th><td>';
             foreach($solr[$element] as $index => $metadatavalue) {
                 // if it's a facet search
                 // make it a clickable search link
@@ -76,13 +76,13 @@ if(isset($solr[$bitstream_field]) && $link_bitstream) {
             $bitstreamLink = $this->skylight_utilities->getBitstreamURI($bitstream);
             ?>
             <br>
-            <object class="pdfviewer" width="660" height="928" data="<?php echo $b_uri ?>"
+            <object class="pdfviewer" width="800" height="928" data="<?php echo $b_uri ?>"
                     type="application/pdf">
                 <p><span class="label">It appears you do not have a PDF plugin for this browser.</span>
                 </p>
             </object>
             <br>
-            Click <?php echo '<a href ="'.$bitstreamLink.'" target="_blank">'.$b_filename.'</a>' ?> to download.
+            Click <?php echo '<a href ="'.$bitstreamLink.'" target="_blank">'.$b_filename.'</a>'?> to download.
             (<span class="bitstream_size"><?php echo getBitstreamSize($bitstream); ?></span>)<br><br>
             <?php
         }
