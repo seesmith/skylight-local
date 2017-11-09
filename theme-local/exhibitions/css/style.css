@@ -153,7 +153,7 @@ header				{ position: relative; width: 940px;}
 .uoelogo            { display: block; width: 119px; height: 88px; float: left; background: url(../images/UoELogo.gif) no-repeat 0 0;}
 .exlogo             { display: block; width: 421px; height: 88px; float: left; background: url(../images/exhibitionsheader.gif) no-repeat 0 0;}
 .exlogo:hover       { display: block; background: url(../images/exhibitionsheader.gif) no-repeat 0 -88px; }
-.menulogo           { display: block; width: 240px; height: 168px; position: absolute; top: 10px; right: 0; background: url(../images/0078337d.gif) no-repeat 0 0;}
+.menulogo           { display: block; width: 240px; height: 174px; position: absolute; top: 10px; right: 0; background: url(../images/shored_against_ruin_rotated.gif) no-repeat 0 0;}
 .ie7 .menulogo 		{ top: -40px; }
 #view-all           { float: right;}
 
