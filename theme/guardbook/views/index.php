@@ -29,6 +29,8 @@
         century, which are now held in the University Archives. The earliest were handwritten in bound volumes. The first
         in a looseleaf format seems to date from about 1920; only parts of this survive. The Guardbook digitised here was started in the late 1950s."
     </p>
+    <div class="clearfix"></div>
+    <img src="<?php echo base_url()?>theme/guardbook/images/CC-BY_icon.png" alt="CC-BY attribution license" class="img-responsive" />
     <p>
         The PDFs are supplied under a Creative Commons CC-BY License: you may share and adapt for any purpose as long as attribution is given to the University of Edinburgh. Further information is available at <a href="http://creativecommons.org/licenses/by/4.0/" target="_blank">http://creativecommons.org/licenses/by/4.0/</a>
     <div id="ccby"><a href ="https://creativecommons.org/licenses/by/4.0/" target ="_blank" alt ="Creative Commons info" class ="ccbylogo"></a></div>

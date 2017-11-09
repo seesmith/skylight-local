@@ -90,6 +90,13 @@ if(isset($solr[$bitstream_field]) && $link_bitstream) {
     echo '</div>';
 }
     ?>
+    <div class="clearfix"></div>
+    <img src="<?php echo base_url()?>theme/guardbook/images/CC-BY_icon.png" alt="CC-BY attribution license" class="img-responsive" />
+    <p>
+        The PDFs are supplied under a Creative Commons CC-BY License: you may share and adapt for any purpose as long as attribution is given to the University of Edinburgh. Further information is available at <a href="http://creativecommons.org/licenses/by/4.0/" target="_blank">http://creativecommons.org/licenses/by/4.0/</a>
+    <div id="ccby"><a href ="https://creativecommons.org/licenses/by/4.0/" target ="_blank" alt ="Creative Commons info" class ="ccbylogo"></a></div>
+
+    </p>
     <div class="row">
         <button class="btn btn-info" onClick="history.go(-1);"><span class="glyphicon glyphicon-menu-left" aria-hidden="true"></span>Back to Search Results</button>
     </div>
