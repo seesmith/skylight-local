@@ -93,9 +93,11 @@ else {
                     {
                         foreach($doc[$bitstream_field] as $bitstream)
                         {
+                            $b_segments = explode("##", $bitstream);
+                            $b_filename = $b_segments[1];
                             if (strpos($bitstreamLink, ".pdf") > 0) {
                                 $bitstreamLink = $this->skylight_utilities->getBitstreamURI($bitstream);
-                                echo '<a href="' . $bitstreamLink . '" target= "_blank" class="downloadButton">Download  PDF</a>';
+                                echo '<a href="' . $bitstreamLink . '" target= "_blank" class="downloadButton">Download ' . $b_filename . ' ('.  getBitstreamSize($bitstream) .')</a>';
                             }
                         }
                     }

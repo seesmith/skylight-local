@@ -2,7 +2,7 @@
     <div class="content byEditor">
         <h1>Directory of Collections</h1>
         <p>
-            For the first time, the scale and variety of the collections held at the University of Edinburgh will be
+            For the first time, the scale and variety of the collections held at the University of Edinburgh have been
             captured in a single, fully illustrated volume. The Directory of Collections at the University of Edinburgh
             presents a detailed and easily navigable guide to the main named heritage collections of the University,
             introduced by a section on its most iconic items.<p>
@@ -15,9 +15,11 @@
             are used for teaching, research and by the wider public community.
         </p>
 
-        <object data="<?php echo base_url(); ?>theme/clds/pdfs/Directory_of_Collections_at_The_University_of_Edinburgh.pdf" type="application/pdf" width="920" height="928">
+        <p>Directory of Collections, Copyright &copy; The University of Edinburgh, 2016</p>
+
+        <object data="<?php echo base_url(); ?>theme/clds/pdfs/Directory_of_Collections_at_The_University_of_Edinburgh_redux2.pdf" type="application/pdf" width="920" height="928">
             <p><span class="label">It appears you don't have a PDF plugin for this browser.</span>
-                <a href="<?php echo base_url(); ?>theme/clds/pdfs/Directory_of_Collections_at_The_University_of_Edinburgh.pdf">Click</a> to download.
+                <a href="<?php echo base_url(); ?>theme/clds/pdfs/Directory_of_Collections_at_The_University_of_Edinburgh_redux2.pdf">Click</a> to download (15.7 MB).
             </p>
 
         </object>

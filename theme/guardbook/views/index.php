@@ -1,7 +1,14 @@
 <div class="col-md-9 col-sm-9 col-xs-12 index-content">
 
-    <img src="<?php echo base_url()?>/theme/guardbooks/images/0028709c.jpg" alt="Guardbook example" class="img-responsive pull-right" />
+    <p class="float-right">
+        <a class="btn btn-default" href="<?php echo base_url(); ?>guardbook/search">View all volumes</a>
+
+    </p>
     <div class="clearfix"></div>
+    <img src="<?php echo base_url()?>/theme/guardbook/images/0028709c.jpg" alt="Guardbook example" class="img-responsive pull-right" />
+    <p>
+    <div class="clearfix"></div>
+    <br />
     <p>The Guardbook was the University Library's last catalogue on paper, before computerisation. It was closed to new
         additions and amendments in 1985, and the electronic catalogue now replaces it for all General Collections material.
         It remains a useful source of information for Rare Books, as retrospective conversion of the Guardbook's contents
@@ -22,6 +29,8 @@
         century, which are now held in the University Archives. The earliest were handwritten in bound volumes. The first
         in a looseleaf format seems to date from about 1920; only parts of this survive. The Guardbook digitised here was started in the late 1950s."
     </p>
+    <div class="clearfix"></div>
+    <img src="<?php echo base_url()?>theme/guardbook/images/CC-BY_icon.png" alt="CC-BY attribution license" class="img-responsive" />
     <p>
         The PDFs are supplied under a Creative Commons CC-BY License: you may share and adapt for any purpose as long as attribution is given to the University of Edinburgh. Further information is available at <a href="http://creativecommons.org/licenses/by/4.0/" target="_blank">http://creativecommons.org/licenses/by/4.0/</a>
     <div id="ccby"><a href ="https://creativecommons.org/licenses/by/4.0/" target ="_blank" alt ="Creative Commons info" class ="ccbylogo"></a></div>

@@ -66,6 +66,13 @@
     <script type='text/javascript'>
         $('.item').eq(Math.floor((Math.random() * $('.item').length))).addClass("active");
     </script>
+    <div class="barker-panorama">
+        <a href="./directory" class="caption" title="View the University of Edinburgh Collections Directory">
+            <span>Directory of Collections</span>
+            <img src="<?php echo base_url(); ?>theme/<?php echo $this->config->item('skylight_theme'); ?>/images/0016491cropped.jpg" title="Robert Barker, Panorama of Edinburgh, 1792" alt="Robert Barker, Panorama of Edinburgh, 1792" width="940px" height="140px">
+         </a>
+
+    </div>
 
     <!-- wrapper for tiles -->
     <div class="tiles-wrapper">
