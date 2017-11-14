@@ -17,7 +17,7 @@
         <p>
 
             You can purchase hardback and paperback copies of the Directory of the Collections, published by Third
-            Millennium, at the Centre for Research Collections and the University of Edinburgh Visitor Centre, as well as <a href="https://tmbooks.com/directory-of-collections-at-the-university-of-edinburgh.html" title="External link to Third Millenium Shop">online</a>.
+            Millennium, at the Centre for Research Collections and the University of Edinburgh Visitor Centre, as well as <a href="https://tmbooks.com/directory-of-collections-at-the-university-of-edinburgh.html" title="External link to Third Millenium Shop" target="_blank">online</a>.
         </p>
 
         <p>Directory of Collections, Copyright &copy; The University of Edinburgh, 2016</p>

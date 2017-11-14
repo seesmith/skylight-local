@@ -7,7 +7,7 @@
                 <a href="http://images.is.ed.ac.uk/" title="University of Edinburgh Image Collections" class="images" target="_blank">Images</a>
                 <a href="<?php echo base_url(); ?>calendars" title="University of Edinburgh Calendars" class="calendars ">Calendars</a>
                 <a href="<?php echo base_url(); ?>alumni" title="University of Edinburgh Historical Alumni" class="alumni">Alumni</a>
-                <a href="<?php echo base_url(); ?>guardbook" title="University of Edinburgh Guardbook" class="guardbook">Guardbook</a>
+                <a href="<?php echo base_url(); ?>guardbook" title="University of Edinburgh Guardbook" class="guardbook last">Guardbook</a>
 
             </div>
             <div class="footer-disclaimer">
