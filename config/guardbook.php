@@ -24,7 +24,7 @@ $config['skylight_repository_type'] = 'dspace'; // Demo 'dspace'
 $config['skylight_repository_version'] = 'exams'; // Demo '171'
 
 
-$config['skylight_theme'] = 'guardbooks';
+$config['skylight_theme'] = 'guardbook';
 
 $config['skylight_fullname'] = 'Guardbook';
 
