@@ -276,7 +276,7 @@ span[id^="video-"]              { margin: 5px 0; }
 footer                  { display: block; padding-bottom: 20px; width: 100%; background-color: #fff; }
 
 .footer-links			{ display: block; margin-bottom: 15px; padding-top: 10px; padding-bottom: 10px; text-align: center; border-top: 1px solid #333; border-bottom: 1px solid #333; width: 100%;}
-.footer-links a 		{ font-size: 10px; text-transform: uppercase; text-decoration: none; color: #AAA79E !important; font-weight: bold; border-right: 1px solid #cecece; padding-right: 15px; margin-right: 10px; }
+.footer-links a 		{ font-size: 12px; text-transform: uppercase; text-decoration: none; color: #AAA79E !important; font-weight: bold; border-right: 1px solid #cecece; padding-right: 15px; margin-right: 10px; }
 .footer-links a.last	{ border: none; }
 .footer-links a:hover	{ text-decoration: underline; }
 
@@ -286,6 +286,8 @@ footer                  { display: block; padding-bottom: 20px; width: 100%; bac
 .footer-links a.exhibitions, .exhibitions:hover     { color: #000000 !important; }
 .footer-links a.calendars, .calendars:hover         { color: #990066 !important; }
 .footer-links a.images, .images:hover               { color: #004F71 !important; }
+.footer-links a.alumni, .alumni:hover               { color: #EB0955 !important; }
+.footer-links a.guardbook, .guardbook:hover         { color: #008046 !important; }
 
 .footer-disclaimer      { display: block; width: 625px; margin: auto; height: 70px;}
 
