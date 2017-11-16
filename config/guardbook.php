@@ -11,11 +11,11 @@ if (strpos($_SERVER['HTTP_HOST'], "localhost") !== false) {
 }
 else if (strpos($_SERVER['HTTP_HOST'], "test") !== false) {
     $config['skylight_ga_code'] = 'UA-25737241-6';
-    $config['skylight_container_id'] = '47';
+    $config['skylight_container_id'] = '67';
 }
 else {
     $config['skylight_ga_code'] = 'UA-25737241-18';
-    $config['skylight_container_id'] = '33';
+    $config['skylight_container_id'] = '51';
 }
 
 // The platform and version of your repository.
