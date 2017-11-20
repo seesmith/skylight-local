@@ -18,7 +18,7 @@ else if (strpos($_SERVER['HTTP_HOST'], "test") !== false) {
 }
 else {
     $config['skylight_ga_code'] = 'UA-25737241-9';
-    $config['skylight_solrbase'] = 'http://lac-repo-test14.is.ed.ac.uk:8090/';
+    $config['skylight_solrbase'] = 'http://lac-repo-live14.is.ed.ac.uk:8090/';
     $config['skylight_link_url'] = 'http://archives.collections.ed.ac.uk';
 }
 
@@ -27,7 +27,7 @@ $config['skylight_repository_version'] = '1';
 
 $config['skylight_theme'] = 'lhsacasenotes';
 
-$config['skylight_handle_prefix'] = '/repositories/9/';
+$config['skylight_handle_prefix'] = '/repositories/13/';
 
 $config['skylight_fullname'] = 'Lothian Health Service Archives: Medical Case Notes';
 
