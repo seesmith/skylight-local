@@ -1,3 +1,4 @@
+<div class="container">
     <h4>Related Items</h4>
 
     <ul class="related">
@@ -33,3 +34,4 @@
 
         <?php }?>
     </ul>
+</div>

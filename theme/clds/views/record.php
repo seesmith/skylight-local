@@ -1,3 +1,5 @@
+<div class="container">
+
 <?php
 
 $subject_field = $this->skylight_utilities->getField("Subject");
@@ -358,6 +360,4 @@ else if (isset($solr[$external_uri_field][0])) {
         ?>
 
         <input type="button" value="Back to Search Results" class="backbtn" onClick="history.go(-1);">
-
-
-
+</div>

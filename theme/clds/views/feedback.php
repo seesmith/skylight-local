@@ -1,3 +1,4 @@
+<div class="container">
 <div class="feedback_form">
 
     <h1>Historical Alumni: online enquiry</h1>
@@ -27,4 +28,5 @@
 
     <input type="submit" class="btn" value="Send" />
     </form>
+</div>
 </div>
