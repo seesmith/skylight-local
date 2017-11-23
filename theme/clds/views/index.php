@@ -18,7 +18,7 @@
                         <div class="slide-text slide_style_center">
                             <h1>ARCHIVES</h1>
                             <p>Archive and Manuscript collections contain documentary evidence for understanding a wide range of people, places, knowledge and learning. They contain a strong focus on Scottish culture and detail pioneering research, and literary,scientific and medical work through the University's own archive and Lothian Health Services Archive.</p>
-                            <a href="http://collections.ed.ac.uk/search/*/Type:%22archives%7C%7C%7CArchives%22/Header:%22archives%22?sort_by=cld.weighting_sort+desc,dc.title_sort+asc" target="_blank"  class="btn btn-primary" role="Button">Explore More</a>
+                            <a href="http://collections.ed.ac.uk/search/*/Type:%22archives%7C%7C%7CArchives%22/Header:%22archives%22?sort_by=cld.weighting_sort+desc,dc.title_sort+asc" target="_blank"  class="btn btn-primary" role="Button" title="Find out more about Archives at the University of Edinburgh">Explore More</a>
                         </div>
                     </div>
                 </div>
@@ -33,7 +33,7 @@
                         <div class="slide-text slide_style_center">
                             <h1>RARE BOOKS</h1>
                             <p>We have about 400,000 rare books and manuscripts, many found nowhere else. Our earliest handwritten book is the 11th century Celtic Psalter; the earliest printed book is a woodblock Chinese commentary produced in 1440. The collection includes the libraries of Enlightenment economist Adam Smith and modern Scottish writer Hugh MacDiarmid.</p>
-                            <a href="http://collections.ed.ac.uk/search/*/Type:%22rare+books|||Rare+Books%22/Header:%22rarebooks%22?sort_by=cld.weighting_sort+desc,dc.title_sort+asc" target="_blank"  class="btn btn-primary" role="Button">Explore More</a>
+                            <a href="http://collections.ed.ac.uk/search/*/Type:%22rare+books|||Rare+Books%22/Header:%22rarebooks%22?sort_by=cld.weighting_sort+desc,dc.title_sort+asc" target="_blank"  class="btn btn-primary" role="Button" title="Find out more about Rare Books at the University of Edinburgh">Explore More</a>
                         </div>
                     </div>
                 </div>
@@ -47,8 +47,8 @@
                         <!-- Slide Text Layer -->
                         <div class="slide-text slide_style_center">
                             <h1 data-animation="animated flipInX">MUSICAL INSTRUMENTS</h1>
-                            <p data-animation="animated lightSpeedIn">Musical Instrument Collection contains over 5,500 items, covering the history of musical instruments from c1550 to the present day. Instruments of all types and traditions can be found, including some of the world’s most iconic, and much revered, examples of their type.</p>
-                            <a href="http://collections.ed.ac.uk/search/*/Type:%22mimed%7C%7C%7CMIMEd%22/Header:%22mimed%22?sort_by=cld.weighting_sort+desc,dc.title_sort+asc" target="_blank" class="btn btn-primary" role="Button">Explore More</a>
+                            <p data-animation="animated lightSpeedIn">The Musical Instrument Collection contains over 5,500 items, covering the history of musical instruments from c1550 to the present day. Instruments of all types and traditions can be found, including some of the world’s most iconic, and much revered, examples of their type.</p>
+                            <a href="http://collections.ed.ac.uk/search/*/Type:%22mimed%7C%7C%7CMIMEd%22/Header:%22mimed%22?sort_by=cld.weighting_sort+desc,dc.title_sort+asc" target="_blank" class="btn btn-primary" role="Button" title="Find out more about the Musical Instrument Collection at the University of Edinburgh">Explore More</a>
                         </div>
                     </div>
                 </div>
@@ -62,8 +62,8 @@
                         <!-- Slide Text Layer -->
                         <div class="slide-text slide_style_center">
                             <h1 data-animation="animated flipInX">ART COLLECTIONS</h1>
-                            <p data-animation="animated lightSpeedIn">Art Collection contains over 5,000 items which reflect the history of the University, the city and Scotland and also supports world-leading research and teaching at Edinburgh. The collection comprises an astonishing range of objects, spanning two millennia and a multitude of artistic periods.</p>
-                            <a href="http://collections.ed.ac.uk/search/*/Type:%22art|||Art%22/Header:%22art%22?sort_by=cld.weighting_sort+desc,dc.title_sort+asc" target="_blank" class="btn btn-primary" data-animation="animated fadeInDown">Explore More</a>
+                            <p data-animation="animated lightSpeedIn">The Art Collection contains over 5,000 items which reflect the history of the University, the city and Scotland and also supports world-leading research and teaching at Edinburgh. The collection comprises an astonishing range of objects, spanning two millennia and a multitude of artistic periods.</p>
+                            <a href="http://collections.ed.ac.uk/search/*/Type:%22art|||Art%22/Header:%22art%22?sort_by=cld.weighting_sort+desc,dc.title_sort+asc" target="_blank" class="btn btn-primary" data-animation="animated fadeInDown" title="Find out more about the Art Collection at the University of Edinburgh">Explore More</a>
                         </div>
                     </div>
                 </div>
@@ -78,7 +78,7 @@
                         <div class="slide-text slide_style_center">
                             <h1 data-animation="animated flipInX">MUSEUMS</h1>
                             <p data-animation="animated lightSpeedIn">Most collections support scholarly research, some tell the story of the University's past, some are used daily as teaching collections, while others, such as the Natural History Collections, are DNA libraries, while yet others glorify corporate spaces - they are all are part of the University’s rich cultural holdings.</p>
-                            <a href="http://collections.ed.ac.uk/search/*/Type:%22museums%7C%7C%7CMuseums%22/Header:%22museums%22?sort_by=cld.weighting_sort+desc,dc.title_sort+asc" target="_blank"  class="btn btn-primary" data-animation="animated fadeInDown">Explore More</a>
+                            <a href="http://collections.ed.ac.uk/search/*/Type:%22museums%7C%7C%7CMuseums%22/Header:%22museums%22?sort_by=cld.weighting_sort+desc,dc.title_sort+asc" target="_blank"  class="btn btn-primary" data-animation="animated fadeInDown" title="Find out more about Museums at the University of Edinburgh">Explore More</a>
                         </div>
                     </div>
                 </div>
@@ -108,7 +108,7 @@
                     <div class="icon-addon addon-lg">
                         <input type="text" placeholder="Search the Collection Level Descriptions" class="form-control" name="q" id="q" >
                         <label class="glyphicon glyphicon-search" rel="tooltip"></label>
-                        <input type="submit" name="submit_search" class="btn" value="Search" id="submit_search" />
+                        <input type="submit" name="submit_search" class="btn" value="Search" id="submit_search" title="Search the Collection Level Descriptions" />
                     </div>
                 </form>
             </div>

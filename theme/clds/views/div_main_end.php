@@ -1,5 +1,5 @@
 <footer id="footer" style="background-color: #FFF;border-top: 1px solid #ccc;padding: 20px;text-align: center;margin: 0 auto;">
-    <p class="go-to-bottom"><a href="#" id="gobottom"><img id="gotobottom" src="<?php echo base_url(); ?>theme/<?php echo $this->config->item('skylight_theme'); ?>/images/backtotop.svg"/></a></p>
+    <p class="go-to-bottom"><a href="#" id="gobottom"><img id="gotobottom" src="<?php echo base_url(); ?>theme/<?php echo $this->config->item('skylight_theme'); ?>/images/backtotop.svg" title="Find out how to visit us and get involved"/></a></p>
     <div class="container" >
         <div class="row">
             <div class="col-lg-2 col-md-2 hidden-sm hidden-xs"style="text-align: right;">
@@ -20,7 +20,7 @@
             </div>
         </div>
     </div>
-    <p class="back-to-top"><a href="#" id="gotop"><img src="<?php echo base_url(); ?>theme/<?php echo $this->config->item('skylight_theme'); ?>/images/backtotop.svg"/></a></p>
+    <p class="back-to-top"><a href="#" id="gotop"><img src="<?php echo base_url(); ?>theme/<?php echo $this->config->item('skylight_theme'); ?>/images/backtotop.svg" title="Return to the top of the page"/></a></p>
 </footer>
 
 <script src="js/jquery.min.js"></script>

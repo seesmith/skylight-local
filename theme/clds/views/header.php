@@ -113,15 +113,15 @@
         </div>
         <div class="collapse navbar-collapse" id="navbar-collapse">
             <ul class="nav navbar-nav" id="navbar-middle">
-                <li><a href="#">HOME</a></li>
-                <li><a href="http://collections.ed.ac.uk/about" target="_blank">ABOUT</a></li>
-                <li><a href="http://collections.ed.ac.uk/feedback/" target="_blank">FEEDBACK</a></li>
+                <li><a href="#" title="University of Edinburgh Collections Home">HOME</a></li>
+                <li><a href="http://collections.ed.ac.uk/about" target="_blank" title="About Edinburgh University Collections">ABOUT</a></li>
+                <li><a href="http://collections.ed.ac.uk/feedback/" target="_blank" title="Provide feedback">FEEDBACK</a></li>
             </ul>
             <ul class="nav navbar-nav navbar-right hidden-xs" id="navbar-right">
-                <a href="https://www.facebook.com/crc.edinburgh" target="_blank" ><i id="social-fb" class="fa fa-facebook-square fa-3x social" aria-hidden="true"></i></a>
-                <a href="https://twitter.com/CRC_EdUni" target="_blank"><i id="social-tw" class="fa fa-twitter-square fa-3x social" aria-hidden="true"></i></a>
-                <a href="" target="_blank"><i id="social-fr" class="fa fa-flickr fa-3x social" aria-hidden="true"></i></a>
-                <a href="http://libraryblogs.is.ed.ac.uk/" target="_blank"><i id="social-wp" class="fa fa-wordpress fa-3x social" aria-hidden="true"></i></a>
+                <a href="https://www.facebook.com/crc.edinburgh" target="_blank" title="CRC Facebook Page"><i id="social-fb" class="fa fa-facebook-square fa-3x social" aria-hidden="true"></i></a>
+                <a href="https://twitter.com/CRC_EdUni" target="_blank" title="CRC Twitter Feed"><i id="social-tw" class="fa fa-twitter-square fa-3x social" aria-hidden="true"></i></a>
+                <a href="https://www.flickr.com/photos/crcedinburgh" target="_blank" title="CRC Flickr Page"><i id="social-fr" class="fa fa-flickr fa-3x social" aria-hidden="true"></i></a>
+                <a href="http://libraryblogs.is.ed.ac.uk/" target="_blank" title="University of Edinburgh Library Blogs"><i id="social-wp" class="fa fa-wordpress fa-3x social" aria-hidden="true"></i></a>
             </ul>
         </div>
     </div>
@@ -130,11 +130,11 @@
 <div class="container" style="background-color: #FAEBD7;width: 100%;padding: 0;">
     <div class="sub-menu">
         <ul class="cldmenu" >
-            <li class="current" ><a href="http://collections.ed.ac.uk/search/*/Type:%22archives%7C%7C%7CArchives%22/Header:%22archives%22?sort_by=cld.weighting_sort+desc,dc.title_sort+asc" data-hover="ARCHIVES">ARCHIVES</a></li>
-            <li><a href="http://collections.ed.ac.uk/search/*/Type:%22rare+books|||Rare+Books%22/Header:%22rarebooks%22?sort_by=cld.weighting_sort+desc,dc.title_sort+asc" data-hover="RARE BOOKS">RARE BOOKS</a></li>
-            <li><a href="http://collections.ed.ac.uk/search/*/Type:%22mimed%7C%7C%7CMIMEd%22/Header:%22mimed%22?sort_by=cld.weighting_sort+desc,dc.title_sort+asc" data-hover="MUSICAL INSTRUMENTS">MUSICAL INSTRUMENTS</a></li>
-            <li><a href="http://collections.ed.ac.uk/search/*/Type:%22art%7C%7C%7CArt%22/Header:%22art%22?sort_by=cld.weighting_sort+desc,dc.title_sort+asc" data-hover="ART">ART</a></li>
-            <li><a href="http://collections.ed.ac.uk/search/*/Type:%22museums%7C%7C%7CMuseums%22/Header:%22museums%22?sort_by=cld.weighting_sort+desc,dc.title_sort+asc" data-hover="MUSEUMS">MUSEUMS</a></li>
+            <li class="current" ><a href="http://collections.ed.ac.uk/search/*/Type:%22archives%7C%7C%7CArchives%22/Header:%22archives%22?sort_by=cld.weighting_sort+desc,dc.title_sort+asc" data-hover="ARCHIVES" title="Archive and Manuscript Collections">ARCHIVES</a></li>
+            <li><a href="http://collections.ed.ac.uk/search/*/Type:%22rare+books|||Rare+Books%22/Header:%22rarebooks%22?sort_by=cld.weighting_sort+desc,dc.title_sort+asc" data-hover="RARE BOOKS" title="Rare Book Collections">RARE BOOKS</a></li>
+            <li><a href="http://collections.ed.ac.uk/search/*/Type:%22mimed%7C%7C%7CMIMEd%22/Header:%22mimed%22?sort_by=cld.weighting_sort+desc,dc.title_sort+asc" data-hover="MUSICAL INSTRUMENTS" title="Musical Instrument Collections">MUSICAL INSTRUMENTS</a></li>
+            <li><a href="http://collections.ed.ac.uk/search/*/Type:%22art%7C%7C%7CArt%22/Header:%22art%22?sort_by=cld.weighting_sort+desc,dc.title_sort+asc" data-hover="ART" title="Art Collections">ART</a></li>
+            <li><a href="http://collections.ed.ac.uk/search/*/Type:%22museums%7C%7C%7CMuseums%22/Header:%22museums%22?sort_by=cld.weighting_sort+desc,dc.title_sort+asc" data-hover="MUSEUMS" title="Museums">MUSEUMS</a></li>
         </ul>
     </div>
 </div>
