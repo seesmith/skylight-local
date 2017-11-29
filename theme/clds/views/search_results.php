@@ -1,4 +1,4 @@
-
+<div class="container">
     <?php
 
         // Set up some variables to easily refer to particular fields you've configured
@@ -231,3 +231,4 @@
             <strong><?php echo $rows ?></strong> results </span>
         <?php echo $pagelinks ?>
     </div>
+</div>

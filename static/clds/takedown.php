@@ -1,4 +1,4 @@
-<div class="content">
+<div class="container">
     <div class="content byEditor">
         <h1>Takedown Policy</h1>
 

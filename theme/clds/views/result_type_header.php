@@ -1,3 +1,4 @@
+<div class="container">
 <?php
     $mp4ok = false;
     // Use MP4 for all browsers other than Chrome
@@ -140,6 +141,6 @@ if (strpos($search_url, 'Header:%22archives%22') > 0)
 <?php }
 }
 ?>
-
+</div>
 
 
