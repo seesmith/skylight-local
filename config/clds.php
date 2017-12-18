@@ -56,7 +56,7 @@ $config['skylight_meta_fields'] = array('Title' => 'dc.title',
     'Type' => 'dc.type',
 );
 
-$config['skylight_recorddisplay'] = array('Title','Type','Description','Custodian','Custodial History','Origin','Date','Identifier');
+$config['skylight_recorddisplay'] = array('Type','Description','Subject', 'Custodian','Custodial History','Origin','Date','Identifier');
 
 $config['skylight_searchresult_display'] = array('Title','Brief','Custodian','Custodial History', 'Subject','Type','Origin', 'Bitstream', 'Thumbnail');
 

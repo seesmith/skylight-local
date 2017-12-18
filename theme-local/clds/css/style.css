@@ -1,10 +1,15 @@
 body {
     font-family: Arial, Helvetica, sans-serif;
-    color: #666;
+    background-color: #fff;
+    color: #333;
 }
 
 #myCarousel {
     margin: 0;
+}
+
+.a {
+    color: #004F71;
 }
 
 .navbar-default {
@@ -98,44 +103,64 @@ body {
     text-align: center;
     letter-spacing: 1px;
     margin: 20px 0 0 0;
+    color: #000;
 }
 
 .tab-h2 a{
-    color: #337AB7;
+    color: #004f71;
 }
 
 .tab-p {
-    font-size: 15px;
+    font-size: 16px;
     text-align: center;
     letter-spacing: 1px;
     color: #000;
     margin: 20px 0;
 }
-.tab1 {
+.tab-heading {
     margin: 0;
     background-color: #F3E3D4;
 }
 
-.tab2 {
+.tab-list {
     background-color: #eee;
     padding: 40px 20px;
     text-align: center;
 }
-.tab2 img {
+
+.tab-list2 {
+    background-color: #F3E3D4;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.tab-list3 {
+    background-color: #eee;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.tab-list4 {
+    background-color: #F3E3D4;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.tab-list img {
     width: 100%;
     height: 100%;
 }
 
-.tab3 span {
+.tab-col span {
     position: absolute;
     width: 100%;
 }
 
-.tab3 a:hover {
+.tab-col a:hover {
     color: #A50034;
 }
 
-.tab3 a {
+.tab-col a {
     color: #004F71;
     text-transform: uppercase;
     font-weight: bold;
@@ -143,7 +168,7 @@ body {
     text-align: center;
 }
 /*
-.tab4 {
+.tab-visit {
     background: url(../img/visit_bg.jpg) no-repeat center center ;
     -webkit-background-size: cover;
     -moz-background-size: cover;
@@ -152,25 +177,25 @@ body {
     text-align: center;
 }
 */
-.tab4 img {
+.tab-visit img {
     width: 100%;
     height: 100%;
 }
 
-.tab3 span, .tab4 h3 {
+.tab-col span, .tab-visit h3 {
     text-transform: uppercase;
     font-weight: bold;
     font-size: 42px;
     text-align: center;
 }
 
-.tab4 h3 {
+.tab-visit h3 {
     color: #004F71;
     margin-top: 10px;
     margin-bottom: 0;
 }
 
-.tab4 p {
+.tab-visit p {
     color: #F3E3D4;
     font-size: 14px;
 }
@@ -179,12 +204,138 @@ body {
     background-color: #f1e5dc;
 }
 
-#footer {
-    background-color: #FFF;
-    border-top: 1px solid #ccc;
-    padding: 20px;
-    text-align: center;
-    margin: 0 auto;
+.pagination > li > a, .pagination > li > span {
+    color: #333;
+}
+
+.pagination > li > a:focus,
+.pagination > li > a:hover,
+.pagination > li > span:focus,
+.pagination > li > span:hover {
+    z-index: 3;
+    color: #333;
+    background-color: #ccc;
+    border-color: #ddd;
+}
+
+.pagination > .active > span{
+    z-index: 3;
+    color: #ccc;
+    background-color: #333;
+    border-color: #ddd;
+}
+
+.pagination > .active > span:hover, .pagination > .active > span:focus{
+    z-index: 3;
+    color: #333;
+    background-color: #ccc;
+    border-color: #ddd;
+}
+
+#search-results
+{
+    padding-top: 10px;
+}
+
+#side_facet
+{
+    padding-top: 10px;
+}
+
+.panel-group .panel-heading, .panel-group .panel-heading a{
+    z-index: 3;
+    color: #fff;
+    background-color: #333;
+    border-color: #ddd;
+}
+
+.panel, .panel-body > a, .panel-body > a:focus, .panel-body > a:hover{
+    z-index: 3;
+    color: #333;
+    background-color: #fff;
+    border-color: #ddd;
+}
+
+.main-image {
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.btn-custom {
+    background-color: #333;
+    border-color: #333;
+    color: #fff;
+}
+.btn-custom:hover,
+.btn-custom:focus,
+.btn-custom:active,
+.btn-custom.active {
+    background-color: #262626;
+    border-color: #1a1a1a;
+    color: #fff;
+}
+.btn-custom.disabled:hover,
+.btn-custom.disabled:focus,
+.btn-custom.disabled:active,
+.btn-custom.disabled.active,
+.btn-custom[disabled]:hover,
+.btn-custom[disabled]:focus,
+.btn-custom[disabled]:active,
+.btn-custom[disabled].active,
+fieldset[disabled] .btn-custom:hover,
+fieldset[disabled] .btn-custom:focus,
+fieldset[disabled] .btn-custom:active,
+fieldset[disabled] .btn-custom.active {
+    background-color: #333;
+    border-color: #333;
+    color: #fff;
+}
+
+
+.footer {
+    background-color: #252525;
+    font-size: 16px;
+    color: #ccc;
+    font-family: "Source Sans Pro", sans-serif;
+    padding-top :10px;
+    margin:0 0 0 0}
+
+.footer ul {
+
+    line-height: 1.42857143;
+    list-style: none;
+}
+
+.footer a:not(.btn):visited {
+    color: #ccc;
+}
+
+.footer a {
+    color: #ccc;
+    text-decoration: none;
+}
+
+.footer a.hover {
+    color: #ffffff;
+    text-decoration: underline;
+}
+
+.footer-discover {
+    background-color: #333;
+}
+
+.footer-discover, .h3 {
+    font-family: 'Crimson Text', serif;
+    font-size: 1.8em;
+    font-weight: 400;
+    color: #ffffff;
+    text-transform: uppercase;
+}
+
+.container-footer-copyright
+{
+    background-color: #fff;
+    width: 100%;
 }
 
 .back-to-top {
@@ -220,10 +371,10 @@ body {
     .sub-menu {
         display: none;
     }
-    .tab3 img {
+    .tab-col img {
         width: 100%;
     }
-    .tab3 span, .tab4 h3 {
+    .tab-col span, .tab-visit h3 {
         font-size: 36px;
     }
 
@@ -309,22 +460,22 @@ body {
     .tab-p {
         font-size: 16px;
     }
-    .tab3 span, .tab4 h3 {
+    .tab-col span, .tab-visit h3 {
         font-size: 44px;
     }
-    .tab4 p {
+    .tab-visit p {
         font-size: 15px;
     }
-    .tab2-text {
+    .tab-list-text {
         float: left;
     }
-    .tab2-img {
+    .tab-list-img {
         float: right;
     }
-    .footer-policies h3 {
+    .footer h3 {
         font-size: 20px;
     }
-    .footer-policies p {
+    .footer p {
         font-size: 11px;
     }
     #footer .container {
@@ -359,16 +510,16 @@ body {
     .tab-p {
         font-size: 17px;
     }
-    .tab3 span, .tab4 h3 {
+    .tab-col span, .tab-visit h3 {
         font-size: 48px;
     }
-    .tab4 p {
+    .tab-visit p {
         font-size: 16px;
     }
-    .footer-policies h3 {
+    .footer h3 {
         font-size: 25px;
     }
-    .footer-policies p {
+    .footer p {
         font-size: 13px;
     }
     #footer .container {
@@ -406,16 +557,16 @@ body {
     .tab-p {
         font-size: 18px;
     }
-    .tab3 span, .tab4 h3 {
+    .tab-col span, .tab-visit h3 {
         font-size: 50px;
     }
-    .tab4 p {
+    .tab-visit p {
         font-size: 18px;
     }
-    .footer-policies h3 {
+    .footer h3 {
         font-size: 30px;
     }
-    .footer-policies p {
+    .footer p {
         font-size: 15px;
     }
     #footer .container {
