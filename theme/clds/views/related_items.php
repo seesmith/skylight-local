@@ -1,5 +1,5 @@
 <div class="container related">
-    <h4>Related Items</h4>
+    <h4>Related Results</h4>
     <?php
     // if there are related items
     if(count($related_items) > 0) {

@@ -97,18 +97,18 @@
         </div>
     </div>
 
-
-
     <div class="tab-heading">
         <div class="container">
             <!--h2 class="tab-h2"><a class="address" href="http://collections.ed.ac.uk/" target="_blank">COLLECTIONS.ED.AC.UK</a></h2-->
-            <p class="tab-p">The University of Edinburgh's rare and unique collections are now online.</p>
+            <p class="tab-p">The University of Edinburgh's rare and unique collections online.</p>
             <div class="form-group hidden-xs">
                 <form action="./redirect/" method="post">
                     <div class="icon-addon addon-lg">
-                        <input type="text" placeholder="Search the Collection Level Descriptions" class="form-control" name="q" id="q" >
-                        <label class="glyphicon glyphicon-search" rel="tooltip"></label>
-                        <input type="submit" name="submit_search" class="btn" value="Search" id="submit_search" title="Search the Collection Level Descriptions" />
+                        <div class="input-group-btn">
+                            <input type="text" placeholder="Search the Collection Level Descriptions" class="form-control" name="q" id="q" >
+                            <label class="glyphicon glyphicon-search" rel="tooltip"></label>
+                            <input type="submit" name="submit_search" class="btn" value="Search" id="submit_search" title="Search the Collection Level Descriptions" />
+                        </div>
                     </div>
                 </form>
             </div>
@@ -575,14 +575,14 @@
     <div class="tab-list4">
         <div class="container">
             <div class="row">
-                <p class="tab-h2">???? </p>
+                <p class="tab-h2">???? Other ??? </p>
             </div>
             <div class="row">
                 <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
                     <figure class="clickbox">
                         <img src="<?php echo base_url(); ?>theme/<?php echo $this->config->item('skylight_theme'); ?>/images/clickboxes/alumni.jpg" alt="Alumni">
                         <div>
-                            <h2><span>Historical Alumni</span> </h2>
+                            <h2><span>Historical Alumni</span> Database </h2>
                             <i class="ion-arrow-right-c"></i>
                             <div class="curl"></div>
                             <a href="http://collections.ed.ac.uk/alumni" title="Alumni" target="_blank"></a>
@@ -594,7 +594,7 @@
                     <figure class="clickbox">
                         <img src="<?php echo base_url(); ?>theme/<?php echo $this->config->item('skylight_theme'); ?>/images/clickboxes/guardbook.jpg" alt="Guardbook">
                         <div>
-                            <h2><span>Guardbook Catalogue</span> </h2>
+                            <h2><span>Guardbook</span> Historic Library Catalogue</h2>
                             <i class="fa fa-file-pdf-o"></i>
                             <i class="ion-arrow-right-c"></i>
                             <div class="curl"></div>
@@ -607,7 +607,7 @@
                     <figure class="clickbox">
                         <img src="<?php echo base_url(); ?>theme/<?php echo $this->config->item('skylight_theme'); ?>/images/clickboxes/calendars.jpg" alt="Calendars Collection">
                         <div>
-                            <h2><span>Calendars</span></h2>
+                            <h2><span>Library Calendars</span></h2>
                             <i class="fa fa-camera"></i>
                             <i class="ion-arrow-right-c"></i>
                             <div class="curl"></div>
@@ -616,11 +616,26 @@
                     </figure>
                 </div>
 
+
+                <!--<div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+                    <figure class="clickbox">
+                        <img src="<?php echo base_url(); ?>theme/<?php echo $this->config->item('skylight_theme'); ?>/images/clickboxes/tad.jpg" alt="Tobar an Dualchais Collection">
+                        <div>
+                            <h2><span>Tobar an Dualchais</span></h2>
+                            <i class="fa fa-sound"></i>
+                            <i class="ion-arrow-right-c"></i>
+                            <div class="curl"></div>
+                            <a href="http://www.tobarandualchais.co.uk/" title="Tobar an Dualchais" target="_blank"></a>
+                        </div>
+                    </figure>
+                </div>-->
+
+
                 <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
                     <figure class="clickbox">
                         <img src="<?php echo base_url(); ?>theme/<?php echo $this->config->item('skylight_theme'); ?>/images/clickboxes/era.jpg" alt="Theses Collection in Edinburgh Research Archive">
                         <div>
-                            <h2><span>PhD Theses Collection</span> </h2>
+                            <h2><span>PhD Theses</span> Collection </h2>
                             <i class="fa fa-file-pdf-o"></i>
                             <i class="ion-arrow-right-c"></i>
                             <div class="curl"></div>

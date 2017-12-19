@@ -195,12 +195,12 @@ body {
     margin-bottom: 0;
 }
 
-.tab-visit p {
-    color: #F3E3D4;
+.tab-visit{
+    background-color: #f1e5dc;
     font-size: 14px;
 }
 
-.tab5, .tab6 {
+.tab5{
     background-color: #f1e5dc;
 }
 
@@ -232,14 +232,28 @@ body {
     border-color: #ddd;
 }
 
+.related
+{
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
 #search-results
 {
     padding-top: 10px;
+    padding-bottom: 5px;
+}
+
+.btn
+{
+    margin-top: 5px;
+    margin-bottom: 5px;
 }
 
 #side_facet
 {
     padding-top: 10px;
+    padding-bottom: 10px;
 }
 
 .panel-group .panel-heading, .panel-group .panel-heading a{
