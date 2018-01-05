@@ -31,7 +31,6 @@
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
     <link href="<?php echo base_url(); ?>theme/<?php echo $this->config->item('skylight_theme'); ?>/css/ie10-viewport-bug-workaround.css" rel="stylesheet">
 
-    <link rel="stylesheet" href="<?php echo base_url(); ?>theme/<?php echo $this->config->item('skylight_theme'); ?>/css/style.css?v=2">
     <link rel="stylesheet" href="<?php echo base_url(); ?>theme/<?php echo $this->config->item('skylight_theme'); ?>/css/socialicon.css">
 
     <link rel="stylesheet" href="<?php echo base_url()?>assets/font-awesome-4.7.0/css/font-awesome.min.css" rel="stylesheet">
@@ -41,6 +40,7 @@
     <link rel="stylesheet" href="<?php echo base_url(); ?>theme/<?php echo $this->config->item('skylight_theme'); ?>/css/search.css">
     <link rel="stylesheet" href="<?php echo base_url(); ?>theme/<?php echo $this->config->item('skylight_theme'); ?>/css/locate.css">
     <link rel="stylesheet" href="<?php echo base_url(); ?>theme/<?php echo $this->config->item('skylight_theme'); ?>/css/picgallery.css">
+    <link rel="stylesheet" href="<?php echo base_url(); ?>theme/<?php echo $this->config->item('skylight_theme'); ?>/css/style.css?v=2">
 
     <link rel="stylesheet" href="<?php echo base_url()?>assets/flowplayer-7.0.4/skin/skin.css">
 
@@ -62,9 +62,6 @@
         ga('send', 'pageview');
     </script>
     <!-- End Google Analytics -->
-
-    <script src="<?php echo base_url(); ?>assets/flowplayer-7.0.4/flowplayer.min.js"></script>
-
     <!-- global options -->
     <script>
         flowplayer.conf = {
@@ -127,8 +124,8 @@
     </div>
 </nav>
 
-<div class="container" style="background-color: #FAEBD7;width: 100%;padding: 0;">
-    <div class="sub-menu">
+<div class="tab-heading">
+    <div class="container">
         <ul class="cldmenu" >
             <li class="current" ><a href="http://collections.ed.ac.uk/search/*/Type:%22archives%7C%7C%7CArchives%22/Header:%22archives%22?sort_by=cld.weighting_sort+desc,dc.title_sort+asc" data-hover="ARCHIVES" title="Archive and Manuscript Collections">ARCHIVES</a></li>
             <li><a href="http://collections.ed.ac.uk/search/*/Type:%22rare+books|||Rare+Books%22/Header:%22rarebooks%22?sort_by=cld.weighting_sort+desc,dc.title_sort+asc" data-hover="RARE BOOKS" title="Rare Book Collections">RARE BOOKS</a></li>
@@ -136,6 +133,23 @@
             <li><a href="http://collections.ed.ac.uk/search/*/Type:%22art%7C%7C%7CArt%22/Header:%22art%22?sort_by=cld.weighting_sort+desc,dc.title_sort+asc" data-hover="ART" title="Art Collections">ART</a></li>
             <li><a href="http://collections.ed.ac.uk/search/*/Type:%22museums%7C%7C%7CMuseums%22/Header:%22museums%22?sort_by=cld.weighting_sort+desc,dc.title_sort+asc" data-hover="MUSEUMS" title="Museums">MUSEUMS</a></li>
         </ul>
+    </div>
+</div>
+<div class="tab-heading">
+    <div class="container">
+        <!--h2 class="tab-h2"><a class="address" href="http://collections.ed.ac.uk/" target="_blank">COLLECTIONS.ED.AC.UK</a></h2-->
+        <p class="tab-p">The University of Edinburgh's rare and unique collections catalogue online.</p>
+        <div class="form-group hidden-xs">
+            <form action="./redirect/" method="post">
+                <div class="icon-addon addon-lg">
+                    <div class="input-group-btn">
+                        <input type="text" placeholder="Search the Collection Level Descriptions" class="form-control" name="q" id="q" >
+                        <label class="glyphicon glyphicon-search" rel="tooltip"></label>
+                        <input type="submit" name="submit_search" class="btn" value="Search" id="submit_search" title="Search the Collection Level Descriptions" />
+                    </div>
+                </div>
+            </form>
+        </div>
     </div>
 </div>
 
