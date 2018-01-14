@@ -27,14 +27,12 @@
 
     <!-- CSS: implied media="all" -->
     <link rel="stylesheet" href="<?php echo base_url(); ?>assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="<?php echo base_url()?>assets/font-awesome-4.7.0/css/font-awesome.min.css">
+
 
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
-    <link href="<?php echo base_url(); ?>theme/<?php echo $this->config->item('skylight_theme'); ?>/css/ie10-viewport-bug-workaround.css" rel="stylesheet">
-
+    <link rel="stylesheet" href="<?php echo base_url(); ?>theme/<?php echo $this->config->item('skylight_theme'); ?>/css/ie10-viewport-bug-workaround.css" >
     <link rel="stylesheet" href="<?php echo base_url(); ?>theme/<?php echo $this->config->item('skylight_theme'); ?>/css/socialicon.css">
-
-    <link rel="stylesheet" href="<?php echo base_url()?>assets/font-awesome-4.7.0/css/font-awesome.min.css" rel="stylesheet">
-
     <link rel="stylesheet" href="<?php echo base_url(); ?>theme/<?php echo $this->config->item('skylight_theme'); ?>/css/secondmenu.css">
     <link rel="stylesheet" href="<?php echo base_url(); ?>theme/<?php echo $this->config->item('skylight_theme'); ?>/css/slide-text.css">
     <link rel="stylesheet" href="<?php echo base_url(); ?>theme/<?php echo $this->config->item('skylight_theme'); ?>/css/search.css">

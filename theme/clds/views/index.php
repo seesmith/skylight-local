@@ -618,7 +618,7 @@
                         src="<?php echo base_url(); ?>theme/<?php echo $this->config->item('skylight_theme'); ?>/images/clickboxes/0054302c.jpg"
                         alt="Visit Us"/>
                     <div>
-                        <h2>Visit Us</h2>
+                        <h2><span>Visit Us</span></h2>
                         <i class="ion-minus"></i>
                         <i class="ion-plus"></i>
                         <div class="curl"></div>
@@ -635,7 +635,7 @@
                         <img
                             src="<?php echo base_url(); ?>theme/<?php echo $this->config->item('skylight_theme'); ?>/images/clickboxes/crc.jpg"/>
                         <div>
-                            <h2><span>Centre for Research Collections</span></h2>
+                            <h2><span>Centre</span> for <span>Research Collections</span></h2>
                             <i class="fa fa-external-link"></i>
                             <i class="ion-arrow-right-c"></i>
                             <div class="curl"></div>
@@ -689,7 +689,7 @@
                 <div class="col-md-4 col-sm-4 col-xs-12">
                     <figure class="clickbox">
                         <img
-                            src="<?php echo base_url(); ?>theme/<?php echo $this->config->item('skylight_theme'); ?>/images/clickboxes/anatomymuseum.jpg"/>
+                            src="<?php echo base_url(); ?>theme/<?php echo $this->config->item('skylight_theme'); ?>/images/clickboxes/scottishstudies.jpg"/>
 
                         <div>
                             <h2><span>School of Scottish Studies</span> Archives</h2>
@@ -704,7 +704,7 @@
                 <div class="col-md-4 col-sm-4 col-xs-12">
                     <figure class="clickbox">
                         <img
-                            src="<?php echo base_url(); ?>theme/<?php echo $this->config->item('skylight_theme'); ?>/images/clickboxes/anatomymuseum.jpg"/>
+                            src="<?php echo base_url(); ?>theme/<?php echo $this->config->item('skylight_theme'); ?>/images/clickboxes/newcollegelibrary.jpg"/>
 
                         <div>
                             <h2><span>New College</span> Library</h2>

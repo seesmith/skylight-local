@@ -159,7 +159,6 @@ body {
     text-align: center;
 }
 
-
 .tab-col a:hover {
     color: #A50034;
 }
@@ -236,6 +235,39 @@ body {
     background-color: #f1e5dc;
 }
 
+.results_text{
+    padding: 5px;
+    font-size: 18px;
+    letter-spacing: 1px;
+    color: #000;
+    margin: 20px 0;
+}
+
+.flowplayer {
+    max-width: 300px;
+    padding: 5px;
+}
+
+.archives_header {
+    background-image: url(../images/0024694c.jpg), linear-gradient(to bottom, transparent 0%, white 100%);
+}
+
+.museums_header{
+    background-image: url(../images/0031348c.jpg), linear-gradient(to bottom, transparent 0%, white 100%);
+}
+
+.rare_header{
+    background-image: url(../images/0041809c.jpg), linear-gradient(to bottom, transparent 0%, white 100%);
+}
+
+.art_header{
+    background-image: url(../images/0016465c.jpg), linear-gradient(to bottom, transparent 0%, white 100%);
+}
+
+.mimed_header{
+    background-image: url(../images/0035518c.jpg), linear-gradient(to bottom, transparent 0%, white 100%);
+}
+
 .pagination > li > a, .pagination > li > span {
     color: #333;
 }
@@ -274,6 +306,11 @@ body {
 {
     padding-top: 10px;
     padding-bottom: 5px;
+}
+
+.tab-heading .btn
+{
+    margin: 0;
 }
 
 .btn
