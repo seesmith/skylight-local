@@ -207,7 +207,7 @@ if(isset($solr[$bitstream_field]) && $link_bitstream) {
 
                                 visibilityRatio: 0,
                                 minZoomLevel: 0.7,
-                                defaultZoomLevel: 3,
+                                defaultZoomLevel: 1,
                                 panHorizontal: true,
                                 sequenceMode: true,
                                 preserveViewport: false,

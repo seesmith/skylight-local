@@ -796,39 +796,39 @@ div[id^="gallery"] {
 
 
 #galleryethst {
-    background-image: url(../images/EthSt.jpg);
+    background-image: url(https://images.is.ed.ac.uk/luna/servlet/iiif/uoeart~2~2~73256~166246/2193,782,2761,2081/1024,/0/default.jpg);
 }
 
 #galleryethpe {
-    background-image: url(../images/EthPe.jpg);
+    background-image: url(https://images.is.ed.ac.uk/luna/servlet/iiif/uoeart~2~2~73247~166273/167,213,5092,4725/1024,/0/default.jpg);
 }
 
 #galleryethbw {
-    background-image: url(../images/EthBw.jpg);
+    background-image: url(https://images.is.ed.ac.uk/luna/servlet/iiif/uoeart~2~2~52856~104487/1465,1713,1713,1400/800,/0/default.jpg);
 }
 
 #galleryethww {
-    background-image: url(../images/EthWw.jpg);
+    background-image: url(https://images.is.ed.ac.uk/luna/servlet/iiif/uoeart~2~2~74189~168009/930,2243,1285,1045/1024,/0/default.jpg);
 }
 
 #gallerykb {
-    background-image: url(https://images.is.ed.ac.uk/luna/servlet/detail/UoEart~2~2~73063~164073);
+    background-image: url(https://images.is.ed.ac.uk/luna/servlet/iiif/uoeart~2~2~73063~164073/1028,444,5471,4782/1024,/0/default.jpg);
 }
 
 #gallerywesst {
-    background-image: url(../images/WesSt.jpg);
+    background-image: url(https://images.is.ed.ac.uk/luna/servlet/iiif/uoeart~2~2~73040~164096/45,18,7083,5774/1024,/0/default.jpg);
 }
 
 #gallerywespe {
-    background-image: url(../images/WesPe.jpg);
+    background-image: url(https://images.is.ed.ac.uk/luna/servlet/iiif/uoeart~2~2~73510~166932/27,0,5279,3511/1024,/0/default.jpg);
 }
 
 #gallerywesbw {
-    background-image: url(../images/WesBw.jpg);
+    background-image: url(https://images.is.ed.ac.uk/luna/servlet/iiif/uoeart~2~2~73226~166227/257,418,6926,3924/1024,/0/default.jpg);
 }
 
 #gallerywesww {
-    background-image: url(../images/WesWw.jpg);
+    background-image: url(https://images.is.ed.ac.uk/luna/servlet/iiif/uoeart~2~2~34378~103849/1143,2404,2373,1863/1024,/0/default.jpg);
 }
 
 .gallery-title {
