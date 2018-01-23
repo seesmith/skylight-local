@@ -12,6 +12,7 @@ body {
     color: #004F71;
 }
 
+
 .navbar-default {
     background-color: #fff;
     border-color: #e7e7e7;
@@ -124,25 +125,25 @@ body {
 
 .tab-list {
     background-color: #eee;
-    padding: 40px 20px;
+    padding: 20px 20px;
     text-align: center;
 }
 
 .tab-list2 {
     background-color: #F3E3D4;
-    padding: 40px 20px;
+    padding: 20px 20px;
     text-align: center;
 }
 
 .tab-list3 {
     background-color: #eee;
-    padding: 40px 20px;
+    padding: 20px 20px;
     text-align: center;
 }
 
 .tab-list4 {
     background-color: #F3E3D4;
-    padding: 40px 20px;
+    padding: 20px 20px;
     text-align: center;
 }
 
@@ -151,9 +152,11 @@ body {
     height: 100%;
 }
 
-.tab-col span {
+.tab-col h2, .tab-visit h2, .tab-participate h2 {
     position: absolute;
     width: 100%;
+    font-weight: 800 !important;
+    text-align: center;
 }
 
 .tab-col a:hover {
@@ -167,6 +170,27 @@ body {
     font-size: 42px;
     text-align: center;
 }
+
+.tab-col span, .tab-visit h2, .tab-participate h2 {
+    text-transform: uppercase;
+    font-size: 42px;
+    text-align: center;
+    word-spacing: -0.1em;
+    font-weight: 400;
+    top: 0;
+    opacity: 1;
+    padding: 25px;
+    margin: 0;
+    position: absolute;
+    color: #fff;
+    text-shadow: 0 0 10px #333;
+}
+
+.tab-col figure.clickbox,.title-image figure.clickbox , .tab-participate .title-image
+{
+    margin: 0;
+}
+
 /*
 .tab-visit {
     background: url(../img/visit_bg.jpg) no-repeat center center ;
@@ -182,26 +206,66 @@ body {
     height: 100%;
 }
 
-.tab-col span, .tab-visit h3 {
-    text-transform: uppercase;
-    font-weight: bold;
-    font-size: 42px;
-    text-align: center;
-}
-
-.tab-visit h3 {
-    color: #004F71;
-    margin-top: 10px;
-    margin-bottom: 0;
-}
 
 .tab-visit{
     background-color: #f1e5dc;
     font-size: 14px;
+    padding: 0;
+}
+
+.tab-exhibitions{
+    background-color: #f1e5dc;
+    font-size: 14px;
+    text-align: center;
+    color: #333;
+    padding: 5px;
+}
+
+.tab-exhibitions a {
+    color: #333;
+    text-decoration: underline;
+}
+
+.tab-exhibitions a.hover {
+    color: #333;
+    text-decoration: underline;
 }
 
 .tab5{
     background-color: #f1e5dc;
+}
+
+.results_text{
+    padding: 5px;
+    font-size: 18px;
+    letter-spacing: 1px;
+    color: #000;
+    margin: 20px 0;
+}
+
+.flowplayer {
+    max-width: 300px;
+    padding: 5px;
+}
+
+.archives_header {
+    background-image: url(../images/0024694c.jpg), linear-gradient(to bottom, transparent 0%, white 100%);
+}
+
+.museums_header{
+    background-image: url(../images/0031348c.jpg), linear-gradient(to bottom, transparent 0%, white 100%);
+}
+
+.rare_header{
+    background-image: url(../images/0041809c.jpg), linear-gradient(to bottom, transparent 0%, white 100%);
+}
+
+.art_header{
+    background-image: url(../images/0016465c.jpg), linear-gradient(to bottom, transparent 0%, white 100%);
+}
+
+.mimed_header{
+    background-image: url(../images/0035518c.jpg), linear-gradient(to bottom, transparent 0%, white 100%);
 }
 
 .pagination > li > a, .pagination > li > span {
@@ -242,6 +306,11 @@ body {
 {
     padding-top: 10px;
     padding-bottom: 5px;
+}
+
+.tab-heading .btn
+{
+    margin: 0;
 }
 
 .btn
@@ -477,9 +546,6 @@ fieldset[disabled] .btn-custom.active {
     .tab-col span, .tab-visit h3 {
         font-size: 44px;
     }
-    .tab-visit p {
-        font-size: 15px;
-    }
     .tab-list-text {
         float: left;
     }
@@ -524,11 +590,8 @@ fieldset[disabled] .btn-custom.active {
     .tab-p {
         font-size: 17px;
     }
-    .tab-col span, .tab-visit h3 {
+    .tab-col span {
         font-size: 48px;
-    }
-    .tab-visit p {
-        font-size: 16px;
     }
     .footer h3 {
         font-size: 25px;
@@ -571,11 +634,8 @@ fieldset[disabled] .btn-custom.active {
     .tab-p {
         font-size: 18px;
     }
-    .tab-col span, .tab-visit h3 {
+    .tab-col span {
         font-size: 50px;
-    }
-    .tab-visit p {
-        font-size: 18px;
     }
     .footer h3 {
         font-size: 30px;
