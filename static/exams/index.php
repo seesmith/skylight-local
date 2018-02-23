@@ -25,6 +25,9 @@
         The very latest papers added are from the 2017-18 diet. These pages will be updated periodically, as more papers become available.
         If you cannot find the paper you are looking for, please email <a href="mailto:exam.papers@ed.ac.uk">exam.papers@ed.ac.uk</a>, or try visiting again at a later date.
     </p>
+    <hr />
+    <h4>Alternative Formats</h4>
+    <p>If you require an exam paper in an alternative format, such as large print or a coloured background, please contact the Exam Papers Online Team, by e-mail at <a href="mailto:exam.papers@ed.ac.uk">exam.papers@ed.ac.uk</a>, or by phone on 0131 651 1827.</p>
 
-    <br />
+
 </div>

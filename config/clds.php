@@ -39,11 +39,15 @@ $config['skylight_fields'] = array('Title' => 'dc.title.en',
     'Bitstream'=> 'dc.format.original.en',
     'Thumbnail'=> 'dc.format.thumbnail.en',
     'Description'=>'dc.description.en',
+    'Summary'=>'dc.description.abstract.en',
     'Origin' => 'dc.coverage.spatial.en',
     'Parent Collection' => 'dc.relation.ispartof.en',
     'Sub Collections' => 'dc.relation.haspart.en',
     'Internal URI' => 'cld.internalURI.en',
-    'External URI' => 'cld.externalURI.en'
+    'ASpace URI' => 'cld.externalURI.ArchivesSpace',
+    'LUNA URI' => 'cld.externalURI.LUNA',
+    'LMS URI' => 'cld.externalURI.LMS',
+    'Other URI'=> 'cld.externalURI.other'
 );
 
 $config['skylight_date_filters'] = array();
@@ -56,7 +60,7 @@ $config['skylight_meta_fields'] = array('Title' => 'dc.title',
     'Type' => 'dc.type',
 );
 
-$config['skylight_recorddisplay'] = array('Title','Type','Description','Custodian','Custodial History','Origin','Date','Identifier');
+$config['skylight_recorddisplay'] = array('Title','Type','Summary', 'Description','Custodian','Custodial History','Origin','Date','Identifier', 'Further Resources');
 
 $config['skylight_searchresult_display'] = array('Title','Brief','Custodian','Custodial History', 'Subject','Type','Origin', 'Bitstream', 'Thumbnail');
 
