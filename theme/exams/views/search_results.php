@@ -137,7 +137,10 @@ else {
                         foreach($doc[$bitstream_field] as $bitstream) {
 
                             $bitstreamLink = $this->skylight_utilities->getBitstreamURI($bitstream);
-                            echo '<a href="'.$bitstreamLink.'" class="downloadButton">Download Paper</a>';
+                            ?>
+                            <a href="<?php echo $bitstreamLink; ?>" class="downloadButton" onclick="ga('send', 'event', '<?php echo $doc[$course_field][0].'||'.$doc[$title_field][0].' '.$doc[$year_field][0]; ?>', 'Download', 'Search page – PDF Download');">Download Paper</a>
+
+                            <?php
                         }
                         ?>
 

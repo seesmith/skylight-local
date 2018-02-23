@@ -3,7 +3,7 @@
 // set the base url and ga code
 if (strpos($_SERVER['HTTP_HOST'], "test") !== false) {
     $config['base_url'] = 'https://test.exampapers.ed.ac.uk/';
-    $config['skylight_ga_code'] = 'UA-25737241-6';
+    $config['skylight_ga_code'] = 'UA-25737241-22';
 }
 else {
     $config['base_url'] = 'https://exampapers.ed.ac.uk/';

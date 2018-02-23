@@ -4,6 +4,7 @@ $author_field = $this->skylight_utilities->getField("Author");
 $type_field = $this->skylight_utilities->getField("Type");
 $year_field = $this->skylight_utilities->getField("Year");
 $version_field = $this->skylight_utilities->getField("Version");
+$course_field = $this->skylight_utilities->getField('Course Code');
 $filters = array_keys($this->config->item("skylight_filters"));
 $bitstreamLinks = array();
 ?>
@@ -60,8 +61,10 @@ $bitstreamLinks = array();
 
                         foreach($solr[$bitstream_field] as $bitstream) {
 
-                            $bitstreamLink = $this->skylight_utilities->getBitstreamURI($bitstream);
-                            echo '<a href="'.$bitstreamLink.'">Download Paper</a>';
+                            $bitstreamLink = $this->skylight_utilities->getBitstreamURI($bitstream);?>
+                            <a href="<?php echo $bitstreamLink; ?>"  onclick="ga('send', 'event', '<?php echo $solr[$course_field][0].'||'.$record_title.' '.$solr[$year_field][0]; ?>', 'Download', 'Search page – PDF Download');">Download Paper</a>
+
+                            <?php
                         }
                     }
                     else { ?>
