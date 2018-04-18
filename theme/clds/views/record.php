@@ -227,7 +227,7 @@
                             </div>
                         </div>
                         <?php
-                        if (isset($b_title))
+                        if (!$b_title == '' )
                         {
 ?>                        <div>
                             <p><i>Image: <?php echo $b_title;?></i></p>
