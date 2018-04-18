@@ -1,18 +1,43 @@
 <div class="record">
     <div class="content byEditor">
-        <h1>CURRENT EXHIBITION: <a href="./highlandstohindustan" alt="Highlands to Hindustan"
-                                   title="Highlands to Hindustan">Highlands to Hindustan: Indian Art from University of Edinburgh Collections
-            </a>
-        <h3>University of Edinburgh, Main Library, George Square<br/>
-            28th July 2017 to 4th November 2017, Monday - Saturday, 10:00 - 17:00</h3>
-        <h3>Curated by: Dr. Yuthika Sharma, Lecturer in Indian/South Asian Art, Edinburgh College of Art</h3>
-            <div id="highlands-banner"></div>
-            <div class="clearfix"></div>
+
+        <h1>CURRENT EXHIBITIONS:</h1>
+
+        <div id="sar-banner"></div>
+        <h1>Shored Against Ruin: Fragments from the University of Edinburgh Collections</h1>
+            <h3>Main Library Exhibition Gallery, Ground Floor 8 December 2017 – 24 February 2018 (Closed 23 December 2017
+                until 3 January 2018) Monday-Saturday 10am-5pm</h3>
+
+            <p>Inspired by the recent gift of fragments from Eduardo Paolozzi’s mosaic archways at Tottenham Court Road,
+                Shored Against Ruin showcases fragments from across the University collections. Featuring artworks, 2nd
+                century manuscripts, film, Victorian photographs, fossils and anatomical specimens, this exhibition questions
+                the nature of a fragment and examines why we care for them, whilst also considering the hidden histories they can tell us.</p>
+
+        <div id="incendiary-texts-banner"></div>
+        <h1>Incendiary Texts: Martin Luther and the Protestant Reformation</h1>
+
+        <h2>About the Exhibition</h2>
+        <h3>Binks Trust Exhibition Wall, Main Library 6th Floor 10 November 2017 – 11 April 2018 (Closed 23 December 2017
+            until 3 January 2018) Monday-Friday 10am-5pm</h3>
+
+        <p>In 1517 Martin Luther nailed his Ninety Five Theses to the door of Wittenberg Church and sparked the beginning
+            of the Protestant Reformation. Featuring key publications by Luther, his supporters and those who opposed him,
+            Incendiary Texts examines how these printed texts fuelled debate and controversy across 16th century Europe.</p>
+
         <div id="past-exhib-block">
-            <h1><a href="./past" alt="Past Exhibitions" title="Past Exhibitions">Past Exhibitions</a>:</h1>
+            <h1><a href="./past" alt="Past Exhibitions" title="Past Exhibitions">Past Exhibitions</a></h1>
             <div>
 
                     <ul class="ex-list">
+                        <li class="past-ex">
+                            <a href="./highlandstohindustan" alt="Highlands to Hindustan" title="Highlands to Hindustan">
+                                <div id="exhib-tile-13"></div>
+                            </a>
+                            <h3><a href="./highlandstohindustan" alt="Highlands to Hindustan" title="Highlands to Hindustan">Highlands to Hindustan</a></h3>
+                            <h3><i class="fa fa-search">&nbsp;</i> Coming Soon</h3>
+                            <p>28th July - 4th Nov 2017</p>
+
+                        </li>
                         <li class="past-ex">
                             <a href="./soundbody" alt="Sound Body Sound Mind" title="Sound Body Sound Mind">
                                 <div id="exhib-tile-12"></div>
@@ -40,6 +65,12 @@
                             <p>1 Apr - 2 Jul 2016</p>
 
                         </li>
+
+                    </ul>
+                  </div>
+            <div class="clearfix"></div>
+                <div>
+                    <ul class="ex-list">
                         <li class="past-ex">
                             <a href="./visualdissection" alt="Visual Dissection" title="Visual Dissection">
                                 <div id="exhib-tile-9"></div>
@@ -49,11 +80,6 @@
                             <p>4 Dec 2015 - 5 Mar 2016</p>
 
                         </li>
-                    </ul>
-                  </div>
-            <div class="clearfix"></div>
-                <div>
-                    <ul class="ex-list">
                         <li class="past-ex">
                             <a href="./towardsdolly" alt="Towards Dolly" title="Towards Dolly">
                                 <div id="exhib-tile-8"></div>
@@ -81,22 +107,23 @@
                             <p>5 Dec 2014 - 7 Mar 2015</p>
 
                         </li>
-                        <li class="past-ex">
-                            <a href="./rashid" alt="Rashid al-Din" title="Rashid al-Din">
-                                <div id="exhib-tile-1"></div>
-                            </a>
-                            <h3><a href="./rashid" alt="Rashid al-Din" title="Rashid al-Din Information Page">The World History
-                                    of Rashid al-Din, 1314</a></h3>
-                            <h3><a href='./search/*:*/Exhibition:"rashid+al-din%26%2339%3Bs+world+history|||Rashid+al-Din%26%2339%3Bs+World+History"'><i class="fa fa-search">&nbsp;</i>View Items</a></h3>
-                            <p>2 Aug - 31 Oct 2014</p>
 
-                        </li>
 
                     </ul>
                 </div>
             <div class="clearfix"></div>
                 <div>
                 <ul class="ex-list">
+                    <li class="past-ex">
+                        <a href="./rashid" alt="Rashid al-Din" title="Rashid al-Din">
+                            <div id="exhib-tile-1"></div>
+                        </a>
+                        <h3><a href="./rashid" alt="Rashid al-Din" title="Rashid al-Din Information Page">The World History
+                                of Rashid al-Din, 1314</a></h3>
+                        <h3><a href='./search/*:*/Exhibition:"rashid+al-din%26%2339%3Bs+world+history|||Rashid+al-Din%26%2339%3Bs+World+History"'><i class="fa fa-search">&nbsp;</i>View Items</a></h3>
+                        <p>2 Aug - 31 Oct 2014</p>
+
+                    </li>
                         <li class="past-ex">
                             <a href="./50years" alt="50 Years, 50 Books" title="50 Years, 50 Books">
                                 <div id="exhib-tile-2"></div>

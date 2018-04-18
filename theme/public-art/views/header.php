@@ -119,12 +119,13 @@
                     <li class="active dropdown">
                         <a class="dropdown-toggle" data-toggle="dropdown" href="#">Home <span class="caret"></span></a>
                         <ul class="dropdown-menu">
-                            <li><a href="#">Organisation chart</a></li>
-                            <li><a href="#">Mission Statement</a></li>
-                            <li><a href="#">Members</a></li>
+                            <li><a href="./about">About</a></li>
+                            <li><a href="./paolozzi">Paolozzi Mosaics</a></li>
+                            <li><a href="./licensing">Licensing</a></li>
+                            <li><a href="./licensing">Art Collection</a></li>
                         </ul>
                     </li>
-                    <li><a href="#">Contact</a></li>
+                    <li><a href="./feedback">Contact</a></li>
                     <li class="search">
                         <form role="search" action="./redirect/" method="post">
 
