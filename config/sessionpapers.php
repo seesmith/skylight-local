@@ -1,18 +1,18 @@
 <?php
 
-$config['skylight_appname'] = 'Default';
+$config['skylight_appname'] = 'sessionpapers';
 
-$config['skylight_theme'] = 'default';
+$config['skylight_theme'] = 'sessionpapers';
 
-$config['skylight_fullname'] = 'Research Space';
+$config['skylight_fullname'] = 'Scottish Court of Session Papers';
 
 $config['skylight_adminemail'] = 'lddt@mlist.is.ed.ac.uk';
 
-$config['skylight_oaipmhcollection'] = 'hdl_123456789_1';
+//$config['skylight_oaipmhcollection'] = 'hdl_123456789_1';
 
 
 // Container ID and the field used in solr index to store this ID. Used for restricting search/browse scope.
-$config['skylight_container_id'] = '1';
+$config['skylight_container_id'] = '70';
 $config['skylight_container_field'] = 'location.comm';
 
 $config['skylight_sitemap_type'] = 'internal';
