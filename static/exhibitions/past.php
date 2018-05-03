@@ -4,6 +4,69 @@
         <h1>Past Exhibitions:</h1>
         <div class="past-list">
             <div>
+                <h2><a href="./sar" alt="Shored Against Ruin" title="Shored Against Ruin Information Page">Shored Against Ruin: Fragments from the University of Edinburgh Collections</a></h2>
+                <p>8 December 2017 – 24 February 2018</p>
+                <a href="./sar" alt="Shored Against Ruin" title="Shored Against Ruin">
+                    <div id="exhib-tile-15"></div>
+                </a>
+
+                <p>Inspired by the recent gift of fragments from Eduardo Paolozzi’s mosaic archways at Tottenham Court Road,
+                    Shored Against Ruin showcases fragments from across the University collections. Featuring artworks, 2nd
+                    century manuscripts, film, Victorian photographs, fossils and anatomical specimens, this exhibition questions
+                    the nature of a fragment and examines why we care for them, whilst also considering the hidden histories they can tell us.</p>
+            </div>
+
+            <div>
+                <h2><a href="./incend" alt="Incendiary Texts" title="Incendiary Texts Information Page">Incendiary Texts: Martin Luther and the Protestant Reformation</a></h2>
+                <p>10 November 2017 – 11 April 2018</p>
+                <a href="./incend" alt="Incendiary Texts" title="Incendiary Texts">
+                    <div id="exhib-tile-14"></div>
+                </a>
+
+                <p>In 1517 Martin Luther nailed his Ninety Five Theses to the door of Wittenberg Church and sparked the beginning
+                    of the Protestant Reformation. Featuring key publications by Luther, his supporters and those who opposed him,
+                    Incendiary Texts examines how these printed texts fuelled debate and controversy across 16th century Europe.</p>
+            </div>
+
+            <div>
+                <h2><a href="./highlandstohindustan" alt="Highlands To Hindustan" title="Highlands To Hindustan">Highlands to Hindustan: Indian Art from University of Edinburgh Collections</a></h2>
+                <p>6th April - 1st July 2017</p>
+                <a href="./highlandstohindustan" alt="Highlands To Hindustan" title="Highlands To Hindustan">
+                    <div id="exhib-tile-13"></div>
+                </a>
+
+                <p>
+                    The University of Edinburgh enjoys a long-standing
+                    and productive relationship with India and an
+                    exhibition in the Library opening during the Fringe Festival
+                    this year, the 70th anniversary of Indian Independence,
+                    provides an excellent opportunity to showcase and
+                    celebrate the University’s historic collections relating
+                    to the sub-continent.
+                </p>
+                <p>
+                    These objects – books, manuscripts, sculptures and
+                    paintings – collected over a period of 300 years, span
+                    two millennia of art and culture and are rich both in
+                    variety and depth. Most of the objects have never been
+                    exhibited in public before; this will be the first ever
+                    public exhibition of University Collections devoted
+                    to the art and culture of South Asia.
+                </p>
+            </div>
+
+            <div>
+                <h2><a href="./soundbody" alt="Sound Body Sound Mind" title="Sound Body Sound Mind Information Page">Sound Body, Sound Mind: A History of Healing Through the University’s Collections</a></h2>
+                <p>28th July 2017- 4th November 2017</p>
+                <a href="./soundbody" alt="Sound Body Sound Mind" title="Sound Body Sound Mind">
+                    <div id="exhib-tile-12"></div>
+                </a>
+
+                <p>
+                    Before the 20th century, healing tended to focus on physical ailments and pains while the mental health of an individual was often sidelined and forgotten in hospitals. It was not recognized that if a person was mentally unwell, they could be treated. However with the advent of psychoanalysis and psychotherapy in the early 20th century, this slowly changed and the importance of mental health began to be acknowledged. Today, wide ranges of therapies are available, and a holistic approach to healing is being given more value. By displaying collections related to the various healing practices undertaken before the 20th century in relation to the body, and the development in attitudes towards mental health and psychotherapy in the 20th century, this exhibition aims to highlight the shift in value within healing to a consideration of the mind as well as the body. This exhibition will be the first to utilize the newly renovated space in the library gallery allowing access to non-library users. Located at the front of the library, the new space serves as an introductory room before guiding the viewer into the main gallery space.
+                </p>
+            </div>
+            <div>
                 <h2><a href="./godfreythomson" alt="Godfrey H Thomson" title="Godfrey H Thomson Information Page">Godfrey H Thomson: The man who tested Scotland's IQ</a></h2>
                 <p>29th July 2016 - 20th October 2016</p>
                 <a href="./godfreythomson" alt="Godfrey H Thomson" title="Godfrey H Thomson">
