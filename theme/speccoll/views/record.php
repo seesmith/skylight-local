@@ -1,5 +1,74 @@
 <?php
 
+function process_items($json, $type)
+{
+
+    $dispersal = 'nil';
+
+    if(array_key_exists($type, $json)) {
+
+        if (isset($json[$type][0]['label'])) {
+            $dispersal = 'multiple';
+        } else {
+            if (isset($json[$type]['label'])) {
+                $dispersal = 'single';
+            }
+        }
+    }
+
+    if ($dispersal !==  'nil')
+    {
+        echo "<h3>".ucfirst($type)."s</h3>";
+        if ($dispersal == 'single')
+        {
+            foreach ($json[$type] as $key => $value)
+            {
+                $viaf = '';
+                $lc ='';
+                if ($key == 'label') {
+                    $label = $value;
+                }
+
+                if ($key = 'sameAs') {
+                    $viaf = '<a href = "' . $value . '" target = "_blank">VIAF |</a>';
+                }
+
+                if ($key = '@id') {
+                    $lc = '<a href = "' . $value . '" target = "_blank">LC</a>';
+                }
+            }
+            $display = "<p>" . $label . "<sup>" . $viaf .  $lc . "</sup></p>";
+            echo $display;
+        }
+        else
+        {
+            $i = 0;
+            foreach ($json[$type] as $key => $value)
+            {
+                $label = $json[$type][$i]['label'];
+                $viaf = '';
+                if(array_key_exists('sameAs', $json[$type][$i])) {
+                    $viaf = '<a href = "' . $json[$type][$i]['sameAs'] . '" target = "_blank">VIAF |</a>';
+                }
+                $lc ='';
+                if(array_key_exists('@id', $json[$type][$i])) {
+                    $lc = '<a href = "' . $json[$type][$i]['@id'] . '" target = "_blank">LC</a>';
+                }
+                $array[$i] = "<p>" . $label . "<sup>" . $viaf .  $lc . "</sup></p>";
+                $i++;
+            }
+
+            foreach ($array as $display)
+            {
+                echo $display;
+
+            }
+        }
+
+    }
+
+}
+
 $title_field = $this->skylight_utilities->getField('Title');
 $author_field = $this->skylight_utilities->getField('Author');
 $shelfmark_field =  $this->skylight_utilities->getField('Shelfmark');
@@ -83,7 +152,8 @@ if(isset($solr[$bitstream_field]) && $link_bitstream) {
             //  $jsonLink .= '<span class ="json-link-item"><a href="https://images.is.ed.ac.uk/luna/servlet/view/search?search=SUBMIT&q=' . $accno . '" class="lunalogo" title="View in LUNA"></a></span>';
             $jsonLink .= '<span class ="json-link-item"><a href="' . $manifest . '" target="_blank"  class="iiiflogo" title="IIIF manifest"></a></span>';
             //$jsonLink .= '<span class ="json-link-item"><a href = "https://creativecommons.org/licenses/by/3.0/" class ="ccbylogo" title="All images CC-BY" target="_blank" ></a></span>';
-
+            $hasprimo = '';
+            $hasalma ='';
             foreach ( $jobj['sequences'][0]['canvases'][0]['metadata']as $metadatapair) {
                 $label = $metadatapair['label'];
                 $value = $metadatapair['value'];
@@ -93,17 +163,13 @@ if(isset($solr[$bitstream_field]) && $link_bitstream) {
                     $value = str_replace("</span>","",$value);
                     $primourl = $value;
                     $hasprimo = 'Y';
-                   // $almaurl = "https://open-na.hosted.exlibrisgroup.com/alma/44UOE_INST/rda/entity/manifestation/". substr($value, $UOE + 10, 17).".rdf";
-                    
+
                 }
 
                 if ($label == 'Catalogue Number')
                 {
                     $value =str_replace("<span>","",$value);
                     $value =str_replace("</span>","",$value);
-                    //RDF not going well
-                   // $almaurl = "https://open-na.hosted.exlibrisgroup.com/alma/44UOE_INST/rda/entity/manifestation/".$value.".rdf";
-                    //try JSON-LD
                     $almaurl = "https://open-na.hosted.exlibrisgroup.com/alma/44UOE_INST/bibs/".$value;
 
                     $hasalma = 'Y';
@@ -220,62 +286,6 @@ echo $viewlink;
     if ($hasalma == 'Y' or $hasprimo == 'Y')
     {
 
-        //fclose($fp);
-        // echo $almaurl;
-        //$almaXML = new SimpleXMLElement($response);
-/*
-        $xml_file =file_get_contents("/var/tmp/curl.xml");
-        /*
-            $sentic_replace = str_replace("rdf:resource", "", $xml_file);
-            $sentic_replace = str_replace("rdaw:", "rdaw_", $sentic_replace);
-            $sentic_replace = str_replace("rdac:", "rdac_", $sentic_replace);
-            $sentic_replace = str_replace("rdae:", "rdae_", $sentic_replace);
-            $sentic_replace = str_replace("rdam:", "rdam_", $sentic_replace);
-            $sentic_replace = str_replace("rdf:", "rdf_", $sentic_replace);
-        &/
-
-          // print_r($sentic_replace);
-        $almaXML =simplexml_load_string($response, 'SimpleRDFElement');
-        //
-
-        if ($almaXML == FALSE)
-        {
-            echo "Failed loading XML\n";
-
-            foreach (libxml_get_errors() as $error)
-            {
-                echo "\t", $error->message;
-            }
-        }
-/*
-        $almaXML->registerXPathNamespace('madsrdf','http://www.loc.gov/mads/rdf/v1#');
-        $almaXML->registerXPathNamespace('rdfs','http://www.w3.org/2000/01/rdf-schema#');
-        $almaXML->registerXPathNamespace('rdf','http://www.w3.org/1999/02/22-rdf-syntax-ns#');
-        $almaXML->registerXPathNamespace('rdac','http://rdaregistry.info/Elements/c/');
-        $almaXML->registerXPathNamespace('rdaw','http://rdaregistry.info/Elements/w/');
-        $almaXML->registerXPathNamespace('rdae','http://rdaregistry.info/Elements/e/');
-        $almaXML->registerXPathNamespace('rdam','http://rdaregistry.info/Elements/m/');
-        $almaXML->registerXPathNamespace('rdai','http://rdaregistry.info/Elements/i/');
-        $almaXML->registerXPathNamespace('rdaa','http://rdaregistry.info/Elements/a/');
-        // var_dump($almaXML);
-
-
-        $rdf = $almaXML->xpath('rdf:RDF');
-
-        print_r($rdf);
-        /*
- * */
-        /*
-        print_r($almaXML);
-        foreach ($almaXML->children() as $object)
-        {
-          print_r($object);
-        }
-
-
-        //echo ' <iframe src="'.$almaurl.'" width = "1300" height = "800" ></iframe>';
-        */
-
         if ($hasprimo == 'Y') {
             echo '<p><a href= "' . $primourl . '" target="_blank">See this item on DiscoverEd.</a></p>';
         }
@@ -306,56 +316,17 @@ echo $viewlink;
 
             foreach($alma_json as $key=>$value)
             {
-                if (($key !== 'creator') and ($key !== 'note')and ($key !== 'contributor') and ($key !== 'identifier'))
+                if (($key !== 'creator') and ($key !== 'note')and ($key !== 'contributor')  and ($key !== 'subject')and ($key !== 'identifier'))
                 {
                     $key =str_replace("@", "", $key);
                     echo "<p>".ucfirst($key)." : ".$value."</p>";
                 }
             }
 
-
-            echo "<h3>Creators</h3>";
-
-            foreach ($alma_json['creator'] as $key=>$value)
-            {
-
-                if ($key == 'label'){
-                    $creatorlabel = $value;
-                }
-
-                if ($key = 'sameAs') {
-                    $viaf = '<a href = "' . $value . '" target = "_blank"><sup>VIAF</sup></a>';
-                }
-
-                if ($key = '@id')
-                {
-                    $lc = '<a href = "' . $value . '" target = "_blank"><sup>LC</sup></a>';
-                }
-
-            }
-            $creatorarray[] = "<p>" . $creatorlabel . "<sup>" . $viaf . "|" . $lc . "</sup></p>";
-
-            foreach ($creatorarray as $creatordisplay) {
-                echo $creatordisplay;
-            }
-
-            echo "<h3>Contributors</h3>";
-
-            $i = 0;
-            foreach ($alma_json['contributor'] as $key=>$value)
-            {
-
-                $contributorlabel = $alma_json['contributor'][$i]['label'];
-                $contviaf = '<a href = "' . $alma_json['contributor'][$i]['sameAs'] . '" target = "_blank"><sup>VIAF</sup></a>';
-                $contlc = '<a href = "' . $alma_json['contributor'][$i]['@id'] . '" target = "_blank"><sup>LC</sup></a>';
-
-                $contributorarray[$i] = "<p>" . $contributorlabel . "<sup>" . $contviaf . "|" . $contlc . "</sup></p>";
-                $i++;
-            }
-
-            foreach ($contributorarray as $contributordisplay) {
-                echo $contributordisplay;
-            }
+            process_items($alma_json, 'creator');
+            process_items($alma_json, 'contributor');
+            process_items($alma_json, 'subject');
+            process_items($alma_json, 'identifier');
 
             echo "<h3>Notes</h3>";
             $j=1;
@@ -365,16 +336,7 @@ echo $viewlink;
                 echo "<p>" .$j. ". ".$note."</p>";
                 $j++;
             }
-
-            echo "<h3>Identifiers</h3>";
-            foreach ($alma_json['identifier'] as $identifierlabel=> $identifiervalue) {
-                //foreach($identifierkey as $identifierlabel=>$identifiervalue)
-                // {
-                echo "<p>" . $identifierlabel . " : " . $identifiervalue . "</p>";
-                // }
-            }
         }
-
     }
 
 
@@ -404,8 +366,7 @@ echo $viewlink;
             }
         }
     }
+
+
     ?>
 </div>
-
-
-

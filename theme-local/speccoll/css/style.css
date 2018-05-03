@@ -1064,3 +1064,8 @@ label
     text-align:center;
     height:50px;
 }
+
+sup a
+{
+    color: #0e7ba6;
+}

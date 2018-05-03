@@ -1,18 +1,62 @@
 <div class="record">
     <div class="content byEditor">
-        <h1>CURRENT EXHIBITION: <a href="./highlandstohindustan" alt="Highlands to Hindustan"
-                                   title="Highlands to Hindustan">Highlands to Hindustan: Indian Art from University of Edinburgh Collections
-            </a>
-        <h3>University of Edinburgh, Main Library, George Square<br/>
-            28th July 2017 to 4th November 2017, Monday - Saturday, 10:00 - 17:00</h3>
-        <h3>Curated by: Dr. Yuthika Sharma, Lecturer in Indian/South Asian Art, Edinburgh College of Art</h3>
-            <div id="highlands-banner"></div>
+        <h1>CURRENT EXHIBITIONS:</h1><h1> <a href="./howwhywhat" alt="How Why What"
+                                   title="How Why What">How? Why? What? Education Illustration from University Collections</a></h1>
+        <h3>Main Library Exhibition Gallery – Ground Floor<br/>
+            30th March 2018- 30th June 2018; Monday - Saturday, 10:00 - 17:00</h3>
+        <h3>Curated by: John Brown, Edinburgh College of Art</h3>
+            <div id="howwhywhat-banner"></div>
+            <div id="eca-banner"></div>
             <div class="clearfix"></div>
+        <h1><a href="./dawnera" alt="Dawn of a New Era" title="Dawn of a New Era">Dawn of a New Era: 70 Years of the NHS in the Lothians</a></h1>
+        <h3>Binks Trust Display Wall – 6th Floor Main Library<br/>
+                    13th April 2018- 15th August 2018; Monday - Friday, 09:00 - 17:00</h3>
+        <h3></h3>
+            <div id="dawnera-banner"></div>
+            <div class="clearfix"></div>
+
+        <h1><a href="./travellingimages" alt="Travelling Images"
+                                           title="Travelling Images">Travelling Images: Venetian Illustrated Books from The University of Edinburgh Collections</a></h1>
+        <h3>Binks Trust Display Wall – 6th Floor Main Library<br/>
+            13th April 2018- 15th June 2018; Monday - Friday, 09:00 - 17:00</h3>
+         <h3></h3>
+            <div id="travel-banner"></div>
+            <div class="clearfix"></div>
+            <div id="standrews-banner"></div>
+            <div id="thinking3d-banner"></div>
         <div id="past-exhib-block">
             <h1><a href="./past" alt="Past Exhibitions" title="Past Exhibitions">Past Exhibitions</a>:</h1>
             <div>
 
                     <ul class="ex-list">
+                        <li class="past-ex">
+                            <a href="./sar" alt="Shored Against Ruin" title="Shored Against Ruin">
+                                <div id="exhib-tile-15"></div>
+                            </a>
+                            <h3><a href="./sar" alt="Shored Against Ruin" title="Shored Against Ruin">Shored Against Ruin</a></h3>
+                            <h3><i class="fa fa-search">&nbsp;</i> Coming Soon</h3>
+                            <p>8 December 2017 – 24 February 2018</p>
+
+                        </li>
+                        <li class="past-ex">
+                            <a href="./incend" alt="Incendiary Texts" title="Incendiary Texts">
+                                <div id="exhib-tile-14"></div>
+                            </a>
+                            <h3><a href="./incend" alt="Incendiary Texts" title="Incendiary Texts">Incendiary Texts</a></h3>
+                            <h3><i class="fa fa-search">&nbsp;</i> Coming Soon</h3>
+                            <p>10 November 2017 – 11 April 2018</p>
+
+                        </li>
+                        <li class="past-ex">
+                            <a href="./highlandstohindustan" alt="Highlands to Hindustan" title="Highlands to Hindustan">
+                                <div id="exhib-tile-13"></div>
+                            </a>
+                            <h3><a href="./highlandstohindustan" alt="Highlands to Hindustan" title="Highlands to Hindustan">Highlands to Hindustan</a></h3>
+                            <h3><i class="fa fa-search">&nbsp;</i> Coming Soon</h3>
+                            <p>28th July - 4th Nov 2017</p>
+
+                        </li>
+
                         <li class="past-ex">
                             <a href="./soundbody" alt="Sound Body Sound Mind" title="Sound Body Sound Mind">
                                 <div id="exhib-tile-12"></div>
@@ -22,6 +66,14 @@
                             <p>6th Apr - 1st Jul 2017</p>
 
                         </li>
+
+                    </ul>
+            </div>
+            <div class="clearfix"></div>
+            <div>
+                <ul class="ex-list">
+
+
                         <li class="past-ex">
                             <a href="./godfreythomson" alt="Godfrey H Thomson" title="Godfrey H Thomson">
                                 <div id="exhib-tile-11"></div>
@@ -49,11 +101,7 @@
                             <p>4 Dec 2015 - 5 Mar 2016</p>
 
                         </li>
-                    </ul>
-                  </div>
-            <div class="clearfix"></div>
-                <div>
-                    <ul class="ex-list">
+
                         <li class="past-ex">
                             <a href="./towardsdolly" alt="Towards Dolly" title="Towards Dolly">
                                 <div id="exhib-tile-8"></div>
@@ -63,6 +111,12 @@
                             <p>31 Jul - 31 Oct 2015</p>
 
                         </li>
+
+                </ul>
+            </div>
+            <div class="clearfix"></div>
+            <div>
+                <ul class="ex-list">
                         <li class="past-ex">
                             <a href="./somethingblue" alt="...Something Blue" title="...Something Blue">
                                 <div id="exhib-tile-7"></div>
@@ -92,11 +146,6 @@
 
                         </li>
 
-                    </ul>
-                </div>
-            <div class="clearfix"></div>
-                <div>
-                <ul class="ex-list">
                         <li class="past-ex">
                             <a href="./50years" alt="50 Years, 50 Books" title="50 Years, 50 Books">
                                 <div id="exhib-tile-2"></div>
@@ -107,6 +156,12 @@
                             <p>28 Mar - 14 Jun 2014</p>
 
                         </li>
+
+                </ul>
+            </div>
+            <div class="clearfix"></div>
+            <div>
+                <ul class="ex-list">
                         <li class="past-ex">
                             <a href="./collected" alt="Collect.ed" title="Collect.ed">
                                 <div id="exhib-tile-3"></div>
