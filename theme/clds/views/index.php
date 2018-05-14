@@ -9,12 +9,10 @@
                     <img
                         src="<?php echo base_url(); ?>theme/<?php echo $this->config->item('skylight_theme'); ?>/images/clickboxes/art.jpg"
                         alt="Art Collection"/>
-
                     <div>
                         <h2><span>Art</span> Collection</h2>
                         <i class="fa fa-camera"></i>
                         <i class="ion-arrow-right-c"></i>
-
                         <div class="curl"></div>
                         <a href="http://collections.ed.ac.uk/art" title="Art Collection" target="_blank"></a>
                     </div>
@@ -615,7 +613,7 @@
             <a href="#visitus" data-toggle="collapse" data-parent="#collapseGroup" title="Visit Us">
                 <figure class="clickbox">
                     <img
-                        src="<?php echo base_url(); ?>theme/<?php echo $this->config->item('skylight_theme'); ?>/images/clickboxes/0054302c.jpg"
+                        src="<?php echo base_url(); ?>theme/<?php echo $this->config->item('skylight_theme'); ?>/images/clickboxes/visitus.jpg"
                         alt="Visit Us"/>
                     <div>
                         <h2><span>Visit Us</span></h2>
@@ -633,13 +631,28 @@
                 <div class="col-md-4 col-sm-4 col-xs-12">
                     <figure class="clickbox">
                         <img
+                            src="<?php echo base_url(); ?>theme/<?php echo $this->config->item('skylight_theme'); ?>/images/clickboxes/exhib.jpg"/>
+
+                        <div>
+                            <h2><span>Current</span> Exhibition</h2>
+                            <i class="fa fa-external-link"></i>
+                            <i class="ion-arrow-right-c"></i>
+
+                            <div class="curl"></div>
+                            <a href="http://exhibitions.ed.ac.uk"></a>
+                        </div>
+                    </figure>
+                </div>
+                <div class="col-md-4 col-sm-4 col-xs-12">
+                    <figure class="clickbox">
+                        <img
                             src="<?php echo base_url(); ?>theme/<?php echo $this->config->item('skylight_theme'); ?>/images/clickboxes/crc.jpg"/>
                         <div>
                             <h2><span>Centre</span> for <span>Research Collections</span></h2>
                             <i class="fa fa-external-link"></i>
                             <i class="ion-arrow-right-c"></i>
                             <div class="curl"></div>
-                            <a href="https://exhibitions.ed.ac.uk/"></a>
+                            <a href="http://www.ed.ac.uk/information-services/library-museum-gallery/crc"></a>
                         </div>
                     </figure>
                 </div>
@@ -652,7 +665,7 @@
                             <i class="fa fa-external-link"></i>
                             <i class="ion-arrow-right-c"></i>
                             <div class="curl"></div>
-                            <a href="http://www.ed.ac.uk/information-services/library-museum-gallery/crc"></a>
+                            <a href="http://www.stcecilias.ed.ac.uk"></a>
                         </div>
                     </figure>
                 </div>
@@ -660,14 +673,13 @@
                     <figure class="clickbox">
                         <img
                             src="<?php echo base_url(); ?>theme/<?php echo $this->config->item('skylight_theme'); ?>/images/clickboxes/talbotrice.jpg"/>
-
                         <div>
                             <h2><span>Talbot Rice</span> Gallery</h2>
                             <i class="fa fa-external-link"></i>
                             <i class="ion-arrow-right-c"></i>
 
                             <div class="curl"></div>
-                            <a href="http://collections.ed.ac.uk/participate"></a>
+                            <a href="https://www.ed.ac.uk/talbot-rice/"></a>
                         </div>
                     </figure>
                 </div>
@@ -682,7 +694,7 @@
                             <i class="ion-arrow-right-c"></i>
 
                             <div class="curl"></div>
-                            <a href="http://collections.ed.ac.uk/participate"></a>
+                            <a href="https://www.ed.ac.uk/biomedical-sciences/anatomy/visit-anatomical-museum"></a>
                         </div>
                     </figure>
                 </div>
@@ -716,12 +728,43 @@
                         </div>
                     </figure>
                 </div>
+                <div class="col-md-4 col-sm-4 col-xs-12">
+                    <figure class="clickbox">
+                        <img
+                            src="<?php echo base_url(); ?>theme/<?php echo $this->config->item('skylight_theme'); ?>/images/clickboxes/exhibitions.jpg"/>
+
+                        <div>
+                            <h2><span>Cockburn</span> Geological Museum</h2>
+                            <i class="fa fa-external-link"></i>
+                            <i class="ion-arrow-right-c"></i>
+
+                            <div class="curl"></div>
+                            <a href="https://www.ed.ac.uk/geosciences/about/history/museum"></a>
+                        </div>
+                    </figure>
+                </div>
+                <div class="col-md-4 col-sm-4 col-xs-12">
+                    <figure class="clickbox">
+                        <img
+                            src="<?php echo base_url(); ?>theme/<?php echo $this->config->item('skylight_theme'); ?>/images/clickboxes/nathist.jpg"/>
+                        <div>
+                            <h2><span>Natural History</span> Collection</h2>
+                            <i class="fa fa-external-link"></i>
+                            <i class="ion-arrow-right-c"></i>
+
+                            <div class="curl"></div>
+                            <a href="http://www.nhc.ed.ac.uk"></a>
+                        </div>
+                    </figure>
+                </div>
+
+
             </div>
         </div>
     </div>
 </div>
 
-<div class="tab-exhibitions">
+<!--<div class="tab-exhibitions">
     <a class="container-full">
         <div class="cldmenu">
             <ul>
@@ -733,7 +776,7 @@
             </ul>
         </div>
     </div>
-</div>
+</div>-->
 
 <div class="tab-participate" id="collapseGroup">
     <div class="container-full">
@@ -844,6 +887,3 @@
         </div>
     </div>
 </div>
-
-
-

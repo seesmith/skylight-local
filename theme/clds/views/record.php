@@ -242,13 +242,14 @@
                     }
                     $i = 0;
                     $newStrip = false;
+                    /*
                     if ($numThumbnails > 0) {
                         echo '<div class="thumbnail-strip">';
                         foreach ($thumbnailLink as $thumb) {
                             echo $thumb;
                         }
                         echo '</div><div class="clearfix"></div>';
-                    }
+                    }*/
                     if ($audioFile) {
                         echo '<br>.<br>' . $audioLink;
                     }

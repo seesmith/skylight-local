@@ -241,31 +241,46 @@ body {
     letter-spacing: 1px;
     color: #000;
     margin: 20px 0;
+    background-color: #eee;
 }
 
-.flowplayer {
+/*.flowplayer {
     max-width: 300px;
     padding: 5px;
-}
+}*/
 
 .archives_header {
-    background-image: url(../images/0024694c.jpg), linear-gradient(to bottom, transparent 0%, white 100%);
+    /*background-image: url(../images/0024694c.jpg), linear-gradient(to bottom, transparent 0%, white 100%);*/
+    background-color: #eee;
+    width:100%;
+    display: inline-block;
 }
 
 .museums_header{
-    background-image: url(../images/0031348c.jpg), linear-gradient(to bottom, transparent 0%, white 100%);
+    /*background-image: url(../images/0031348c.jpg), linear-gradient(to bottom, transparent 0%, white 100%);*/
+    background-color: #eee;
+    width:100%;
+    display: inline-block;
 }
 
 .rare_header{
-    background-image: url(../images/0041809c.jpg), linear-gradient(to bottom, transparent 0%, white 100%);
+    background-color: #eee;
+    width:100%;
+    display: inline-block;
 }
 
 .art_header{
-    background-image: url(../images/0016465c.jpg), linear-gradient(to bottom, transparent 0%, white 100%);
+    /*background-image: url(../images/0016465c.jpg), linear-gradient(to bottom, transparent 0%, white 100%);*/
+    background-color: #eee;
+    width:100%;
+    display: inline-block;
 }
 
 .mimed_header{
-    background-image: url(../images/0035518c.jpg), linear-gradient(to bottom, transparent 0%, white 100%);
+    /*background-image: url(../images/0035518c.jpg), linear-gradient(to bottom, transparent 0%, white 100%);*/
+    background-color: #eee;
+    width:100%;
+    display: inline-block;
 }
 
 .pagination > li > a, .pagination > li > span {
@@ -470,6 +485,15 @@ fieldset[disabled] .btn-custom.active {
         width:100%;
         text-align:center;
     }
+    video {
+        max-width: 300px;
+        max-height:160px;
+        padding: 5px;
+    }
+    .flowplayer{
+        background-color: #eee;
+        max-width:100%;
+    }
 }
 
 @media (min-width: 360px) {
@@ -502,6 +526,15 @@ fieldset[disabled] .btn-custom.active {
         width:100%;
         text-align:center;
     }
+    video {
+        max-width: 300px;
+        max-height:160px;
+        padding: 5px;
+    }
+    .flowplayer{
+        background-color: #eee;
+        max-width:100%;
+    }
 
 }
 
@@ -533,6 +566,15 @@ fieldset[disabled] .btn-custom.active {
         height: 300px;
         width:100%;
         text-align:center;
+    }
+    video {
+        max-width: 300px;
+        max-height:160px;
+        padding: 5px;
+    }
+    .flowplayer{
+        background-color: #eee;
+        max-width:100%;
     }
 }
 
@@ -582,6 +624,15 @@ fieldset[disabled] .btn-custom.active {
         width:100%;
         text-align:center;
     }
+    video {
+        max-width: 300px;
+        max-height:160px;
+        padding: 5px;
+    }
+    .flowplayer{
+        background-color: #eee;
+        max-width:33%;
+    }
 }
 
 
@@ -627,6 +678,15 @@ fieldset[disabled] .btn-custom.active {
         height: 450px;
         width:100%;
         text-align:center;
+    }
+    video {
+        max-width: 300px;
+        max-height:160px;
+        padding: 5px;
+    }
+    .flowplayer{
+        background-color: #eee;
+        max-width:33%;
     }
 }
 
@@ -690,5 +750,24 @@ fieldset[disabled] .btn-custom.active {
         width:100%;
         text-align:center;
     }
-
+    video {
+        max-width: 350px;
+        max-height:200px;
+        padding: 5px;
+    }
+    .flowplayer{
+        background-color: #eee;
+        max-width:33%;
+    }
 }
+
+
+.results_header{
+    padding-left:15px;
+}
+
+
+
+
+
+
