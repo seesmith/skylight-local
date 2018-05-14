@@ -1,4 +1,4 @@
-<div class="content">
+<div class="container">
     <?php
 
     $errors = false;

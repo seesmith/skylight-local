@@ -2,7 +2,12 @@
     <div class="content byEditor">
         <h1>About the University of Edinburgh Art Collection</h1>
 
-        <p>The University holds around 2,500 works of art. The Art Collection is now an amalgamation of the University of Edinburgh’s original art collection, which spans some 400 years of collecting, and the Edinburgh College of Art collection of prints, drawings, paintings and sculpture. The ECA collection tells a unique story of the artist output of the College, particularly in the early to mid-20th Century. Some of the most respected names in Scottish art appear, such as <a href="./search/Peploe">Samuel Peploe</a>, <a href="./search/Bellany">John Bellany</a>, <a href="./search/Redpath">Anne Redpath</a> and <a href="./search/Blackadder">Elizabeth Blackadder</a>.</p>
+        <p>The University holds around 10,000 works of art. The Art Collection is now an amalgamation of the University
+            of Edinburgh’s original art collection, which spans some 400 years of collecting, and the Edinburgh College
+            of Art collection of prints, drawings, paintings and sculpture. The ECA collection tells a unique story of
+            the artist output of the College, particularly in the early to mid-20th Century. Some of the most respected
+            names in Scottish art appear, such as <a href="./search/Peploe">Samuel Peploe</a>, <a href="./search/Bellany">John Bellany</a>,
+            <a href="./search/Redpath">Anne Redpath</a> and <a href="./search/Blackadder">Elizabeth Blackadder</a>.</p>
         <p>
             The Art Collection has as its centrepiece the Torrie Collection of 17th century Dutch and Italian Masters
             with works by <a href="./search/Ruisdael">Ruisdael</a>, <a href="./search/ten%20Oever">ten Oever</a>,

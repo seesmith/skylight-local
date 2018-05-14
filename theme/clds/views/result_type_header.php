@@ -140,6 +140,3 @@ if (strpos($search_url, 'Header:%22archives%22') > 0)
 <?php }
 }
 ?>
-
-
-

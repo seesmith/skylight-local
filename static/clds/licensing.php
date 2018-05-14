@@ -1,4 +1,4 @@
-<div class="content">
+<div class="container">
     <div class="content byEditor">
         <h1>Licensing and Copyright Information</h1>
         <p>

@@ -34,7 +34,7 @@ $bitstreamLinks = array();
 
             <?php
             if(isset($solr[$parent_id_field])) {
-                echo '<tr><th>Heirarchy</th><td>';
+                echo '<tr><th>Hierarchy</th><td>';
                 echo '<a href ="./record/' . $solr[$parent_id_field][0] .'/'. $solr[$parent_type_field][0] . '" > Parent Record </a>';
                 echo '</td><tr>';
             }
