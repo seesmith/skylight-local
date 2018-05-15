@@ -613,7 +613,7 @@
             <a href="#visitus" data-toggle="collapse" data-parent="#collapseGroup" title="Visit Us">
                 <figure class="clickbox">
                     <img
-                        src="<?php echo base_url(); ?>theme/<?php echo $this->config->item('skylight_theme'); ?>/images/clickboxes/visitus.jpg"
+                        src="<?php echo base_url(); ?>theme/<?php echo $this->config->item('skylight_theme'); ?>/images/clickboxes/visitus-new.jpg"
                         alt="Visit Us"/>
                     <div>
                         <h2><span>Visit Us</span></h2>
