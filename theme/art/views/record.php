@@ -18,7 +18,7 @@ $numThumbnails = 0;
 $bitstreamLinks = array();
 $image_id = "";
 $accno = '';
-$schema = $this->config->item("skylight_schema_links");
+
 if(isset($solr[$type_field])) {
     $type = "media-" . strtolower(str_replace(' ','-',$solr[$type_field][0]));
 }
