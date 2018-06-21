@@ -26,7 +26,7 @@
             <?php
             foreach ($docs as $index => $doc) {
                 ?>
-                <div class="col-xs-6 col-md-3">
+                <div class="col-xs-6 col-md-3" id ="box"-->
                     <?php
                         $bitstream_array = array();
                         if(isset($doc[$bitstream_field])) {
@@ -38,8 +38,9 @@
                                 $b_segments = explode("##", $bitstream);
                                 $b_filename = $b_segments[1];
                                 $b_seq = $b_segments[4];
-
+                                $imageformat = false;
                                 if((strpos($b_filename, ".jpg") > 0) || (strpos($b_filename, ".JPG") > 0)) {
+                                    $imageformat = true;
 
                                     $bitstream_array[$b_seq] = $bitstream;
 
@@ -54,6 +55,12 @@
                                     }
                                 }
                                 $i++;
+                            }
+                            if(!$imageformat)
+                            {
+                                $thumbnailLink = '<a href="./record/' . $doc['id'] . '" title = "' . $doc[$title_field][0] . '"> ';
+                                $thumbnailLink .= '<div class ="imagebox"><img src ="../theme/iconics/images/comingsoon.gif" class="img-responsive" title="' . $doc[$title_field][0] . '" /></div></a>';
+                                echo $thumbnailLink;
                             }
 
                             // if there is a thumbnail and a bitstream
@@ -80,15 +87,16 @@
                                             $t_uri = './record/'.$b_handle_id.'/'.$t_seq.'/'.$t_filename;
 
                                             $thumbnailLink = '<a href="./record/'. $doc['id'].'" title = "' . $doc[$title_field][0] . '"> ';
-                                            $thumbnailLink .= '<img src = "'.$t_uri.'" class="img-responsive"  title="'. $doc[$title_field][0] .'" /></a>';
+                                            $thumbnailLink .= '<div class ="imagebox"><img src = "'.$t_uri.'" class="img-responsive"  title="'. $doc[$title_field][0] .'" /></div></a>';
                                         }
                                     }
                                 }
                                 // there isn't a thumbnail so display the bitstream itself
-                                else {
 
+                                else
+                                {
                                     $thumbnailLink = '<a href="./record/'. $doc['id'].'" title = "' . $doc[$title_field][0] . '"> ';
-                                    $thumbnailLink .= '<img src = "'.$b_uri.'" class="img-responsive"  title="'. $doc[$title_field][0] .'" /></a>';
+                                    $thumbnailLink .= '<div class ="imagebox"><img src = "'.$b_uri.'" class="img-responsive"  title="'. $doc[$title_field][0] .'" /></div></a>';
                                 }
                                 echo $thumbnailLink;
                             }
@@ -96,12 +104,24 @@
                         else
                         {
                             $thumbnailLink = '<a href="./record/'. $doc['id'].'" title = "' . $doc[$title_field][0] . '"> ';
-                            $thumbnailLink .= '<img src ="../theme/iconics/images/comingsoon.gif" class="img-responsive" title="'. $doc[$title_field][0] .'" /></a>';
+                            $thumbnailLink .= '<div class ="imagebox"><img src ="../theme/iconics/images/comingsoon.gif" class="img-responsive" title="'. $doc[$title_field][0] .'" /></div></a>';
                             echo $thumbnailLink;
                         }?>
-                        <p>
-                            <a href="./record/<?php echo $doc['id']?>?highlight=<?php echo $query ?>"><?php echo $doc[$title_field][0]; ?></a>
-                        </p>
+                        <div class="recordtitle">
+                            <p>
+                                <?php
+                                    $recordlen = strlen($doc[$title_field][0]);
+                                    if ($recordlen > 26)
+                                    {
+                                        $recordtitle = substr($doc[$title_field][0],0,60).'...';
+                                    }
+                                    else {
+                                        $recordtitle = $doc[$title_field][0];
+                                    }
+                                ?>
+                                <a href="./record/<?php echo $doc['id']?>?highlight=<?php echo $query ?>"><?php echo $recordtitle ?></a>
+                            </p>
+                        </div>
                     </div>
                 <?php
             } // end for each search result
