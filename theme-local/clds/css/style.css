@@ -258,7 +258,7 @@ body {
 
 .results_text{
     padding: 5px;
-    font-size: 18px;
+    font-size: 14px;
     letter-spacing: 1px;
     color: #000;
     margin: 20px 0;
@@ -787,8 +787,44 @@ fieldset[disabled] .btn-custom.active {
     padding-left:15px;
 }
 
+#box{
+     text-align: center;
+     vertical-align: middle;
+ }
+
+.img-responsive{
+    text-align: center;
+    vertical-align: middle;
+}
+.row{
+    text-align: center;
+    vertical-align: middle;
+}
+
+.imagebox{
+    margin: auto;
+    border-radius: 15px;
+    background: #eee;
+    padding: 10px;
+    width: 166px;
+    height: 200px;
+    text-align: center;
+    vertical-align: middle;
+
+}
+
+.imagebox img{
+    max-height: 170px;
+    max-width: 142px;
+    display: table-cell;
+}
+#box{
+    height:280px;
+}
 
 
-
-
-
+.recordtitle{
+    max-width:170px;
+    text-align: center;
+    display: inline-block;
+}
