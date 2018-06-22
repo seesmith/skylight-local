@@ -21,6 +21,8 @@ $numThumbnails = 0;
 $bitstreamLinks = array();
 $image_id = "";
 $accno = '';
+//Insert Schema.org
+$schema = $this->config->item("skylight_schema_links");
 
 if(isset($solr[$type_field])) {
     $type = "media-" . strtolower(str_replace(' ','-',$solr[$type_field][0]));
@@ -55,7 +57,7 @@ if(isset($solr[$bitstream_field]) && $link_bitstream) {
         $b_handle_id = preg_replace('/^.*\//', '',$b_handle);
 
         if ((strpos($b_filename, ".mp3") > 0) or (strpos($b_filename, ".MP3") > 0)) {
-
+            echo '<div itemprop="audio" itemscope itemtype="http://schema.org/AudioObject"></div>';
             $b_uri = './record/'.$b_handle_id.'/'.$b_seq.'/'.$b_filename;
             $audioLink .= '<audio controls>';
             $audioLink .= '<source src="' . $b_uri . '" type="audio/mpeg" />Audio loading...';
@@ -80,6 +82,7 @@ if(isset($solr[$bitstream_field]) && $link_bitstream) {
 
             if ($mp4ok == true)
             {
+                echo '<div itemprop="video" itemscope itemtype="http://schema.org/VideoObject"></div>';
                 $videoLink .= '<div class="flowplayer" data-analytics="' . $ga_code . '" title="' . $record_title . ": " . $b_filename . '">';
                 $videoLink .= '<video preload=auto loop width="100%" height="auto" controls preload="true" width="660">';
                 $videoLink .= '<source src="' . $b_uri . '" type="video/mp4" />Video loading...';
@@ -90,12 +93,13 @@ if(isset($solr[$bitstream_field]) && $link_bitstream) {
         }
 
         else if ((strpos($b_filename, ".webm") > 0) or (strpos($b_filename, ".WEBM") > 0))
-        {
+	{
             //Microsoft Edge needs to be dealt with. Chrome calls itself Safari too, but that doesn't matter.
             if (strpos($_SERVER['HTTP_USER_AGENT'], 'Edge') == false)
             {
                 if (strpos($_SERVER['HTTP_USER_AGENT'], 'Chrome') == true)
                 {
+                    echo '<div itemprop="video" itemscope itemtype="http://schema.org/VideoObject"></div>';
                     $b_uri = $media_uri . $b_handle_id . '/' . $b_seq . '/' . $b_filename;
                     // if it's chrome, use webm if it exists
                     $videoLink .= '<div class="flowplayer" data-analytics="' . $ga_code . '" title="' . $record_title . ": " . $b_filename . '">';
@@ -130,6 +134,8 @@ if(isset($solr[$bitstream_field]) && $link_bitstream) {
 <div class="content">
 
     <h1 class="itemtitle"><?php echo $record_title ?></h1>
+    <div itemscope itemtype ="http://schema.org/CreativeWork">
+
     <div class="tags">
     <?php
 
@@ -265,6 +271,7 @@ if(isset($solr[$bitstream_field]) && $link_bitstream) {
             }
 
             $imagesmall[$i] = str_replace('/full/0/', $parms, $imagefull[$i]);
+            echo '<span itemprop="thumbnail" style="display:none;">'. $imagesmall[$i]. '</span>';
             list($width, $height) = getimagesize($imagesmall[$i]);
             $widthtotal = $widthtotal + $width;
 
@@ -417,6 +424,9 @@ if(isset($solr[$bitstream_field]) && $link_bitstream) {
 
     <?php } ?>
 
+<!--Insert Schema.org-->
+    <div class="full-metadata">
+
         <table>
             <tbody>
             <?php foreach($recorddisplay as $key) {
@@ -435,11 +445,29 @@ if(isset($solr[$bitstream_field]) && $link_bitstream) {
                             $lower_orig_filter = strtolower($metadatavalue);
                             $lower_orig_filter = urlencode($lower_orig_filter);
 
-                            echo '<a href="./search/*:*/' . $key . ':%22'.$lower_orig_filter.'%7C%7C%7C'.$orig_filter.'%22">'.$metadatavalue.'</a>';
+                            //Insert Schema
+                            if (isset ($schema[$key]))
+                            {
+                                echo '<span itemprop="'.$schema[$key].'"><a href="./search/*:*/' . $key . ':%22' . $lower_orig_filter . '%7C%7C%7C' . $orig_filter . '%22">' . $metadatavalue . '</a></span>';
+                            }
+                            else
+                            {
+                                echo '<a href="./search/*:*/' . $key . ':%22' . $lower_orig_filter . '%7C%7C%7C' . $orig_filter . '%22">' . $metadatavalue . '</a>';
+                            }
                         }
                         else {
-                            echo $metadatavalue;
+                          if (isset ($schema[$key]))
+                          {
+                              echo '<span itemprop="'.$schema[$key].'">'. $metadatavalue. "</span>";
+                          }
+                          else
+                          {
+                              echo $metadatavalue;
+                          }
+
                         }
+
+
 
                         if($index < sizeof($solr[$element]) - 1) {
                             echo '; ';
@@ -490,7 +518,7 @@ if(isset($solr[$bitstream_field]) && $link_bitstream) {
 
     ?>
 
-    <div class="clearfix"></div>
+    <div class="clearfix"></div></div>
 
     <?php
 
@@ -499,12 +527,12 @@ if(isset($solr[$bitstream_field]) && $link_bitstream) {
         echo '<div class="record_bitstreams">';
 
         if($audioFile) {
-
+            echo '<h2>Audio</h2>';
             echo $audioLink;
         }
 
         if($videoFile) {
-
+            echo '<h2>Video</h2>';
             echo $videoLink;
         }
 
@@ -513,8 +541,7 @@ if(isset($solr[$bitstream_field]) && $link_bitstream) {
     }
 
     echo '</div>';
-echo '</div>';
+echo'</div></div>';
 ?>
 
 <input type="button" value="Back to Search Results" class="backbtn" onClick="history.go(-1);">
-
