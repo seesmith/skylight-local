@@ -62,6 +62,30 @@ $config['skylight_fields'] = array(
     'Permalink' => 'dc.contributor.authorpermalink'
 );
 
+$config['skylight_schema_links'] = array(
+    'Title'=> 'name',
+    'Alternative Title'=> 'alternativeName',
+    'Maker'=> 'creator',
+    'Author'=> 'author',
+    'Subject'=> 'about',
+    'Instrument'=> 'name',
+    'Abstract'=> 'description',
+    'Date'=>'dateCreated',
+    'Thumbnail'=>'thumbnail',
+    'Place Made'=> 'locationCreated',
+    'Date Made'=>'dateCreated',
+    'Period'=> 'temporalCoverage',
+    'Accession Number'=> 'identifier',
+    'Description'=> 'description',
+    'Collection'=> 'Collection',
+    'Notes'=> 'musicalKey',
+    'Rights Holder'=>'copyrightHolder',
+    'Instrument Family'=> 'category',
+    'Link'=> 'url',
+    'ImageUri'=> 'image'
+
+);
+
 
 $config['skylight_date_filters'] = array();
 $config['skylight_filters'] = array('Instrument' => 'type_filter', 'Maker' => 'author_filter', 'Place Made' => 'place_filter', 'Period' => 'period_filter', 'Collection'=> 'collection_filter' );
