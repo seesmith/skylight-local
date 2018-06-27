@@ -13,6 +13,8 @@ $type = 'Unknown';
 $numThumbnails = 0;
 $bitstreamLinks = array();
 
+//Insert Schema.org
+$schema = $this->config->item("skylight_schema_links");
 if(isset($solr[$type_field])) {
     $type = "media-" . strtolower(str_replace(' ','-',$solr[$type_field][0]));
 }
@@ -21,6 +23,8 @@ if(isset($solr[$type_field])) {
 ?>
 
 <h1 class="itemtitle"><?php echo $record_title ?></h1>
+<!--//Insert Schema.org-->
+<div itemscope itemtype ="http://schema.org/CreativeWork">
 <div class="tags">
     <?php
 
@@ -128,6 +132,8 @@ if(isset($solr[$type_field])) {
             }
             else if ((strpos($b_uri, ".mp3") > 0) or (strpos($b_uri, ".MP3") > 0)) {
 
+                //Insert Schema for detecting Audio
+                echo '<div itemprop="audio" itemscope itemtype="http://schema.org/AudioObject"></div>';
                 $audioLink .= '<audio controls>';
                 $audioLink .= '<source src="' . $b_uri . '" type="audio/mpeg" />Audio loading...';
                 $audioLink .= '</audio>';
@@ -151,6 +157,8 @@ if(isset($solr[$type_field])) {
 
                 if ($mp4ok == true)
                 {
+                    //Insert Schema for detecting Video
+                    echo '<div itemprop="video" itemscope itemtype="http://schema.org/VideoObject"></div>';
                     $videoLink .= '<div class="flowplayer" data-analytics="' . $ga_code . '" title="' . $record_title . ": " . $b_filename . '">';
                     $videoLink .= '<video preload=auto loop width="100%" height="auto" controls preload="true" width="660">';
                     $videoLink .= '<source src="' . $b_uri . '" type="video/mp4" />Video loading...';
@@ -167,6 +175,8 @@ if(isset($solr[$type_field])) {
                 {
                     if (strpos($_SERVER['HTTP_USER_AGENT'], 'Chrome') == true)
                     {
+                        //Insert Schema
+                        echo '<div itemprop="video" itemscope itemtype="http://schema.org/VideoObject"></div>';
                         $b_uri = $media_uri . $b_handle_id . '/' . $b_seq . '/' . $b_filename;
                         // if it's chrome, use webm if it exists
                         $videoLink .= '<div class="flowplayer" data-analytics="' . $ga_code . '" title="' . $record_title . ": " . $b_filename . '">';
@@ -239,6 +249,7 @@ if(isset($solr[$type_field])) {
         echo '</div>';
         ?>
 
+      <div class="full-metadata">
 
     <table>
         <tbody>
@@ -256,11 +267,31 @@ if(isset($solr[$type_field])) {
                         $lower_orig_filter = strtolower($metadatavalue);
                         $lower_orig_filter = urlencode($lower_orig_filter);
 
-                        echo '<a href="./search/*:*/' . $key . ':%22'.$lower_orig_filter.'%7C%7C%7C'.$orig_filter.'%22">'.$metadatavalue.'</a>';
+                        //Insert Schema.org
+                        if (isset ($schema[$key]))
+                        {
+                            echo '<span itemprop="'.$schema[$key].'"><a href="./search/*:*/' . $key . ':%22' . $lower_orig_filter . '%7C%7C%7C' . $orig_filter . '%22">' . $metadatavalue . '</a></span>';
+                        }
+                        else
+                        {
+                            echo '<a href="./search/*:*/' . $key . ':%22' . $lower_orig_filter . '%7C%7C%7C' . $orig_filter . '%22">' . $metadatavalue . '</a>';
+                        }
+                    }else{
+
+                      //Insert Schema.org
+
+                      if (isset ($schema[$key]))
+                      {
+                          echo '<span itemprop="' . $schema[$key] . '">' . $metadatavalue . "</span>";
+                      }
+                      else
+
+                      {
+                          echo $metadatavalue  ;
+                      }
+
                     }
-                    else {
-                        echo $metadatavalue;
-                    }
+
                     if($index < sizeof($solr[$element]) - 1) {
                         echo '; ';
                     }
@@ -302,7 +333,5 @@ if(isset($solr[$type_field])) {
 
         </tbody>
     </table>
-
+</div></div>
 <input type="button" value="Back to Search Results" class="backbtn" onClick="history.go(-1);">
-
-
