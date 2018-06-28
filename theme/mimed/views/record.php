@@ -81,7 +81,7 @@ if(isset($solr[$bitstream_field]) && $link_bitstream) {
             }
 
             if ($mp4ok == true)
-            {
+            { 
                 echo '<div itemprop="video" itemscope itemtype="http://schema.org/VideoObject"></div>';
                 $videoLink .= '<div class="flowplayer" data-analytics="' . $ga_code . '" title="' . $record_title . ": " . $b_filename . '">';
                 $videoLink .= '<video preload=auto loop width="100%" height="auto" controls preload="true" width="660">';
@@ -211,9 +211,9 @@ if(isset($solr[$bitstream_field]) && $link_bitstream) {
                                 id: "openseadragon<?php echo $divCounter; ?>",
                                 prefixUrl: "<?php echo base_url();?>theme/mimed/images/buttons/",
 
-                                visibilityRatio: 0,
-                                minZoomLevel: 0.7,
-                                defaultZoomLevel: 1,
+                                visibilityRatio: 1,
+                                minZoomLevel: 0,
+                                defaultZoomLevel: 0,
                                 panHorizontal: true,
                                 sequenceMode: true,
                                 preserveViewport: false,
