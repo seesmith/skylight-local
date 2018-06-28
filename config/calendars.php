@@ -44,6 +44,19 @@ $config['skylight_fields'] = array('Title' => 'dc.title.en',
     'Shelf Mark' => 'dc.identifier.other'
 );
 
+$config['skylight_schema_links'] = array(
+      'Title'=>'name',
+      'Calendar Month'=>'alternateName',
+      'Creator'=>'creator',
+      'Link'=>'url',
+      //'Subject'=>'Collection',
+      'Date'=>'temporalCoverage',
+      'Thumbnail'=>'thumbnail',
+      'Description'=>'description',
+      'Year'=>'alternativeName',
+      'Shelf Mark'=>'identifier'
+);
+
 $config['skylight_date_filters'] = array('Date' => 'dateIssued.year_sort');
 $config['skylight_filters'] = array('Subject' => 'subject_filter');
 
