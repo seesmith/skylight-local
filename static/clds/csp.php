@@ -1,4 +1,4 @@
-<div class="tab-list2">
+<div class="tab-list">
   <div class="container">
     <h1>The Scottish Court of Session Papers</h1>
         <div align="left">
@@ -204,7 +204,7 @@
         <div class="row">
             <div class="col-lg-12 col-md-16 col-sm-24 col-xs-48">
                 <h4 align="left">Advocates Library</h4>
-            </div>  
+            </div>
             <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
                 <figure class="clickbox">
                     <img
@@ -222,10 +222,7 @@
                     </div>
                 </figure>
             </div>
-            
+
         </div>
     </div>
 </div>
-
-
-
