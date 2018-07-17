@@ -83,7 +83,6 @@
 
                 <div>
                     <h2>Directory of Collections</h2><i class="fa fa-file-pdf-o"></i>
-                    <i class="fa fa-camera"></i>
                     <i class="ion-arrow-right-c"></i>
 
                     <div class="curl"></div>
